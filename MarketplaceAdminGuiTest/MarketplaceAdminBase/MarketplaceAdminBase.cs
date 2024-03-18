@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MarketplaceAdminGuiTest
 {
-    internal class MarketplaceAdminBase
+    public class MarketplaceAdminBase
     {
     }
 }
