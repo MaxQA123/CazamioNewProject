@@ -1,18 +1,26 @@
+using Allure.Commons;
+using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
 using NUnit.Framework;
 
 namespace MarketplaceAdminGuiTest
 {
-    public class Tests
-    {
-        [SetUp]
-        public void Setup()
-        {
-        }
+    [TestFixture]
+    [AllureNUnit]
 
+    public class TestsBaseGui : MarketplaceAdminBase
+    {
         [Test]
-        public void Test1()
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("MarketplaceAdmin")]
+        [AllureSubSuite("LogIn")]
+        public void LogIn()
         {
-            Assert.Pass();
+            
         }
     }
 }

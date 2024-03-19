@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CazamioNewProject.GuiHelpers;
+using CazamioNewProject.GuiHelpers.BasicTests;
+using NUnit.Framework;
 
 namespace MarketplaceAdminGuiTest
 {
-    public class MarketplaceAdminBase
+    public class MarketplaceAdminBase : BaseGui
     {
+        [SetUp]
+        public void SetUp()
+        {
+            Browser.Initialize();
+
+            Browser._Driver.Navigate().GoToUrl(StartPoints.URL_LOGIN_ADMIN_WEBSITE);
+        }
     }
 }
