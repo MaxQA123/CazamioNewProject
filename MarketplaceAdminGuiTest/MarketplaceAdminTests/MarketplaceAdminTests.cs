@@ -1,4 +1,6 @@
 using Allure.Commons;
+using CazamioNewProject.GuiHelpers;
+using CazamioNewProject.PageObjects;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using NUnit.Framework;
@@ -20,7 +22,18 @@ namespace MarketplaceAdminGuiTest
         [AllureSubSuite("LogIn")]
         public void LogIn()
         {
-            
+            Pages.LogInLandlord
+                .EnterEmailPasswordAsMarketplaceAdmin()
+                .ClickIconShowLogInPg()
+                .ClickButtonLetsGoLogInPg();
+
+            //string getUserNameCompare = Pages.SideBarLandlord.GetUserNameFromSideBar();
+            //string getUserNameRoleCompare = Pages.SideBarLandlord.GetUserNameRoleFromSideBar();
+
+            //Pages.SideBarLandlord
+            //    .VerifyBrokerUserName(getUserNameCompare, getUserNameRoleCompare);
+
+            WaitUntil.WaitSomeInterval(2000);
         }
     }
 }
