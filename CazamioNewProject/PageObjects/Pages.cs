@@ -1,5 +1,6 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.PageObjects.AdminPages.LogInPage;
+using CazamioNewProject.PageObjects.AdminPages.SidebarPage;
 using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 using System;
@@ -22,5 +23,6 @@ namespace CazamioNewProject.PageObjects
         }
 
         public static LogInLandlord LogInLandlord => GetPage<LogInLandlord>();
+        public static Sidebar Sidebar => GetPage<Sidebar>();
     }
 }

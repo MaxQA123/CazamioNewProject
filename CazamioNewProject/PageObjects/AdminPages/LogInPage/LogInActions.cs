@@ -66,16 +66,16 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         //    return this;
         //}
 
-        [AllureStep("ClickIconShowLogInPg")]
-        public LogInLandlord ClickIconShowLogInPg()
+        [AllureStep("ClickIconShow")]
+        public LogInLandlord ClickIconShow()
         {
             Button.Click(IconShowLogInPg);
 
             return this;
         }
 
-        [AllureStep("ClickButtonLetsGoLogInPg")]
-        public LogInLandlord ClickButtonLetsGoLogInPg()
+        [AllureStep("ClickButtonLetsGo")]
+        public LogInLandlord ClickButtonLetsGo()
         {
             WaitUntil.WaitSomeInterval(2000);
             Button.Click(ButtonLetsGoLogInPg);

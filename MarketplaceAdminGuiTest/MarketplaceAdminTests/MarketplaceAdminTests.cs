@@ -24,16 +24,16 @@ namespace MarketplaceAdminGuiTest
         {
             Pages.LogInLandlord
                 .EnterEmailPasswordAsMarketplaceAdmin()
-                .ClickIconShowLogInPg()
-                .ClickButtonLetsGoLogInPg();
+                .ClickIconShow()
+                .ClickButtonLetsGo();
 
-            //string getUserNameCompare = Pages.SideBarLandlord.GetUserNameFromSideBar();
-            //string getUserNameRoleCompare = Pages.SideBarLandlord.GetUserNameRoleFromSideBar();
+            string getUserNameCompare = Pages.Sidebar.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.Sidebar.GetUserNameRoleFromSideBar();
 
-            //Pages.SideBarLandlord
-            //    .VerifyBrokerUserName(getUserNameCompare, getUserNameRoleCompare);
+            Pages.Sidebar
+                .VerifyMarketplaceAdminUserName(getUserNameCompare, getUserNameRoleCompare);
 
-            WaitUntil.WaitSomeInterval(2000);
+            WaitUntil.WaitSomeInterval(5000);
         }
     }
 }
