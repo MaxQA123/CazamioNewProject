@@ -29,12 +29,12 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         //    return this;
         //}
 
-        [AllureStep("VerifyMarketplaceAdminUserName")]
-        public Sidebar VerifyMarketplaceAdminUserName(string getUserNameActual, string getUserNameRoleActual)
+        [AllureStep("VerifyMarketplaceAdminUserNameAndRole")]
+        public Sidebar VerifyMarketplaceAdminUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
         {
-            WaitUntil.WaitSomeInterval(1500);
+            WaitUntil.WaitSomeInterval(100);
             string getUserNameExpected = marketplaceAdmin.FullNameMarketplaceAdmin;
-            string getUserNameRoleExpected = TestDataForWebSiteAdmin.USER_NAME_ROLE_MARKETPLACE_ADMIN;
+            string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_MARKETPLACE_ADMIN;
 
             Assert.Multiple(() =>
             {

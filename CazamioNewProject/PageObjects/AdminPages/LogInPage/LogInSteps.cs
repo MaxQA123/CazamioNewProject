@@ -1,12 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CazamioNewProject.GuiHelpers;
+using NUnit.Allure.Attributes;
 
 namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
 {
     public partial class LogInLandlord
     {
+        [AllureStep("EnterEmailPasswordAsSuperAdmin")]
+        public LogInLandlord EnterEmailPasswordAsSuperAdmin()
+        {
+            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataForWebSiteAdmin.EMAIL_SUPER_ADMIN);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+
+            return this;
+        }
+
+        [AllureStep("EnterEmailPasswordAsMarketplaceAdmin")]
+        public LogInLandlord EnterEmailPasswordAsMarketplaceAdmin()
+        {
+            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, marketplaceAdmin.EmailAddressMarketplaceAdmin);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+
+            return this;
+        }
     }
 }

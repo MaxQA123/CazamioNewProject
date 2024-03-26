@@ -11,30 +11,11 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
 {
     public partial class LogInLandlord
     {
+        SuperAdmin superAdmin = new SuperAdmin().Generate();
         MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
         //Broker broker = new Broker().Generate();
         //Agent agent = new Agent().Generate();
         //AgentBroker agentBroker = new AgentBroker().Generate();
-
-        //[AllureStep("EnterEmailPasswordLogInPgAsSuperAdmin")]
-        //public LogInLandlord EnterEmailPasswordLogInPgAsSuperAdmin()
-        //{
-        //    InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataForWebSiteAdmin.EMAIL_SUPER_ADMIN);
-        //    WaitUntil.WaitSomeInterval(100);
-        //    InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
-
-        //    return this;
-        //}
-
-        [AllureStep("EnterEmailPasswordAsMarketplaceAdmin")]
-        public LogInLandlord EnterEmailPasswordAsMarketplaceAdmin()
-        {
-            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, marketplaceAdmin.EmailAddressMarketplaceAdmin);
-            WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
-
-            return this;
-        }
 
         //[AllureStep("EnterEmailPasswordLogInPgAsBroker")]
         //public LogInLandlord EnterEmailPasswordLogInPgAsBroker()

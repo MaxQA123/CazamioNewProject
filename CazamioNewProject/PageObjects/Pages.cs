@@ -1,13 +1,9 @@
 ﻿using CazamioNewProject.GuiHelpers;
+using CazamioNewProject.Objects;
 using CazamioNewProject.PageObjects.AdminPages.LogInPage;
 using CazamioNewProject.PageObjects.AdminPages.SidebarPage;
 using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects
 {
@@ -24,5 +20,7 @@ namespace CazamioNewProject.PageObjects
 
         public static LogInLandlord LogInLandlord => GetPage<LogInLandlord>();
         public static Sidebar Sidebar => GetPage<Sidebar>();
+        public static SuperAdmin SuperAdmin => GetPage<SuperAdmin>();
+        public static MarketplaceAdmin MarketplaceAdmin => GetPage<MarketplaceAdmin>();
     }
 }

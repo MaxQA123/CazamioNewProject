@@ -31,7 +31,7 @@ namespace MarketplaceAdminGuiTest
             string getUserNameRoleCompare = Pages.Sidebar.GetUserNameRoleFromSideBar();
 
             Pages.Sidebar
-                .VerifyMarketplaceAdminUserName(getUserNameCompare, getUserNameRoleCompare);
+                .VerifyMarketplaceAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
 
             WaitUntil.WaitSomeInterval(5000);
         }

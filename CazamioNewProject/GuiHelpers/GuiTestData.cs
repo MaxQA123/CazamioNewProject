@@ -34,11 +34,15 @@
     {
         public const string PASSWORD_GENERAL = "Qwerty123!";
         public const string PASSWORD_NEW_GENEREAL = "!321Qwerty";
-        public const string CODE_PHONE_NUMBER_ONE = "212";
-        public const string CODE_PHONE_NUMBER_TWO = "585";
-        public const string TEXT_DESCRIPTION_FOR_APARTMENT = "Description for apartment ";
-        public const string TEXT_INTERNAL_NOTES_FOR_APARTMENT = "Internal Notes for apartment ";
         public const int MARKETPLACE_ID_MY_SPACE = 15;
+    }
+
+    public class TestDataLandlord
+    {
+        public const string USER_NAME_ROLE_SUPER_ADMIN = "Super Admin";
+        public const string USER_NAME_ROLE_MARKETPLACE_ADMIN = "Marketplace Admin";
+        public const string USER_NAME_ROLE_BROKER = "Broker";
+        public const string USER_NAME_ROLE_AGENT = "Agent";
     }
 
     public class EmailNameDomen
