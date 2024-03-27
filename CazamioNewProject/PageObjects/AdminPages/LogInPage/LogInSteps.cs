@@ -8,7 +8,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         [AllureStep("EnterEmailPasswordAsSuperAdmin")]
         public LogInLandlord EnterEmailPasswordAsSuperAdmin()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, TestDataForWebSiteAdmin.EMAIL_SUPER_ADMIN);
+            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, superAdmin.EmailAddressSuperAdmin);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
 
