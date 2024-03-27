@@ -5,12 +5,12 @@ using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using NUnit.Framework;
 
-namespace SuperAdminGui
+namespace BrokerGuiTests
 {
     [TestFixture]
     [AllureNUnit]
 
-    public class TestsBaseGui : SuperAdminBase
+    public class TestsBaseGui : BrokerBase
     {
         [Test]
         [AllureTag("Regression")]
@@ -18,13 +18,13 @@ namespace SuperAdminGui
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("SuperAdmin")]
+        [AllureSuite("Broker")]
         [AllureSubSuite("LogIn")]
 
         public void LogIn()
         {
             Pages.LogInLandlord
-                .EnterEmailPasswordAsSuperAdmin()
+                .EnterEmailPasswordAsBroker()
                 .ClickIconShow()
                 .ClickButtonLetsGo();
 
@@ -32,7 +32,7 @@ namespace SuperAdminGui
             string getUserNameRoleCompare = Pages.Sidebar.GetUserNameRoleFromSideBar();
 
             Pages.Sidebar
-                .VerifySuperAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
 
             WaitUntil.WaitSomeInterval(2000);
         }
