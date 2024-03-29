@@ -22,5 +22,8 @@ namespace CazamioNewProject.PageObjects
         public static Sidebar Sidebar => GetPage<Sidebar>();
         public static SuperAdmin SuperAdmin => GetPage<SuperAdmin>();
         public static MarketplaceAdmin MarketplaceAdmin => GetPage<MarketplaceAdmin>();
+        public static Broker Broker => GetPage<Broker>();
+        public static Agent Agent => GetPage<Agent>();
+        public static AgentBroker AgentBroker => GetPage<AgentBroker>();
     }
 }

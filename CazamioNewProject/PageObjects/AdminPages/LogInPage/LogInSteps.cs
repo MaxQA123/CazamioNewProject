@@ -1,5 +1,6 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using NUnit.Allure.Attributes;
+using System.Collections.Generic;
 
 namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
 {
@@ -41,6 +42,116 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
             InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, agent.EmailAddressAgent);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+
+            return this;
+        }
+
+        [AllureStep("EnterEmailPasswordAsAgentBroker")]
+        public LogInLandlord EnterEmailPasswordAsAgentBroker()
+        {
+            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, agentBroker.EmailAddressAgentBroker);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+
+            return this;
+        }
+
+        [AllureStep("CopiedForEnterEmailLogInPg")]
+        public LogInLandlord CopiedForEnterEmailLogInPg(string _email)
+        {
+            WaitUntil.WaitSomeInterval(1000);
+            List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
+            Browser._Driver.SwitchTo().Window(tabsList[2]);
+            WaitUntil.WaitSomeInterval(3000);
+            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, _email);
+
+            return this;
+        }
+
+        [AllureStep("EnterPasswordLogInPgAsBroker")]
+        public LogInLandlord EnterPasswordLogInPgAsBroker()
+        {
+            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+
+            return this;
+        }
+
+        [AllureStep("ClickLinkForgotPassword")]
+        public LogInLandlord ClickLinkForgotPassword()
+        {
+            Button.Click(LinkForgotPassword);
+
+            return this;
+        }
+
+        [AllureStep("PasteForEnterPsswrdFromEmailCreateBroker")]
+        public LogInLandlord PasteForEnterPsswrdFromEmailCreateBroker(string code)
+        {
+            WaitUntil.WaitSomeInterval(1000);
+            List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
+            Browser._Driver.SwitchTo().Window(tabsList[3]);
+            WaitUntil.WaitSomeInterval(1000);
+            FieldInputPasswordLogInPg.SendKeys(code);
+
+            return this;
+        }
+
+        [AllureStep("PasteForEnterEmailFromEmailCreateBroker")]
+        public LogInLandlord PasteForEnterEmailFromEmailCreateBroker(string _email)
+        {
+            WaitUntil.WaitSomeInterval(1000);
+            List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
+            Browser._Driver.SwitchTo().Window(tabsList[3]);
+            WaitUntil.WaitSomeInterval(1000);
+            FieldInputEmailLogInPg.SendKeys(_email);
+
+            return this;
+        }
+
+        [AllureStep("PasteForEnterEmailFromEmailCreateAdmin")]
+        public LogInLandlord PasteForEnterEmailFromEmailCreateAdmin(string _email)
+        {
+            WaitUntil.WaitSomeInterval(1000);
+            List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
+            Browser._Driver.SwitchTo().Window(tabsList[3]);
+            WaitUntil.WaitSomeInterval(1000);
+            FieldInputEmailLogInPg.SendKeys(_email);
+
+            return this;
+        }
+
+        [AllureStep("PasteForEnterPsswrdFromEmailCreateAdmin")]
+        public LogInLandlord PasteForEnterPsswrdFromEmailCreateAdmin(string code)
+        {
+            WaitUntil.WaitSomeInterval(1000);
+            List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
+            Browser._Driver.SwitchTo().Window(tabsList[3]);
+            WaitUntil.WaitSomeInterval(1000);
+            FieldInputPasswordLogInPg.SendKeys(code);
+
+            return this;
+        }
+
+        [AllureStep("PasteForEnterEmailFromEmailCreateAgent")]
+        public LogInLandlord PasteForEnterEmailFromEmailCreateAgent(string _email)
+        {
+            WaitUntil.WaitSomeInterval(1000);
+            List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
+            Browser._Driver.SwitchTo().Window(tabsList[3]);
+            WaitUntil.WaitSomeInterval(1000);
+            FieldInputEmailLogInPg.SendKeys(_email);
+
+            return this;
+        }
+
+        [AllureStep("PasteForEnterPsswrdFromEmailCreateAgent")]
+        public LogInLandlord PasteForEnterPsswrdFromEmailCreateAgent(string code)
+        {
+            WaitUntil.WaitSomeInterval(1000);
+            List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
+            Browser._Driver.SwitchTo().Window(tabsList[3]);
+            WaitUntil.WaitSomeInterval(1000);
+            FieldInputPasswordLogInPg.SendKeys(code);
 
             return this;
         }

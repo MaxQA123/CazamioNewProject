@@ -85,24 +85,24 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        //[AllureStep("VerifyAgentBrokerUserNameRole")]
-        //public Sidebar VerifyAgentBrokerUserNameRole(string getUserNameActual, string getUserNameRoleActual)
-        //{
-        //    WaitUntil.WaitSomeInterval(500);
-        //    string getUserNameExpected = agentBroker.FullNameAgentBroker;
-        //    string getUserNameRoleExpected = TestDataForWebSiteAdmin.USER_NAME_ROLE_AGENT;
+        [AllureStep("VerifyAgentBrokerUserNameAndRole")]
+        public Sidebar VerifyAgentBrokerUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
+        {
+            WaitUntil.WaitSomeInterval(500);
+            string getUserNameExpected = agentBroker.FullNameAgentBroker;
+            string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_AGENT;
 
-        //    Assert.Multiple(() =>
-        //    {
-        //        Assert.AreEqual(getUserNameExpected, getUserNameActual);
-        //        Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleActual);
+            Assert.Multiple(() =>
+            {
+                Assert.AreEqual(getUserNameExpected, getUserNameActual);
+                Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleActual);
 
-        //        Console.WriteLine($"First Last name EX: {getUserNameExpected} AC: {getUserNameActual}");
-        //        Console.WriteLine($"Name Role EX: {getUserNameRoleExpected} AC: {getUserNameRoleActual}");
-        //    });
+                Console.WriteLine($"First Last name EX: {getUserNameExpected} AC: {getUserNameActual}");
+                Console.WriteLine($"Name Role EX: {getUserNameRoleExpected} AC: {getUserNameRoleActual}");
+            });
 
-        //    return this;
-        //}
+            return this;
+        }
 
         [AllureStep("VerifyChangingLogoImageLandlord")]
         public Sidebar VerifyChangingLogoImageLandlord()
