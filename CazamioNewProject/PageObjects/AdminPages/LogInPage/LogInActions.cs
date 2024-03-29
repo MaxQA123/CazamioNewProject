@@ -14,18 +14,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         SuperAdmin superAdmin = new SuperAdmin().Generate();
         MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
         Broker broker = new Broker().Generate();
-        //Agent agent = new Agent().Generate();
+        Agent agent = new Agent().Generate();
         //AgentBroker agentBroker = new AgentBroker().Generate();
 
-        //[AllureStep("EnterEmailPasswordLogInPgAsAgent")]
-        //public LogInLandlord EnterEmailPasswordLogInPgAsAgent()
-        //{
-        //    InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, agent.EmailAddressAgent);
-        //    WaitUntil.WaitSomeInterval(100);
-        //    InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
-
-        //    return this;
-        //}
+        
 
         //[AllureStep("EnterEmailPasswordLogInPgAsAgentBroker")]
         //public LogInLandlord EnterEmailPasswordLogInPgAsAgentBroker()

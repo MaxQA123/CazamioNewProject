@@ -34,5 +34,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
 
             return this;
         }
+
+        [AllureStep("EnterEmailPasswordAsAgent")]
+        public LogInLandlord EnterEmailPasswordAsAgent()
+        {
+            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, agent.EmailAddressAgent);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+
+            return this;
+        }
     }
 }
