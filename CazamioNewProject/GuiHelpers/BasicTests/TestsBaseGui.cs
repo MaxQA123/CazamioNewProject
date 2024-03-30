@@ -7,7 +7,7 @@ namespace CazamioNewProject.GuiHelpers.BasicTests
         [SetUp]
         public void SetUp()
         {
-            Browser._Driver.Navigate().GoToUrl(StartPoints.URL_HOME_PAGE_TENANT_WEBSITE_CAZAMIO);
+            Browser._Driver.Navigate().GoToUrl(StartPoints.URL_HOME_PAGE_TENANT_MARKET_MYSPACE);
         }
     }
 }

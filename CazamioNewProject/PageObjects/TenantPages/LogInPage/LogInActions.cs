@@ -1,4 +1,5 @@
 ﻿using CazamioNewProject.GuiHelpers;
+using CazamioNewProject.Objects;
 using NUnit.Allure.Attributes;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace CazamioNewProject.PageObjects.TenantPages.LogInPage
 {
     public partial class LogInTenant
     {
-        //TenantApplicant tenantApplicant = new TenantApplicant().Generate();
+        TenantCreator tenantCreator = new TenantCreator().Generate();
         //TenantGuarantor tenantGuarantor = new TenantGuarantor().Generate();
         //TenantOccupant tenantOccupant = new TenantOccupant().Generate();
 

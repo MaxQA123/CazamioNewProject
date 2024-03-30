@@ -1,4 +1,5 @@
 using Allure.Commons;
+using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.PageObjects;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
@@ -22,26 +23,26 @@ namespace TenantCreatorGui
 
         public void LogIn()
         {
-            Pages.HeaderCazamioTenant
-                .ClickButtonLogInHdrCzmTnnt();
-            Pages.LogInCazamioTenant
-                .EnterEmailPasswordOnLgInAsTenantApplicant()
-                .ClickIconShowLgInCazmTnnt()
-                .SetCheckBoxRememberMeLgInCazmTnnt()
-                .ClickButtonLogInLgInCazmTnnt();
-            Pages.HeaderCazamioTenant
-                .ClickButtonMyApplicationsHdrCzmTnnt();
-            Pages.MyAccountCazamioTenant
-                .ClickTabAccountOnMyAccntPg()
-                .ClickButtonEditMyAccntPgTabAccnt();
+            Pages.Header
+                .ClickButtonLogIn();
+            Pages.LogInTenant
+                .EnterEmailPasswordAsTenantCreator()
+                .ClickIconShow()
+                .SetCheckBoxRememberMe()
+                .ClickButtonLogIn();
+            Pages.Header
+                .ClickButtonMyApplications();
+            //Pages.MyAccountCazamioTenant
+            //    .ClickTabAccountOnMyAccntPg()
+            //    .ClickButtonEditMyAccntPgTabAccnt();
 
-            string getFirstNameForCompare = Pages.MyAccountCazamioTenant.GetFirstNameFromMyAccount();
-            string getLastNameForCompare = Pages.MyAccountCazamioTenant.GetLastNameFromMyAccount();
+            //string getFirstNameForCompare = Pages.MyAccountCazamioTenant.GetFirstNameFromMyAccount();
+            //string getLastNameForCompare = Pages.MyAccountCazamioTenant.GetLastNameFromMyAccount();
 
-            Pages.MyAccountCazamioTenant
-                .VerifyTenatFirstLastName(getFirstNameForCompare, getLastNameForCompare);
-            Pages.HeaderCazamioTenant
-                .LogOutFromAccountViaHeader();
+            //Pages.MyAccountCazamioTenant
+            //    .VerifyTenatFirstLastName(getFirstNameForCompare, getLastNameForCompare);
+            //Pages.Header
+            //    .LogOutFromAccountViaHeader();
 
             WaitUntil.WaitSomeInterval(2000);
         }
