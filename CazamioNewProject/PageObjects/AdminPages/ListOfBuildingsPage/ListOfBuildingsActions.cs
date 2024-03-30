@@ -12,7 +12,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
     public partial class ListOfBuildings
     {
         Building building = new Building().Generate();
-        //Apartment apartment = new Apartment().Generate();
+        Apartment apartment = new Apartment().Generate();
 
         [AllureStep("ClickButtonAddBuilding")]
         public ListOfBuildings ClickButtonAddBuilding()
@@ -55,7 +55,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
             VerifyTitleListOfBuildings();
             WaitUntil.WaitSomeInterval(3000);
             WaitUntil.CustomElementIsVisible(FieldInputSearch);
-            InputGeneral.InputFunctionWithClear(FieldInputSearch, buildingAddress);
+            //InputGeneral.InputFunctionWithClear(FieldInputSearch, buildingAddress);
             WaitUntil.CustomElementIsVisible(ItemFirstBuildingOnPage);
             Button.Click(ItemFirstBuildingOnPage);
             WaitUntil.WaitSomeInterval(3000);
@@ -63,7 +63,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
                 .ClickButtonAddInTabApartments();
             KeyBoardActions.ScrollToDown();
             Pages.BuildingView
-                .SelectUnitFourInTabApartmentsBldngVwPg();
+                .SelectUnitFourInTabApartments();
 
 
             return this;
