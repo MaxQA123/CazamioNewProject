@@ -1,5 +1,6 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
+using CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage;
 using CazamioNewProject.PageObjects.AdminPages.LogInPage;
 using CazamioNewProject.PageObjects.AdminPages.SidebarPage;
 using OpenQA.Selenium;
@@ -18,6 +19,8 @@ namespace CazamioNewProject.PageObjects
             return page;
         }
 
+        #region Landlord pages
+
         public static LogInLandlord LogInLandlord => GetPage<LogInLandlord>();
         public static Sidebar Sidebar => GetPage<Sidebar>();
         public static SuperAdmin SuperAdmin => GetPage<SuperAdmin>();
@@ -25,5 +28,8 @@ namespace CazamioNewProject.PageObjects
         public static Broker Broker => GetPage<Broker>();
         public static Agent Agent => GetPage<Agent>();
         public static AgentBroker AgentBroker => GetPage<AgentBroker>();
+        public static ListOfBuildings ListOfBuildings => GetPage<ListOfBuildings>();
+
+        #endregion
     }
 }

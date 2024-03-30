@@ -138,6 +138,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 
             return this;
         }
+
         //Hiddedn this element
         //[AllureStep("ClickButtonPreApprovalsSidebar")]
         //public SideBarLandlord ClickButtonPreApprovalsSidebar()
