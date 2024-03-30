@@ -2,7 +2,7 @@
 {
     public class StartPoints
     {
-        public const string URL_HOME_PAGE_TENANT_WEBSITE_CAZAMIO = "https://testlandlord15-demo.casamio-test.lol/";
+        public const string URL_HOME_PAGE_TENANT_MARKET_MYSPACE = "https://testlandlord15-demo.casamio-test.lol/";
         public const string URL_LOGIN_ADMIN_WEBSITE = "https://landlord-demo.casamio-test.lol/account/signin";
 
         public const string URL_XITROO_EMAIL_RANDOM = "https://xitroo.com/";

@@ -17,6 +17,8 @@ using CazamioNewProject.PageObjects.AdminPages.PaymentSettingsPage;
 using CazamioNewProject.PageObjects.AdminPages.ReportsPage;
 using CazamioNewProject.PageObjects.AdminPages.SidebarPage;
 using CazamioNewProject.PageObjects.AdminPages.TemplatesPage;
+using CazamioNewProject.PageObjects.TenantPages.Header;
+using CazamioNewProject.PageObjects.TenantPages.LogInPage;
 using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 
@@ -58,7 +60,14 @@ namespace CazamioNewProject.PageObjects
         public static ListOfOwners ListOfOwners => GetPage<ListOfOwners>();
         public static Marketplace Marketplace => GetPage<Marketplace>();
         public static Reports Reports => GetPage<Reports>();
-        public static BuildingView BuildingView => GetPage<BuildingView>(); 
+        public static BuildingView BuildingView => GetPage<BuildingView>();
+
+        #endregion
+
+        #region Tanant pages
+
+        public static Header Header => GetPage<Header>();
+        public static LogInTenant LogInTenant => GetPage<LogInTenant>();
 
         #endregion
     }
