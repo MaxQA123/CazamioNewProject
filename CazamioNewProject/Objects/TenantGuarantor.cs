@@ -3,7 +3,7 @@ using RimuTec.Faker;
 
 namespace CazamioNewProject.Objects
 {
-    public class TenantCreator
+    public class TenantGuarantor
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -14,17 +14,17 @@ namespace CazamioNewProject.Objects
         public string LastNameTenant { get; set; }
         public string FullNameTenant { get; set; }
 
-        public TenantCreator Generate()
+        public TenantGuarantor Generate()
         {
             string firsName = "TenantQA";
             string lastName = Name.LastName();
             string shortEmail = GenerateRandomData.RandomEmail(5) + GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomEmail(2);
-            string emailAddressTenant = "tenantapp123ray@putsbox.com";
-            string firstNameTenant = "Ray";
-            string lastNameTenant = "Anderson";
+            string emailAddressTenant = "tenantgua123jim@putsbox.com";
+            string firstNameTenant = "Jimmy";
+            string lastNameTenant = "Todeski";
             string fullNameTenant = firstNameTenant + " " + lastNameTenant;
 
-            var tenantApplicant = new TenantCreator()
+            var tenantGuarantor = new TenantGuarantor()
             {
                 FirstName = firsName,
                 LastName = lastName,
@@ -35,7 +35,7 @@ namespace CazamioNewProject.Objects
                 LastNameTenant = lastNameTenant,
                 FullNameTenant = fullNameTenant,
             };
-            return tenantApplicant;
+            return tenantGuarantor;
         }
     }
 }
