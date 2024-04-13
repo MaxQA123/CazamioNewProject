@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 {
-    public partial class Sidebar
+    public partial class SidebarLandlord
     {
         [FindsBy(How = How.XPath, Using = "//div[@class= 'edit-btns']//input[@id = 'logo']")]
         public IWebElement ButtonUploadLogoOfLandlord;
@@ -66,6 +66,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 
         [FindsBy(How = How.XPath, Using = "//a[@href= '/transactions']")]
         public IWebElement ButtonTransactionsSidebar;
+
+        [FindsBy(How = How.XPath, Using = "//a[@href= '/leads']")]
+        public IWebElement ButtonLeadsSidebar;
 
         [FindsBy(How = How.XPath, Using = "//a[@href= '/commissions']")]
         public IWebElement ButtonCommissionsSidebar;

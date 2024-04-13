@@ -19,9 +19,9 @@ namespace CazamioNewProject.Objects
             string firsName = "TenantQA";
             string lastName = Name.LastName();
             string shortEmail = GenerateRandomData.RandomEmail(5) + GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomEmail(2);
-            string emailAddressTenant = "tenantgua123jim@putsbox.com";
-            string firstNameTenant = "Jimmy";
-            string lastNameTenant = "Todeski";
+            string emailAddressTenant = "guar-one-qaautotest15@putsbox.com";
+            string firstNameTenant = "Ariel";
+            string lastNameTenant = "Waterfal";
             string fullNameTenant = firstNameTenant + " " + lastNameTenant;
 
             var tenantGuarantor = new TenantGuarantor()

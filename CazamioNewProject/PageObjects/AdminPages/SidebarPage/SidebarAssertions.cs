@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 {
-    public partial class Sidebar
+    public partial class SidebarLandlord
     {
         [AllureStep("VerifySuperAdminUserNameAndRole")]
-        public Sidebar VerifySuperAdminUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
+        public SidebarLandlord VerifySuperAdminUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
         {
             WaitUntil.WaitSomeInterval(100);
             string getUserNameExpected = superAdmin.FullNameSuperAdmin;
@@ -31,7 +31,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         }
 
         [AllureStep("VerifyMarketplaceAdminUserNameAndRole")]
-        public Sidebar VerifyMarketplaceAdminUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
+        public SidebarLandlord VerifyMarketplaceAdminUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
         {
             WaitUntil.WaitSomeInterval(100);
             string getUserNameExpected = marketplaceAdmin.FullNameMarketplaceAdmin;
@@ -49,7 +49,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         }
 
         [AllureStep("VerifyBrokerUserNameAndRole")]
-        public Sidebar VerifyBrokerUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
+        public SidebarLandlord VerifyBrokerUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
         {
             WaitUntil.WaitSomeInterval(100);
             string getUserNameExpected = broker.FullUserNameBroker;
@@ -67,7 +67,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         }
 
         [AllureStep("VerifyAgentUserNameAndRole")]
-        public Sidebar VerifyAgentUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
+        public SidebarLandlord VerifyAgentUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
         {
             WaitUntil.WaitSomeInterval(3000);
             string getUserNameExpected = agent.FullNameAgent;
@@ -86,7 +86,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         }
 
         [AllureStep("VerifyAgentBrokerUserNameAndRole")]
-        public Sidebar VerifyAgentBrokerUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
+        public SidebarLandlord VerifyAgentBrokerUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
         {
             WaitUntil.WaitSomeInterval(500);
             string getUserNameExpected = agentBroker.FullNameAgentBroker;
@@ -105,7 +105,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         }
 
         [AllureStep("VerifyChangingLogoImageLandlord")]
-        public Sidebar VerifyChangingLogoImageLandlord()
+        public SidebarLandlord VerifyChangingLogoImageLandlord()
         {
             WaitUntil.CustomElementIsVisible(MessageChangeImageLogoLandlordSuccess);
             Assert.IsTrue(Successfully.IsVisible(MessageChangeImageLogoLandlordSuccess));
@@ -114,7 +114,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         }
 
         [AllureStep("VerifyChangingAvatarImageLandlord")]
-        public Sidebar VerifyChangingAvatarImageLandlord()
+        public SidebarLandlord VerifyChangingAvatarImageLandlord()
         {
             Assert.IsTrue(Successfully.IsVisible(MessageChangeImageAvatarUserSuccess));
 
@@ -122,7 +122,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         }
 
         [AllureStep("VerifyRewmoveAvatarImageLandlord")]
-        public Sidebar VerifyRewmoveAvatarImageLandlord()
+        public SidebarLandlord VerifyRewmoveAvatarImageLandlord()
         {
             Assert.IsTrue(Successfully.IsVisible(MessageRemoveImageAvatarUserSuccess));
 

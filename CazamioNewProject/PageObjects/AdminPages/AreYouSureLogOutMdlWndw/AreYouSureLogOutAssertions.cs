@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
+namespace CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw
 {
-    public partial class SidebarLandlord
+    public partial class AreYouSureLogOutLandlord
     {
     }
 }

@@ -1,5 +1,6 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
+using CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.BuildingViewPage;
 using CazamioNewProject.PageObjects.AdminPages.DashboardPage;
 using CazamioNewProject.PageObjects.AdminPages.ListOfAgentsPage;
@@ -45,7 +46,7 @@ namespace CazamioNewProject.PageObjects
         public static Building Building => GetPage<Building>();
         public static Apartment Apartment => GetPage<Apartment>();
         public static LogInLandlord LogInLandlord => GetPage<LogInLandlord>();
-        public static Sidebar Sidebar => GetPage<Sidebar>();
+        public static SidebarLandlord SidebarLandlord => GetPage<SidebarLandlord>();
         public static Dashboard Dashboard => GetPage<Dashboard>();
         public static ListOfBuildings ListOfBuildings => GetPage<ListOfBuildings>();
         public static ListOfApartments ListOfApartments => GetPage<ListOfApartments>();
@@ -61,6 +62,7 @@ namespace CazamioNewProject.PageObjects
         public static Marketplace Marketplace => GetPage<Marketplace>();
         public static Reports Reports => GetPage<Reports>();
         public static BuildingView BuildingView => GetPage<BuildingView>();
+        public static AreYouSureLogOutLandlord AreYouSureLogOutLandlord => GetPage<AreYouSureLogOutLandlord>();
 
         #endregion
 

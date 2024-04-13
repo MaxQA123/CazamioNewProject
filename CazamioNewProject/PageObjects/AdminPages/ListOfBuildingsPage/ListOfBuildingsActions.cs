@@ -49,7 +49,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
         [AllureStep("OpenPageApartmentView")]
         public ListOfBuildings OpenPageApartmentView()
         {
-            Pages.Sidebar
+            Pages.SidebarLandlord
                .ClickButtonBuildings();
             WaitUntil.CustomElementIsVisible(TitleListOfBuildingsPage);
             VerifyTitleListOfBuildings();
