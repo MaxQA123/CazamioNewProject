@@ -6,10 +6,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfLeadsPage
 {
     public partial class ListOfLeads
     {
-        [AllureStep("VerifyTitleListOfCommissionsPg")]
-        public ListOfLeads VerifyTitleListOfCommissionsPg()
+        [AllureStep("VerifyTitleLeads")]
+        public ListOfLeads VerifyTitleLeads()
         {
-            Assert.IsTrue(Successfully.IsVisible(TitleListOfCommissions));
+            Assert.IsTrue(Successfully.IsVisible(TitleLeads));
 
             return this;
         }

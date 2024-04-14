@@ -6,8 +6,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfCommissionsPage
 {
     public partial class ListOfCommissions
     {
-        [AllureStep("VerifyTitleListOfCommissionsPg")]
-        public ListOfCommissions VerifyTitleListOfCommissionsPg()
+        [AllureStep("VerifyTitleListOfCommissions")]
+        public ListOfCommissions VerifyTitleListOfCommissions()
         {
             Assert.IsTrue(Successfully.IsVisible(TitleListOfCommissions));
 

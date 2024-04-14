@@ -279,6 +279,16 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
+        [AllureStep("ClickButtonLogOutSidebar")]
+        public SidebarLandlord ClickButtonLogOutSidebar()
+        {
+            WaitUntil.WaitSomeInterval(1000);
+            Button.Click(ButtonLogOutSidebar);
+            WaitUntil.WaitSomeInterval(1000);
+
+            return this;
+        }
+
         [AllureStep("GetUserNameFromSideBar")]
         public string GetUserNameFromSideBar()
         {
@@ -299,17 +309,17 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return getUserNameRoleActual;
         }
 
-        [AllureStep("ClickButtonLogOut")]
-        public SidebarLandlord ClickButtonLogOut()
-        {
-            WaitUntil.WaitSomeInterval(1000);
-            Button.Click(ButtonLogOutSidebar);
-            WaitUntil.WaitSomeInterval(1000);
+        //[AllureStep("MakeLogOut")]
+        //public SidebarLandlord MakeLogOut()
+        //{
+        //    WaitUntil.WaitSomeInterval(1000);
+        //    Button.Click(ButtonLogOutSidebar);
+        //    WaitUntil.WaitSomeInterval(1000);
 
-            Pages.AreYouSureLogOutLandlord
-                .ClickButtonYesIAmSure();
+        //    Pages.AreYouSureLogOutLandlord
+        //        .ClickButtonYesIAmSure();
 
-            return this;
-        }
+        //    return this;
+        //}
     }
 }

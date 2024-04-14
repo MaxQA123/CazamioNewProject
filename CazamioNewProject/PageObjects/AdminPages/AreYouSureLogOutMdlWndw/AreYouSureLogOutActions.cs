@@ -27,5 +27,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw
 
             return this;
         }
+
+        [AllureStep("MakeLogOut")]
+        public AreYouSureLogOutLandlord MakeLogOut()
+        {
+            WaitUntil.WaitSomeInterval(1000);
+            Pages.SidebarLandlord
+                .ClickButtonLogOutSidebar();
+            WaitUntil.WaitSomeInterval(1000);
+            Pages.AreYouSureLogOutLandlord
+                .ClickButtonYesIAmSure();
+
+            return this;
+        }
     }
 }

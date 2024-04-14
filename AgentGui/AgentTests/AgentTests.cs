@@ -23,6 +23,8 @@ namespace AgentGuiTests
 
         public void LogIn()
         {
+            #region Test
+
             Pages.LogInLandlord
                .EnterEmailPasswordAsAgent()
                .ClickIconShow()
@@ -34,7 +36,7 @@ namespace AgentGuiTests
             Pages.SidebarLandlord
                 .VerifyAgentUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
 
-            WaitUntil.WaitSomeInterval(2000);
+            #endregion
         }
 
         [Test]
@@ -92,13 +94,15 @@ namespace AgentGuiTests
             Pages.ListOfTransactions
                 .VerifyTitleTransactionsPg();
             Pages.SidebarLandlord
+                .ClickButtonLeads();
+            Pages.ListOfLeads
+                .VerifyTitleLeads();
+            Pages.SidebarLandlord
                 .ClickButtonCommissions();
             Pages.ListOfCommissions
-                .VerifyTitleListOfCommissionsPg();
-            Pages.SidebarLandlord
-                .ClickButtonLeads();
-            Pages.SidebarLandlord
-                .ClickButtonLogOut();
+                .VerifyTitleListOfCommissions();
+            Pages.AreYouSureLogOutLandlord
+                .MakeLogOut();
             Pages.LogInLandlord
                 .VerifyTitle();
 
