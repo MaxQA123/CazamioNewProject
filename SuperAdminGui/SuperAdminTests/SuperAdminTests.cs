@@ -43,7 +43,7 @@ namespace SuperAdminGui
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin")]
+        [AllureSuite("SuperAdmin")]
         [AllureSubSuite("CreateMarketplaceAdmin")]
 
         public void CreateMarketplaceAdmin()

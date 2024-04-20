@@ -2,6 +2,7 @@
 using CazamioNewProject.Objects;
 using CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.BuildingViewPage;
+using CazamioNewProject.PageObjects.AdminPages.CreateANewBrokerMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.DashboardPage;
 using CazamioNewProject.PageObjects.AdminPages.ListOfAgentsPage;
@@ -69,6 +70,7 @@ namespace CazamioNewProject.PageObjects
 
         public static CreateANewMarketplaceAdminMdlWindow CreateANewMarketplaceAdminMdlWindow => GetPage<CreateANewMarketplaceAdminMdlWindow>();
         public static AreYouSureLogOutLandlordMdlWndw AreYouSureLogOutLandlordMdlWndw => GetPage<AreYouSureLogOutLandlordMdlWndw>();
+        public static CreateANewBrokerMdlWndw CreateANewBrokerMdlWndw => GetPage<CreateANewBrokerMdlWndw>();
 
         public static EmailPutsBox EmailPutsBox => GetPage<EmailPutsBox>();
         public static EmailHelper EmailHelper => GetPage<EmailHelper>();

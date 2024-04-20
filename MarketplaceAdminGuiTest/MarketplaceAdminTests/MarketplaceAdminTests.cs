@@ -36,7 +36,6 @@ namespace MarketplaceAdminGuiTest
             Pages.SidebarLandlord
                 .VerifyMarketplaceAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
 
-            WaitUntil.WaitSomeInterval(5000);
             #endregion
         }
 
@@ -51,7 +50,7 @@ namespace MarketplaceAdminGuiTest
 
         public void VerifySidebar()
         {
-            #region Test
+            #region Preconditions
 
             Pages.LogInLandlord
                 .EnterEmailPasswordAsMarketplaceAdmin()
@@ -139,9 +138,92 @@ namespace MarketplaceAdminGuiTest
             Pages.LogInLandlord
                 .VerifyTitle();
 
-            WaitUntil.WaitSomeInterval(2000);
+            #endregion
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("MarketplaceAdmin")]
+        [AllureSubSuite("CreateBroker")]
+
+        public void CreateBroker()
+        {
+            #region Preconditions
+
+            Pages.LogInLandlord
+                .EnterEmailPasswordAsMarketplaceAdmin()
+                .ClickIconShow()
+                .ClickButtonLetsGo();
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyMarketplaceAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
 
             #endregion
+
+            #region Test
+
+            Pages.SidebarLandlord
+                .ClickButtonBrokers();
+            Pages.ListOfBrokers
+                .VerifyTitleListOfBrokersPg()
+                .ClickButtonCreateBroker();
+            Pages.CreateANewBrokerMdlWndw
+                .VerifyTitleCreateNewBroker()
+                .EnterFirstLastNamesEmail();
+
+            string getFullEmail = Pages.CreateANewBrokerMdlWndw.CopyEmailFromModalWindowCreateNewBroker();
+            string getEmailBeforeDog = Pages.CreateANewBrokerMdlWndw.CopyEmailBeforeDogFromModalWindowCreateNewBroker();
+
+            Pages.CreateANewBrokerMdlWndw
+                .ClickButtonCreate();
+            Pages.ListOfBrokers
+                .VerifyMessageBrokerHasBeenSuccessfullyCreated();
+
+            //WaitUntil.WaitSomeInterval(500);
+            //var marketplaceIdFromDb = DBRequestAspNetUsers.AspNetUsers.GetMarketplaceIdByEmailAndMarketplaceId(getFullEmail, marketplaceId);
+            //Console.WriteLine($"MarketplaceId from DB: {marketplaceIdFromDb.MarketplaceId}");
+
+            string getEmailFromListOfBrokers = Pages.ListOfBrokers.CopyEmailFirstRecordEmailForFirstBrokerInList();
+
+            Pages.ListOfBrokers
+                .VerifyEmailInListOfBrokers(getFullEmail, getEmailFromListOfBrokers);
+            Pages.AreYouSureLogOutLandlordMdlWndw
+                .MakeLogOut();
+            Pages.JScriptExecutor
+               .OpenNewTab();
+            Pages.EmailHelper
+               .OpenPutsBox(Pages.EmailPutsBox.TitleLetterCreateBrokerMySpace, getEmailBeforeDog);
+            Pages.EmailPutsBox
+                .VerifyTitleLetterCreateBroker()
+                .ClickButtonHtml();
+
+            string getTextPasswordActual = Pages.EmailPutsBox.CopyPasswordFromEmailForCreateAdmin();
+
+            Pages.EmailPutsBox
+                .ClickButtonConfirmEmailForAdmin();
+
+            Pages.LogInLandlord
+                .PasteForEnterEmailFromEmailCreateBroker(getFullEmail)
+                .PasteForEnterPsswrdFromEmailCreateBroker(getTextPasswordActual)
+                .ClickIconShow()
+                .ClickButtonLetsGo();
+
+            string getUserNameRoleCompareBroker = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            //Pages.SidebarLandlord
+            //    .VerifyOnlyBrokerUserNameRole(getUserNameRoleCompareBroker);
+
+            #endregion
+
+            WaitUntil.WaitSomeInterval(2000);
+
         }
     }
 }
