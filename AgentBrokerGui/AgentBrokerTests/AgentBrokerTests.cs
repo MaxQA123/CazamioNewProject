@@ -104,7 +104,7 @@ namespace AgentBrokerGui
                 .ClickButtonCommissions();
             Pages.ListOfCommissions
                 .VerifyTitleListOfCommissions();
-            Pages.AreYouSureLogOutLandlord
+            Pages.AreYouSureLogOutLandlordMdlWndw
                 .MakeLogOut();
             Pages.LogInLandlord
                 .VerifyTitle();

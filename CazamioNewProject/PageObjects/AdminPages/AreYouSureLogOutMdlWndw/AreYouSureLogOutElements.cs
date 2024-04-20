@@ -3,7 +3,7 @@ using SeleniumExtras.PageObjects;
 
 namespace CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw
 {
-    public partial class AreYouSureLogOutLandlord
+    public partial class AreYouSureLogOutLandlordMdlWndw
     {
         [FindsBy(How = How.XPath, Using = "//button[@class = 'swal2-confirm btn btn-success']")]
         public IWebElement ButtonYesIAmSureOnMdlwndw;

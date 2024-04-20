@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw
+namespace CazamioNewProject.PageObjects.AdminPages.ListOfMarketplaceAdminsPage
 {
-    public partial class AreYouSureLogOutLandlordMdlWndw
+    public partial class ListOfMarketplaceAdmins
     {
     }
 }

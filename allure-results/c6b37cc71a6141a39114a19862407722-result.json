@@ -1,0 +1,5754 @@
+{
+  "uuid": "98ab1c21-7fc2-479b-b119-d724f01d24a7-tr-0-1002",
+  "historyId": "SuperAdminGui.TestsBaseGui.CreateMarketplaceAdmin",
+  "fullName": "SuperAdminGui.TestsBaseGui.CreateMarketplaceAdmin",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "SuperAdminGui"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateMarketplaceAdmin"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "MarketplaceAdmin"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateMarketplaceAdmin"
+    }
+  ],
+  "links": [],
+  "name": "CreateMarketplaceAdmin",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected string length 8 but was 15. Strings differ at index 4.\r\n  Expected: \"Mark Adm\"\r\n  But was:  \"Mark-admin Bode\"\r\n  ---------------^\r\n",
+    "trace": "   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_VerifyMarketplaceAdminUserNameAndRoleCreating_100663452_o(String getUserNameMarketplaceAdmin, String getUserNameRoleMarketplaceAdmin) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarAssertions.cs:line 58\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_VerifyMarketplaceAdminUserNameAndRoleCreating_100663452_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_VerifyMarketplaceAdminUserNameAndRoleCreating_100663452_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.VerifyMarketplaceAdminUserNameAndRoleCreating(String getUserNameMarketplaceAdmin, String getUserNameRoleMarketplaceAdmin) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarActions.cs:line 16\r\n   at SuperAdminGui.TestsBaseGui.CreateMarketplaceAdmin() in C:\\Automation\\CazamioNewProject\\SuperAdminGui\\SuperAdminTests\\SuperAdminTests.cs:line 113\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateMarketplaceAdmin",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected string length 8 but was 15. Strings differ at index 4.\r\n  Expected: \"Mark Adm\"\r\n  But was:  \"Mark-admin Bode\"\r\n  ---------------^\r\n",
+        "trace": "   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_VerifyMarketplaceAdminUserNameAndRoleCreating_100663452_o(String getUserNameMarketplaceAdmin, String getUserNameRoleMarketplaceAdmin) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarAssertions.cs:line 58\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_VerifyMarketplaceAdminUserNameAndRoleCreating_100663452_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_VerifyMarketplaceAdminUserNameAndRoleCreating_100663452_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.VerifyMarketplaceAdminUserNameAndRoleCreating(String getUserNameMarketplaceAdmin, String getUserNameRoleMarketplaceAdmin) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarActions.cs:line 16\r\n   at SuperAdminGui.TestsBaseGui.CreateMarketplaceAdmin() in C:\\Automation\\CazamioNewProject\\SuperAdminGui\\SuperAdminTests\\SuperAdminTests.cs:line 113\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624124527,
+          "stop": 1713624124527
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624124527,
+          "stop": 1713624124527
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624124527,
+          "stop": 1713624124527
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624124529,
+          "stop": 1713624124529
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624124529,
+          "stop": 1713624124529
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624124529,
+          "stop": 1713624124529
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624124529,
+          "stop": 1713624124529
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624124529,
+          "stop": 1713624124529
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624124529,
+          "stop": 1713624124529
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624124532,
+          "stop": 1713624124532
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624124532,
+          "stop": 1713624124532
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624124532,
+          "stop": 1713624124532
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624124532,
+          "stop": 1713624124532
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624124532,
+          "stop": 1713624124532
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624124532,
+          "stop": 1713624124532
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624124532,
+          "stop": 1713624124532
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624124532,
+          "stop": 1713624124532
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624124532,
+          "stop": 1713624124532
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624124532,
+          "stop": 1713624124532
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624124532,
+          "stop": 1713624124532
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624124532,
+          "stop": 1713624124532
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624124532,
+          "stop": 1713624124532
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624124532,
+          "stop": 1713624124532
+        },
+        {
+          "name": "EnterEmailPasswordAsSuperAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "superadmin123@putsbox.com"
+                }
+              ],
+              "start": 1713624124546,
+              "stop": 1713624129528
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Qwerty123!"
+                }
+              ],
+              "start": 1713624129643,
+              "stop": 1713624130161
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624124546,
+          "stop": 1713624130161
+        },
+        {
+          "name": "ClickIconShow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1713624130161,
+              "stop": 1713624130789
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624130161,
+          "stop": 1713624130789
+        },
+        {
+          "name": "ClickButtonLetsGo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1713624132792,
+              "stop": 1713624133655
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624130789,
+          "stop": 1713624134667
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624134667,
+          "stop": 1713624134667
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624134667,
+          "stop": 1713624134667
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134667,
+          "stop": 1713624134667
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624134667,
+          "stop": 1713624134667
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624134667,
+          "stop": 1713624134667
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134667,
+          "stop": 1713624134667
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624134667,
+          "stop": 1713624134667
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624134667,
+          "stop": 1713624134667
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134667,
+          "stop": 1713624134667
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624134668,
+          "stop": 1713624134668
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624134668,
+          "stop": 1713624134668
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134668,
+          "stop": 1713624134668
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624134668,
+          "stop": 1713624134668
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624134668,
+          "stop": 1713624134668
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134668,
+          "stop": 1713624134668
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134668,
+          "stop": 1713624134668
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624134668,
+          "stop": 1713624134668
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624134668,
+          "stop": 1713624134668
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134668,
+          "stop": 1713624134668
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624134668,
+          "stop": 1713624134668
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624134668,
+          "stop": 1713624134668
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134668,
+          "stop": 1713624134668
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134668,
+          "stop": 1713624134668
+        },
+        {
+          "name": "GetUserNameFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624134669,
+          "stop": 1713624134727
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624134727,
+          "stop": 1713624134727
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624134727,
+          "stop": 1713624134727
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134727,
+          "stop": 1713624134727
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624134728,
+          "stop": 1713624134728
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624134728,
+          "stop": 1713624134728
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134728,
+          "stop": 1713624134728
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624134728,
+          "stop": 1713624134728
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624134728,
+          "stop": 1713624134728
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134728,
+          "stop": 1713624134729
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624134732,
+          "stop": 1713624134732
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624134732,
+          "stop": 1713624134732
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134732,
+          "stop": 1713624134732
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624134732,
+          "stop": 1713624134732
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624134732,
+          "stop": 1713624134732
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134732,
+          "stop": 1713624134732
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134732,
+          "stop": 1713624134732
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624134732,
+          "stop": 1713624134732
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624134732,
+          "stop": 1713624134732
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134732,
+          "stop": 1713624134732
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624134732,
+          "stop": 1713624134732
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624134732,
+          "stop": 1713624134732
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134732,
+          "stop": 1713624134732
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134733,
+          "stop": 1713624134733
+        },
+        {
+          "name": "GetUserNameRoleFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624134733,
+          "stop": 1713624134809
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624134809,
+          "stop": 1713624134809
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624134809,
+          "stop": 1713624134809
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134809,
+          "stop": 1713624134809
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624134809,
+          "stop": 1713624134809
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624134809,
+          "stop": 1713624134809
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134809,
+          "stop": 1713624134809
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624134809,
+          "stop": 1713624134809
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624134809,
+          "stop": 1713624134809
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134809,
+          "stop": 1713624134809
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624134810,
+          "stop": 1713624134810
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624134810,
+          "stop": 1713624134810
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134810,
+          "stop": 1713624134810
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624134810,
+          "stop": 1713624134810
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624134810,
+          "stop": 1713624134810
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134810,
+          "stop": 1713624134810
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134810,
+          "stop": 1713624134810
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624134810,
+          "stop": 1713624134810
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624134810,
+          "stop": 1713624134810
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134810,
+          "stop": 1713624134810
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624134810,
+          "stop": 1713624134810
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624134810,
+          "stop": 1713624134810
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134810,
+          "stop": 1713624134810
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134810,
+          "stop": 1713624134810
+        },
+        {
+          "name": "VerifySuperAdminUserNameAndRole",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Super User"
+            },
+            {
+              "name": "String",
+              "value": "Super Admin"
+            }
+          ],
+          "start": 1713624134812,
+          "stop": 1713624134930
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624134930,
+          "stop": 1713624134930
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624134930,
+          "stop": 1713624134930
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134930,
+          "stop": 1713624134930
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624134931,
+          "stop": 1713624134931
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624134931,
+          "stop": 1713624134931
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134931,
+          "stop": 1713624134931
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624134931,
+          "stop": 1713624134931
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624134931,
+          "stop": 1713624134931
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134931,
+          "stop": 1713624134931
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624134931,
+          "stop": 1713624134931
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624134931,
+          "stop": 1713624134931
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134931,
+          "stop": 1713624134931
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624134931,
+          "stop": 1713624134931
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624134931,
+          "stop": 1713624134931
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134931,
+          "stop": 1713624134931
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134931,
+          "stop": 1713624134931
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624134932,
+          "stop": 1713624134932
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624134932,
+          "stop": 1713624134932
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134932,
+          "stop": 1713624134932
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624134932,
+          "stop": 1713624134932
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624134932,
+          "stop": 1713624134932
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134932,
+          "stop": 1713624134932
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624134932,
+          "stop": 1713624134932
+        },
+        {
+          "name": "ClickButtonMarketplaceAdmins",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1713624135940,
+              "stop": 1713624136703
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624134933,
+          "stop": 1713624137716
+        },
+        {
+          "name": "VerifyTitleListOfMarketplaceAdmins",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624137716,
+          "stop": 1713624138819
+        },
+        {
+          "name": "ClickButtonCreateMarketplaceAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1713624138820,
+              "stop": 1713624139503
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624138820,
+          "stop": 1713624139503
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624139504,
+          "stop": 1713624139504
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624139504,
+          "stop": 1713624139504
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624139504,
+          "stop": 1713624139504
+        },
+        {
+          "name": "VerifyTitleCreateANewMarketplaceadmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624139505,
+          "stop": 1713624140576
+        },
+        {
+          "name": "FillInMandatoryFields",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Mark-admin"
+                }
+              ],
+              "start": 1713624140611,
+              "stop": 1713624141117
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Bode"
+                }
+              ],
+              "start": 1713624141225,
+              "stop": 1713624141742
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "ejeiq386fg@putsbox.com"
+                }
+              ],
+              "start": 1713624141865,
+              "stop": 1713624142450
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "testlandlord15-demo"
+                }
+              ],
+              "start": 1713624142564,
+              "stop": 1713624143171
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624140577,
+          "stop": 1713624143171
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624143172,
+          "stop": 1713624143172
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624143172,
+          "stop": 1713624143172
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624143172,
+          "stop": 1713624143172
+        },
+        {
+          "name": "GetEmailFromFieldInputEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624143173,
+          "stop": 1713624143334
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624143334,
+          "stop": 1713624143334
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624143334,
+          "stop": 1713624143334
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624143334,
+          "stop": 1713624143334
+        },
+        {
+          "name": "CopyEmailBeforeDogFromFieldInputEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624143335,
+          "stop": 1713624143870
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624143870,
+          "stop": 1713624143870
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624143870,
+          "stop": 1713624143870
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624143870,
+          "stop": 1713624143870
+        },
+        {
+          "name": "ClickButtonCreate",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1713624143991,
+              "stop": 1713624144619
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624143871,
+          "stop": 1713624144619
+        },
+        {
+          "name": "VerifyMessageMarketplaceAdminHasBeenSuccessfullyCreated",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624144620,
+          "stop": 1713624146510
+        },
+        {
+          "name": "MakeLogOut",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "RandomEmail",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "5"
+                }
+              ],
+              "start": 1713624147516,
+              "stop": 1713624147516
+            },
+            {
+              "name": "RandomNumber",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "3"
+                }
+              ],
+              "start": 1713624147517,
+              "stop": 1713624147517
+            },
+            {
+              "name": "RandomEmail",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "2"
+                }
+              ],
+              "start": 1713624147517,
+              "stop": 1713624147517
+            },
+            {
+              "name": "RandomEmail",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "5"
+                }
+              ],
+              "start": 1713624147517,
+              "stop": 1713624147517
+            },
+            {
+              "name": "RandomNumber",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "3"
+                }
+              ],
+              "start": 1713624147517,
+              "stop": 1713624147517
+            },
+            {
+              "name": "RandomEmail",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "2"
+                }
+              ],
+              "start": 1713624147517,
+              "stop": 1713624147517
+            },
+            {
+              "name": "RandomEmail",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "5"
+                }
+              ],
+              "start": 1713624147518,
+              "stop": 1713624147518
+            },
+            {
+              "name": "RandomNumber",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "3"
+                }
+              ],
+              "start": 1713624147518,
+              "stop": 1713624147518
+            },
+            {
+              "name": "RandomEmail",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "2"
+                }
+              ],
+              "start": 1713624147518,
+              "stop": 1713624147518
+            },
+            {
+              "name": "RandomEmail",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "5"
+                }
+              ],
+              "start": 1713624147518,
+              "stop": 1713624147518
+            },
+            {
+              "name": "RandomNumber",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "3"
+                }
+              ],
+              "start": 1713624147518,
+              "stop": 1713624147518
+            },
+            {
+              "name": "RandomEmail",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "2"
+                }
+              ],
+              "start": 1713624147518,
+              "stop": 1713624147518
+            },
+            {
+              "name": "RandomPhoneNumber",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "7"
+                }
+              ],
+              "start": 1713624147518,
+              "stop": 1713624147518
+            },
+            {
+              "name": "RandomPhoneNumber",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "7"
+                }
+              ],
+              "start": 1713624147518,
+              "stop": 1713624147518
+            },
+            {
+              "name": "RandomNumber",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "2"
+                }
+              ],
+              "start": 1713624147518,
+              "stop": 1713624147518
+            },
+            {
+              "name": "RandomNumber",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "2"
+                }
+              ],
+              "start": 1713624147518,
+              "stop": 1713624147518
+            },
+            {
+              "name": "RandomEmail",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "5"
+                }
+              ],
+              "start": 1713624147518,
+              "stop": 1713624147518
+            },
+            {
+              "name": "RandomNumber",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "3"
+                }
+              ],
+              "start": 1713624147518,
+              "stop": 1713624147518
+            },
+            {
+              "name": "RandomEmail",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "2"
+                }
+              ],
+              "start": 1713624147518,
+              "stop": 1713624147518
+            },
+            {
+              "name": "RandomPhoneNumber",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "7"
+                }
+              ],
+              "start": 1713624147518,
+              "stop": 1713624147518
+            },
+            {
+              "name": "RandomPhoneNumber",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "7"
+                }
+              ],
+              "start": 1713624147518,
+              "stop": 1713624147518
+            },
+            {
+              "name": "RandomNumber",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "2"
+                }
+              ],
+              "start": 1713624147518,
+              "stop": 1713624147518
+            },
+            {
+              "name": "RandomNumber",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "2"
+                }
+              ],
+              "start": 1713624147518,
+              "stop": 1713624147518
+            },
+            {
+              "name": "ClickButtonLogOutSidebar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [
+                {
+                  "name": "Click",
+                  "status": "passed",
+                  "statusDetails": {
+                    "known": false,
+                    "muted": false,
+                    "flaky": false
+                  },
+                  "stage": "finished",
+                  "steps": [],
+                  "attachments": [],
+                  "parameters": [
+                    {
+                      "name": "WebElementProxy",
+                      "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                    }
+                  ],
+                  "start": 1713624148533,
+                  "stop": 1713624149152
+                }
+              ],
+              "attachments": [],
+              "parameters": [],
+              "start": 1713624147519,
+              "stop": 1713624150159
+            },
+            {
+              "name": "ClickButtonYesIAmSure",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [
+                {
+                  "name": "Click",
+                  "status": "passed",
+                  "statusDetails": {
+                    "known": false,
+                    "muted": false,
+                    "flaky": false
+                  },
+                  "stage": "finished",
+                  "steps": [],
+                  "attachments": [],
+                  "parameters": [
+                    {
+                      "name": "WebElementProxy",
+                      "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                    }
+                  ],
+                  "start": 1713624151204,
+                  "stop": 1713624151800
+                }
+              ],
+              "attachments": [],
+              "parameters": [],
+              "start": 1713624151170,
+              "stop": 1713624151800
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624146511,
+          "stop": 1713624151800
+        },
+        {
+          "name": "OpenNewTab",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624151801,
+          "stop": 1713624153344
+        },
+        {
+          "name": "VerifyTitleLetterCreateAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624157837,
+          "stop": 1713624157917
+        },
+        {
+          "name": "ClickButtonHtml",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1713624158535,
+              "stop": 1713624159229
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624157918,
+          "stop": 1713624159229
+        },
+        {
+          "name": "ClickButtonConfirmEmailForAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624162302,
+          "stop": 1713624172622
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624172623,
+          "stop": 1713624172623
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624172623,
+          "stop": 1713624172623
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624172623,
+          "stop": 1713624172623
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624172625,
+          "stop": 1713624172625
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624172625,
+          "stop": 1713624172625
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624172625,
+          "stop": 1713624172625
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624172626,
+          "stop": 1713624172626
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624172626,
+          "stop": 1713624172626
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624172626,
+          "stop": 1713624172626
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624172626,
+          "stop": 1713624172626
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624172626,
+          "stop": 1713624172627
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624172627,
+          "stop": 1713624172627
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624172627,
+          "stop": 1713624172627
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624172627,
+          "stop": 1713624172627
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624172627,
+          "stop": 1713624172627
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624172627,
+          "stop": 1713624172627
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624172627,
+          "stop": 1713624172627
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624172627,
+          "stop": 1713624172627
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624172627,
+          "stop": 1713624172627
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624172627,
+          "stop": 1713624172627
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624172627,
+          "stop": 1713624172627
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624172627,
+          "stop": 1713624172627
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624172627,
+          "stop": 1713624172627
+        },
+        {
+          "name": "PasteForEnterEmailFromEmailCreateAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "ejeiq386fg@putsbox.com"
+            }
+          ],
+          "start": 1713624172629,
+          "stop": 1713624174878
+        },
+        {
+          "name": "PasteForEnterPsswrdFromEmailCreateAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "SA96(%eb"
+            }
+          ],
+          "start": 1713624174879,
+          "stop": 1713624177079
+        },
+        {
+          "name": "ClickIconShow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1713624177079,
+              "stop": 1713624177714
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624177079,
+          "stop": 1713624177714
+        },
+        {
+          "name": "ClickButtonLetsGo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1713624179728,
+              "stop": 1713624180417
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624177714,
+          "stop": 1713624181435
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624181435,
+          "stop": 1713624181435
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624181435,
+          "stop": 1713624181435
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181435,
+          "stop": 1713624181435
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624181437,
+          "stop": 1713624181437
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624181437,
+          "stop": 1713624181437
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181437,
+          "stop": 1713624181437
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624181437,
+          "stop": 1713624181437
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624181437,
+          "stop": 1713624181437
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181438,
+          "stop": 1713624181438
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624181438,
+          "stop": 1713624181438
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624181438,
+          "stop": 1713624181438
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181438,
+          "stop": 1713624181438
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624181438,
+          "stop": 1713624181438
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624181438,
+          "stop": 1713624181438
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181438,
+          "stop": 1713624181438
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181438,
+          "stop": 1713624181438
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624181438,
+          "stop": 1713624181438
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624181438,
+          "stop": 1713624181438
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181438,
+          "stop": 1713624181438
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624181438,
+          "stop": 1713624181438
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624181438,
+          "stop": 1713624181438
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181438,
+          "stop": 1713624181438
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181438,
+          "stop": 1713624181438
+        },
+        {
+          "name": "GetUserNameFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624181439,
+          "stop": 1713624181526
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624181527,
+          "stop": 1713624181527
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624181527,
+          "stop": 1713624181527
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181527,
+          "stop": 1713624181527
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624181527,
+          "stop": 1713624181527
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624181527,
+          "stop": 1713624181527
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181527,
+          "stop": 1713624181527
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624181527,
+          "stop": 1713624181527
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624181527,
+          "stop": 1713624181527
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181527,
+          "stop": 1713624181527
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624181527,
+          "stop": 1713624181527
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624181527,
+          "stop": 1713624181527
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181527,
+          "stop": 1713624181527
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624181527,
+          "stop": 1713624181527
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624181527,
+          "stop": 1713624181527
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181528,
+          "stop": 1713624181528
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181528,
+          "stop": 1713624181528
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624181528,
+          "stop": 1713624181528
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624181528,
+          "stop": 1713624181528
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181528,
+          "stop": 1713624181528
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624181528,
+          "stop": 1713624181528
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624181528,
+          "stop": 1713624181528
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181528,
+          "stop": 1713624181528
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181528,
+          "stop": 1713624181528
+        },
+        {
+          "name": "GetUserNameRoleFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1713624181529,
+          "stop": 1713624181581
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624181581,
+          "stop": 1713624181581
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624181581,
+          "stop": 1713624181581
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181581,
+          "stop": 1713624181581
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624181582,
+          "stop": 1713624181582
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624181582,
+          "stop": 1713624181582
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181582,
+          "stop": 1713624181582
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624181582,
+          "stop": 1713624181582
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624181582,
+          "stop": 1713624181582
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181582,
+          "stop": 1713624181582
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624181582,
+          "stop": 1713624181582
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624181582,
+          "stop": 1713624181582
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181582,
+          "stop": 1713624181582
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624181582,
+          "stop": 1713624181582
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624181582,
+          "stop": 1713624181582
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181582,
+          "stop": 1713624181582
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181582,
+          "stop": 1713624181582
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1713624181582,
+          "stop": 1713624181582
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1713624181582,
+          "stop": 1713624181582
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181582,
+          "stop": 1713624181582
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624181582,
+          "stop": 1713624181582
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1713624181582,
+          "stop": 1713624181582
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181582,
+          "stop": 1713624181582
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1713624181582,
+          "stop": 1713624181582
+        },
+        {
+          "name": "VerifyMarketplaceAdminUserNameAndRoleCreating",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  Expected string length 8 but was 15. Strings differ at index 4.\r\n  Expected: \"Mark Adm\"\r\n  But was:  \"Mark-admin Bode\"\r\n  ---------------^\r\n",
+            "trace": "   at NUnit.Framework.Assert.Multiple(TestDelegate testDelegate)\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_VerifyMarketplaceAdminUserNameAndRoleCreating_100663452_o(String getUserNameMarketplaceAdmin, String getUserNameRoleMarketplaceAdmin) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarAssertions.cs:line 58\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_VerifyMarketplaceAdminUserNameAndRoleCreating_100663452_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Mark-admin Bode"
+            },
+            {
+              "name": "String",
+              "value": "Marketplace Admin"
+            }
+          ],
+          "start": 1713624181583,
+          "stop": 1713624181713
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "dc5536c20f0845f894921c8c360ee507-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1713624121007,
+      "stop": 1713624184280
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1713624121007,
+  "stop": 1713624184281
+}

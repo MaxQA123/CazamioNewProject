@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw
 {
-    public partial class AreYouSureLogOutLandlord
+    public partial class AreYouSureLogOutLandlordMdlWndw
     {
         [AllureStep("ClickButtonYesIAmSure")]
-        public AreYouSureLogOutLandlord ClickButtonYesIAmSure()
+        public AreYouSureLogOutLandlordMdlWndw ClickButtonYesIAmSure()
         {
             WaitUntil.CustomElementIsVisible(ButtonYesIAmSureOnMdlwndw);
             Button.Click(ButtonYesIAmSureOnMdlwndw);
@@ -20,7 +20,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw
         }
 
         [AllureStep("ClickButtonCancel")]
-        public AreYouSureLogOutLandlord ClickButtonCancel()
+        public AreYouSureLogOutLandlordMdlWndw ClickButtonCancel()
         {
             WaitUntil.CustomElementIsVisible(ButtonCancelOnMdlwndw);
             Button.Click(ButtonCancelOnMdlwndw);
@@ -29,13 +29,13 @@ namespace CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw
         }
 
         [AllureStep("MakeLogOut")]
-        public AreYouSureLogOutLandlord MakeLogOut()
+        public AreYouSureLogOutLandlordMdlWndw MakeLogOut()
         {
             WaitUntil.WaitSomeInterval(1000);
             Pages.SidebarLandlord
                 .ClickButtonLogOutSidebar();
             WaitUntil.WaitSomeInterval(1000);
-            Pages.AreYouSureLogOutLandlord
+            Pages.AreYouSureLogOutLandlordMdlWndw
                 .ClickButtonYesIAmSure();
 
             return this;

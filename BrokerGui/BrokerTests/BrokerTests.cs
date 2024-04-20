@@ -122,7 +122,7 @@ namespace BrokerGuiTests
                .ClickButtonMarketplace();
             Pages.Marketplace
                 .VerifyTitleMarketplacePg();
-            Pages.AreYouSureLogOutLandlord
+            Pages.AreYouSureLogOutLandlordMdlWndw
                 .MakeLogOut();
             Pages.LogInLandlord
                 .VerifyTitle();

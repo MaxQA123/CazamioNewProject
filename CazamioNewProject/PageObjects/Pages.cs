@@ -2,6 +2,7 @@
 using CazamioNewProject.Objects;
 using CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.BuildingViewPage;
+using CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.DashboardPage;
 using CazamioNewProject.PageObjects.AdminPages.ListOfAgentsPage;
 using CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage;
@@ -10,6 +11,7 @@ using CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage;
 using CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage;
 using CazamioNewProject.PageObjects.AdminPages.ListOfCommissionsPage;
 using CazamioNewProject.PageObjects.AdminPages.ListOfLeadsPage;
+using CazamioNewProject.PageObjects.AdminPages.ListOfMarketplaceAdminsPage;
 using CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage;
 using CazamioNewProject.PageObjects.AdminPages.ListOfTransactionsPage;
 using CazamioNewProject.PageObjects.AdminPages.LogInPage;
@@ -18,6 +20,7 @@ using CazamioNewProject.PageObjects.AdminPages.PaymentSettingsPage;
 using CazamioNewProject.PageObjects.AdminPages.ReportsPage;
 using CazamioNewProject.PageObjects.AdminPages.SidebarPage;
 using CazamioNewProject.PageObjects.AdminPages.TemplatesPage;
+using CazamioNewProject.PageObjects.EmailPutsBoxPage;
 using CazamioNewProject.PageObjects.TenantPages.Header;
 using CazamioNewProject.PageObjects.TenantPages.LogInPage;
 using OpenQA.Selenium;
@@ -62,7 +65,15 @@ namespace CazamioNewProject.PageObjects
         public static Marketplace Marketplace => GetPage<Marketplace>();
         public static Reports Reports => GetPage<Reports>();
         public static BuildingView BuildingView => GetPage<BuildingView>();
-        public static AreYouSureLogOutLandlord AreYouSureLogOutLandlord => GetPage<AreYouSureLogOutLandlord>();
+        public static ListOfMarketplaceAdmins ListOfMarketplaceAdmins => GetPage<ListOfMarketplaceAdmins>();
+
+        public static CreateANewMarketplaceAdminMdlWindow CreateANewMarketplaceAdminMdlWindow => GetPage<CreateANewMarketplaceAdminMdlWindow>();
+        public static AreYouSureLogOutLandlordMdlWndw AreYouSureLogOutLandlordMdlWndw => GetPage<AreYouSureLogOutLandlordMdlWndw>();
+
+        public static EmailPutsBox EmailPutsBox => GetPage<EmailPutsBox>();
+        public static EmailHelper EmailHelper => GetPage<EmailHelper>();
+
+        public static JScriptExecutor JScriptExecutor => GetPage<JScriptExecutor>();
 
         #endregion
 

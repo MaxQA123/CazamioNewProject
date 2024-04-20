@@ -134,7 +134,7 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonReports();
             Pages.Reports
                 .VerifyTitleReportsPage();
-            Pages.AreYouSureLogOutLandlord
+            Pages.AreYouSureLogOutLandlordMdlWndw
                 .MakeLogOut();
             Pages.LogInLandlord
                 .VerifyTitle();
