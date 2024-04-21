@@ -20,10 +20,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         public IWebElement linkRemovePhotoOfLandlord;
 
         [FindsBy(How = How.XPath, Using = "//div[@class = 'user-name']")]
-        public IWebElement UserNameOfSidebarLandlordWebSite;
+        public IWebElement UserNameOfSidebar;
 
         [FindsBy(How = How.XPath, Using = "//div[@class = 'user-role']")]
-        public IWebElement UserNameRoleOfSidebarLandlordWebSite;
+        public IWebElement UserNameRoleOfSidebar;
 
         #region MessageSuccessfully
 

@@ -292,8 +292,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("GetUserNameFromSideBar")]
         public string GetUserNameFromSideBar()
         {
-            WaitUntil.CustomElementIsVisible(UserNameOfSidebarLandlordWebSite);
-            string getUserName = UserNameOfSidebarLandlordWebSite.Text;
+            WaitUntil.CustomElementIsVisible(UserNameOfSidebar);
+            string getUserName = UserNameOfSidebar.Text;
             string getUserNameActual = getUserName.ToString();
 
             return getUserNameActual;
@@ -302,8 +302,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("GetUserNameRoleFromSideBar")]
         public string GetUserNameRoleFromSideBar()
         {
-            WaitUntil.CustomElementIsVisible(UserNameRoleOfSidebarLandlordWebSite);
-            string getUserNameRole = UserNameRoleOfSidebarLandlordWebSite.Text;
+            WaitUntil.CustomElementIsVisible(UserNameRoleOfSidebar);
+            string getUserNameRole = UserNameRoleOfSidebar.Text;
             string getUserNameRoleActual = getUserNameRole.ToString();
 
             return getUserNameRoleActual;

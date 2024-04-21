@@ -8,8 +8,11 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfAgentsPage
         [AllureStep("ClickButtonCreateAgent")]
         public ListOfAgents ClickButtonCreateAgent()
         {
-            WaitUntil.WaitSomeInterval(500);
-            Button.Click(ButtonCreateAgentAgntsPage);
+            Pages.JScriptExecutor
+                .WaitLoader();
+            WaitUntil.CustomElementIsVisible(ButtonCreateAgent);
+            WaitUntil.CustomElementIsClickable(ButtonCreateAgent);
+            Button.Click(ButtonCreateAgent);
 
             return this;
         }

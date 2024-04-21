@@ -217,8 +217,82 @@ namespace MarketplaceAdminGuiTest
 
             string getUserNameRoleCompareBroker = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
 
-            //Pages.SidebarLandlord
-            //    .VerifyOnlyBrokerUserNameRole(getUserNameRoleCompareBroker);
+            Pages.SidebarLandlord
+                .VerifyBrokerUserNameAndRoleCreating(getUserNameRoleCompareBroker);
+
+            #endregion
+
+            WaitUntil.WaitSomeInterval(2000);
+
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("MarketplaceAdmin")]
+        [AllureSubSuite("CreateAgent")]
+
+        public void CreateAgent()
+        {
+            #region Preconditions
+
+            Pages.LogInLandlord
+                .EnterEmailPasswordAsMarketplaceAdmin()
+                .ClickIconShow()
+                .ClickButtonLetsGo();
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyMarketplaceAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+
+            #endregion
+
+            #region Test
+
+            Pages.SidebarLandlord
+                .ClickButtonAgents();
+            Pages.ListOfAgents
+                .ClickButtonCreateAgent();
+            Pages.CreateNewAgentMdlWndw
+                .EnterFirstLastNameEmailPhnNmbrCell()
+                .EnterBrokerAgentCommission();
+
+            string fullEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailFromMdlWndwCreateAgent();
+            string partEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailBeforeDogFromModalWindowCreateNewAgent();
+
+            Pages.CreateNewAgentMdlWndw
+                .ClickButtonSave()
+                .VerifyMessageNewAgentCreatedSuccessfully();
+            KeyBoardActions.ClickEscapeButton();
+            Pages.AreYouSureLogOutLandlordMdlWndw
+                .MakeLogOut();
+            Pages.JScriptExecutor
+                .OpenNewTab();
+            Pages.EmailHelper
+                .OpenPutsBox(Pages.EmailPutsBox.TitleLetterCreateAgentMySpace, partEmailPutsBox);
+            Pages.EmailPutsBox
+                .VerifyTitleLetterCreateAgent()
+                .ClickButtonHtml();
+
+            string getTextPasswordActual = Pages.EmailPutsBox.CopyPasswordFromEmailForCreateAdmin();
+
+            Pages.EmailPutsBox
+                .ClickButtonConfirmEmailForAdmin();
+            Pages.LogInLandlord
+                .PasteForEnterEmailFromEmailCreateAgent(fullEmailPutsBox)
+                .PasteForEnterPsswrdFromEmailCreateAgent(getTextPasswordActual)
+                .ClickIconShow()
+                .ClickButtonLetsGo();
+
+            string getUserNameRoleCompareAgent = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyAgentUserNameAndRoleCreating(getUserNameRoleCompareAgent);
 
             #endregion
 

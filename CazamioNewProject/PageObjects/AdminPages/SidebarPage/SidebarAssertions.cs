@@ -2,10 +2,6 @@
 using NUnit.Allure.Attributes;
 using NUnit.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 {
@@ -33,7 +29,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("VerifyMarketplaceAdminUserNameAndRole")]
         public SidebarLandlord VerifyMarketplaceAdminUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
         {
-            WaitUntil.WaitSomeInterval(100);
+            WaitUntil.CustomElementIsVisible(UserNameRoleOfSidebar);
             string getUserNameExpected = marketplaceAdmin.FullNameMarketplaceAdmin;
             string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_MARKETPLACE_ADMIN;
 
@@ -51,7 +47,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("VerifyMarketplaceAdminUserNameAndRoleCreating")]
         public SidebarLandlord VerifyMarketplaceAdminUserNameAndRoleCreating(string getUserNameRoleMarketplaceAdmin)
         {
-            WaitUntil.WaitSomeInterval(100);
+            WaitUntil.CustomElementIsVisible(UserNameRoleOfSidebar);
             string getUserNameExpected = marketplaceAdmin.FullNameMarketplaceAdmin;
             string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_MARKETPLACE_ADMIN;
 
@@ -67,7 +63,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("VerifyBrokerUserNameAndRole")]
         public SidebarLandlord VerifyBrokerUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
         {
-            WaitUntil.WaitSomeInterval(100);
+            WaitUntil.CustomElementIsVisible(UserNameRoleOfSidebar);
             string getUserNameExpected = broker.FullUserNameBroker;
             string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_BROKER;
 
@@ -82,10 +78,26 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
+        [AllureStep("VerifyBrokerUserNameAndRoleCreating")]
+        public SidebarLandlord VerifyBrokerUserNameAndRoleCreating(string getUserNameRoleCompareBroker)
+        {
+            WaitUntil.CustomElementIsVisible(UserNameRoleOfSidebar);
+            string getUserNameExpected = broker.FullUserNameBroker;
+            string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_BROKER;
+
+            Assert.Multiple(() =>
+            {
+                Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleCompareBroker);
+
+                Console.WriteLine($"Name Role EX: {getUserNameRoleExpected} Name Role AC: {getUserNameRoleCompareBroker}");
+            });
+            return this;
+        }
+
         [AllureStep("VerifyAgentUserNameAndRole")]
         public SidebarLandlord VerifyAgentUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
         {
-            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.CustomElementIsVisible(UserNameRoleOfSidebar);
             string getUserNameExpected = agent.FullNameAgent;
             string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_AGENT;
 
@@ -96,6 +108,23 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 
                 Console.WriteLine($"First Last name EX: {getUserNameExpected} First Last name AC: {getUserNameActual}");
                 Console.WriteLine($"Name role EX: {getUserNameRoleExpected} Name role AC: {getUserNameRoleActual}");
+            });
+
+            return this;
+        }
+
+        [AllureStep("VerifyAgentUserNameAndRoleCreating")]
+        public SidebarLandlord VerifyAgentUserNameAndRoleCreating(string getUserNameRoleCompareAgent)
+        {
+            WaitUntil.CustomElementIsVisible(UserNameRoleOfSidebar);
+            string getUserNameExpected = agent.FullNameAgent;
+            string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_AGENT;
+
+            Assert.Multiple(() =>
+            {
+                Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleCompareAgent);
+
+                Console.WriteLine($"Name role EX: {getUserNameRoleExpected} Name role AC: {getUserNameRoleCompareAgent}");
             });
 
             return this;

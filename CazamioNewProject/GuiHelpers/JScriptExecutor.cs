@@ -1,5 +1,7 @@
 ﻿using NUnit.Allure.Attributes;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using System;
 using System.Linq;
 
 namespace CazamioNewProject.GuiHelpers
@@ -53,6 +55,15 @@ namespace CazamioNewProject.GuiHelpers
             js.ExecuteScript("аргументы[0].click();", hiddenElement);
 
             return hiddenElement;
+        }
+
+        [AllureStep("WaitLoader")]
+        public JScriptExecutor WaitLoader()
+        {
+            WebDriverWait wait = new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(10));
+            wait.Until(driver => ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete"));
+
+            return this;
         }
     }
 }

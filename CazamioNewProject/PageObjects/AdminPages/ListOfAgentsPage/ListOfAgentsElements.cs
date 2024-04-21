@@ -9,6 +9,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfAgentsPage
         public IWebElement TitleAgentsPage;
 
         [FindsBy(How = How.XPath, Using = ("//cazamio-button[@text= 'Create Agent']"))]
-        public IWebElement ButtonCreateAgentAgntsPage;
+        public IWebElement ButtonCreateAgent;
     }
 }
