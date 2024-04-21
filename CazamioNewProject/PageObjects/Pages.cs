@@ -2,6 +2,7 @@
 using CazamioNewProject.Objects;
 using CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.BuildingViewPage;
+using CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.CreateANewBrokerMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.CreateNewAgentMdlWndw;
@@ -69,17 +70,22 @@ namespace CazamioNewProject.PageObjects
         public static BuildingView BuildingView => GetPage<BuildingView>();
         public static ListOfMarketplaceAdmins ListOfMarketplaceAdmins => GetPage<ListOfMarketplaceAdmins>();
 
+        #endregion
+
+        #region Landlord Modal Windows
+
         public static CreateANewMarketplaceAdminMdlWindow CreateANewMarketplaceAdminMdlWindow => GetPage<CreateANewMarketplaceAdminMdlWindow>();
         public static AreYouSureLogOutLandlordMdlWndw AreYouSureLogOutLandlordMdlWndw => GetPage<AreYouSureLogOutLandlordMdlWndw>();
         public static CreateANewBrokerMdlWndw CreateANewBrokerMdlWndw => GetPage<CreateANewBrokerMdlWndw>();
         public static CreateNewAgentMdlWndw CreateNewAgentMdlWndw => GetPage<CreateNewAgentMdlWndw>();
+        public static CreateANewOwnerMdlWndw CreateANewOwnerMdlWndw => GetPage<CreateANewOwnerMdlWndw>();
+
+        #endregion
 
         public static EmailPutsBox EmailPutsBox => GetPage<EmailPutsBox>();
         public static EmailHelper EmailHelper => GetPage<EmailHelper>();
 
         public static JScriptExecutor JScriptExecutor => GetPage<JScriptExecutor>();
-
-        #endregion
 
         #region Tanant pages
 

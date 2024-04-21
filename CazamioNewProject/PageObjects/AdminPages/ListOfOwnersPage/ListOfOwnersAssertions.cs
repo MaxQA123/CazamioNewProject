@@ -18,5 +18,26 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage
 
             return this;
         }
+
+        [AllureStep("VerifyMessageSuccessCreatedOwner")]
+        public ListOfOwners VerifyMessageSuccessCreatedOwner()
+        {
+            WaitUntil.CustomElementIsVisible(MessageOwnerHasBeenSuccessfullyCreated);
+            Assert.IsTrue(Successfully.IsVisible(MessageOwnerHasBeenSuccessfullyCreated));
+            WaitUntil.WaitSomeInterval(1000);
+
+            return this;
+        }
+
+        [AllureStep("VerifyEmailForNewOwner")]
+        public ListOfOwners VerifyEmailForNewOwner(string getOwnerEmailFromModalWndw, string getLastEmailFromPage)
+        {
+            WaitUntil.WaitSomeInterval(3000);
+            Assert.AreEqual(getOwnerEmailFromModalWndw, getLastEmailFromPage);
+            Console.WriteLine($"{getOwnerEmailFromModalWndw} :Email in the time creating");
+            Console.WriteLine($"{getLastEmailFromPage} :Email after creating");
+
+            return this;
+        }
     }
 }
