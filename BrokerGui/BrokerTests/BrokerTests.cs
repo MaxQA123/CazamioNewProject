@@ -50,7 +50,7 @@ namespace BrokerGuiTests
 
         public void VerifySidebar()
         {
-            #region Test
+            #region Preconditions
 
             Pages.LogInLandlord
                 .EnterEmailPasswordAsBroker()
@@ -66,7 +66,7 @@ namespace BrokerGuiTests
             WaitUntil.WaitSomeInterval(2000);
             #endregion
 
-            #region Preconditions
+            #region Test
 
             Pages.SidebarLandlord
                 .UploadImageLogoLandlordFirst()
@@ -126,6 +126,152 @@ namespace BrokerGuiTests
                 .MakeLogOut();
             Pages.LogInLandlord
                 .VerifyTitle();
+
+            #endregion
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Broker")]
+        [AllureSubSuite("CreateAgent")]
+
+        public void CreateAgent()
+        {
+            #region Preconditions
+
+            Pages.LogInLandlord
+                .EnterEmailPasswordAsBroker()
+                .ClickIconShow()
+                .ClickButtonLetsGo();
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+
+            #endregion
+
+            #region Test
+
+            Pages.SidebarLandlord
+                 .ClickButtonAgents();
+            Pages.ListOfAgents
+                .ClickButtonCreateAgent();
+            Pages.CreateNewAgentMdlWndw
+                .EnterFirstLastNameEmailPhnNmbrCell()
+                .EnterBrokerAgentCommission();
+
+            string fullEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailFromMdlWndwCreateAgent();
+            string partEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailBeforeDogFromModalWindowCreateNewAgent();
+
+            Pages.CreateNewAgentMdlWndw
+                .ClickButtonSave()
+                .VerifyMessageNewAgentCreatedSuccessfully();
+            KeyBoardActions.ClickEscapeButton();
+            Pages.AreYouSureLogOutLandlordMdlWndw
+                .MakeLogOut();
+            Pages.JScriptExecutor
+                .OpenNewTab();
+            Pages.EmailHelper
+                .OpenPutsBox(Pages.EmailPutsBox.TitleLetterCreateAgentMySpace, partEmailPutsBox);
+            Pages.EmailPutsBox
+                .VerifyTitleLetterCreateAgent()
+                .ClickButtonHtml();
+
+            string getTextPasswordActual = Pages.EmailPutsBox.CopyPasswordFromEmailForCreateAdmin();
+
+            Pages.EmailPutsBox
+                .ClickButtonConfirmEmailForAdmin();
+
+            Pages.LogInLandlord
+                .PasteForEnterEmailFromEmailCreateAgent(fullEmailPutsBox)
+                .PasteForEnterPsswrdFromEmailCreateAgent(getTextPasswordActual)
+                .ClickIconShow()
+                .ClickButtonLetsGo();
+
+            string getUserNameRoleCompareAgent = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+               .VerifyAgentUserNameAndRoleCreating(getUserNameRoleCompareAgent);
+
+            //WaitUntil.WaitSomeInterval(100);
+            //var marketplaceIdFromDb = DBRequestAspNetUsers.AspNetUsers.GetMarketplaceIdByEmailAndMarketplaceId(fullEmailPutsBox, marketplaceId);
+            //Console.WriteLine($"MarketplaceId from DB: {marketplaceIdFromDb.MarketplaceId}");
+
+            #endregion
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Broker")]
+        [AllureSubSuite("CreateOwnerWithAssignedBroker")]
+
+        public void CreateOwnerWithAssignedBroker()
+        {
+            #region Preconditions
+
+            Pages.LogInLandlord
+                .EnterEmailPasswordAsBroker()
+                .ClickIconShow()
+                .ClickButtonLetsGo();
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+
+            #endregion
+
+            #region Test
+
+            Pages.SidebarLandlord
+               .ClickButtonOwners();
+            Pages.ListOfOwners
+                .ClickButtonCreateOwner();
+            Pages.CreateANewOwnerMdlWndw
+                .VerifyTitleCreateANewOwner()
+                .EnterCompanyNameForBrokerRole()
+                .EnterOwnerName()
+                .EnterOwnerEmaiL()
+                .EnterOfficeLocation()
+                .EnterInternalNotes()
+                .ClickButtonAddPhoneNumber()
+                .EnterPhoneExtensionNumbers()
+                .ClickButtonAddCommissionStructure();
+            KeyBoardActions.ScrollToDown();
+            Pages.CreateANewOwnerMdlWndw
+                .SwitchingItemsPays()
+                .ClickButtonAddMgmt()
+                .ClickButtonPayType()
+                .SelectItemOwnerAndTenantPays()
+                .EnterDataOwnerAndTenantPays()
+                .ScrollDown()
+                .EnterFullDataMgmt();
+
+            string getOwnerEmailFromModalWndw = Pages.CreateANewOwnerMdlWndw.GetEmailFromFieldOwnerEmail();
+
+            Pages.CreateANewOwnerMdlWndw
+                .ClickButtonCreate();
+            Pages.ListOfOwners
+                .VerifyMessageSuccessCreatedOwner();
+
+            string getLastEmailFromPage = Pages.ListOfOwners.GetFirstEmailFromTable();
+
+            Pages.ListOfOwners
+                .VerifyEmailForNewOwner(getOwnerEmailFromModalWndw, getLastEmailFromPage);
+
+            //var marketplaceIdFromDb = DbRequestOwners.DBOwners.GetMarketplaceIdByEmailUserOwner(getOwnerEmailFromModalWndw);
+            //Console.WriteLine($"MarketplaceId of owner: {marketplaceIdFromDb}");
 
             #endregion
         }

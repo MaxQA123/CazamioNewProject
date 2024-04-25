@@ -18,7 +18,6 @@ namespace CazamioNewProject.Objects
         public ApartmentTypeInfo ApartmentType { get; set; }
         public string ApartmentHoldDeposit { get; set; }
         public RentalTermsInfo RentalTerms { get; set; }
-        public RequiredDocumentsInfo RequiredDocuments { get; set; }
         public string Description { get; set; }
         public string InternalNotes { get; set; }
         public BuildingShortAddressInfo BuildingShortAddress { get; set; }
@@ -122,34 +121,6 @@ namespace CazamioNewProject.Objects
             public string EighteenMonths { get; set; }
         }
 
-        public class RequiredDocumentsInfo
-        {
-            public string TwoRecentPaystubs { get; set; }
-            public string SocialSecurityCard { get; set; }
-            public string EmploymentVerificationLetter { get; set; }
-            public string WTwoFromPreviousYear { get; set; }
-            public string OtherPertinentDocuments { get; set; }
-            public string GovIssuedId { get; set; }
-            public string SecondaryPhotoId { get; set; }
-            public string StudentVerification { get; set; }
-            public string MostRecentBankStatement { get; set; }
-            public string TwoMostRecentBankStatements { get; set; }
-            public string LandlordReference { get; set; }
-            public string ProofOfLastThreeRentPayments { get; set; }
-            public string ProofOfLastTwelveRentPayments { get; set; }
-            public string MostRecentWTwoOrOneThousandNine { get; set; }
-            public string MostRecentCheckingAccountStatement { get; set; }
-            public string MostRecentSavingsAccountStatement { get; set; }
-            public string CpaLetterSelfEmployed { get; set; }
-            public string PaidInvoicesSelfEmployed { get; set; }
-            public string ProofOfCreditOrCollectionDisputeIfApplicable { get; set; }
-            public string AnyAdditionalFinancialAssets { get; set; }
-            public string ThreeMostRecentRentPayments { get; set; }
-            public string MostRecentTaxReturn { get; set; }
-            public string ThreeRecentPaystubs { get; set; }
-            public string SixMostRecentRentPayments { get; set; }
-        }
-
         public class BuildingShortAddressInfo
         {
             public string MarkAdmAssignedBroker { get; set; }
@@ -221,32 +192,7 @@ namespace CazamioNewProject.Objects
             string valueHoldDeposit = "700";
             string itemTwelveMonths = "12 months";
             string itemEighteenMonths = "18 months";
-            #region Required Documents 
-            string itemTwoRecentPaystubs = "2 Recent paystubs";
-            string itemSocialSecurityCard = "Social Security Card";
-            string itemEmploymentVerificationLetter = "Employment Verification Letter";
-            string itemWTwoFromPreviousYear = "W-2 From previous year";
-            string itemOtherPertinentDocuments = "Other pertinent documents";
-            string itemGovIssuedId = "Gov issued ID";
-            string itemSecondaryPhotoId = "Secondary photo ID";
-            string itemStudentVerification = "Student verification";
-            string itemMostRecentBankStatement = "Most recent bank statement";
-            string itemTwoMostRecentBankStatements = "2 Most recent bank statements";
-            string itemLandlordReference = "Landlord Reference";
-            string itemProofOfLastThreeRentPayments = "Proof of last 3 rent payments";
-            string itemProofOfLastTwelveRentPayments = "Proof of last 12 rent payments";
-            string itemMostRecentWTwoOrOneThousandNine = "Most recent W-2 or 1099";
-            string itemMostRecentCheckingAccountStatement = "Most Recent checking account statement";
-            string itemMostRecentSavingsAccountStatement = "Most Recent savings account statement";
-            string itemCpaLetterSelfEmployed = "CPA letter (self-employed)";
-            string itemPaidInvoicesSelfEmployed = "Paid invoices (self-employed)";
-            string itemProofOfCreditOrCollectionDisputeIfApplicable = "Proof of credit or collection dispute (If Applicable)";
-            string itemAnyAdditionalFinancialAssets = "Any additional financial assets";
-            string itemThreeMostRecentRentPayments = "3 most recent rent payments";
-            string itemMostRecentTaxReturn = "Most recent tax return";
-            string itemThreeRecentPaystubs = "3 recent paystubs";
-            string itemSixMostRecentRentPayments = "6 most recent rent payments";
-            #endregion
+            
             string description = "Description for APARTMENT (12345) (*&%$#@!) (098765) (*&^)";
             string internalNotes = "Internal Notes for APARTMENT (12345) (*&%$#@!) (09876) (*&^)";
             string textLong = "Lorem APARTMENT ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,";
@@ -340,33 +286,6 @@ namespace CazamioNewProject.Objects
                 {
                     TwelveMonths = itemTwelveMonths,
                     EighteenMonths = itemEighteenMonths
-                },
-                RequiredDocuments = new RequiredDocumentsInfo
-                {
-                    TwoRecentPaystubs = itemTwoRecentPaystubs,
-                    SocialSecurityCard = itemSocialSecurityCard,
-                    EmploymentVerificationLetter = itemEmploymentVerificationLetter,
-                    WTwoFromPreviousYear = itemWTwoFromPreviousYear,
-                    OtherPertinentDocuments = itemOtherPertinentDocuments,
-                    GovIssuedId = itemGovIssuedId,
-                    SecondaryPhotoId = itemSecondaryPhotoId,
-                    StudentVerification = itemStudentVerification,
-                    MostRecentBankStatement = itemMostRecentBankStatement,
-                    TwoMostRecentBankStatements = itemTwoMostRecentBankStatements,
-                    LandlordReference = itemLandlordReference,
-                    ProofOfLastThreeRentPayments = itemProofOfLastThreeRentPayments,
-                    ProofOfLastTwelveRentPayments = itemProofOfLastTwelveRentPayments,
-                    MostRecentWTwoOrOneThousandNine = itemMostRecentWTwoOrOneThousandNine,
-                    MostRecentCheckingAccountStatement = itemMostRecentCheckingAccountStatement,
-                    MostRecentSavingsAccountStatement = itemMostRecentSavingsAccountStatement,
-                    CpaLetterSelfEmployed = itemCpaLetterSelfEmployed,
-                    PaidInvoicesSelfEmployed = itemPaidInvoicesSelfEmployed,
-                    ProofOfCreditOrCollectionDisputeIfApplicable = itemProofOfCreditOrCollectionDisputeIfApplicable,
-                    AnyAdditionalFinancialAssets = itemAnyAdditionalFinancialAssets,
-                    ThreeMostRecentRentPayments = itemThreeMostRecentRentPayments,
-                    MostRecentTaxReturn = itemMostRecentTaxReturn,
-                    ThreeRecentPaystubs = itemThreeRecentPaystubs,
-                    SixMostRecentRentPayments = itemSixMostRecentRentPayments
                 },
                 Description = description,
                 InternalNotes = internalNotes,
