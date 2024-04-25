@@ -97,7 +97,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw
         [AllureStep("SelectItemOwnerAndTenantPays")]
         public CreateANewOwnerMdlWndw SelectItemOwnerAndTenantPays()
         {
-            WaitUntil.WaitSomeInterval(100);
+            WaitUntil.CustomElementIsVisible(ItemOwnerAndTenantPays);
+            WaitUntil.CustomElementIsClickable(ItemOwnerAndTenantPays);
             Button.Click(ItemOwnerAndTenantPays);
 
             return this;
@@ -106,7 +107,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw
         [AllureStep("SelectItemTenantPays")]
         public CreateANewOwnerMdlWndw SelectItemTenantPays()
         {
-            WaitUntil.WaitSomeInterval(100);
+            WaitUntil.CustomElementIsVisible(ItemTenantPays);
+            WaitUntil.CustomElementIsClickable(ItemTenantPays);
             Button.Click(ItemTenantPays);
 
             return this;
@@ -115,7 +117,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw
         [AllureStep("SelectItemOwnerPays")]
         public CreateANewOwnerMdlWndw SelectItemOwnerPays()
         {
-            WaitUntil.WaitSomeInterval(100);
+            WaitUntil.CustomElementIsVisible(ItemOwnerPays);
+            WaitUntil.CustomElementIsClickable(ItemOwnerPays);
             Button.Click(ItemOwnerPays);
 
             return this;
