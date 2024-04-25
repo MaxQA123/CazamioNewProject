@@ -249,14 +249,12 @@ namespace BrokerGuiTests
                 .EnterPhoneExtensionNumbers()
                 .ClickButtonAddCommissionStructure();
             KeyBoardActions.ScrollToDown();
-            Pages.CreateANewOwnerMdlWndw
-                .SwitchingItemsPays()
+            Pages.CreateANewOwnerMdlWndw               
                 .ClickButtonAddMgmt()
-                .ClickButtonPayType()
-                .SelectItemOwnerAndTenantPays()
-                .EnterDataOwnerAndTenantPays()
+                .SelectItemTenantPays()
+                .EnterDataTenantPays()
                 .ScrollDown()
-                .EnterFullDataMgmt();
+                .EnterMandatoryDataMgmt();
 
             string getOwnerEmailFromModalWndw = Pages.CreateANewOwnerMdlWndw.GetEmailFromFieldOwnerEmail();
 

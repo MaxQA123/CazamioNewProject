@@ -104,15 +104,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw
             return this;
         }
 
-        [AllureStep("SelectItemTenantPays")]
-        public CreateANewOwnerMdlWndw SelectItemTenantPays()
-        {
-            WaitUntil.CustomElementIsVisible(ItemTenantPays);
-            WaitUntil.CustomElementIsClickable(ItemTenantPays);
-            Button.Click(ItemTenantPays);
+        //[AllureStep("SelectItemTenantPays")]
+        //public CreateANewOwnerMdlWndw SelectItemTenantPays()
+        //{
+        //    WaitUntil.CustomElementIsVisible(ItemTenantPays);
+        //    WaitUntil.CustomElementIsClickable(ItemTenantPays);
+        //    Button.Click(ItemTenantPays);
 
-            return this;
-        }
+        //    return this;
+        //}
 
         [AllureStep("SelectItemOwnerPays")]
         public CreateANewOwnerMdlWndw SelectItemOwnerPays()

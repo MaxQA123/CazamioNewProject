@@ -1,10 +1,5 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using NUnit.Allure.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw
 {
@@ -62,6 +57,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw
             return this;
         }
 
+        [AllureStep("SelectItemTenantPays")]
+        public CreateANewOwnerMdlWndw SelectItemTenantPays()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonPayType);
+            WaitUntil.CustomElementIsVisible(ItemTenantPays);
+            WaitUntil.CustomElementIsClickable(ItemTenantPays);
+            Button.Click(ItemTenantPays);
+
+            return this;
+        }
+
         [AllureStep("EnterDataOwnerAndTenantPays")]
         public CreateANewOwnerMdlWndw EnterDataOwnerAndTenantPays()
         {
@@ -73,6 +80,27 @@ namespace CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw
             InputGeneral.InputFunctionWithClear(FieldInputOwnerPercentage, owner.OwnerPercentage);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputTenantPercentage, owner.TenantPercentage);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputTakeOff, owner.TakeOff);
+
+            return this;
+        }
+
+        [AllureStep("EnterDataTenantPays")]
+        public CreateANewOwnerMdlWndw EnterDataTenantPays()
+        {
+            InputGeneral.InputFunctionWithClear(FieldInputTenantNumberOfMonths, owner.TenantNumberOfMonths);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputTakeOff, owner.TakeOff);
+
+            return this;
+        }
+
+        [AllureStep("EnterDataOwnerPays")]
+        public CreateANewOwnerMdlWndw EnterDataOwnerPays()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputOwnerNumberOfMonths, owner.OwnerNumberOfMonths);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputTakeOff, owner.TakeOff);
 
@@ -92,6 +120,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw
             InputGeneral.InputFunctionWithClear(FieldInputMgmtExtensionNumber, owner.ExtensionNumber);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputMgmtOfficeLocation, owner.OfficeLocation);
+
+            return this;
+        }
+
+        [AllureStep("EnterMandatoryDataMgmt")]
+        public CreateANewOwnerMdlWndw EnterMandatoryDataMgmt()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputMgmtName, owner.FullName);
 
             return this;
         }

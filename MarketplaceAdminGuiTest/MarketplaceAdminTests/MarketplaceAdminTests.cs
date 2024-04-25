@@ -343,12 +343,7 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonAddCommissionStructure();
             KeyBoardActions.ScrollToDown();
             Pages.CreateANewOwnerMdlWndw
-                .SwitchingItemsPays()
-                .ClickButtonAddMgmt()
-                .ClickButtonPayType()
-                .SelectItemOwnerPays()
-                .EnterDataOwnerAndTenantPays()
-                .ScrollDown();
+                .EnterDataOwnerPays();
 
             string getOwnerEmailFromModalWndw = Pages.CreateANewOwnerMdlWndw.GetEmailFromFieldOwnerEmail();
 
