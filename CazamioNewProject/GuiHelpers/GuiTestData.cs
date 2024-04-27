@@ -43,6 +43,9 @@
         public const string USER_NAME_ROLE_MARKETPLACE_ADMIN = "Marketplace Admin";
         public const string USER_NAME_ROLE_BROKER = "Broker";
         public const string USER_NAME_ROLE_AGENT = "Agent";
+        public const string CAB_NAME_LOCK_ACCESS = "CAB";
+        public const string NOTE_NAME_LOCK_ACCESS = "Note";
+        public const string PIN_CODE_NAME_LOCK_ACCESS = "PinCode";
     }
 
     public class EmailNameDomen
@@ -67,5 +70,10 @@
         public const string IMAGE_FOR_PAYMENT_VENMO_SCREENING = $"\\UploadImages\\building screening.jpg";
         public const string IMAGE_FOR_PAYMENT_VENMO_HOLD_BUILDING = $"\\UploadImages\\building hold deposit.jpg";
         public const string IMAGE_FOR_PAYMENT_VENMO_HOLD_APARTMENT = $"\\UploadImages\\OK apartment hold deposit.jpg";
+    }
+
+    public class ListOfAmenitiesForBuildingAdminsPage
+    {
+        public const int FIRST_TAG = 0;
     }
 }

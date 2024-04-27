@@ -428,8 +428,139 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
 
-            WaitUntil.WaitSomeInterval(2000);
+        }
 
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("MarketplaceAdmin")]
+        [AllureSubSuite("AddBuildingAssignedBroker")]
+
+        public void AddBuildingAssignedBroker()
+        {
+            #region SettingsForBuilding
+
+            //All the fields filled in, Cardknox
+            //All tabs filled in
+            //Washington Square
+
+            #endregion
+
+            #region Preconditions
+
+            Pages.LogInLandlord
+                .EnterEmailPasswordAsMarketplaceAdmin()
+                .ClickIconShow()
+                .ClickButtonLetsGo();
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyMarketplaceAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+
+            #endregion
+
+            #region Test
+
+            Pages.ListOfBuildings
+                .ClickButtonAddBuilding();
+            Pages.NewBuilding
+                .VerifyTitleNewBuildingPg()
+                .SelectOwnerWithBroker()
+                .EnterFullAddressMarkAdm();
+
+            string getAddressNewBuildingActual = Pages.NewBuilding.GetValueFromFieldAddress();
+
+            Pages.NewBuilding
+                .EnterBuildingNameMarkAdmBroker()
+                .EnterLlcNameForBroker()
+                .EnterLongInternalNotesDescription();
+            KeyBoardActions.ClickTab();
+            Pages.NewBuilding
+                .ClickBtnEditForPaymentSystem();
+
+            string getValueScreeningFee = Pages.NewBuilding.GetValueFromFieldCreditScreeningFee();
+            string getItemCardknoxActual = Pages.MdlWndwPaymentKeys.GetItemCardknox();
+            string getItemApiKeyCardknoxActual = Pages.MdlWndwPaymentKeys.GetItemApiKeyCardknox();
+
+            Pages.MdlWndwPaymentKeys
+                .ClickButtonCross();
+            Pages.MdlWndwPaymentKeys
+                .VerifyApiKeyCardknox(getItemCardknoxActual, getItemApiKeyCardknoxActual);
+            Pages.NewBuilding
+                .VerifyValueByDefaulScreeningFee(getValueScreeningFee)
+                .EnterCreditScreeningFeeHoldDeposit()
+                .ClickBtnSelectPaymentMethodsForCreditScreeningFee();
+            Pages.ModalWindowPaymentOptions
+                .VerifyTitlePaymentOptions()
+                .SelectAllPaymentMethods();
+            Pages.NewBuilding
+                .ClickBtnSelectPaymentMethodsForHoldDeposit();
+            Pages.ModalWindowPaymentOptions
+                .VerifyTitlePaymentOptions()
+                .SelectAllPaymentMethodsForHoldBuilding();
+            Pages.NewBuilding
+                .ClickButtonSelectPetPolicies();
+            Pages.ModalWindowPetPolicies
+                .VerifyTitlePetPoliciesMdlWndw()
+                .SelectAllItems()
+                .ClickButtonSave();
+            KeyBoardActions.ScrollToUp();
+            Pages.NewBuilding
+            .ClickTabAmenities()
+            .ClickFieldInputSearchForAmenities()
+            .SelectFiveAmenities()
+            .ClickTabAccess()
+            .ClickButtonAddLock();
+
+            string copyActualNameLocation = Pages.NewBuilding.CopyNameLocation();
+
+            Pages.NewBuilding
+                .VerifyLocationMainAccess(copyActualNameLocation)
+                .AddItemAccessTypePinCode()
+                .ClickButtonAddLock();
+
+            string copyActualNameLocationTwo = Pages.NewBuilding.CopyNameLocation();
+
+            Pages.NewBuilding
+                .VerifyLocationApartment(copyActualNameLocationTwo)
+                .AddItemAccessTypeNote();
+
+            string copyActualNameNote = Pages.NewBuilding.GetNameNoteTypeAccessFromTable();
+            string copyActualNamePinCode = Pages.NewBuilding.GetNamePinCodeTypeAccessFromTable();
+
+            Pages.NewBuilding
+                .VerifyTypeAccessFromTable(copyActualNameNote, copyActualNamePinCode)
+                .ClickTabSpecials()
+                .ClickButtonAddSpecials()
+                .AddConcessionIsActive();
+
+            string getNameConcession = Pages.NewBuilding.GetNameConcessionFromTable();
+
+            Pages.NewBuilding
+                .ClickTabFreeStuff()
+                .ClickButtonAddSpecials()
+                .AddFreeStuffIsActive();
+
+            string getNameFreeStuff = Pages.NewBuilding.GetNameFreeStuffFromTable();
+
+            Pages.NewBuilding
+                .VerifyNameConcessionAndFreeStuff(getNameConcession, getNameFreeStuff)
+                .ClickTabImages()
+                .UploadFourImages()
+                .ClickButtonSaveBuilding()
+                .VerifyMessageSavedSuccessfullyBuilding();
+            Pages.BuildingView
+                .VerifyTitleBuildingViewPage();
+
+            string getAddressBuildingView = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+
+            Pages.BuildingView
+                .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
         }
     }
 }

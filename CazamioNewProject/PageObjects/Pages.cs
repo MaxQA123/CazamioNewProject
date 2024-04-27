@@ -19,6 +19,7 @@ using CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage;
 using CazamioNewProject.PageObjects.AdminPages.ListOfTransactionsPage;
 using CazamioNewProject.PageObjects.AdminPages.LogInPage;
 using CazamioNewProject.PageObjects.AdminPages.MarketplacePage;
+using CazamioNewProject.PageObjects.AdminPages.NewBuildingPage;
 using CazamioNewProject.PageObjects.AdminPages.PaymentSettingsPage;
 using CazamioNewProject.PageObjects.AdminPages.ReportsPage;
 using CazamioNewProject.PageObjects.AdminPages.SidebarPage;
@@ -43,7 +44,6 @@ namespace CazamioNewProject.PageObjects
         }
 
         #region Landlord pages
-
         public static SuperAdmin SuperAdmin => GetPage<SuperAdmin>();
         public static MarketplaceAdmin MarketplaceAdmin => GetPage<MarketplaceAdmin>();
         public static Broker Broker => GetPage<Broker>();
@@ -69,6 +69,7 @@ namespace CazamioNewProject.PageObjects
         public static Reports Reports => GetPage<Reports>();
         public static BuildingView BuildingView => GetPage<BuildingView>();
         public static ListOfMarketplaceAdmins ListOfMarketplaceAdmins => GetPage<ListOfMarketplaceAdmins>();
+        public static NewBuilding NewBuilding => GetPage<NewBuilding>();
 
         #endregion
 
