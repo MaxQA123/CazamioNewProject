@@ -273,5 +273,18 @@ namespace BrokerGuiTests
 
             #endregion
         }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Broker")]
+        [AllureSubSuite("AddBuildingAssignedBroker")]
+        public void AddBuildingAssignedBroker()
+        {
+
+        }
     }
 }
