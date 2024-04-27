@@ -7,6 +7,7 @@ using CazamioNewProject.PageObjects.AdminPages.CreateANewBrokerMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.CreateNewAgentMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.DashboardPage;
+using CazamioNewProject.PageObjects.AdminPages.DatePickerMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.ListOfAgentsPage;
 using CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage;
 using CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsPage;
@@ -20,6 +21,8 @@ using CazamioNewProject.PageObjects.AdminPages.ListOfTransactionsPage;
 using CazamioNewProject.PageObjects.AdminPages.LogInPage;
 using CazamioNewProject.PageObjects.AdminPages.MarketplacePage;
 using CazamioNewProject.PageObjects.AdminPages.NewBuildingPage;
+using CazamioNewProject.PageObjects.AdminPages.PaymentKeysMdlWndw;
+using CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.PaymentSettingsPage;
 using CazamioNewProject.PageObjects.AdminPages.ReportsPage;
 using CazamioNewProject.PageObjects.AdminPages.SidebarPage;
@@ -80,6 +83,9 @@ namespace CazamioNewProject.PageObjects
         public static CreateANewBrokerMdlWndw CreateANewBrokerMdlWndw => GetPage<CreateANewBrokerMdlWndw>();
         public static CreateNewAgentMdlWndw CreateNewAgentMdlWndw => GetPage<CreateNewAgentMdlWndw>();
         public static CreateANewOwnerMdlWndw CreateANewOwnerMdlWndw => GetPage<CreateANewOwnerMdlWndw>();
+        public static PaymentKeysMdlWndw PaymentKeysMdlWndw => GetPage<PaymentKeysMdlWndw>();
+        public static PaymentOptionsMdlWndw PaymentOptionsMdlWndw => GetPage<PaymentOptionsMdlWndw>();
+        public static DatePicker DatePicker => GetPage<DatePicker>();
 
         #endregion
 

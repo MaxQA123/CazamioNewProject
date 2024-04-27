@@ -484,23 +484,23 @@ namespace MarketplaceAdminGuiTest
                 .ClickBtnEditForPaymentSystem();
 
             string getValueScreeningFee = Pages.NewBuilding.GetValueFromFieldCreditScreeningFee();
-            string getItemCardknoxActual = Pages.MdlWndwPaymentKeys.GetItemCardknox();
-            string getItemApiKeyCardknoxActual = Pages.MdlWndwPaymentKeys.GetItemApiKeyCardknox();
+            string getItemCardknoxActual = Pages.PaymentKeysMdlWndw.GetItemCardknox();
+            string getItemApiKeyCardknoxActual = Pages.PaymentKeysMdlWndw.GetItemApiKeyCardknox();
 
-            Pages.MdlWndwPaymentKeys
+            Pages.PaymentKeysMdlWndw
                 .ClickButtonCross();
-            Pages.MdlWndwPaymentKeys
+            Pages.PaymentKeysMdlWndw
                 .VerifyApiKeyCardknox(getItemCardknoxActual, getItemApiKeyCardknoxActual);
             Pages.NewBuilding
                 .VerifyValueByDefaulScreeningFee(getValueScreeningFee)
                 .EnterCreditScreeningFeeHoldDeposit()
                 .ClickBtnSelectPaymentMethodsForCreditScreeningFee();
-            Pages.ModalWindowPaymentOptions
+            Pages.PaymentOptionsMdlWndw
                 .VerifyTitlePaymentOptions()
                 .SelectAllPaymentMethods();
             Pages.NewBuilding
                 .ClickBtnSelectPaymentMethodsForHoldDeposit();
-            Pages.ModalWindowPaymentOptions
+            Pages.PaymentOptionsMdlWndw
                 .VerifyTitlePaymentOptions()
                 .SelectAllPaymentMethodsForHoldBuilding();
             Pages.NewBuilding
@@ -561,6 +561,8 @@ namespace MarketplaceAdminGuiTest
 
             Pages.BuildingView
                 .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
+
+            #endregion
         }
     }
 }
