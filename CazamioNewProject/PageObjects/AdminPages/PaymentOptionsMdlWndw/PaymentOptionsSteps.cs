@@ -79,6 +79,22 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             return this;
         }
 
+        [AllureStep("SelectPaymentMethodsWithoutCrdtCrd")]
+        public PaymentOptionsMdlWndw SelectPaymentMethodsWithoutCrdtCrd()
+        {
+            Button.Click(ItemAch);
+            Button.Click(ItemDeliverCheck);
+            Button.Click(ItemZelle);
+            Button.Click(ItemVenmo);
+            InputGeneral.InputFunctionWithClear(FieldInputDeliverCheckNoteBuilding, paymentOptions.DeliverCheckNote.ForBuildingScreening);
+            InputGeneral.InputFunctionWithClear(FieldInputZelleAddressOrPhoneBuilding, paymentOptions.Zelle.ForBuildingScreening);
+            ButtonForVenmoQrCodeImage.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_FOR_PAYMENT_VENMO_SCREENING));
+            Button.Click(ButtonSave);
+            VerifySuccessSelectPmntMthds();
+
+            return this;
+        }
+
         [AllureStep("SelectAllPaymentMethodsForHoldBuilding")]
         public PaymentOptionsMdlWndw SelectAllPaymentMethodsForHoldBuilding()
         {

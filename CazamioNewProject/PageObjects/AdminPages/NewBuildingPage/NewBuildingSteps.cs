@@ -135,7 +135,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             WaitUntil.CustomElementIsClickable(FieldInputCreditScreeningFee);
             InputGeneral.InputFunctionWithClear(FieldInputCreditScreeningFee, building.CreditScreeningFee.ForEntering);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputHoldDeposit, building.HoldDeposit);
+            InputGeneral.InputFunctionWithClear(FieldInputHoldDeposit, building.HoldDeposit.ForEntering);
 
             return this;
         }

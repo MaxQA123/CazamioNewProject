@@ -19,7 +19,7 @@ namespace CazamioNewProject.Objects
         public string DescriptionLong { get; set; }
         public string InternalNotesLong { get; set; }
         public CreditScreeningFeeInfo CreditScreeningFee { get; set; }
-        public string HoldDeposit { get; set; }
+        public HoldDepositInfo HoldDeposit { get; set; }
         public PaymentSystemInfo PaymentSystem { get; set; }
         public ApiKeyInfo ApiKey { get; set; }
         public NameLocationInfo NameLocation { get; set; }
@@ -65,7 +65,13 @@ namespace CazamioNewProject.Objects
         public class CreditScreeningFeeInfo
         {
             public string ForEntering { get; set; }
-            public string ByDefault { get; set; }
+            public string ByDefaultMySpace { get; set; }
+        }
+
+        public class HoldDepositInfo
+        {
+            public string ForEntering { get; set; }
+            public string ByDefaultMySpace { get; set; }
         }
 
         public class PaymentSystemInfo
@@ -135,7 +141,7 @@ namespace CazamioNewProject.Objects
             string zipBuildingMarkAdmAssignedRoleAgntBrkr = "11213";
             string neighborhoodMarkAdmBuildingAssignedRoleAgntBrkr = "Crown Heights";
 
-            string buildingNumberMarkAdmAssignedRoleBrkr = "29";
+            string buildingNumberMarkAdmAssignedRoleBrkr = "35";
             string addressMarkAdmAssignedRoleBrkr = "Washington Square";
             string zipBuildingMarkAdmAssignedRoleBrkr = "10012";
             string neighborhoodBuildingMarkAdmAssignedRoleBrkr = "Manhattan";
@@ -178,7 +184,8 @@ namespace CazamioNewProject.Objects
             string internalNotesShort = "INTERNAL NOTES for BUILDING (12345) (09876) (&%$#@!)";
             string creditScreeningFeeForEntering = "9";
             string creditScreeningFeeByDefault = "20";
-            string holdDeposit = "650";
+            string holdDepositForEntering = "650";
+            string holdDepositByDefault = "500";
             string cardknox = "Cardknox";
             string authorizeNet = "AuthorizeNet";
             string apiKeyCardknox = "czmodev359376936c0543b58126c97f9ff55c68";
@@ -241,9 +248,13 @@ namespace CazamioNewProject.Objects
                 CreditScreeningFee = new CreditScreeningFeeInfo
                 {
                     ForEntering = creditScreeningFeeForEntering,
-                    ByDefault = creditScreeningFeeByDefault
+                    ByDefaultMySpace = creditScreeningFeeByDefault
                 },
-                HoldDeposit = holdDeposit,
+                HoldDeposit = new HoldDepositInfo
+                {
+                    ForEntering = holdDepositForEntering,
+                    ByDefaultMySpace = holdDepositByDefault
+                },
                 PaymentSystem = new PaymentSystemInfo
                 {
                     Cardknox = cardknox,

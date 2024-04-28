@@ -150,7 +150,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         {
             WaitUntil.CustomElementIsVisible(FieldInputHoldDeposit);
             WaitUntil.CustomElementIsClickable(FieldInputHoldDeposit);
-            InputGeneral.InputFunctionWithClear(FieldInputHoldDeposit, building.HoldDeposit);
+            InputGeneral.InputFunctionWithClear(FieldInputHoldDeposit, building.HoldDeposit.ForEntering);
 
             return this;
         }
@@ -180,6 +180,16 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         {
             WaitUntil.CustomElementIsVisible(FieldInputCreditScreeningFee);
             string getValue = FieldInputCreditScreeningFee.GetAttribute("value");
+            string getValueActual = getValue.ToString();
+
+            return getValueActual;
+        }
+
+        [AllureStep("GetValueFromFieldHoldDeposit")]
+        public string GetValueFromFieldHoldDeposit()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputHoldDeposit);
+            string getValue = FieldInputHoldDeposit.GetAttribute("value");
             string getValueActual = getValue.ToString();
 
             return getValueActual;

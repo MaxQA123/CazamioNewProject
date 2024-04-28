@@ -461,6 +461,8 @@ namespace MarketplaceAdminGuiTest
 
             Pages.SidebarLandlord
                 .VerifyMarketplaceAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+            Pages.SidebarLandlord
+                .ClickButtonBuildings();
 
             #endregion
 
@@ -484,6 +486,7 @@ namespace MarketplaceAdminGuiTest
                 .ClickBtnEditForPaymentSystem();
 
             string getValueScreeningFee = Pages.NewBuilding.GetValueFromFieldCreditScreeningFee();
+            string getValueHoldDeposit = Pages.NewBuilding.GetValueFromFieldHoldDeposit();
             string getItemCardknoxActual = Pages.PaymentKeysMdlWndw.GetItemCardknox();
             string getItemApiKeyCardknoxActual = Pages.PaymentKeysMdlWndw.GetItemApiKeyCardknox();
 
@@ -493,19 +496,19 @@ namespace MarketplaceAdminGuiTest
                 .VerifyApiKeyCardknox(getItemCardknoxActual, getItemApiKeyCardknoxActual);
             Pages.NewBuilding
                 .VerifyValueByDefaulScreeningFee(getValueScreeningFee)
-                .EnterCreditScreeningFeeHoldDeposit()
+                .VerifyValueByDefaulHoldDeposit(getValueHoldDeposit)
                 .ClickBtnSelectPaymentMethodsForCreditScreeningFee();
             Pages.PaymentOptionsMdlWndw
                 .VerifyTitlePaymentOptions()
-                .SelectAllPaymentMethods();
+                .SelectPaymentMethodsWithoutCrdtCrd();
             Pages.NewBuilding
                 .ClickBtnSelectPaymentMethodsForHoldDeposit();
             Pages.PaymentOptionsMdlWndw
                 .VerifyTitlePaymentOptions()
-                .SelectAllPaymentMethodsForHoldBuilding();
+                .SelectPaymentMethodsWithoutCrdtCrd();
             Pages.NewBuilding
                 .ClickButtonSelectPetPolicies();
-            Pages.ModalWindowPetPolicies
+            Pages.PetPoliciesMdlWndw
                 .VerifyTitlePetPoliciesMdlWndw()
                 .SelectAllItems()
                 .ClickButtonSave();

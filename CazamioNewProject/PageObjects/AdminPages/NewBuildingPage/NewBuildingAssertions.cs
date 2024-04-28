@@ -52,9 +52,19 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         [AllureStep("VerifyValueByDefaulScreeningFee")]
         public NewBuilding VerifyValueByDefaulScreeningFee(string valueScreeningFeeByDefault)
         {
-            Assert.AreEqual(valueScreeningFeeByDefault, building.CreditScreeningFee.ByDefault);
+            Assert.AreEqual(valueScreeningFeeByDefault, building.CreditScreeningFee.ByDefaultMySpace);
 
-            Console.WriteLine($"Value Screening Fee by default AR: {valueScreeningFeeByDefault} ER: {building.CreditScreeningFee.ByDefault}");
+            Console.WriteLine($"Value Screening Fee by default AR: {valueScreeningFeeByDefault} ER: {building.CreditScreeningFee.ByDefaultMySpace}");
+
+            return this;
+        }
+
+        [AllureStep("VerifyValueByDefaulHoldDeposit")]
+        public NewBuilding VerifyValueByDefaulHoldDeposit(string getValueHoldDeposit)
+        {
+            Assert.AreEqual(getValueHoldDeposit, building.HoldDeposit.ByDefaultMySpace);
+
+            Console.WriteLine($"Value Screening Fee by default AR: {getValueHoldDeposit} ER: {building.HoldDeposit.ByDefaultMySpace}");
 
             return this;
         }
