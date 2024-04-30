@@ -8,13 +8,13 @@ namespace CazamioNewProject.ApiHelpers
 {
     public class BaseStartPointsApi
     {
-        public const string API_HOST_WEBSITE_LANDLORD = "https://api-cazamio-staging.azurewebsites.net";
-        public const string API_HOST_WEBSITE_TENANT = "https://api-cazamio-staging.azurewebsites.net";
+        public const string API_HOST_WEBSITE_LANDLORD = "https://api-cazamio-staging.azurewebsites.net/";
+        public const string API_HOST_WEBSITE_TENANT = "https://api-cazamio-staging.azurewebsites.net/";
     }
 
     public class ApiRequestData
     {
-        public const string DEVICE_FINGERPRINT = "5ab5f20f5788afc5e04f1bd0317c8356";
+        public const string DEVICE_FINGERPRINT_MARKETPLACE_ADMIN = "5ab5f20f5788afc5e04f1bd0317c8356";
         public const bool TRUE = true;
         public const bool FALSE = false;
         public const string RETURN_URL = "/";

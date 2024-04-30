@@ -12,6 +12,14 @@ namespace CazamioNewProject.Objects
         public string SubdomainMySpace { get; set; }
         public string EmailAddressMarketplaceAdmin { get; set; }
         public string FullNameMarketplaceAdmin { get; set; }
+        public string DeviceFingerprint { get; set; }
+        public RememberMeInfo RememberMe { get; set; }
+
+        public class RememberMeInfo
+        {
+            public bool True { get; set; }
+            public bool False { get; set; }
+        }
 
         public MarketplaceAdmin Generate()
         {
@@ -21,6 +29,13 @@ namespace CazamioNewProject.Objects
             string subdomainMySpace = "testlandlord15-demo";
             string emailAddressMarketplaceAdmin = "marketplaceadmin15@putsbox.com";
             string fullNameMarketplaceAdmin = "Mark Adm";
+            string deviceFingerprint = "4f09dee986d77232105bed94285eafe7";
+
+            var rememberMeInfo = new MarketplaceAdmin.RememberMeInfo
+            {
+                True = true,
+                False = false
+            };
 
             var marketplaceAdmin = new MarketplaceAdmin()
             {
@@ -31,6 +46,7 @@ namespace CazamioNewProject.Objects
                 SubdomainMySpace = subdomainMySpace,
                 EmailAddressMarketplaceAdmin = emailAddressMarketplaceAdmin,
                 FullNameMarketplaceAdmin = fullNameMarketplaceAdmin,
+                DeviceFingerprint = deviceFingerprint,
             };
             return marketplaceAdmin;
         }
