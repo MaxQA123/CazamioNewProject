@@ -6,6 +6,7 @@ using CazamioNewProject.Objects;
 using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.ApiHelpers;
 using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin;
+using System;
 
 namespace ApiTestsLandlord.ApiBaseLandlord
 {
@@ -40,7 +41,7 @@ namespace ApiTestsLandlord.ApiBaseLandlord
 
             var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
 
-            //LogInTenant.VerifyingUserNameEmailTenant(responseLogInTenant);
+            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
 
             #endregion
         }
