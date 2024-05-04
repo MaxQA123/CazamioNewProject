@@ -73,8 +73,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         {
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(nameNoteActual, TestDataLandlord.NOTE_NAME_LOCK_ACCESS);
-                Assert.AreEqual(namePinCodeActual, TestDataLandlord.PIN_CODE_NAME_LOCK_ACCESS);
+                Assert.AreEqual(nameNoteActual, TestDataLandlord.NOTE_NAME_LOCK_ACCESS, $"Name note not equal");
+                Assert.AreEqual(namePinCodeActual, TestDataLandlord.PIN_CODE_NAME_LOCK_ACCESS, $"Name pin code not equal");
             });
 
             return this;
@@ -85,8 +85,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         {
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(nameConcessionActual, building.Concessions.Name);
-                Assert.AreEqual(getNameFreeStuffActual, building.FreeStuff.Name);
+                Assert.AreEqual(nameConcessionActual, building.Concessions.Name, $"Name concession not equal");
+                Assert.AreEqual(getNameFreeStuffActual, building.FreeStuff.Name, $"Name free stuff not equal");
             });
 
             return this;

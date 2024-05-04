@@ -16,8 +16,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(getUserNameExpected, getUserNameActual);
-                Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleActual);
+                Assert.AreEqual(getUserNameExpected, getUserNameActual, $"User Name not equal");
+                Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleActual, $"User Name Role not equal");
 
                 Console.WriteLine($"First Last name EX: {getUserNameExpected} First Last name AC: {getUserNameActual}");
                 Console.WriteLine($"Name role EX: {getUserNameRoleExpected} Name role AC: {getUserNameRoleActual}");
@@ -35,8 +35,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(getUserNameExpected, getUserNameActual);
-                Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleActual);
+                Assert.AreEqual(getUserNameExpected, getUserNameActual, $"User Name not equal");
+                Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleActual, $"User Name Role not equal");
 
                 Console.WriteLine($"First Last name EX: {getUserNameExpected} First Last name AC: {getUserNameActual}");
                 Console.WriteLine($"Name Role EX: {getUserNameRoleExpected} Name Role AC: {getUserNameRoleActual}");
@@ -53,7 +53,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleMarketplaceAdmin);
+                Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleMarketplaceAdmin, $"User Name Role not equal");
 
                 Console.WriteLine($"Name Role EX: {getUserNameRoleExpected} Name Role AC: {getUserNameRoleMarketplaceAdmin}");
             });
@@ -69,8 +69,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(getUserNameExpected, getUserNameActual);
-                Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleActual);
+                Assert.AreEqual(getUserNameExpected, getUserNameActual, $"User Name not equal");
+                Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleActual, $"User Name Role not equal");
 
                 Console.WriteLine($"First Last name EX: {getUserNameExpected} First Last name AC: {getUserNameActual}");
                 Console.WriteLine($"Name Role EX: {getUserNameRoleExpected} Name Role AC: {getUserNameRoleActual}");
@@ -87,7 +87,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleCompareBroker);
+                Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleCompareBroker, $"User Name Role not equal");
 
                 Console.WriteLine($"Name Role EX: {getUserNameRoleExpected} Name Role AC: {getUserNameRoleCompareBroker}");
             });
@@ -103,8 +103,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(getUserNameExpected, getUserNameActual);
-                Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleActual);
+                Assert.AreEqual(getUserNameExpected, getUserNameActual, $"User Name not equal");
+                Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleActual, $"User Name Role not equal");
 
                 Console.WriteLine($"First Last name EX: {getUserNameExpected} First Last name AC: {getUserNameActual}");
                 Console.WriteLine($"Name role EX: {getUserNameRoleExpected} Name role AC: {getUserNameRoleActual}");
@@ -122,7 +122,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleCompareAgent);
+                Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleCompareAgent, $"User Name Role not equal");
 
                 Console.WriteLine($"Name role EX: {getUserNameRoleExpected} Name role AC: {getUserNameRoleCompareAgent}");
             });
@@ -139,8 +139,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(getUserNameExpected, getUserNameActual);
-                Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleActual);
+                Assert.AreEqual(getUserNameExpected, getUserNameActual, $"User Name not equal");
+                Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleActual, $"User Name Role not equal");
 
                 Console.WriteLine($"First Last name EX: {getUserNameExpected} AC: {getUserNameActual}");
                 Console.WriteLine($"Name Role EX: {getUserNameRoleExpected} AC: {getUserNameRoleActual}");
