@@ -1,10 +1,4 @@
 ﻿using CazamioNewProject.GuiHelpers;
-using RimuTec.Faker;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.Objects
 {
@@ -17,6 +11,7 @@ namespace CazamioNewProject.Objects
         public string SubdomainMySpace { get; set; }
         public string EmailAddressSuperAdmin { get; set; }
         public string FullNameSuperAdmin { get; set; }
+        public string DeviceFingerprint { get; set; }
 
         public SuperAdmin Generate()
         {
@@ -26,6 +21,7 @@ namespace CazamioNewProject.Objects
             string subdomainMySpace = "testlandlord15-demo";
             string emailAddressSuperAdmin = "superadmin123@putsbox.com";
             string fullNameSuperAdmin = "Super User";
+            string deviceFingerprint = "d86d2f3b2f8e0030f57cfb1ce82f3f25";
 
             var marketplaceAdmin = new SuperAdmin()
             {
@@ -36,6 +32,7 @@ namespace CazamioNewProject.Objects
                 SubdomainMySpace = subdomainMySpace,
                 EmailAddressSuperAdmin = emailAddressSuperAdmin,
                 FullNameSuperAdmin = fullNameSuperAdmin,
+                DeviceFingerprint = deviceFingerprint,
             };
             return marketplaceAdmin;
         }

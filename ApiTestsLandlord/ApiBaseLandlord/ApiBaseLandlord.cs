@@ -3,7 +3,7 @@ using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using System;
 
-namespace ApiTestsLandlord.ApiBaseLandlord
+namespace ApiTestsLandlord
 {
     public class ApiBaseLandlord
     {

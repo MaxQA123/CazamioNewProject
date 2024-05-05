@@ -11,6 +11,7 @@ namespace CazamioNewProject.Objects
         public string ShortEmail { get; set; }
         public string EmailAddressBroker { get; set; }
         public string FullUserNameBroker { get; set; }
+        public string DeviceFingerprint { get; set; }
 
         public Broker Generate()
         {
@@ -19,6 +20,7 @@ namespace CazamioNewProject.Objects
             string shortEmail = GenerateRandomData.RandomEmail(5) + GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomEmail(2);
             string emailAddressBroker = "broker3autotest@putsbox.com";
             string fullUserNameBroker = "Leoautotest Feabroker";
+            string deviceFingerprint = "d86d2f3b2f8e0030f57cfb1ce82f3f25";
 
             var broker = new Broker()
             {
@@ -28,7 +30,7 @@ namespace CazamioNewProject.Objects
                 ShortEmail = shortEmail,
                 EmailAddressBroker = emailAddressBroker,
                 FullUserNameBroker = fullUserNameBroker,
-
+                DeviceFingerprint = deviceFingerprint,
             };
             return broker;
         }

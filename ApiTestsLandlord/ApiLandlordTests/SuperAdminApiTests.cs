@@ -1,19 +1,23 @@
 ﻿using Allure.Commons;
-using NUnit.Allure.Attributes;
-using NUnit.Framework;
-using NUnit.Allure.Core;
-using CazamioNewProject.Objects;
-using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.ApiHelpers;
-using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin;
+using CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.LogInApiSuperAdmin;
+using CazamioNewProject.GuiHelpers;
+using CazamioNewProject.Objects;
+using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
+using NUnit.Framework;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ApiTestsLandlord
 {
     [TestFixture]
     [AllureNUnit]
 
-    public class MarketplaceAdminApiTests : ApiBaseLandlord
+    public class SuperAdminApiTests
     {
         [Test]
         [AllureTag("Regression")]
@@ -28,20 +32,20 @@ namespace ApiTestsLandlord
         {
             #region Test Data
 
-            MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
+            SuperAdmin superAdmin = new SuperAdmin().Generate();
 
-            var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
+            var email = superAdmin.EmailAddressSuperAdmin;
             var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
             var rememberMe = ApiRequestData.TRUE;
-            var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
+            var deviceFingerprint = superAdmin.DeviceFingerprint;
 
             #endregion
 
             #region Test
 
-            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+            var responseSuperAdmin = LogInApiSuperAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
 
-            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+            LogInApiSuperAdmin.VerifyUserData(responseSuperAdmin, superAdmin);
 
             #endregion
         }

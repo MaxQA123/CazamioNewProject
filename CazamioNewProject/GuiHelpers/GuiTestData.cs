@@ -34,6 +34,7 @@
     {
         public const string PASSWORD_GENERAL = "Qwerty123!";
         public const string PASSWORD_NEW_GENEREAL = "!321Qwerty";
+        public const int MARKETPLACE_ID_SUPER_ADMIN = 0;
         public const int MARKETPLACE_ID_MY_SPACE = 15;
     }
 

@@ -1,0 +1,178 @@
+{
+  "uuid": "4bdca7ab-c2f3-4f34-b258-082059b748d7-tr-0-1009",
+  "historyId": "ApiTestsLandlord.SuperAdminApiTests.LogIn",
+  "fullName": "ApiTestsLandlord.SuperAdminApiTests.LogIn",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "ApiTestsLandlord"
+    },
+    {
+      "name": "testMethod",
+      "value": "LogIn"
+    },
+    {
+      "name": "testClass",
+      "value": "SuperAdminApiTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "MarketplaceAdmin Api test"
+    },
+    {
+      "name": "subSuite",
+      "value": "LogIn"
+    }
+  ],
+  "links": [],
+  "name": "LogIn",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  MarketplaceId not equal\r\n  Expected: 15\r\n  But was:  0\r\n",
+    "trace": "   at CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.LogInApiSuperAdmin.LogInApiSuperAdmin.__a$_around_VerifyUserData_100664219_o(ResponseLogInSuperAdmin responseSuperAdmin, SuperAdmin superAdmin) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\ApiHelpers\\ApiObjects\\SuperAdminApiCollections\\LogInApiSuperAdmin\\LogInApiSuperAdminAssertions.cs:line 13\r\n   at CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.LogInApiSuperAdmin.LogInApiSuperAdmin.__a$_around_VerifyUserData_100664219_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.LogInApiSuperAdmin.LogInApiSuperAdmin.__a$_around_VerifyUserData_100664219_w_0(Object[] )\r\n   at CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.LogInApiSuperAdmin.LogInApiSuperAdmin.VerifyUserData(ResponseLogInSuperAdmin responseSuperAdmin, SuperAdmin superAdmin)\r\n   at ApiTestsLandlord.SuperAdminApiTests.LogIn() in C:\\Automation\\CazamioNewProject\\ApiTestsLandlord\\ApiLandlordTests\\SuperAdminApiTests.cs:line 48\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "LogIn",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  MarketplaceId not equal\r\n  Expected: 15\r\n  But was:  0\r\n",
+        "trace": "   at CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.LogInApiSuperAdmin.LogInApiSuperAdmin.__a$_around_VerifyUserData_100664219_o(ResponseLogInSuperAdmin responseSuperAdmin, SuperAdmin superAdmin) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\ApiHelpers\\ApiObjects\\SuperAdminApiCollections\\LogInApiSuperAdmin\\LogInApiSuperAdminAssertions.cs:line 13\r\n   at CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.LogInApiSuperAdmin.LogInApiSuperAdmin.__a$_around_VerifyUserData_100664219_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.LogInApiSuperAdmin.LogInApiSuperAdmin.__a$_around_VerifyUserData_100664219_w_0(Object[] )\r\n   at CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.LogInApiSuperAdmin.LogInApiSuperAdmin.VerifyUserData(ResponseLogInSuperAdmin responseSuperAdmin, SuperAdmin superAdmin)\r\n   at ApiTestsLandlord.SuperAdminApiTests.LogIn() in C:\\Automation\\CazamioNewProject\\ApiTestsLandlord\\ApiLandlordTests\\SuperAdminApiTests.cs:line 48\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1714915277358,
+          "stop": 1714915277365
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1714915277366,
+          "stop": 1714915277367
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1714915277367,
+          "stop": 1714915277367
+        },
+        {
+          "name": "VerifyUserData",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  MarketplaceId not equal\r\n  Expected: 15\r\n  But was:  0\r\n",
+            "trace": "   at NUnit.Framework.Assert.Multiple(TestDelegate testDelegate)\r\n   at CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.LogInApiSuperAdmin.LogInApiSuperAdmin.__a$_around_VerifyUserData_100664219_o(ResponseLogInSuperAdmin responseSuperAdmin, SuperAdmin superAdmin) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\ApiHelpers\\ApiObjects\\SuperAdminApiCollections\\LogInApiSuperAdmin\\LogInApiSuperAdminAssertions.cs:line 13\r\n   at CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.LogInApiSuperAdmin.LogInApiSuperAdmin.__a$_around_VerifyUserData_100664219_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "ResponseLogInSuperAdmin",
+              "value": "CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.LogInApiSuperAdmin.ResponseLogInSuperAdmin"
+            },
+            {
+              "name": "SuperAdmin",
+              "value": "CazamioNewProject.Objects.SuperAdmin"
+            }
+          ],
+          "start": 1714915278499,
+          "stop": 1714915278681
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "ecfc3f63d21c4185b77559711c9a30e3-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1714915277098,
+      "stop": 1714915278715
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1714915277097,
+  "stop": 1714915278725
+}

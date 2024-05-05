@@ -8,7 +8,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
 {
     public partial class LogInApiMarketplaceAdmin
     {
-        [AllureStep("VerifyingUserNameEmailTenant")]
+        [AllureStep("VerifyUserData")]
         public static void VerifyUserData(ResponseLogInApiMarketplaceAdmin responseMarketplaceAdmin, MarketplaceAdmin marketplaceAdmin)
         {
             Assert.Multiple(() =>
