@@ -1,6 +1,7 @@
 ﻿using Allure.Commons;
 using CazamioNewProject.ApiHelpers;
 using CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.LogInApiSuperAdmin;
+using CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.CreateMarketplaceAdmin;
 using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
 using NUnit.Allure.Attributes;
@@ -65,24 +66,24 @@ namespace ApiTestsLandlord
 
             SuperAdmin superAdmin = new SuperAdmin().Generate();
 
-            var firstNameSuperAdm = superAdmin.FirstName;
-            var lastNameSuperAdm = superAdmin.LastName;
-            var emailSuperAdm = superAdmin.EmailAddress;
-            var passwordSuperAdm = "";
-            var subDomainSuperAdm = superAdmin.Subdomains.MySpace;
+            var email = superAdmin.EmailAddressSuperAdmin;
+            var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
+            var rememberMe = ApiRequestData.TRUE;
+            var deviceFingerprint = superAdmin.DeviceFingerprint;
 
             MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
 
-            var emailMarkAdm = marketplaceAdmin.EmailAddressMarketplaceAdmin;
-            var passwordMarkAdm = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
-            var rememberMeMarkAdm = ApiRequestData.TRUE;
-            var deviceFingerprintMarkAdm = superAdmin.DeviceFingerprint;
+            var firstNameMarkAdm = marketplaceAdmin.FirstName;
+            var lastNameMarkAdm = marketplaceAdmin.LastName;
+            var emailMarkAdm = marketplaceAdmin.EmailAddress;
+            var passwordMarkAdm = "";
+            var subdomainMarkAdm = marketplaceAdmin.SubdomainMySpace;
 
             #endregion
 
             #region Preconditions
 
-            var responseSuperAdmin = LogInApiSuperAdmin.ExecuteLogIn(emailMarkAdm, passwordMarkAdm, deviceFingerprintMarkAdm, rememberMeMarkAdm);
+            var responseSuperAdmin = LogInApiSuperAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
 
             LogInApiSuperAdmin.VerifyUserData(responseSuperAdmin, superAdmin);
 
@@ -90,7 +91,7 @@ namespace ApiTestsLandlord
 
             #region Test
 
-            var responseSuperAdmin = LogInApiSuperAdmin.ExecuteLogIn(firstName, lastName, email, password, subDomain);
+            MarketplaceAdminCreation.CreateMarketplaceAdmin(responseSuperAdmin.AuthData.Token, firstNameMarkAdm, lastNameMarkAdm, emailMarkAdm, passwordMarkAdm, subdomainMarkAdm);
 
             LogInApiSuperAdmin.VerifyUserData(responseSuperAdmin, superAdmin);
 

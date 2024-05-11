@@ -22,7 +22,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.LogIn
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
 
             var restRequest = new RestRequest("/api/identity/loginLandlord", Method.Post);
-            restRequest.AddHeaders(Headers.HeadersAdmins());
+            restRequest.AddHeaders(Headers.HeadersForLogIn());
 
             restRequest.AddJsonBody(RequestBody(email, password, deviceFingerprint, rememberMe));
 
