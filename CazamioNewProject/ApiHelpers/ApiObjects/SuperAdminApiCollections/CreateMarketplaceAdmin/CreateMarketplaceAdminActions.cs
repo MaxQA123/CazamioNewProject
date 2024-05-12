@@ -1,9 +1,5 @@
 ﻿using RestSharp;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.CreateMarketplaceAdmin
 {
@@ -26,7 +22,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.Creat
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
 
             var restRequest = new RestRequest("/api/identity/registerMarketplaceAdmin", Method.Post);
-            restRequest.AddHeaders(Headers.HeadersAdmins(token));
+            restRequest.AddHeaders(Headers.HeadersSuperAdmin(token));
 
             restRequest.AddJsonBody(RequestBody(firstNameMarkAdm, lastNameMarkAdm, emailMarkAdm, passwordMarkAdm, subdomainMarkAdm));
 

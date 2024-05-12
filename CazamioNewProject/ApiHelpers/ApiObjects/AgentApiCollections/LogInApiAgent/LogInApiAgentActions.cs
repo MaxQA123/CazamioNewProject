@@ -34,7 +34,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.AgentApiCollections.LogInApiAg
 
             var content = response.Content;
 
-            if (response.StatusDescription == "Bad Request")
+            if (response.StatusCode != System.Net.HttpStatusCode.OK)
             {
                 Console.WriteLine(response.Content);
             }
