@@ -16,6 +16,8 @@ namespace CazamioNewProject.Objects
         public string EmailAddressAgent { get; set; }
         public string FullNameAgent { get; set; }
         public string DeviceFingerprint { get; set; }
+        public long BrokerCommissionApi { get; set; }
+        public long AgentCommissionApi { get; set; }
 
         public Agent Generate()
         {
@@ -29,6 +31,8 @@ namespace CazamioNewProject.Objects
             string emailAddressAgent = "agent5lula@putsbox.com";
             string fullNameAgent = "Lula AgentQA";
             string deviceFingerprint = "d86d2f3b2f8e0030f57cfb1ce82f3f25";
+            long brokerCommissionApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(2));
+            long agentCommissionApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(2));
 
             var agent = new Agent()
             {
@@ -43,6 +47,8 @@ namespace CazamioNewProject.Objects
                 EmailAddressAgent = emailAddressAgent,
                 FullNameAgent = fullNameAgent,
                 DeviceFingerprint = deviceFingerprint,
+                BrokerCommissionApi = brokerCommissionApi,
+                AgentCommissionApi = agentCommissionApi,
             };
             return agent;
         }

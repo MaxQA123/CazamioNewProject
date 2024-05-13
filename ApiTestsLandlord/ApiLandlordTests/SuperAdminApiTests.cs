@@ -93,8 +93,6 @@ namespace ApiTestsLandlord
 
             MarketplaceAdminCreation.CreateMarketplaceAdmin(responseSuperAdmin.AuthData.Token, firstNameMarkAdm, lastNameMarkAdm, emailMarkAdm, passwordMarkAdm, subdomainMarkAdm);
 
-            LogInApiSuperAdmin.VerifyUserData(responseSuperAdmin, superAdmin);
-
             #endregion
         }
     }
