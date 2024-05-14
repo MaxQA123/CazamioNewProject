@@ -92,7 +92,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
 
         [JsonProperty("phoneNumber")]
         //[JsonConverter(typeof(ParseStringConverter))]
-        public long PhoneNumberPhoneNumber { get; set; }
+        public string PhoneNumberPhoneNumber { get; set; }
 
         [JsonProperty("extension")]
         public string Extension { get; set; }

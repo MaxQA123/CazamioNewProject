@@ -9,6 +9,7 @@ using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.Log
 using System;
 using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBrokerApi;
 using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateAgentApi;
+using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateOwnerWithBrokerApi;
 
 namespace ApiTestsLandlord
 {
@@ -159,16 +160,6 @@ namespace ApiTestsLandlord
             var rememberMe = ApiRequestData.TRUE;
             var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
 
-            Agent agent = new Agent().Generate();
-
-            var firstNameAgent = agent.FirstName;
-            var lastNameAgent = agent.LastName;
-            var emailAgent = agent.EmailAddress;
-            var phoneNumberAgent = agent.PhoneNumber;
-            var brokerCommissionAgent = agent.BrokerCommissionApi;
-            var agentCommissionAgent = agent.AgentCommissionApi;
-            var cellAgent = agent.Cell;
-
             #endregion
 
             #region Preconditions
@@ -181,7 +172,7 @@ namespace ApiTestsLandlord
 
             #region Tests
 
-            AgentCreation.CreateAgent(responseMarketplaceAdmin.AuthData.Token, firstNameAgent, lastNameAgent, emailAgent, phoneNumberAgent, brokerCommissionAgent, agentCommissionAgent, cellAgent);
+            OwnerWithBrokerCreation.CreateOwnerWithBrokerFullData(responseMarketplaceAdmin.AuthData.Token);
 
             #endregion
         }
