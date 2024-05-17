@@ -24,8 +24,23 @@ namespace CazamioNewProject.Objects
         public string OwnerPercentage { get; set; }
         public string TenantPercentage { get; set; }
         public string TakeOff { get; set; }
+        public long OwnerNumberOfMonthsApi { get; set; }
+        public long TenantNumberOfMonthsApi { get; set; }
+        public long OwnerPercentageApi { get; set; }
+        public long TenantPercentageApi { get; set; }
+        public long TakeOffApi { get; set; }
         public string EmailAddressOwnerForAgent { get; set; }
         public string EmailAddressOwnerForBroker { get; set; }
+        public TypesCommissionStructureInfo TypesCommissionStructure{ get; set; }
+        public long BrokerId { get; set; }
+
+        public class TypesCommissionStructureInfo
+        {
+            public string None { get; set; }
+            public string OwnerPays { get; set; }
+            public string TenantPays { get; set; }
+            public string OwnerAndTenantPays { get; set; }
+        }
 
         public Owner Generate()
         {
@@ -49,6 +64,16 @@ namespace CazamioNewProject.Objects
             string takeOff = GenerateRandomData.RandomNumberWithoutZero(2);
             string emailAddressOwnerForAgent = "owner2forag5bro@putsbox.com";
             string emailAddressOwnerForBroker = "owner2for5broker@putsbox.com";
+            string noneCommissionStructure = "None";
+            string ownerPays = "OwnerPays";
+            string tenantPays = "TenantPays";
+            string ownerAndTenantPays = "OwnerAndTenantPays";
+            long brokerIdApi = 103;
+            long ownerNumberOfMonthsApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(1));
+            long tenantNumberOfMonthsApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(1));
+            long ownerPercentageApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(2));
+            long tenantPercentageApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(2));
+            long takeOffApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(1));
 
             var owner = new Owner()
             {
@@ -73,6 +98,19 @@ namespace CazamioNewProject.Objects
                 TakeOff = takeOff,
                 EmailAddressOwnerForAgent = emailAddressOwnerForAgent,
                 EmailAddressOwnerForBroker = emailAddressOwnerForBroker,
+                TypesCommissionStructure = new TypesCommissionStructureInfo
+                {
+                    None = noneCommissionStructure,
+                    OwnerPays = ownerPays,
+                    TenantPays = tenantPays,
+                    OwnerAndTenantPays = ownerAndTenantPays
+                },
+                BrokerId = brokerIdApi,
+                OwnerNumberOfMonthsApi = ownerNumberOfMonthsApi,
+                TenantNumberOfMonthsApi = tenantNumberOfMonthsApi,
+                OwnerPercentageApi = ownerPercentageApi,
+                TenantPercentageApi = tenantPercentageApi,
+                TakeOffApi = takeOffApi
             };
             return owner;
         }

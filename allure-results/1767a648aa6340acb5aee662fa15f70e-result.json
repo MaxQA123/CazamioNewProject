@@ -1,0 +1,376 @@
+{
+  "uuid": "c07796a2-0329-4889-b320-35a605426f6f-tr-0-1011",
+  "historyId": "ApiTestsLandlord.MarketplaceAdminApiTests.CreateOwnerWithBroker",
+  "fullName": "ApiTestsLandlord.MarketplaceAdminApiTests.CreateOwnerWithBroker",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "ApiTestsLandlord"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateOwnerWithBroker"
+    },
+    {
+      "name": "testClass",
+      "value": "MarketplaceAdminApiTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "MarketplaceAdmin Api test"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateOwnerWithBroker"
+    }
+  ],
+  "links": [],
+  "name": "CreateOwnerWithBroker",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.Exception : The PhoneNumber field is required. <br/> The PhoneNumber field is required.",
+    "trace": "   at CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateOwnerWithBrokerApi.OwnerWithBrokerCreation.CreateOwnerWithBrokerFullData(String token) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\ApiHelpers\\ApiObjects\\MarketplaceAdminApiCollections\\CreateOwnerWithBrokerApi\\CreateOwnerWithBrokerActions.cs:line 57\r\n   at ApiTestsLandlord.MarketplaceAdminApiTests.CreateOwnerWithBroker() in C:\\Automation\\CazamioNewProject\\ApiTestsLandlord\\ApiLandlordTests\\MarketplaceAdminApiTests.cs:line 175"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateOwnerWithBroker",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.Exception : The PhoneNumber field is required. <br/> The PhoneNumber field is required.",
+        "trace": "   at CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateOwnerWithBrokerApi.OwnerWithBrokerCreation.CreateOwnerWithBrokerFullData(String token) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\ApiHelpers\\ApiObjects\\MarketplaceAdminApiCollections\\CreateOwnerWithBrokerApi\\CreateOwnerWithBrokerActions.cs:line 57\r\n   at ApiTestsLandlord.MarketplaceAdminApiTests.CreateOwnerWithBroker() in C:\\Automation\\CazamioNewProject\\ApiTestsLandlord\\ApiLandlordTests\\MarketplaceAdminApiTests.cs:line 175"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1715955717432,
+          "stop": 1715955717438
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1715955717438,
+          "stop": 1715955717439
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1715955717439,
+          "stop": 1715955717439
+        },
+        {
+          "name": "VerifyUserData",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "ResponseLogInApiMarketplaceAdmin",
+              "value": "CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin.ResponseLogInApiMarketplaceAdmin"
+            },
+            {
+              "name": "MarketplaceAdmin",
+              "value": "CazamioNewProject.Objects.MarketplaceAdmin"
+            }
+          ],
+          "start": 1715955719009,
+          "stop": 1715955719031
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "5"
+            }
+          ],
+          "start": 1715955719037,
+          "stop": 1715955719037
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "3"
+            }
+          ],
+          "start": 1715955719037,
+          "stop": 1715955719037
+        },
+        {
+          "name": "RandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1715955719037,
+          "stop": 1715955719037
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1715955719060,
+          "stop": 1715955719061
+        },
+        {
+          "name": "RandomPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "7"
+            }
+          ],
+          "start": 1715955719061,
+          "stop": 1715955719061
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "1"
+            }
+          ],
+          "start": 1715955719061,
+          "stop": 1715955719062
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "1"
+            }
+          ],
+          "start": 1715955719062,
+          "stop": 1715955719062
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1715955719062,
+          "stop": 1715955719062
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1715955719062,
+          "stop": 1715955719062
+        },
+        {
+          "name": "RandomNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "Int32",
+              "value": "2"
+            }
+          ],
+          "start": 1715955719062,
+          "stop": 1715955719062
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "04afbfd836fa4c7d8bffdb71fecd9f4a-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1715955717146,
+      "stop": 1715955719899
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1715955717144,
+  "stop": 1715955719908
+}

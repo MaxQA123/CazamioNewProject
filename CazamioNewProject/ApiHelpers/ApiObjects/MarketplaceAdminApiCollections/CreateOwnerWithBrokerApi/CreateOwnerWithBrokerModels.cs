@@ -20,7 +20,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public string Note { get; set; }
 
         [JsonProperty("phoneNumbers")]
-        public PhoneNumber[] PhoneNumbers { get; set; }
+        public PhoneNumberModel[] PhoneNumbers { get; set; }
 
         [JsonProperty("managements")]
         public Management[] Managements { get; set; }
@@ -44,23 +44,18 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public string PayType { get; set; }
 
         [JsonProperty("ownerNumberOfMonths")]
-        //[JsonConverter(typeof(ParseStringConverter))]
         public long OwnerNumberOfMonths { get; set; }
 
         [JsonProperty("tenantNumberOfMonths")]
-        //[JsonConverter(typeof(ParseStringConverter))]
         public long TenantNumberOfMonths { get; set; }
 
         [JsonProperty("ownerPercentage")]
-        //[JsonConverter(typeof(ParseStringConverter))]
         public long OwnerPercentage { get; set; }
 
         [JsonProperty("tenantPercentage")]
-        //[JsonConverter(typeof(ParseStringConverter))]
         public long TenantPercentage { get; set; }
 
         [JsonProperty("takeOff")]
-        //[JsonConverter(typeof(ParseStringConverter))]
         public long TakeOff { get; set; }
     }
 
@@ -85,14 +80,13 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public string Extension { get; set; }
     }
 
-    public partial class PhoneNumber
+    public partial class PhoneNumberModel
     {
         [JsonProperty("id")]
         public long Id { get; set; }
 
         [JsonProperty("phoneNumber")]
-        //[JsonConverter(typeof(ParseStringConverter))]
-        public string PhoneNumberPhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
 
         [JsonProperty("extension")]
         public string Extension { get; set; }
