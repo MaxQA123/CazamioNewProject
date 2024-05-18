@@ -18,6 +18,7 @@ namespace CazamioNewProject.Objects
         public string DeviceFingerprint { get; set; }
         public long BrokerCommissionApi { get; set; }
         public long AgentCommissionApi { get; set; }
+        public long AgentIdApi { get; set; }
 
         public Agent Generate()
         {
@@ -33,6 +34,7 @@ namespace CazamioNewProject.Objects
             string deviceFingerprint = "d86d2f3b2f8e0030f57cfb1ce82f3f25";
             long brokerCommissionApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(2));
             long agentCommissionApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(2));
+            long agentIdApi = 154;
 
             var agent = new Agent()
             {
@@ -49,6 +51,7 @@ namespace CazamioNewProject.Objects
                 DeviceFingerprint = deviceFingerprint,
                 BrokerCommissionApi = brokerCommissionApi,
                 AgentCommissionApi = agentCommissionApi,
+                AgentIdApi = agentIdApi
             };
             return agent;
         }

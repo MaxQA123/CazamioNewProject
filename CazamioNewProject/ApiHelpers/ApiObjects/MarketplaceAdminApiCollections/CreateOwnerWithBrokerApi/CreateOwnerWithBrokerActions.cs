@@ -7,13 +7,14 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
     //None
     //OwnerPays
     //TenantPays
-    //OwnerAndTenantPays
-    //With full data
+    //OwnerAndTenantPays +
+    //With full data +
     public partial class OwnerCreation
     {
-        public static RequestCreateOwnerWithBroker RequestBodyBroker()
+        public static RequestCreateOwnerWithBroker RequestBodyBrokerFullData()
         {
             Owner owner = new Owner().Generate();
+            Broker broker = new Broker().Generate();
 
             var payload = new RequestCreateOwnerWithBroker();
             payload.CompanyName = owner.AlreadyCreatedCompanyNameWithBroker;
@@ -31,9 +32,9 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             };
             payload.CommissionStructures = new CommissionStructure[]
             {
-            new CommissionStructure { Id = 0, PayType = owner.TypesCommissionStructure.None, OwnerNumberOfMonths = owner.OwnerNumberOfMonthsApi, TenantNumberOfMonths = owner.TenantNumberOfMonthsApi, OwnerPercentage = owner.OwnerPercentageApi, TenantPercentage = owner.TenantPercentageApi, TakeOff = owner.TakeOffApi },
+            new CommissionStructure { Id = 0, PayType = owner.TypesCommissionStructure.OwnerAndTenantPays, OwnerNumberOfMonths = owner.OwnerNumberOfMonthsApi, TenantNumberOfMonths = owner.TenantNumberOfMonthsApi, OwnerPercentage = owner.OwnerPercentageApi, TenantPercentage = owner.TenantPercentageApi, TakeOff = owner.TakeOffApi },
             };
-            payload.BrokerId = owner.BrokerId;
+            payload.BrokerId = broker.BrokerIdApi;
             payload.IsAgent = ApiRequestData.FALSE;
 
             return payload;
@@ -47,7 +48,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             var restRequest = new RestRequest("api/owners/createOwner", Method.Post);
             restRequest.AddHeaders(Headers.HeadersSuperAdmin(token));
 
-            restRequest.AddJsonBody(RequestBodyBroker());
+            restRequest.AddJsonBody(RequestBodyBrokerFullData());
 
             var response = restClient.Execute(restRequest);
 

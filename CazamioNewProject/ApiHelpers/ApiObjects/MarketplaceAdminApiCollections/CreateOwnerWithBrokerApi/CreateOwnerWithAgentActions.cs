@@ -9,22 +9,21 @@ using System.Threading.Tasks;
 namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateOwnerWithBrokerApi
 {
     //None
-    //OwnerPays
+    //OwnerPays +
     //TenantPays
     //OwnerAndTenantPays
-    //With full data
+    //With full data +
     public partial class OwnerCreation
     {
-        public static RequestCreateOwnerWithBroker RequestBodyAgent()
+        public static RequestCreateOwnerWithBroker RequestBodyAgentRequiredData()
         {
             Owner owner = new Owner().Generate();
+            Agent agent = new Agent().Generate();
 
             var payload = new RequestCreateOwnerWithBroker();
             payload.CompanyName = owner.AlreadyCreatedCompanyNameWithBroker;
             payload.OwnerEmail = owner.EmailAddress;
             payload.OwnerName = owner.FullName;
-            payload.OfficeLocation = owner.OfficeLocation;
-            payload.Note = owner.InternalNotes;
             payload.PhoneNumbers = new PhoneNumberModel[]
             {
             new PhoneNumberModel { Id = 0, PhoneNumber = owner.PhoneNumber, Extension = owner.ExtensionNumber },
@@ -35,10 +34,10 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             };
             payload.CommissionStructures = new CommissionStructure[]
             {
-            new CommissionStructure { Id = 0, PayType = owner.TypesCommissionStructure.None, OwnerNumberOfMonths = owner.OwnerNumberOfMonthsApi, TenantNumberOfMonths = owner.TenantNumberOfMonthsApi, OwnerPercentage = owner.OwnerPercentageApi, TenantPercentage = owner.TenantPercentageApi, TakeOff = owner.TakeOffApi },
+            new CommissionStructure { Id = 0, PayType = owner.TypesCommissionStructure.OwnerPays, OwnerNumberOfMonths = owner.OwnerNumberOfMonthsApi, OwnerPercentage = owner.OwnerPercentageApi, TakeOff = owner.TakeOffApi },
             };
-            payload.BrokerId = owner.BrokerId;
-            payload.IsAgent = ApiRequestData.FALSE;
+            payload.BrokerId = agent.AgentIdApi;
+            payload.IsAgent = ApiRequestData.TRUE;
 
             return payload;
         }
@@ -51,7 +50,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             var restRequest = new RestRequest("api/owners/createOwner", Method.Post);
             restRequest.AddHeaders(Headers.HeadersSuperAdmin(token));
 
-            restRequest.AddJsonBody(RequestBodyBroker());
+            restRequest.AddJsonBody(RequestBodyAgentRequiredData());
 
             var response = restClient.Execute(restRequest);
 

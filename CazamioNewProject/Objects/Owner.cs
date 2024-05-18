@@ -32,7 +32,6 @@ namespace CazamioNewProject.Objects
         public string EmailAddressOwnerForAgent { get; set; }
         public string EmailAddressOwnerForBroker { get; set; }
         public TypesCommissionStructureInfo TypesCommissionStructure{ get; set; }
-        public long BrokerId { get; set; }
 
         public class TypesCommissionStructureInfo
         {
@@ -68,7 +67,6 @@ namespace CazamioNewProject.Objects
             string ownerPays = "OwnerPays";
             string tenantPays = "TenantPays";
             string ownerAndTenantPays = "OwnerAndTenantPays";
-            long brokerIdApi = 103;
             long ownerNumberOfMonthsApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(1));
             long tenantNumberOfMonthsApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(1));
             long ownerPercentageApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(2));
@@ -105,7 +103,6 @@ namespace CazamioNewProject.Objects
                     TenantPays = tenantPays,
                     OwnerAndTenantPays = ownerAndTenantPays
                 },
-                BrokerId = brokerIdApi,
                 OwnerNumberOfMonthsApi = ownerNumberOfMonthsApi,
                 TenantNumberOfMonthsApi = tenantNumberOfMonthsApi,
                 OwnerPercentageApi = ownerPercentageApi,
