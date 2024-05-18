@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateOwnerWithBrokerApi
 {
-    public partial class OwnerWithBrokerCreation
+    public partial class OwnerCreation
     {
     }
 }

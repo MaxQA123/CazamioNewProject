@@ -1,6 +1,10 @@
 ﻿using CazamioNewProject.Objects;
 using RestSharp;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateOwnerWithBrokerApi
 {
@@ -11,7 +15,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
     //With full data
     public partial class OwnerCreation
     {
-        public static RequestCreateOwnerWithBroker RequestBodyBroker()
+        public static RequestCreateOwnerWithBroker RequestBodyAgent()
         {
             Owner owner = new Owner().Generate();
 
@@ -39,7 +43,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             return payload;
         }
 
-        public static void CreateOwnerWithBrokerFullData(string token)
+        public static void CreateOwnerWithAgentRequiredData(string token)
         {
 
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);

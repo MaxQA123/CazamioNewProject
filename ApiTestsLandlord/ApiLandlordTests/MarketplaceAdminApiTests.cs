@@ -6,7 +6,6 @@ using CazamioNewProject.Objects;
 using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.ApiHelpers;
 using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin;
-using System;
 using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBrokerApi;
 using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateAgentApi;
 using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateOwnerWithBrokerApi;
@@ -172,7 +171,44 @@ namespace ApiTestsLandlord
 
             #region Tests
 
-            OwnerWithBrokerCreation.CreateOwnerWithBrokerFullData(responseMarketplaceAdmin.AuthData.Token);
+            OwnerCreation.CreateOwnerWithBrokerFullData(responseMarketplaceAdmin.AuthData.Token);
+
+            #endregion
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("MarketplaceAdmin Api test")]
+        [AllureSubSuite("CreateOwnerWithAgent")]
+
+        public void CreateOwnerWithAgent()
+        {
+            #region Test Data
+
+            MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
+
+            var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
+            var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
+            var rememberMe = ApiRequestData.TRUE;
+            var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
+
+            #endregion
+
+            #region Preconditions
+
+            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+
+            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+
+            #endregion
+
+            #region Tests
+
+            OwnerCreation.CreateOwnerWithAgentRequiredData(responseMarketplaceAdmin.AuthData.Token);
 
             #endregion
         }
