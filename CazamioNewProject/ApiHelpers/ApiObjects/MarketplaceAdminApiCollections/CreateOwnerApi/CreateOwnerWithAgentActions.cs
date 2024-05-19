@@ -1,40 +1,30 @@
 ﻿using CazamioNewProject.Objects;
 using RestSharp;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateOwnerWithBrokerApi
+namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateOwnerApi
 {
     //None
     //OwnerPays +
     //TenantPays
     //OwnerAndTenantPays
-    //With full data +
+    //With required data +
     public partial class OwnerCreation
     {
-        public static RequestCreateOwnerWithBroker RequestBodyAgentRequiredData()
+        public static RequestCreateOwnerRequiredData RequestBodyAgentRequiredData()
         {
             Owner owner = new Owner().Generate();
             Agent agent = new Agent().Generate();
 
-            var payload = new RequestCreateOwnerWithBroker();
+            var payload = new RequestCreateOwnerRequiredData();
             payload.CompanyName = owner.AlreadyCreatedCompanyNameWithBroker;
             payload.OwnerEmail = owner.EmailAddress;
             payload.OwnerName = owner.FullName;
-            payload.PhoneNumbers = new PhoneNumberModel[]
+            payload.PhoneNumbers = new PhoneNumberModel[0];
+            payload.Managements = new Management[0];
+            payload.CommissionStructures = new CommissionStructureOwnerPays[]
             {
-            new PhoneNumberModel { Id = 0, PhoneNumber = owner.PhoneNumber, Extension = owner.ExtensionNumber },
-            };
-            payload.Managements = new Management[]
-            {
-            new Management { Id = 0, Name = owner.FullName, Email = owner.EmailAddress, OfficeLocation = owner.OfficeLocation, PhoneNumber = owner.PhoneNumber, Extension = owner.ExtensionNumber },
-            };
-            payload.CommissionStructures = new CommissionStructure[]
-            {
-            new CommissionStructure { Id = 0, PayType = owner.TypesCommissionStructure.OwnerPays, OwnerNumberOfMonths = owner.OwnerNumberOfMonthsApi, OwnerPercentage = owner.OwnerPercentageApi, TakeOff = owner.TakeOffApi },
+            new CommissionStructureOwnerPays { Id = 0, PayType = owner.TypesCommissionStructure.OwnerPays, OwnerNumberOfMonths = owner.OwnerNumberOfMonthsApi, TakeOff = owner.TakeOffApi },
             };
             payload.BrokerId = agent.AgentIdApi;
             payload.IsAgent = ApiRequestData.TRUE;

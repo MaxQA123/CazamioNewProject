@@ -36,7 +36,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.LogInApiB
 
             if (response.StatusCode != System.Net.HttpStatusCode.OK)
             {
-                Console.WriteLine(response.Content);
+                throw new Exception(response.Content);
             }
 
             var dtoObject = JsonConvert.DeserializeObject<ResponseLogInApiBroker>(content);

@@ -35,7 +35,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
 
             if (response.StatusCode != System.Net.HttpStatusCode.OK)
             {
-                Console.WriteLine(response.Content);
+                throw new Exception(response.Content);
             }
         }
     }

@@ -38,7 +38,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.CreateAge
 
             if (response.StatusCode != System.Net.HttpStatusCode.OK)
             {
-                Console.WriteLine(response.Content);
+                throw new Exception(response.Content);
             }
         }
     }

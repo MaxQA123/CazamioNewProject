@@ -32,7 +32,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.Creat
 
             if (response.StatusCode != System.Net.HttpStatusCode.OK)
             {
-                Console.WriteLine(response.Content);
+                throw new Exception(response.Content);
             }
         }
     }

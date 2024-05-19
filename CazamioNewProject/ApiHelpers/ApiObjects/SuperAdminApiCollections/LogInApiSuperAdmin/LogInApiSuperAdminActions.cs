@@ -32,7 +32,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.LogIn
 
             if (response.StatusCode != System.Net.HttpStatusCode.OK)
             {
-                Console.WriteLine(response.Content);
+                throw new Exception(response.Content);
             }
 
             var dtoObject = JsonConvert.DeserializeObject<ResponseLogInSuperAdmin>(content);

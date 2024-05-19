@@ -2,7 +2,7 @@
 using RestSharp;
 using System;
 
-namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateOwnerWithBrokerApi
+namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateOwnerApi
 {
     //None
     //OwnerPays
@@ -11,12 +11,12 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
     //With full data +
     public partial class OwnerCreation
     {
-        public static RequestCreateOwnerWithBroker RequestBodyBrokerFullData()
+        public static RequestCreateOwnerFullData RequestBodyBrokerFullData()
         {
             Owner owner = new Owner().Generate();
             Broker broker = new Broker().Generate();
 
-            var payload = new RequestCreateOwnerWithBroker();
+            var payload = new RequestCreateOwnerFullData();
             payload.CompanyName = owner.AlreadyCreatedCompanyNameWithBroker;
             payload.OwnerEmail = owner.EmailAddress;
             payload.OwnerName = owner.FullName;

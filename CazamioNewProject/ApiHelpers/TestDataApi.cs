@@ -17,6 +17,7 @@ namespace CazamioNewProject.ApiHelpers
         public const string DEVICE_FINGERPRINT_MARKETPLACE_ADMIN = "5ab5f20f5788afc5e04f1bd0317c8356";
         public const bool TRUE = true;
         public const bool FALSE = false;
+        //public const decimal NULL = null;
         public const string RETURN_URL = "/";
     }
 

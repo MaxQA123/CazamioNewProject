@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateOwnerWithBrokerApi
+namespace CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.CreateOwnerApi
 {
     public partial class OwnerCreation
     {

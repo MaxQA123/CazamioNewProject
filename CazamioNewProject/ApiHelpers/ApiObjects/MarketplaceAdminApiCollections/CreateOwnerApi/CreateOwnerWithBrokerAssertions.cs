@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
+namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateOwnerApi
 {
-    internal class OwnerApi
+    public partial class OwnerCreation
     {
     }
 }
