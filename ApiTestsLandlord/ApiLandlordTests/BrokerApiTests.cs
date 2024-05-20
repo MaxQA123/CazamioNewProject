@@ -1,6 +1,7 @@
 ﻿using Allure.Commons;
 using CazamioNewProject.ApiHelpers;
 using CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.CreateAgentApi;
+using CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.CreateOwnerApi;
 using CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.LogInApiBroker;
 using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
@@ -125,7 +126,44 @@ namespace ApiTestsLandlord
 
             #region Tests
 
-            //AgentCreation.CreateAgent(responseBroker.AuthData.Token, firstNameAgent, lastNameAgent, emailAgent, phoneNumberAgent, brokerCommissionAgent, agentCommissionAgent, cellAgent);
+            OwnerCreation.CreateOwnerWithTenantPays(responseBroker.AuthData.Token);
+
+            #endregion
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Broker Api test")]
+        [AllureSubSuite("CreateOwnerWithoutPays")]
+
+        public void CreateOwnerWithoutPays()
+        {
+            #region Test Data
+
+            Broker broker = new Broker().Generate();
+
+            var email = broker.EmailAddressBroker;
+            var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
+            var rememberMe = ApiRequestData.TRUE;
+            var deviceFingerprint = broker.DeviceFingerprint;
+
+            #endregion
+
+            #region Preconditions
+
+            var responseBroker = LogInApiBroker.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+
+            LogInApiBroker.VerifyUserData(responseBroker, broker);
+
+            #endregion
+
+            #region Tests
+
+            OwnerCreation.CreateOwnerRequiredFieldsManagements(responseBroker.AuthData.Token);
 
             #endregion
         }

@@ -18,7 +18,9 @@ namespace CazamioNewProject.Objects
         public string OfficeLocation { get; set; }
         public string InternalNotes { get; set; }
         public string PhoneNumber { get; set; }
+        public long PhoneNumberApi { get; set; }
         public string ExtensionNumber { get; set; }
+        public long ExtensionNumberApi { get; set; }
         public string OwnerNumberOfMonths { get; set; }
         public string TenantNumberOfMonths { get; set; }
         public string OwnerPercentage { get; set; }
@@ -55,6 +57,8 @@ namespace CazamioNewProject.Objects
             string officeLocation = Address.City();
             string internalNotes = "Owner lorem ipsum (12345) (&%$#@!)";
             string phoneNumber = "585" + GenerateRandomData.RandomPhoneNumber(7);
+            long phoneNumberApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10));
+            long extensionNumberApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(1));
             string extensionNumber = "325" + GenerateRandomData.RandomPhoneNumber(7);
             string ownerNumberOfMonths = GenerateRandomData.RandomNumberWithoutZero(1);
             string tenantNumberOfMonths = GenerateRandomData.RandomNumberWithoutZero(1);
@@ -107,7 +111,9 @@ namespace CazamioNewProject.Objects
                 TenantNumberOfMonthsApi = tenantNumberOfMonthsApi,
                 OwnerPercentageApi = ownerPercentageApi,
                 TenantPercentageApi = tenantPercentageApi,
-                TakeOffApi = takeOffApi
+                TakeOffApi = takeOffApi,
+                ExtensionNumberApi = extensionNumberApi,
+                PhoneNumberApi = phoneNumberApi
             };
             return owner;
         }
