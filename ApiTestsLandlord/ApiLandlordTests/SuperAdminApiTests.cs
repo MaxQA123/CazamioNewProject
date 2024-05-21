@@ -12,6 +12,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CazamioNewProject.DbHelpers.AspNetUsersTable;
+using CazamioNewProject.DbHelpers.MarketplaceAdminsTable;
 
 namespace ApiTestsLandlord
 {
@@ -64,6 +66,8 @@ namespace ApiTestsLandlord
         {
             #region Test Data
 
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+
             SuperAdmin superAdmin = new SuperAdmin().Generate();
 
             var email = superAdmin.EmailAddressSuperAdmin;
@@ -92,6 +96,17 @@ namespace ApiTestsLandlord
             #region Test
 
             MarketplaceAdminCreation.CreateMarketplaceAdmin(responseSuperAdmin.AuthData.Token, firstNameMarkAdm, lastNameMarkAdm, emailMarkAdm, passwordMarkAdm, subdomainMarkAdm);
+
+            #endregion
+
+            #region Postconditions
+
+            AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(emailMarkAdm, marketplaceId);
+            Console.WriteLine($"{emailMarkAdm}");
+            WaitUntil.WaitSomeInterval(100);
+            MarketplaceAdminsDbRequests.MarketplaceAdmins.DeleteCreatedUserMarketplaceAdmin(emailMarkAdm, marketplaceId);
+            WaitUntil.WaitSomeInterval(100);
+            AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(emailMarkAdm, marketplaceId);
 
             #endregion
         }

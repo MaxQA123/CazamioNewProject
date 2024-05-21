@@ -24,7 +24,7 @@ namespace DbTests
             int marketplaceId = 15;
             string email = "tenantswife@gmail.com";
 
-            var IdAgent = DbRequestsAspNetUsers.AspNetUsers.GetMarketplaceIdByEmailAndMarketplaceId(email, marketplaceId).MarketplaceId;
+            var IdAgent = AspNetUsersDbRequests.AspNetUsers.GetMarketplaceIdByEmailAndMarketplaceId(email, marketplaceId).MarketplaceId;
             Console.WriteLine($"{IdAgent} :Id for agent from table AspNetUsers");
         }
     }

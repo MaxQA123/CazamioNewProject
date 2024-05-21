@@ -1,9 +1,12 @@
 using Allure.Commons;
+using CazamioNewProject.DbHelpers.AspNetUsersTable;
+using CazamioNewProject.DbHelpers.LandlordsBrokersTable;
 using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.PageObjects;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using NUnit.Framework;
+using System;
 
 namespace MarketplaceAdminGuiTest
 {
@@ -152,6 +155,12 @@ namespace MarketplaceAdminGuiTest
 
         public void CreateBroker()
         {
+            #region Test Data
+
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+
+            #endregion
+
             #region Preconditions
 
             Pages.LogInLandlord
@@ -186,10 +195,6 @@ namespace MarketplaceAdminGuiTest
             Pages.ListOfBrokers
                 .VerifyMessageBrokerHasBeenSuccessfullyCreated();
 
-            //WaitUntil.WaitSomeInterval(500);
-            //var marketplaceIdFromDb = DBRequestAspNetUsers.AspNetUsers.GetMarketplaceIdByEmailAndMarketplaceId(getFullEmail, marketplaceId);
-            //Console.WriteLine($"MarketplaceId from DB: {marketplaceIdFromDb.MarketplaceId}");
-
             string getEmailFromListOfBrokers = Pages.ListOfBrokers.CopyEmailFirstRecordEmailForFirstBrokerInList();
 
             Pages.ListOfBrokers
@@ -222,7 +227,16 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
 
-            WaitUntil.WaitSomeInterval(2000);
+            #region Postconditions
+
+            AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(getFullEmail, marketplaceId);
+            Console.WriteLine($"{getFullEmail}");
+            WaitUntil.WaitSomeInterval(100);
+            LandlordsBrokersDbRequests.LandlordsBrokers.DeleteCreatedUserBroker(getFullEmail, marketplaceId);
+            WaitUntil.WaitSomeInterval(100);
+            AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(getFullEmail, marketplaceId);
+
+            #endregion
 
         }
 

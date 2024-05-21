@@ -1,7 +1,7 @@
 ﻿
 namespace CazamioNewProject.DbHelpers.AspNetUsersTable
 {
-    public class DbModelsAspNetUsers
+    public class AspNetUsersDbModels
     {
         public int Id { get; set; }
         public object? UserName { get; set; }

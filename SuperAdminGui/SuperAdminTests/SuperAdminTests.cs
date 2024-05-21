@@ -1,9 +1,12 @@
 ﻿using Allure.Commons;
+using CazamioNewProject.DbHelpers.AspNetUsersTable;
+using CazamioNewProject.DbHelpers.MarketplaceAdminsTable;
 using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.PageObjects;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using NUnit.Framework;
+using System;
 
 namespace SuperAdminGui
 {
@@ -48,7 +51,13 @@ namespace SuperAdminGui
 
         public void CreateMarketplaceAdmin()
         {
-            #region Test
+            #region Test Data
+
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+
+            #endregion
+
+            #region Preconditions
 
             Pages.LogInLandlord
                 .EnterEmailPasswordAsSuperAdmin()
@@ -113,6 +122,17 @@ namespace SuperAdminGui
                 .VerifyMarketplaceAdminUserNameAndRoleCreating(getUserNameRoleMarketplaceAdmin);
 
             WaitUntil.WaitSomeInterval(2000);
+
+            #endregion
+
+            #region Postconditions
+
+            AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(fullEmailPutsBox, marketplaceId);
+            Console.WriteLine($"{fullEmailPutsBox}");
+            WaitUntil.WaitSomeInterval(100);
+            MarketplaceAdminsDbRequests.MarketplaceAdmins.DeleteCreatedUserMarketplaceAdmin(fullEmailPutsBox, marketplaceId);
+            WaitUntil.WaitSomeInterval(100);
+            AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(fullEmailPutsBox, marketplaceId);
 
             #endregion
         }
