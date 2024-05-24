@@ -20,7 +20,7 @@ namespace CazamioNewProject.DbHelpers.LandlordsBrokersTable
         }
         public class LandlordsBrokers
         {
-            public static string DeleteCreatedUserBroker(string email, int marketplaceId)
+            public static string DeleteNewlyCreatedBroker(string email, int marketplaceId)
             {
                 string data = null;
                 using (SqlConnection db = new(ConnectionDb.GET_CONNECTION_STRING_TO_DB))

@@ -90,11 +90,6 @@ namespace SuperAdminGui
                 .ClickButtonCreate();
             Pages.ListOfMarketplaceAdmins
                 .VerifyMessageMarketplaceAdminHasBeenSuccessfullyCreated();
-
-            //WaitUntil.WaitSomeInterval(500);
-            //var marketplaceIdFromDb = DBRequestAspNetUsers.AspNetUsers.GetMarketplaceIdByEmailAndMarketplaceId(fullEmailPutsBox, marketplaceId);
-            //Console.WriteLine($"MarketplaceId from DB: {marketplaceIdFromDb.MarketplaceId}");
-
             Pages.AreYouSureLogOutLandlordMdlWndw
                 .MakeLogOut();
             Pages.JScriptExecutor
@@ -130,7 +125,7 @@ namespace SuperAdminGui
             AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(fullEmailPutsBox, marketplaceId);
             Console.WriteLine($"{fullEmailPutsBox}");
             WaitUntil.WaitSomeInterval(100);
-            MarketplaceAdminsDbRequests.MarketplaceAdmins.DeleteCreatedUserMarketplaceAdmin(fullEmailPutsBox, marketplaceId);
+            MarketplaceAdminsDbRequests.MarketplaceAdmins.DeleteNewlyCreatedMarketplaceAdmin(fullEmailPutsBox, marketplaceId);
             WaitUntil.WaitSomeInterval(100);
             AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(fullEmailPutsBox, marketplaceId);
 

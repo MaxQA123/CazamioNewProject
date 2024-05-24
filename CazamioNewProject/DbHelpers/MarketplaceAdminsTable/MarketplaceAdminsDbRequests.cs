@@ -19,7 +19,7 @@ namespace CazamioNewProject.DbHelpers.MarketplaceAdminsTable
         }
         public class MarketplaceAdmins
         {
-            public static string DeleteCreatedUserMarketplaceAdmin(string email, int marketplaceId)
+            public static string DeleteNewlyCreatedMarketplaceAdmin(string email, int marketplaceId)
             {
                 string data = null;
                 using (SqlConnection db = new(ConnectionDb.GET_CONNECTION_STRING_TO_DB))

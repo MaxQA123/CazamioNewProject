@@ -3,11 +3,14 @@ using CazamioNewProject.ApiHelpers;
 using CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.CreateAgentApi;
 using CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.CreateOwnerApi;
 using CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.LogInApiBroker;
+using CazamioNewProject.DbHelpers.AspNetUsersTable;
+using CazamioNewProject.DbHelpers.BrokersAgentsTable;
 using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using NUnit.Framework;
+using System;
 
 namespace ApiTestsLandlord
 {
@@ -60,6 +63,8 @@ namespace ApiTestsLandlord
         {
             #region Test Data
 
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+
             Broker broker = new Broker().Generate();
 
             var email = broker.EmailAddressBroker;
@@ -90,6 +95,18 @@ namespace ApiTestsLandlord
             #region Tests
 
             AgentCreation.CreateAgent(responseBroker.AuthData.Token, firstNameAgent, lastNameAgent, emailAgent, phoneNumberAgent, brokerCommissionAgent, agentCommissionAgent, cellAgent);
+
+            #endregion
+
+            #region Postconditions
+
+            WaitUntil.WaitSomeInterval(100);
+            AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(emailAgent, marketplaceId);
+            Console.WriteLine($"{emailAgent}");
+            WaitUntil.WaitSomeInterval(100);
+            BrokersAgentsDbRequests.BrokersAgents.DeleteNewlyCreatedAgent(emailAgent, marketplaceId);
+            WaitUntil.WaitSomeInterval(100);
+            AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(emailAgent, marketplaceId);
 
             #endregion
         }
@@ -164,6 +181,15 @@ namespace ApiTestsLandlord
             #region Tests
 
             OwnerCreation.CreateOwnerRequiredFieldsManagements(responseBroker.AuthData.Token);
+
+            #endregion
+
+            #region Postconditions
+
+            DBRequestOwnerCommissionsStructure.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(getOwnerEmailFromModalWndw, marketplaceId);
+            DBRequestOwnerPhoneNumbers.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(getOwnerEmailFromModalWndw, marketplaceId);
+            DBRequestOwnerManagements.OwnerManagements.DeleteRecordAboutOwnerManagements(getOwnerEmailFromModalWndw, marketplaceId);
+            DbRequestOwners.DBOwners.DeleteCreatedUserOwner(getOwnerEmailFromModalWndw, marketplaceId);
 
             #endregion
         }

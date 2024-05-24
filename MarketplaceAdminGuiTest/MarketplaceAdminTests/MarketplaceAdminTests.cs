@@ -1,5 +1,6 @@
 using Allure.Commons;
 using CazamioNewProject.DbHelpers.AspNetUsersTable;
+using CazamioNewProject.DbHelpers.BrokersAgentsTable;
 using CazamioNewProject.DbHelpers.LandlordsBrokersTable;
 using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.PageObjects;
@@ -232,7 +233,7 @@ namespace MarketplaceAdminGuiTest
             AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(getFullEmail, marketplaceId);
             Console.WriteLine($"{getFullEmail}");
             WaitUntil.WaitSomeInterval(100);
-            LandlordsBrokersDbRequests.LandlordsBrokers.DeleteCreatedUserBroker(getFullEmail, marketplaceId);
+            LandlordsBrokersDbRequests.LandlordsBrokers.DeleteNewlyCreatedBroker(getFullEmail, marketplaceId);
             WaitUntil.WaitSomeInterval(100);
             AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(getFullEmail, marketplaceId);
 
@@ -251,6 +252,12 @@ namespace MarketplaceAdminGuiTest
 
         public void CreateAgent()
         {
+            #region Test Data
+
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+
+            #endregion
+
             #region Preconditions
 
             Pages.LogInLandlord
@@ -307,6 +314,18 @@ namespace MarketplaceAdminGuiTest
 
             Pages.SidebarLandlord
                 .VerifyAgentUserNameAndRoleCreating(getUserNameRoleCompareAgent);
+
+            #endregion
+
+            #region Postconditions
+
+            WaitUntil.WaitSomeInterval(100);
+            AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(fullEmailPutsBox, marketplaceId);
+            Console.WriteLine($"{fullEmailPutsBox}");
+            WaitUntil.WaitSomeInterval(100);
+            BrokersAgentsDbRequests.BrokersAgents.DeleteNewlyCreatedAgent(fullEmailPutsBox, marketplaceId);
+            WaitUntil.WaitSomeInterval(100);
+            AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(fullEmailPutsBox, marketplaceId);
 
             #endregion
 

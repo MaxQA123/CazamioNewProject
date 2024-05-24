@@ -104,7 +104,7 @@ namespace ApiTestsLandlord
             AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(emailMarkAdm, marketplaceId);
             Console.WriteLine($"{emailMarkAdm}");
             WaitUntil.WaitSomeInterval(100);
-            MarketplaceAdminsDbRequests.MarketplaceAdmins.DeleteCreatedUserMarketplaceAdmin(emailMarkAdm, marketplaceId);
+            MarketplaceAdminsDbRequests.MarketplaceAdmins.DeleteNewlyCreatedMarketplaceAdmin(emailMarkAdm, marketplaceId);
             WaitUntil.WaitSomeInterval(100);
             AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(emailMarkAdm, marketplaceId);
 

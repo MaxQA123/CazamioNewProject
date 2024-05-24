@@ -9,6 +9,10 @@ using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.Log
 using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBrokerApi;
 using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateAgentApi;
 using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateOwnerApi;
+using CazamioNewProject.DbHelpers.AspNetUsersTable;
+using System;
+using CazamioNewProject.DbHelpers.LandlordsBrokersTable;
+using CazamioNewProject.DbHelpers.BrokersAgentsTable;
 
 namespace ApiTestsLandlord
 {
@@ -61,6 +65,8 @@ namespace ApiTestsLandlord
         {
             #region Test Data
 
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+
             MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
 
             var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
@@ -90,6 +96,17 @@ namespace ApiTestsLandlord
             BrokerCreation.CreateBroker(responseMarketplaceAdmin.AuthData.Token, firstNameBroker, lastNameBroker, emailBroker, passwordBroker);
 
             #endregion
+
+            #region Postconditions
+
+            AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(emailBroker, marketplaceId);
+            Console.WriteLine($"{emailBroker}");
+            WaitUntil.WaitSomeInterval(100);
+            LandlordsBrokersDbRequests.LandlordsBrokers.DeleteNewlyCreatedBroker(emailBroker, marketplaceId);
+            WaitUntil.WaitSomeInterval(100);
+            AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(emailBroker, marketplaceId);
+
+            #endregion
         }
 
         [Test]
@@ -104,6 +121,8 @@ namespace ApiTestsLandlord
         public void CreateAgent()
         {
             #region Test Data
+
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
 
             MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
 
@@ -135,6 +154,18 @@ namespace ApiTestsLandlord
             #region Tests
 
             AgentCreation.CreateAgent(responseMarketplaceAdmin.AuthData.Token, firstNameAgent, lastNameAgent, emailAgent, phoneNumberAgent, brokerCommissionAgent, agentCommissionAgent, cellAgent);
+
+            #endregion
+
+            #region Postconditions
+
+            WaitUntil.WaitSomeInterval(100);
+            AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(emailAgent, marketplaceId);
+            Console.WriteLine($"{emailAgent}");
+            WaitUntil.WaitSomeInterval(100);
+            BrokersAgentsDbRequests.BrokersAgents.DeleteNewlyCreatedAgent(emailAgent, marketplaceId);
+            WaitUntil.WaitSomeInterval(100);
+            AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(emailAgent, marketplaceId);
 
             #endregion
         }

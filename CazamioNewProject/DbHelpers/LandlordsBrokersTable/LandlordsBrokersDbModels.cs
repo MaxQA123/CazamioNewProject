@@ -2,6 +2,7 @@
 
 namespace CazamioNewProject.DbHelpers.LandlordsBrokersTable
 {
+    //Landlords table = role "Broker"
     public class LandlordsBrokersDbModels
     {
         public object? Id { get; set; } // this might be another data type
