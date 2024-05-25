@@ -13,6 +13,10 @@ using CazamioNewProject.DbHelpers.AspNetUsersTable;
 using System;
 using CazamioNewProject.DbHelpers.LandlordsBrokersTable;
 using CazamioNewProject.DbHelpers.BrokersAgentsTable;
+using CazamioNewProject.DbHelpers.OwnerCommissionsStructureTable;
+using CazamioNewProject.DbHelpers.OwnerPhoneNumbersTable;
+using CazamioNewProject.DbHelpers.OwnerManagementsTable;
+using CazamioNewProject.DbHelpers.OwnersDbTable;
 
 namespace ApiTestsLandlord
 {
@@ -183,12 +187,16 @@ namespace ApiTestsLandlord
         {
             #region Test Data
 
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+
             MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
 
             var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
             var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
             var rememberMe = ApiRequestData.TRUE;
             var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
+
+            var ownerBody = OwnerCreation.RequestBodyBrokerFullData();
 
             #endregion
 
@@ -202,7 +210,17 @@ namespace ApiTestsLandlord
 
             #region Tests
 
-            OwnerCreation.CreateOwnerWithBrokerFullData(responseMarketplaceAdmin.AuthData.Token);
+            OwnerCreation.CreateOwnerWithBrokerFullData(responseMarketplaceAdmin.AuthData.Token, ownerBody);
+
+            #endregion
+
+            #region Postconditions
+
+            OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(ownerBody.OwnerEmail, marketplaceId);
+            Console.WriteLine($"{ownerBody.OwnerEmail}");
+            OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(ownerBody.OwnerEmail, marketplaceId);
+            OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(ownerBody.OwnerEmail, marketplaceId);
+            OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(ownerBody.OwnerEmail, marketplaceId);
 
             #endregion
         }
