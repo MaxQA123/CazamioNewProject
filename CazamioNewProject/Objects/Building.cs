@@ -162,7 +162,7 @@ namespace CazamioNewProject.Objects
 
             #endregion
 
-            #region Settings Building for role Broker
+            #region Settings Building for role Agent-Broker
 
             string buildingNumberAgntBrkrAssignedRoleAgntBrkr = "100B";
             string addressAgntBrkrAssignedRoleAgntBrkr = "East 51st Street Pedestrian Crossing";
@@ -196,7 +196,6 @@ namespace CazamioNewProject.Objects
             string monthsFreeConcession = "1";
             string leaseTermsConcession = "12";
             string nameFreeStuff = "FreeStuffBuilding";
-
 
             var building = new Building()
             {

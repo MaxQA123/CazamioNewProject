@@ -16,7 +16,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw
         {
             WaitUntil.CustomElementIsVisible(TitleCreateANewOwner);
             Assert.IsTrue(Successfully.IsVisible(TitleCreateANewOwner));
-            Console.WriteLine($"{TitleCreateANewOwner.Text} :Name modal window");
 
             return this;
         }

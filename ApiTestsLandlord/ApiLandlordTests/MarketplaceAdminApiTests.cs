@@ -17,6 +17,7 @@ using CazamioNewProject.DbHelpers.OwnerCommissionsStructureTable;
 using CazamioNewProject.DbHelpers.OwnerPhoneNumbersTable;
 using CazamioNewProject.DbHelpers.OwnerManagementsTable;
 using CazamioNewProject.DbHelpers.OwnersDbTable;
+using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApi;
 
 namespace ApiTestsLandlord
 {
@@ -272,6 +273,41 @@ namespace ApiTestsLandlord
             OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(ownerBody.OwnerEmail, marketplaceId);
             OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(ownerBody.OwnerEmail, marketplaceId);
             OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(ownerBody.OwnerEmail, marketplaceId);
+
+            #endregion
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("MarketplaceAdmin Api test")]
+        [AllureSubSuite("CreateBuildingFullDataWithBroker")]
+
+        public void CreateBuildingFullDataWithBroker()
+        {
+            #region Test Data
+
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+
+            MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
+
+            var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
+            var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
+            var rememberMe = ApiRequestData.TRUE;
+            var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
+
+            var buildingBody = BuildingCreation.RequestBodyCreateBuildingFullDataBroker();
+
+            #endregion
+
+            #region Preconditions
+
+            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+
+            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
 
             #endregion
         }

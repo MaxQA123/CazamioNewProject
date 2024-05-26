@@ -1,9 +1,14 @@
 ﻿using Allure.Commons;
+using CazamioNewProject.DbHelpers.OwnerCommissionsStructureTable;
+using CazamioNewProject.DbHelpers.OwnerManagementsTable;
+using CazamioNewProject.DbHelpers.OwnerPhoneNumbersTable;
+using CazamioNewProject.DbHelpers.OwnersDbTable;
 using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.PageObjects;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using NUnit.Framework;
+using System;
 
 namespace BrokerGuiTests
 {
@@ -217,6 +222,12 @@ namespace BrokerGuiTests
 
         public void CreateOwnerWithAssignedBroker()
         {
+            #region Test Data
+
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+
+            #endregion
+
             #region Preconditions
 
             Pages.LogInLandlord
@@ -268,8 +279,15 @@ namespace BrokerGuiTests
             Pages.ListOfOwners
                 .VerifyEmailForNewOwner(getOwnerEmailFromModalWndw, getLastEmailFromPage);
 
-            //var marketplaceIdFromDb = DbRequestOwners.DBOwners.GetMarketplaceIdByEmailUserOwner(getOwnerEmailFromModalWndw);
-            //Console.WriteLine($"MarketplaceId of owner: {marketplaceIdFromDb}");
+            #endregion
+
+            #region Postconditions
+
+            OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(getOwnerEmailFromModalWndw, marketplaceId);
+            Console.WriteLine($"{getOwnerEmailFromModalWndw}");
+            OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(getOwnerEmailFromModalWndw, marketplaceId);
+            OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(getOwnerEmailFromModalWndw, marketplaceId);
+            OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(getOwnerEmailFromModalWndw, marketplaceId);
 
             #endregion
         }

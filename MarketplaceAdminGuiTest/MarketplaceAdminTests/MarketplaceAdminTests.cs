@@ -2,6 +2,10 @@ using Allure.Commons;
 using CazamioNewProject.DbHelpers.AspNetUsersTable;
 using CazamioNewProject.DbHelpers.BrokersAgentsTable;
 using CazamioNewProject.DbHelpers.LandlordsBrokersTable;
+using CazamioNewProject.DbHelpers.OwnerCommissionsStructureTable;
+using CazamioNewProject.DbHelpers.OwnerManagementsTable;
+using CazamioNewProject.DbHelpers.OwnerPhoneNumbersTable;
+using CazamioNewProject.DbHelpers.OwnersDbTable;
 using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.PageObjects;
 using NUnit.Allure.Attributes;
@@ -342,6 +346,12 @@ namespace MarketplaceAdminGuiTest
 
         public void CreateOwnerWithAssignedBroker()
         {
+            #region Test Data
+
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+
+            #endregion
+
             #region Preconditions
 
             Pages.LogInLandlord
@@ -392,6 +402,16 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
 
+            #region Postconditions
+
+            OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(getOwnerEmailFromModalWndw, marketplaceId);
+            Console.WriteLine($"{getOwnerEmailFromModalWndw}");
+            OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(getOwnerEmailFromModalWndw, marketplaceId);
+            OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(getOwnerEmailFromModalWndw, marketplaceId);
+            OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(getOwnerEmailFromModalWndw, marketplaceId);
+
+            #endregion
+
         }
 
         [Test]
@@ -405,6 +425,12 @@ namespace MarketplaceAdminGuiTest
 
         public void CreateOwnerWithAssignedAgent()
         {
+            #region Test Data
+
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+
+            #endregion
+
             #region Preconditions
 
             Pages.LogInLandlord
@@ -458,6 +484,16 @@ namespace MarketplaceAdminGuiTest
 
             Pages.ListOfOwners
                 .VerifyEmailForNewOwner(getOwnerEmailFromModalWndw, getLastEmailFromPage);
+
+            #endregion
+
+            #region Postconditions
+
+            OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(getOwnerEmailFromModalWndw, marketplaceId);
+            Console.WriteLine($"{getOwnerEmailFromModalWndw}");
+            OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(getOwnerEmailFromModalWndw, marketplaceId);
+            OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(getOwnerEmailFromModalWndw, marketplaceId);
+            OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(getOwnerEmailFromModalWndw, marketplaceId);
 
             #endregion
 
