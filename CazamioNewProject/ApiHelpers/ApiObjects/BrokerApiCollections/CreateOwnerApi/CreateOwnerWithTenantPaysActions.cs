@@ -15,7 +15,6 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.CreateOwn
         public static RequestCreateOwnerRequiredFieldsPhone RequestCreateOwnerWithTenantPays()
         {
             Owner owner = new Owner().Generate();
-            Broker broker = new Broker().Generate();
 
             var payload = new RequestCreateOwnerRequiredFieldsPhone();
             payload.CompanyName = owner.AlreadyCreatedCompanyNameWithBroker;
@@ -34,7 +33,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.CreateOwn
             return payload;
         }
 
-        public static void CreateOwnerWithTenantPays(string token)
+        public static void CreateOwnerWithTenantPays(string token, RequestCreateOwnerRequiredFieldsPhone ownerBody)
         {
 
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
@@ -42,7 +41,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.CreateOwn
             var restRequest = new RestRequest("api/owners/createOwner", Method.Post);
             restRequest.AddHeaders(Headers.HeadersSuperAdmin(token));
 
-            restRequest.AddJsonBody(RequestCreateOwnerWithTenantPays());
+            restRequest.AddJsonBody(ownerBody);
 
             var response = restClient.Execute(restRequest);
 

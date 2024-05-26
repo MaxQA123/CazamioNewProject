@@ -33,7 +33,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.CreateOwn
             return payload;
         }
 
-        public static void CreateOwnerRequiredFieldsManagements(string token)
+        public static void CreateOwnerRequiredFieldsManagements(string token, RequestCreateOwnerRequiredFieldsManagements ownerBody)
         {
 
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
@@ -41,7 +41,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.CreateOwn
             var restRequest = new RestRequest("api/owners/createOwner", Method.Post);
             restRequest.AddHeaders(Headers.HeadersSuperAdmin(token));
 
-            restRequest.AddJsonBody(RequestBodyRequiredFieldsManagements());
+            restRequest.AddJsonBody(ownerBody);
 
             var response = restClient.Execute(restRequest);
 

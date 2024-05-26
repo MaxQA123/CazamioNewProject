@@ -32,7 +32,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             return payload;
         }
 
-        public static void CreateOwnerWithAgentRequiredData(string token)
+        public static void CreateOwnerWithAgentRequiredData(string token, RequestCreateOwnerRequiredData ownerBody)
         {
 
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
@@ -40,7 +40,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             var restRequest = new RestRequest("api/owners/createOwner", Method.Post);
             restRequest.AddHeaders(Headers.HeadersSuperAdmin(token));
 
-            restRequest.AddJsonBody(RequestBodyAgentRequiredData());
+            restRequest.AddJsonBody(ownerBody);
 
             var response = restClient.Execute(restRequest);
 

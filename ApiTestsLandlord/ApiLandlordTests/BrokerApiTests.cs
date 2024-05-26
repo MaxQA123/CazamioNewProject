@@ -5,6 +5,10 @@ using CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.CreateOwnerAp
 using CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.LogInApiBroker;
 using CazamioNewProject.DbHelpers.AspNetUsersTable;
 using CazamioNewProject.DbHelpers.BrokersAgentsTable;
+using CazamioNewProject.DbHelpers.OwnerCommissionsStructureTable;
+using CazamioNewProject.DbHelpers.OwnerManagementsTable;
+using CazamioNewProject.DbHelpers.OwnerPhoneNumbersTable;
+using CazamioNewProject.DbHelpers.OwnersDbTable;
 using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
 using NUnit.Allure.Attributes;
@@ -124,12 +128,16 @@ namespace ApiTestsLandlord
         {
             #region Test Data
 
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+
             Broker broker = new Broker().Generate();
 
             var email = broker.EmailAddressBroker;
             var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
             var rememberMe = ApiRequestData.TRUE;
             var deviceFingerprint = broker.DeviceFingerprint;
+
+            var ownerBody = OwnerCreation.RequestCreateOwnerWithTenantPays();
 
             #endregion
 
@@ -143,7 +151,17 @@ namespace ApiTestsLandlord
 
             #region Tests
 
-            OwnerCreation.CreateOwnerWithTenantPays(responseBroker.AuthData.Token);
+            OwnerCreation.CreateOwnerWithTenantPays(responseBroker.AuthData.Token, ownerBody);
+
+            #endregion
+
+            #region Postconditions
+
+            OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(ownerBody.OwnerEmail, marketplaceId);
+            Console.WriteLine($"{ownerBody.OwnerEmail}");
+            OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(ownerBody.OwnerEmail, marketplaceId);
+            OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(ownerBody.OwnerEmail, marketplaceId);
+            OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(ownerBody.OwnerEmail, marketplaceId);
 
             #endregion
         }
@@ -163,10 +181,14 @@ namespace ApiTestsLandlord
 
             Broker broker = new Broker().Generate();
 
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+
             var email = broker.EmailAddressBroker;
             var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
             var rememberMe = ApiRequestData.TRUE;
             var deviceFingerprint = broker.DeviceFingerprint;
+
+            var ownerBody = OwnerCreation.RequestBodyRequiredFieldsManagements();
 
             #endregion
 
@@ -180,18 +202,19 @@ namespace ApiTestsLandlord
 
             #region Tests
 
-            OwnerCreation.CreateOwnerRequiredFieldsManagements(responseBroker.AuthData.Token);
+            OwnerCreation.CreateOwnerRequiredFieldsManagements(responseBroker.AuthData.Token, ownerBody);
 
             #endregion
 
-            //#region Postconditions
+            #region Postconditions
 
-            //DBRequestOwnerCommissionsStructure.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(getOwnerEmailFromModalWndw, marketplaceId);
-            //DBRequestOwnerPhoneNumbers.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(getOwnerEmailFromModalWndw, marketplaceId);
-            //DBRequestOwnerManagements.OwnerManagements.DeleteRecordAboutOwnerManagements(getOwnerEmailFromModalWndw, marketplaceId);
-            //DbRequestOwners.DBOwners.DeleteCreatedUserOwner(getOwnerEmailFromModalWndw, marketplaceId);
+            OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(ownerBody.OwnerEmail, marketplaceId);
+            Console.WriteLine($"{ownerBody.OwnerEmail}");
+            OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(ownerBody.OwnerEmail, marketplaceId);
+            OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(ownerBody.OwnerEmail, marketplaceId);
+            OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(ownerBody.OwnerEmail, marketplaceId);
 
-            //#endregion
+            #endregion
         }
     }
 }

@@ -238,12 +238,16 @@ namespace ApiTestsLandlord
         {
             #region Test Data
 
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+
             MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
 
             var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
             var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
             var rememberMe = ApiRequestData.TRUE;
             var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
+
+            var ownerBody = OwnerCreation.RequestBodyAgentRequiredData();
 
             #endregion
 
@@ -257,7 +261,17 @@ namespace ApiTestsLandlord
 
             #region Tests
 
-            OwnerCreation.CreateOwnerWithAgentRequiredData(responseMarketplaceAdmin.AuthData.Token);
+            OwnerCreation.CreateOwnerWithAgentRequiredData(responseMarketplaceAdmin.AuthData.Token, ownerBody);
+
+            #endregion
+
+            #region Postconditions
+
+            OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(ownerBody.OwnerEmail, marketplaceId);
+            Console.WriteLine($"{ownerBody.OwnerEmail}");
+            OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(ownerBody.OwnerEmail, marketplaceId);
+            OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(ownerBody.OwnerEmail, marketplaceId);
+            OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(ownerBody.OwnerEmail, marketplaceId);
 
             #endregion
         }
