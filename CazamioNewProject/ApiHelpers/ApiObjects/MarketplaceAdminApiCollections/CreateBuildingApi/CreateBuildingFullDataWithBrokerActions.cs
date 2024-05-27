@@ -25,7 +25,16 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             payload.Address.City = buildingApi.CityApi.NewYork;
             payload.Address.ZipCode = buildingApi.ZipCode.ZipBuildingMarkAdmAssignedRoleBrkr;
             payload.Address.Neighborhood = buildingApi.NeighborhoodApi.BuildingMarkAdmAssignedRoleBrkr;
-            
+            payload.PetPolicies = new string[]
+            {
+                buildingApi.PetPoliciesApi.CaseByCase,
+                buildingApi.PetPoliciesApi.PetFee,
+                buildingApi.PetPoliciesApi.AllPetsAllowed,
+                buildingApi.PetPoliciesApi.SmallPetsAllowed,
+                buildingApi.PetPoliciesApi.CatsOnly,
+                buildingApi.PetPoliciesApi.NoPets
+            };
+
             //payload.BrokerId = broker.BrokerIdApi;
             //payload.IsAgent = ApiRequestData.FALSE;
 

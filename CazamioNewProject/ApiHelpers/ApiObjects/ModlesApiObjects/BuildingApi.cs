@@ -15,6 +15,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
         public CityApiInfo CityApi { get; set; }
         public ZipCodeInfo ZipCode { get; set; }
         public NeighborhoodApiInfo NeighborhoodApi { get; set; }
+        public PetPoliciesApiInfo PetPoliciesApi { get; set; }
 
         public class StreetApiInfo
         {
@@ -47,6 +48,16 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
             public string BuildingBrokerAssignedRoleAgntBrkr { get; set; }
             public string BuildingBrokerAssignedRoleBrkr { get; set; }
             public string BuildingAgntBrkrAssignedRoleAgntBrkr { get; set; }
+        }
+
+        public class PetPoliciesApiInfo
+        {
+            public string CaseByCase { get; set; }
+            public string PetFee { get; set; }
+            public string AllPetsAllowed { get; set; }
+            public string SmallPetsAllowed { get; set; }
+            public string CatsOnly { get; set; }
+            public string NoPets { get; set; }
         }
 
         public BuildingApi Generate()
@@ -89,7 +100,12 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
             string stateApi = "NY";
             string cityApiNewYork = "New York";
             string cityApiBrooklyn = "Brooklyn";
-            string neighborhoodApi = "United States";
+            string caseByCase = "CaseByCase";
+            string petFee = "PetFee";
+            string allPetsAllowed = "AllPetsAllowed";
+            string smallPetsAllowed = "SmallPetsAllowed";
+            string catsOnly = "CatsOnly";
+            string noPets = "NoPets";
 
             var buildingApi = new BuildingApi()
             {
@@ -124,6 +140,15 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
                     BuildingBrokerAssignedRoleAgntBrkr = neighborhoodBrokerBuildingAssignedRoleAgntBrkr,
                     BuildingBrokerAssignedRoleBrkr = neighborhoodBuildingBrokerAssignedRoleBrkr,
                     BuildingAgntBrkrAssignedRoleAgntBrkr = neighborhoodAgntBrkrBuildingAssignedRoleAgntBrkr
+                },
+                PetPoliciesApi = new PetPoliciesApiInfo
+                {
+                    CaseByCase = caseByCase,
+                    PetFee = petFee,
+                    AllPetsAllowed = allPetsAllowed,
+                    SmallPetsAllowed = smallPetsAllowed,
+                    CatsOnly = catsOnly,
+                    NoPets = noPets
                 }
             };
             return buildingApi;
