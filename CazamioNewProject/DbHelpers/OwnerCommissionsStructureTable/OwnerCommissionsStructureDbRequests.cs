@@ -72,7 +72,7 @@ namespace CazamioNewProject.DbHelpers.OwnerCommissionsStructureTable
                     SqlCommand command = new("DELETE" +
                                " FROM OwnerCommissionsStructure" +
                                " WHERE OwnerId IN" +
-                               " (SELECT Id FROM Owners WHERE OwnerEmail = OwnerEmail AND MarketplaceId = @MarketplaceId)", db);
+                               " (SELECT Id FROM Owners WHERE OwnerEmail = @OwnerEmail AND MarketplaceId = @MarketplaceId)", db);
                     command.Parameters.AddWithValue("@OwnerEmail", DbType.String).Value = email;
                     command.Parameters.AddWithValue("@MarketplaceId", DbType.String).Value = marketplaceId;
                     db.Open();
