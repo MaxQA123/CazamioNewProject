@@ -1,5 +1,4 @@
 ﻿using CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects;
-using CazamioNewProject.Objects;
 using RestSharp;
 using System;
 using System.Collections.Generic;
@@ -18,13 +17,17 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             BuildingApi buildingApi = new BuildingApi().Generate();
 
             var payload = new RequestCreateBuildingFullDataWithBroker();
-            payload.Address.Id = buildingApi.AddressIdApi;
-            payload.Address.Country = buildingApi.CountryApi;
-            payload.Address.Street = buildingApi.StreetApi.MarkAdmAssignedRoleBrkr;
-            payload.Address.State = buildingApi.StateApi;
-            payload.Address.City = buildingApi.CityApi.NewYork;
-            payload.Address.ZipCode = buildingApi.ZipCode.ZipBuildingMarkAdmAssignedRoleBrkr;
-            payload.Address.Neighborhood = buildingApi.NeighborhoodApi.BuildingMarkAdmAssignedRoleBrkr;
+            payload.Address = new Address
+            {
+                Id = buildingApi.AddressIdApi,
+                Country = buildingApi.CountryApi,
+                Street = buildingApi.StreetApi.MarkAdmAssignedRoleBrkr,
+                State = buildingApi.StateApi,
+                City = buildingApi.CityApi.NewYork,
+                ZipCode = buildingApi.ZipCode.ZipBuildingMarkAdmAssignedRoleBrkr,
+                Neighborhood = buildingApi.NeighborhoodApi.BuildingMarkAdmAssignedRoleBrkr
+            };
+            
             payload.PetPolicies = new string[]
             {
                 buildingApi.PetPoliciesApi.CaseByCase,
