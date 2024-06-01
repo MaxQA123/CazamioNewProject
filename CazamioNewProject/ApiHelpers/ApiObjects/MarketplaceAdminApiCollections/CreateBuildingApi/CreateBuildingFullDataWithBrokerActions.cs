@@ -1,10 +1,7 @@
 ﻿using CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects;
+using CazamioNewProject.Objects;
 using RestSharp;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApi
 {
@@ -15,6 +12,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public static RequestCreateBuildingFullDataWithBroker RequestBodyCreateBuildingFullDataBroker()
         {
             BuildingApi buildingApi = new BuildingApi().Generate();
+            Building building = new Building().Generate();
 
             var payload = new RequestCreateBuildingFullDataWithBroker();
             payload.Address = new Address
@@ -26,8 +24,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                 City = buildingApi.CityApi.NewYork,
                 ZipCode = buildingApi.ZipCode.ZipBuildingMarkAdmAssignedRoleBrkr,
                 Neighborhood = buildingApi.NeighborhoodApi.BuildingMarkAdmAssignedRoleBrkr
-            };
-            
+            }; 
             payload.PetPolicies = new string[]
             {
                 buildingApi.PetPoliciesApi.CaseByCase,
@@ -37,6 +34,8 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                 buildingApi.PetPoliciesApi.CatsOnly,
                 buildingApi.PetPoliciesApi.NoPets
             };
+            payload.BuildingName = buildingApi.BuildingNameApi.BuldingNameStreetApiMarkAdmAssignedRoleBrkr;
+            payload.LlcName = buildingApi.LlcNameApi.LlcNameStreetApiMarkAdmAssignedRoleBrkr;
 
             //payload.BrokerId = broker.BrokerIdApi;
             //payload.IsAgent = ApiRequestData.FALSE;
@@ -44,24 +43,24 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             return payload;
         }
 
-        public static void CreateOwnerWithBrokerFullData(string token, RequestCreateBuildingFullDataWithBroker buildingBody)
-        {
+        //public static void CreateOwnerWithBrokerFullData(string token, RequestCreateBuildingFullDataWithBroker buildingBody)
+        //{
 
-            var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
+        //    var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
 
-            var restRequest = new RestRequest("api/owners/createOwner", Method.Post);
-            restRequest.AddHeaders(Headers.HeadersSuperAdmin(token));
+        //    var restRequest = new RestRequest("api/owners/createOwner", Method.Post);
+        //    restRequest.AddHeaders(Headers.HeadersSuperAdmin(token));
 
-            restRequest.AddJsonBody(buildingBody);
+        //    restRequest.AddJsonBody(buildingBody);
 
-            var response = restClient.Execute(restRequest);
+        //    var response = restClient.Execute(restRequest);
 
-            var content = response.Content;
+        //    var content = response.Content;
 
-            if (response.StatusCode != System.Net.HttpStatusCode.OK)
-            {
-                throw new Exception(response.Content);
-            }
-        }
+        //    if (response.StatusCode != System.Net.HttpStatusCode.OK)
+        //    {
+        //        throw new Exception(response.Content);
+        //    }
+        //}
     }
 }

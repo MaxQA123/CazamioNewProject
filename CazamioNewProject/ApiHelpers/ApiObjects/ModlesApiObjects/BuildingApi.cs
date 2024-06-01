@@ -17,6 +17,8 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
         public ZipCodeInfo ZipCode { get; set; }
         public NeighborhoodApiInfo NeighborhoodApi { get; set; }
         public PetPoliciesApiInfo PetPoliciesApi { get; set; }
+        public LlcNameApiInfo LlcNameApi { get; set; }
+        public BuildingNameApiInfo BuildingNameApi { get; set; }
 
         public class StreetApiInfo
         {
@@ -61,10 +63,34 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
             public string NoPets { get; set; }
         }
 
+        public class LlcNameApiInfo
+        {
+            public string LlcNameStreetApiMarkAdmAssignedRoleAgntBrkr { get; set; }
+            public string LlcNameStreetApiMarkAdmAssignedRoleBrkr { get; set; }
+            public string LlcNameStreetApiBrokerAssignedRoleAgntBrkr { get; set; }
+            public string LlcNameStreetApiBrokerAssignedRoleBrkr { get; set; }
+            public string LlcNameStreetApiAgentBrokerAssignedRoleAgntBrkr { get; set; }
+            public string ForAgentBroker { get; set; }
+            public string ForBroker { get; set; }
+        }
+
+        public class BuildingNameApiInfo
+        {
+            public string BuildingNameStreetApiMarkAdmAssignedRoleAgntBrkr { get; set; }
+            public string BuldingNameStreetApiMarkAdmAssignedRoleBrkr { get; set; }
+            public string BuldingNameStreetApiBrokerAssignedRoleAgntBrkr { get; set; }
+            public string BuldingNameStreetApiBrokerAssignedRoleBrkr { get; set; }
+            public string BuldingNameStreetApiAgentBrokerAssignedRoleAgntBrkr { get; set; }
+            public string BuldingNameShort { get; set; }
+        }
+
         public BuildingApi Generate()
         {
             long addressIdApi = 0;
             string countryApi = "United States";
+            string llcNameForAgentBroker = "LLC QA Agent As Broker (12345) (!@#$%)";
+            string llcNameForBroker = "LLC QA Broker (12345) (!@#$%)";
+            string nameBuilfing = "QA-Building NAME (12345 !@#$%)";
 
             #region Settings Building for role Marketplace Admin
 
@@ -150,6 +176,22 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
                     SmallPetsAllowed = smallPetsAllowed,
                     CatsOnly = catsOnly,
                     NoPets = noPets
+                },
+                LlcNameApi = new LlcNameApiInfo
+                {
+                    LlcNameStreetApiMarkAdmAssignedRoleAgntBrkr = llcNameForAgentBroker + " " + streetApiMarkAdmAssignedRoleAgntBrkr,
+                    LlcNameStreetApiMarkAdmAssignedRoleBrkr = llcNameForBroker + " " + streetApiMarkAdmAssignedRoleBrkr,
+                    LlcNameStreetApiBrokerAssignedRoleAgntBrkr = llcNameForAgentBroker + " " + streetApiBrokerAssignedRoleAgntBrkr,
+                    LlcNameStreetApiBrokerAssignedRoleBrkr = llcNameForBroker + " " + streetApiBrokerAssignedRoleBrkr,
+                    LlcNameStreetApiAgentBrokerAssignedRoleAgntBrkr = llcNameForAgentBroker + " " + streetApiAgentBrokerAssignedRoleAgntBrkr
+                },
+                BuildingNameApi = new BuildingNameApiInfo
+                {
+                    BuildingNameStreetApiMarkAdmAssignedRoleAgntBrkr = nameBuilfing + " " + streetApiMarkAdmAssignedRoleAgntBrkr,
+                    BuldingNameStreetApiMarkAdmAssignedRoleBrkr = nameBuilfing + " " + streetApiMarkAdmAssignedRoleBrkr,
+                    BuldingNameStreetApiBrokerAssignedRoleAgntBrkr = nameBuilfing + " " + streetApiBrokerAssignedRoleAgntBrkr,
+                    BuldingNameStreetApiBrokerAssignedRoleBrkr = nameBuilfing + " " + streetApiBrokerAssignedRoleBrkr,
+                    BuldingNameStreetApiAgentBrokerAssignedRoleAgntBrkr = nameBuilfing + " " + streetApiAgentBrokerAssignedRoleAgntBrkr
                 }
             };
             return buildingApi;
