@@ -19,6 +19,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
         public PetPoliciesApiInfo PetPoliciesApi { get; set; }
         public LlcNameApiInfo LlcNameApi { get; set; }
         public BuildingNameApiInfo BuildingNameApi { get; set; }
+        public AmountApiInfo AmountApi { get; set; }
 
         public class StreetApiInfo
         {
@@ -84,6 +85,23 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
             public string BuldingNameShort { get; set; }
         }
 
+        public class AmountApiInfo
+        {
+            public long CreditScreeningFeeByDefaultMySpace { get; set; }
+            public long CreditScreeningFeeByDefaultEvergreen { get; set; }
+            public long CreditScreeningFeeByDefaultDoorway { get; set; }
+            public long HoldDepositByDefaultMySpace { get; set; }
+            public long HoldDepositByDefaultEvergreen { get; set; }
+            public long HoldDepositByDefaultDoorway { get; set; }
+            public long CreditScreeningFeeOneNumber { get; set; }
+            public long CreditScreeningFeeTwoNumber { get; set; }
+            public long CreditScreeningFeeThreeNumber { get; set; }
+            public long HoldDepositOneNumber { get; set; }
+            public long HoldDepositTwoNumber { get; set; }
+            public long HoldDepositThreeNumber { get; set; }
+
+        }
+
         public BuildingApi Generate()
         {
             long addressIdApi = 0;
@@ -133,6 +151,8 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
             string smallPetsAllowed = "SmallPetsAllowed";
             string catsOnly = "CatsOnly";
             string noPets = "NoPets";
+            long creditScreeningFeeByDefaultMySpace = 20;
+            long holdDepositByDefaultMySpace = 500;
 
             var buildingApi = new BuildingApi()
             {
@@ -192,6 +212,11 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
                     BuldingNameStreetApiBrokerAssignedRoleAgntBrkr = nameBuilfing + " " + streetApiBrokerAssignedRoleAgntBrkr,
                     BuldingNameStreetApiBrokerAssignedRoleBrkr = nameBuilfing + " " + streetApiBrokerAssignedRoleBrkr,
                     BuldingNameStreetApiAgentBrokerAssignedRoleAgntBrkr = nameBuilfing + " " + streetApiAgentBrokerAssignedRoleAgntBrkr
+                },
+                AmountApi = new AmountApiInfo
+                {
+                    CreditScreeningFeeByDefaultMySpace = creditScreeningFeeByDefaultMySpace,
+                    HoldDepositByDefaultMySpace = holdDepositByDefaultMySpace
                 }
             };
             return buildingApi;

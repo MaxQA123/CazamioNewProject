@@ -9,7 +9,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public Locks Locks { get; set; }
 
         [JsonProperty("screeningFee")]
-        public HoldDeposit ScreeningFee { get; set; }
+        public ScreeningFee ScreeningFee { get; set; }
 
         [JsonProperty("amenities")]
         public Amenity[] Amenities { get; set; }
@@ -27,7 +27,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public Concession[] Concessions { get; set; }
 
         [JsonProperty("petPolicies")]
-        public string[] PetPolicies { get; set; }
+        public string[] PetPolicies { get; set; }//
 
         [JsonProperty("ownerId")]
         public long OwnerId { get; set; }
@@ -36,19 +36,19 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public long BuildingId { get; set; }
 
         [JsonProperty("llcName")]
-        public string LlcName { get; set; }
+        public string LlcName { get; set; }//
 
         [JsonProperty("description")]
-        public string Description { get; set; }
+        public string Description { get; set; }//
 
         [JsonProperty("internalNotes")]
-        public string InternalNotes { get; set; }
+        public string InternalNotes { get; set; }//
 
         [JsonProperty("buildingName")]
-        public string BuildingName { get; set; }
+        public string BuildingName { get; set; }//
 
         [JsonProperty("address")]
-        public Address Address { get; set; }
+        public Address Address { get; set; }//
 
         [JsonProperty("holdDeposit")]
         public HoldDeposit HoldDeposit { get; set; }
@@ -147,22 +147,40 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public string FreeStuff { get; set; }
     }
 
+    public partial class ScreeningFee
+    {
+        [JsonProperty("amount")]
+        public long Amount { get; set; }//
+
+        [JsonProperty("deliverCheckNote")]
+        public string DeliverCheckNote { get; set; }//
+
+        [JsonProperty("venmoQRCode")]
+        public string VenmoQrCode { get; set; }//
+
+        [JsonProperty("zelleAddress")]
+        public string ZelleAddress { get; set; }//
+
+        [JsonProperty("allowedPaymentMethods")]
+        public string[] AllowedPaymentMethods { get; set; }//
+    }
+
     public partial class HoldDeposit
     {
         [JsonProperty("amount")]
-        public long Amount { get; set; }
+        public long Amount { get; set; }//
 
         [JsonProperty("deliverCheckNote")]
-        public string DeliverCheckNote { get; set; }
+        public string DeliverCheckNote { get; set; }//
 
         [JsonProperty("venmoQRCode")]
-        public string VenmoQrCode { get; set; }
+        public string VenmoQrCode { get; set; }//
 
         [JsonProperty("zelleAddress")]
-        public string ZelleAddress { get; set; }
+        public string ZelleAddress { get; set; }//
 
         [JsonProperty("allowedPaymentMethods")]
-        public string[] AllowedPaymentMethods { get; set; }
+        public string[] AllowedPaymentMethods { get; set; }//
     }
 
     public partial class Image
