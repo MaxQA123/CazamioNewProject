@@ -1,7 +1,7 @@
 ﻿
 namespace CazamioNewProject.Objects
 {
-    public class PaymentSettingsObject
+    public class PaymentSettingsApiKey
     {
         public PaymentSystemInfo PaymentSystem { get; set; }
         public ApiKeyInfo ApiKey { get; set; }
@@ -18,31 +18,25 @@ namespace CazamioNewProject.Objects
 
         public class ApiKeyInfo
         {
-            public string ForCardknox { get; set; }
-            public string DefaultCardknoxBuilding { get; set; }
-            public string ForAuthorizeNet { get; set; }
+            public string DefaultCardknoxMySpace { get; set; }
         }
 
-        public PaymentSettingsObject Generate()
+        public PaymentSettingsApiKey Generate()
         {
             string cardknox = "Cardknox";
-            string authorizeNea = "AuthorizeNet";
-            string forCardknox = "";
-            string forAuthorizeNet = "";
-            string defaultCardknoxBuilding = "";
+            string authorizeNet = "AuthorizeNet";
+            string defaultCardknoxMySpace = "czmodev359376936c0543b58126c97f9ff55c68";
 
-            var paymentSettings = new PaymentSettingsObject()
+            var paymentSettings = new PaymentSettingsApiKey()
             {
                 PaymentSystem = new PaymentSystemInfo
                 {
                     Cardknox = cardknox,
-                    AuthorizeNet = authorizeNea
+                    AuthorizeNet = authorizeNet
                 },
                 ApiKey = new ApiKeyInfo
                 {
-                    ForCardknox = forCardknox,
-                    DefaultCardknoxBuilding = defaultCardknoxBuilding,
-                    ForAuthorizeNet = forAuthorizeNet
+                    DefaultCardknoxMySpace = defaultCardknoxMySpace
                 },
 
             };

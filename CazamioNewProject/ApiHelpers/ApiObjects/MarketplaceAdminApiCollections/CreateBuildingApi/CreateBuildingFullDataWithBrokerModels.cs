@@ -9,7 +9,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public Locks Locks { get; set; }
 
         [JsonProperty("screeningFee")]
-        public ScreeningFee ScreeningFee { get; set; }
+        public ScreeningFee ScreeningFee { get; set; }//
 
         [JsonProperty("amenities")]
         public Amenity[] Amenities { get; set; }
@@ -51,7 +51,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public Address Address { get; set; }//
 
         [JsonProperty("holdDeposit")]
-        public HoldDeposit HoldDeposit { get; set; }
+        public HoldDeposit HoldDeposit { get; set; }//
     }
 
     public partial class Address

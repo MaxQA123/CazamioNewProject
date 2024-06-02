@@ -15,6 +15,8 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             Building building = new Building().Generate();
             PaymentOptions paymentOptions = new PaymentOptions().Generate();
             PaymentOptionsApi paymentOptionsApi = new PaymentOptionsApi().Generate();
+            PaymentSettingsApi paymentSettingsApi = new PaymentSettingsApi().Generate();
+            PaymentSettingsApiKey paymentSettingsApiKey = new PaymentSettingsApiKey().Generate();
 
             var payload = new RequestCreateBuildingFullDataWithBroker();
             payload.Address = new Address
@@ -69,6 +71,15 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                     paymentOptionsApi.AllowedPaymentMethods.Zelle,
                     paymentOptionsApi.AllowedPaymentMethods.Venmo
                 }
+            };
+            payload.ApiKey = new ApiKey
+            {
+                Id = paymentSettingsApi.Id.CardknoxByDefaultMySpace,
+                IsAchInclude = ApiRequestData.TRUE,
+                IsDefault = ApiRequestData.TRUE,
+                Key = paymentSettingsApiKey.ApiKey.DefaultCardknoxMySpace,
+                AuthorizeNetApiLoginId = ApiRequestData.NULL,
+                PaymentSystem = paymentSettingsApi.PaymentSystem.CardknoxType
             };
 
             //payload.BrokerId = broker.BrokerIdApi;
