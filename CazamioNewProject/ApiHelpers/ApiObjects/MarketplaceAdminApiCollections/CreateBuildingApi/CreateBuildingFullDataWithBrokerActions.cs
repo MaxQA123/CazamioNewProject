@@ -17,6 +17,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             PaymentOptionsApi paymentOptionsApi = new PaymentOptionsApi().Generate();
             PaymentSettingsApi paymentSettingsApi = new PaymentSettingsApi().Generate();
             PaymentSettingsApiKey paymentSettingsApiKey = new PaymentSettingsApiKey().Generate();
+            BuildingAmenitiesApiModel buildingAmenitiesApiModel = new BuildingAmenitiesApiModel().Generate();
 
             var payload = new RequestCreateBuildingFullDataWithBroker();
             payload.Address = new Address
@@ -80,6 +81,21 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                 Key = paymentSettingsApiKey.ApiKey.DefaultCardknoxMySpace,
                 AuthorizeNetApiLoginId = ApiRequestData.NULL,
                 PaymentSystem = paymentSettingsApi.PaymentSystem.CardknoxType
+            };
+            payload.Amenities = new Amenity[]
+            {
+            new Amenity 
+            { 
+                Id = buildingAmenitiesApiModel.Id.IdLaundryInBuilding, 
+                Name = buildingAmenitiesApiModel.BuildingAmenites.LaundryInBuildingName,
+                AmenityType = buildingAmenitiesApiModel.AmenityType.Building
+            },
+            new Amenity
+            {
+                Id = buildingAmenitiesApiModel.Id.IdGym,
+                Name = buildingAmenitiesApiModel.BuildingAmenites.GymName,
+                AmenityType = buildingAmenitiesApiModel.AmenityType.Building
+            },
             };
 
             //payload.BrokerId = broker.BrokerIdApi;

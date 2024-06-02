@@ -18,7 +18,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public Image[] Images { get; set; }
 
         [JsonProperty("apiKey")]
-        public ApiKey ApiKey { get; set; }
+        public ApiKey ApiKey { get; set; }//
 
         [JsonProperty("freeStuff")]
         public Concession[] FreeStuff { get; set; }
@@ -93,22 +93,22 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
     public partial class ApiKey
     {
         [JsonProperty("id")]
-        public long Id { get; set; }
+        public long Id { get; set; }//
 
         [JsonProperty("isACHInclude")]
-        public bool IsAchInclude { get; set; }
+        public bool IsAchInclude { get; set; }//
 
         [JsonProperty("isDefault")]
-        public bool IsDefault { get; set; }
+        public bool IsDefault { get; set; }//
 
         [JsonProperty("key")]
-        public string Key { get; set; }
+        public string Key { get; set; }//
 
         [JsonProperty("authorizeNetApiLoginId")]
-        public object AuthorizeNetApiLoginId { get; set; }
+        public object AuthorizeNetApiLoginId { get; set; }//
 
         [JsonProperty("paymentSystem")]
-        public long PaymentSystem { get; set; }
+        public long PaymentSystem { get; set; }//
     }
 
     public partial class Concession
