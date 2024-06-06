@@ -6,7 +6,6 @@ namespace CazamioNewProject.GuiHelpers
 {
     public class GenerateRandomData
     {
-        [AllureStep("RandomPhoneNumber")]
         public static string RandomPhoneNumber(int size)
         {
             Random random = new Random();
@@ -15,7 +14,6 @@ namespace CazamioNewProject.GuiHelpers
                 .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
-        [AllureStep("RandomNumber")]
         public static string RandomNumberWithoutZero(int size)
         {
             Random random = new Random();
@@ -24,7 +22,6 @@ namespace CazamioNewProject.GuiHelpers
                 .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
-        [AllureStep("RandomEmail")]
         public static string RandomEmail(int size)
         {
             Random random = new Random();
@@ -33,7 +30,6 @@ namespace CazamioNewProject.GuiHelpers
                 .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
-        [AllureStep("RandomCostRentMortgageCost")]
         public static string RandomCostRentMortgageCost(int size)
         {
             Random random = new Random();
@@ -42,7 +38,6 @@ namespace CazamioNewProject.GuiHelpers
                 .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
-        [AllureStep("RandomPriceCreditScreeningFee")]
         public static string RandomPriceCreditScreeningFee(int size)
         {
             Random random = new Random();
@@ -51,7 +46,6 @@ namespace CazamioNewProject.GuiHelpers
                 .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
-        [AllureStep("RandomPriceMinInteger")]
         public static string RandomPriceMinInteger(int size)
         {
             Random random = new Random();

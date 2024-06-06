@@ -12,7 +12,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public ScreeningFee ScreeningFee { get; set; }//
 
         [JsonProperty("amenities")]
-        public Amenity[] Amenities { get; set; }
+        public Amenity[] Amenities { get; set; }//
 
         [JsonProperty("images")]
         public Image[] Images { get; set; }
@@ -81,13 +81,13 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
     public partial class Amenity
     {
         [JsonProperty("id")]
-        public long Id { get; set; }
+        public long Id { get; set; }//
 
         [JsonProperty("name")]
-        public string Name { get; set; }
+        public string Name { get; set; }//
 
         [JsonProperty("amenityType")]
-        public string AmenityType { get; set; }
+        public string AmenityType { get; set; }//
     }
 
     public partial class ApiKey

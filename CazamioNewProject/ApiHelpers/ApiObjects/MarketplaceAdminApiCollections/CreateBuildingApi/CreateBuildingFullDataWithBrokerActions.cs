@@ -18,6 +18,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             PaymentSettingsApi paymentSettingsApi = new PaymentSettingsApi().Generate();
             PaymentSettingsApiKey paymentSettingsApiKey = new PaymentSettingsApiKey().Generate();
             BuildingAmenitiesApiModel buildingAmenitiesApiModel = new BuildingAmenitiesApiModel().Generate();
+            AccessLocksApi accessLocksApi = new AccessLocksApi().Generate();
 
             var payload = new RequestCreateBuildingFullDataWithBroker();
             payload.Address = new Address
@@ -96,6 +97,19 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                 Name = buildingAmenitiesApiModel.BuildingAmenites.GymName,
                 AmenityType = buildingAmenitiesApiModel.AmenityType.Building
             },
+            };
+            payload.Locks = new Locks
+            {
+                BluetoothLocks = new object[0],
+                WifiLocks = new object[0],
+                CabLocks = new object[0],
+                PinCodeLocks = new ELock[]
+                {
+                    new ELock
+                    {
+                        Location = accessLocksApi.Location.FirstByDefault
+                    }
+                }
             };
 
             //payload.BrokerId = broker.BrokerIdApi;

@@ -1,4 +1,6 @@
 ﻿using Allure.Commons;
+using CazamioNewProject.DbHelpers.AspNetUsersTable;
+using CazamioNewProject.DbHelpers.BrokersAgentsTable;
 using CazamioNewProject.DbHelpers.OwnerCommissionsStructureTable;
 using CazamioNewProject.DbHelpers.OwnerManagementsTable;
 using CazamioNewProject.DbHelpers.OwnerPhoneNumbersTable;
@@ -146,6 +148,12 @@ namespace BrokerGuiTests
 
         public void CreateAgent()
         {
+            #region Test Data
+
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+
+            #endregion
+
             #region Preconditions
 
             Pages.LogInLandlord
@@ -204,9 +212,17 @@ namespace BrokerGuiTests
             Pages.SidebarLandlord
                .VerifyAgentUserNameAndRoleCreating(getUserNameRoleCompareAgent);
 
-            //WaitUntil.WaitSomeInterval(100);
-            //var marketplaceIdFromDb = DBRequestAspNetUsers.AspNetUsers.GetMarketplaceIdByEmailAndMarketplaceId(fullEmailPutsBox, marketplaceId);
-            //Console.WriteLine($"MarketplaceId from DB: {marketplaceIdFromDb.MarketplaceId}");
+            #endregion
+
+            #region Postconditions
+
+            WaitUntil.WaitSomeInterval(100);
+            AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(fullEmailPutsBox, marketplaceId);
+            Console.WriteLine($"{fullEmailPutsBox}");
+            WaitUntil.WaitSomeInterval(100);
+            BrokersAgentsDbRequests.BrokersAgents.DeleteNewlyCreatedAgent(fullEmailPutsBox, marketplaceId);
+            WaitUntil.WaitSomeInterval(100);
+            AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(fullEmailPutsBox, marketplaceId);
 
             #endregion
         }
