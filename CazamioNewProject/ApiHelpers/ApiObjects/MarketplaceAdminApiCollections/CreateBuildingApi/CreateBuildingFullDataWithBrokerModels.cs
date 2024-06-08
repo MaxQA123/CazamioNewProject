@@ -6,7 +6,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
     public partial class RequestCreateBuildingFullDataWithBroker
     {
         [JsonProperty("locks")]
-        public Locks Locks { get; set; }
+        public Locks Locks { get; set; }//
 
         [JsonProperty("screeningFee")]
         public ScreeningFee ScreeningFee { get; set; }//
@@ -117,10 +117,13 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public long SpecialOfferId { get; set; }
 
         [JsonProperty("monthsFree", NullValueHandling = NullValueHandling.Ignore)]
-        public long? MonthsFree { get; set; }
+        public string MonthsFree { get; set; }//long
 
         [JsonProperty("leaseTerms", NullValueHandling = NullValueHandling.Ignore)]
         public string LeaseTerms { get; set; }
+
+        [JsonProperty("additionalInfo")]
+        public string AdditionalInfo { get; set; }
 
         [JsonProperty("isTimeBased")]
         public bool IsTimeBased { get; set; }
@@ -132,10 +135,10 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public bool IsActive { get; set; }
 
         [JsonProperty("dateFrom")]
-        public DateTimeOffset DateFrom { get; set; }
+        public DateTimeOffset DateFrom { get; set; }//"2024-06-08T04:00:00.000Z"
 
         [JsonProperty("dateTo")]
-        public DateTimeOffset DateTo { get; set; }
+        public DateTimeOffset DateTo { get; set; }//"2024-07-01T03:59:59.999Z"
 
         [JsonProperty("triggerEvent")]
         public long TriggerEvent { get; set; }
@@ -231,7 +234,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public Uri NoteImage { get; set; }
 
         [JsonProperty("showOrder")]
-        public long ShowOrder { get; set; }
+        public long ShowOrder { get; set; }//0
 
         [JsonProperty("connectionType")]
         public string ConnectionType { get; set; }

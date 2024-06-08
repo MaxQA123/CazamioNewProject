@@ -20,6 +20,16 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
         public LlcNameApiInfo LlcNameApi { get; set; }
         public BuildingNameApiInfo BuildingNameApi { get; set; }
         public AmountApiInfo AmountApi { get; set; }
+        public ShowOrderApiInfo ShowOrderApi { get; set; }
+        public ConnectionTypeApiInfo ConnectionTypeApi { get; set; }
+        public string Name { get; set; }
+        public string PinCode { get; set; }
+        public long SpecialOfferId { get; set; }
+        public MonthsFreeInfo MonthsFree { get; set; }
+        public LeaseTermsInfo LeaseTerms { get; set; }
+
+        public DateFromInfo DateFrom { get; set; }
+        public DateToInfo DateTo { get; set; }
 
         public class StreetApiInfo
         {
@@ -102,6 +112,45 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
 
         }
 
+        public class ShowOrderApiInfo
+        {
+            public long OrderPinCode { get; set; }
+            public long OrderNote { get; set; }
+        }
+
+        public class ConnectionTypeApiInfo
+        {
+            public string PinCode { get; set; }
+            public string Note { get; set; }
+        }
+
+        public class MonthsFreeInfo
+        {
+            public string OneMonth { get; set; }
+            public string TwoMonths { get; set; }
+        }
+
+        public class LeaseTermsInfo
+        {
+            public string TwelveMonths { get; set; }
+            public string ElevenMonths { get; set; }
+        }
+
+        public class DateFromInfo
+        {
+            public DateTimeOffset TodayDate { get; set; }
+            public DateTimeOffset YesterdayDate { get; set; }
+            public DateTimeOffset TomorrowDate { get; set; }
+        }
+
+        public class DateToInfo
+        {
+            public DateTimeOffset TodayDate { get; set; }
+            public DateTimeOffset YesterdayDate { get; set; }
+            public DateTimeOffset TomorrowDate { get; set; }
+        }
+
+
         public BuildingApi Generate()
         {
             long addressIdApi = 0;
@@ -153,6 +202,26 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
             string noPets = "NoPets";
             long creditScreeningFeeByDefaultMySpace = 20;
             long holdDepositByDefaultMySpace = 500;
+            long showOrderPinCode = 0;
+            long showOrderNote = 1;
+            string namePincode = "PinCode";
+            string nameNote = "Note";
+            string nameNumberPinCode = "1 2 3 4 5";
+            string numberPinCode = "1 2 3 4 5";
+            long specialOfferId = 0;
+            string oneMonth = "1";
+            string twoMonths = "2";
+            string twelveMonths = "12";
+            string elevenMonths = "11";
+            DateTimeOffset dateFromTodayDate = DateTimeOffset.UtcNow;
+            //DateTimeOffset dateFromTodayDate = DateTimeOffset.Parse("2024-06-08T04:00:00.000Z");
+            DateTimeOffset dateFromYesterdayDate = dateFromTodayDate.AddDays(-1);
+            DateTimeOffset dateFromTomorrowDate = dateFromTodayDate.AddDays(1);
+
+            DateTimeOffset dateToTodayDate = DateTimeOffset.UtcNow;
+            //DateTimeOffset dateFromTodayDate = DateTimeOffset.Parse("2024-06-08T04:00:00.000Z");
+            DateTimeOffset dateToYesterdayDate = dateFromTodayDate.AddDays(-1);
+            DateTimeOffset dateToTomorrowDate = dateFromTodayDate.AddDays(1);
 
             var buildingApi = new BuildingApi()
             {
@@ -217,7 +286,42 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
                 {
                     CreditScreeningFeeByDefaultMySpace = creditScreeningFeeByDefaultMySpace,
                     HoldDepositByDefaultMySpace = holdDepositByDefaultMySpace
-                }
+                },
+                ShowOrderApi = new ShowOrderApiInfo
+                {
+                    OrderPinCode = showOrderPinCode,
+                    OrderNote = showOrderNote
+                },
+                ConnectionTypeApi = new ConnectionTypeApiInfo
+                {
+                    PinCode = namePincode,
+                    Note = nameNote
+                },
+                Name = nameNumberPinCode,
+                PinCode = numberPinCode,
+                SpecialOfferId =specialOfferId,
+                MonthsFree = new MonthsFreeInfo
+                {
+                    OneMonth = oneMonth,
+                    TwoMonths = twoMonths
+                },
+                LeaseTerms = new LeaseTermsInfo
+                {
+                    TwelveMonths = twelveMonths,
+                    ElevenMonths = elevenMonths
+                },
+                DateFrom = new DateFromInfo
+                {
+                    TodayDate = dateFromTodayDate,
+                    YesterdayDate = dateFromYesterdayDate,
+                    TomorrowDate = dateFromTomorrowDate
+                },
+                DateTo = new DateToInfo
+                {
+                    TodayDate = dateToTodayDate,
+                    YesterdayDate = dateToYesterdayDate,
+                    TomorrowDate = dateToTomorrowDate
+                },
             };
             return buildingApi;
         }

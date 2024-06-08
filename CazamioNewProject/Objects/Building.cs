@@ -25,6 +25,7 @@ namespace CazamioNewProject.Objects
         public NameLocationInfo NameLocation { get; set; }
         public ConcessionsInfo Concessions { get; set; }
         public FreeStuffInfo FreeStuff { get; set; }
+        public AdditionalInfoInfo AdditionalInfo { get; set; }
 
         public class AddressInfo
         {
@@ -132,6 +133,12 @@ namespace CazamioNewProject.Objects
             public string BrokerAssignedRoleAgnt { get; set; }
         }
 
+        public class AdditionalInfoInfo
+        {
+            public string ShortInfo { get; set; }
+            public string LongInfo { get; set; }
+        }
+
         public Building Generate()
         {
             #region Settings Building for role Marketplace Admin
@@ -196,6 +203,8 @@ namespace CazamioNewProject.Objects
             string monthsFreeConcession = "1";
             string leaseTermsConcession = "12";
             string nameFreeStuff = "FreeStuffBuilding";
+            string shortInfo = "Lorem BUILDING 12345 (09876) (*&%$#@!)";
+            string longInfo = "";
 
             var building = new Building()
             {
@@ -294,6 +303,11 @@ namespace CazamioNewProject.Objects
                 {
                     MarkAdmAssignedRoleBrkr = shortBuildingName + " " + buildingNumberMarkAdmAssignedRoleBrkr + " " + addressMarkAdmAssignedRoleBrkr,
                     BrokerAssignedRoleAgnt = shortBuildingName + " " + buildingNumberBrokerAssignedRoleAgntBrkr + " " + addressBrokerAssignedRoleAgntBrkr
+                },
+                AdditionalInfo = new AdditionalInfoInfo
+                {
+                    ShortInfo = shortInfo,
+                    LongInfo = longInfo
                 },
             };
             return building;

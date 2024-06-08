@@ -33,7 +33,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
         public AccessLocksApi Generate()
         {
             string firstByDefault = "Main Entrance";
-            string secondByDefault = "Main Entrance";
+            string secondByDefault = "Apartment";
 
             var accessLocksApi = new AccessLocksApi()
             {

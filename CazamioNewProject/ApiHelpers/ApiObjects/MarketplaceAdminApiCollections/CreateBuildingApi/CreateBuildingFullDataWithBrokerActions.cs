@@ -19,6 +19,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             PaymentSettingsApiKey paymentSettingsApiKey = new PaymentSettingsApiKey().Generate();
             BuildingAmenitiesApiModel buildingAmenitiesApiModel = new BuildingAmenitiesApiModel().Generate();
             AccessLocksApi accessLocksApi = new AccessLocksApi().Generate();
+            Broker broker = new Broker().Generate();
 
             var payload = new RequestCreateBuildingFullDataWithBroker();
             payload.Address = new Address
@@ -107,14 +108,48 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                 {
                     new ELock
                     {
-                        Location = accessLocksApi.Location.FirstByDefault
+                        Location = accessLocksApi.Location.FirstByDefault,
+                        TimeRestrictionEnabled = ApiRequestData.FALSE,
+                        CustomNote = building.TextLorem.TextLoremForNote,
+                        NoteImage = new Uri("https://cazamiostorage.blob.core.windows.net/staging-building-images-container-2024-06/103_638534506736861274.png?sv=2019-07-07&sr=c&sig=aIzYjCy%2BjHcegqNIQW3kBJcHarRcl%2Fwa5g7Y2gtGjTg%3D&se=9997-12-31T23%3A59%3A59Z&sp=r"),
+                        ShowOrder = buildingApi.ShowOrderApi.OrderPinCode,
+                        ConnectionType = buildingApi.ConnectionTypeApi.PinCode,
+                        Name = buildingApi.Name,
+                        PinCode = buildingApi.PinCode
                     }
-                }
+                },
+                NoteLocks = new ELock[]
+                {
+                    new ELock
+                    {
+                        //CustomNote = Name
+                        Location = accessLocksApi.Location.SecondByDefault,
+                        TimeRestrictionEnabled = ApiRequestData.FALSE,
+                        CustomNote = building.TextLorem.TextLoremForNote,
+                        NoteImage = new Uri("https://cazamiostorage.blob.core.windows.net/staging-building-images-container-2024-06/103_638534506950505619.png?sv=2019-07-07&sr=c&sig=aIzYjCy%2BjHcegqNIQW3kBJcHarRcl%2Fwa5g7Y2gtGjTg%3D&se=9997-12-31T23%3A59%3A59Z&sp=r"),
+                        ShowOrder = buildingApi.ShowOrderApi.OrderNote,
+                        ConnectionType = buildingApi.ConnectionTypeApi.Note,
+                        Name = building.TextLorem.TextLoremForNote,
+                    },
+                },
+                BrokerId = broker.BrokerIdApi,
+                IsAgent = ApiRequestData.FALSE
             };
-
-            //payload.BrokerId = broker.BrokerIdApi;
-            //payload.IsAgent = ApiRequestData.FALSE;
-
+            payload.Concessions = new Concession[]
+            {
+            new Concession
+            {
+                SpecialOfferId = buildingApi.SpecialOfferId,
+                MonthsFree = buildingApi.MonthsFree.OneMonth,
+                LeaseTerms = buildingApi.LeaseTerms.TwelveMonths,
+                AdditionalInfo = building.AdditionalInfo.ShortInfo,
+                IsActive = ApiRequestData.TRUE,
+                Name = building.Concessions.Name,
+                IsTimeBased = ApiRequestData.TRUE,
+                DateFrom = buildingApi.DateFrom.TodayDate,
+                DateTo = buildingApi.DateTo.TodayDate
+            }
+            };
             return payload;
         }
 
