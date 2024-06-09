@@ -34,6 +34,7 @@ namespace CazamioNewProject.Objects
         public string EmailAddressOwnerForAgent { get; set; }
         public string EmailAddressOwnerForBroker { get; set; }
         public TypesCommissionStructureInfo TypesCommissionStructure{ get; set; }
+        public OwnerIdInfo OwnerId { get; set; }
 
         public class TypesCommissionStructureInfo
         {
@@ -41,6 +42,14 @@ namespace CazamioNewProject.Objects
             public string OwnerPays { get; set; }
             public string TenantPays { get; set; }
             public string OwnerAndTenantPays { get; set; }
+        }
+
+        public class OwnerIdInfo
+        {
+            public long NoCommission { get; set; }
+            public long OwnerPaysComission { get; set; }
+            public long TenantPaysCommission { get; set; }
+            public long OwnerAndTenantPaysCommission { get; set; }//Arnoldoni Columbini
         }
 
         public Owner Generate()
@@ -76,6 +85,10 @@ namespace CazamioNewProject.Objects
             long ownerPercentageApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(2));
             long tenantPercentageApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(2));
             long takeOffApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(1));
+            long noCommission = 1;
+            long ownerPaysComission = 2;
+            long tenantPaysCommission = 3;
+            long ownerAndTenantPaysCommission = 179;//Arnoldoni Columbini
 
             var owner = new Owner()
             {
@@ -113,7 +126,14 @@ namespace CazamioNewProject.Objects
                 TenantPercentageApi = tenantPercentageApi,
                 TakeOffApi = takeOffApi,
                 ExtensionNumberApi = extensionNumberApi,
-                PhoneNumberApi = phoneNumberApi
+                PhoneNumberApi = phoneNumberApi,
+                OwnerId = new OwnerIdInfo
+                {
+                    NoCommission = noCommission,
+                    OwnerPaysComission = ownerPaysComission,
+                    TenantPaysCommission = tenantPaysCommission,
+                    OwnerAndTenantPaysCommission = ownerAndTenantPaysCommission
+                },
             };
             return owner;
         }

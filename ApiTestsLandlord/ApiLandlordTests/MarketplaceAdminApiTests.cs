@@ -310,6 +310,12 @@ namespace ApiTestsLandlord
             LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
 
             #endregion
+
+            #region Tests
+
+            BuildingCreation.CreateOwnerWithBrokerFullData(responseMarketplaceAdmin.AuthData.Token, buildingBody);
+
+            #endregion
         }
     }
 }

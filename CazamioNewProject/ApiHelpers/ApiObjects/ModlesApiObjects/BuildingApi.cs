@@ -1,9 +1,4 @@
-﻿using CazamioNewProject.GuiHelpers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
 {
@@ -27,9 +22,12 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
         public long SpecialOfferId { get; set; }
         public MonthsFreeInfo MonthsFree { get; set; }
         public LeaseTermsInfo LeaseTerms { get; set; }
-
         public DateFromInfo DateFrom { get; set; }
         public DateToInfo DateTo { get; set; }
+        public TriggerEventInfo TriggerEvent { get; set; }
+        public FreeStuffInfo FreeStuff { get; set; }
+        public BuildingIdInfo BuildingId { get; set; }
+        public ImageIdInfo ImageId { get; set; }
 
         public class StreetApiInfo
         {
@@ -150,6 +148,30 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
             public DateTimeOffset TomorrowDate { get; set; }
         }
 
+        public class TriggerEventInfo
+        {
+            public long SubmittedApplication { get; set; }
+            public long LeaseSigned { get; set; }
+            public long MoveIn { get; set; }
+        }
+
+        public class FreeStuffInfo
+        {
+            public string SelectItemsFreeNetflixGoogleSpeaker { get; set; }
+            public string SelectItemFreeNetflix { get; set; }
+            public string SelectItemGoogleSpeaker { get; set; }
+        }
+
+        public class BuildingIdInfo
+        {
+            public long ForCreationBuilding { get; set; }
+        }
+
+        public class ImageIdInfo
+        {
+            public long ForCreationBuilding { get; set; }
+        }
+
 
         public BuildingApi Generate()
         {
@@ -161,11 +183,11 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
 
             #region Settings Building for role Marketplace Admin
 
-            string streetApiMarkAdmAssignedRoleAgntBrkr = "1 Saint Johnson Place";
+            string streetApiMarkAdmAssignedRoleAgntBrkr = "9995 Saint Johnson Place";
             long zipBuildingMarkAdmAssignedRoleAgntBrkr = 11213;
             string neighborhoodMarkAdmBuildingAssignedRoleAgntBrkr = "Crown Heights";
 
-            string streetApiMarkAdmAssignedRoleBrkr = "1 Washington Square";
+            string streetApiMarkAdmAssignedRoleBrkr = "33 Washington Square";
             long zipBuildingMarkAdmAssignedRoleBrkr = 10012;
             string neighborhoodBuildingMarkAdmAssignedRoleBrkr = "Manhattan";
 
@@ -213,6 +235,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
             string twoMonths = "2";
             string twelveMonths = "12";
             string elevenMonths = "11";
+
             DateTimeOffset dateFromTodayDate = DateTimeOffset.UtcNow;
             //DateTimeOffset dateFromTodayDate = DateTimeOffset.Parse("2024-06-08T04:00:00.000Z");
             DateTimeOffset dateFromYesterdayDate = dateFromTodayDate.AddDays(-1);
@@ -222,6 +245,15 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
             //DateTimeOffset dateFromTodayDate = DateTimeOffset.Parse("2024-06-08T04:00:00.000Z");
             DateTimeOffset dateToYesterdayDate = dateFromTodayDate.AddDays(-1);
             DateTimeOffset dateToTomorrowDate = dateFromTodayDate.AddDays(1);
+
+            long submittedApplicationTrigger = 0;
+            long leaseSignedTrigger = 1;
+            long moveInTrigger = 2;
+            string itemsFreeNetflixGoogleSpeaker = "Free Netflix@@Google Speaker";
+            string itemFreeNetflix = "";
+            string itemGoogleSpeaker = "";
+            long forCreationBuildingBuildingId = 0;
+            long forCreationBuildingImageId = 0;
 
             var buildingApi = new BuildingApi()
             {
@@ -322,6 +354,26 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
                     YesterdayDate = dateToYesterdayDate,
                     TomorrowDate = dateToTomorrowDate
                 },
+                TriggerEvent = new TriggerEventInfo
+                {
+                    SubmittedApplication = submittedApplicationTrigger,
+                    LeaseSigned = leaseSignedTrigger,
+                    MoveIn = moveInTrigger
+                },
+                FreeStuff = new FreeStuffInfo
+                {
+                    SelectItemsFreeNetflixGoogleSpeaker = itemsFreeNetflixGoogleSpeaker,
+                    SelectItemFreeNetflix = itemFreeNetflix,
+                    SelectItemGoogleSpeaker = itemGoogleSpeaker
+                },
+                BuildingId = new BuildingIdInfo
+                {
+                    ForCreationBuilding = forCreationBuildingBuildingId
+                },
+                ImageId = new ImageIdInfo
+                {
+                    ForCreationBuilding = forCreationBuildingImageId
+                }
             };
             return buildingApi;
         }

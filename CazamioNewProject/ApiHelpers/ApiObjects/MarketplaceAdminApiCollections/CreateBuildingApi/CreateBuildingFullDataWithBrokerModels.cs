@@ -21,19 +21,19 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public ApiKey ApiKey { get; set; }//
 
         [JsonProperty("freeStuff")]
-        public Concession[] FreeStuff { get; set; }
+        public Concession[] FreeStuff { get; set; }//
 
         [JsonProperty("concessions")]
-        public Concession[] Concessions { get; set; }
+        public Concession[] Concessions { get; set; }//
 
         [JsonProperty("petPolicies")]
         public string[] PetPolicies { get; set; }//
 
         [JsonProperty("ownerId")]
-        public long OwnerId { get; set; }
+        public long OwnerId { get; set; }//
 
         [JsonProperty("buildingId")]
-        public long BuildingId { get; set; }
+        public long BuildingId { get; set; }//
 
         [JsonProperty("llcName")]
         public string LlcName { get; set; }//
