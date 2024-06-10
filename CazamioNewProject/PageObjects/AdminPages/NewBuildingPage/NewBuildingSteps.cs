@@ -153,8 +153,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         [AllureStep("SelectOwnerWithAgent")]
         public NewBuilding SelectOwnerWithAgent()
         {
+            WaitUntil.WaitSomeInterval(3000);
             Button.Click(ButtonMenuOwnerSelect);
-            WaitUntil.WaitSomeInterval(2000);
+            WaitUntil.WaitSomeInterval(3000);
             Button.Click(SetItemForAutotestForAgentBroker());
 
             return this;
@@ -218,6 +219,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.LeaseTerms);
             WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, building.AdditionalInfo.ShortInfo);
+            WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();
             WaitUntil.WaitSomeInterval(100);
@@ -280,6 +283,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.LeaseTerms);
             WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, building.AdditionalInfo.LongInfo);
+            WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();
             WaitUntil.WaitSomeInterval(100);
@@ -295,7 +300,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             Pages.DatePicker
                 .SelectCurrentDayPlusOneDay();
             KeyBoardActions.ScrollToDown();
-            Button.Click(ButtonSelfTourTriggerEvent);
+            Button.Click(ButtonMoveInTriggerEvent);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSaveSpecials);
 

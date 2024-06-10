@@ -636,5 +636,97 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
         }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("MarketplaceAdmin")]
+        [AllureSubSuite("AddBuildingAssignedBroker")]
+
+        public void AddBuildingAssignedAgent()
+        {
+
+            #region SettingsForBuilding
+
+            //Added Filled only mandatory the data, AuthorizeNet
+            //Saint Johnson Place
+
+            #endregion
+
+            #region Preconditions
+
+            Pages.LogInLandlord
+                .EnterEmailPasswordAsMarketplaceAdmin()
+                .ClickIconShow()
+                .ClickButtonLetsGo();
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyMarketplaceAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+            Pages.SidebarLandlord
+                .ClickButtonBuildings();
+
+            #endregion
+
+            #region Test
+
+            Pages.ListOfBuildings
+                .ClickButtonAddBuilding();
+            Pages.NewBuilding
+                .VerifyTitleNewBuildingPg()
+                .SelectOwnerWithAgent()
+                .EnterAddressCityStateMarkAdm()
+                .ClickFieldInputInternalNotes();
+
+            string getAddressNewBuildingActual = Pages.NewBuilding.GetValueFromFieldAddress();
+
+            KeyBoardActions.ClickTab();
+
+            string getValueScreeningFee = Pages.NewBuilding.GetValueFromFieldCreditScreeningFee();
+
+            Pages.NewBuilding
+                .VerifyValueByDefaulScreeningFee(getValueScreeningFee)
+                .ClickBtnSelectPaymentMethodsForCreditScreeningFee();
+            Pages.PaymentOptionsMdlWndw
+                .SelectPaymentMethodsCrdtCrdAchZll();
+            Pages.NewBuilding
+                .ClickBtnEditForPaymentSystem();
+            Pages.PaymentKeysMdlWndw
+                .SelectPaymentSystemAuthorizeNet();
+
+            string getItemAuthorizeNetActual = Pages.PaymentKeysMdlWndw.GetItemAuthorizeNet();
+            string getItemApiKeyAuthorizeNetActual = Pages.PaymentKeysMdlWndw.GetItemApiKeyAuthorizeNet();
+
+            Pages.PaymentKeysMdlWndw
+                .VerifyApiKeyAuthorizeNet(getItemAuthorizeNetActual, getItemApiKeyAuthorizeNetActual);
+            Pages.PaymentKeysMdlWndw
+                .ClickButtonSave();
+            Pages.NewBuilding
+                .ClickThreeTimesButtonGeneralNext()
+                .ClickTabFreeStuff()
+                .ClickButtonAddSpecials()
+                .AddFreeStuffInActive()
+                .ClickTabConcessions()
+                .ClickButtonAddSpecials()
+                .AddConcessionInActive()
+                .ClickButtonGeneralNext()
+                .ClickButtonSaveBuilding()
+                .VerifyMessageSavedSuccessfullyBuilding();
+            Pages.BuildingView
+                .VerifyTitleBuildingViewPage();
+
+            string getAddressBuildingView = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+
+            Pages.BuildingView
+                .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
+
+            #endregion
+
+        }
     }
 }

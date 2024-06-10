@@ -244,6 +244,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         [FindsBy(How = How.XPath, Using = "//mat-checkbox//label[text() = 'Is Active']")]
         public IWebElement CheckBoxIsActive;
 
+        [FindsBy(How = How.XPath, Using = "//input[@Id = 'additional_info']")]
+        public IWebElement FieldInputAdditionalInfo;
+
         #endregion
 
         #region TabImages
