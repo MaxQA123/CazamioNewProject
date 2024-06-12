@@ -9,7 +9,7 @@ namespace CazamioNewProject.Objects
         public string CompanyNameWithBroker { get; set; }
         public string CompanyNameWithAgent { get; set; }
         public string AlreadyCreatedCompanyNameWithBroker { get; set; }
-        public string AlreadyCreatedCompanyNameWithAgent { get; set; }
+        public string CompanyNameWithAgentNoCommissions { get; set; }
         public string FullName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -58,7 +58,7 @@ namespace CazamioNewProject.Objects
             string roleBroker = "Broker";
             string roleAgent = "Agent";
             string alreadyCreatedCompanyNameWithBroker = "For Autotest For Broker";
-            string alreadyCreatedCompanyNameWithAgent = "For Autotest For Agent Broker";
+            string companyNameWithAgentNoCommissions = "Autotest For Agent Broker No commisions";
             string FullName = Name.FirstName() + " " + Name.LastName();
             string firstName = Name.FirstName();
             string lastName = Name.LastName();
@@ -96,7 +96,7 @@ namespace CazamioNewProject.Objects
                 CompanyNameWithAgent = companyName + " " + roleAgent,
                 CompanyNameWithBroker = companyName + " " + roleBroker,
                 AlreadyCreatedCompanyNameWithBroker = alreadyCreatedCompanyNameWithBroker,
-                AlreadyCreatedCompanyNameWithAgent = alreadyCreatedCompanyNameWithAgent,
+                CompanyNameWithAgentNoCommissions = companyNameWithAgentNoCommissions,
                 FullName = FullName,
                 FirstName = firstName,
                 LastName = lastName,

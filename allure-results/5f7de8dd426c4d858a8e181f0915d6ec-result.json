@@ -1,0 +1,407 @@
+{
+  "uuid": "bf97f2ab-0ce0-47c7-8d89-a7e3dbb4a93f-tr-0-1007",
+  "historyId": "MarketplaceAdminGuiTest.TestsBaseGui.AddBuildingAssignedBroker",
+  "fullName": "MarketplaceAdminGuiTest.TestsBaseGui.AddBuildingAssignedBroker",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "MarketplaceAdminGuiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddBuildingAssignedBroker"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "MarketplaceAdmin"
+    },
+    {
+      "name": "subSuite",
+      "value": "AddBuildingAssignedBroker"
+    }
+  ],
+  "links": [],
+  "name": "AddBuildingAssignedBroker",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = 'For Autotest For Broker']\"}\n  (Session info: chrome=126.0.6478.57); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.SetItemForAutotestForBroker() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\NewBuildingPage\\NewBuildingElements.cs:line 21\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_SelectOwnerWithBroker_100663561_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\NewBuildingPage\\NewBuildingSteps.cs:line 148\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_SelectOwnerWithBroker_100663561_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_SelectOwnerWithBroker_100663561_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.SelectOwnerWithBroker() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\NewBuildingPage\\NewBuildingActions.cs:line 15\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.AddBuildingAssignedBroker() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 542"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "AddBuildingAssignedBroker",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = 'For Autotest For Broker']\"}\n  (Session info: chrome=126.0.6478.57); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.SetItemForAutotestForBroker() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\NewBuildingPage\\NewBuildingElements.cs:line 21\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_SelectOwnerWithBroker_100663561_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\NewBuildingPage\\NewBuildingSteps.cs:line 148\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_SelectOwnerWithBroker_100663561_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_SelectOwnerWithBroker_100663561_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.SelectOwnerWithBroker() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\NewBuildingPage\\NewBuildingActions.cs:line 15\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.AddBuildingAssignedBroker() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 542"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "EnterEmailPasswordAsMarketplaceAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "marketplaceadmin15@putsbox.com"
+                }
+              ],
+              "start": 1718208999589,
+              "stop": 1718209000287
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Qwerty123!"
+                }
+              ],
+              "start": 1718209000398,
+              "stop": 1718209000995
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1718208999587,
+          "stop": 1718209000995
+        },
+        {
+          "name": "ClickIconShow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1718209000997,
+              "stop": 1718209001611
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1718209000996,
+          "stop": 1718209001611
+        },
+        {
+          "name": "ClickButtonLetsGo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1718209003619,
+              "stop": 1718209004586
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1718209001612,
+          "stop": 1718209005599
+        },
+        {
+          "name": "GetUserNameFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1718209005603,
+          "stop": 1718209005828
+        },
+        {
+          "name": "GetUserNameRoleFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1718209005831,
+          "stop": 1718209005897
+        },
+        {
+          "name": "VerifyMarketplaceAdminUserNameAndRole",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Mark Adm"
+            },
+            {
+              "name": "String",
+              "value": "Marketplace Admin"
+            }
+          ],
+          "start": 1718209005900,
+          "stop": 1718209006012
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1718209011030,
+              "stop": 1718209014966
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1718209006018,
+          "stop": 1718209014966
+        },
+        {
+          "name": "ClickButtonAddBuilding",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1718209025133,
+              "stop": 1718209025934
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1718209015025,
+          "stop": 1718209025934
+        },
+        {
+          "name": "VerifyTitleListOfBuildingsPg",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1718209026049,
+          "stop": 1718209027287
+        },
+        {
+          "name": "SelectOwnerWithBroker",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = 'For Autotest For Broker']\"}\n  (Session info: chrome=126.0.6478.57); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception",
+            "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.SetItemForAutotestForBroker() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\NewBuildingPage\\NewBuildingElements.cs:line 21\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_SelectOwnerWithBroker_100663561_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\NewBuildingPage\\NewBuildingSteps.cs:line 148\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_SelectOwnerWithBroker_100663561_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1718209027288,
+              "stop": 1718209027903
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1718209027288,
+          "stop": 1718209028567
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "082731672d13425e9f93f34aa7ce79a7-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1718208990766,
+      "stop": 1718209034147
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1718208990765,
+  "stop": 1718209034158
+}

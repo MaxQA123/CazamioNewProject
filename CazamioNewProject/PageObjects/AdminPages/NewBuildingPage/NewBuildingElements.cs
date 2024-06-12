@@ -29,7 +29,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             Owner owner = new Owner().Generate();
 
             // Использование переменной экземпляра owner для построения XPath
-            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.AlreadyCreatedCompanyNameWithAgent + "']";
+            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.CompanyNameWithAgentNoCommissions + "']";
 
             // Присвоение значения ItemForAutotestForBroker
             return Browser._Driver.FindElement(By.XPath(xpath));
