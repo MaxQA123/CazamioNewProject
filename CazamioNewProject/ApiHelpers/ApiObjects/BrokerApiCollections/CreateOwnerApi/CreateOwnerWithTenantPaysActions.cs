@@ -17,7 +17,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.CreateOwn
             Owner owner = new Owner().Generate();
 
             var payload = new RequestCreateOwnerRequiredFieldsPhone();
-            payload.CompanyName = owner.AlreadyCreatedCompanyNameWithBroker;
+            payload.CompanyName = owner.CompanyName;
             payload.OwnerEmail = owner.EmailAddress;
             payload.OwnerName = owner.FullName;
             payload.PhoneNumbers = new PhoneNumberModel[]

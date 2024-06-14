@@ -15,13 +15,13 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             Owner owner = new Owner().Generate();
 
             // Использование переменной экземпляра owner для построения XPath
-            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.AlreadyCreatedCompanyNameWithBroker + "']";
+            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.ListOwnersCompanyName.OwnerWithOwnerAndTenantPaysCommission + "']";
 
             // Присвоение значения ItemForAutotestForBroker
             return Browser._Driver.FindElement(By.XPath(xpath));
         }
 
-        public IWebElement ItemForAutotestForAgentBroker;
+        public IWebElement ItemForAutotestForAgentBrokerNoCommission;
 
         public IWebElement SetItemForAutotestForAgentBroker()
         {
@@ -29,7 +29,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             Owner owner = new Owner().Generate();
 
             // Использование переменной экземпляра owner для построения XPath
-            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.CompanyNameWithAgentNoCommissions + "']";
+            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.ListOwnersCompanyName.OwnerNoCommission + "']";
 
             // Присвоение значения ItemForAutotestForBroker
             return Browser._Driver.FindElement(By.XPath(xpath));

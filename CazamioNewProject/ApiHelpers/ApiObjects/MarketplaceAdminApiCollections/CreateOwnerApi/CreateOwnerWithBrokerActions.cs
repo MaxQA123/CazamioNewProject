@@ -17,7 +17,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             Broker broker = new Broker().Generate();
 
             var payload = new RequestCreateOwnerFullData();
-            payload.CompanyName = owner.AlreadyCreatedCompanyNameWithBroker;
+            payload.CompanyName = owner.CompanyNameWithBroker;
             payload.OwnerEmail = owner.EmailAddress;
             payload.OwnerName = owner.FullName;
             payload.OfficeLocation = owner.OfficeLocation;

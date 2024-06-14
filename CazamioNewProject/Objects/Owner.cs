@@ -8,8 +8,7 @@ namespace CazamioNewProject.Objects
         public string CompanyName { get; set; }
         public string CompanyNameWithBroker { get; set; }
         public string CompanyNameWithAgent { get; set; }
-        public string AlreadyCreatedCompanyNameWithBroker { get; set; }
-        public string CompanyNameWithAgentNoCommissions { get; set; }
+        public ListOwnersCompanyNameInfo ListOwnersCompanyName { get; set; }
         public string FullName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -52,13 +51,23 @@ namespace CazamioNewProject.Objects
             public long OwnerAndTenantPaysCommission { get; set; }//Arnoldoni Columbini
         }
 
+        public class ListOwnersCompanyNameInfo
+        {
+            public string OwnerNoCommission { get; set; }
+            public string OwnerWithOwnerPaysComission { get; set; }
+            public string OwnerWithTenantPaysCommission { get; set; }
+            public string OwnerWithOwnerAndTenantPaysCommission { get; set; }
+        }
+
         public Owner Generate()
         {
             string companyName = "OOO assigned role";
             string roleBroker = "Broker";
             string roleAgent = "Agent";
-            string alreadyCreatedCompanyNameWithBroker = "For Autotest For Broker";
-            string companyNameWithAgentNoCommissions = "Autotest For Agent Broker No commisions";
+            string forAutotestForBroker = "For Autotest For Broker";
+            string autotestForAgentBrokerNocommisions = "Autotest For Agent Broker No commisions";
+            string ownerOwnerPaysAutotest = "Owner OwnerPays Autotest";
+            string ownerTenantPays = "Owner TenantPays LLC 12345 (!@#$%)";
             string FullName = Name.FirstName() + " " + Name.LastName();
             string firstName = Name.FirstName();
             string lastName = Name.LastName();
@@ -95,8 +104,6 @@ namespace CazamioNewProject.Objects
                 CompanyName = companyName,
                 CompanyNameWithAgent = companyName + " " + roleAgent,
                 CompanyNameWithBroker = companyName + " " + roleBroker,
-                AlreadyCreatedCompanyNameWithBroker = alreadyCreatedCompanyNameWithBroker,
-                CompanyNameWithAgentNoCommissions = companyNameWithAgentNoCommissions,
                 FullName = FullName,
                 FirstName = firstName,
                 LastName = lastName,
@@ -133,6 +140,13 @@ namespace CazamioNewProject.Objects
                     OwnerPaysComission = ownerPaysComission,
                     TenantPaysCommission = tenantPaysCommission,
                     OwnerAndTenantPaysCommission = ownerAndTenantPaysCommission
+                },
+                ListOwnersCompanyName = new ListOwnersCompanyNameInfo
+                {
+                    OwnerNoCommission = autotestForAgentBrokerNocommisions,
+                    OwnerWithOwnerPaysComission = ownerOwnerPaysAutotest,
+                    OwnerWithTenantPaysCommission = ownerTenantPays,
+                    OwnerWithOwnerAndTenantPaysCommission = forAutotestForBroker
                 },
             };
             return owner;
