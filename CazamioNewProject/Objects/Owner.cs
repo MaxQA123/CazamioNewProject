@@ -64,8 +64,8 @@ namespace CazamioNewProject.Objects
             string companyName = "OOO assigned role";
             string roleBroker = "Broker";
             string roleAgent = "Agent";
-            string forAutotestForBroker = "For Autotest For Broker";
-            string autotestForAgentBrokerNocommisions = "Autotest For Agent Broker No commisions";
+            string lLCBrOwnerOwnerAndTenantPaysCommissio = "LLC Br Owner OwnerAndTenantPaysCommissio";
+            string lLCAgBrOwnerNocommisionsAutoTest = "LLC Ag-Br Owner No commisions AutoTest";
             string ownerOwnerPaysAutotest = "Owner OwnerPays Autotest";
             string ownerTenantPays = "Owner TenantPays LLC 12345 (!@#$%)";
             string FullName = Name.FirstName() + " " + Name.LastName();
@@ -143,10 +143,10 @@ namespace CazamioNewProject.Objects
                 },
                 ListOwnersCompanyName = new ListOwnersCompanyNameInfo
                 {
-                    OwnerNoCommission = autotestForAgentBrokerNocommisions,
+                    OwnerNoCommission = lLCAgBrOwnerNocommisionsAutoTest,
                     OwnerWithOwnerPaysComission = ownerOwnerPaysAutotest,
                     OwnerWithTenantPaysCommission = ownerTenantPays,
-                    OwnerWithOwnerAndTenantPaysCommission = forAutotestForBroker
+                    OwnerWithOwnerAndTenantPaysCommission = lLCBrOwnerOwnerAndTenantPaysCommissio
                 },
             };
             return owner;

@@ -7,6 +7,7 @@ using CazamioNewProject.DbHelpers.OwnerManagementsTable;
 using CazamioNewProject.DbHelpers.OwnerPhoneNumbersTable;
 using CazamioNewProject.DbHelpers.OwnersDbTable;
 using CazamioNewProject.GuiHelpers;
+using CazamioNewProject.Objects;
 using CazamioNewProject.PageObjects;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
@@ -541,7 +542,7 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonAddBuilding();
             Pages.NewBuilding
                 .VerifyTitleNewBuildingPg()
-                .SelectOwnerWithBroker()
+                .SelectOwnerOwnerAndTenantPaysCommissionWithBroker()
                 .EnterFullAddressMarkAdm();
 
             string getAddressNewBuildingActual = Pages.NewBuilding.GetValueFromFieldAddress();
@@ -679,7 +680,7 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonAddBuilding();
             Pages.NewBuilding
                 .VerifyTitleNewBuildingPg()
-                .SelectOwnerWithAgent()
+                .SelectOwnerNoCommissionAgent()
                 .EnterAddressCityStateMarkAdm()
                 .ClickFieldInputInternalNotes();
 
@@ -727,6 +728,132 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
 
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("MarketplaceAdmin")]
+        [AllureSubSuite("AddApartmentAssignedBroker")]
+
+        public void AddApartmentAssignedBroker()
+        {
+            #region SettingsForBuilding
+
+            //All the fields filled in, Cardknox
+            //All tabs filled in
+            //29 Washington Square
+
+            #endregion
+
+            #region Test data
+
+            Building building = new Building().Generate();
+
+            #endregion
+
+            #region Preconditions Test
+
+            Pages.LogInLandlord
+                .EnterEmailPasswordAsMarketplaceAdmin()
+                .ClickIconShow()
+                .ClickButtonLetsGo();
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyMarketplaceAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+
+            Pages.SidebarLandlord
+                .ClickButtonBuildings();
+            Pages.ListOfBuildings
+                .SearchBuildingMarkAdmBroker();
+            Pages.ListOfBuildings
+                .SelectItemFirst();
+            Pages.BuildingView
+                .VerifyTitleBuildingViewPage();
+
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
+
+            Pages.BuildingView
+                .VerifyBuildingAddress(getAddressBuildingViewActual, building.NumberWithAddress.MarkAdmAssignedBroker)
+                .ClickTabApartments();
+            KeyBoardActions.ScrollToDown();
+            Pages.BuildingView
+                .ClickButtonAddInTabApartments();
+
+            #endregion
+
+            #region Test
+
+            Pages.AddApartments
+                .VerifyTitleAddApartmentsPage();
+
+            string getBuildingNameFromAddApartments = Pages.AddApartments.GetBuildingName();
+
+            Pages.AddApartments
+                .VerifyBuildingNameAddApartmentsPage(getBuildingNameFromBuildingView, getBuildingNameFromAddApartments)
+                .EnterToAllFieldsMarkAdmAssignedBrkrOneNumber();
+
+            string getLeasePriceFromAddApartments = Pages.AddApartments.GetLeasePrice();
+            string getUnitNumberFromAddApartments = Pages.AddApartments.GetUnitNumber();
+
+            Pages.AddApartments
+                .SelectStatusVacant()
+                .SelectAgent()
+                .SelectCurrentDateAvailableFrom()
+                .SelectApartmentTypeMultiFamily();
+
+            string getStatusFromAddApartments = Pages.AddApartments.GetStatus();
+
+            JScriptExecutor.ScrollToDownWebPage();
+
+            Pages.AddApartments
+                .EnterHoldDepositOneNumber()
+                .ClickButtonPaymentMethods();
+            Pages.PaymentOptionsMdlWndw
+                .SelectAllPaymentMethodsForHoldApartment();
+
+            //string getgetApartmentHoldDeposit = Pages.AddApartments.GetApartmentHoldDepositAddApartmentsPage();
+
+            //KeyBoardActions.ScrollToDown();
+            //Pages.AddApartments
+            //    .VerifyApartmentHoldDepositAddApartmentsPage(getgetApartmentHoldDeposit)
+            //    .ClickButtonPaymentMethodsAddAprtmntsUnitsPage();
+            //Pages.ModalWindowPaymentOptions
+            //    .VerifyTitlePaymentOptions();
+            ////.SelectPaymentsMethodsNwBldngPg();
+
+            //string getRentalTerms = Pages.AddApartments.GetRentalTermsAddApartmentsPage();
+
+            //Pages.AddApartments
+            //    .VerifyRentalTermsAddApartmentsPage(getRentalTerms);
+
+            //string getThreeRecentPaystubs = Pages.AddApartments.GetRequiredDocumentsThreeRecentPaystubsAddApartmentsPage();
+            //string getPhotoId = Pages.AddApartments.GetRequiredDocumentsPhotoIdAddApartmentsPage();
+            //string getTwoMostRecentBankStatements = Pages.AddApartments.GetRequiredDocumentsTwoMostRecentBankStatementsAddApartmentsPage();
+            //string getMostRecentWTwoOrOneZeroNineNine = Pages.AddApartments.GetRequiredDocumentsMostRecentWTwoOrOneZeroNineNineAddApartmentsPage();
+
+            //Pages.AddApartments
+            //    .VerifyRequiredDocumentsByDefaultAddApartmentsPage(getThreeRecentPaystubs, getPhotoId, getTwoMostRecentBankStatements, getMostRecentWTwoOrOneZeroNineNine)
+            //    //.EnterDescriptionInternalNotesAddAprtmntsUnitsPage()
+            //    .ClickButtonGeneralNextAddAprtmntsgPg()
+            //    .ClickFieldInputSearchForAmenitiesAddAprtmntsgPg()
+            //    .SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ")
+            //    .SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ")
+            //    .SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ")
+            //    .SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ")
+            //    .SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ")
+            //    .ClickButtonGeneralNextAddAprtmntsgPg();
+
+            WaitUntil.WaitSomeInterval(5000);
+
+            #endregion
         }
     }
 }

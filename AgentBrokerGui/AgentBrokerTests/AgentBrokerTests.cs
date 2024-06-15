@@ -36,8 +36,6 @@ namespace AgentBrokerGui
             Pages.SidebarLandlord
                 .VerifyAgentBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
 
-            WaitUntil.WaitSomeInterval(2000);
-
             #endregion
 
         }
@@ -108,6 +106,104 @@ namespace AgentBrokerGui
                 .MakeLogOut();
             Pages.LogInLandlord
                 .VerifyTitle();
+
+            #endregion
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Broker")]
+        [AllureSubSuite("AddBuildingAssignedAgentBroker")]
+
+        public void AddBuildingAssignedAgentBroker()
+        {
+            #region SettingsForBuilding
+
+            //Added Filled only mandatory the data, but full address, AuthorizeNet
+            //East 51st Street Pedestrian Crossing
+
+            #endregion
+
+            #region Preconditions Test
+
+            Pages.LogInLandlord
+                .EnterEmailPasswordAsAgentBroker()
+                .ClickIconShow()
+                .ClickButtonLetsGo();
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyAgentBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+            Pages.SidebarLandlord
+                .ClickButtonBuildings();
+
+            #endregion
+
+            #region Test
+
+            Pages.ListOfBuildings
+                .ClickButtonAddBuilding();
+            Pages.NewBuilding
+                .VerifyTitleNewBuildingPg()
+                .SelectOwnerTenantPaysCommissionWithAgent()
+                .EnterAgntBrkrFullAddressAgentBroker()
+                .ClickFieldInputInternalNotes();
+
+            string getAddressNewBuildingActual = Pages.NewBuilding.GetValueFromFieldAddress();
+
+            KeyBoardActions.ClickTab();
+
+            string getValueScreeningFee = Pages.NewBuilding.GetValueFromFieldCreditScreeningFee();
+
+            Pages.NewBuilding
+                .VerifyValueByDefaulScreeningFee(getValueScreeningFee)
+                .ClickBtnSelectPaymentMethodsForCreditScreeningFee();
+            Pages.PaymentOptionsMdlWndw
+                .SelectCrdtCrdDlvrChckZlVnmForHoldBuilding();
+            Pages.NewBuilding
+                .ClickBtnEditForPaymentSystem();
+            Pages.PaymentKeysMdlWndw
+                .SelectPaymentSystemAuthorizeNet();
+
+            string getItemAuthorizeNetActual = Pages.PaymentKeysMdlWndw.GetItemAuthorizeNet();
+            string getItemApiKeyAuthorizeNetActual = Pages.PaymentKeysMdlWndw.GetItemApiKeyAuthorizeNet();
+
+            Pages.PaymentKeysMdlWndw
+                .VerifyApiKeyAuthorizeNet(getItemAuthorizeNetActual, getItemApiKeyAuthorizeNetActual);
+            Pages.PaymentKeysMdlWndw
+                .ClickButtonSave();
+            Pages.NewBuilding
+                .ClickThreeTimesButtonGeneralNext()
+                .ClickTabFreeStuff()
+                .ClickButtonAddSpecials()
+                .AddFreeStuffInActive()
+                .ClickButtonAddSpecials()
+                .AddFreeStuffIsActiveWithoutName()
+                //Add get value
+                .ClickTabConcessions()
+                .ClickButtonAddSpecials()
+                .AddConcessionInActive()
+                .ClickButtonAddSpecials()
+                .AddConcessionIsActiveWithoutName()
+                //Add get value
+                //Add Assertions
+                .ClickButtonGeneralNext()
+                .UploadOneImages()
+                .ClickButtonSaveBuilding()
+                .VerifyMessageSavedSuccessfullyBuilding();
+            Pages.BuildingView
+                .VerifyTitleBuildingViewPage();
+
+            string getAddressBuildingView = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+
+            Pages.BuildingView
+                .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
 
             #endregion
         }

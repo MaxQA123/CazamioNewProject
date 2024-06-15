@@ -337,6 +337,8 @@ namespace BrokerGuiTests
 
             Pages.SidebarLandlord
                 .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+            Pages.SidebarLandlord
+                .ClickButtonBuildings();
 
             #endregion
 
@@ -346,7 +348,7 @@ namespace BrokerGuiTests
                 .ClickButtonAddBuilding();
             Pages.NewBuilding
                 .VerifyTitleNewBuildingPg()
-                .SelectOwnerWithBroker()
+                .SelectOwnerOwnerPaysWithBroker()
                 .EnterAddressCityStateBroker()
                 .ClickFieldInputInternalNotes();
 
@@ -393,6 +395,145 @@ namespace BrokerGuiTests
                 .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
 
             #endregion
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Broker")]
+        [AllureSubSuite("AddBuildingAssignedAgent")]
+
+        public void AddBuildingAssignedAgent()
+        {
+            #region SettingsForBuilding
+
+            //All the fields filled in, Cardknox
+            //All tabs filled in
+            //Albermale Rd
+
+            #endregion
+
+            #region Preconditions Test
+
+            Pages.LogInLandlord
+                .EnterEmailPasswordAsBroker()
+                .ClickIconShow()
+                .ClickButtonLetsGo();
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+            Pages.SidebarLandlord
+                .ClickButtonBuildings();
+
+            #endregion
+
+            #region Test
+
+            Pages.ListOfBuildings
+                .ClickButtonAddBuilding();
+            Pages.NewBuilding
+                .VerifyTitleNewBuildingPg()
+                .SelectOwnerTenantPaysCommissionWithAgent()
+                .EnterBrokerFullAddressAgentBroker();
+
+            string getAddressNewBuildingActual = Pages.NewBuilding.GetValueFromFieldAddress();
+
+            Pages.NewBuilding
+                .EnterBuildingNameBrokerAssignedAgent()
+                .EnterLlcNameForAgent()
+                .EnterLongInternalNotesDescription();
+            KeyBoardActions.ClickTab();
+            Pages.NewBuilding
+                .ClickBtnEditForPaymentSystem();
+
+            string getValueScreeningFee = Pages.NewBuilding.GetValueFromFieldCreditScreeningFee();
+            string getItemCardknoxActual = Pages.PaymentKeysMdlWndw.GetItemCardknox();
+            string getItemApiKeyCardknoxActual = Pages.PaymentKeysMdlWndw.GetItemApiKeyCardknox();
+
+            Pages.PaymentKeysMdlWndw
+                .ClickButtonCross();
+            Pages.PaymentKeysMdlWndw
+                .VerifyApiKeyCardknox(getItemCardknoxActual, getItemApiKeyCardknoxActual);
+            Pages.NewBuilding
+                .VerifyValueByDefaulScreeningFee(getValueScreeningFee)
+                .EnterCreditScreeningFeeHoldDeposit()
+                .ClickBtnSelectPaymentMethodsForCreditScreeningFee();
+            Pages.PaymentOptionsMdlWndw
+                .VerifyTitlePaymentOptions()
+                .SelectPaymentMethodAch();
+            Pages.NewBuilding
+                .ClickBtnSelectPaymentMethodsForHoldDeposit();
+            Pages.PaymentOptionsMdlWndw
+                .VerifyTitlePaymentOptions()
+                .SelectCrdtCrdDlvrChckZlVnmForHoldBuilding();
+            Pages.NewBuilding
+                .ClickButtonSelectPetPolicies();
+            Pages.PetPoliciesMdlWndw
+                .VerifyTitlePetPoliciesMdlWndw()
+                .SelectAllItems()
+                .ClickButtonSave();
+            KeyBoardActions.ScrollToUp();
+            Pages.NewBuilding
+            .ClickTabAmenities()
+            .ClickFieldInputSearchForAmenities()
+            .SelectFiveAmenities()
+            .ClickTabAccess()
+            .ClickButtonAddLock();
+
+            string copyActualNameLocation = Pages.NewBuilding.CopyNameLocation();
+
+            Pages.NewBuilding
+                .VerifyLocationMainAccess(copyActualNameLocation)
+                .AddItemAccessTypePinCode()
+                .ClickButtonAddLock();
+
+            string copyActualNameLocationTwo = Pages.NewBuilding.CopyNameLocation();
+
+            Pages.NewBuilding
+                .VerifyLocationApartment(copyActualNameLocationTwo)
+                .AddItemAccessTypeNote();
+
+            string copyActualNameNote = Pages.NewBuilding.GetNameNoteTypeAccessFromTable();
+            string copyActualNamePinCode = Pages.NewBuilding.GetNamePinCodeTypeAccessFromTable();
+
+            Pages.NewBuilding
+                .VerifyTypeAccessFromTable(copyActualNameNote, copyActualNamePinCode)
+                .ClickTabSpecials()
+                .ClickButtonAddSpecials()
+                .AddConcessionIsActive();
+
+            string getNameConcession = Pages.NewBuilding.GetNameConcessionFromTable();
+
+            Pages.NewBuilding
+                .ClickTabFreeStuff()
+                .ClickButtonAddSpecials()
+                .AddFreeStuffIsActive();
+
+            string getNameFreeStuff = Pages.NewBuilding.GetNameFreeStuffFromTable();
+
+            Pages.NewBuilding
+                .VerifyNameConcessionAndFreeStuff(getNameConcession, getNameFreeStuff)
+                .ClickTabImages()
+                .UploadFourImages()
+                .ClickButtonSaveBuilding()
+                .VerifyMessageSavedSuccessfullyBuilding();
+            Pages.BuildingView
+                .VerifyTitleBuildingViewPage();
+
+            string getAddressBuildingView = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+
+            Pages.BuildingView
+                .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
+
+            #endregion
+
+            WaitUntil.WaitSomeInterval(5000);
         }
     }
 }

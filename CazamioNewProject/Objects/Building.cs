@@ -143,12 +143,12 @@ namespace CazamioNewProject.Objects
         {
             #region Settings Building for role Marketplace Admin
 
-            string buildingNumberMarAdmAssignedRoleAgntBrkr = "9991";
+            string buildingNumberMarAdmAssignedRoleAgntBrkr = "9990";
             string addressMarkAdmAssignedRoleAgntBrkr = "Saint Johnson Place";
             string zipBuildingMarkAdmAssignedRoleAgntBrkr = "11213";
             string neighborhoodMarkAdmBuildingAssignedRoleAgntBrkr = "Crown Heights";
 
-            string buildingNumberMarkAdmAssignedRoleBrkr = "39";
+            string buildingNumberMarkAdmAssignedRoleBrkr = "40";
             string addressMarkAdmAssignedRoleBrkr = "Washington Square";
             string zipBuildingMarkAdmAssignedRoleBrkr = "10012";
             string neighborhoodBuildingMarkAdmAssignedRoleBrkr = "Manhattan";
@@ -157,12 +157,12 @@ namespace CazamioNewProject.Objects
 
             #region Settings Building for role Broker
 
-            string buildingNumberBrokerAssignedRoleAgntBrkr = "2";
+            string buildingNumberBrokerAssignedRoleAgntBrkr = "1A";
             string addressBrokerAssignedRoleAgntBrkr = "Albermale Rd";
             string zipBuildingBrokerAssignedRoleAgntBrkr = "11226";
             string neighborhoodBrokerBuildingAssignedRoleAgntBrkr = "East Flatbush";
 
-            string buildingNumberBrokerAssignedRoleBrkr = "10-19";
+            string buildingNumberBrokerAssignedRoleBrkr = "20-29";
             string addressBrokerAssignedRoleBrkr = "Crown St";
             string zipBuildingBrokerAssignedRoleBrkr = "11225";
             string neighborhoodBuildingBrokerAssignedRoleBrkr = "Crown Heights";
@@ -171,7 +171,7 @@ namespace CazamioNewProject.Objects
 
             #region Settings Building for role Agent-Broker
 
-            string buildingNumberAgntBrkrAssignedRoleAgntBrkr = "100B";
+            string buildingNumberAgntBrkrAssignedRoleAgntBrkr = "9978";
             string addressAgntBrkrAssignedRoleAgntBrkr = "East 51st Street Pedestrian Crossing";
             string zipBuildingAgntBrkrAssignedRoleAgntBrkr = "10022";
             string neighborhoodAgntBrkrBuildingAssignedRoleAgntBrkr = "Manhattan";

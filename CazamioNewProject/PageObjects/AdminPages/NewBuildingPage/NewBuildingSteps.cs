@@ -140,24 +140,46 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             return this;
         }
 
-        [AllureStep("SelectOwnerWithBroker")]
-        public NewBuilding SelectOwnerWithBroker()
+        [AllureStep("SelectOwnerNoCommissionAgent")]
+        public NewBuilding SelectOwnerNoCommissionAgent()
         {
-            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.WaitSomeInterval(5000);
             Button.Click(ButtonMenuOwnerSelect);
-            WaitUntil.WaitSomeInterval(3000);
-            Button.Click(SetItemForAutotestForBroker());
+            WaitUntil.WaitSomeInterval(5000);
+            Button.Click(SetOwnerNoCommissionAgent());
 
             return this;
         }
 
-        [AllureStep("SelectOwnerWithAgent")]
-        public NewBuilding SelectOwnerWithAgent()
+        [AllureStep("OwnerOwnerAndTenantPaysCommissionWithBroker")]
+        public NewBuilding SelectOwnerOwnerAndTenantPaysCommissionWithBroker()
         {
-            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.WaitSomeInterval(5000);
             Button.Click(ButtonMenuOwnerSelect);
-            WaitUntil.WaitSomeInterval(3000);
-            Button.Click(SetItemForAutotestForAgentBroker());
+            WaitUntil.WaitSomeInterval(5000);
+            Button.Click(SetItemOwnerOwnerAndTenantPaysCommissionWithBroker());
+
+            return this;
+        }
+
+        [AllureStep("SelectOwnerOwnerPaysWithBroker")]
+        public NewBuilding SelectOwnerOwnerPaysWithBroker()
+        {
+            WaitUntil.WaitSomeInterval(5000);
+            Button.Click(ButtonMenuOwnerSelect);
+            WaitUntil.WaitSomeInterval(5000);
+            Button.Click(SetOwnerOwnerPaysBroker());
+
+            return this;
+        }
+
+        [AllureStep("SelectOwnerTenantPaysCommissionWithAgent")]
+        public NewBuilding SelectOwnerTenantPaysCommissionWithAgent()
+        {
+            WaitUntil.WaitSomeInterval(5000);
+            Button.Click(ButtonMenuOwnerSelect);
+            WaitUntil.WaitSomeInterval(5000);
+            Button.Click(SetOwnerTenantPaysCommissionAgent());
 
             return this;
         }

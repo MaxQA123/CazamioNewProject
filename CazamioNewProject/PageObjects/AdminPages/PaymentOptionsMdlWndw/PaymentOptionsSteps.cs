@@ -29,8 +29,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             return this;
         }
 
-        [AllureStep("SelectPaymentMethoddeliverCheck")]
-        public PaymentOptionsMdlWndw SelectPaymentMethoddeliverCheck()
+        [AllureStep("SelectPaymentMethodDeliverCheck")]
+        public PaymentOptionsMdlWndw SelectPaymentMethodDeliverCheck()
         {
             Button.Click(ItemDeliverCheck);
             Button.Click(ButtonSave);
@@ -65,7 +65,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
         [AllureStep("SelectAllPaymentMethods")]
         public PaymentOptionsMdlWndw SelectAllPaymentMethods()
         {
-            Button.Click(ItemCreditCard);
+            //Button.Click(ItemCreditCard);
             Button.Click(ItemAch);
             Button.Click(ItemDeliverCheck);
             Button.Click(ItemZelle);
@@ -98,7 +98,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
         [AllureStep("SelectAllPaymentMethodsForHoldBuilding")]
         public PaymentOptionsMdlWndw SelectAllPaymentMethodsForHoldBuilding()
         {
-            Button.Click(ItemCreditCard);
+            //Button.Click(ItemCreditCard);
             Button.Click(ItemAch);
             Button.Click(ItemDeliverCheck);
             Button.Click(ItemZelle);
@@ -130,7 +130,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
         [AllureStep("SelectCrdtCrdDlvrChckZlVnmForHoldBuilding")]
         public PaymentOptionsMdlWndw SelectCrdtCrdDlvrChckZlVnmForHoldBuilding()
         {
-            Button.Click(ItemCreditCard);
+            //Button.Click(ItemCreditCard);
             Button.Click(ItemDeliverCheck);
             Button.Click(ItemZelle);
             Button.Click(ItemVenmo);

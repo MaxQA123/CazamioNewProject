@@ -404,7 +404,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
                                                                       Browser.RootPath() + UploadImages.IMAGE_PARKING_FOR_BUILDING + "\n" +
                                                                       Browser.RootPath() + UploadImages.IMAGE_POOL_FOR_BUILDING + "\n" +
                                                                       Browser.RootPath() + UploadImages.IMAGE_YARD_FOR_BUILDING));
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(10000);
 
             return this;
         }

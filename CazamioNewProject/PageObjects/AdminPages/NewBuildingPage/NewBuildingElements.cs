@@ -7,9 +7,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
 {
     public partial class NewBuilding
     {
-        public IWebElement ItemForAutotestForBroker;
+        public IWebElement ItemOwnerOwnerAndTenantPaysCommission;
 
-        public IWebElement SetItemForAutotestForBroker()
+        public IWebElement SetItemOwnerOwnerAndTenantPaysCommissionWithBroker()
         {
             // Создание экземпляра класса Owner
             Owner owner = new Owner().Generate();
@@ -21,15 +21,43 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             return Browser._Driver.FindElement(By.XPath(xpath));
         }
 
-        public IWebElement ItemForAutotestForAgentBrokerNoCommission;
+        public IWebElement ItemOwnerNoCommission;
 
-        public IWebElement SetItemForAutotestForAgentBroker()
+        public IWebElement SetOwnerNoCommissionAgent()
         {
             // Создание экземпляра класса Owner
             Owner owner = new Owner().Generate();
 
             // Использование переменной экземпляра owner для построения XPath
             var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.ListOwnersCompanyName.OwnerNoCommission + "']";
+
+            // Присвоение значения ItemForAutotestForBroker
+            return Browser._Driver.FindElement(By.XPath(xpath));
+        }
+
+        public IWebElement ItemOwnerOwnerPaysCommission;
+
+        public IWebElement SetOwnerOwnerPaysBroker()
+        {
+            // Создание экземпляра класса Owner
+            Owner owner = new Owner().Generate();
+
+            // Использование переменной экземпляра owner для построения XPath
+            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.ListOwnersCompanyName.OwnerWithOwnerPaysComission + "']";
+
+            // Присвоение значения ItemForAutotestForBroker
+            return Browser._Driver.FindElement(By.XPath(xpath));
+        }
+
+        public IWebElement ItemOwnerTenantPaysCommission;
+
+        public IWebElement SetOwnerTenantPaysCommissionAgent()
+        {
+            // Создание экземпляра класса Owner
+            Owner owner = new Owner().Generate();
+
+            // Использование переменной экземпляра owner для построения XPath
+            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.ListOwnersCompanyName.OwnerWithTenantPaysCommission + "']";
 
             // Присвоение значения ItemForAutotestForBroker
             return Browser._Driver.FindElement(By.XPath(xpath));
