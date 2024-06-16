@@ -115,11 +115,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
         [AllureStep("SelectPaymentMethodsCrdtCrdAchZll")]
         public PaymentOptionsMdlWndw SelectPaymentMethodsCrdtCrdAchZll()
         {
-            Button.Click(ItemCreditCard);
+            //Button.Click(ItemCreditCard);
             Button.Click(ItemAch);
-            Button.Click(ItemDeliverCheck);
             Button.Click(ItemZelle);
-            InputGeneral.InputFunctionWithClear(FieldInputDeliverCheckNoteBuilding, paymentOptions.DeliverCheckNote.ForBuildingHold);
             InputGeneral.InputFunctionWithClear(FieldInputZelleAddressOrPhoneBuilding, paymentOptions.Zelle.ForBuildingHold);
             Button.Click(ButtonSave);
             VerifySuccessSelectPmntMthds();

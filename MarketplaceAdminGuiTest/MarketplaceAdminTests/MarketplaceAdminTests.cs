@@ -570,12 +570,12 @@ namespace MarketplaceAdminGuiTest
                 .ClickBtnSelectPaymentMethodsForCreditScreeningFee();
             Pages.PaymentOptionsMdlWndw
                 .VerifyTitlePaymentOptions()
-                .SelectPaymentMethodsWithoutCrdtCrd();
+                .SelectAllPaymentMethods();
             Pages.NewBuilding
                 .ClickBtnSelectPaymentMethodsForHoldDeposit();
             Pages.PaymentOptionsMdlWndw
                 .VerifyTitlePaymentOptions()
-                .SelectPaymentMethodsWithoutCrdtCrd();
+                .SelectAllPaymentMethods();
             Pages.NewBuilding
                 .ClickButtonSelectPetPolicies();
             Pages.PetPoliciesMdlWndw
