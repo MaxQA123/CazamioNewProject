@@ -14,11 +14,17 @@ namespace CazamioNewProject.Objects
         public string BrokerCommission { get; set; }
         public string AgentCommission { get; set; }
         public string EmailAddressAgent { get; set; }
-        public string FullNameAgent { get; set; }
+        public FullNameCreatedAgentMySpaceInfo FullNameCreatedAgentMySpace { get; set; }
         public string DeviceFingerprint { get; set; }
         public long BrokerCommissionApi { get; set; }
         public long AgentCommissionApi { get; set; }
         public long AgentIdApi { get; set; }
+
+        public class FullNameCreatedAgentMySpaceInfo
+        {
+            public string FirstAgent { get; set; }
+            public string SecondAgent { get; set; }
+        }
 
         public Agent Generate()
         {
@@ -30,7 +36,8 @@ namespace CazamioNewProject.Objects
             string brokerCommission = GenerateRandomData.RandomNumberWithoutZero(2);
             string agentCommission = GenerateRandomData.RandomNumberWithoutZero(2);
             string emailAddressAgent = "agent5lula@putsbox.com";
-            string fullNameAgent = "Lula AgentQA";
+            string firstAgent = "Lula AgentQA";
+            string secondAgent = "";
             string deviceFingerprint = "d86d2f3b2f8e0030f57cfb1ce82f3f25";
             long brokerCommissionApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(2));
             long agentCommissionApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(2));
@@ -47,7 +54,11 @@ namespace CazamioNewProject.Objects
                 BrokerCommission = brokerCommission,
                 AgentCommission = agentCommission,
                 EmailAddressAgent = emailAddressAgent,
-                FullNameAgent = fullNameAgent,
+                FullNameCreatedAgentMySpace = new FullNameCreatedAgentMySpaceInfo
+                {
+                    FirstAgent = firstAgent,
+                    SecondAgent = secondAgent
+                },
                 DeviceFingerprint = deviceFingerprint,
                 BrokerCommissionApi = brokerCommissionApi,
                 AgentCommissionApi = agentCommissionApi,

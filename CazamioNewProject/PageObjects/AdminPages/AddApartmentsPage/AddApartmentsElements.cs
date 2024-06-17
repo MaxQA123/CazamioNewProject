@@ -20,7 +20,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             Agent agent = new Agent().Generate();
 
             // Использование переменной экземпляра owner для построения XPath
-            var xpath = "//span[text() = '" + agent.FullNameAgent + "']";
+            var xpath = "//span[text() = '" + agent.FullNameCreatedAgentMySpace.FirstAgent + "']";
 
             // Присвоение значения ItemForAutotestForBroker
             return Browser._Driver.FindElement(By.XPath(xpath));
