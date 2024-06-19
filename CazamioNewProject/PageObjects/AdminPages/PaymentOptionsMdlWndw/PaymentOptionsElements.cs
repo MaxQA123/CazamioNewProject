@@ -35,7 +35,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
         [FindsBy(How = How.XPath, Using = "//mat-dialog-container//div[@class = 'payments-wrapper']//div[@class = 'note-input ng-star-inserted'][2]//input")]
         public IWebElement FieldInputZelleAddressOrPhoneApartment;
 
-        [FindsBy(How = How.XPath, Using = "//mat-dialog-container//div[@class = 'payments-wrapper']//div[@class = 'note-input'][3]//input")]
+        [FindsBy(How = How.XPath, Using = "//input[@id = 'change-brand']")]
         public IWebElement ButtonForVenmoQrCodeImage;
 
         [FindsBy(How = How.XPath, Using = "//app-select-payment-method//span[@class = 'cazamio-button-txt']")]
