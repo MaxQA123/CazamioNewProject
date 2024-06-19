@@ -11,6 +11,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         Building building = new Building().Generate();
         Apartment apartment = new Apartment().Generate();
         Agent agent = new Agent().Generate();
+        RequiredDocuments requiredDocuments = new RequiredDocuments().Generate();
 
         #region TabUnits
 

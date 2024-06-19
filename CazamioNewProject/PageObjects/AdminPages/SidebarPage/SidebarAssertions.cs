@@ -98,7 +98,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         public SidebarLandlord VerifyAgentUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
         {
             WaitUntil.CustomElementIsVisible(UserNameRoleOfSidebar);
-            string getUserNameExpected = agent.FullNameAgent;
+            string getUserNameExpected = agent.FullNameCreatedAgentMySpace.FirstAgent;
             string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_AGENT;
 
             Assert.Multiple(() =>
@@ -117,7 +117,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         public SidebarLandlord VerifyAgentUserNameAndRoleCreating(string getUserNameRoleCompareAgent)
         {
             WaitUntil.CustomElementIsVisible(UserNameRoleOfSidebar);
-            string getUserNameExpected = agent.FullNameAgent;
+            string getUserNameExpected = agent.FullNameCreatedAgentMySpace.FirstAgent;
             string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_AGENT;
 
             Assert.Multiple(() =>

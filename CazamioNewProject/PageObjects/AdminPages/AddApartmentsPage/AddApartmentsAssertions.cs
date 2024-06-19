@@ -59,9 +59,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [AllureStep("VerifyApartmentTypeAddApartmentsPage")]
         public AddApartments VerifyApartmentTypeAddApartmentsPage(string getApartmentType)
         {
-            Assert.AreEqual(getApartmentType, TestDataForWebSiteAdmin.DEFAULT_APARTMENT_TYPE);
+            Assert.AreEqual(getApartmentType, apartment.ApartmentType.MultiFamily);
 
-            Console.WriteLine($"Apartment Type AR: {getApartmentType} = {TestDataForWebSiteAdmin.DEFAULT_APARTMENT_TYPE} :ER Apartment Type");
+            Console.WriteLine($"Apartment Type AR: {getApartmentType} = {apartment.ApartmentType.MultiFamily} :ER Apartment Type");
 
             return this;
         }
@@ -79,9 +79,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [AllureStep("VerifyApartmentHoldDepositAddApartmentsPage")]
         public AddApartments VerifyApartmentHoldDepositAddApartmentsPage(string getApartmentHoldDeposit)
         {
-            Assert.AreEqual(getApartmentHoldDeposit, TestDataForWebSiteAdmin.DEFAULT_APARTMENT_HOLD_DEPOSIT);
+            Assert.AreEqual(getApartmentHoldDeposit, building.HoldDeposit.ByDefaultMySpace);
 
-            Console.WriteLine($"Apartment Hold Deposit AR: {getApartmentHoldDeposit} = {TestDataForWebSiteAdmin.DEFAULT_APARTMENT_HOLD_DEPOSIT} :ER Apartment Hold Deposit");
+            Console.WriteLine($"Apartment Hold Deposit AR: {getApartmentHoldDeposit} = {building.HoldDeposit.ByDefaultMySpace} :ER Apartment Hold Deposit");
 
             return this;
         }
@@ -99,9 +99,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [AllureStep("VerifyRentalTermsAddApartmentsPage")]
         public AddApartments VerifyRentalTermsAddApartmentsPage(string getRentalTerms)
         {
-            Assert.AreEqual(getRentalTerms, TestDataForWebSiteAdmin.DEFAULT_RENTAL_TERMS);
+            Assert.AreEqual(getRentalTerms, apartment.RentalTerms.DefaultRentalTerms);
 
-            Console.WriteLine($"Rental Terms AR: {getRentalTerms} = {TestDataForWebSiteAdmin.DEFAULT_RENTAL_TERMS} :ER Rental Terms");
+            Console.WriteLine($"Rental Terms AR: {getRentalTerms} = {apartment.RentalTerms.DefaultRentalTerms} :ER Rental Terms");
 
             return this;
         }
@@ -148,20 +148,24 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return getMostRecentWTwoOrOneZeroNineNineActual;
         }
 
-        [AllureStep("VerifyRequiredDocumentsByDefaultAddApartmentsPage")]
-        public AddApartments VerifyRequiredDocumentsByDefaultAddApartmentsPage(string getThreeRecentPaystubsActual, string getPhotoIdActual, string getTwoMostRecentBankStatementsActual, string getMostRecentWTwoOrOneZeroNineNineActual)
+        [AllureStep("VerifyRequiredDocumentsByDefaultMySpace")]
+        public AddApartments VerifyRequiredDocumentsByDefaultMySpace(string getTwoRecentPaystubsActual, string getEmploymentVerificationLetterActual, string getGovIssuedIdActual, string getTwoMostRecentBankStatementsActual, string getMostRecentWTwoOrOneZeroNineNineActual, string getThreeMostRecentRentPaymentsActual, string getMostRecentTaxReturnActual)
         {
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(getThreeRecentPaystubsActual, TestDataForWebSiteAdmin.DEFAULT_REQUIRED_DOCUMENT_THREE_RECENT_PAYSTUBS);
-                Assert.AreEqual(getPhotoIdActual, TestDataForWebSiteAdmin.DEFAULT_REQUIRED_DOCUMENT_PHOTO_ID);
-                Assert.AreEqual(getTwoMostRecentBankStatementsActual, TestDataForWebSiteAdmin.DEFAULT_REQUIRED_DOCUMENT_TWO_MOST_RECENT_BANK_STATEMENTS);
-                Assert.AreEqual(getMostRecentWTwoOrOneZeroNineNineActual, TestDataForWebSiteAdmin.DEFAULT_REQUIRED_DOCUMENT_MOST_W_TWO_OR_ONE_ZERO_NINE_NINE);
+                Assert.AreEqual(getTwoRecentPaystubsActual, requiredDocuments.TwoRecentPaystubs);
+                Assert.AreEqual(getEmploymentVerificationLetterActual, requiredDocuments.EmploymentVerificationLetter);
+                Assert.AreEqual(getGovIssuedIdActual, requiredDocuments.GovIssuedId);
+                Assert.AreEqual(getTwoMostRecentBankStatementsActual, requiredDocuments.TwoMostRecentBankStatements);
+                Assert.AreEqual(getThreeMostRecentRentPaymentsActual, requiredDocuments.ThreeMostRecentRentPayments);
+                Assert.AreEqual(getMostRecentTaxReturnActual, requiredDocuments.MostRecentTaxReturn);
 
-                Console.WriteLine($"Three Recent Paystubs AR: {getThreeRecentPaystubsActual} = {TestDataForWebSiteAdmin.DEFAULT_REQUIRED_DOCUMENT_THREE_RECENT_PAYSTUBS} :ER Three Recent Paystubs");
-                Console.WriteLine($"Photo Id AR: {getPhotoIdActual} = {TestDataForWebSiteAdmin.DEFAULT_REQUIRED_DOCUMENT_PHOTO_ID} :ER Photo Id");
-                Console.WriteLine($"Two Most Recent Bank Statements AR: {getTwoMostRecentBankStatementsActual} = {TestDataForWebSiteAdmin.DEFAULT_REQUIRED_DOCUMENT_TWO_MOST_RECENT_BANK_STATEMENTS} :ER Two Most Recent Bank Statements");
-                Console.WriteLine($"Most Recent W Two Or One Zero Nine Nine AR: {getMostRecentWTwoOrOneZeroNineNineActual} = {TestDataForWebSiteAdmin.DEFAULT_REQUIRED_DOCUMENT_MOST_W_TWO_OR_ONE_ZERO_NINE_NINE} :ER Most Recent W Two Or One Zero Nine Nine");
+                Console.WriteLine($"TwoRecentPaystubs AR: {getTwoRecentPaystubsActual} = {requiredDocuments.TwoRecentPaystubs} :ER");
+                Console.WriteLine($"EmploymentVerificationLetter AR: {getEmploymentVerificationLetterActual} = {requiredDocuments.EmploymentVerificationLetter} :ER");
+                Console.WriteLine($"GovIssuedI AR: {getGovIssuedIdActual} = {requiredDocuments.GovIssuedId} :ER");
+                Console.WriteLine($"TwoMostRecentBankStatements AR: {getTwoMostRecentBankStatementsActual} = {requiredDocuments.TwoMostRecentBankStatements} :ER");
+                Console.WriteLine($"ThreeMostRecentRentPayments AR: {getThreeMostRecentRentPaymentsActual} = {requiredDocuments.ThreeMostRecentRentPayments} :ER");
+                Console.WriteLine($"MostRecentTaxReturn AR: {getMostRecentTaxReturnActual} = {requiredDocuments.MostRecentTaxReturn} :ER");
             });
 
             return this;

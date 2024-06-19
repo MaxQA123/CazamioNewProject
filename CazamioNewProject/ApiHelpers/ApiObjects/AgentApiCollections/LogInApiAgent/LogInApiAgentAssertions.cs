@@ -17,7 +17,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.AgentApiCollections.LogInApiAg
         {
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(agent.FullNameAgent, responseBroker.AuthData.User.UserName, $"Name not equal");
+                Assert.AreEqual(agent.FullNameCreatedAgentMySpace.FirstAgent, responseBroker.AuthData.User.UserName, $"Name not equal");
                 Assert.AreEqual(agent.EmailAddressAgent, responseBroker.AuthData.User.UserEmail, $"Email not equal");
                 Assert.AreEqual(GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE, responseBroker.MarketplaceId, $"MarketplaceId not equal");
             });

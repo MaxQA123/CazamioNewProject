@@ -119,6 +119,7 @@ namespace CazamioNewProject.Objects
         {
             public string TwelveMonths { get; set; }
             public string EighteenMonths { get; set; }
+            public string DefaultRentalTerms { get; set; }
         }
 
         public class BuildingShortAddressInfo
@@ -146,7 +147,7 @@ namespace CazamioNewProject.Objects
         {
             string unitNumberMarkAdmAssignedRoleAgntBrkr = "1";
             string unitNumberMarkAdmAssignedRoleBrkr = "9999";
-            string buildingShortAddressMarkAdmAssignedRoleBrkr = "29 Washington Square";
+            string buildingShortAddressMarkAdmAssignedRoleBrkr = "1 Washington Square";
 
             string unitNumberBrokerAssignedRoleAgntBrkr = "AA";
             string unitNumberBrokerAssignedRoleBrkr = "1A";
@@ -192,7 +193,9 @@ namespace CazamioNewProject.Objects
             string valueHoldDeposit = "700";
             string itemTwelveMonths = "12 months";
             string itemEighteenMonths = "18 months";
-            
+            string defaultRentalTerms = "12 months\r\ncancel";
+
+
             string description = "Description for APARTMENT (12345) (*&%$#@!) (098765) (*&^)";
             string internalNotes = "Internal Notes for APARTMENT (12345) (*&%$#@!) (09876) (*&^)";
             string textLong = "Lorem APARTMENT ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,";
@@ -285,7 +288,8 @@ namespace CazamioNewProject.Objects
                 RentalTerms = new RentalTermsInfo
                 {
                     TwelveMonths = itemTwelveMonths,
-                    EighteenMonths = itemEighteenMonths
+                    EighteenMonths = itemEighteenMonths,
+                    DefaultRentalTerms = defaultRentalTerms
                 },
                 Description = description,
                 InternalNotes = internalNotes,
