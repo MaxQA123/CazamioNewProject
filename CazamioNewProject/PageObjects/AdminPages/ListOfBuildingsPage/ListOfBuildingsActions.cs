@@ -28,7 +28,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
         [AllureStep("SearchBuildingMarkAdmBroker")]
         public ListOfBuildings SearchBuildingMarkAdmBroker()
         {
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.CustomElementIsVisible(LoaderHidden);
+            WaitUntil.WaitSomeInterval(1000);
             WaitUntil.CustomElementIsVisible(FieldInputSearch);
             WaitUntil.CustomElementIsClickable(FieldInputSearch);
             InputGeneral.InputFunctionWithClear(FieldInputSearch, apartment.BuildingShortAddress.MarkAdmAssignedBroker);
@@ -39,6 +40,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
         [AllureStep("SelectItemFirst")]
         public ListOfBuildings SelectItemFirst()
         {
+            WaitUntil.WaitSomeInterval(2000);
             WaitUntil.CustomElementIsVisible(ItemFirstBuildingOnPage);
             WaitUntil.CustomElementIsClickable(ItemFirstBuildingOnPage);
             Button.Click(ItemFirstBuildingOnPage);

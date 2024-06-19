@@ -113,8 +113,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [FindsBy(How = How.XPath, Using = ("//input[@formcontrolname = 'holdingDeposit']"))]
         public IWebElement FieldInputApartmentHoldDeposit;
 
-        [FindsBy(How = How.XPath, Using = ("//span[text() = 'Set default']"))]
-        public IWebElement ButtonSetDefault;
+        [FindsBy(How = How.XPath, Using = ("//span[text() = 'Set from building']"))]
+        public IWebElement ButtonSetFromBuilding;
 
         [FindsBy(How = How.XPath, Using = ("//span[text() = 'Payment methods']"))]
         public IWebElement ButtonPaymentMethods;
@@ -122,7 +122,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [FindsBy(How = How.XPath, Using = ("//mat-chip-list[@id = 'mat-chip-list-1']"))]
         public IWebElement FieldInputRentalTerms;
 
-        [FindsBy(How = How.XPath, Using = ("//mat-chip[text() =  ' 12 months ']"))]
+        [FindsBy(How = How.XPath, Using = ("//span[text() =  ' 12 months ']"))]
         public IWebElement ItemTwelveMonthsRentalTerms;
 
         #region RequiredDocuments
@@ -147,6 +147,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [FindsBy(How = How.XPath, Using = ("//textarea[@id = 'internalNotes' ]"))]
         public IWebElement FieldInputInternalNotes;
 
+        #endregion
+
         #region Amenities
 
         [FindsBy(How = How.XPath, Using = "//input[@id = 'input-amenity']")]
@@ -160,6 +162,5 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [FindsBy(How = How.XPath, Using = "//cazamio-button[@text = 'Next']")]
         public IWebElement ButtonGeneralNext;
 
-        #endregion
     }
 }

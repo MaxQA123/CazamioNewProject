@@ -5,6 +5,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingViewPage
 {
     public partial class BuildingView
     {
+        [FindsBy(How = How.XPath, Using = ("//app-loader//div[@class = 'hidden']"))]
+        public IWebElement LoaderHidden;
+
         [FindsBy(How = How.XPath, Using = ("//div[text() = 'Building view']"))]
         public IWebElement TitleBuildingViewPage;
 

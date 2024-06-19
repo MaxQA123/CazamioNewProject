@@ -66,8 +66,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return this;
         }
 
-        [AllureStep("GetApartmentHoldDepositAddApartmentsPage")]
-        public string GetApartmentHoldDepositAddApartmentsPage()
+        [AllureStep("GetApartmentHoldDeposit")]
+        public string GetApartmentHoldDeposit()
         {
             WaitUntil.CustomElementIsVisible(FieldInputApartmentHoldDeposit);
             string getApartmentHoldDeposit = FieldInputApartmentHoldDeposit.GetAttribute("value");
@@ -77,17 +77,17 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         }
 
         [AllureStep("VerifyApartmentHoldDepositAddApartmentsPage")]
-        public AddApartments VerifyApartmentHoldDepositAddApartmentsPage(string getApartmentHoldDeposit)
+        public AddApartments VerifyApartmentHoldDepositAddApartmentsPage(string getApartmentHoldDepositFromAddApartments)
         {
-            Assert.AreEqual(getApartmentHoldDeposit, building.HoldDeposit.ByDefaultMySpace);
+            Assert.AreEqual(getApartmentHoldDepositFromAddApartments, building.HoldDeposit.ByDefaultMySpace);
 
-            Console.WriteLine($"Apartment Hold Deposit AR: {getApartmentHoldDeposit} = {building.HoldDeposit.ByDefaultMySpace} :ER Apartment Hold Deposit");
+            Console.WriteLine($"Apartment Hold Deposit AR: {getApartmentHoldDepositFromAddApartments} = {building.HoldDeposit.ByDefaultMySpace} :ER");
 
             return this;
         }
 
-        [AllureStep("GetRentalTermsAddApartmentsPage")]
-        public string GetRentalTermsAddApartmentsPage()
+        [AllureStep("GetRentalTerms")]
+        public string GetRentalTerms()
         {
             WaitUntil.CustomElementIsVisible(ItemTwelveMonthsRentalTerms);
             string getRentalTerms = ItemTwelveMonthsRentalTerms.Text;

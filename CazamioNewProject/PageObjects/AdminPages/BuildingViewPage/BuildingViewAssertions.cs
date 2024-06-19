@@ -14,6 +14,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingViewPage
         [AllureStep("VerifyTitleBuildingViewPage")]
         public BuildingView VerifyTitleBuildingViewPage()
         {
+            WaitUntil.CustomElementIsVisible(LoaderHidden);
             WaitUntil.CustomElementIsVisible(TitleBuildingViewPage);
             Assert.IsTrue(Successfully.IsVisible(TitleBuildingViewPage));
 

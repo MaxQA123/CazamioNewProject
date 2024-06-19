@@ -124,6 +124,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return this;
         }
 
+        [AllureStep("ClickButtonSetFromBuilding")]
+        public AddApartments ClickButtonSetFromBuilding()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonSetFromBuilding);
+            Button.Click(ButtonSetFromBuilding);
+
+            return this;
+        }
+
         #endregion
 
         #region TabAmenities

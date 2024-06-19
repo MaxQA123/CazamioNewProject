@@ -5,6 +5,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
 {
     public partial class ListOfBuildings
     {
+        [FindsBy(How = How.XPath, Using = ("//app-loader//div[@class = 'hidden']"))]
+        public IWebElement LoaderHidden;
+
         [FindsBy(How = How.XPath, Using = "//div[text()= 'List of buildings']")]
         public IWebElement TitleListOfBuildingsPage;
 

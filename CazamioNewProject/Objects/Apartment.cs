@@ -145,10 +145,11 @@ namespace CazamioNewProject.Objects
 
         public Apartment Generate()
         {
-            string unitNumberMarkAdmAssignedRoleAgntBrkr = "1";
-            string unitNumberMarkAdmAssignedRoleBrkr = "9999";
             string buildingShortAddressMarkAdmAssignedRoleBrkr = "1 Washington Square";
+            string unitNumberMarkAdmAssignedRoleBrkr = "9999";
 
+            string unitNumberMarkAdmAssignedRoleAgntBrkr = "1";
+          
             string unitNumberBrokerAssignedRoleAgntBrkr = "AA";
             string unitNumberBrokerAssignedRoleBrkr = "1A";
 
@@ -193,7 +194,7 @@ namespace CazamioNewProject.Objects
             string valueHoldDeposit = "700";
             string itemTwelveMonths = "12 months";
             string itemEighteenMonths = "18 months";
-            string defaultRentalTerms = "12 months\r\ncancel";
+            string defaultRentalTerms = "12 months";
 
 
             string description = "Description for APARTMENT (12345) (*&%$#@!) (098765) (*&^)";

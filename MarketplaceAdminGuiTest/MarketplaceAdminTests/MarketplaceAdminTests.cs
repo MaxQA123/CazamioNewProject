@@ -814,25 +814,17 @@ namespace MarketplaceAdminGuiTest
             JScriptExecutor.ScrollToDownWebPage();
 
             Pages.AddApartments
-                .EnterHoldDepositOneNumber()
-                .ClickButtonPaymentMethods();
-            Pages.PaymentOptionsMdlWndw
-                .SelectAllPaymentMethodsForHoldApartment();
+                .ClickButtonSetFromBuilding();
 
-            //string getgetApartmentHoldDeposit = Pages.AddApartments.GetApartmentHoldDepositAddApartmentsPage();
+            string getApartmentHoldDepositFromAddApartments = Pages.AddApartments.GetApartmentHoldDeposit();
 
-            //KeyBoardActions.ScrollToDown();
-            //Pages.AddApartments
-            //    .VerifyApartmentHoldDepositAddApartmentsPage(getgetApartmentHoldDeposit)
-            //    .ClickButtonPaymentMethodsAddAprtmntsUnitsPage();
-            //Pages.ModalWindowPaymentOptions
-            //    .VerifyTitlePaymentOptions();
-            ////.SelectPaymentsMethodsNwBldngPg();
+            Pages.AddApartments
+                .VerifyApartmentHoldDepositAddApartmentsPage(getApartmentHoldDepositFromAddApartments);
 
-            //string getRentalTerms = Pages.AddApartments.GetRentalTermsAddApartmentsPage();
+            string getRentalTerms = Pages.AddApartments.GetRentalTerms();
 
-            //Pages.AddApartments
-            //    .VerifyRentalTermsAddApartmentsPage(getRentalTerms);
+            Pages.AddApartments
+                .VerifyRentalTermsAddApartmentsPage(getRentalTerms);
 
             //string getThreeRecentPaystubs = Pages.AddApartments.GetRequiredDocumentsThreeRecentPaystubsAddApartmentsPage();
             //string getPhotoId = Pages.AddApartments.GetRequiredDocumentsPhotoIdAddApartmentsPage();
