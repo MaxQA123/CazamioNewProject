@@ -108,64 +108,77 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 
         #region RequiredDocuments
 
-        [AllureStep("GetRequiredDocumentsThreeRecentPaystubsAddApartmentsPage")]
-        public string GetRequiredDocumentsThreeRecentPaystubsAddApartmentsPage()
+        [AllureStep("GetRequiredDocumentTwoRecentPaystubs")]
+        public string GetRequiredDocumentTwoRecentPaystubs()
         {
-            WaitUntil.CustomElementIsVisible(ItemThreeRecentPaystubs);
-            string getThreeRecentPaystubs = ItemThreeRecentPaystubs.Text;
-            string getThreeRecentPaystubsActual = getThreeRecentPaystubs.ToString();
+            WaitUntil.WaitSomeInterval(100);
+            string getTwoRecentPaystubs = ItemTwoRecentPaystubs.Text;
+            string getTwoRecentPaystubsActual = getTwoRecentPaystubs.ToString();
 
-            return getThreeRecentPaystubsActual;
+            return getTwoRecentPaystubsActual;
         }
 
-        [AllureStep("GetRequiredDocumentsPhotoIdAddApartmentsPage")]
-        public string GetRequiredDocumentsPhotoIdAddApartmentsPage()
+        [AllureStep("GetRequiredDocumentItemEmploymentVerificationLetter")]
+        public string GetRequiredDocumentItemEmploymentVerificationLetter()
         {
-            WaitUntil.CustomElementIsVisible(ItemPhotoIdPaystubs);
-            string getPhotoId = ItemPhotoIdPaystubs.Text;
-            string getPhotoIdActual = getPhotoId.ToString();
+            WaitUntil.WaitSomeInterval(100);
+            string getEmploymentVerificationLetter = ItemEmploymentVerificationLetter.Text;
+            string getEmploymentVerificationLetterActual = getEmploymentVerificationLetter.ToString();
 
-            return getPhotoIdActual;
+            return getEmploymentVerificationLetterActual;
         }
 
-        [AllureStep("GetRequiredDocumentsTwoMostRecentBankStatementsAddApartmentsPage")]
-        public string GetRequiredDocumentsTwoMostRecentBankStatementsAddApartmentsPage()
+        [AllureStep("GetRequiredDocumentTwoMostRecentBankStatements")]
+        public string GetRequiredDocumentTwoMostRecentBankStatements()
         {
-            WaitUntil.CustomElementIsVisible(ItemTwoMostRecentBankStatements);
+            WaitUntil.WaitSomeInterval(100);
             string getTwoMostRecentBankStatements = ItemTwoMostRecentBankStatements.Text;
             string getTwoMostRecentBankStatementsActual = getTwoMostRecentBankStatements.ToString();
 
             return getTwoMostRecentBankStatementsActual;
         }
 
-        [AllureStep("GetRequiredDocumentsMostRecentWTwoOrOneZeroNineNineAddApartmentsPage")]
-        public string GetRequiredDocumentsMostRecentWTwoOrOneZeroNineNineAddApartmentsPage()
+        [AllureStep("GetRequiredDocumentGovIssuedId")]
+        public string GetRequiredDocumentGovIssuedId()
         {
-            WaitUntil.CustomElementIsVisible(ItemrMostRecentWTwoOrOneZeroNineNine);
-            string getMostRecentWTwoOrOneZeroNineNine = ItemrMostRecentWTwoOrOneZeroNineNine.Text;
-            string getMostRecentWTwoOrOneZeroNineNineActual = getMostRecentWTwoOrOneZeroNineNine.ToString();
+            WaitUntil.WaitSomeInterval(100);
+            string getGovIssuedId = ItemGovIssuedId.Text;
+            string getGovIssuedIdActual = getGovIssuedId.ToString();
 
-            return getMostRecentWTwoOrOneZeroNineNineActual;
+            return getGovIssuedIdActual;
         }
 
-        [AllureStep("VerifyRequiredDocumentsByDefaultMySpace")]
-        public AddApartments VerifyRequiredDocumentsByDefaultMySpace(string getTwoRecentPaystubsActual, string getEmploymentVerificationLetterActual, string getGovIssuedIdActual, string getTwoMostRecentBankStatementsActual, string getMostRecentWTwoOrOneZeroNineNineActual, string getThreeMostRecentRentPaymentsActual, string getMostRecentTaxReturnActual)
+        [AllureStep("GetRequiredDocumentThreeMostRecentRentPayments")]
+        public string GetRequiredDocumentThreeMostRecentRentPayments()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            string getThreeMostRecentRentPayments = ItemThreeMostRecentRentPayments.Text;
+            string getThreeMostRecentRentPaymentsActual = getThreeMostRecentRentPayments.ToString();
+
+            return getThreeMostRecentRentPaymentsActual;
+        }
+
+        [AllureStep("GetRequiredDocumentMostRecentTaxReturn")]
+        public string GetRequiredDocumentMostRecentTaxReturn()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            string getMostRecentTaxReturn = ItemMostRecentTaxReturn.Text;
+            string getMostRecentTaxReturnActual = getMostRecentTaxReturn.ToString();
+
+            return getMostRecentTaxReturnActual;
+        }
+
+        [AllureStep("VerifyRequiredDocumentsByDefaultMySpaceAddApartments")]
+        public AddApartments VerifyRequiredDocumentsByDefaultMySpaceAddApartments(string getThreeRecentPaystubsAddApartments, string getEmploymentVerificationLetterAddApartments, string getGovIssuedIdAddApartments, string getTwoMostRecentBankStatementsAddApartments, string getThreeMostRecentRentPaymentsAddApartments, string getMostRecentTaxReturnAddApartments)
         {
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(getTwoRecentPaystubsActual, requiredDocuments.TwoRecentPaystubs);
-                Assert.AreEqual(getEmploymentVerificationLetterActual, requiredDocuments.EmploymentVerificationLetter);
-                Assert.AreEqual(getGovIssuedIdActual, requiredDocuments.GovIssuedId);
-                Assert.AreEqual(getTwoMostRecentBankStatementsActual, requiredDocuments.TwoMostRecentBankStatements);
-                Assert.AreEqual(getThreeMostRecentRentPaymentsActual, requiredDocuments.ThreeMostRecentRentPayments);
-                Assert.AreEqual(getMostRecentTaxReturnActual, requiredDocuments.MostRecentTaxReturn);
-
-                Console.WriteLine($"TwoRecentPaystubs AR: {getTwoRecentPaystubsActual} = {requiredDocuments.TwoRecentPaystubs} :ER");
-                Console.WriteLine($"EmploymentVerificationLetter AR: {getEmploymentVerificationLetterActual} = {requiredDocuments.EmploymentVerificationLetter} :ER");
-                Console.WriteLine($"GovIssuedI AR: {getGovIssuedIdActual} = {requiredDocuments.GovIssuedId} :ER");
-                Console.WriteLine($"TwoMostRecentBankStatements AR: {getTwoMostRecentBankStatementsActual} = {requiredDocuments.TwoMostRecentBankStatements} :ER");
-                Console.WriteLine($"ThreeMostRecentRentPayments AR: {getThreeMostRecentRentPaymentsActual} = {requiredDocuments.ThreeMostRecentRentPayments} :ER");
-                Console.WriteLine($"MostRecentTaxReturn AR: {getMostRecentTaxReturnActual} = {requiredDocuments.MostRecentTaxReturn} :ER");
+                Assert.AreEqual(getThreeRecentPaystubsAddApartments, requiredDocuments.TwoRecentPaystubs);
+                Assert.AreEqual(getEmploymentVerificationLetterAddApartments, requiredDocuments.EmploymentVerificationLetter);
+                Assert.AreEqual(getGovIssuedIdAddApartments, requiredDocuments.GovIssuedId);
+                Assert.AreEqual(getTwoMostRecentBankStatementsAddApartments, requiredDocuments.TwoMostRecentBankStatements);
+                Assert.AreEqual(getThreeMostRecentRentPaymentsAddApartments, requiredDocuments.ThreeMostRecentRentPayments);
+                Assert.AreEqual(getMostRecentTaxReturnAddApartments, requiredDocuments.MostRecentTaxReturn);
             });
 
             return this;

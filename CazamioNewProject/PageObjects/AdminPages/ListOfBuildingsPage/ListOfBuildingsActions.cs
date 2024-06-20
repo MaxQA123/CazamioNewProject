@@ -28,8 +28,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
         [AllureStep("SearchBuildingMarkAdmBroker")]
         public ListOfBuildings SearchBuildingMarkAdmBroker()
         {
-            WaitUntil.CustomElementIsVisible(LoaderHidden);
-            WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.CustomElementIsVisible(LoaderHidden, 10);
+            WaitUntil.WaitSomeInterval(3000);
             WaitUntil.CustomElementIsVisible(FieldInputSearch);
             WaitUntil.CustomElementIsClickable(FieldInputSearch);
             InputGeneral.InputFunctionWithClear(FieldInputSearch, apartment.BuildingShortAddress.MarkAdmAssignedBroker);

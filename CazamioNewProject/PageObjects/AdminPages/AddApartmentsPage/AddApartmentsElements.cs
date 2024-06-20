@@ -127,17 +127,23 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 
         #region RequiredDocuments
 
-        [FindsBy(How = How.XPath, Using = ("//app-required-documents//span[text() = ' 3 Recent paystubs ']"))]
-        public IWebElement ItemThreeRecentPaystubs;
+        [FindsBy(How = How.XPath, Using = ("//app-required-documents//ng-multiselect-dropdown//span[contains(text(), '2 Recent paystubs')]"))]
+        public IWebElement ItemTwoRecentPaystubs;
 
-        [FindsBy(How = How.XPath, Using = ("//app-required-documents//span[text() = ' Photo ID ']"))]
-        public IWebElement ItemPhotoIdPaystubs;
+        [FindsBy(How = How.XPath, Using = ("//app-required-documents//ng-multiselect-dropdown//span[contains(text(), 'Employment Verification Letter')]"))]
+        public IWebElement ItemEmploymentVerificationLetter;
 
-        [FindsBy(How = How.XPath, Using = ("//app-required-documents//span[text() = ' 2 Most recent bank statements ' ]"))]
+        [FindsBy(How = How.XPath, Using = ("//app-required-documents//ng-multiselect-dropdown//span[contains(text(), '2 Most recent bank statements')]"))]
         public IWebElement ItemTwoMostRecentBankStatements;
 
-        [FindsBy(How = How.XPath, Using = ("//app-required-documents//span[text() = ' Most recent W-2 or 1099 ' ]"))]
-        public IWebElement ItemrMostRecentWTwoOrOneZeroNineNine;
+        [FindsBy(How = How.XPath, Using = ("//app-required-documents//ng-multiselect-dropdown//span[contains(text(), 'Gov issued ID')]"))]
+        public IWebElement ItemGovIssuedId;
+
+        [FindsBy(How = How.XPath, Using = ("//app-required-documents//ng-multiselect-dropdown//span[contains(text(), '3 most recent rent payments')]"))]
+        public IWebElement ItemThreeMostRecentRentPayments;
+
+        [FindsBy(How = How.XPath, Using = ("//app-required-documents//ng-multiselect-dropdown//span[contains(text(), 'Most recent tax return')]"))]
+        public IWebElement ItemMostRecentTaxReturn;
 
         #endregion
 

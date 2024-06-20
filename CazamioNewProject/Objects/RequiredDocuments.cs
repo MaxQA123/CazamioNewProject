@@ -30,16 +30,23 @@ namespace CazamioNewProject.Objects
 
         public RequiredDocuments Generate()
         {
-            string itemTwoRecentPaystubs = "2 Recent paystubs\r\nx";
+            #region MySpace by default
+
+            string itemTwoRecentPaystubs = "2 Recent paystubs ";
+            string itemGovIssuedId = "Gov issued ID ";
+            string itemTwoMostRecentBankStatements = "2 Most recent bank statements ";
+            string itemThreeMostRecentRentPayments = "3 most recent rent payments ";
+            string itemMostRecentTaxReturn = "Most recent tax return ";
+            string itemEmploymentVerificationLetter = "Employment Verification Letter ";
+
+            #endregion
+
             string itemSocialSecurityCard = "Social Security Card\r\nx";
-            string itemEmploymentVerificationLetter = "Employment Verification Letter\r\nx";
             string itemWTwoFromPreviousYear = "W-2 From previous year\r\nx";
             string itemOtherPertinentDocuments = "Other pertinent documents\r\nx";
-            string itemGovIssuedId = "Gov issued ID\r\nx";
             string itemSecondaryPhotoId = "Secondary photo ID\r\nx";
             string itemStudentVerification = "Student verification\r\nx";
-            string itemMostRecentBankStatement = "Most recent bank statement\r\nx";
-            string itemTwoMostRecentBankStatements = "2 Most recent bank statements\r\nx";
+            string itemMostRecentBankStatement = "Most recent bank statement\r\nx";    
             string itemLandlordReference = "Landlord Reference\r\nx";
             string itemProofOfLastThreeRentPayments = "Proof of last 3 rent payments\r\nx";
             string itemProofOfLastTwelveRentPayments = "Proof of last 12 rent payments\r\nx";
@@ -49,9 +56,7 @@ namespace CazamioNewProject.Objects
             string itemCpaLetterSelfEmployed = "CPA letter (self-employed)\r\nx";
             string itemPaidInvoicesSelfEmployed = "Paid invoices (self-employed)\r\nx";
             string itemProofOfCreditOrCollectionDisputeIfApplicable = "Proof of credit or collection dispute (If Applicable)\r\nx";
-            string itemAnyAdditionalFinancialAssets = "Any additional financial assets\r\nx";
-            string itemThreeMostRecentRentPayments = "3 most recent rent payments\r\nx";
-            string itemMostRecentTaxReturn = "Most recent tax return\r\nx";
+            string itemAnyAdditionalFinancialAssets = "Any additional financial assets\r\nx";   
             string itemThreeRecentPaystubs = "3 Recent paystubs\r\nx";
             string itemSixMostRecentRentPayments = "6 most recent rent payments\r\nx";
 
