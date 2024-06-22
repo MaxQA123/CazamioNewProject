@@ -1,10 +1,5 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using NUnit.Allure.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 {
@@ -177,6 +172,49 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.CustomElementIsVisible(ItemMultiFamily);
             WaitUntil.CustomElementIsClickable(ItemMultiFamily);
             Button.Click(ItemMultiFamily);
+
+            return this;
+        }
+
+        [AllureStep("EnterDescriptionInternalNotes")]
+        public AddApartments EnterDescriptionInternalNotes()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputDescription);
+            InputGeneral.InputFunctionWithClear(FieldInputDescription, apartment.TextVariable.TextLongDescription);
+            WaitUntil.CustomElementIsVisible(FieldInputInternalNotes);
+            InputGeneral.InputFunctionWithClear(FieldInputInternalNotes, apartment.TextVariable.TextLongInternalNotes);
+
+            return this;
+        }
+
+        #endregion
+
+        #region Tab Amenities
+
+        [AllureStep("SelectFiveAmenities")]
+        public AddApartments SelectFiveAmenities()
+        {
+            ClickFieldInputSearchForAmenities();
+            WaitUntil.WaitSomeInterval(5000);
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+
+            return this;
+        }
+
+        [AllureStep("SelectAllAmenitiesIncludedInMonthlyRent")]
+        public AddApartments SelectAllAmenitiesIncludedInMonthlyRent()
+        {
+            ClickFieldInputSearchForDefaultIncludedInMonthlyRentAmenities();
+            WaitUntil.WaitSomeInterval(5000);
+            SelectIncludedInMonthlyRentAmenity(ListOfAmenitiesForApartmentIncludedInMonthlyRent.FIRST_TAG, " ");
+            SelectIncludedInMonthlyRentAmenity(ListOfAmenitiesForApartmentIncludedInMonthlyRent.FIRST_TAG, " ");
+            SelectIncludedInMonthlyRentAmenity(ListOfAmenitiesForApartmentIncludedInMonthlyRent.FIRST_TAG, " ");
+            SelectIncludedInMonthlyRentAmenity(ListOfAmenitiesForApartmentIncludedInMonthlyRent.FIRST_TAG, " ");
+            SelectIncludedInMonthlyRentAmenity(ListOfAmenitiesForApartmentIncludedInMonthlyRent.FIRST_TAG, " ");
 
             return this;
         }

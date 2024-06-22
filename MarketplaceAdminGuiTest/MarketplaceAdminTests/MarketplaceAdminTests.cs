@@ -835,16 +835,12 @@ namespace MarketplaceAdminGuiTest
 
 
             Pages.AddApartments
-                .VerifyRequiredDocumentsByDefaultMySpaceAddApartments(getThreeRecentPaystubsAddApartments, getEmploymentVerificationLetterAddApartments, getGovIssuedIdAddApartments, getTwoMostRecentBankStatementsAddApartments, getThreeMostRecentRentPaymentsAddApartments, getMostRecentTaxReturnAddApartments);
-                //.EnterDescriptionInternalNotesAddAprtmntsUnitsPage()
-            //    .ClickButtonGeneralNextAddAprtmntsgPg()
-            //    .ClickFieldInputSearchForAmenitiesAddAprtmntsgPg()
-            //    .SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ")
-            //    .SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ")
-            //    .SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ")
-            //    .SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ")
-            //    .SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ")
-            //    .ClickButtonGeneralNextAddAprtmntsgPg();
+                .VerifyRequiredDocumentsByDefaultMySpaceAddApartments(getThreeRecentPaystubsAddApartments, getEmploymentVerificationLetterAddApartments, getGovIssuedIdAddApartments, getTwoMostRecentBankStatementsAddApartments, getThreeMostRecentRentPaymentsAddApartments, getMostRecentTaxReturnAddApartments)
+                .EnterDescriptionInternalNotes()
+                .ClickButtonGeneralNext()
+                .SelectAllAmenitiesIncludedInMonthlyRent()
+                .SelectFiveAmenities()
+                .ClickButtonGeneralNext();
 
             WaitUntil.WaitSomeInterval(5000);
 

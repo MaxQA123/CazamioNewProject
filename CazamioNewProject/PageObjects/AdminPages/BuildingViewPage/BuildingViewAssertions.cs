@@ -1,11 +1,6 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using NUnit.Allure.Attributes;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.BuildingViewPage
 {
@@ -15,6 +10,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingViewPage
         public BuildingView VerifyTitleBuildingViewPage()
         {
             WaitUntil.CustomElementIsVisible(LoaderHidden);
+            WaitUntil.WaitSomeInterval(3000);
             WaitUntil.CustomElementIsVisible(TitleBuildingViewPage);
             Assert.IsTrue(Successfully.IsVisible(TitleBuildingViewPage));
 

@@ -78,6 +78,16 @@
         public const int FIRST_TAG = 0;
     }
 
+    public class ListOfAmenitiesForApartmentAdminsPage
+    {
+        public const int FIRST_TAG = 0;
+    }
+
+    public class ListOfAmenitiesForApartmentIncludedInMonthlyRent
+    {
+        public const int FIRST_TAG = 0;
+    }
+
     public class ItemsPetPolicies
     {
         public const int CASE_BY_CASE = 0;

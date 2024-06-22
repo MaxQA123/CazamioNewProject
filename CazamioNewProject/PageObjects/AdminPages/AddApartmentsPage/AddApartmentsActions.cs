@@ -2,6 +2,9 @@
 using CazamioNewProject.Objects;
 using NUnit.Allure.Attributes;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
+using System;
 using System.Collections.Generic;
 
 namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
@@ -137,10 +140,11 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 
         #region TabAmenities
 
-        [AllureStep("ClickFieldInputSearchForAmenitiesAddAprtmntsgPg")]
-        public AddApartments ClickFieldInputSearchForAmenitiesAddAprtmntsgPg()
+        [AllureStep("ClickFieldInputSearchForAmenities")]
+        public AddApartments ClickFieldInputSearchForAmenities()
         {
-            WaitUntil.WaitSomeInterval(500);
+            WaitUntil.CustomElementIsVisible(FieldInputSearchForAmenities);
+            WaitUntil.CustomElementIsClickable(FieldInputSearchForAmenities);
             Button.Click(FieldInputSearchForAmenities);
 
             return this;
@@ -148,30 +152,40 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 
         private static IWebElement _elementAmenitiesForApartment;
 
-        [AllureStep("SelectorAmenitiesForBuilding")]
-        public static IList<IWebElement> SelectorAmenitiesForApartment(string _itemAmenity)
+        [AllureStep("SelectorAmenitiesForApartment")]
+        public static IList<IWebElement> SelectorAmenitiesForApartment(string itemAmenity)
         {
-            WaitUntil.WaitSomeInterval(1000);
+            var wait = new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(10));
             var str = "//div[@class = 'search-choice-wrapper']";
-            _elementAmenitiesForApartment = Browser._Driver.FindElement(By.XPath(str));
-            return _elementAmenitiesForApartment.FindElements(By.XPath($".//div[contains(text(), '{_itemAmenity}')]"));
+
+            _elementAmenitiesForApartment = wait.Until(drv => drv.FindElement(By.XPath(str)));
+
+            return _elementAmenitiesForApartment.FindElements(By.XPath($".//div[contains(text(), '{itemAmenity}')]"));
         }
 
-        [AllureStep("SelectAmenitiesForBuilding")]
+        [AllureStep("SelectAmenitiesForApartment")]
         public AddApartments SelectAmenitiesForApartment(int numberItem, string itemAmenity)
         {
-            WaitUntil.WaitSomeInterval(500);
-            IList<IWebElement> _numberItem = SelectorAmenitiesForApartment(itemAmenity);
+            var wait = new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(5));
+            IList<IWebElement> amenitiesList = SelectorAmenitiesForApartment(itemAmenity);
 
-            _numberItem[numberItem].Click();
+            if (numberItem >= 0 && numberItem < amenitiesList.Count)
+            {
+                wait.Until(ExpectedConditions.ElementToBeClickable(amenitiesList[numberItem])).Click();
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException(nameof(numberItem), "Invalid index for amenities list");
+            }
 
             return this;
         }
 
-        [AllureStep("ClickFieldInputSearchForDefaultIncludedInMonthlyRentAmenitiesAddAprtmntsgPg")]
-        public AddApartments ClickFieldInputSearchForDefaultIncludedInMonthlyRentAmenitiesAddAprtmntsgPg()
+        [AllureStep("ClickFieldInputSearchForDefaultIncludedInMonthlyRentAmenities")]
+        public AddApartments ClickFieldInputSearchForDefaultIncludedInMonthlyRentAmenities()
         {
-            WaitUntil.WaitSomeInterval(500);
+            WaitUntil.CustomElementIsVisible(FieldInputSearchForDefaultIncludedInMonthlyRentAmenities);
+            WaitUntil.CustomElementIsClickable(FieldInputSearchForDefaultIncludedInMonthlyRentAmenities);
             Button.Click(FieldInputSearchForDefaultIncludedInMonthlyRentAmenities);
 
             return this;
@@ -179,32 +193,62 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 
         private static IWebElement _elementDefaultIncludedInMonthlyRentAmenitiesForApartment;
 
-        [AllureStep("SelectorIncludedInMonthlyRentAmenitiesForApartmentForApartment")]
-        public static IList<IWebElement> SelectorIncludedInMonthlyRentAmenitiesForApartmentForApartment(string _itemAmenity)
+        [AllureStep("SelectorIncludedInMonthlyRentAmenitiesForApartment")]
+        public static IList<IWebElement> GetIncludedInMonthlyRentAmenities(string amenityText)
         {
-            WaitUntil.WaitSomeInterval(1000);
-            var str = "//div[@class = 'search-choice-wrapper']";
-            _elementDefaultIncludedInMonthlyRentAmenitiesForApartment = Browser._Driver.FindElement(By.XPath(str));
-            return _elementDefaultIncludedInMonthlyRentAmenitiesForApartment.FindElements(By.XPath($".//div[contains(text(), '{_itemAmenity}')]"));
+            var wait = new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(10));
+            var xpath = "//div[@class='search-choice-wrapper']";
+
+            _elementDefaultIncludedInMonthlyRentAmenitiesForApartment = wait.Until(drv => drv.FindElement(By.XPath(xpath)));
+
+            return _elementDefaultIncludedInMonthlyRentAmenitiesForApartment.FindElements(By.XPath($".//div[contains(text(), '{amenityText}')]"));
         }
 
-        [AllureStep("SelectIncludedInMonthlyRentAmenitiesForApartmentForApartment")]
-        public AddApartments SelectIncludedInMonthlyRentAmenitiesForApartmentForApartment(int numberItem, string itemAmenity)
+        [AllureStep("SelectIncludedInMonthlyRentAmenity")]
+        public AddApartments SelectIncludedInMonthlyRentAmenity(int index, string amenityText)
         {
-            WaitUntil.WaitSomeInterval(500);
-            IList<IWebElement> _numberItem = SelectorIncludedInMonthlyRentAmenitiesForApartmentForApartment(itemAmenity);
+            var wait = new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(5));
+            IList<IWebElement> amenitiesList = GetIncludedInMonthlyRentAmenities(amenityText);
 
-            _numberItem[numberItem].Click();
+            if (index >= 0 && index < amenitiesList.Count)
+            {
+                wait.Until(ExpectedConditions.ElementToBeClickable(amenitiesList[index])).Click();
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException(nameof(index), "Invalid index for amenities list");
+            }
 
             return this;
         }
+
+        //[AllureStep("SelectorIncludedInMonthlyRentAmenitiesForApartmentForApartment")]
+        //public static IList<IWebElement> SelectorIncludedInMonthlyRentAmenitiesForApartmentForApartment(string _itemAmenity)
+        //{
+        //    WaitUntil.WaitSomeInterval(1000);
+        //    var str = "//div[@class = 'search-choice-wrapper']";
+        //    _elementDefaultIncludedInMonthlyRentAmenitiesForApartment = Browser._Driver.FindElement(By.XPath(str));
+        //    return _elementDefaultIncludedInMonthlyRentAmenitiesForApartment.FindElements(By.XPath($".//div[contains(text(), '{_itemAmenity}')]"));
+        //}
+
+        //[AllureStep("SelectIncludedInMonthlyRentAmenitiesForApartmentForApartment")]
+        //public AddApartments SelectIncludedInMonthlyRentAmenitiesForApartmentForApartment(int numberItem, string itemAmenity)
+        //{
+        //    WaitUntil.WaitSomeInterval(500);
+        //    IList<IWebElement> _numberItem = SelectorIncludedInMonthlyRentAmenitiesForApartmentForApartment(itemAmenity);
+
+        //    _numberItem[numberItem].Click();
+
+        //    return this;
+        //}
 
         #endregion
 
         [AllureStep("ClickButtonGeneralNext")]
         public AddApartments ClickButtonGeneralNext()
         {
-            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.CustomElementIsVisible(ButtonGeneralNext);
+            WaitUntil.CustomElementIsClickable(ButtonGeneralNext);
             Button.Click(ButtonGeneralNext);
 
             return this;

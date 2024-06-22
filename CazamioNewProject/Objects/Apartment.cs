@@ -18,8 +18,6 @@ namespace CazamioNewProject.Objects
         public ApartmentTypeInfo ApartmentType { get; set; }
         public string ApartmentHoldDeposit { get; set; }
         public RentalTermsInfo RentalTerms { get; set; }
-        public string Description { get; set; }
-        public string InternalNotes { get; set; }
         public BuildingShortAddressInfo BuildingShortAddress { get; set; }
         public string TextLong { get; set; }
         public TextVariableInfo TextVariable { get; set; }
@@ -132,6 +130,8 @@ namespace CazamioNewProject.Objects
         {
             public string TextLongDescription { get; set; }
             public string TextLongInternalNotes { get; set; }
+            public string TextShortDescription { get; set; }
+            public string TextShortInternalNotes { get; set; }
         }
 
         public class HoldDepositInfo
@@ -197,8 +197,8 @@ namespace CazamioNewProject.Objects
             string defaultRentalTerms = "12 months";
 
 
-            string description = "Description for APARTMENT (12345) (*&%$#@!) (098765) (*&^)";
-            string internalNotes = "Internal Notes for APARTMENT (12345) (*&%$#@!) (09876) (*&^)";
+            string shortDescription = "Description for APARTMENT (12345) (*&%$#@!) (098765) (*&^)";
+            string shortInternalNotes = "Internal Notes for APARTMENT (12345) (*&%$#@!) (09876) (*&^)";
             string textLong = "Lorem APARTMENT ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,";
             string holdDepositOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
             string holdDepositTwoNumber = GenerateRandomData.RandomNumberWithoutZero(2);
@@ -292,8 +292,6 @@ namespace CazamioNewProject.Objects
                     EighteenMonths = itemEighteenMonths,
                     DefaultRentalTerms = defaultRentalTerms
                 },
-                Description = description,
-                InternalNotes = internalNotes,
                 TextLong = textLong,
                 BuildingShortAddress = new BuildingShortAddressInfo
                 {
@@ -302,8 +300,10 @@ namespace CazamioNewProject.Objects
                 },
                 TextVariable = new TextVariableInfo
                 {
-                    TextLongDescription = description + " " + textLong,
-                    TextLongInternalNotes = internalNotes + " " + textLong
+                    TextLongDescription = shortDescription + " " + textLong,
+                    TextLongInternalNotes = shortInternalNotes + " " + textLong,
+                    TextShortDescription = shortDescription,
+                    TextShortInternalNotes = shortInternalNotes
                 },
                 HoldDeposit = new HoldDepositInfo
                 {
