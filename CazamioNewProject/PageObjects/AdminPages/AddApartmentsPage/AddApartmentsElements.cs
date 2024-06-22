@@ -163,6 +163,92 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [FindsBy(How = How.XPath, Using = "//input[@id = 'input-included-amenity']")]
         public IWebElement FieldInputSearchForDefaultIncludedInMonthlyRentAmenities;
 
+        [FindsBy(How = How.XPath, Using = "//div[text() = ' Heat Included ']")]
+        public IWebElement ItemHeatIncluded;
+
+        [FindsBy(How = How.XPath, Using = "//div[text() = ' Hot water Included ']")]
+        public IWebElement ItemHotWaterIncluded;
+
+        [FindsBy(How = How.XPath, Using = "//div[text() = ' Netflix Included ']")]
+        public IWebElement ItemNetflixIncluded;
+
+        [FindsBy(How = How.XPath, Using = "//div[text() = ' Sewer Included ']")]
+        public IWebElement ItemSewerIncluded;
+
+        [FindsBy(How = How.XPath, Using = "//div[text() = ' Wifi Included ']")]
+        public IWebElement ItemWifiIncluded;
+
+        [FindsBy(How = How.XPath, Using = "//div[text() = ' Water Included ']")]
+        public IWebElement ItemWaterIncluded;
+
+        [FindsBy(How = How.XPath, Using = "//div[text() = ' SmartHub Included ']")]
+        public IWebElement ItemSmartHubIncluded;
+
+        [FindsBy(How = How.XPath, Using = "//div[text() = ' Electric Included ']")]
+        public IWebElement ItemElectricIncluded;
+
+        [FindsBy(How = How.XPath, Using = "//div[text() = ' Gas Included ']")]
+        public IWebElement ItemGasIncluded;
+
+        #endregion
+
+        #region TabAccess
+
+        [FindsBy(How = How.XPath, Using = "//button//span[text() = 'Add lock']")]
+        public IWebElement ButtonAddLock;
+
+        [FindsBy(How = How.XPath, Using = "//input[@formcontrolname = 'location']")]
+        public IWebElement FieldInputLocationForAccess;
+
+        [FindsBy(How = How.XPath, Using = "//input[@id = 'accessType']")]
+        public IWebElement ButtonAccessType;
+
+        [FindsBy(How = How.XPath, Using = "//span[text() = 'PinCode']")]
+        public IWebElement ItemPinCode;
+
+        [FindsBy(How = How.XPath, Using = "//span[text() = 'Note']")]
+        public IWebElement ItemNote;
+
+        [FindsBy(How = How.XPath, Using = "//input[@autocomplete = 'ab6a07d3a4cb']")]
+        public IWebElement FieldInputLockForAccessNwBldngPg;
+
+        [FindsBy(How = How.XPath, Using = "//input[@placeholder = 'Pin term']")]
+        public IWebElement FieldInputPinCodeForFirstEnter;
+
+        [FindsBy(How = How.XPath, Using = "//input[@id = 'mat-mdc-chip-list-input-1']")]
+        public IWebElement FieldInputPinCodeForNextEnter;
+
+        [FindsBy(How = How.XPath, Using = "//input[@formcontrolname = 'lockGuid']")]
+        public IWebElement FieldInputLockGuideForAccess;
+
+        [FindsBy(How = How.XPath, Using = "//textarea[@formcontrolname = 'customNote']")]
+        public IWebElement FieldInputCustomNoteForAccess;
+
+        [FindsBy(How = How.XPath, Using = "//input[@id = 'add-note-image']")]
+        public IWebElement ButtonSelectImageForAccess;
+
+        [FindsBy(How = How.XPath, Using = "//span[text() = 'Image was upload successfully.']")]
+        public IWebElement MessageSuccessUploadImageForAccess;
+
+        //This element will be hidden
+        //[FindsBy(How = How.XPath, Using = "//span[text() = ' Time Restriction Enabled ']")]
+        //public IWebElement CheckBoxTimeRestrictionEnabledForAccess;
+
+        [FindsBy(How = How.XPath, Using = "//button//span[text() = 'Save']")]
+        public IWebElement ButtonSaveForLock;
+
+        [FindsBy(How = How.XPath, Using = "//button//span[text() = 'Cancel']")]
+        public IWebElement ButtonCancelForAccessNwBldngPg;
+
+        [FindsBy(How = How.XPath, Using = "//table//tbody//tr//td[text() = 'CAB']")]
+        public IWebElement RecordCABInTableAccessNwBldngPg;
+
+        [FindsBy(How = How.XPath, Using = "//table//tbody//tr//td[text() = 'Note']")]
+        public IWebElement RecordNoteInTableAccessNwBldngPg;
+
+        [FindsBy(How = How.XPath, Using = "//table//tbody//tr//td[text() = 'PinCode']")]
+        public IWebElement RecordPinCodeInTableAccessNwBldngPg;
+
         #endregion
 
         [FindsBy(How = How.XPath, Using = "//cazamio-button[@text = 'Next']")]

@@ -222,25 +222,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return this;
         }
 
-        //[AllureStep("SelectorIncludedInMonthlyRentAmenitiesForApartmentForApartment")]
-        //public static IList<IWebElement> SelectorIncludedInMonthlyRentAmenitiesForApartmentForApartment(string _itemAmenity)
-        //{
-        //    WaitUntil.WaitSomeInterval(1000);
-        //    var str = "//div[@class = 'search-choice-wrapper']";
-        //    _elementDefaultIncludedInMonthlyRentAmenitiesForApartment = Browser._Driver.FindElement(By.XPath(str));
-        //    return _elementDefaultIncludedInMonthlyRentAmenitiesForApartment.FindElements(By.XPath($".//div[contains(text(), '{_itemAmenity}')]"));
-        //}
+        #endregion
 
-        //[AllureStep("SelectIncludedInMonthlyRentAmenitiesForApartmentForApartment")]
-        //public AddApartments SelectIncludedInMonthlyRentAmenitiesForApartmentForApartment(int numberItem, string itemAmenity)
-        //{
-        //    WaitUntil.WaitSomeInterval(500);
-        //    IList<IWebElement> _numberItem = SelectorIncludedInMonthlyRentAmenitiesForApartmentForApartment(itemAmenity);
+        #region
 
-        //    _numberItem[numberItem].Click();
+        [AllureStep("ClickButtonAddLock")]
+        public AddApartments ClickButtonAddLock()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonAddLock);
+            Button.Click(ButtonAddLock);
 
-        //    return this;
-        //}
+            return this;
+        }
 
         #endregion
 

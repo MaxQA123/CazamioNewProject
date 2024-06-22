@@ -1,5 +1,7 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using NUnit.Allure.Attributes;
+using System;
+using System.IO;
 
 namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 {
@@ -195,7 +197,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         public AddApartments SelectFiveAmenities()
         {
             ClickFieldInputSearchForAmenities();
-            WaitUntil.WaitSomeInterval(5000);
             SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
             SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
             SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
@@ -209,12 +210,48 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         public AddApartments SelectAllAmenitiesIncludedInMonthlyRent()
         {
             ClickFieldInputSearchForDefaultIncludedInMonthlyRentAmenities();
-            WaitUntil.WaitSomeInterval(5000);
-            SelectIncludedInMonthlyRentAmenity(ListOfAmenitiesForApartmentIncludedInMonthlyRent.FIRST_TAG, " ");
-            SelectIncludedInMonthlyRentAmenity(ListOfAmenitiesForApartmentIncludedInMonthlyRent.FIRST_TAG, " ");
-            SelectIncludedInMonthlyRentAmenity(ListOfAmenitiesForApartmentIncludedInMonthlyRent.FIRST_TAG, " ");
-            SelectIncludedInMonthlyRentAmenity(ListOfAmenitiesForApartmentIncludedInMonthlyRent.FIRST_TAG, " ");
-            SelectIncludedInMonthlyRentAmenity(ListOfAmenitiesForApartmentIncludedInMonthlyRent.FIRST_TAG, " ");
+            Button.Click(ItemHeatIncluded);
+            Button.Click(ItemHotWaterIncluded);
+            Button.Click(ItemNetflixIncluded);
+            Button.Click(ItemSewerIncluded);
+            Button.Click(ItemWifiIncluded);
+            Button.Click(ItemWaterIncluded);
+            Button.Click(ItemSmartHubIncluded);
+            Button.Click(ItemElectricIncluded);
+            Button.Click(ItemGasIncluded);
+
+            return this;
+        }
+
+        #endregion
+
+        #region Tab Access
+
+        [AllureStep("AddItemAccessTypePinCode")]
+        public AddApartments AddItemAccessTypePinCode()
+        {
+            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.CustomElementIsVisible(ButtonAccessType);
+            Button.Click(ButtonAccessType);
+            Button.Click(ItemPinCode);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputPinCodeForFirstEnter, GenerateRandomData.RandomNumberWithoutZero(1));
+            KeyBoardActions.ClickSpaceButton();
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithoutClear(FieldInputPinCodeForNextEnter, GenerateRandomData.RandomNumberWithoutZero(1));
+            KeyBoardActions.ClickSpaceButton();
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithoutClear(FieldInputPinCodeForNextEnter, GenerateRandomData.RandomNumberWithoutZero(1));
+            KeyBoardActions.ClickSpaceButton();
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithoutClear(FieldInputPinCodeForNextEnter, GenerateRandomData.RandomNumberWithoutZero(1));
+            KeyBoardActions.ClickSpaceButton();
+            InputGeneral.InputFunctionWithClear(FieldInputCustomNoteForAccess, building.TextLorem.TextLoremForPinCode);
+            WaitUntil.WaitSomeInterval(100);
+            ButtonSelectImageForAccess.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_APARTMENT_LOCK_PIN_CODE));
+            WaitUntil.SuccessCustomElementIsVisible(MessageSuccessUploadImageForAccess);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonSaveForLock);
 
             return this;
         }

@@ -840,7 +840,9 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonGeneralNext()
                 .SelectAllAmenitiesIncludedInMonthlyRent()
                 .SelectFiveAmenities()
-                .ClickButtonGeneralNext();
+                .ClickButtonGeneralNext()
+                .ClickButtonAddLock()
+                .AddItemAccessTypePinCode();
 
             WaitUntil.WaitSomeInterval(5000);
 
