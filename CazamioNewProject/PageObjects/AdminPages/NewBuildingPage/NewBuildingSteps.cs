@@ -11,6 +11,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
 {
     public partial class NewBuilding
     {
+        #region Tab Basic Details
+
         [AllureStep("EnterFullAddressMarkAdm")]
         public NewBuilding EnterFullAddressMarkAdm()
         {
@@ -184,6 +186,28 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             return this;
         }
 
+        #endregion
+
+        #region Tab Amenities
+
+        [AllureStep("SelectFiveAmenities")]
+        public NewBuilding SelectFiveAmenities()
+        {
+            WaitUntil.WaitSomeInterval(500);
+            Pages.NewBuilding
+            .SelectAmenitiesForBuilding(ListOfAmenitiesForBuildingAdminsPage.FIRST_TAG, " ")
+            .SelectAmenitiesForBuilding(ListOfAmenitiesForBuildingAdminsPage.FIRST_TAG, " ")
+            .SelectAmenitiesForBuilding(ListOfAmenitiesForBuildingAdminsPage.FIRST_TAG, " ")
+            .SelectAmenitiesForBuilding(ListOfAmenitiesForBuildingAdminsPage.FIRST_TAG, " ")
+            .SelectAmenitiesForBuilding(ListOfAmenitiesForBuildingAdminsPage.FIRST_TAG, " ");
+
+            return this;
+        }
+
+        #endregion
+
+        #region Tab Access
+
         [AllureStep("AddItemAccessTypePinCode")]
         public NewBuilding AddItemAccessTypePinCode()
         {
@@ -230,6 +254,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
 
             return this;
         }
+
+        #endregion
+
+        #region Tab Specials
 
         [AllureStep("AddConcessionIsActive")]
         public NewBuilding AddConcessionIsActive()
@@ -431,19 +459,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             return this;
         }
 
-        [AllureStep("SelectFiveAmenities")]
-        public NewBuilding SelectFiveAmenities()
-        {
-            WaitUntil.WaitSomeInterval(500);
-            Pages.NewBuilding
-            .SelectAmenitiesForBuilding(ListOfAmenitiesForBuildingAdminsPage.FIRST_TAG, " ")
-            .SelectAmenitiesForBuilding(ListOfAmenitiesForBuildingAdminsPage.FIRST_TAG, " ")
-            .SelectAmenitiesForBuilding(ListOfAmenitiesForBuildingAdminsPage.FIRST_TAG, " ")
-            .SelectAmenitiesForBuilding(ListOfAmenitiesForBuildingAdminsPage.FIRST_TAG, " ")
-            .SelectAmenitiesForBuilding(ListOfAmenitiesForBuildingAdminsPage.FIRST_TAG, " ");
-
-            return this;
-        }
+        #endregion
 
         [AllureStep("ClickTwiceButtonGeneralNext")]
         public NewBuilding ClickTwiceButtonGeneralNext()

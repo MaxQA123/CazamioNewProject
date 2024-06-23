@@ -1,5 +1,4 @@
-﻿using NUnit.Allure.Attributes;
-using System;
+﻿using System;
 using System.Linq;
 
 namespace CazamioNewProject.GuiHelpers

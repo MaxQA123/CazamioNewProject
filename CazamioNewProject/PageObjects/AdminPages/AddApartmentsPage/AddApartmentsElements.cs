@@ -209,8 +209,11 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Note']")]
         public IWebElement ItemNote;
 
+        [FindsBy(How = How.XPath, Using = "//span[text() = 'ExistingOccupant']")]
+        public IWebElement ItemExistingOccupant;
+
         [FindsBy(How = How.XPath, Using = "//input[@autocomplete = 'ab6a07d3a4cb']")]
-        public IWebElement FieldInputLockForAccessNwBldngPg;
+        public IWebElement FieldInputLockForAccess;
 
         [FindsBy(How = How.XPath, Using = "//input[@placeholder = 'Pin term']")]
         public IWebElement FieldInputPinCodeForFirstEnter;
@@ -223,6 +226,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 
         [FindsBy(How = How.XPath, Using = "//textarea[@formcontrolname = 'customNote']")]
         public IWebElement FieldInputCustomNoteForAccess;
+
+        [FindsBy(How = How.XPath, Using = "//input[@id = 'occupant-name']")]
+        public IWebElement FieldInputName;
+
+        [FindsBy(How = How.XPath, Using = "//input[@id = 'occupant-email']")]
+        public IWebElement FieldInputEmail;
+
+        [FindsBy(How = How.XPath, Using = "//input[@id = 'occupant-phonenumber']")]
+        public IWebElement FieldInputPhoneNumber;
+
+        [FindsBy(How = How.XPath, Using = "//textarea[@id = 'occupant-note']")]
+        public IWebElement FieldInputNote;
 
         [FindsBy(How = How.XPath, Using = "//input[@id = 'add-note-image']")]
         public IWebElement ButtonSelectImageForAccess;
@@ -238,16 +253,86 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         public IWebElement ButtonSaveForLock;
 
         [FindsBy(How = How.XPath, Using = "//button//span[text() = 'Cancel']")]
-        public IWebElement ButtonCancelForAccessNwBldngPg;
+        public IWebElement ButtonCancelForAccess;
 
         [FindsBy(How = How.XPath, Using = "//table//tbody//tr//td[text() = 'CAB']")]
-        public IWebElement RecordCABInTableAccessNwBldngPg;
+        public IWebElement RecordCABInTableAccess;
 
         [FindsBy(How = How.XPath, Using = "//table//tbody//tr//td[text() = 'Note']")]
-        public IWebElement RecordNoteInTableAccessNwBldngPg;
+        public IWebElement RecordNoteInTableAccess;
 
         [FindsBy(How = How.XPath, Using = "//table//tbody//tr//td[text() = 'PinCode']")]
-        public IWebElement RecordPinCodeInTableAccessNwBldngPg;
+        public IWebElement RecordPinCodeInTableAccess;
+
+        #endregion
+
+        #region TabSpecials
+
+        [FindsBy(How = How.XPath, Using = "//a[text() = 'Free Stuff']")]
+        public IWebElement TabFreeStuff;
+
+        [FindsBy(How = How.XPath, Using = "//a[text() = 'Concessions']")]
+        public IWebElement TabConcessions;
+
+        [FindsBy(How = How.XPath, Using = "//button//span[text() = 'Add']")]
+        public IWebElement ButtonAddSpecials;
+
+        [FindsBy(How = How.XPath, Using = "//input[@formcontrolname = 'name']")]
+        public IWebElement FieldInputNameSpecials;
+
+        [FindsBy(How = How.XPath, Using = "//input[@formcontrolname = 'monthsFree']")]
+        public IWebElement FieldInputMonthsFree;
+
+        [FindsBy(How = How.XPath, Using = "//input[@formcontrolname = 'leaseTerms']")]
+        public IWebElement FieldInputLeaseTerms;
+
+        [FindsBy(How = How.XPath, Using = "//mat-button-toggle-group//mat-button-toggle[2]")]
+        public IWebElement ButtonYesSpecials;
+
+        [FindsBy(How = How.XPath, Using = "//input[@formcontrolname = 'dateFrom']")]
+        public IWebElement FieldInputDateFrom;
+
+        [FindsBy(How = How.XPath, Using = "//input[@formcontrolname = 'dateTo']")]
+        public IWebElement FieldInputDateTo;
+
+        [FindsBy(How = How.XPath, Using = "//button//span[text() = 'Save']")]
+        public IWebElement ButtonSaveSpecials;
+
+        [FindsBy(How = How.XPath, Using = "//button//span[text() = 'Cancel']")]
+        public IWebElement ButtonCancelSpecials;
+
+        [FindsBy(How = How.XPath, Using = "//div[@class = 'building-specials-container ng-star-inserted'] //table//tbody//td[1]")]
+        public IWebElement RecordNameInTableConcessions;
+
+        [FindsBy(How = How.XPath, Using = "//div[@class = 'building-specials-container ng-star-inserted'] //table//tbody//td[1]")]
+        public IWebElement RecordNameInTableFreeStuff;
+
+        [FindsBy(How = How.XPath, Using = "//input[@placeholder = 'Search for specials']")]
+        public IWebElement FieldInputSelectItemsFreeStuff;
+
+        [FindsBy(How = How.XPath, Using = "//div[text() = ' Free Netflix ']")]
+        public IWebElement ItemFreeNetflix;
+
+        [FindsBy(How = How.XPath, Using = "//div[text() = ' Google Speaker ']")]
+        public IWebElement ItemGoogleSpeaker;
+
+        [FindsBy(How = How.XPath, Using = "//label[text() = 'Application Submitted ']")]
+        public IWebElement ButtonApplicationSubmittedTriggerEvent;
+
+        [FindsBy(How = How.XPath, Using = "//label[text() = 'Lease Signed']")]
+        public IWebElement ButtonLeaseSignedTriggerEvent;
+
+        [FindsBy(How = How.XPath, Using = "//label[text() = 'Move In']")]
+        public IWebElement ButtonMoveInTriggerEvent;
+
+        [FindsBy(How = How.XPath, Using = "//label[text() = 'Self Tour']")]
+        public IWebElement ButtonSelfTourTriggerEvent;
+
+        [FindsBy(How = How.XPath, Using = "//mat-checkbox//label[text() = 'Is Active']")]
+        public IWebElement CheckBoxIsActive;
+
+        [FindsBy(How = How.XPath, Using = "//input[@Id = 'additional_info']")]
+        public IWebElement FieldInputAdditionalInfo;
 
         #endregion
 

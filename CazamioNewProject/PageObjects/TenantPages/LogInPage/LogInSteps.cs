@@ -15,7 +15,7 @@ namespace CazamioNewProject.PageObjects.TenantPages.LogInPage
         {
             WaitUntil.CustomElementIsVisible(FieldInputEmailAddress);
             WaitUntil.CustomElementIsClickable(FieldInputEmailAddress);
-            InputGeneral.InputFunctionWithClear(FieldInputEmailAddress, tenantCreator.EmailAddressTenant);
+            InputGeneral.InputFunctionWithClear(FieldInputEmailAddress, tenantCreator.Email.CreatedEmailTenant);
             InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
 
             return this;

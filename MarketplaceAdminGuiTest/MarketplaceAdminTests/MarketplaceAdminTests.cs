@@ -842,7 +842,13 @@ namespace MarketplaceAdminGuiTest
                 .SelectFiveAmenities()
                 .ClickButtonGeneralNext()
                 .ClickButtonAddLock()
-                .AddItemAccessTypePinCode();
+                .AddItemAccessTypePinCode()
+                .ClickButtonAddLock()
+                .AddItemAccessTypeNote()
+                .ClickButtonAddLock()
+                .AddItemAccessTypeExistingOccupant();
+                //Add Assertion
+
 
             WaitUntil.WaitSomeInterval(5000);
 

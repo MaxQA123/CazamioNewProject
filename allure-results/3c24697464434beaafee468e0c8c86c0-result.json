@@ -1,0 +1,2710 @@
+{
+  "uuid": "02ab97fd-ec79-49c5-a97c-05043b54990c-tr-0-1009",
+  "historyId": "MarketplaceAdminGuiTest.TestsBaseGui.AddApartmentAssignedBroker",
+  "fullName": "MarketplaceAdminGuiTest.TestsBaseGui.AddApartmentAssignedBroker",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "MarketplaceAdminGuiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddApartmentAssignedBroker"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "MarketplaceAdmin"
+    },
+    {
+      "name": "subSuite",
+      "value": "AddApartmentAssignedBroker"
+    }
+  ],
+  "links": [],
+  "name": "AddApartmentAssignedBroker",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.NoSuchElementException : Could not find element by: By.XPath: //input[@id = 'add-note-image']; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception",
+    "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.SendKeys(String text)\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_AddItemAccessTypeExistingOccupant_100663762_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApartmentsPage\\AddApartmentsSteps.cs:line 293\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_AddItemAccessTypeExistingOccupant_100663762_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_AddItemAccessTypeExistingOccupant_100663762_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.AddItemAccessTypeExistingOccupant() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApartmentsPage\\AddApartmentsActions.cs:line 50\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.AddApartmentAssignedBroker() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 837"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "AddApartmentAssignedBroker",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.NoSuchElementException : Could not find element by: By.XPath: //input[@id = 'add-note-image']; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception",
+        "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.SendKeys(String text)\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_AddItemAccessTypeExistingOccupant_100663762_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApartmentsPage\\AddApartmentsSteps.cs:line 293\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_AddItemAccessTypeExistingOccupant_100663762_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_AddItemAccessTypeExistingOccupant_100663762_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.AddItemAccessTypeExistingOccupant() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApartmentsPage\\AddApartmentsActions.cs:line 50\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.AddApartmentAssignedBroker() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 837"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "EnterEmailPasswordAsMarketplaceAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "marketplaceadmin15@putsbox.com"
+                }
+              ],
+              "start": 1719135628190,
+              "stop": 1719135628827
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Qwerty123!"
+                }
+              ],
+              "start": 1719135628941,
+              "stop": 1719135629421
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135628189,
+          "stop": 1719135629421
+        },
+        {
+          "name": "ClickIconShow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135629422,
+              "stop": 1719135630085
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135629422,
+          "stop": 1719135630085
+        },
+        {
+          "name": "ClickButtonLetsGo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135632098,
+              "stop": 1719135632903
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135630086,
+          "stop": 1719135633915
+        },
+        {
+          "name": "GetUserNameFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135633919,
+          "stop": 1719135642846
+        },
+        {
+          "name": "GetUserNameRoleFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135642849,
+          "stop": 1719135642911
+        },
+        {
+          "name": "VerifyMarketplaceAdminUserNameAndRole",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Mark Adm"
+            },
+            {
+              "name": "String",
+              "value": "Marketplace Admin"
+            }
+          ],
+          "start": 1719135642914,
+          "stop": 1719135642970
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135647974,
+              "stop": 1719135648610
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135642971,
+          "stop": 1719135648610
+        },
+        {
+          "name": "SearchBuildingMarkAdmBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "1 Washington Square"
+                }
+              ],
+              "start": 1719135656168,
+              "stop": 1719135656963
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135648629,
+          "stop": 1719135656963
+        },
+        {
+          "name": "SelectItemFirst",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135659054,
+              "stop": 1719135659834
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135656964,
+          "stop": 1719135659834
+        },
+        {
+          "name": "VerifyTitleBuildingViewPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135659838,
+          "stop": 1719135665828
+        },
+        {
+          "name": "GetValueFromFieldNotInputAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135665829,
+          "stop": 1719135667886
+        },
+        {
+          "name": "GetValueFromFieldNotInputBuildingName",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135667887,
+          "stop": 1719135667945
+        },
+        {
+          "name": "VerifyBuildingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "1 Washington Square"
+            },
+            {
+              "name": "String",
+              "value": "1 Washington Square"
+            }
+          ],
+          "start": 1719135667946,
+          "stop": 1719135668061
+        },
+        {
+          "name": "ClickTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135668162,
+              "stop": 1719135668774
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135668062,
+          "stop": 1719135668774
+        },
+        {
+          "name": "ScrollToDown",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135668775,
+          "stop": 1719135668806
+        },
+        {
+          "name": "ClickButtonAddInTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135668879,
+              "stop": 1719135669649
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135668806,
+          "stop": 1719135669649
+        },
+        {
+          "name": "VerifyTitleAddApartmentsPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135669682,
+          "stop": 1719135670771
+        },
+        {
+          "name": "GetBuildingName",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135670847,
+              "stop": 1719135671582
+            },
+            {
+              "name": "ClickEnterButton",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1719135673662,
+              "stop": 1719135673681
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135670776,
+          "stop": 1719135673681
+        },
+        {
+          "name": "VerifyBuildingNameAddApartmentsPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "QA-Building NAME (12345 !@#$%) 1 Washington Square"
+            },
+            {
+              "name": "String",
+              "value": "QA-Building NAME (12345 !@#$%) 1 Washington Square"
+            }
+          ],
+          "start": 1719135673687,
+          "stop": 1719135676701
+        },
+        {
+          "name": "EnterToAllFieldsMarkAdmAssignedBrkrOneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "9999"
+                }
+              ],
+              "start": 1719135676728,
+              "stop": 1719135677185
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "1"
+                }
+              ],
+              "start": 1719135677296,
+              "stop": 1719135677805
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "9"
+                }
+              ],
+              "start": 1719135677922,
+              "stop": 1719135678422
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "1"
+                }
+              ],
+              "start": 1719135678529,
+              "stop": 1719135679008
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "6"
+                }
+              ],
+              "start": 1719135679124,
+              "stop": 1719135679614
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "9"
+                }
+              ],
+              "start": 1719135679718,
+              "stop": 1719135680179
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "6"
+                }
+              ],
+              "start": 1719135680280,
+              "stop": 1719135680728
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "1"
+                }
+              ],
+              "start": 1719135680842,
+              "stop": 1719135681331
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "3"
+                }
+              ],
+              "start": 1719135681434,
+              "stop": 1719135681896
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "3"
+                }
+              ],
+              "start": 1719135682001,
+              "stop": 1719135682494
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135676702,
+          "stop": 1719135682494
+        },
+        {
+          "name": "GetLeasePrice",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135682500,
+          "stop": 1719135682556
+        },
+        {
+          "name": "GetUnitNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135682558,
+          "stop": 1719135682597
+        },
+        {
+          "name": "SelectStatusVacant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135682658,
+              "stop": 1719135683278
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135683381,
+              "stop": 1719135683986
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135682600,
+          "stop": 1719135683986
+        },
+        {
+          "name": "SelectAgent",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135684051,
+              "stop": 1719135684937
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElement",
+                  "value": "Element (id = f.9C78E8FEC5F86D9BDB8C9F0483B5BCD1.d.DD4ACF69A0E46D276A6C394BFE1A44C7.e.540)"
+                }
+              ],
+              "start": 1719135685979,
+              "stop": 1719135686622
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135683987,
+          "stop": 1719135686622
+        },
+        {
+          "name": "SelectCurrentDateAvailableFrom",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135686658,
+              "stop": 1719135687409
+            },
+            {
+              "name": "SelectCurrentDay",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1719135687522,
+              "stop": 1719135688696
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135686623,
+          "stop": 1719135688696
+        },
+        {
+          "name": "SelectApartmentTypeMultiFamily",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135688736,
+              "stop": 1719135689336
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135689397,
+              "stop": 1719135689992
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135688697,
+          "stop": 1719135689992
+        },
+        {
+          "name": "GetStatus",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135690064,
+              "stop": 1719135690648
+            },
+            {
+              "name": "ClickEnterButton",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1719135690708,
+              "stop": 1719135690719
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135689999,
+          "stop": 1719135690719
+        },
+        {
+          "name": "ScrollToDownWebPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135690719,
+          "stop": 1719135690741
+        },
+        {
+          "name": "ClickButtonSetFromBuilding",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135690785,
+              "stop": 1719135691376
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135690745,
+          "stop": 1719135691376
+        },
+        {
+          "name": "GetApartmentHoldDeposit",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135691383,
+          "stop": 1719135691450
+        },
+        {
+          "name": "VerifyApartmentHoldDepositAddApartmentsPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "500"
+            }
+          ],
+          "start": 1719135691454,
+          "stop": 1719135691455
+        },
+        {
+          "name": "GetRentalTerms",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135691460,
+          "stop": 1719135691519
+        },
+        {
+          "name": "VerifyRentalTermsAddApartmentsPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "12 months"
+            }
+          ],
+          "start": 1719135691522,
+          "stop": 1719135691522
+        },
+        {
+          "name": "GetRequiredDocumentTwoRecentPaystubs",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135691527,
+          "stop": 1719135691699
+        },
+        {
+          "name": "GetRequiredDocumentItemEmploymentVerificationLetter",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135691703,
+          "stop": 1719135691863
+        },
+        {
+          "name": "GetRequiredDocumentGovIssuedId",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135691867,
+          "stop": 1719135692002
+        },
+        {
+          "name": "GetRequiredDocumentTwoMostRecentBankStatements",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135692004,
+          "stop": 1719135692168
+        },
+        {
+          "name": "GetRequiredDocumentThreeMostRecentRentPayments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135692171,
+          "stop": 1719135692318
+        },
+        {
+          "name": "GetRequiredDocumentMostRecentTaxReturn",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135692324,
+          "stop": 1719135692480
+        },
+        {
+          "name": "VerifyRequiredDocumentsByDefaultMySpaceAddApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "2 Recent paystubs "
+            },
+            {
+              "name": "String",
+              "value": "Employment Verification Letter "
+            },
+            {
+              "name": "String",
+              "value": "Gov issued ID "
+            },
+            {
+              "name": "String",
+              "value": "2 Most recent bank statements "
+            },
+            {
+              "name": "String",
+              "value": "3 most recent rent payments "
+            },
+            {
+              "name": "String",
+              "value": "Most recent tax return "
+            }
+          ],
+          "start": 1719135692485,
+          "stop": 1719135692486
+        },
+        {
+          "name": "EnterDescriptionInternalNotes",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Description for APARTMENT (12345) (*&%$#@!) (098765) (*&^) Lorem APARTMENT ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,"
+                }
+              ],
+              "start": 1719135692520,
+              "stop": 1719135698998
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Internal Notes for APARTMENT (12345) (*&%$#@!) (09876) (*&^) Lorem APARTMENT ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,"
+                }
+              ],
+              "start": 1719135699046,
+              "stop": 1719135705397
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135692487,
+          "stop": 1719135705397
+        },
+        {
+          "name": "ClickButtonGeneralNext",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135705555,
+              "stop": 1719135706265
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135705397,
+          "stop": 1719135706265
+        },
+        {
+          "name": "SelectAllAmenitiesIncludedInMonthlyRent",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickFieldInputSearchForDefaultIncludedInMonthlyRentAmenities",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [
+                {
+                  "name": "Click",
+                  "status": "passed",
+                  "statusDetails": {
+                    "known": false,
+                    "muted": false,
+                    "flaky": false
+                  },
+                  "stage": "finished",
+                  "steps": [],
+                  "attachments": [],
+                  "parameters": [
+                    {
+                      "name": "WebElementProxy",
+                      "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                    }
+                  ],
+                  "start": 1719135706371,
+                  "stop": 1719135706985
+                }
+              ],
+              "attachments": [],
+              "parameters": [],
+              "start": 1719135706266,
+              "stop": 1719135706985
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135706985,
+              "stop": 1719135707581
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135707581,
+              "stop": 1719135708190
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135708190,
+              "stop": 1719135708806
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135708806,
+              "stop": 1719135709454
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135709454,
+              "stop": 1719135710081
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135710081,
+              "stop": 1719135710693
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135710693,
+              "stop": 1719135711338
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135711338,
+              "stop": 1719135711951
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135711951,
+              "stop": 1719135712564
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135706266,
+          "stop": 1719135712564
+        },
+        {
+          "name": "SelectFiveAmenities",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickFieldInputSearchForAmenities",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [
+                {
+                  "name": "Click",
+                  "status": "passed",
+                  "statusDetails": {
+                    "known": false,
+                    "muted": false,
+                    "flaky": false
+                  },
+                  "stage": "finished",
+                  "steps": [],
+                  "attachments": [],
+                  "parameters": [
+                    {
+                      "name": "WebElementProxy",
+                      "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                    }
+                  ],
+                  "start": 1719135712659,
+                  "stop": 1719135713271
+                }
+              ],
+              "attachments": [],
+              "parameters": [],
+              "start": 1719135712566,
+              "stop": 1719135713271
+            },
+            {
+              "name": "SelectAmenitiesForApartment",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [
+                {
+                  "name": "SelectorAmenitiesForApartment",
+                  "status": "passed",
+                  "statusDetails": {
+                    "known": false,
+                    "muted": false,
+                    "flaky": false
+                  },
+                  "stage": "finished",
+                  "steps": [],
+                  "attachments": [],
+                  "parameters": [
+                    {
+                      "name": "String",
+                      "value": " "
+                    }
+                  ],
+                  "start": 1719135713274,
+                  "stop": 1719135713332
+                }
+              ],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "0"
+                },
+                {
+                  "name": "String",
+                  "value": " "
+                }
+              ],
+              "start": 1719135713272,
+              "stop": 1719135713447
+            },
+            {
+              "name": "SelectAmenitiesForApartment",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [
+                {
+                  "name": "SelectorAmenitiesForApartment",
+                  "status": "passed",
+                  "statusDetails": {
+                    "known": false,
+                    "muted": false,
+                    "flaky": false
+                  },
+                  "stage": "finished",
+                  "steps": [],
+                  "attachments": [],
+                  "parameters": [
+                    {
+                      "name": "String",
+                      "value": " "
+                    }
+                  ],
+                  "start": 1719135713447,
+                  "stop": 1719135713489
+                }
+              ],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "0"
+                },
+                {
+                  "name": "String",
+                  "value": " "
+                }
+              ],
+              "start": 1719135713447,
+              "stop": 1719135713595
+            },
+            {
+              "name": "SelectAmenitiesForApartment",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [
+                {
+                  "name": "SelectorAmenitiesForApartment",
+                  "status": "passed",
+                  "statusDetails": {
+                    "known": false,
+                    "muted": false,
+                    "flaky": false
+                  },
+                  "stage": "finished",
+                  "steps": [],
+                  "attachments": [],
+                  "parameters": [
+                    {
+                      "name": "String",
+                      "value": " "
+                    }
+                  ],
+                  "start": 1719135713595,
+                  "stop": 1719135713631
+                }
+              ],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "0"
+                },
+                {
+                  "name": "String",
+                  "value": " "
+                }
+              ],
+              "start": 1719135713595,
+              "stop": 1719135713867
+            },
+            {
+              "name": "SelectAmenitiesForApartment",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [
+                {
+                  "name": "SelectorAmenitiesForApartment",
+                  "status": "passed",
+                  "statusDetails": {
+                    "known": false,
+                    "muted": false,
+                    "flaky": false
+                  },
+                  "stage": "finished",
+                  "steps": [],
+                  "attachments": [],
+                  "parameters": [
+                    {
+                      "name": "String",
+                      "value": " "
+                    }
+                  ],
+                  "start": 1719135713867,
+                  "stop": 1719135713903
+                }
+              ],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "0"
+                },
+                {
+                  "name": "String",
+                  "value": " "
+                }
+              ],
+              "start": 1719135713867,
+              "stop": 1719135714013
+            },
+            {
+              "name": "SelectAmenitiesForApartment",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [
+                {
+                  "name": "SelectorAmenitiesForApartment",
+                  "status": "passed",
+                  "statusDetails": {
+                    "known": false,
+                    "muted": false,
+                    "flaky": false
+                  },
+                  "stage": "finished",
+                  "steps": [],
+                  "attachments": [],
+                  "parameters": [
+                    {
+                      "name": "String",
+                      "value": " "
+                    }
+                  ],
+                  "start": 1719135714014,
+                  "stop": 1719135714051
+                }
+              ],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "Int32",
+                  "value": "0"
+                },
+                {
+                  "name": "String",
+                  "value": " "
+                }
+              ],
+              "start": 1719135714013,
+              "stop": 1719135714165
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135712565,
+          "stop": 1719135714165
+        },
+        {
+          "name": "ClickButtonGeneralNext",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135714333,
+              "stop": 1719135714968
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135714165,
+          "stop": 1719135714968
+        },
+        {
+          "name": "ClickButtonAddLock",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135715010,
+              "stop": 1719135715696
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135714969,
+          "stop": 1719135715696
+        },
+        {
+          "name": "AddItemAccessTypePinCode",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135718734,
+              "stop": 1719135719329
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135719329,
+              "stop": 1719135719974
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "6"
+                }
+              ],
+              "start": 1719135720076,
+              "stop": 1719135720536
+            },
+            {
+              "name": "ClickSpaceButton",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1719135720537,
+              "stop": 1719135720571
+            },
+            {
+              "name": "InputFunctionWithoutClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "3"
+                }
+              ],
+              "start": 1719135720682,
+              "stop": 1719135720871
+            },
+            {
+              "name": "ClickSpaceButton",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1719135720871,
+              "stop": 1719135720900
+            },
+            {
+              "name": "InputFunctionWithoutClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "6"
+                }
+              ],
+              "start": 1719135721020,
+              "stop": 1719135721122
+            },
+            {
+              "name": "ClickSpaceButton",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1719135721122,
+              "stop": 1719135721137
+            },
+            {
+              "name": "InputFunctionWithoutClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "4"
+                }
+              ],
+              "start": 1719135721240,
+              "stop": 1719135721351
+            },
+            {
+              "name": "ClickSpaceButton",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1719135721351,
+              "stop": 1719135721374
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Lorem PINCODE APARTMENT 12345 (09876) *&^% $#@! Lorem APARTMENT ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,"
+                }
+              ],
+              "start": 1719135721374,
+              "stop": 1719135724644
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135732547,
+              "stop": 1719135733200
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135715697,
+          "stop": 1719135733200
+        },
+        {
+          "name": "ClickButtonAddLock",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135733261,
+              "stop": 1719135733950
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135733200,
+          "stop": 1719135733950
+        },
+        {
+          "name": "AddItemAccessTypeNote",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135736982,
+              "stop": 1719135737573
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135737574,
+              "stop": 1719135738190
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Lorem NOTE APARTMENT 12345 (09876) *&^% $#@! Lorem APARTMENT ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,"
+                }
+              ],
+              "start": 1719135738291,
+              "stop": 1719135741299
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135742542,
+              "stop": 1719135743229
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135733951,
+          "stop": 1719135743229
+        },
+        {
+          "name": "ClickButtonAddLock",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135743273,
+              "stop": 1719135743926
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135743229,
+          "stop": 1719135743926
+        },
+        {
+          "name": "AddItemAccessTypeExistingOccupant",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Could not find element by: By.XPath: //input[@id = 'add-note-image']; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception",
+            "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.SendKeys(String text)\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_AddItemAccessTypeExistingOccupant_100663762_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApartmentsPage\\AddApartmentsSteps.cs:line 293\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_AddItemAccessTypeExistingOccupant_100663762_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135746959,
+              "stop": 1719135747540
+            },
+            {
+              "name": "Click",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1719135747540,
+              "stop": 1719135748198
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Ayana"
+                }
+              ],
+              "start": 1719135748311,
+              "stop": 1719135748794
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "ghqpf921yr@putsbox.com"
+                }
+              ],
+              "start": 1719135748901,
+              "stop": 1719135749431
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "5119488233"
+                }
+              ],
+              "start": 1719135749542,
+              "stop": 1719135750041
+            },
+            {
+              "name": "InputFunctionWithClear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                },
+                {
+                  "name": "String",
+                  "value": "Lorem ExistingOccupant APARTMENT 12345 (09876) *&^% $#@!"
+                }
+              ],
+              "start": 1719135750164,
+              "stop": 1719135750827
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1719135743926,
+          "stop": 1719135751102
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "8c94478787cd4f9aba99607184a017b2-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1719135618273,
+      "stop": 1719135754509
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1719135618271,
+  "stop": 1719135754522
+}

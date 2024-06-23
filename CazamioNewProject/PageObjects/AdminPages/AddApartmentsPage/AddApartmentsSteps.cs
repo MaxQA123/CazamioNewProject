@@ -246,12 +246,255 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithoutClear(FieldInputPinCodeForNextEnter, GenerateRandomData.RandomNumberWithoutZero(1));
             KeyBoardActions.ClickSpaceButton();
-            InputGeneral.InputFunctionWithClear(FieldInputCustomNoteForAccess, building.TextLorem.TextLoremForPinCode);
+            InputGeneral.InputFunctionWithClear(FieldInputCustomNoteForAccess, apartment.TextVariable.TextLongPincode);
             WaitUntil.WaitSomeInterval(100);
             ButtonSelectImageForAccess.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_APARTMENT_LOCK_PIN_CODE));
             WaitUntil.SuccessCustomElementIsVisible(MessageSuccessUploadImageForAccess);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSaveForLock);
+
+            return this;
+        }
+
+        [AllureStep("AddItemAccessTypeNote")]
+        public AddApartments AddItemAccessTypeNote()
+        {
+            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.CustomElementIsVisible(ButtonAccessType);
+            Button.Click(ButtonAccessType);
+            Button.Click(ItemNote);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputCustomNoteForAccess, apartment.TextVariable.TextLongNote);
+            WaitUntil.WaitSomeInterval(100);
+            ButtonSelectImageForAccess.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_APARTMENT_LOCK_NOTE));
+            WaitUntil.SuccessCustomElementIsVisible(MessageSuccessUploadImageForAccess);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonSaveForLock);
+
+            return this;
+        }
+
+        [AllureStep("AddItemAccessTypeExistingOccupant")]
+        public AddApartments AddItemAccessTypeExistingOccupant()
+        {
+            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.CustomElementIsVisible(ButtonAccessType);
+            Button.Click(ButtonAccessType);
+            Button.Click(ItemExistingOccupant);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputName, tenantCreator.NameData.RandomFirstName);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, tenantCreator.Email.RandomEmailAddressPutsBox);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputPhoneNumber, GenerateRandomData.RandomPhoneNumber(10));
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputNote, apartment.TextVariable.TextLongExistingOccupant);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonSaveForLock);
+
+            return this;
+        }
+
+        #endregion
+
+        #region Tab Specials
+
+        [AllureStep("AddConcessionIsActive")]
+        public AddApartments AddConcessionIsActive()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
+            WaitUntil.CustomElementIsClickable(FieldInputNameSpecials);
+            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.Concessions.Name);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.Concessions.MonthsFree);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.LeaseTerms);
+            WaitUntil.WaitSomeInterval(100);
+            KeyBoardActions.ClickArrowDown();
+            KeyBoardActions.ClickEnterButton();
+            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, building.AdditionalInfo.ShortInfo);
+            WaitUntil.WaitSomeInterval(100);
+            KeyBoardActions.ClickArrowDown();
+            KeyBoardActions.ClickEnterButton();
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonYesSpecials);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(FieldInputDateFrom);
+            WaitUntil.WaitSomeInterval(100);
+            Pages.DatePicker
+                .SelectCurrentDay();
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(FieldInputDateTo);
+            WaitUntil.WaitSomeInterval(100);
+            Pages.DatePicker
+                .SelectCurrentDayPlusOneDay();
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonSaveSpecials);
+
+            return this;
+        }
+
+        [AllureStep("AddConcessionIsActiveWithoutName")]
+        public AddApartments AddConcessionIsActiveWithoutName()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
+            WaitUntil.CustomElementIsClickable(FieldInputNameSpecials);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.Concessions.MonthsFree);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.LeaseTerms);
+            WaitUntil.WaitSomeInterval(100);
+            KeyBoardActions.ClickArrowDown();
+            KeyBoardActions.ClickEnterButton();
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonYesSpecials);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(FieldInputDateFrom);
+            WaitUntil.WaitSomeInterval(100);
+            Pages.DatePicker
+                .SelectCurrentDay();
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(FieldInputDateTo);
+            WaitUntil.WaitSomeInterval(100);
+            Pages.DatePicker
+                .SelectCurrentDayPlusOneDay();
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonSaveSpecials);
+
+            return this;
+        }
+
+        [AllureStep("AddConcessionInActive")]
+        public AddApartments AddConcessionInActive()
+        {
+            WaitUntil.CustomElementIsVisible(CheckBoxIsActive);
+            WaitUntil.ElementIsClickable(CheckBoxIsActive);
+            Button.Click(CheckBoxIsActive);
+            WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
+            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.Concessions.Name);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.Concessions.MonthsFree);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.LeaseTerms);
+            WaitUntil.WaitSomeInterval(100);
+            KeyBoardActions.ClickArrowDown();
+            KeyBoardActions.ClickEnterButton();
+            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, building.AdditionalInfo.LongInfo);
+            WaitUntil.WaitSomeInterval(100);
+            KeyBoardActions.ClickArrowDown();
+            KeyBoardActions.ClickEnterButton();
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonYesSpecials);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(FieldInputDateFrom);
+            WaitUntil.WaitSomeInterval(100);
+            Pages.DatePicker
+                .SelectCurrentDay();
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(FieldInputDateTo);
+            WaitUntil.WaitSomeInterval(100);
+            Pages.DatePicker
+                .SelectCurrentDayPlusOneDay();
+            KeyBoardActions.ScrollToDown();
+            Button.Click(ButtonMoveInTriggerEvent);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonSaveSpecials);
+
+            return this;
+        }
+
+        [AllureStep("AddFreeStuffIsActive")]
+        public AddApartments AddFreeStuffIsActive()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
+            WaitUntil.CustomElementIsClickable(FieldInputNameSpecials);
+            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.FreeStuff.Name);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(FieldInputSelectItemsFreeStuff);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ItemFreeNetflix);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ItemGoogleSpeaker);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonYesSpecials);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(FieldInputDateFrom);
+            WaitUntil.WaitSomeInterval(100);
+            Pages.DatePicker
+                .SelectCurrentDay();
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(FieldInputDateTo);
+            WaitUntil.WaitSomeInterval(100);
+            Pages.DatePicker
+                .SelectCurrentDayPlusOneDay();
+            WaitUntil.WaitSomeInterval(100);
+            KeyBoardActions.ScrollToDown();
+            Button.Click(ButtonLeaseSignedTriggerEvent);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonSaveSpecials);
+
+            return this;
+        }
+
+        [AllureStep("AddFreeStuffIsActiveWithoutName")]
+        public AddApartments AddFreeStuffIsActiveWithoutName()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
+            WaitUntil.CustomElementIsClickable(FieldInputNameSpecials);
+            Button.Click(FieldInputSelectItemsFreeStuff);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ItemFreeNetflix);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ItemGoogleSpeaker);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonYesSpecials);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(FieldInputDateFrom);
+            WaitUntil.WaitSomeInterval(100);
+            Pages.DatePicker
+                .SelectCurrentDay();
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(FieldInputDateTo);
+            WaitUntil.WaitSomeInterval(100);
+            Pages.DatePicker
+                .SelectCurrentDayPlusOneDay();
+            WaitUntil.WaitSomeInterval(100);
+            KeyBoardActions.ScrollToDown();
+            Button.Click(ButtonLeaseSignedTriggerEvent);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonSaveSpecials);
+
+            return this;
+        }
+
+        [AllureStep("AddFreeStuffInActive")]
+        public AddApartments AddFreeStuffInActive()
+        {
+            WaitUntil.CustomElementIsVisible(CheckBoxIsActive);
+            WaitUntil.ElementIsClickable(CheckBoxIsActive);
+            Button.Click(CheckBoxIsActive);
+            WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
+            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.FreeStuff.Name);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(FieldInputSelectItemsFreeStuff);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ItemFreeNetflix);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonYesSpecials);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(FieldInputDateFrom);
+            WaitUntil.WaitSomeInterval(100);
+            Pages.DatePicker
+                .SelectCurrentDay();
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(FieldInputDateTo);
+            WaitUntil.WaitSomeInterval(100);
+            Pages.DatePicker
+                .SelectCurrentDayPlusOneDay();
+            WaitUntil.WaitSomeInterval(100);
+            KeyBoardActions.ScrollToDown();
+            Button.Click(ButtonMoveInTriggerEvent);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonSaveSpecials);
 
             return this;
         }

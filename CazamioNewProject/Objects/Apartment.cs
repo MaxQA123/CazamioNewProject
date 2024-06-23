@@ -132,6 +132,12 @@ namespace CazamioNewProject.Objects
             public string TextLongInternalNotes { get; set; }
             public string TextShortDescription { get; set; }
             public string TextShortInternalNotes { get; set; }
+            public string TextLongExistingOccupant { get; set; }
+            public string TextShortExistingOccupant { get; set; }
+            public string TextLongPincode { get; set; }
+            public string TextLongNote { get; set; }
+            public string TextShortPincode { get; set; }
+            public string TextShortNote { get; set; }
         }
 
         public class HoldDepositInfo
@@ -196,10 +202,13 @@ namespace CazamioNewProject.Objects
             string itemEighteenMonths = "18 months";
             string defaultRentalTerms = "12 months";
 
-
             string shortDescription = "Description for APARTMENT (12345) (*&%$#@!) (098765) (*&^)";
             string shortInternalNotes = "Internal Notes for APARTMENT (12345) (*&%$#@!) (09876) (*&^)";
             string textLong = "Lorem APARTMENT ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,";
+            string textShortPincode = "Lorem PINCODE APARTMENT 12345 (09876) *&^% $#@!";
+            string textShortNote = "Lorem NOTE APARTMENT 12345 (09876) *&^% $#@!";
+            string textShortExistingOccupant = "Lorem ExistingOccupant APARTMENT 12345 (09876) *&^% $#@!";
+
             string holdDepositOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
             string holdDepositTwoNumber = GenerateRandomData.RandomNumberWithoutZero(2);
             string holdDepositThreeNumber = GenerateRandomData.RandomNumberWithoutZero(3);
@@ -303,7 +312,13 @@ namespace CazamioNewProject.Objects
                     TextLongDescription = shortDescription + " " + textLong,
                     TextLongInternalNotes = shortInternalNotes + " " + textLong,
                     TextShortDescription = shortDescription,
-                    TextShortInternalNotes = shortInternalNotes
+                    TextShortInternalNotes = shortInternalNotes,
+                    TextLongPincode = textShortPincode + " " + textLong,
+                    TextLongNote = textShortNote + " " + textLong,
+                    TextShortPincode = textShortPincode,
+                    TextShortNote = textShortNote,
+                    TextShortExistingOccupant = textShortExistingOccupant,
+                    TextLongExistingOccupant = textShortExistingOccupant + " " + textLong
                 },
                 HoldDeposit = new HoldDepositInfo
                 {
