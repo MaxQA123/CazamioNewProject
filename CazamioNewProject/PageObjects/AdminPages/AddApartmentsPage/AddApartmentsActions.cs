@@ -17,7 +17,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         RequiredDocuments requiredDocuments = new RequiredDocuments().Generate();
         TenantCreator tenantCreator = new TenantCreator().Generate();
 
-        #region TabUnits
+        #region Tab Units
 
         [AllureStep("GetLeasePrice")]
         public string GetLeasePrice()
@@ -139,7 +139,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 
         #endregion
 
-        #region TabAmenities
+        #region Tab Amenities
 
         [AllureStep("ClickFieldInputSearchForAmenities")]
         public AddApartments ClickFieldInputSearchForAmenities()
@@ -225,13 +225,67 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 
         #endregion
 
-        #region
+        #region Tab Access
 
         [AllureStep("ClickButtonAddLock")]
         public AddApartments ClickButtonAddLock()
         {
             WaitUntil.CustomElementIsVisible(ButtonAddLock);
             Button.Click(ButtonAddLock);
+
+            return this;
+        }
+
+        #endregion
+
+        #region Tab Specials
+
+        [AllureStep("ClickTabConcessions")]
+        public AddApartments ClickTabConcessions()
+        {
+            WaitUntil.CustomElementIsVisible(TabConcessions);
+            WaitUntil.ElementIsClickable(TabConcessions);
+            Button.Click(TabConcessions);
+
+            return this;
+        }
+
+        [AllureStep("ClickTabFreeStuff")]
+        public AddApartments ClickTabFreeStuff()
+        {
+            WaitUntil.CustomElementIsVisible(TabFreeStuff);
+            WaitUntil.ElementIsClickable(TabFreeStuff);
+            Button.Click(TabFreeStuff);
+
+            return this;
+        }
+
+        [AllureStep("ClickButtonAddSpecials")]
+        public AddApartments ClickButtonAddSpecials()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonAddSpecials);
+            WaitUntil.ElementIsClickable(ButtonAddSpecials);
+            Button.Click(ButtonAddSpecials);
+
+            return this;
+        }
+
+        [AllureStep("ClickButtonLeaseSignedTriggerEvent")]
+        public AddApartments ClickButtonLeaseSignedTriggerEvent()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonLeaseSignedTriggerEvent);
+            WaitUntil.ElementIsClickable(ButtonLeaseSignedTriggerEvent);
+            Button.Click(ButtonLeaseSignedTriggerEvent);
+
+            return this;
+        }
+
+        [AllureStep("ClickCheckBoxIsActive")]
+        public AddApartments ClickCheckBoxIsActive()
+        {
+            WaitUntil.CustomElementIsVisible(CheckBoxIsActive);
+            WaitUntil.ElementIsClickable(CheckBoxIsActive);
+            Button.Click(CheckBoxIsActive);
 
             return this;
         }

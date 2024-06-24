@@ -846,8 +846,11 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonAddLock()
                 .AddItemAccessTypeNote()
                 .ClickButtonAddLock()
-                .AddItemAccessTypeExistingOccupant();
+                .AddItemAccessTypeExistingOccupant()
                 //Add Assertion
+                .ClickButtonGeneralNext()
+                .ClickButtonAddSpecials()
+                .AddConcessionIsActive();
 
 
             WaitUntil.WaitSomeInterval(5000);
