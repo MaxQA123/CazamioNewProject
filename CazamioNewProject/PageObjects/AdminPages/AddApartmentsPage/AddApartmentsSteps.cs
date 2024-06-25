@@ -304,7 +304,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         {
             WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
             WaitUntil.CustomElementIsClickable(FieldInputNameSpecials);
-            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, apartment.Concessions.Name);
+            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, apartment.Concessions.NameFirst);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, apartment.Concessions.OneMonthYearFree);
             WaitUntil.WaitSomeInterval(100);
@@ -334,80 +334,80 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return this;
         }
 
-        [AllureStep("AddConcessionIsActiveWithoutName")]
-        public AddApartments AddConcessionIsActiveWithoutName()
-        {
-            WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
-            WaitUntil.CustomElementIsClickable(FieldInputNameSpecials);
-            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.Concessions.MonthsFree);
-            WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.LeaseTerms);
-            WaitUntil.WaitSomeInterval(100);
-            KeyBoardActions.ClickArrowDown();
-            KeyBoardActions.ClickEnterButton();
-            WaitUntil.WaitSomeInterval(100);
-            Button.Click(ButtonYesSpecials);
-            WaitUntil.WaitSomeInterval(100);
-            Button.Click(FieldInputDateFrom);
-            WaitUntil.WaitSomeInterval(100);
-            Pages.DatePicker
-                .SelectCurrentDay();
-            WaitUntil.WaitSomeInterval(100);
-            Button.Click(FieldInputDateTo);
-            WaitUntil.WaitSomeInterval(100);
-            Pages.DatePicker
-                .SelectCurrentDayPlusOneDay();
-            WaitUntil.WaitSomeInterval(100);
-            Button.Click(ButtonSaveSpecials);
+        //[AllureStep("AddConcessionIsActiveWithoutName")]
+        //public AddApartments AddConcessionIsActiveWithoutName()
+        //{
+        //    WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
+        //    WaitUntil.CustomElementIsClickable(FieldInputNameSpecials);
+        //    InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.Concessions.MonthsFree);
+        //    WaitUntil.WaitSomeInterval(100);
+        //    InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.LeaseTerms);
+        //    WaitUntil.WaitSomeInterval(100);
+        //    KeyBoardActions.ClickArrowDown();
+        //    KeyBoardActions.ClickEnterButton();
+        //    WaitUntil.WaitSomeInterval(100);
+        //    Button.Click(ButtonYesSpecials);
+        //    WaitUntil.WaitSomeInterval(100);
+        //    Button.Click(FieldInputDateFrom);
+        //    WaitUntil.WaitSomeInterval(100);
+        //    Pages.DatePicker
+        //        .SelectCurrentDay();
+        //    WaitUntil.WaitSomeInterval(100);
+        //    Button.Click(FieldInputDateTo);
+        //    WaitUntil.WaitSomeInterval(100);
+        //    Pages.DatePicker
+        //        .SelectCurrentDayPlusOneDay();
+        //    WaitUntil.WaitSomeInterval(100);
+        //    Button.Click(ButtonSaveSpecials);
 
-            return this;
-        }
+        //    return this;
+        //}
 
-        [AllureStep("AddConcessionInActive")]
-        public AddApartments AddConcessionInActive()
-        {
-            WaitUntil.CustomElementIsVisible(CheckBoxIsActive);
-            WaitUntil.ElementIsClickable(CheckBoxIsActive);
-            Button.Click(CheckBoxIsActive);
-            WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
-            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.Concessions.Name);
-            WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.Concessions.MonthsFree);
-            WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.LeaseTerms);
-            WaitUntil.WaitSomeInterval(100);
-            KeyBoardActions.ClickArrowDown();
-            KeyBoardActions.ClickEnterButton();
-            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, building.AdditionalInfo.LongInfo);
-            WaitUntil.WaitSomeInterval(100);
-            KeyBoardActions.ClickArrowDown();
-            KeyBoardActions.ClickEnterButton();
-            WaitUntil.WaitSomeInterval(100);
-            Button.Click(ButtonYesSpecials);
-            WaitUntil.WaitSomeInterval(100);
-            Button.Click(FieldInputDateFrom);
-            WaitUntil.WaitSomeInterval(100);
-            Pages.DatePicker
-                .SelectCurrentDay();
-            WaitUntil.WaitSomeInterval(100);
-            Button.Click(FieldInputDateTo);
-            WaitUntil.WaitSomeInterval(100);
-            Pages.DatePicker
-                .SelectCurrentDayPlusOneDay();
-            KeyBoardActions.ScrollToDown();
-            Button.Click(ButtonMoveInTriggerEvent);
-            WaitUntil.WaitSomeInterval(100);
-            Button.Click(ButtonSaveSpecials);
+        //[AllureStep("AddConcessionInActive")]
+        //public AddApartments AddConcessionInActive()
+        //{
+        //    WaitUntil.CustomElementIsVisible(CheckBoxIsActive);
+        //    WaitUntil.ElementIsClickable(CheckBoxIsActive);
+        //    Button.Click(CheckBoxIsActive);
+        //    WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
+        //    InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.Concessions.Name);
+        //    WaitUntil.WaitSomeInterval(100);
+        //    InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.Concessions.MonthsFree);
+        //    WaitUntil.WaitSomeInterval(100);
+        //    InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.LeaseTerms);
+        //    WaitUntil.WaitSomeInterval(100);
+        //    KeyBoardActions.ClickArrowDown();
+        //    KeyBoardActions.ClickEnterButton();
+        //    InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, building.AdditionalInfo.LongInfo);
+        //    WaitUntil.WaitSomeInterval(100);
+        //    KeyBoardActions.ClickArrowDown();
+        //    KeyBoardActions.ClickEnterButton();
+        //    WaitUntil.WaitSomeInterval(100);
+        //    Button.Click(ButtonYesSpecials);
+        //    WaitUntil.WaitSomeInterval(100);
+        //    Button.Click(FieldInputDateFrom);
+        //    WaitUntil.WaitSomeInterval(100);
+        //    Pages.DatePicker
+        //        .SelectCurrentDay();
+        //    WaitUntil.WaitSomeInterval(100);
+        //    Button.Click(FieldInputDateTo);
+        //    WaitUntil.WaitSomeInterval(100);
+        //    Pages.DatePicker
+        //        .SelectCurrentDayPlusOneDay();
+        //    KeyBoardActions.ScrollToDown();
+        //    Button.Click(ButtonMoveInTriggerEvent);
+        //    WaitUntil.WaitSomeInterval(100);
+        //    Button.Click(ButtonSaveSpecials);
 
-            return this;
-        }
+        //    return this;
+        //}
 
         [AllureStep("AddFreeStuffIsActive")]
         public AddApartments AddFreeStuffIsActive()
         {
             WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
             WaitUntil.CustomElementIsClickable(FieldInputNameSpecials);
-            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.FreeStuff.Name);
+            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, apartment.FreeStuff.NameFirst);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(FieldInputSelectItemsFreeStuff);
             WaitUntil.WaitSomeInterval(100);
@@ -425,7 +425,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             Button.Click(FieldInputDateTo);
             WaitUntil.WaitSomeInterval(100);
             Pages.DatePicker
-                .SelectCurrentDayPlusOneDay();
+                .SelectCurrentDay();
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ScrollToDown();
             Button.Click(ButtonLeaseSignedTriggerEvent);
@@ -473,7 +473,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.ElementIsClickable(CheckBoxIsActive);
             Button.Click(CheckBoxIsActive);
             WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
-            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.FreeStuff.Name);
+            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.FreeStuff.NameFirst);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(FieldInputSelectItemsFreeStuff);
             WaitUntil.WaitSomeInterval(100);

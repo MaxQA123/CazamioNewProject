@@ -259,16 +259,16 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
 
         #region Tab Specials
 
-        [AllureStep("AddConcessionIsActive")]
-        public NewBuilding AddConcessionIsActive()
+        [AllureStep("AddFirstConcessionIsActive")]
+        public NewBuilding AddFirstConcessionIsActive()
         {
             WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
             WaitUntil.CustomElementIsClickable(FieldInputNameSpecials);
-            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.Concessions.Name);
+            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.Concessions.NameFirst);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.Concessions.MonthsFree);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.Concessions.OneMonthYearFree);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.LeaseTerms);
+            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.TwelveMonthsLeaseTerms);
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();
@@ -287,7 +287,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             Button.Click(FieldInputDateTo);
             WaitUntil.WaitSomeInterval(100);
             Pages.DatePicker
-                .SelectCurrentDayPlusOneDay();
+                .SelectCurrentDay();
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSaveSpecials);
 
@@ -330,7 +330,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             WaitUntil.ElementIsClickable(CheckBoxIsActive);
             Button.Click(CheckBoxIsActive);
             WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
-            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.Concessions.Name);
+            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.Concessions.NameFirst);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.Concessions.MonthsFree);
             WaitUntil.WaitSomeInterval(100);
@@ -362,12 +362,12 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             return this;
         }
 
-        [AllureStep("AddFreeStuffIsActive")]
-        public NewBuilding AddFreeStuffIsActive()
+        [AllureStep("AddFirstFreeStuffIsActive")]
+        public NewBuilding AddFirstFreeStuffIsActive()
         {
             WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
             WaitUntil.CustomElementIsClickable(FieldInputNameSpecials);
-            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.FreeStuff.Name);
+            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.FreeStuff.NameFirst);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(FieldInputSelectItemsFreeStuff);
             WaitUntil.WaitSomeInterval(100);
@@ -385,7 +385,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             Button.Click(FieldInputDateTo);
             WaitUntil.WaitSomeInterval(100);
             Pages.DatePicker
-                .SelectCurrentDayPlusOneDay();
+                .SelectCurrentDay();
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ScrollToDown();
             Button.Click(ButtonLeaseSignedTriggerEvent);
@@ -433,7 +433,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             WaitUntil.ElementIsClickable(CheckBoxIsActive);
             Button.Click(CheckBoxIsActive);
             WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
-            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.FreeStuff.Name);
+            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.FreeStuff.NameFirst);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(FieldInputSelectItemsFreeStuff);
             WaitUntil.WaitSomeInterval(100);

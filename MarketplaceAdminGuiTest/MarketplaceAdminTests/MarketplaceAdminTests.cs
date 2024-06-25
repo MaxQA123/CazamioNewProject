@@ -610,14 +610,14 @@ namespace MarketplaceAdminGuiTest
                 .VerifyTypeAccessFromTable(copyActualNameNote, copyActualNamePinCode)
                 .ClickTabSpecials()
                 .ClickButtonAddSpecials()
-                .AddConcessionIsActive();
+                .AddFirstConcessionIsActive();
 
             string getNameConcession = Pages.NewBuilding.GetNameConcessionFromTable();
 
             Pages.NewBuilding
                 .ClickTabFreeStuff()
                 .ClickButtonAddSpecials()
-                .AddFreeStuffIsActive();
+                .AddFirstFreeStuffIsActive();
 
             string getNameFreeStuff = Pages.NewBuilding.GetNameFreeStuffFromTable();
 
@@ -850,7 +850,10 @@ namespace MarketplaceAdminGuiTest
                 //Add Assertion
                 .ClickButtonGeneralNext()
                 .ClickButtonAddSpecials()
-                .AddConcessionIsActive();
+                .AddConcessionIsActive()
+                .ClickButtonAddSpecials()
+                .AddFreeStuffIsActive();
+                //Add Assertion
 
 
             WaitUntil.WaitSomeInterval(5000);

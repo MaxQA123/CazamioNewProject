@@ -85,8 +85,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         {
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(nameConcessionActual, building.Concessions.Name, $"Name concession not equal");
-                Assert.AreEqual(getNameFreeStuffActual, building.FreeStuff.Name, $"Name free stuff not equal");
+                Assert.AreEqual(nameConcessionActual, building.Concessions.NameFirst, $"Name concession not equal");
+                Assert.AreEqual(getNameFreeStuffActual, building.FreeStuff.NameFirst, $"Name free stuff not equal");
             });
 
             return this;
