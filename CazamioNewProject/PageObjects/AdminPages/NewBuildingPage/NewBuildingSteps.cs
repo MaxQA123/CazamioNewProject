@@ -214,7 +214,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             WaitUntil.WaitSomeInterval(3000);
             WaitUntil.CustomElementIsVisible(ButtonAccessType);
             Button.Click(ButtonAccessType);
-            Button.Click(ItemPinCode);
+            KeyBoardActions.ClickEnterButton();
+            //Button.Click(ItemPinCode);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputPinCodeForFirstEnter, GenerateRandomData.RandomNumberWithoutZero(1));
             KeyBoardActions.ClickSpaceButton();
@@ -299,9 +300,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         {
             WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
             WaitUntil.CustomElementIsClickable(FieldInputNameSpecials);
-            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.Concessions.MonthsFree);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.Concessions.RandomMonthsFree);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.LeaseTerms);
+            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.TwelveMonthsLeaseTerms);
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();
@@ -332,9 +333,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
             InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.Concessions.NameFirst);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.Concessions.MonthsFree);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.Concessions.TwoMonthsFree);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.LeaseTerms);
+            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.TwelveMonthsLeaseTerms);
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();

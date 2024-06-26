@@ -851,8 +851,13 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonGeneralNext()
                 .ClickButtonAddSpecials()
                 .AddConcessionIsActive()
+                .ClickTabFreeStuff()
                 .ClickButtonAddSpecials()
-                .AddFreeStuffIsActive();
+                .AddFreeStuffIsActive()
+                //Add Assertion
+                .ClickButtonGeneralNext()
+                .UploadFiveImages()
+                .ClickButtonSaveApartment();
                 //Add Assertion
 
 

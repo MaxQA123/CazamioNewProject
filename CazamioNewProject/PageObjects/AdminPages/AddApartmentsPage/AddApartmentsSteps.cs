@@ -233,7 +233,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.WaitSomeInterval(3000);
             WaitUntil.CustomElementIsVisible(ButtonAccessType);
             Button.Click(ButtonAccessType);
-            Button.Click(ItemPinCode);
+            WaitUntil.WaitSomeInterval(1000);
+            KeyBoardActions.ClickEnterButton();
+            //Button.Click(ItemPinCode);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputPinCodeForFirstEnter, GenerateRandomData.RandomNumberWithoutZero(1));
             KeyBoardActions.ClickSpaceButton();
@@ -262,6 +264,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.WaitSomeInterval(3000);
             WaitUntil.CustomElementIsVisible(ButtonAccessType);
             Button.Click(ButtonAccessType);
+            WaitUntil.WaitSomeInterval(1000);
             Button.Click(ItemNote);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputCustomNoteForAccess, apartment.TextVariable.TextLongNote);
@@ -280,6 +283,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.WaitSomeInterval(3000);
             WaitUntil.CustomElementIsVisible(ButtonAccessType);
             Button.Click(ButtonAccessType);
+            WaitUntil.WaitSomeInterval(1000);
             Button.Click(ItemExistingOccupant);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputName, tenantCreator.NameData.RandomFirstName);

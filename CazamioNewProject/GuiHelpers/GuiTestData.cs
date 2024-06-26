@@ -73,6 +73,11 @@
         public const string IMAGE_FOR_PAYMENT_VENMO_HOLD_APARTMENT = $"\\UploadImages\\OK apartment hold deposit.jpg"; //PinCodeApartment
         public const string IMAGE_APARTMENT_LOCK_PIN_CODE = $"\\UploadImages\\PinCodeApartment.jpg";
         public const string IMAGE_APARTMENT_LOCK_NOTE = $"\\UploadImages\\NoteApartment.jpg";
+        public const string IMAGE_APARTMENT_FIRST = $"\\UploadImages\\Bedroom1.jpg";
+        public const string IMAGE_APARTMENT_SECOND = $"\\UploadImages\\Bedroom2.jpg";
+        public const string IMAGE_APARTMENT_THIRD = $"\\UploadImages\\Bedroom3.jpg";
+        public const string IMAGE_APARTMENT_FOURTH = $"\\UploadImages\\Bedroom4.jpg";
+        public const string IMAGE_APARTMENT_FIFTH = $"\\UploadImages\\Bedroom5.jpg";
     }
 
     public class ListOfAmenitiesForBuildingAdminsPage

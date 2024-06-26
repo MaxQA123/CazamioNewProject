@@ -1,0 +1,78 @@
+{
+  "uuid": "888946b0-cd1f-41bf-8621-c588cedfc45e-tc-0-1000",
+  "name": "MarketplaceAdminGuiTest.TestsBaseGui.AddApartmentAssignedBroker",
+  "children": [
+    "2518d56a-de39-4de9-8639-c6bf7677ed1a-tr-0-1009"
+  ],
+  "befores": [
+    {
+      "name": "DobeforeAllTheTests",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1719410301629,
+      "stop": 1719410301629
+    },
+    {
+      "name": "SetUp",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1719410301630,
+      "stop": 1719410301630
+    }
+  ],
+  "afters": [
+    {
+      "name": "DoAfterEach",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.NullReferenceException : Object reference not set to an instance of an object.\r\nTearDown : OpenQA.Selenium.NoSuchWindowException : no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=126.0.6478.116)",
+        "trace": "   at SeleniumExtras.PageObjects.WebElementProxy.get_Displayed()\r\n   at SeleniumExtras.WaitHelpers.ExpectedConditions.<>c__DisplayClass7_0.<ElementToBeClickable>b__0(IWebDriver driver)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.ElementIsClickable(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 19\r\n   at CazamioNewProject.GuiHelpers.InputGeneral.__a$_around_InputFunctionWithClear_100664226_o(IWebElement element, String text) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 13\r\n   at CazamioNewProject.GuiHelpers.InputGeneral.__a$_around_InputFunctionWithClear_100664226_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.GuiHelpers.InputGeneral.__a$_around_InputFunctionWithClear_100664226_w_0(Object[] )\r\n   at CazamioNewProject.GuiHelpers.InputGeneral.InputFunctionWithClear(IWebElement element, String text)\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.__a$_around_EnterEmailPasswordAsMarketplaceAdmin_100663586_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\LogInPage\\LogInSteps.cs:line 22\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.__a$_around_EnterEmailPasswordAsMarketplaceAdmin_100663586_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.__a$_around_EnterEmailPasswordAsMarketplaceAdmin_100663586_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.EnterEmailPasswordAsMarketplaceAdmin() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\LogInPage\\LogInActions.cs:line 14\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.AddApartmentAssignedBroker() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 760\r\n--TearDown\r\n   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.GetScreenshot()\r\n   at CazamioNewProject.GuiHelpers.ScreenShot.MakeScreenShot() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\ScreenShot.cs:line 13\r\n   at CazamioNewProject.GuiHelpers.BasicTests.BaseGui.DoAfterEach() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\BasicTests\\BaseGui.cs:line 27"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1719410301630,
+      "stop": 1719410301630
+    },
+    {
+      "name": "DoAfterAllTheTests",
+      "status": "none",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "It's not possible to get status of OneTimeTearDown",
+        "trace": "See Allure.NUnit wiki"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1719410301632,
+      "stop": 1719410301632
+    }
+  ],
+  "links": [],
+  "start": 1719410292154,
+  "stop": 1719410301731
+}

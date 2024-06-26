@@ -336,6 +336,19 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 
         #endregion
 
+        #region Tab Images
+
+        [FindsBy(How = How.XPath, Using = "//input[@id = 'add-image0']")]
+        public IWebElement ButtonBrowseFiles;
+
+        [FindsBy(How = How.XPath, Using = "//span[text() = 'Save']")]
+        public IWebElement ButtonSaveApartment;
+
+        [FindsBy(How = How.XPath, Using = "//span[text() = 'Saved successfully!']")]
+        public IWebElement MessageSavedSuccessfullyApartment;
+
+        #endregion
+
         [FindsBy(How = How.XPath, Using = "//cazamio-button[@text = 'Next']")]
         public IWebElement ButtonGeneralNext;
 
