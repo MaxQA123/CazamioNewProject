@@ -29,11 +29,13 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
         [FindsBy(How = How.XPath, Using = "//mat-dialog-container//div[@class = 'payments-wrapper']//div[@class = 'note-input ng-star-inserted']//textarea")]
         public IWebElement FieldInputDeliverCheckNoteApartment;
 
-        [FindsBy(How = How.XPath, Using = "//mat-dialog-container//div[@class = 'payments-wrapper']//div[@class = 'note-input'][2]//input")]
+        [FindsBy(How = How.XPath, Using = "//div[@class='note-input']//label[contains(text(), 'Zelle address or phone')]/following-sibling::input[@type='text']")]
         public IWebElement FieldInputZelleAddressOrPhoneBuilding;
 
-        [FindsBy(How = How.XPath, Using = "//mat-dialog-container//div[@class = 'payments-wrapper']//div[@class = 'note-input ng-star-inserted'][2]//input")]
+        [FindsBy(How = How.XPath, Using = "//div[@class='note-input']//label[contains(text(), 'Zelle address or phone')]/following-sibling::input[@type='text']")]
         public IWebElement FieldInputZelleAddressOrPhoneApartment;
+
+        ////mat-dialog-container//div[@class = 'payments-wrapper']//div[@class = 'note-input ng-star-inserted'][2]//input
 
         [FindsBy(How = How.XPath, Using = "//input[@id = 'change-brand']")]
         public IWebElement ButtonForVenmoQrCodeImage;

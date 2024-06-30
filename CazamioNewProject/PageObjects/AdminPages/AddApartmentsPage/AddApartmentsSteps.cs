@@ -53,6 +53,22 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return this;
         }
 
+        [AllureStep("EnterMandatoryFieldsMarkAdmAssignedAgBrkr")]
+        public AddApartments EnterMandatoryFieldsMarkAdmAssignedAgBrkr()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputUnitNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputUnitNumber, apartment.UnitNumber.UnitNumberMarkAdmAssignedRoleBrkr);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputBedrooms, apartment.Bedrooms.TwoNumber);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputBathrooms, apartment.Bathrooms.TwoNumber);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, apartment.LeasePrice.ThreeNumber);
+            WaitUntil.WaitSomeInterval(100);
+
+            return this;
+        }
+
         [AllureStep("SelectStatusOffMarket")]
         public AddApartments SelectStatusOffMarket()
         {

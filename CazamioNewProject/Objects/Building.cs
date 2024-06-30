@@ -149,12 +149,12 @@ namespace CazamioNewProject.Objects
         {
             #region Settings Building for role Marketplace Admin
 
-            string buildingNumberMarAdmAssignedRoleAgntBrkr = "9990";
+            string buildingNumberMarAdmAssignedRoleAgntBrkr = "9998";
             string addressMarkAdmAssignedRoleAgntBrkr = "Saint Johnson Place";
             string zipBuildingMarkAdmAssignedRoleAgntBrkr = "11213";
             string neighborhoodMarkAdmBuildingAssignedRoleAgntBrkr = "Crown Heights";
 
-            string buildingNumberMarkAdmAssignedRoleBrkr = "1";
+            string buildingNumberMarkAdmAssignedRoleBrkr = "2";
             string addressMarkAdmAssignedRoleBrkr = "Washington Square";
             string zipBuildingMarkAdmAssignedRoleBrkr = "10012";
             string neighborhoodBuildingMarkAdmAssignedRoleBrkr = "Manhattan";

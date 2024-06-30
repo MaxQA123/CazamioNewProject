@@ -62,8 +62,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             return this;
         }
 
-        [AllureStep("SelectAllPaymentMethods")]
-        public PaymentOptionsMdlWndw SelectAllPaymentMethods()
+        [AllureStep("SelectScreeningFeeAllPaymentMethods")]
+        public PaymentOptionsMdlWndw SelectScreeningFeeAllPaymentMethods()
         {
             //Button.Click(ItemCreditCard);
             Button.Click(ItemAch);
@@ -72,6 +72,23 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             Button.Click(ItemVenmo);
             InputGeneral.InputFunctionWithClear(FieldInputDeliverCheckNoteBuilding, paymentOptions.DeliverCheckNote.ForBuildingScreening);
             InputGeneral.InputFunctionWithClear(FieldInputZelleAddressOrPhoneBuilding, paymentOptions.Zelle.ForBuildingScreening);
+            ButtonForVenmoQrCodeImage.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_FOR_PAYMENT_VENMO_SCREENING));
+            Button.Click(ButtonSave);
+            VerifySuccessSelectPmntMthds();
+
+            return this;
+        }
+
+        [AllureStep("SelectHoldDepositAllPaymentMethods")]
+        public PaymentOptionsMdlWndw SelectHoldDepositAllPaymentMethods()
+        {
+            //Button.Click(ItemCreditCard);
+            Button.Click(ItemAch);
+            Button.Click(ItemDeliverCheck);
+            Button.Click(ItemZelle);
+            Button.Click(ItemVenmo);
+            InputGeneral.InputFunctionWithClear(FieldInputDeliverCheckNoteBuilding, paymentOptions.DeliverCheckNote.ForBuildingHold);
+            InputGeneral.InputFunctionWithClear(FieldInputZelleAddressOrPhoneBuilding, paymentOptions.Zelle.ForBuildingHold);
             ButtonForVenmoQrCodeImage.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_FOR_PAYMENT_VENMO_SCREENING));
             Button.Click(ButtonSave);
             VerifySuccessSelectPmntMthds();
@@ -118,7 +135,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             //Button.Click(ItemCreditCard);
             Button.Click(ItemAch);
             Button.Click(ItemZelle);
-            InputGeneral.InputFunctionWithClear(FieldInputZelleAddressOrPhoneBuilding, paymentOptions.Zelle.ForBuildingHold);
+            InputGeneral.InputFunctionWithClear(FieldInputZelleAddressOrPhoneBuilding, paymentOptions.Zelle.ForBuildingScreening);
             Button.Click(ButtonSave);
             VerifySuccessSelectPmntMthds();
 

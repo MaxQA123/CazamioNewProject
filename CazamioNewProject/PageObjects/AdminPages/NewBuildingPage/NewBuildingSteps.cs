@@ -354,7 +354,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             Button.Click(FieldInputDateTo);
             WaitUntil.WaitSomeInterval(100);
             Pages.DatePicker
-                .SelectCurrentDayPlusOneDay();
+                .SelectCurrentDay();
             KeyBoardActions.ScrollToDown();
             Button.Click(ButtonMoveInTriggerEvent);
             WaitUntil.WaitSomeInterval(100);
@@ -450,7 +450,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             Button.Click(FieldInputDateTo);
             WaitUntil.WaitSomeInterval(100);
             Pages.DatePicker
-                .SelectCurrentDayPlusOneDay();
+                .SelectCurrentDay();
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ScrollToDown();
             Button.Click(ButtonMoveInTriggerEvent);

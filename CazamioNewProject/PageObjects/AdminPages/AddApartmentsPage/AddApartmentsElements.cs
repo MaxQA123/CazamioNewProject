@@ -77,7 +77,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [FindsBy(How = How.XPath, Using = ("//div/span[text() = 'Vacant']"))]
         public IWebElement ItemVacant;
 
-        [FindsBy(How = How.XPath, Using = ("//div/span[text() = 'Deposit received']"))]
+        [FindsBy(How = How.XPath, Using = ("//div/span[text() = 'Deposit Received']"))]
         public IWebElement ItemDepositReceived;
 
         [FindsBy(How = How.XPath, Using = ("//div/span[text() = 'Application submitted']"))]

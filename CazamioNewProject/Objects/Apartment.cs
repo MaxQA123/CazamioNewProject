@@ -126,7 +126,7 @@ namespace CazamioNewProject.Objects
         public class BuildingShortAddressInfo
         {
             public string MarkAdmAssignedBroker { get; set; }
-            public string EighteenMonths { get; set; }
+            public string MarkAdmAssignedAgent { get; set; }
         }
 
         public class TextVariableInfo
@@ -179,7 +179,8 @@ namespace CazamioNewProject.Objects
             string buildingShortAddressMarkAdmAssignedRoleBrkr = "1 Washington Square";
             string unitNumberMarkAdmAssignedRoleBrkr = "9999";
 
-            string unitNumberMarkAdmAssignedRoleAgntBrkr = "1";
+            string buildingShortAddressMarkAdmAssignedRoleAgBrkr = "9998 Saint Johnson Place";
+            string unitNumberMarkAdmAssignedRoleAgntBrkr = "9997";
           
             string unitNumberBrokerAssignedRoleAgntBrkr = "AA";
             string unitNumberBrokerAssignedRoleBrkr = "1A";
@@ -340,7 +341,7 @@ namespace CazamioNewProject.Objects
                 BuildingShortAddress = new BuildingShortAddressInfo
                 {
                     MarkAdmAssignedBroker = buildingShortAddressMarkAdmAssignedRoleBrkr,
-                    EighteenMonths = itemEighteenMonths
+                    MarkAdmAssignedAgent = buildingShortAddressMarkAdmAssignedRoleAgBrkr
                 },
                 TextVariable = new TextVariableInfo
                 {

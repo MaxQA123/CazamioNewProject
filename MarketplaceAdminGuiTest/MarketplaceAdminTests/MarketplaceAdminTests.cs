@@ -570,12 +570,12 @@ namespace MarketplaceAdminGuiTest
                 .ClickBtnSelectPaymentMethodsForCreditScreeningFee();
             Pages.PaymentOptionsMdlWndw
                 .VerifyTitlePaymentOptions()
-                .SelectAllPaymentMethods();
+                .SelectScreeningFeeAllPaymentMethods();
             Pages.NewBuilding
                 .ClickBtnSelectPaymentMethodsForHoldDeposit();
             Pages.PaymentOptionsMdlWndw
                 .VerifyTitlePaymentOptions()
-                .SelectAllPaymentMethods();
+                .SelectHoldDepositAllPaymentMethods();
             Pages.NewBuilding
                 .ClickButtonSelectPetPolicies();
             Pages.PetPoliciesMdlWndw
@@ -751,7 +751,7 @@ namespace MarketplaceAdminGuiTest
 
             #region Test data
 
-            Building building = new Building().Generate();
+            Apartment apartment = new Apartment().Generate();
 
             #endregion
 
@@ -781,7 +781,7 @@ namespace MarketplaceAdminGuiTest
             string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
 
             Pages.BuildingView
-                .VerifyBuildingAddress(getAddressBuildingViewActual, building.NumberWithAddress.MarkAdmAssignedBroker)
+                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.MarkAdmAssignedBroker)
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
             Pages.BuildingView
@@ -860,10 +860,82 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonSaveApartment();
                 //Add Assertion
 
+            #endregion
+        }
 
-            WaitUntil.WaitSomeInterval(5000);
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("MarketplaceAdmin")]
+        [AllureSubSuite("AddApartmentAssignedAgent")]
+        public void AddApartmentAssignedAgent()
+        {
+            #region SettingsForBuilding
+
+            //All the fields filled in, Cardknox
+            //All tabs filled in
+            //9998 Saint Johnson Place
 
             #endregion
+
+            #region Test data
+
+            Apartment apartment = new Apartment().Generate();
+
+            #endregion
+
+            #region Preconditions Test
+
+            Pages.LogInLandlord
+                .EnterEmailPasswordAsMarketplaceAdmin()
+                .ClickIconShow()
+                .ClickButtonLetsGo();
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyMarketplaceAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+
+            Pages.SidebarLandlord
+                .ClickButtonBuildings();
+            Pages.ListOfBuildings
+                .SearchBuildingMarkAdmAgent();
+            Pages.ListOfBuildings
+                .SelectItemFirst();
+            Pages.BuildingView
+                .VerifyTitleBuildingViewPage();
+
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
+
+            Pages.BuildingView
+                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.MarkAdmAssignedAgent)
+                .ClickTabApartments();
+            KeyBoardActions.ScrollToDown();
+            Pages.BuildingView
+                .ClickButtonAddInTabApartments();
+
+            #endregion
+
+            #region Test
+
+            Pages.AddApartments
+                .VerifyTitleAddApartmentsPage();
+
+            string getBuildingNameFromAddApartments = Pages.AddApartments.GetBuildingName();
+
+            Pages.AddApartments
+                .VerifyBuildingNameAddApartmentsPage(getBuildingNameFromBuildingView, getBuildingNameFromAddApartments)
+                .EnterMandatoryFieldsMarkAdmAssignedAgBrkr()
+                .SelectStatusDepositReceived();
+
+            #endregion
+
+            WaitUntil.WaitSomeInterval(5000);
         }
     }
 }

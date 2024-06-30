@@ -37,6 +37,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
             return this;
         }
 
+        [AllureStep("SearchBuildingMarkAdmAgent")]
+        public ListOfBuildings SearchBuildingMarkAdmAgent()
+        {
+            WaitUntil.CustomElementIsVisible(LoaderHidden, 10);
+            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.CustomElementIsVisible(FieldInputSearch);
+            WaitUntil.CustomElementIsClickable(FieldInputSearch);
+            InputGeneral.InputFunctionWithClear(FieldInputSearch, apartment.BuildingShortAddress.MarkAdmAssignedAgent);
+
+            return this;
+        }
+
         [AllureStep("SelectItemFirst")]
         public ListOfBuildings SelectItemFirst()
         {
