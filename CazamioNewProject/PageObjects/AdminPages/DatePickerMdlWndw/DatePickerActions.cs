@@ -1,13 +1,14 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using NUnit.Allure.Attributes;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 
 namespace CazamioNewProject.PageObjects.AdminPages.DatePickerMdlWndw
 {
     public partial class DatePicker
     {
-        #region Selecting a day
+        #region Selecting a days
 
         private static IWebElement _element;
 
@@ -37,12 +38,43 @@ namespace CazamioNewProject.PageObjects.AdminPages.DatePickerMdlWndw
 
         #endregion
 
+        #region Selecting a months
+
+        public void SelectLastMonth()
+        {
+            WaitUntil.WaitSomeInterval(1000);
+
+            // Вычисляем прошлый месяц
+            string lastMonthName = DateTime.Now.AddMonths(-1).ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture); // Получаем название месяца
+
+            // Используем WebDriverWait для ожидания элемента
+            var wait = new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(10));
+            var element = wait.Until(drv => drv.FindElement(By.XPath($"//mat-year-view//table//tbody//button//span[contains(text(), '{lastMonthName}')]")));
+            element.Click();
+        }
+
+        #endregion
+
+        #region Selecting a years
+
+        [AllureStep("SelectCurrentYear")]
+        public void SelectCurrentYear()
+        {
+            WaitUntil.WaitSomeInterval(1000);
+            int currentYear = DateTime.Now.Year; // Получаем текущий год
+            var wait = new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(10));
+            var element = wait.Until(drv => drv.FindElement(By.XPath($"//mat-multi-year-view//table//tbody//button//span[contains(text(), '{currentYear}')]")));
+            element.Click();
+        }
+
+        #endregion
+
         [AllureStep("ClickButtonDropDownYearMonth")]
         public DatePicker ClickButtonDropDownYearMonth()
         {
-            WaitUntil.CustomElementIsVisible(ButtonDropDownYearMonth);
-            WaitUntil.CustomElementIsClickable(ButtonDropDownYearMonth);
-            Button.Click(ButtonDropDownYearMonth);
+            WaitUntil.CustomElementIsVisible(ButtonForOpenDropDownYearMonth);
+            WaitUntil.CustomElementIsClickable(ButtonForOpenDropDownYearMonth);
+            Button.Click(ButtonForOpenDropDownYearMonth);
 
             return this;
         }

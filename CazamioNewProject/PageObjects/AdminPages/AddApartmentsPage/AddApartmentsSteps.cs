@@ -182,6 +182,21 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return this;
         }
 
+        [AllureStep("SelectDateLastMonthsAvailableFrom")]
+        public AddApartments SelectDateLastMonthsAvailableFrom()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputAvailableFrom);
+            Button.Click(FieldInputAvailableFrom);
+            WaitUntil.WaitSomeInterval(100);
+            Pages.DatePicker
+                .ClickButtonDropDownYearMonth()
+                .SelectCurrentYear();
+            Pages.DatePicker
+                .SelectLastMonth();
+
+            return this;
+        }
+
         [AllureStep("SelectApartmentTypeMultiFamily")]
         public AddApartments SelectApartmentTypeMultiFamily()
         {

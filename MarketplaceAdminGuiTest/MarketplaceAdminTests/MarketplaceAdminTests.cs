@@ -930,7 +930,8 @@ namespace MarketplaceAdminGuiTest
 
             Pages.AddApartments
                 .VerifyBuildingNameAddApartmentsPage(getBuildingNameFromBuildingView, getBuildingNameFromAddApartments)
-                .EnterMandatoryFieldsMarkAdmAssignedAgBrkr()
+                //.EnterMandatoryFieldsMarkAdmAssignedAgBrkr()
+                .SelectDateLastMonthsAvailableFrom()
                 .SelectStatusDepositReceived();
 
             #endregion

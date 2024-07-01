@@ -5,8 +5,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.DatePickerMdlWndw
 {
     public partial class DatePicker
     {
-        [FindsBy(How = How.XPath, Using = "//mat-datepicker-content//span[@class = 'mat-button-wrapper']")]
-        public IWebElement ButtonDropDownYearMonth;
+        [FindsBy(How = How.XPath, Using = "//mat-datepicker-content//button[@aria-label= 'Choose month and year']")]
+        public IWebElement ButtonForOpenDropDownYearMonth;
 
         [FindsBy(How = How.XPath, Using = "//button[@aria-label = 'Previous year']")]
         public IWebElement ButtonArrowPreviousYear;
