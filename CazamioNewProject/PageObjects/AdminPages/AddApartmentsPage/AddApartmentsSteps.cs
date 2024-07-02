@@ -182,8 +182,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return this;
         }
 
-        [AllureStep("SelectDateLastMonthsAvailableFrom")]
-        public AddApartments SelectDateLastMonthsAvailableFrom()
+        [AllureStep("SetFirstDayLastMonthsAvailableFrom")]
+        public AddApartments SetFirstDayLastMonthsAvailableFrom()
         {
             WaitUntil.CustomElementIsVisible(FieldInputAvailableFrom);
             Button.Click(FieldInputAvailableFrom);
@@ -193,6 +193,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
                 .SelectCurrentYear();
             Pages.DatePicker
                 .SelectLastMonth();
+            Pages.DatePicker
+                .SelectFisrtDayInLastMonth();
 
             return this;
         }

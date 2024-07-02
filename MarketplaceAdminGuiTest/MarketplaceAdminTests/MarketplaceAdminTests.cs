@@ -806,7 +806,7 @@ namespace MarketplaceAdminGuiTest
             Pages.AddApartments
                 .SelectStatusVacant()
                 .SelectAgent()
-                .SelectCurrentDateAvailableFrom()
+                .SetFirstDayLastMonthsAvailableFrom()
                 .SelectApartmentTypeMultiFamily();
 
             string getStatusFromAddApartments = Pages.AddApartments.GetStatus();
@@ -930,8 +930,8 @@ namespace MarketplaceAdminGuiTest
 
             Pages.AddApartments
                 .VerifyBuildingNameAddApartmentsPage(getBuildingNameFromBuildingView, getBuildingNameFromAddApartments)
-                //.EnterMandatoryFieldsMarkAdmAssignedAgBrkr()
-                .SelectDateLastMonthsAvailableFrom()
+                .EnterMandatoryFieldsMarkAdmAssignedAgBrkr()
+                .SelectCurrentDateAvailableFrom()
                 .SelectStatusDepositReceived();
 
             #endregion
