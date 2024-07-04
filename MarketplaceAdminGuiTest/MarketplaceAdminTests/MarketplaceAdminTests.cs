@@ -932,7 +932,15 @@ namespace MarketplaceAdminGuiTest
                 .VerifyBuildingNameAddApartmentsPage(getBuildingNameFromBuildingView, getBuildingNameFromAddApartments)
                 .EnterMandatoryFieldsMarkAdmAssignedAgBrkr()
                 .SelectCurrentDateAvailableFrom()
-                .SelectStatusDepositReceived();
+                .SelectStatusDepositReceived()
+                .SelectApartmentTypeSingleFamily()
+                .ClickButtonPaymentMethods();
+            Pages.PaymentOptionsMdlWndw
+                .SelectAllPaymentMethodsHoldDepositApartment();
+            Pages.AddApartments
+                .ClickTabAmenities()
+                .ClickTabAccess()
+                .ClickTabSpecials();
 
             #endregion
 

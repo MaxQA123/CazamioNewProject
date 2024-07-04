@@ -177,7 +177,7 @@ namespace CazamioNewProject.Objects
         public Apartment Generate()
         {
             string buildingShortAddressMarkAdmAssignedRoleBrkr = "1 Washington Square";
-            string unitNumberMarkAdmAssignedRoleBrkr = "9999";
+            string unitNumberMarkAdmAssignedRoleBrkr = "9998";
 
             string buildingShortAddressMarkAdmAssignedRoleAgBrkr = "9998 Saint Johnson Place";
             string unitNumberMarkAdmAssignedRoleAgntBrkr = "9997";

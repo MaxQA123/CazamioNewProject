@@ -211,6 +211,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return this;
         }
 
+        [AllureStep("SelectApartmentTypeSingleFamily")]
+        public AddApartments SelectApartmentTypeSingleFamily()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonApartmentType);
+            Button.Click(ButtonApartmentType);
+            WaitUntil.CustomElementIsVisible(ItemSingleFamily);
+            WaitUntil.CustomElementIsClickable(ItemSingleFamily);
+            Button.Click(ItemSingleFamily);
+
+            return this;
+        }
+
         [AllureStep("EnterDescriptionInternalNotes")]
         public AddApartments EnterDescriptionInternalNotes()
         {

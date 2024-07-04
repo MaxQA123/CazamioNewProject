@@ -18,6 +18,50 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         RequiredDocuments requiredDocuments = new RequiredDocuments().Generate();
         TenantCreator tenantCreator = new TenantCreator().Generate();
 
+        #region Tabs
+
+        [AllureStep("ClickTabAmenities")]
+        public AddApartments ClickTabAmenities()
+        {
+            WaitUntil.CustomElementIsVisible(TabAmenities);
+            WaitUntil.CustomElementIsClickable(TabAmenities);
+            Button.Click(TabAmenities);
+
+            return this;
+        }
+
+        [AllureStep("ClickTabAccess")]
+        public AddApartments ClickTabAccess()
+        {
+            WaitUntil.CustomElementIsVisible(TabAccess);
+            WaitUntil.CustomElementIsClickable(TabAccess);
+            Button.Click(TabAccess);
+
+            return this;
+        }
+
+        [AllureStep("ClickTabSpecials")]
+        public AddApartments ClickTabSpecials()
+        {
+            WaitUntil.CustomElementIsVisible(TabSpecials);
+            WaitUntil.CustomElementIsClickable(TabSpecials);
+            Button.Click(TabSpecials);
+
+            return this;
+        }
+
+        [AllureStep("ClickTabImages")]
+        public AddApartments ClickTabImages()
+        {
+            WaitUntil.CustomElementIsVisible(TabImages);
+            WaitUntil.CustomElementIsClickable(TabImages);
+            Button.Click(TabImages);
+
+            return this;
+        }
+
+        #endregion
+
         #region Tab Units
 
         [AllureStep("GetLeasePrice")]

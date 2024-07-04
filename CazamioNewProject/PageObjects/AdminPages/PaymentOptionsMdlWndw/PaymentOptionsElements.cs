@@ -26,7 +26,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
         [FindsBy(How = How.XPath, Using = "//mat-dialog-container//div[@class = 'payments-wrapper']//div[@class = 'note-input']//textarea")]
         public IWebElement FieldInputDeliverCheckNoteBuilding;
 
-        [FindsBy(How = How.XPath, Using = "//mat-dialog-container//div[@class = 'payments-wrapper']//div[@class = 'note-input ng-star-inserted']//textarea")]
+        [FindsBy(How = How.XPath, Using = "//mat-dialog-container//label[contains(text(), 'Deliver check note')]//following-sibling::textarea")]
         public IWebElement FieldInputDeliverCheckNoteApartment;
 
         [FindsBy(How = How.XPath, Using = "//div[@class='note-input']//label[contains(text(), 'Zelle address or phone')]/following-sibling::input[@type='text']")]

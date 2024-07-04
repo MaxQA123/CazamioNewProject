@@ -26,6 +26,22 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return Browser._Driver.FindElement(By.XPath(xpath));
         }
 
+        #region ListOfTabs
+
+        [FindsBy(How = How.XPath, Using = "//a[text() = 'Amenities']")]
+        public IWebElement TabAmenities;
+
+        [FindsBy(How = How.XPath, Using = "//a[text() = 'Access']")]
+        public IWebElement TabAccess;
+
+        [FindsBy(How = How.XPath, Using = "//a[text() = 'Specials']")]
+        public IWebElement TabSpecials;
+
+        [FindsBy(How = How.XPath, Using = "//a[text() = 'Images']")]
+        public IWebElement TabImages;
+
+        #endregion
+
         [FindsBy(How = How.XPath, Using = ("//ng-select[@bindlabel = 'buildingName']//div[@aria-haspopup = 'listbox']"))]
         public IWebElement ButtonBuildingNameAddApartmentsUnitsPage;
 
