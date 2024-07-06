@@ -135,8 +135,11 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [FindsBy(How = How.XPath, Using = ("//span[text() = 'Payment methods']"))]
         public IWebElement ButtonPaymentMethods;
 
-        [FindsBy(How = How.XPath, Using = ("//mat-chip-list[@id = 'mat-chip-list-1']"))]
-        public IWebElement FieldInputRentalTerms;
+        [FindsBy(How = How.XPath, Using = ("//input[@formcontrolname = 'rentalTerms']"))]
+        public IWebElement FieldInputRentalTermsFirstValue;
+
+        [FindsBy(How = How.XPath, Using = ("//button[@aria-label = 'remove 12 months']"))]
+        public IWebElement ButtonTwelveMonths;
 
         [FindsBy(How = How.XPath, Using = ("//span[text() =  ' 12 months ']"))]
         public IWebElement ItemTwelveMonthsRentalTerms;

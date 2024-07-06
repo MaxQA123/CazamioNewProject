@@ -936,11 +936,20 @@ namespace MarketplaceAdminGuiTest
                 .SelectApartmentTypeSingleFamily()
                 .ClickButtonPaymentMethods();
             Pages.PaymentOptionsMdlWndw
-                .SelectAllPaymentMethodsHoldDepositApartment();
+                .SelectAllPaymentMethodsWithoutAchHoldDepositApartment();
             Pages.AddApartments
+                .EnterOneYearRentalTerms()
                 .ClickTabAmenities()
                 .ClickTabAccess()
-                .ClickTabSpecials();
+                .ClickTabSpecials()
+                .ClickButtonAddSpecials()
+                .AddConcessionIsActive()
+                .ClickButtonAddSpecials()
+                
+                .ClickTabFreeStuff()
+                .ClickButtonAddSpecials()
+                .AddFreeStuffIsActive();
+
 
             #endregion
 

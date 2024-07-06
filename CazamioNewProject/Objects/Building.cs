@@ -154,7 +154,7 @@ namespace CazamioNewProject.Objects
             string zipBuildingMarkAdmAssignedRoleAgntBrkr = "11213";
             string neighborhoodMarkAdmBuildingAssignedRoleAgntBrkr = "Crown Heights";
 
-            string buildingNumberMarkAdmAssignedRoleBrkr = "2";
+            string buildingNumberMarkAdmAssignedRoleBrkr = "4";
             string addressMarkAdmAssignedRoleBrkr = "Washington Square";
             string zipBuildingMarkAdmAssignedRoleBrkr = "10012";
             string neighborhoodBuildingMarkAdmAssignedRoleBrkr = "Manhattan";

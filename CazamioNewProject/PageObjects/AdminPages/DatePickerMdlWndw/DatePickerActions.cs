@@ -44,6 +44,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.DatePickerMdlWndw
             element.Click();
         }
 
+        [AllureStep("SelectFisrtDayInNextMonth")]
+        public void SelectFisrtDayInNextMonth()
+        {
+            WaitUntil.WaitSomeInterval(1000);
+            var element = Browser._Driver.FindElement(By.XPath($"//table//tbody[@class = 'mat-calendar-body']//button/span[contains(text(), '{1}')]"));
+            element.Click();
+        }
+
         #endregion
 
         #region Selecting a months
@@ -55,6 +63,21 @@ namespace CazamioNewProject.PageObjects.AdminPages.DatePickerMdlWndw
 
             // Вычисляем прошлый месяц
             string lastMonthName = DateTime.Now.AddMonths(-1).ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture); // Получаем полное название месяца
+            string lastMonthShortName = lastMonthName.Substring(0, 3).ToUpper(); // Получаем первые три буквы названия месяца
+
+            // Используем WebDriverWait для ожидания элемента
+            var wait = new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(10));
+            var element = wait.Until(drv => drv.FindElement(By.XPath($"//mat-year-view//table//tbody//button//span[contains(text(), '{lastMonthShortName}')]")));
+            element.Click();
+        }
+
+        [AllureStep("SelectNextMonth")]
+        public void SelectNextMonth()
+        {
+            WaitUntil.WaitSomeInterval(1000);
+
+            // Вычисляем прошлый месяц
+            string lastMonthName = DateTime.Now.AddMonths(+1).ToString("MMMM", System.Globalization.CultureInfo.InvariantCulture); // Получаем полное название месяца
             string lastMonthShortName = lastMonthName.Substring(0, 3).ToUpper(); // Получаем первые три буквы названия месяца
 
             // Используем WebDriverWait для ожидания элемента

@@ -118,6 +118,7 @@ namespace CazamioNewProject.Objects
 
         public class RentalTermsInfo
         {
+            public string OneYear { get; set; }
             public string TwelveMonths { get; set; }
             public string EighteenMonths { get; set; }
             public string DefaultRentalTerms { get; set; }
@@ -155,6 +156,7 @@ namespace CazamioNewProject.Objects
         public class ConcessionsInfo
         {
             public string NameFirst { get; set; }
+            public string NameSecond { get; set; }
             public string RandomMonthsFree { get; set; }
             public string OneMonthYearFree { get; set; }
             public string TwoMonthsFree { get; set; }
@@ -245,11 +247,13 @@ namespace CazamioNewProject.Objects
             string holdDepositFiveNumber = GenerateRandomData.RandomNumberWithoutZero(5);
 
             string nameConcessionFirst = "Concession Apartment 1";
+            string nameConcessionSecond = "Concession Apartment 2";
             string randomMonthsFree = GenerateRandomData.RandomNumberWithoutZero(1);
             string oneMonthYearFree = "1";
             string twoMonthsFree = "2";
             string randomLeaseTerms = GenerateRandomData.RandomNumberWithoutZero(1);
             string twelveMonthsLeaseTerms = "12";
+            string oneYearRentalTerms = "1 year";
 
             var apartment = new Apartment()
             {
@@ -333,6 +337,7 @@ namespace CazamioNewProject.Objects
                 ApartmentHoldDeposit = valueHoldDeposit,
                 RentalTerms = new RentalTermsInfo
                 {
+                    OneYear = oneYearRentalTerms,
                     TwelveMonths = itemTwelveMonths,
                     EighteenMonths = itemEighteenMonths,
                     DefaultRentalTerms = defaultRentalTerms
@@ -367,6 +372,7 @@ namespace CazamioNewProject.Objects
                 Concessions = new ConcessionsInfo
                 {
                     NameFirst = nameConcessionFirst,
+                    NameSecond = nameConcessionSecond,
                     RandomMonthsFree = randomMonthsFree,
                     OneMonthYearFree = oneMonthYearFree,
                     TwoMonthsFree = twoMonthsFree,

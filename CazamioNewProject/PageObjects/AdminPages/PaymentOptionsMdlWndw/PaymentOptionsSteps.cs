@@ -10,7 +10,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
         [AllureStep("SelectPaymentMethodCreditCard")]
         public PaymentOptionsMdlWndw SelectPaymentMethodCreditCard()
         {
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ItemCreditCard);
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
             VerifySuccessSelectPmntMthds();
             WaitUntil.SuccessCustomElementIsVisible(MessageSuccessPaymentMethodsSelectedMdlWndwOptns);
@@ -21,7 +23,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
         [AllureStep("SelectPaymentMethodAch")]
         public PaymentOptionsMdlWndw SelectPaymentMethodAch()
         {
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ItemAch);
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
             VerifySuccessSelectPmntMthds();
             WaitUntil.SuccessCustomElementIsVisible(MessageSuccessPaymentMethodsSelectedMdlWndwOptns);
@@ -32,7 +36,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
         [AllureStep("SelectPaymentMethodDeliverCheck")]
         public PaymentOptionsMdlWndw SelectPaymentMethodDeliverCheck()
         {
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ItemDeliverCheck);
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
             VerifySuccessSelectPmntMthds();
             WaitUntil.SuccessCustomElementIsVisible(MessageSuccessPaymentMethodsSelectedMdlWndwOptns);
@@ -43,7 +49,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
         [AllureStep("SelectPaymentMethodZelle")]
         public PaymentOptionsMdlWndw SelectPaymentMethodZelle()
         {
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ItemZelle);
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
             VerifySuccessSelectPmntMthds();
             WaitUntil.SuccessCustomElementIsVisible(MessageSuccessPaymentMethodsSelectedMdlWndwOptns);
@@ -54,7 +62,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
         [AllureStep("SelectPaymentMethodVenmo")]
         public PaymentOptionsMdlWndw SelectPaymentMethodVenmo()
         {
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ItemVenmo);
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
             VerifySuccessSelectPmntMthds();
             WaitUntil.SuccessCustomElementIsVisible(MessageSuccessPaymentMethodsSelectedMdlWndwOptns);
@@ -65,13 +75,20 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
         [AllureStep("SelectScreeningFeeAllPaymentMethods")]
         public PaymentOptionsMdlWndw SelectScreeningFeeAllPaymentMethods()
         {
+            WaitUntil.WaitSomeInterval(100);
             //Button.Click(ItemCreditCard);
             Button.Click(ItemAch);
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ItemDeliverCheck);
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ItemZelle);
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ItemVenmo);
+            WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputDeliverCheckNoteBuilding, paymentOptions.DeliverCheckNote.ForBuildingScreening);
+            WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputZelleAddressOrPhoneBuilding, paymentOptions.Zelle.ForBuildingScreening);
+            WaitUntil.WaitSomeInterval(100);
             ButtonForVenmoQrCodeImage.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_FOR_PAYMENT_VENMO_SCREENING));
             Button.Click(ButtonSave);
             VerifySuccessSelectPmntMthds();
@@ -79,17 +96,23 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             return this;
         }
 
-        [AllureStep("SelectAllPaymentMethodsHoldDepositApartment")]
-        public PaymentOptionsMdlWndw SelectAllPaymentMethodsHoldDepositApartment()
+        [AllureStep("SelectAllPaymentMethodsWithoutAchHoldDepositApartment")]
+        public PaymentOptionsMdlWndw SelectAllPaymentMethodsWithoutAchHoldDepositApartment()
         {
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ItemCreditCard);
-            Button.Click(ItemAch);
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ItemDeliverCheck);
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ItemZelle);
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ItemVenmo);
+            WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputDeliverCheckNoteApartment, paymentOptions.DeliverCheckNote.ForApartment);
+            WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputZelleAddressOrPhoneApartment, paymentOptions.Zelle.ForApartment);
             ButtonForVenmoQrCodeImage.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_FOR_PAYMENT_VENMO_HOLD_APARTMENT));
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
             VerifySuccessSelectPmntMthds();
 
@@ -99,14 +122,22 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
         [AllureStep("SelectHoldDepositAllPaymentMethods")]
         public PaymentOptionsMdlWndw SelectHoldDepositAllPaymentMethods()
         {
+            WaitUntil.WaitSomeInterval(100);
             //Button.Click(ItemCreditCard);
             Button.Click(ItemAch);
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ItemDeliverCheck);
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ItemZelle);
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ItemVenmo);
+            WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputDeliverCheckNoteBuilding, paymentOptions.DeliverCheckNote.ForBuildingHold);
+            WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputZelleAddressOrPhoneBuilding, paymentOptions.Zelle.ForBuildingHold);
+            WaitUntil.WaitSomeInterval(100);
             ButtonForVenmoQrCodeImage.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_FOR_PAYMENT_VENMO_SCREENING));
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
             VerifySuccessSelectPmntMthds();
 
@@ -149,10 +180,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
         [AllureStep("SelectPaymentMethodsCrdtCrdAchZll")]
         public PaymentOptionsMdlWndw SelectPaymentMethodsCrdtCrdAchZll()
         {
+            WaitUntil.WaitSomeInterval(100);
             //Button.Click(ItemCreditCard);
             Button.Click(ItemAch);
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ItemZelle);
+            WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputZelleAddressOrPhoneBuilding, paymentOptions.Zelle.ForBuildingScreening);
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
             VerifySuccessSelectPmntMthds();
 
@@ -162,30 +197,20 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
         [AllureStep("SelectCrdtCrdDlvrChckZlVnmForHoldBuilding")]
         public PaymentOptionsMdlWndw SelectCrdtCrdDlvrChckZlVnmForHoldBuilding()
         {
+            WaitUntil.WaitSomeInterval(100);
             //Button.Click(ItemCreditCard);
             Button.Click(ItemDeliverCheck);
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ItemZelle);
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ItemVenmo);
+            WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputDeliverCheckNoteBuilding, paymentOptions.DeliverCheckNote.ForBuildingHold);
+            WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputZelleAddressOrPhoneBuilding, paymentOptions.Zelle.ForBuildingHold);
+            WaitUntil.WaitSomeInterval(100);
             ButtonForVenmoQrCodeImage.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_FOR_PAYMENT_VENMO_HOLD_BUILDING));
-            Button.Click(ButtonSave);
-            VerifySuccessSelectPmntMthds();
-
-            return this;
-        }
-
-        [AllureStep("SelectAllPaymentMethodsForHoldApartment")]
-        public PaymentOptionsMdlWndw SelectAllPaymentMethodsForHoldApartment()
-        {
-            Button.Click(ItemCreditCard);
-            Button.Click(ItemAch);
-            Button.Click(ItemDeliverCheck);
-            Button.Click(ItemZelle);
-            Button.Click(ItemVenmo);
-            InputGeneral.InputFunctionWithClear(FieldInputDeliverCheckNoteApartment, paymentOptions.DeliverCheckNote.ForApartment);
-            InputGeneral.InputFunctionWithClear(FieldInputZelleAddressOrPhoneApartment, paymentOptions.Zelle.ForApartment);
-            ButtonForVenmoQrCodeImage.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_FOR_PAYMENT_VENMO_HOLD_APARTMENT));
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
             VerifySuccessSelectPmntMthds();
 

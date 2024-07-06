@@ -288,7 +288,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             Button.Click(FieldInputDateTo);
             WaitUntil.WaitSomeInterval(100);
             Pages.DatePicker
-                .SelectCurrentDay();
+                .ClickButtonDropDownYearMonth()
+                .SelectCurrentYear();
+            Pages.DatePicker
+                .SelectNextMonth();
+            Pages.DatePicker
+                .SelectFisrtDayInNextMonth();
+            //Pages.DatePicker
+            //    .SelectCurrentDay();
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSaveSpecials);
 

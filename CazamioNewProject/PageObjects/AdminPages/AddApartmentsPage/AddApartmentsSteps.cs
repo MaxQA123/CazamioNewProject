@@ -199,6 +199,23 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return this;
         }
 
+        [AllureStep("SetFirstDayNextMonthsAvailableFrom")]
+        public AddApartments SetFirstDayNextMonthsAvailableFrom()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputAvailableFrom);
+            Button.Click(FieldInputAvailableFrom);
+            WaitUntil.WaitSomeInterval(100);
+            Pages.DatePicker
+                .ClickButtonDropDownYearMonth()
+                .SelectCurrentYear();
+            Pages.DatePicker
+                .SelectNextMonth();
+            Pages.DatePicker
+                .SelectFisrtDayInNextMonth();
+
+            return this;
+        }
+
         [AllureStep("SelectApartmentTypeMultiFamily")]
         public AddApartments SelectApartmentTypeMultiFamily()
         {
@@ -231,6 +248,17 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.CustomElementIsVisible(FieldInputInternalNotes);
             InputGeneral.InputFunctionWithClear(FieldInputInternalNotes, apartment.TextVariable.TextLongInternalNotes);
 
+            return this;
+        }
+
+        [AllureStep("EnterOneYearRentalTerms")]
+        public AddApartments EnterOneYearRentalTerms()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonApartmentStatus);
+            WaitUntil.CustomElementIsClickable(ButtonApartmentStatus);
+            Button.Click(ButtonTwelveMonths);
+            InputGeneral.InputFunctionWithClear(FieldInputRentalTermsFirstValue, apartment.RentalTerms.OneYear);
+            KeyBoardActions.ClickEnterButton();
             return this;
         }
 
@@ -376,7 +404,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             Button.Click(FieldInputDateTo);
             WaitUntil.WaitSomeInterval(100);
             Pages.DatePicker
-                .SelectCurrentDay();
+               .ClickButtonDropDownYearMonth()
+               .SelectCurrentYear();
+            Pages.DatePicker
+                .SelectNextMonth();
+            Pages.DatePicker
+                .SelectFisrtDayInNextMonth();
+            //Pages.DatePicker
+            //    .SelectCurrentDay();
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSaveSpecials);
 
@@ -412,44 +447,44 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         //    return this;
         //}
 
-        //[AllureStep("AddConcessionInActive")]
-        //public AddApartments AddConcessionInActive()
-        //{
-        //    WaitUntil.CustomElementIsVisible(CheckBoxIsActive);
-        //    WaitUntil.ElementIsClickable(CheckBoxIsActive);
-        //    Button.Click(CheckBoxIsActive);
-        //    WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
-        //    InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.Concessions.Name);
-        //    WaitUntil.WaitSomeInterval(100);
-        //    InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.Concessions.MonthsFree);
-        //    WaitUntil.WaitSomeInterval(100);
-        //    InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.LeaseTerms);
-        //    WaitUntil.WaitSomeInterval(100);
-        //    KeyBoardActions.ClickArrowDown();
-        //    KeyBoardActions.ClickEnterButton();
-        //    InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, building.AdditionalInfo.LongInfo);
-        //    WaitUntil.WaitSomeInterval(100);
-        //    KeyBoardActions.ClickArrowDown();
-        //    KeyBoardActions.ClickEnterButton();
-        //    WaitUntil.WaitSomeInterval(100);
-        //    Button.Click(ButtonYesSpecials);
-        //    WaitUntil.WaitSomeInterval(100);
-        //    Button.Click(FieldInputDateFrom);
-        //    WaitUntil.WaitSomeInterval(100);
-        //    Pages.DatePicker
-        //        .SelectCurrentDay();
-        //    WaitUntil.WaitSomeInterval(100);
-        //    Button.Click(FieldInputDateTo);
-        //    WaitUntil.WaitSomeInterval(100);
-        //    Pages.DatePicker
-        //        .SelectCurrentDayPlusOneDay();
-        //    KeyBoardActions.ScrollToDown();
-        //    Button.Click(ButtonMoveInTriggerEvent);
-        //    WaitUntil.WaitSomeInterval(100);
-        //    Button.Click(ButtonSaveSpecials);
+        [AllureStep("AddConcessionInActive")]
+        public AddApartments AddConcessionInActive()
+        {
+            WaitUntil.CustomElementIsVisible(CheckBoxIsActive);
+            WaitUntil.ElementIsClickable(CheckBoxIsActive);
+            Button.Click(CheckBoxIsActive);
+            WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
+            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, apartment.Concessions.NameSecond);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.Concessions.MonthsFree);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.LeaseTerms);
+            WaitUntil.WaitSomeInterval(100);
+            KeyBoardActions.ClickArrowDown();
+            KeyBoardActions.ClickEnterButton();
+            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, building.AdditionalInfo.LongInfo);
+            WaitUntil.WaitSomeInterval(100);
+            KeyBoardActions.ClickArrowDown();
+            KeyBoardActions.ClickEnterButton();
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonYesSpecials);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(FieldInputDateFrom);
+            WaitUntil.WaitSomeInterval(100);
+            Pages.DatePicker
+                .SelectCurrentDay();
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(FieldInputDateTo);
+            WaitUntil.WaitSomeInterval(100);
+            Pages.DatePicker
+                .SelectCurrentDayPlusOneDay();
+            KeyBoardActions.ScrollToDown();
+            Button.Click(ButtonMoveInTriggerEvent);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonSaveSpecials);
 
-        //    return this;
-        //}
+            return this;
+        }
 
         [AllureStep("AddFreeStuffIsActive")]
         public AddApartments AddFreeStuffIsActive()
