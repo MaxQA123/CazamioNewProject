@@ -456,10 +456,11 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
             InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, apartment.Concessions.NameSecond);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.Concessions.MonthsFree);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, apartment.Concessions.TwoMonthsFree);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.LeaseTerms);
+            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, apartment.Concessions.OneYearLeaseTerms);
             WaitUntil.WaitSomeInterval(100);
+            KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();
             InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, building.AdditionalInfo.LongInfo);
