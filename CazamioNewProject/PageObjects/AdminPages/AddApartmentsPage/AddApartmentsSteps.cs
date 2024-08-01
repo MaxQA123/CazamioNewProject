@@ -57,7 +57,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         public AddApartments EnterMandatoryFieldsMarkAdmAssignedAgBrkr()
         {
             WaitUntil.CustomElementIsVisible(FieldInputUnitNumber);
-            InputGeneral.InputFunctionWithClear(FieldInputUnitNumber, apartment.UnitNumber.UnitNumberMarkAdmAssignedRoleBrkr);
+            InputGeneral.InputFunctionWithClear(FieldInputUnitNumber, apartment.UnitNumber.UnitNumberMarkAdmAssignedRoleAgntBrkr);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputBedrooms, apartment.Bedrooms.TwoNumber);
             WaitUntil.WaitSomeInterval(100);
@@ -463,7 +463,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();
-            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, building.AdditionalInfo.LongInfo);
+            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, apartment.AdditionalInfo.LongInfo);
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();
@@ -478,7 +478,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             Button.Click(FieldInputDateTo);
             WaitUntil.WaitSomeInterval(100);
             Pages.DatePicker
-                .SelectCurrentDayPlusOneDay();
+                .SelectCurrentDay();
             KeyBoardActions.ScrollToDown();
             Button.Click(ButtonMoveInTriggerEvent);
             WaitUntil.WaitSomeInterval(100);
@@ -510,7 +510,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             Button.Click(FieldInputDateTo);
             WaitUntil.WaitSomeInterval(100);
             Pages.DatePicker
-                .SelectCurrentDay();
+               .ClickButtonDropDownYearMonth()
+               .SelectCurrentYear();
+            Pages.DatePicker
+                .SelectNextMonth();
+            Pages.DatePicker
+                .SelectFisrtDayInNextMonth();
+            //Pages.DatePicker
+            //    .SelectCurrentDay();
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ScrollToDown();
             Button.Click(ButtonLeaseSignedTriggerEvent);
@@ -558,7 +565,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.ElementIsClickable(CheckBoxIsActive);
             Button.Click(CheckBoxIsActive);
             WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
-            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.FreeStuff.NameFirst);
+            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, apartment.FreeStuff.NameSecond);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(FieldInputSelectItemsFreeStuff);
             WaitUntil.WaitSomeInterval(100);
@@ -574,7 +581,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             Button.Click(FieldInputDateTo);
             WaitUntil.WaitSomeInterval(100);
             Pages.DatePicker
-                .SelectCurrentDayPlusOneDay();
+                .SelectCurrentDay();
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ScrollToDown();
             Button.Click(ButtonMoveInTriggerEvent);

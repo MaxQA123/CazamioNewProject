@@ -945,10 +945,16 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonAddSpecials()
                 .AddConcessionIsActive()
                 .ClickButtonAddSpecials()
-                
+                .AddConcessionInActive()
+                //Add assertion
                 .ClickTabFreeStuff()
                 .ClickButtonAddSpecials()
-                .AddFreeStuffIsActive();
+                .AddFreeStuffIsActive()
+                .ClickButtonAddSpecials()
+                .AddFreeStuffInActive()
+                //Add assertion
+                .ClickTabImages()
+                .ClickButtonSaveApartment();
 
 
             #endregion

@@ -41,7 +41,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
         public ListOfBuildings SearchBuildingMarkAdmAgent()
         {
             WaitUntil.CustomElementIsVisible(LoaderHidden, 10);
-            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.WaitSomeInterval(10000);
             WaitUntil.CustomElementIsVisible(FieldInputSearch);
             WaitUntil.CustomElementIsClickable(FieldInputSearch);
             InputGeneral.InputFunctionWithClear(FieldInputSearch, apartment.BuildingShortAddress.MarkAdmAssignedAgent);
