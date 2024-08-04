@@ -26,6 +26,20 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return Browser._Driver.FindElement(By.XPath(xpath));
         }
 
+        public IWebElement ItemBuildingNameBrokerForBroker;
+
+        public IWebElement SetItemBuildingNameBrokerForBroker()
+        {
+            // Создание экземпляра класса Owner
+            Agent agent = new Agent().Generate();
+
+            // Использование переменной экземпляра owner для построения XPath
+            var xpath = "//span[contains(text(), '" + apartment.BuildingShortAddress.BrokerAssignedBroker + "')]";
+
+            // Присвоение значения ItemForAutotestForBroker
+            return Browser._Driver.FindElement(By.XPath(xpath));
+        }
+
         #region ListOfTabs
 
         [FindsBy(How = How.XPath, Using = "//a[text() = 'Amenities']")]
@@ -43,7 +57,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         #endregion
 
         [FindsBy(How = How.XPath, Using = ("//ng-select[@bindlabel = 'buildingName']//div[@aria-haspopup = 'listbox']"))]
-        public IWebElement ButtonBuildingNameAddApartmentsUnitsPage;
+        public IWebElement ButtonBuildingName;
+
+        [FindsBy(How = How.XPath, Using = ("//ng-select[@bindlabel = 'buildingName']//div[@class = 'ng-input']"))]
+        public IWebElement FieldInputBuildingName;
 
         [FindsBy(How = How.XPath, Using = ("//input[@id = 'unit']"))]
         public IWebElement FieldInputUnitNumber;

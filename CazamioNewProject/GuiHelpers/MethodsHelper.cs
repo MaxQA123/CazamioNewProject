@@ -6,7 +6,6 @@ namespace CazamioNewProject.GuiHelpers
 {
     public class InputGeneral
     {
-        [AllureStep("InputFunctionWithClear")]
         public static void InputFunctionWithClear(IWebElement element, string text)
         {
             WaitUntil.WaitSomeInterval(250);
@@ -15,7 +14,6 @@ namespace CazamioNewProject.GuiHelpers
             element.SendKeys(text);
         }
 
-        [AllureStep("InputFunctionWithoutClear")]
         public static void InputFunctionWithoutClear(IWebElement element, string text)
         {
             WaitUntil.ElementIsClickable(element);
@@ -25,7 +23,6 @@ namespace CazamioNewProject.GuiHelpers
 
     public class Button
     {
-        [AllureStep("Click")]
         public static void Click(IWebElement element)
         {
             //WaitUntil.CustomElementIsVisible(element);

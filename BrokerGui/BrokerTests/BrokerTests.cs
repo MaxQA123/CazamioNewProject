@@ -506,14 +506,14 @@ namespace BrokerGuiTests
                 .VerifyTypeAccessFromTable(copyActualNameNote, copyActualNamePinCode)
                 .ClickTabSpecials()
                 .ClickButtonAddSpecials()
-                .AddConcessionIsActive();
+                .AddFirstConcessionIsActive();
 
             string getNameConcession = Pages.NewBuilding.GetNameConcessionFromTable();
 
             Pages.NewBuilding
                 .ClickTabFreeStuff()
                 .ClickButtonAddSpecials()
-                .AddFreeStuffIsActive();
+                .AddFirstFreeStuffIsActive();
 
             string getNameFreeStuff = Pages.NewBuilding.GetNameFreeStuffFromTable();
 
@@ -530,6 +530,54 @@ namespace BrokerGuiTests
 
             Pages.BuildingView
                 .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
+
+            #endregion
+
+            WaitUntil.WaitSomeInterval(5000);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Broker")]
+        [AllureSubSuite("AddApartmentAssignedBroker")]
+
+        public void AddApartmentAssignedBroker()
+        {
+            #region SettingsForBuilding
+
+            //All the fields filled in, Cardknox
+            //All tabs filled in
+            //30-39 Crown Street
+
+            #endregion
+
+            #region Preconditions Test
+
+            Pages.LogInLandlord
+                .EnterEmailPasswordAsBroker()
+                .ClickIconShow()
+                .ClickButtonLetsGo();
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+            Pages.ListOfApartments
+                .ClickButtonAdd();
+
+            #endregion
+
+            #region Test
+
+            Pages.AddApartments
+                .VerifyTitleAddApartmentsPage()
+                .SelectBuildingNameBrokerForBroker()
+                .EnterToAllFieldsBrokerAssignedBrkrFourNumber();//Need to complete this method
 
             #endregion
 

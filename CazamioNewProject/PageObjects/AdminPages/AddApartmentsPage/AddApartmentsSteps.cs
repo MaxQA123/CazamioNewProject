@@ -9,14 +9,27 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
     {
         #region Tad units
 
+        [AllureStep("SelectBuildingNameBrokerForBroker")]
+        public AddApartments SelectBuildingNameBrokerForBroker()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonBuildingName);
+            WaitUntil.CustomElementIsClickable(ButtonBuildingName);
+            Button.Click(ButtonBuildingName);
+            WaitUntil.WaitSomeInterval(1000);
+            Button.Click(SetItemBuildingNameBrokerForBroker());
+            WaitUntil.WaitSomeInterval(2000);
+
+            return this;
+        }
+
         [AllureStep("GetBuildingName")]
         public string GetBuildingName()
         {
-            WaitUntil.CustomElementIsVisible(ButtonBuildingNameAddApartmentsUnitsPage);
-            WaitUntil.CustomElementIsClickable(ButtonBuildingNameAddApartmentsUnitsPage);
-            Button.Click(ButtonBuildingNameAddApartmentsUnitsPage);
+            WaitUntil.CustomElementIsVisible(ButtonBuildingName);
+            WaitUntil.CustomElementIsClickable(ButtonBuildingName);
+            Button.Click(ButtonBuildingName);
             WaitUntil.WaitSomeInterval(2000);
-            WaitUntil.CustomElementIsVisible(ButtonBuildingNameAddApartmentsUnitsPage);
+            WaitUntil.CustomElementIsVisible(ButtonBuildingName);
             string getBuildingName = GetValueFromFieldBuildingName.Text;
             string getBuildingNameActual = getBuildingName.ToString();
             KeyBoardActions.ClickEnterButton();
@@ -49,6 +62,32 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputFloor, apartment.Floor.OneNumber);
 
+            return this;
+        }
+
+        [AllureStep("EnterToAllFieldsBrokerAssignedBrkrFourNumber")]
+        public AddApartments EnterToAllFieldsBrokerAssignedBrkrFourNumber()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputUnitNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputUnitNumber, apartment.UnitNumber.UnitNumberBrokerAssignedRoleBrkr);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputBedrooms, apartment.Bedrooms.FourNumber);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputHalfBedrooms, apartment.HalfBedrooms.OneNumber);//
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputBathrooms, apartment.Bathrooms.FourNumber);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputHalfBathrooms, apartment.HalfBathrooms.OneNumber);//
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputSqFoot, apartment.SqFoot.OneNumber);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, apartment.LeasePrice.OneNumber);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputSecurityDeposit, apartment.SecurityDeposit.OneNumber);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthlyRentsPrePayment, apartment.MonthlyRentsPrePayment.OneNumber);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputFloor, apartment.Floor.OneNumber);
 
             return this;
         }
@@ -59,9 +98,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.CustomElementIsVisible(FieldInputUnitNumber);
             InputGeneral.InputFunctionWithClear(FieldInputUnitNumber, apartment.UnitNumber.UnitNumberMarkAdmAssignedRoleAgntBrkr);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputBedrooms, apartment.Bedrooms.TwoNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputBedrooms, apartment.Bedrooms.ThreeNumber);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputBathrooms, apartment.Bathrooms.TwoNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputBathrooms, apartment.Bathrooms.ThreeNumber);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, apartment.LeasePrice.ThreeNumber);
             WaitUntil.WaitSomeInterval(100);

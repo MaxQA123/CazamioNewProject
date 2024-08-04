@@ -40,6 +40,8 @@ namespace CazamioNewProject.Objects
         {
             public string OneNumber { get; set; }
             public string TwoNumber { get; set; }
+            public string ThreeNumber { get; set; }
+            public string FourNumber { get; set; }
         }
 
         public class HalfBedroomsInfo
@@ -52,6 +54,8 @@ namespace CazamioNewProject.Objects
         {
             public string OneNumber { get; set; }
             public string TwoNumber { get; set; }
+            public string ThreeNumber { get; set; }
+            public string FourNumber { get; set; }
         }
 
         public class HalfBathroomsInfo
@@ -128,6 +132,8 @@ namespace CazamioNewProject.Objects
         {
             public string MarkAdmAssignedBroker { get; set; }
             public string MarkAdmAssignedAgent { get; set; }
+            public string BrokerAssignedBroker { get; set; }
+            public string BrokerAssignedAgent { get; set; }
         }
 
         public class TextVariableInfo
@@ -184,18 +190,25 @@ namespace CazamioNewProject.Objects
 
             string buildingShortAddressMarkAdmAssignedRoleAgBrkr = "9998 Saint Johnson Place";
             string unitNumberMarkAdmAssignedRoleAgntBrkr = "1";
-          
-            string unitNumberBrokerAssignedRoleAgntBrkr = "AA";
+
+            string buildingShortAddressBrokerAssignedRoleBrkr = "30-39 Crown St";
             string unitNumberBrokerAssignedRoleBrkr = "1A";
+
+            string buildingShortAddressBrokerAssignedRoleAgBrkr = "";
+            string unitNumberBrokerAssignedRoleAgntBrkr = "";
 
             string unitNumberAgntBrkrAssignedRoleAgntBrkr = "1-9";
 
             string bedroomsOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
             string bedroomsTwoNumber = GenerateRandomData.RandomNumberWithoutZero(2);
+            string bedroomsThreeNumber = GenerateRandomData.RandomNumberWithoutZero(3);
+            string bedroomsFourNumber = GenerateRandomData.RandomNumberWithoutZero(4);
             string halfBedroomsOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
             string halfBedroomsTwoNumber = GenerateRandomData.RandomNumberWithoutZero(2);
             string bathroomsOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
             string bathroomsTwoNumber = GenerateRandomData.RandomNumberWithoutZero(2);
+            string bathroomsThreeNumber = GenerateRandomData.RandomNumberWithoutZero(3);
+            string bathroomsFourNumber = GenerateRandomData.RandomNumberWithoutZero(4);
             string halfBathroomsOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
             string halfBathroomsTwoNumber = GenerateRandomData.RandomNumberWithoutZero(2);
             string sqFootOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
@@ -270,7 +283,9 @@ namespace CazamioNewProject.Objects
                 Bedrooms = new BedroomsInfo
                 {
                     OneNumber = bedroomsOneNumber,
-                    TwoNumber = bedroomsTwoNumber
+                    TwoNumber = bedroomsTwoNumber,
+                    ThreeNumber = bedroomsThreeNumber,
+                    FourNumber = bedroomsFourNumber
                 },
                 HalfBedrooms = new HalfBedroomsInfo
                 {
@@ -280,7 +295,9 @@ namespace CazamioNewProject.Objects
                 Bathrooms = new BathroomsInfo
                 {
                     OneNumber = bathroomsOneNumber,
-                    TwoNumber = bathroomsTwoNumber
+                    TwoNumber = bathroomsTwoNumber,
+                    ThreeNumber = bathroomsThreeNumber,
+                    FourNumber = bathroomsFourNumber
                 },
                 HalfBathrooms = new HalfBathroomsInfo
                 {
@@ -348,7 +365,9 @@ namespace CazamioNewProject.Objects
                 BuildingShortAddress = new BuildingShortAddressInfo
                 {
                     MarkAdmAssignedBroker = buildingShortAddressMarkAdmAssignedRoleBrkr,
-                    MarkAdmAssignedAgent = buildingShortAddressMarkAdmAssignedRoleAgBrkr
+                    MarkAdmAssignedAgent = buildingShortAddressMarkAdmAssignedRoleAgBrkr,
+                    BrokerAssignedBroker = buildingShortAddressBrokerAssignedRoleBrkr,
+                    BrokerAssignedAgent = buildingShortAddressBrokerAssignedRoleAgBrkr
                 },
                 TextVariable = new TextVariableInfo
                 {

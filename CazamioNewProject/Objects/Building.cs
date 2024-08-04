@@ -168,7 +168,7 @@ namespace CazamioNewProject.Objects
             string zipBuildingBrokerAssignedRoleAgntBrkr = "11226";
             string neighborhoodBrokerBuildingAssignedRoleAgntBrkr = "East Flatbush";
 
-            string buildingNumberBrokerAssignedRoleBrkr = "20-29";
+            string buildingNumberBrokerAssignedRoleBrkr = "30-39";
             string addressBrokerAssignedRoleBrkr = "Crown St";
             string zipBuildingBrokerAssignedRoleBrkr = "11225";
             string neighborhoodBuildingBrokerAssignedRoleBrkr = "Crown Heights";
