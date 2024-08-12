@@ -577,7 +577,14 @@ namespace BrokerGuiTests
             Pages.AddApartments
                 .VerifyTitleAddApartmentsPage()
                 .SelectBuildingNameBrokerForBroker()
-                .EnterToAllFieldsBrokerAssignedBrkrFourNumber();//Need to complete this method
+                .EnterToAllFieldsBrokerAssignedBrkrFourNumber()
+                .SelectCurrentDateAvailableFrom()
+                .SelectStatusApplicationSubmitted()
+                .SelectAgent()
+                .SelectApartmentTypePlex();
+            JScriptExecutor.ScrollToDownWebPage();
+            Pages.AddApartments
+                .EnterHoldDepositOneThousand();
 
             #endregion
 

@@ -164,11 +164,11 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return this;
         }
 
-        [AllureStep("EnterHoldDepositOneNumber")]
-        public AddApartments EnterHoldDepositOneNumber()
+        [AllureStep("EnterHoldDepositOneThousand")]
+        public AddApartments EnterHoldDepositOneThousand()
         {
             WaitUntil.CustomElementIsVisible(FieldInputApartmentHoldDeposit);
-            InputGeneral.InputFunctionWithClear(FieldInputApartmentHoldDeposit, apartment.HoldDeposit.OneNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputApartmentHoldDeposit, apartment.HoldDeposit.OneThousand);
 
             return this;
         }

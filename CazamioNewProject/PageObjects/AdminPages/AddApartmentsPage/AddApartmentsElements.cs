@@ -113,7 +113,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [FindsBy(How = How.XPath, Using = ("//div/span[text() = 'Deposit Received']"))]
         public IWebElement ItemDepositReceived;
 
-        [FindsBy(How = How.XPath, Using = ("//div/span[text() = 'Application submitted']"))]
+        [FindsBy(How = How.XPath, Using = ("//div/span[text() = 'Application Submitted']"))]
         public IWebElement ItemApplicationSubmitted;
 
         [FindsBy(How = How.XPath, Using = ("//div/span[text() = 'Signed lease']"))]

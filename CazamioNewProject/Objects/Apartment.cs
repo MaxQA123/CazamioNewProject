@@ -48,6 +48,8 @@ namespace CazamioNewProject.Objects
         {
             public string OneNumber { get; set; }
             public string TwoNumber { get; set; }
+            public string ThreeNumber { get; set; }
+            public string FourNumber { get; set; }
         }
 
         public class BathroomsInfo
@@ -62,6 +64,8 @@ namespace CazamioNewProject.Objects
         {
             public string OneNumber { get; set; }
             public string TwoNumber { get; set; }
+            public string ThreeNumber { get; set; }
+            public string FourNumber { get; set; }
         }
 
         public class SqFootInfo
@@ -69,7 +73,7 @@ namespace CazamioNewProject.Objects
             public string OneNumber { get; set; }
             public string TwoNumber { get; set; }
             public string ThreeNumber { get; set; }
-            public string FifteenNumber { get; set; }
+            public string FourNumber { get; set; }
         }
 
         public class LeasePriceInfo
@@ -157,6 +161,7 @@ namespace CazamioNewProject.Objects
             public string ThreeNumber { get; set; }
             public string FourNumber { get; set; }
             public string FiveNumber { get; set; }
+            public string OneThousand { get; set; }
         }
 
         public class ConcessionsInfo
@@ -205,12 +210,16 @@ namespace CazamioNewProject.Objects
             string bedroomsFourNumber = GenerateRandomData.RandomNumberWithoutZero(4);
             string halfBedroomsOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
             string halfBedroomsTwoNumber = GenerateRandomData.RandomNumberWithoutZero(2);
+            string halfBedroomsThreeNumber = GenerateRandomData.RandomNumberWithoutZero(3);
+            string halfBedroomsFourNumber = GenerateRandomData.RandomNumberWithoutZero(4);
             string bathroomsOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
             string bathroomsTwoNumber = GenerateRandomData.RandomNumberWithoutZero(2);
             string bathroomsThreeNumber = GenerateRandomData.RandomNumberWithoutZero(3);
             string bathroomsFourNumber = GenerateRandomData.RandomNumberWithoutZero(4);
             string halfBathroomsOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
             string halfBathroomsTwoNumber = GenerateRandomData.RandomNumberWithoutZero(2);
+            string halfBathroomsTheeNumber = GenerateRandomData.RandomNumberWithoutZero(3);
+            string halfBathroomsFourNumber = GenerateRandomData.RandomNumberWithoutZero(4);
             string sqFootOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
             string sqFootTwoNumber = GenerateRandomData.RandomNumberWithoutZero(2);
             string sqFootThreeNumber = GenerateRandomData.RandomNumberWithoutZero(3);
@@ -258,6 +267,7 @@ namespace CazamioNewProject.Objects
             string holdDepositThreeNumber = GenerateRandomData.RandomNumberWithoutZero(3);
             string holdDepositFourNumber = GenerateRandomData.RandomNumberWithoutZero(4);
             string holdDepositFiveNumber = GenerateRandomData.RandomNumberWithoutZero(5);
+            string holdDepositOneThousand = "1000";
 
             string nameConcessionFirst = "Concession Apartment 1";
             string nameConcessionSecond = "Concession Apartment 2";
@@ -290,7 +300,9 @@ namespace CazamioNewProject.Objects
                 HalfBedrooms = new HalfBedroomsInfo
                 {
                     OneNumber = halfBedroomsOneNumber,
-                    TwoNumber = halfBedroomsTwoNumber
+                    TwoNumber = halfBedroomsTwoNumber,
+                    ThreeNumber = halfBedroomsThreeNumber,
+                    FourNumber  = halfBedroomsFourNumber
                 },
                 Bathrooms = new BathroomsInfo
                 {
@@ -302,14 +314,16 @@ namespace CazamioNewProject.Objects
                 HalfBathrooms = new HalfBathroomsInfo
                 {
                     OneNumber = halfBathroomsOneNumber,
-                    TwoNumber = halfBathroomsTwoNumber
+                    TwoNumber = halfBathroomsTwoNumber,
+                    ThreeNumber = halfBathroomsTheeNumber,
+                    FourNumber = halfBathroomsFourNumber
                 },
                 SqFoot = new SqFootInfo
                 {
                     OneNumber = sqFootOneNumber,
                     TwoNumber = sqFootTwoNumber,
                     ThreeNumber = sqFootThreeNumber,
-                    FifteenNumber = sqFootFifteenNumber
+                    FourNumber = sqFootFifteenNumber
                 },
                 LeasePrice = new LeasePriceInfo
                 {
@@ -388,7 +402,8 @@ namespace CazamioNewProject.Objects
                     TwoNumber = holdDepositTwoNumber,
                     ThreeNumber = holdDepositThreeNumber,
                     FourNumber = holdDepositFourNumber,
-                    FiveNumber = holdDepositFiveNumber
+                    FiveNumber = holdDepositFiveNumber,
+                    OneThousand = holdDepositOneThousand
                 },
                 Concessions = new ConcessionsInfo
                 {

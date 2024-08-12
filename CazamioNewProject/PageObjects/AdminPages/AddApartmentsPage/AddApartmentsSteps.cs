@@ -73,21 +73,21 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputBedrooms, apartment.Bedrooms.FourNumber);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputHalfBedrooms, apartment.HalfBedrooms.OneNumber);//
+            InputGeneral.InputFunctionWithClear(FieldInputHalfBedrooms, apartment.HalfBedrooms.FourNumber);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputBathrooms, apartment.Bathrooms.FourNumber);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputHalfBathrooms, apartment.HalfBathrooms.OneNumber);//
+            InputGeneral.InputFunctionWithClear(FieldInputHalfBathrooms, apartment.HalfBathrooms.FourNumber);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputSqFoot, apartment.SqFoot.OneNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputSqFoot, apartment.SqFoot.FourNumber);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, apartment.LeasePrice.OneNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, apartment.LeasePrice.FourNumber);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputSecurityDeposit, apartment.SecurityDeposit.OneNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputSecurityDeposit, apartment.SecurityDeposit.FourNumber);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputMonthlyRentsPrePayment, apartment.MonthlyRentsPrePayment.OneNumber);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputFloor, apartment.Floor.OneNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputFloor, apartment.Floor.TwoNumber);
 
             return this;
         }
@@ -98,11 +98,11 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.CustomElementIsVisible(FieldInputUnitNumber);
             InputGeneral.InputFunctionWithClear(FieldInputUnitNumber, apartment.UnitNumber.UnitNumberMarkAdmAssignedRoleAgntBrkr);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputBedrooms, apartment.Bedrooms.ThreeNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputBedrooms, apartment.Bedrooms.TwoNumber);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputBathrooms, apartment.Bathrooms.ThreeNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputBathrooms, apartment.Bathrooms.TwoNumber);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, apartment.LeasePrice.ThreeNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, apartment.LeasePrice.TwoNumber);
             WaitUntil.WaitSomeInterval(100);
 
             return this;
@@ -263,6 +263,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.CustomElementIsVisible(ItemMultiFamily);
             WaitUntil.CustomElementIsClickable(ItemMultiFamily);
             Button.Click(ItemMultiFamily);
+
+            return this;
+        }
+
+        [AllureStep("SelectApartmentTypePlex")]
+        public AddApartments SelectApartmentTypePlex()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonApartmentType);
+            Button.Click(ButtonApartmentType);
+            WaitUntil.CustomElementIsVisible(ItemPlex);
+            WaitUntil.CustomElementIsClickable(ItemPlex);
+            Button.Click(ItemPlex);
 
             return this;
         }
