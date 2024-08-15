@@ -551,7 +551,6 @@ namespace BrokerGuiTests
 
             //All the fields filled in, Cardknox
             //All tabs filled in
-            //30-39 Crown Street
 
             #endregion
 
@@ -569,6 +568,66 @@ namespace BrokerGuiTests
                 .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
             Pages.ListOfApartments
                 .ClickButtonAdd();
+            Pages.ListOfBuildings
+                .SelectItemFirst();
+            Pages.BuildingView
+                .ClickTabApartments()
+                .ClickButtonClone();
+
+            #endregion
+
+            #region Test
+
+            //Pages.AddApartments
+            //    .VerifyTitleAddApartmentsPage()
+            //    .SelectBuildingNameBrokerForBroker()
+            //    .EnterToAllFieldsBrokerAssignedBrkrFourNumber()
+            //    .SelectCurrentDateAvailableFrom()
+            //    .SelectStatusApplicationSubmitted()
+            //    .SelectAgent()
+            //    .SelectApartmentTypePlex();
+            //JScriptExecutor.ScrollToDownWebPage();
+            //Pages.AddApartments
+            //    .EnterHoldDepositOneThousand();
+
+            #endregion
+
+            WaitUntil.WaitSomeInterval(5000);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Broker")]
+        [AllureSubSuite("DemoAddApartment")]
+
+        public void DemoAddApartment()
+        {
+            #region SettingsForBuilding
+
+            //All the fields filled in, Cardknox
+            //All tabs filled in
+            //30-39 Crown Street
+
+            #endregion
+
+            #region Preconditions Test
+
+            Pages.LogInLandlord
+                .EnterEmailPasswordAsBroker()
+                .ClickIconShow()
+                .ClickButtonLetsGo();
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare)
+                .ClickButtonBuildings();
+            //Select any building
 
             #endregion
 

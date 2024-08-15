@@ -57,6 +57,16 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingViewPage
             return this;
         }
 
+        [AllureStep("ClickButtonClone")]
+        public BuildingView ClickButtonClone()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonCloneInTabApartments);
+            WaitUntil.CustomElementIsClickable(ButtonCloneInTabApartments);
+            Button.Click(ButtonCloneInTabApartments);
+
+            return this;
+        }
+
         [AllureStep("SelectUnitFourInTabApartments")]
         public BuildingView SelectUnitFourInTabApartments()
         {
