@@ -643,5 +643,19 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         }
 
         #endregion
+
+        #region Tab Images
+
+        [AllureStep("UplodVideosFileYouTubeVimeo")]
+        public AddApartments UplodVideosFileYouTubeVimeo()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonGeneralNext);
+            WaitUntil.CustomElementIsClickable(ButtonGeneralNext);
+            Button.Click(ButtonGeneralNext);
+
+            return this;
+        }
+
+        #endregion
     }
 }

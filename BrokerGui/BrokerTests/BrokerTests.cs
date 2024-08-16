@@ -551,6 +551,7 @@ namespace BrokerGuiTests
 
             //All the fields filled in, Cardknox
             //All tabs filled in
+            //30-39 Crown St
 
             #endregion
 
@@ -610,7 +611,6 @@ namespace BrokerGuiTests
 
             //All the fields filled in, Cardknox
             //All tabs filled in
-            //30-39 Crown Street
 
             #endregion
 
@@ -627,7 +627,13 @@ namespace BrokerGuiTests
             Pages.SidebarLandlord
                 .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare)
                 .ClickButtonBuildings();
-            //Select any building
+            Pages.ListOfBuildings
+                .SelectItemFirst();
+            KeyBoardActions.ScrollToDown();
+            WaitUntil.WaitSomeInterval(2000);
+            Pages.BuildingView
+                .ClickTabApartments()
+                .ClickButtonClone();
 
             #endregion
 
@@ -635,15 +641,20 @@ namespace BrokerGuiTests
 
             Pages.AddApartments
                 .VerifyTitleAddApartmentsPage()
-                .SelectBuildingNameBrokerForBroker()
-                .EnterToAllFieldsBrokerAssignedBrkrFourNumber()
-                .SelectCurrentDateAvailableFrom()
-                .SelectStatusApplicationSubmitted()
-                .SelectAgent()
-                .SelectApartmentTypePlex();
-            JScriptExecutor.ScrollToDownWebPage();
+                .EnterUnitNumber();
+            KeyBoardActions.ScrollToDown();
             Pages.AddApartments
-                .EnterHoldDepositOneThousand();
+                .ClickTabImages()
+                .ClickButtonSelectVideo();
+            Pages.SelectorVideosMdlWndw
+                .UplodFileEnterLinksYouTubeVimeo();
+            //    .SelectCurrentDateAvailableFrom()
+            //    .SelectStatusApplicationSubmitted()
+            //    .SelectAgent()
+            //    .SelectApartmentTypePlex();
+            //JScriptExecutor.ScrollToDownWebPage();
+            //Pages.AddApartments
+            //    .EnterHoldDepositOneThousand();
 
             #endregion
 

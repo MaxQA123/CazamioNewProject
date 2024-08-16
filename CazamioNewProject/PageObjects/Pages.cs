@@ -27,6 +27,7 @@ using CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.PaymentSettingsPage;
 using CazamioNewProject.PageObjects.AdminPages.PetPoliciesMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.ReportsPage;
+using CazamioNewProject.PageObjects.AdminPages.SelectorVideosMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.SidebarPage;
 using CazamioNewProject.PageObjects.AdminPages.TemplatesPage;
 using CazamioNewProject.PageObjects.EmailPutsBoxPage;
@@ -89,6 +90,7 @@ namespace CazamioNewProject.PageObjects
         public static PaymentKeysMdlWndw PaymentKeysMdlWndw => GetPage<PaymentKeysMdlWndw>();
         public static PaymentOptionsMdlWndw PaymentOptionsMdlWndw => GetPage<PaymentOptionsMdlWndw>();
         public static PetPoliciesMdlWndw PetPoliciesMdlWndw => GetPage<PetPoliciesMdlWndw>();
+        public static SelectorVideosMdlWndw SelectorVideosMdlWndw => GetPage<SelectorVideosMdlWndw>();
         public static DatePicker DatePicker => GetPage<DatePicker>();
 
         #endregion

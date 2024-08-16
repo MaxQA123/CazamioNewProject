@@ -26,6 +26,7 @@ namespace CazamioNewProject.Objects
         public ConcessionsInfo Concessions { get; set; }
         public FreeStuffInfo FreeStuff { get; set; }
         public AdditionalInfoInfo AdditionalInfo { get; set; }
+        public LinksToVideosInfo LinksToVideos { get; set; }
 
         public class UnitNumberInfo
         {
@@ -188,6 +189,13 @@ namespace CazamioNewProject.Objects
             public string NameSecond { get; set; }
         }
 
+        public class LinksToVideosInfo
+        {
+            public string LinkYouTube { get; set; }
+            public string LinkVimeo { get; set; }
+            public string LinkDailymotion { get; set; }
+        }
+
         public Apartment Generate()
         {
             string buildingShortAddressMarkAdmAssignedRoleBrkr = "1 Washington Square";
@@ -279,6 +287,10 @@ namespace CazamioNewProject.Objects
             string randomLeaseTerms = GenerateRandomData.RandomNumberWithoutZero(1);
             string twelveMonthsLeaseTerms = "12";
             string oneYearRentalTerms = "1 year";
+
+            string linkYouTube = "https://www.youtube.com/watch?v=9wZ8osGnhVU";
+            string linkVimeo = "https://vimeo.com/988164102";
+            string linkDailymotion = "";
 
             var apartment = new Apartment()
             {
@@ -425,6 +437,12 @@ namespace CazamioNewProject.Objects
                 {
                     NameFirst = nameFreeStuffFirst,
                     NameSecond = nameFreeStuffSecond
+                },
+                LinksToVideos = new LinksToVideosInfo
+                {
+                    LinkYouTube = linkYouTube,
+                    LinkVimeo = linkVimeo,
+                    LinkDailymotion = linkDailymotion
                 },
             };
             return apartment;

@@ -108,6 +108,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return getSecurityDepositActual;
         }
 
+        [AllureStep("EnterUnitNumber")]
+        public AddApartments EnterUnitNumber()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputUnitNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputUnitNumber, apartment.UnitNumber.UnitNumberBrokerAssignedRoleBrkr);
+
+            return this;
+        }
+
         [AllureStep("EnterLeasePriceOneNumber")]
         public AddApartments EnterLeasePriceOneNumber()
         //SecurityDeposit autofill
@@ -367,6 +376,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return this;
         }
 
+        [AllureStep("ClickButtonSelectVideo")]
+        public AddApartments ClickButtonSelectVideo()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonSelectVideo);
+            WaitUntil.CustomElementIsClickable(ButtonSelectVideo);
+            Button.Click(ButtonSelectVideo);
+
+            return this;
+        }
 
         #endregion
 

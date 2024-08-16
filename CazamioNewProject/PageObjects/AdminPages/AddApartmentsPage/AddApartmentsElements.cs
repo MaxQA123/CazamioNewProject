@@ -10,6 +10,22 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [FindsBy(How = How.XPath, Using = ("//div[text() = 'Add Apartments']"))]
         public IWebElement TitleAddApartmentsPage;
 
+        #region ListOfTabs
+
+        [FindsBy(How = How.XPath, Using = "//a[text() = 'Amenities']")]
+        public IWebElement TabAmenities;
+
+        [FindsBy(How = How.XPath, Using = "//a[text() = 'Access']")]
+        public IWebElement TabAccess;
+
+        [FindsBy(How = How.XPath, Using = "//a[text() = 'Specials']")]
+        public IWebElement TabSpecials;
+
+        [FindsBy(How = How.XPath, Using = "//a[text() = 'Images']")]
+        public IWebElement TabImages;
+
+        #endregion
+
         #region TabUnits
 
         public IWebElement ItemFullNameAgent;
@@ -39,22 +55,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             // Присвоение значения ItemForAutotestForBroker
             return Browser._Driver.FindElement(By.XPath(xpath));
         }
-
-        #region ListOfTabs
-
-        [FindsBy(How = How.XPath, Using = "//a[text() = 'Amenities']")]
-        public IWebElement TabAmenities;
-
-        [FindsBy(How = How.XPath, Using = "//a[text() = 'Access']")]
-        public IWebElement TabAccess;
-
-        [FindsBy(How = How.XPath, Using = "//a[text() = 'Specials']")]
-        public IWebElement TabSpecials;
-
-        [FindsBy(How = How.XPath, Using = "//a[text() = 'Images']")]
-        public IWebElement TabImages;
-
-        #endregion
 
         [FindsBy(How = How.XPath, Using = ("//ng-select[@bindlabel = 'buildingName']//div[@aria-haspopup = 'listbox']"))]
         public IWebElement ButtonBuildingName;
@@ -161,6 +161,12 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [FindsBy(How = How.XPath, Using = ("//span[text() =  ' 12 months ']"))]
         public IWebElement ItemTwelveMonthsRentalTerms;
 
+        [FindsBy(How = How.XPath, Using = ("//textarea[@id = 'description' ]"))]
+        public IWebElement FieldInputDescription;
+
+        [FindsBy(How = How.XPath, Using = ("//textarea[@id = 'internalNotes' ]"))]
+        public IWebElement FieldInputInternalNotes;
+
         #region RequiredDocuments
 
         [FindsBy(How = How.XPath, Using = ("//app-required-documents//ng-multiselect-dropdown//span[contains(text(), '2 Recent paystubs')]"))]
@@ -182,12 +188,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         public IWebElement ItemMostRecentTaxReturn;
 
         #endregion
-
-        [FindsBy(How = How.XPath, Using = ("//textarea[@id = 'description' ]"))]
-        public IWebElement FieldInputDescription;
-
-        [FindsBy(How = How.XPath, Using = ("//textarea[@id = 'internalNotes' ]"))]
-        public IWebElement FieldInputInternalNotes;
 
         #endregion
 
@@ -376,6 +376,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 
         [FindsBy(How = How.XPath, Using = "//input[@id = 'add-image0']")]
         public IWebElement ButtonBrowseFiles;
+
+        [FindsBy(How = How.XPath, Using = "//div[@class ='add-image']")]
+        public IWebElement ButtonSelectVideo;
 
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Save']")]
         public IWebElement ButtonSaveApartment;
