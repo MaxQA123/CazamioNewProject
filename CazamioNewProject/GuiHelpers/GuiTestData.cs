@@ -80,6 +80,11 @@
         public const string IMAGE_APARTMENT_FIFTH = $"\\UploadImages\\Bedroom5.jpg";
     }
 
+    public class UploadVideos
+    {
+        public const string VIDEO_FIRST_APARTMENT = $"\\UploadVideos\\First Video Nature.mp4";
+    }
+
     public class ListOfAmenitiesForBuildingAdminsPage
     {
         public const int FIRST_TAG = 0;

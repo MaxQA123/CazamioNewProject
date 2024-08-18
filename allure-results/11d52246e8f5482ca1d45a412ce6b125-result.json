@@ -1,0 +1,358 @@
+{
+  "uuid": "fabca3f9-c8c2-46a4-88a3-8f9aeaa2e985-tr-0-1008",
+  "historyId": "BrokerGuiTests.TestsBaseGui.DemoAddApartment",
+  "fullName": "BrokerGuiTests.TestsBaseGui.DemoAddApartment",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "BrokerGuiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "DemoAddApartment"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "DemoAddApartment"
+    }
+  ],
+  "links": [],
+  "name": "DemoAddApartment",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverArgumentException : invalid argument: File not found : C:\\Automation\\CazamioNewProject\\UploadVideos\\First Videos Nature.jpg\n  (Session info: chrome=127.0.6533.120)",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.SendKeys(String text)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.SendKeys(String text)\r\n   at CazamioNewProject.PageObjects.AdminPages.SelectorVideosMdlWndw.SelectorVideosMdlWndw.__a$_around_UplodFileEnterLinksYouTubeVimeo_100663472_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SelectorVideosMdlWndw\\SelectorVideosSteps.cs:line 21\r\n   at CazamioNewProject.PageObjects.AdminPages.SelectorVideosMdlWndw.SelectorVideosMdlWndw.__a$_around_UplodFileEnterLinksYouTubeVimeo_100663472_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.SelectorVideosMdlWndw.SelectorVideosMdlWndw.__a$_around_UplodFileEnterLinksYouTubeVimeo_100663472_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.SelectorVideosMdlWndw.SelectorVideosMdlWndw.UplodFileEnterLinksYouTubeVimeo() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SelectorVideosMdlWndw\\SelectorVideosSteps.cs:line 21\r\n   at BrokerGuiTests.TestsBaseGui.DemoAddApartment() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 649"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "DemoAddApartment",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverArgumentException : invalid argument: File not found : C:\\Automation\\CazamioNewProject\\UploadVideos\\First Videos Nature.jpg\n  (Session info: chrome=127.0.6533.120)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.SendKeys(String text)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.SendKeys(String text)\r\n   at CazamioNewProject.PageObjects.AdminPages.SelectorVideosMdlWndw.SelectorVideosMdlWndw.__a$_around_UplodFileEnterLinksYouTubeVimeo_100663472_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SelectorVideosMdlWndw\\SelectorVideosSteps.cs:line 21\r\n   at CazamioNewProject.PageObjects.AdminPages.SelectorVideosMdlWndw.SelectorVideosMdlWndw.__a$_around_UplodFileEnterLinksYouTubeVimeo_100663472_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.SelectorVideosMdlWndw.SelectorVideosMdlWndw.__a$_around_UplodFileEnterLinksYouTubeVimeo_100663472_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.SelectorVideosMdlWndw.SelectorVideosMdlWndw.UplodFileEnterLinksYouTubeVimeo() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SelectorVideosMdlWndw\\SelectorVideosSteps.cs:line 21\r\n   at BrokerGuiTests.TestsBaseGui.DemoAddApartment() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 649"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "EnterEmailPasswordAsBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1723971171390,
+          "stop": 1723971172728
+        },
+        {
+          "name": "ClickIconShow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1723971172728,
+          "stop": 1723971173344
+        },
+        {
+          "name": "ClickButtonLetsGo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1723971173344,
+          "stop": 1723971177200
+        },
+        {
+          "name": "GetUserNameFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1723971177205,
+          "stop": 1723971180534
+        },
+        {
+          "name": "GetUserNameRoleFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1723971180537,
+          "stop": 1723971181335
+        },
+        {
+          "name": "VerifyBrokerUserNameAndRole",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Leoautotest Feabroker"
+            },
+            {
+              "name": "String",
+              "value": "Broker"
+            }
+          ],
+          "start": 1723971181339,
+          "stop": 1723971181759
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1723971181759,
+          "stop": 1723971187522
+        },
+        {
+          "name": "SelectItemFirst",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1723971187860,
+          "stop": 1723971192689
+        },
+        {
+          "name": "ScrollToDown",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1723971192690,
+          "stop": 1723971192775
+        },
+        {
+          "name": "ClickTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1723971194791,
+          "stop": 1723971195526
+        },
+        {
+          "name": "ClickButtonClone",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1723971195527,
+          "stop": 1723971196522
+        },
+        {
+          "name": "VerifyTitleAddApartmentsPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1723971196541,
+          "stop": 1723971197679
+        },
+        {
+          "name": "EnterUnitNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1723971197680,
+          "stop": 1723971198866
+        },
+        {
+          "name": "ScrollToDown",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1723971198866,
+          "stop": 1723971198874
+        },
+        {
+          "name": "ClickTabImages",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1723971198880,
+          "stop": 1723971199675
+        },
+        {
+          "name": "ClickButtonSelectVideo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1723971199675,
+          "stop": 1723971200432
+        },
+        {
+          "name": "UplodFileEnterLinksYouTubeVimeo",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "invalid argument: File not found : C:\\Automation\\CazamioNewProject\\UploadVideos\\First Videos Nature.jpg\n  (Session info: chrome=127.0.6533.120)",
+            "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.SendKeys(String text)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.SendKeys(String text)\r\n   at CazamioNewProject.PageObjects.AdminPages.SelectorVideosMdlWndw.SelectorVideosMdlWndw.__a$_around_UplodFileEnterLinksYouTubeVimeo_100663472_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SelectorVideosMdlWndw\\SelectorVideosSteps.cs:line 21\r\n   at CazamioNewProject.PageObjects.AdminPages.SelectorVideosMdlWndw.SelectorVideosMdlWndw.__a$_around_UplodFileEnterLinksYouTubeVimeo_100663472_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1723971200433,
+          "stop": 1723971202262
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "2b16227b84ad42e381bf419ad39ef01f-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1723971160675,
+      "stop": 1723971205216
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1723971160674,
+  "stop": 1723971205226
+}
