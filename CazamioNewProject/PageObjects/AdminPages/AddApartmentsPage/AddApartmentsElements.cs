@@ -28,6 +28,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 
         #region TabUnits
 
+        [FindsBy(How = How.XPath, Using = ("//app-loader//div[@class = 'hidden']"))]
+        public IWebElement LoaderHidden;
+
         public IWebElement ItemFullNameAgent;
 
         public IWebElement SetItemAgent()
@@ -385,6 +388,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Saved successfully!']")]
         public IWebElement MessageSavedSuccessfullyApartment;
+
+        [FindsBy(How = How.XPath, Using = "//button//span[text() = 'Remove']")]
+        public IWebElement ButtonRemoveFile;
 
         #endregion
 

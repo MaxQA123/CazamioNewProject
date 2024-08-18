@@ -386,6 +386,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return this;
         }
 
+        [AllureStep("ClickButtonRemoveFile")]
+        public AddApartments ClickButtonRemoveFile()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonRemoveFile);
+            Button.Click(ButtonRemoveFile);
+
+            return this;
+        }
+
         #endregion
 
         [AllureStep("ClickButtonGeneralNext")]

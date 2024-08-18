@@ -205,7 +205,7 @@ namespace CazamioNewProject.Objects
             string unitNumberMarkAdmAssignedRoleAgntBrkr = "1";
 
             string buildingShortAddressBrokerAssignedRoleBrkr = "30-39 Crown St";
-            string unitNumberBrokerAssignedRoleBrkr = "1A";
+            string unitNumberBrokerAssignedRoleBrkr = "1";
 
             string buildingShortAddressBrokerAssignedRoleAgBrkr = "";
             string unitNumberBrokerAssignedRoleAgntBrkr = "";
@@ -231,7 +231,7 @@ namespace CazamioNewProject.Objects
             string sqFootOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
             string sqFootTwoNumber = GenerateRandomData.RandomNumberWithoutZero(2);
             string sqFootThreeNumber = GenerateRandomData.RandomNumberWithoutZero(3);
-            string sqFootFifteenNumber = GenerateRandomData.RandomNumberWithoutZero(15);
+            string sqFootFifteenNumber = GenerateRandomData.RandomNumberWithoutZero(4);
             string leasePriceOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
             string leasePriceTwoNumber = GenerateRandomData.RandomNumberWithoutZero(2);
             string leasePriceThreeNumber = GenerateRandomData.RandomNumberWithoutZero(3);
@@ -288,7 +288,7 @@ namespace CazamioNewProject.Objects
             string twelveMonthsLeaseTerms = "12";
             string oneYearRentalTerms = "1 year";
 
-            string linkYouTube = "https://www.youtube.com/watch?v=9wZ8osGnhVU";
+            string linkYouTube = "https://www.youtube.com/watch?v=0mh5d2a8wp0";
             string linkVimeo = "https://vimeo.com/988164102";
             string linkDailymotion = "";
 

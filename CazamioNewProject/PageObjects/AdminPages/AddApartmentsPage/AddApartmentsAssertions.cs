@@ -10,6 +10,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [AllureStep("VerifyTitleAddApartmentsPage")]
         public AddApartments VerifyTitleAddApartmentsPage()
         {
+            WaitUntil.CustomElementIsVisible(LoaderHidden);
             WaitUntil.CustomElementIsVisible(TitleAddApartmentsPage);
             Assert.IsTrue(Successfully.IsVisible(TitleAddApartmentsPage));
 

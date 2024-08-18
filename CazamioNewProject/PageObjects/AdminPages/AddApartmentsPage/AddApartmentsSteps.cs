@@ -643,5 +643,49 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         }
 
         #endregion
+
+        #region Tab Images
+
+        [AllureStep("ClickEightTimeskButtonRemove")]
+        public AddApartments ClickEightTimeskButtonRemove()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonRemoveFile);
+            WaitUntil.CustomElementIsClickable(ButtonRemoveFile);
+            Button.Click(ButtonRemoveFile);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonRemoveFile);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonRemoveFile);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonRemoveFile);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonRemoveFile);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonRemoveFile);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonRemoveFile);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonRemoveFile);
+
+            return this;
+        }
+
+        [AllureStep("UplodImagesFileEnterLinksYouTubeVimeo")]
+        public AddApartments UplodImagesFileEnterLinksYouTubeVimeo()
+        {
+            ButtonBrowseFiles.SendKeys(Path.GetFullPath(Path.Combine(Browser.RootPath() + UploadImages.IMAGE_APARTMENT_FIRST) + "\n" +
+                                                                      Browser.RootPath() + UploadImages.IMAGE_APARTMENT_SECOND + "\n" +
+                                                                      Browser.RootPath() + UploadImages.IMAGE_APARTMENT_THIRD + "\n" +
+                                                                      Browser.RootPath() + UploadImages.IMAGE_APARTMENT_FOURTH + "\n" +
+                                                                      Browser.RootPath() + UploadImages.IMAGE_APARTMENT_FIFTH));
+            WaitUntil.WaitSomeInterval(5000);
+            Pages.SelectorVideosMdlWndw
+                .UplodFileEnterLinksYouTubeVimeo();
+            WaitUntil.WaitSomeInterval(10000);
+
+            return this;
+        }
+
+        #endregion
     }
 }

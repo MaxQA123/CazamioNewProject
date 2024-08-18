@@ -566,11 +566,12 @@ namespace BrokerGuiTests
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
 
             Pages.SidebarLandlord
-                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
-            Pages.ListOfApartments
-                .ClickButtonAdd();
+                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare)
+                .ClickButtonBuildings();
             Pages.ListOfBuildings
                 .SelectItemFirst();
+            KeyBoardActions.ScrollToDown();
+            WaitUntil.WaitSomeInterval(2000);
             Pages.BuildingView
                 .ClickTabApartments()
                 .ClickButtonClone();
@@ -579,17 +580,26 @@ namespace BrokerGuiTests
 
             #region Test
 
-            //Pages.AddApartments
-            //    .VerifyTitleAddApartmentsPage()
-            //    .SelectBuildingNameBrokerForBroker()
-            //    .EnterToAllFieldsBrokerAssignedBrkrFourNumber()
-            //    .SelectCurrentDateAvailableFrom()
-            //    .SelectStatusApplicationSubmitted()
-            //    .SelectAgent()
-            //    .SelectApartmentTypePlex();
-            //JScriptExecutor.ScrollToDownWebPage();
-            //Pages.AddApartments
-            //    .EnterHoldDepositOneThousand();
+            Pages.AddApartments
+                .VerifyTitleAddApartmentsPage()
+                //.SelectBuildingNameBrokerForBroker()
+                .EnterToAllFieldsBrokerAssignedBrkrFourNumber()
+                //.SelectCurrentDateAvailableFrom()
+                .SelectStatusApplicationSubmitted()
+                .SelectAgent()
+                .SelectApartmentTypePlex();
+            JScriptExecutor.ScrollToDownWebPage();
+            Pages.AddApartments
+                .EnterHoldDepositOneThousand()
+                .ClickButtonPaymentMethods();
+            Pages.PaymentOptionsMdlWndw
+                .SelectPaymentMethodsCrdtCrdDlvrChck();
+            Pages.AddApartments
+                .ClickTabImages()
+                .ClickEightTimeskButtonRemove()
+                .ClickButtonSelectVideo()
+                .UplodImagesFileEnterLinksYouTubeVimeo()
+                .ClickButtonSaveApartment();
 
             #endregion
 
@@ -645,9 +655,14 @@ namespace BrokerGuiTests
             KeyBoardActions.ScrollToDown();
             Pages.AddApartments
                 .ClickTabImages()
-                .ClickButtonSelectVideo();
-            Pages.SelectorVideosMdlWndw
-                .UplodFileEnterLinksYouTubeVimeo();
+                .ClickEightTimeskButtonRemove()
+                .ClickButtonSelectVideo()
+                .UplodImagesFileEnterLinksYouTubeVimeo()
+                .ClickButtonSaveApartment();
+
+            //Pages.SelectorVideosMdlWndw
+            //    .UplodFileEnterLinksYouTubeVimeo();
+
             //    .SelectCurrentDateAvailableFrom()
             //    .SelectStatusApplicationSubmitted()
             //    .SelectAgent()

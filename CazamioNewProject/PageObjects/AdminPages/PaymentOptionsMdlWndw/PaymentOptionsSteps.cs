@@ -59,12 +59,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             return this;
         }
 
-        [AllureStep("SelectPaymentMethodVenmo")]
-        public PaymentOptionsMdlWndw SelectPaymentMethodVenmo()
+        [AllureStep("SelectPaymentMethodsCrdtCrdDlvrChck")]
+        public PaymentOptionsMdlWndw SelectPaymentMethodsCrdtCrdDlvrChck()
         {
             WaitUntil.WaitSomeInterval(100);
-            Button.Click(ItemVenmo);
+            Button.Click(ItemCreditCard);
             WaitUntil.WaitSomeInterval(100);
+            Button.Click(ItemDeliverCheck);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputDeliverCheckNoteApartment, paymentOptions.DeliverCheckNote.ForApartment);
             Button.Click(ButtonSave);
             VerifySuccessSelectPmntMthds();
             WaitUntil.SuccessCustomElementIsVisible(MessageSuccessPaymentMethodsSelectedMdlWndwOptns);
