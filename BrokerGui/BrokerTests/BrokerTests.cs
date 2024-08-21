@@ -582,7 +582,7 @@ namespace BrokerGuiTests
 
             Pages.AddApartments
                 .VerifyTitleAddApartmentsPage()
-                //.SelectBuildingNameBrokerForBroker()
+                .SelectBuildingNameBrokerForBroker()
                 .EnterToAllFieldsBrokerAssignedBrkrFourNumber()
                 //.SelectCurrentDateAvailableFrom()
                 .SelectStatusApplicationSubmitted()
@@ -596,7 +596,7 @@ namespace BrokerGuiTests
                 .SelectPaymentMethodsCrdtCrdDlvrChck();
             Pages.AddApartments
                 .ClickTabImages()
-                .ClickEightTimeskButtonRemove()
+                //.ClickEightTimeskButtonRemove()
                 .ClickButtonSelectVideo()
                 .UplodImagesFileEnterLinksYouTubeVimeo()
                 .ClickButtonSaveApartment();

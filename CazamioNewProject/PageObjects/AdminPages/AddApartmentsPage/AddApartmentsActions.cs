@@ -366,7 +366,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [AllureStep("ClickButtonSaveApartment")]
         public AddApartments ClickButtonSaveApartment()
         {
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(10000);
             KeyBoardActions.ScrollToDown();
             WaitUntil.WaitSomeInterval(5000);
             WaitUntil.CustomElementIsVisible(ButtonSaveApartment);

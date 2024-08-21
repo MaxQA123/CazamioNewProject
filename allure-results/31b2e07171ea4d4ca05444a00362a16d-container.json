@@ -1,0 +1,78 @@
+{
+  "uuid": "2d0a3c16-2e07-4e69-8740-9866a19f88d3-tc-0-1000",
+  "name": "AgentBrokerGui.TestsBaseGui.LogIn",
+  "children": [
+    "7af0a375-2f5c-43c7-a7b9-a7ec75e188cf-tr-0-1001"
+  ],
+  "befores": [
+    {
+      "name": "DobeforeAllTheTests",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1724247876474,
+      "stop": 1724247876474
+    },
+    {
+      "name": "SetUp",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1724247876475,
+      "stop": 1724247876475
+    }
+  ],
+  "afters": [
+    {
+      "name": "DoAfterEach",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.ArgumentException : The SearchContext of the locator object cannot be null (Parameter 'locator')\r\nTearDown : System.NullReferenceException : Object reference not set to an instance of an object.",
+        "trace": "   at SeleniumExtras.PageObjects.PageFactory.InitElements(Object page, IElementLocator locator, IPageObjectMemberDecorator decorator)\r\n   at SeleniumExtras.PageObjects.PageFactory.InitElements(Object page, IElementLocator locator)\r\n   at SeleniumExtras.PageObjects.PageFactory.InitElements(ISearchContext driver, Object page)\r\n   at CazamioNewProject.PageObjects.Pages.GetPage[T]() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\Pages.cs:line 47\r\n   at CazamioNewProject.PageObjects.Pages.get_LogInLandlord() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\Pages.cs:line 60\r\n   at AgentBrokerGui.TestsBaseGui.LogIn() in C:\\Automation\\CazamioNewProject\\AgentBrokerGui\\AgentBrokerTests\\AgentBrokerTests.cs:line 28\r\n--TearDown\r\n   at CazamioNewProject.GuiHelpers.ScreenShot.MakeScreenShot() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\ScreenShot.cs:line 13\r\n   at CazamioNewProject.GuiHelpers.BasicTests.BaseGui.DoAfterEach() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\BasicTests\\BaseGui.cs:line 27"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1724247876475,
+      "stop": 1724247876475
+    },
+    {
+      "name": "DoAfterAllTheTests",
+      "status": "none",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "It's not possible to get status of OneTimeTearDown",
+        "trace": "See Allure.NUnit wiki"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1724247876476,
+      "stop": 1724247876476
+    }
+  ],
+  "links": [],
+  "start": 1724247864853,
+  "stop": 1724247876537
+}
