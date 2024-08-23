@@ -33,6 +33,30 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             return this;
         }
 
+        //[AllureStep("EnterFullAddressMarkAdm")]
+        //public NewBuilding EnterFullAddressMarkAdm()
+        //{
+        //    WaitUntil.WaitSomeInterval(100);
+        //    InputGeneral.InputFunctionWithClear(FieldInputAddress, building.NumberWithAddress.MarkAdmAssignedBroker);
+        //    WaitUntil.WaitSomeInterval(500);
+        //    KeyBoardActions.ClickTab();
+        //    KeyBoardActions.ClickEnterButton();
+        //    WaitUntil.WaitSomeInterval(100);
+        //    InputGeneral.InputFunctionWithClear(FieldInputCity, building.City.NewYork);
+        //    WaitUntil.WaitSomeInterval(100);
+        //    InputGeneral.InputFunctionWithClear(FieldInputState, building.State);
+        //    WaitUntil.WaitSomeInterval(100);
+        //    InputGeneral.InputFunctionWithClear(FieldInputZip, building.Zip.ZipBuildingMarkAdmAssignedRoleBrkr);
+        //    WaitUntil.WaitSomeInterval(500);
+        //    KeyBoardActions.ClickArrowDown();
+        //    WaitUntil.WaitSomeInterval(100);
+        //    KeyBoardActions.ClickEnterButton();
+        //    WaitUntil.WaitSomeInterval(100);
+        //    InputGeneral.InputFunctionWithClear(FieldInputNeighborhood, building.Neighborhood.BuildingMarkAdmAssignedRoleBrkr);
+
+        //    return this;
+        //}
+
         [AllureStep("EnterBrokerFullAddressAgentBroker")]
         public NewBuilding EnterBrokerFullAddressAgentBroker()
         {

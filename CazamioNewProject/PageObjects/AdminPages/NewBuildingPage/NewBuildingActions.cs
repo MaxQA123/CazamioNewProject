@@ -14,6 +14,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
 
         Building building = new Building().Generate();
         Owner owner = new Owner().Generate();
+        DemoOne DemoOne = DemoOne.Generate();
 
         [AllureStep("SelectorTabsOnNewBuildingsPg")]
         public static IList<IWebElement> SelectorTabsOnNewBuildingsPg(string _locationTab)

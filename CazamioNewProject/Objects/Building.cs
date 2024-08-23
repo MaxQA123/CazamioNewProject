@@ -1,5 +1,4 @@
-﻿
-using CazamioNewProject.GuiHelpers;
+﻿using CazamioNewProject.GuiHelpers;
 
 namespace CazamioNewProject.Objects
 {
