@@ -543,7 +543,7 @@ namespace MarketplaceAdminGuiTest
             Pages.NewBuilding
                 .VerifyTitleNewBuildingPg()
                 .SelectOwnerOwnerAndTenantPaysCommissionWithBroker()
-                .EnterFullAddressMarkAdm();
+                .EnterBuildingDataWashingtonSquare();
 
             string getAddressNewBuildingActual = Pages.NewBuilding.GetValueFromFieldAddress();
 
