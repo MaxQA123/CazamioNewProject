@@ -82,42 +82,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
 
         #region Tab Basic Details
 
-        [AllureStep("EnterBuildingNameMarkAdmBroker")]
-        public NewBuilding EnterBuildingNameMarkAdmBroker()
-        {
-            WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputBuildingName, building.BuildingName.MarkAdmAssignedRoleBrkr);
-
-            return this;
-        }
-
-        [AllureStep("EnterBuildingNameBrokerAssignedAgent")]
-        public NewBuilding EnterBuildingNameBrokerAssignedAgent()
-        {
-            WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputBuildingName, building.BuildingName.BrokerAssignedRoleAgnt);
-
-            return this;
-        }
-
-        [AllureStep("EnterLlcNameForBroker")]
-        public NewBuilding EnterLlcNameForBroker()
-        {
-            WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLlcName, building.LlcName.ForBroker);
-
-            return this;
-        }
-
-        [AllureStep("EnterLlcNameForAgent")]
-        public NewBuilding EnterLlcNameForAgent()
-        {
-            WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLlcName, building.LlcName.ForAgentBroker);
-
-            return this;
-        }
-
         [AllureStep("ClickFieldInputInternalNotes")]
         public NewBuilding ClickFieldInputInternalNotes()
         {
@@ -391,7 +355,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             WaitUntil.CustomElementIsVisible(ButtonUploadImage);
             WaitUntil.CustomElementIsClickable(ButtonUploadImage);
             ButtonUploadImage.SendKeys(Path.GetFullPath(Path.Combine(Browser.RootPath() + UploadImages.IMAGE_HOUSE_FOR_BUILDING)));
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(10000);
 
             return this;
         }

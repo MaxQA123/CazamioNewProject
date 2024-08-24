@@ -349,7 +349,7 @@ namespace BrokerGuiTests
             Pages.NewBuilding
                 .VerifyTitleNewBuildingPg()
                 .SelectOwnerOwnerPaysWithBroker()
-                .EnterAddressCityStateBroker()
+                .EnterBuildingDataCrownSt()
                 .ClickFieldInputInternalNotes();
 
             string getAddressNewBuildingActual = Pages.NewBuilding.GetValueFromFieldAddress();
@@ -440,13 +440,11 @@ namespace BrokerGuiTests
             Pages.NewBuilding
                 .VerifyTitleNewBuildingPg()
                 .SelectOwnerTenantPaysCommissionWithAgent()
-                .EnterBrokerFullAddressAgentBroker();
+                .EnterBuildingDataAlbermaleRd();
 
             string getAddressNewBuildingActual = Pages.NewBuilding.GetValueFromFieldAddress();
 
             Pages.NewBuilding
-                .EnterBuildingNameBrokerAssignedAgent()
-                .EnterLlcNameForAgent()
                 .EnterLongInternalNotesDescription();
             KeyBoardActions.ClickTab();
             Pages.NewBuilding
@@ -551,7 +549,7 @@ namespace BrokerGuiTests
 
             //All the fields filled in, Cardknox
             //All tabs filled in
-            //30-39 Crown St
+            //30-39Crown St
 
             #endregion
 

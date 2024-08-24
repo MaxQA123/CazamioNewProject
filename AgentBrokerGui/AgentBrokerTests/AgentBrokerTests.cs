@@ -152,7 +152,7 @@ namespace AgentBrokerGui
             Pages.NewBuilding
                 .VerifyTitleNewBuildingPg()
                 .SelectOwnerTenantPaysCommissionWithAgent()
-                .EnterAgntBrkrFullAddressAgentBroker()
+                .EnterBuildingDataEast51stStreetPedestrianCrossing()
                 .ClickFieldInputInternalNotes();
 
             string getAddressNewBuildingActual = Pages.NewBuilding.GetValueFromFieldAddress();
