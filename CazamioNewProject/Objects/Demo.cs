@@ -56,8 +56,8 @@ namespace CazamioNewProject.Objects
                 State = "NY",
                 Zip = "11213",
                 Neighborhood = "Crown Heights",
-                BuildingName = "Building Name",
-                LlcName = "LLC Name",
+                BuildingName = "9997 Saint Johnson Place AGENT QA-Building Name (12345) (*&^%)",
+                LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
             };
         }
 
@@ -73,7 +73,7 @@ namespace CazamioNewProject.Objects
                 State = "NY",
                 Zip = "10012",
                 Neighborhood = "Manhattan",
-                BuildingName = "5 Washington Square QA-Building Name (12345) (09876) (*&^%)",
+                BuildingName = "5 Washington Square Broker QA-Building Name (12345) (09876) (*&^%)",
                 LlcName = "LLC Name QA Broker (12345) (09876) (*&^%)",
             };
         }

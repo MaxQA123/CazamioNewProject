@@ -29,6 +29,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             KeyBoardActions.ClickEnterButton();
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputNeighborhood, demo.WashingtonSquare.Neighborhood);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputBuildingName, demo.WashingtonSquare.BuildingName);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputLlcName, demo.WashingtonSquare.LlcName);
 
             return this;
         }

@@ -14,6 +14,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         [AllureStep("VerifyTitleListOfBuildingsPg")]
         public NewBuilding VerifyTitleNewBuildingPg()
         {
+            WaitUntil.CustomElementIsVisible(LoaderHidden);
+            WaitUntil.WaitSomeInterval(1000);
             Assert.IsTrue(Successfully.IsVisible(TitleNewBuildingPage));
 
             return this;

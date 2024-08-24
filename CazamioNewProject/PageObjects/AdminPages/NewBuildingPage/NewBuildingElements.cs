@@ -7,6 +7,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
 {
     public partial class NewBuilding
     {
+        [FindsBy(How = How.XPath, Using = ("//app-loader//div[@class = 'hidden']"))]
+        public IWebElement LoaderHidden;
+
         public IWebElement ItemOwnerOwnerAndTenantPaysCommission;
 
         public IWebElement SetItemOwnerOwnerAndTenantPaysCommissionWithBroker()
