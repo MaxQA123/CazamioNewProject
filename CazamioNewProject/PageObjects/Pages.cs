@@ -49,7 +49,8 @@ namespace CazamioNewProject.PageObjects
             return page;
         }
 
-        #region Landlord pages
+        #region Objects
+
         public static SuperAdmin SuperAdmin => GetPage<SuperAdmin>();
         public static MarketplaceAdmin MarketplaceAdmin => GetPage<MarketplaceAdmin>();
         public static Broker Broker => GetPage<Broker>();
@@ -57,6 +58,12 @@ namespace CazamioNewProject.PageObjects
         public static AgentBroker AgentBroker => GetPage<AgentBroker>();
         public static Building Building => GetPage<Building>();
         public static Apartment Apartment => GetPage<Apartment>();
+        public static Demo Demo => GetPage<Demo>();
+
+        #endregion
+
+        #region Landlord pages
+
         public static LogInLandlord LogInLandlord => GetPage<LogInLandlord>();
         public static SidebarLandlord SidebarLandlord => GetPage<SidebarLandlord>();
         public static Dashboard Dashboard => GetPage<Dashboard>();

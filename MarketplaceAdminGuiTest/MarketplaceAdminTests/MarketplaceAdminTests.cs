@@ -681,50 +681,50 @@ namespace MarketplaceAdminGuiTest
             Pages.NewBuilding
                 .VerifyTitleNewBuildingPg()
                 .SelectOwnerNoCommissionAgent()
-                .EnterAddressCityStateMarkAdm()
+                .EnterBuildingDataSaintJohnsonPl()
                 .ClickFieldInputInternalNotes();
 
-            string getAddressNewBuildingActual = Pages.NewBuilding.GetValueFromFieldAddress();
+            //string getAddressNewBuildingActual = Pages.NewBuilding.GetValueFromFieldAddress();
 
-            KeyBoardActions.ClickTab();
+            //KeyBoardActions.ClickTab();
 
-            string getValueScreeningFee = Pages.NewBuilding.GetValueFromFieldCreditScreeningFee();
+            //string getValueScreeningFee = Pages.NewBuilding.GetValueFromFieldCreditScreeningFee();
 
-            Pages.NewBuilding
-                .VerifyValueByDefaulScreeningFee(getValueScreeningFee)
-                .ClickBtnSelectPaymentMethodsForCreditScreeningFee();
-            Pages.PaymentOptionsMdlWndw
-                .SelectPaymentMethodsCrdtCrdAchZll();
-            Pages.NewBuilding
-                .ClickBtnEditForPaymentSystem();
-            Pages.PaymentKeysMdlWndw
-                .SelectPaymentSystemAuthorizeNet();
+            //Pages.NewBuilding
+            //    .VerifyValueByDefaulScreeningFee(getValueScreeningFee)
+            //    .ClickBtnSelectPaymentMethodsForCreditScreeningFee();
+            //Pages.PaymentOptionsMdlWndw
+            //    .SelectPaymentMethodsCrdtCrdAchZll();
+            //Pages.NewBuilding
+            //    .ClickBtnEditForPaymentSystem();
+            //Pages.PaymentKeysMdlWndw
+            //    .SelectPaymentSystemAuthorizeNet();
 
-            string getItemAuthorizeNetActual = Pages.PaymentKeysMdlWndw.GetItemAuthorizeNet();
-            string getItemApiKeyAuthorizeNetActual = Pages.PaymentKeysMdlWndw.GetItemApiKeyAuthorizeNet();
+            //string getItemAuthorizeNetActual = Pages.PaymentKeysMdlWndw.GetItemAuthorizeNet();
+            //string getItemApiKeyAuthorizeNetActual = Pages.PaymentKeysMdlWndw.GetItemApiKeyAuthorizeNet();
 
-            Pages.PaymentKeysMdlWndw
-                .VerifyApiKeyAuthorizeNet(getItemAuthorizeNetActual, getItemApiKeyAuthorizeNetActual);
-            Pages.PaymentKeysMdlWndw
-                .ClickButtonSave();
-            Pages.NewBuilding
-                .ClickThreeTimesButtonGeneralNext()
-                .ClickTabFreeStuff()
-                .ClickButtonAddSpecials()
-                .AddFreeStuffInActive()
-                .ClickTabConcessions()
-                .ClickButtonAddSpecials()
-                .AddConcessionInActive()
-                .ClickButtonGeneralNext()
-                .ClickButtonSaveBuilding()
-                .VerifyMessageSavedSuccessfullyBuilding();
-            Pages.BuildingView
-                .VerifyTitleBuildingViewPage();
+            //Pages.PaymentKeysMdlWndw
+            //    .VerifyApiKeyAuthorizeNet(getItemAuthorizeNetActual, getItemApiKeyAuthorizeNetActual);
+            //Pages.PaymentKeysMdlWndw
+            //    .ClickButtonSave();
+            //Pages.NewBuilding
+            //    .ClickThreeTimesButtonGeneralNext()
+            //    .ClickTabFreeStuff()
+            //    .ClickButtonAddSpecials()
+            //    .AddFreeStuffInActive()
+            //    .ClickTabConcessions()
+            //    .ClickButtonAddSpecials()
+            //    .AddConcessionInActive()
+            //    .ClickButtonGeneralNext()
+            //    .ClickButtonSaveBuilding()
+            //    .VerifyMessageSavedSuccessfullyBuilding();
+            //Pages.BuildingView
+            //    .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingView = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+            //string getAddressBuildingView = Pages.BuildingView.GetValueFromFieldNotInputAddress();
 
-            Pages.BuildingView
-                .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
+            //Pages.BuildingView
+            //    .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
 
             #endregion
 

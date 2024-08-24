@@ -105,18 +105,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             return this;
         }
 
-        [AllureStep("EnterAddressCityStateMarkAdm")]
-        public NewBuilding EnterAddressCityStateMarkAdm()
+        [AllureStep("EnterBuildingDataSaintJohnsonPl")]
+        public NewBuilding EnterBuildingDataSaintJohnsonPl()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputAddress, building.NumberWithAddress.MarkAdmAssignedAgntBrkr);
+            InputGeneral.InputFunctionWithClear(FieldInputAddress, demo.SaintJohnsonPl.Address);
             WaitUntil.WaitSomeInterval(500);
             KeyBoardActions.ClickTab();
             KeyBoardActions.ClickEnterButton();
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputCity, building.City.Brooklyn);
+            InputGeneral.InputFunctionWithClear(FieldInputCity, demo.SaintJohnsonPl.City);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputState, building.State);
+            InputGeneral.InputFunctionWithClear(FieldInputState, demo.SaintJohnsonPl.State);
             WaitUntil.WaitSomeInterval(100);
 
             return this;
