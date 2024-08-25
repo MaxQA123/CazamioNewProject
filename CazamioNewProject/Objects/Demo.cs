@@ -9,6 +9,9 @@ namespace CazamioNewProject.Objects
         public CrownStInfo CrownSt { get; set; }
         public AlbermaleRdInfo AlbermaleRd { get; set; }
         public East51stStreetPedestrianCrossingInfo East51stStreetPedestrianCrossing { get; set; }
+        public DescriptionsInternalNotesInfo DescriptionsInternalNotes { get; set; }
+        public MySpaceAmountPaymentsInfo MySpaceAmountPayments { get; set; }
+        public PaymentSystemsInfo PaymentSystems { get; set; }
 
         public static Demo Generate()
         {
@@ -19,6 +22,9 @@ namespace CazamioNewProject.Objects
                 CrownSt = CreateCrownStInfo(),
                 AlbermaleRd = CreateAlbermaleRdInfo(),
                 East51stStreetPedestrianCrossing = CreateEast51stStreetPedestrianCrossingInfo(),
+                DescriptionsInternalNotes = CreateDescriptionsInternalNotesInfo(),
+                MySpaceAmountPayments = CreateMySpaceAmountPaymentsInfo(),
+                PaymentSystems = CreatePaymentSystemsInfo(),
             };
         }
 
@@ -90,6 +96,34 @@ namespace CazamioNewProject.Objects
             public string Neighborhood { get; set; }
             public string BuildingName { get; set; }
             public string LlcName { get; set; }
+        }
+
+        public class DescriptionsInternalNotesInfo
+        {
+            public string DescriptionShort { get; set; }
+            public string DescriptionLong { get; set; }
+            public string InternalNotesShort { get; set; }
+            public string InternalNotesLong { get; set; }
+            public string TextLongLoremCommon { get; set; }
+            public string TextShortLoremCommon { get; set; }
+        }
+
+        public class MySpaceAmountPaymentsInfo
+        {
+            public string CreditScreeningFeeByDefault { get; set; }
+            public string CreditScreeningFeeRandom { get; set; }
+            public string CreditScreeningFeeStatic { get; set; }
+            public string HoldDepositByDefault { get; set; }
+            public string HoldDepositRandom { get; set; }
+            public string HoldDepositStatic { get; set; }
+        }
+
+        public class PaymentSystemsInfo
+        {
+            public string Cardknox { get; set; }
+            public string ApiKeyCardknox { get; set; }
+            public string AuthorizeNet { get; set; }
+            public string ApiKeyAuthorizeNet { get; set; }
         }
 
         private static SaintJohnsonPlInfo CreateSaintJohnsonPlInfo()
@@ -174,6 +208,43 @@ namespace CazamioNewProject.Objects
                 Neighborhood = "Manhattan",
                 BuildingName = "100-109 East 51st Street Pedestrian Crossing AGENT QA-Building Name (12345) (*&^%)",
                 LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
+            };
+        }
+
+        private static DescriptionsInternalNotesInfo CreateDescriptionsInternalNotesInfo()
+        {
+            return new DescriptionsInternalNotesInfo
+            {
+                DescriptionShort = "DESCRIPTION for BUILDING (12345) (09876) (&%$#@!)",
+                DescriptionLong = "DESCRIPTION for BUILDING (12345) (09876) (&%$#@!) Lorem BUILDING ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,",
+                InternalNotesShort = "INTERNAL NOTES for BUILDING (12345) (09876) (&%$#@!)",
+                InternalNotesLong = "INTERNAL NOTES for BUILDING (12345) (09876) (&%$#@!) Lorem BUILDING ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,",
+                TextLongLoremCommon = "Lorem BUILDING ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,",
+                TextShortLoremCommon = "Lorem BUILDING ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing",
+            };
+        }
+
+        private static MySpaceAmountPaymentsInfo CreateMySpaceAmountPaymentsInfo()
+        {
+            return new MySpaceAmountPaymentsInfo
+            {
+                CreditScreeningFeeByDefault = "20",
+                CreditScreeningFeeRandom = GenerateRandomData.RandomNumberWithoutZero(2),
+                CreditScreeningFeeStatic = "15",
+                HoldDepositByDefault = "20",
+                HoldDepositRandom = GenerateRandomData.RandomNumberWithoutZero(3),
+                HoldDepositStatic = "900",
+            };
+        }
+
+        private static PaymentSystemsInfo CreatePaymentSystemsInfo()
+        {
+            return new PaymentSystemsInfo
+            {
+                Cardknox = "Cardknox",
+                ApiKeyCardknox = "czmodev359376936c0543b58126c97f9ff55c68",
+                AuthorizeNet = "AuthorizeNet",
+                ApiKeyAuthorizeNet = "2L7uB4UzeA9gf366",
             };
         }
     }

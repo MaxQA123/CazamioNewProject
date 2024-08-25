@@ -127,9 +127,20 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         public NewBuilding EnterLongInternalNotesDescription()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputDescroption, building.DescriptionLong);
+            InputGeneral.InputFunctionWithClear(FieldInputDescroption, demo.DescriptionsInternalNotes.DescriptionLong);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputInternalNotes, building.InternalNotesLong);
+            InputGeneral.InputFunctionWithClear(FieldInputInternalNotes, demo.DescriptionsInternalNotes.InternalNotesLong);
+
+            return this;
+        }
+
+        [AllureStep("EnterShortInternalNotesDescription")]
+        public NewBuilding EnterShortInternalNotesDescription()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputDescroption, demo.DescriptionsInternalNotes.DescriptionShort);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputInternalNotes, demo.DescriptionsInternalNotes.InternalNotesShort);
 
             return this;
         }
@@ -139,9 +150,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         {
             WaitUntil.CustomElementIsVisible(FieldInputCreditScreeningFee);
             WaitUntil.CustomElementIsClickable(FieldInputCreditScreeningFee);
-            InputGeneral.InputFunctionWithClear(FieldInputCreditScreeningFee, building.CreditScreeningFee.ForEntering);
+            InputGeneral.InputFunctionWithClear(FieldInputCreditScreeningFee, demo.MySpaceAmountPayments.CreditScreeningFeeStatic);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputHoldDeposit, building.HoldDeposit.ForEntering);
+            InputGeneral.InputFunctionWithClear(FieldInputHoldDeposit, demo.MySpaceAmountPayments.HoldDepositStatic);
 
             return this;
         }

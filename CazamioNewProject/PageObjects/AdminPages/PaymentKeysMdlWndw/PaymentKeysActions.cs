@@ -12,6 +12,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentKeysMdlWndw
     public partial class PaymentKeysMdlWndw
     {
         Building building = new Building().Generate();
+        Demo demo = Demo.Generate();
 
         [AllureStep("GetItemCardknox")]
         public string GetItemCardknox()

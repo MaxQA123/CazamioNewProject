@@ -445,7 +445,7 @@ namespace BrokerGuiTests
             string getAddressNewBuildingActual = Pages.NewBuilding.GetValueFromFieldAddress();
 
             Pages.NewBuilding
-                .EnterLongInternalNotesDescription();
+                .EnterShortInternalNotesDescription();
             KeyBoardActions.ClickTab();
             Pages.NewBuilding
                 .ClickBtnEditForPaymentSystem();

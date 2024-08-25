@@ -4,57 +4,17 @@ namespace CazamioNewProject.Objects
 {
     public class Building
     {
-        public string ShortBuildingName { get; set; }
-        public LlcNameInfo LlcName { get; set; }
         public TextLoremInfo TextLorem { get; set; }
-        public string DescriptionShort { get; set; }
-        public string InternalNotesShort { get; set; }
-        public string DescriptionLong { get; set; }
-        public string InternalNotesLong { get; set; }
-        public CreditScreeningFeeInfo CreditScreeningFee { get; set; }
-        public HoldDepositInfo HoldDeposit { get; set; }
-        public PaymentSystemInfo PaymentSystem { get; set; }
-        public ApiKeyInfo ApiKey { get; set; }
         public NameLocationInfo NameLocation { get; set; }
         public ConcessionsInfo Concessions { get; set; }
         public FreeStuffInfo FreeStuff { get; set; }
         public AdditionalInfoInfo AdditionalInfo { get; set; }
-
-        public class CreditScreeningFeeInfo
-        {
-            public string ForEntering { get; set; }
-            public string ByDefaultMySpace { get; set; }
-        }
-
-        public class HoldDepositInfo
-        {
-            public string ForEntering { get; set; }
-            public string ByDefaultMySpace { get; set; }
-        }
-
-        public class PaymentSystemInfo
-        {
-            public string Cardknox { get; set; }
-            public string AuthorizeNet { get; set; }
-        }
-
-        public class ApiKeyInfo
-        {
-            public string ApiKeyCardknox { get; set; }
-            public string ApiKeyAuthorizeNet { get; set; }
-        }
 
         public class TextLoremInfo
         {
             public string TextLoremCommon { get; set; }
             public string TextLoremForPinCode { get; set; }
             public string TextLoremForNote { get; set; }
-        }
-
-        public class LlcNameInfo
-        {
-            public string ForAgentBroker { get; set; }
-            public string ForBroker { get; set; }
         }
 
         public class NameLocationInfo
@@ -79,15 +39,6 @@ namespace CazamioNewProject.Objects
             public string NameFirst { get; set; }
         }
 
-        public class NumberWithAddressInfo
-        {
-            public string MarkAdmAssignedBroker { get; set; }
-            public string MarkAdmAssignedAgntBrkr { get; set; }
-            public string BrokerAssignedBroker { get; set; }
-            public string BrokerAssignedAgntBrkr { get; set; }
-            public string AgntBrkrAssignedAgntBrkr { get; set; }
-        }
-
         public class AdditionalInfoInfo
         {
             public string ShortInfo { get; set; }
@@ -96,23 +47,9 @@ namespace CazamioNewProject.Objects
 
         public Building Generate()
         {
-
-            string shortBuildingName = "QA-Building NAME (12345 !@#$%)";
-            string llcNameForAgentBroker = "LLC QA Agent As Broker (12345) (!@#$%)";
-            string llcNameForBroker = "LLC QA Broker (12345) (!@#$%)";
             string textLoremCommon = "Lorem BUILDING ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,";
             string textLoremForPinCode = "Lorem PinCode Building (12345) (&%$#@!)";
             string textLoremForNote = "Lorem NOTE Building (12345) (&%$#@!)";
-            string descriptionShort = "DESCRIPTION for BUILDING (12345) (09876) (&%$#@!)";
-            string internalNotesShort = "INTERNAL NOTES for BUILDING (12345) (09876) (&%$#@!)";
-            string creditScreeningFeeForEntering = "9";
-            string creditScreeningFeeByDefault = "20";
-            string holdDepositForEntering = "650";
-            string holdDepositByDefault = "500";
-            string cardknox = "Cardknox";
-            string authorizeNet = "AuthorizeNet";
-            string apiKeyCardknox = "czmodev359376936c0543b58126c97f9ff55c68";
-            string apiKeyAuthorizeNet = "2L7uB4UzeA9gf366";
             string firstLocationMainEntrance = "Main Entrance";
             string secondLocationApartment = "Apartment";
 
@@ -130,41 +67,11 @@ namespace CazamioNewProject.Objects
 
             var building = new Building()
             {
-                ShortBuildingName = shortBuildingName,
-                DescriptionShort = descriptionShort,
-                InternalNotesShort = internalNotesShort,
-                DescriptionLong = descriptionShort + " " + textLoremCommon,
-                InternalNotesLong = internalNotesShort + " " + textLoremCommon,
-                CreditScreeningFee = new CreditScreeningFeeInfo
-                {
-                    ForEntering = creditScreeningFeeForEntering,
-                    ByDefaultMySpace = creditScreeningFeeByDefault
-                },
-                HoldDeposit = new HoldDepositInfo
-                {
-                    ForEntering = holdDepositForEntering,
-                    ByDefaultMySpace = holdDepositByDefault
-                },
-                PaymentSystem = new PaymentSystemInfo
-                {
-                    Cardknox = cardknox,
-                    AuthorizeNet = authorizeNet
-                },
-                ApiKey = new ApiKeyInfo
-                {
-                    ApiKeyCardknox = apiKeyCardknox,
-                    ApiKeyAuthorizeNet = apiKeyAuthorizeNet
-                },
                 TextLorem = new TextLoremInfo
                 {
                     TextLoremCommon = textLoremCommon,
                     TextLoremForPinCode = textLoremForPinCode,
                     TextLoremForNote = textLoremForNote
-                },
-                LlcName = new LlcNameInfo
-                {
-                    ForAgentBroker = llcNameForAgentBroker,
-                    ForBroker = llcNameForBroker
                 },
                 NameLocation = new NameLocationInfo
                 {

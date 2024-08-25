@@ -21,6 +21,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             AccessLocksApi accessLocksApi = new AccessLocksApi().Generate();
             Broker broker = new Broker().Generate();
             Owner owner = new Owner().Generate();
+            Demo demo = Demo.Generate();
 
             var payload = new RequestCreateBuildingFullDataWithBroker();
             payload.Address = new Address
@@ -46,8 +47,8 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             payload.BuildingId = buildingApi.BuildingId.ForCreationBuilding;
             payload.BuildingName = buildingApi.BuildingNameApi.BuldingNameStreetApiMarkAdmAssignedRoleBrkr;
             payload.LlcName = buildingApi.LlcNameApi.LlcNameStreetApiMarkAdmAssignedRoleBrkr;
-            payload.Description = building.DescriptionLong;
-            payload.InternalNotes = building.InternalNotesLong;
+            payload.Description = demo.DescriptionsInternalNotes.DescriptionLong;
+            payload.InternalNotes = demo.DescriptionsInternalNotes.InternalNotesLong;
             payload.ScreeningFee = new ScreeningFee
             {
                 Amount = buildingApi.AmountApi.CreditScreeningFeeByDefaultMySpace,

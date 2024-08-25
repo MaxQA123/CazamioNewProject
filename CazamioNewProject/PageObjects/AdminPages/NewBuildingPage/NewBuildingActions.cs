@@ -105,7 +105,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         {
             WaitUntil.CustomElementIsVisible(FieldInputCreditScreeningFee);
             WaitUntil.CustomElementIsClickable(FieldInputCreditScreeningFee);
-            InputGeneral.InputFunctionWithClear(FieldInputCreditScreeningFee, building.CreditScreeningFee.ForEntering);
+            InputGeneral.InputFunctionWithClear(FieldInputCreditScreeningFee, demo.MySpaceAmountPayments.CreditScreeningFeeStatic);
 
             return this;
         }
@@ -115,7 +115,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         {
             WaitUntil.CustomElementIsVisible(FieldInputHoldDeposit);
             WaitUntil.CustomElementIsClickable(FieldInputHoldDeposit);
-            InputGeneral.InputFunctionWithClear(FieldInputHoldDeposit, building.HoldDeposit.ForEntering);
+            InputGeneral.InputFunctionWithClear(FieldInputHoldDeposit, demo.MySpaceAmountPayments.HoldDepositStatic);
 
             return this;
         }
