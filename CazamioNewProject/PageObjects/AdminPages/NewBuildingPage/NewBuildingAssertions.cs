@@ -34,9 +34,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         [AllureStep("VerifyLocationMainAccess")]
         public NewBuilding VerifyLocationMainAccess(string nameLocationActual)
         {
-            Assert.AreEqual(nameLocationActual, building.NameLocation.MainEntrance);
+            Assert.AreEqual(nameLocationActual, building.AccessLocks.MainEntranceByDefaultFirstNameLock);
 
-            Console.WriteLine($"AR: {nameLocationActual} ER: {building.NameLocation.MainEntrance}");
+            Console.WriteLine($"AR: {nameLocationActual} ER: {building.AccessLocks.MainEntranceByDefaultFirstNameLock}");
 
             return this;
         }
@@ -44,9 +44,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         [AllureStep("VerifyLocationApartment")]
         public NewBuilding VerifyLocationApartment(string copyActualNameLocationTwo)
         {
-            Assert.AreEqual(copyActualNameLocationTwo, building.NameLocation.Apartment);
+            Assert.AreEqual(copyActualNameLocationTwo, building.AccessLocks.ApartmentByDefaultSecondNameLock);
 
-            Console.WriteLine($"AR: {copyActualNameLocationTwo} ER: {building.NameLocation.Apartment}");
+            Console.WriteLine($"AR: {copyActualNameLocationTwo} ER: {building.AccessLocks.ApartmentByDefaultSecondNameLock}");
 
             return this;
         }
@@ -54,9 +54,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         [AllureStep("VerifyValueByDefaulScreeningFee")]
         public NewBuilding VerifyValueByDefaulScreeningFee(string valueScreeningFeeByDefault)
         {
-            Assert.AreEqual(valueScreeningFeeByDefault, building.CreditScreeningFee.ByDefaultMySpace);
+            Assert.AreEqual(valueScreeningFeeByDefault, building.MySpaceAmountPayments.CreditScreeningFeeByDefault);
 
-            Console.WriteLine($"Value Screening Fee by default AR: {valueScreeningFeeByDefault} ER: {building.CreditScreeningFee.ByDefaultMySpace}");
+            Console.WriteLine($"Value Screening Fee by default AR: {valueScreeningFeeByDefault} ER: {building.MySpaceAmountPayments.CreditScreeningFeeByDefault}");
 
             return this;
         }
@@ -64,9 +64,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         [AllureStep("VerifyValueByDefaulHoldDeposit")]
         public NewBuilding VerifyValueByDefaulHoldDeposit(string getValueHoldDeposit)
         {
-            Assert.AreEqual(getValueHoldDeposit, building.HoldDeposit.ByDefaultMySpace);
+            Assert.AreEqual(getValueHoldDeposit, building.MySpaceAmountPayments.HoldDepositByDefault);
 
-            Console.WriteLine($"Value Screening Fee by default AR: {getValueHoldDeposit} ER: {building.HoldDeposit.ByDefaultMySpace}");
+            Console.WriteLine($"Value Screening Fee by default AR: {getValueHoldDeposit} ER: {building.MySpaceAmountPayments.HoldDepositByDefault}");
 
             return this;
         }
@@ -87,8 +87,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         {
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(nameConcessionActual, building.Concessions.NameFirst, $"Name concession not equal");
-                Assert.AreEqual(getNameFreeStuffActual, building.FreeStuff.NameFirst, $"Name free stuff not equal");
+                Assert.AreEqual(nameConcessionActual, building.SettingsConcessions.NameFirst, $"Name concession not equal");
+                Assert.AreEqual(getNameFreeStuffActual, building.SettingsFreeStuff.NameFirst, $"Name free stuff not equal");
             });
 
             return this;

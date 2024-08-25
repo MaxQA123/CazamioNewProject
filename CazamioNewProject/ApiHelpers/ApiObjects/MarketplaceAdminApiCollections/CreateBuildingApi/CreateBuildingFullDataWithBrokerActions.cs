@@ -12,7 +12,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public static RequestCreateBuildingFullDataWithBroker RequestBodyCreateBuildingFullDataBroker()
         {
             BuildingApi buildingApi = new BuildingApi().Generate();
-            Building building = new Building().Generate();
+            Building building = Building.Generate();
             PaymentOptions paymentOptions = new PaymentOptions().Generate();
             PaymentOptionsApi paymentOptionsApi = new PaymentOptionsApi().Generate();
             PaymentSettingsApi paymentSettingsApi = new PaymentSettingsApi().Generate();
@@ -21,7 +21,6 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             AccessLocksApi accessLocksApi = new AccessLocksApi().Generate();
             Broker broker = new Broker().Generate();
             Owner owner = new Owner().Generate();
-            Demo demo = Demo.Generate();
 
             var payload = new RequestCreateBuildingFullDataWithBroker();
             payload.Address = new Address
@@ -47,8 +46,8 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             payload.BuildingId = buildingApi.BuildingId.ForCreationBuilding;
             payload.BuildingName = buildingApi.BuildingNameApi.BuldingNameStreetApiMarkAdmAssignedRoleBrkr;
             payload.LlcName = buildingApi.LlcNameApi.LlcNameStreetApiMarkAdmAssignedRoleBrkr;
-            payload.Description = demo.DescriptionsInternalNotes.DescriptionLong;
-            payload.InternalNotes = demo.DescriptionsInternalNotes.InternalNotesLong;
+            payload.Description = building.DescriptionsInternalNotes.DescriptionLong;
+            payload.InternalNotes = building.DescriptionsInternalNotes.InternalNotesLong;
             payload.ScreeningFee = new ScreeningFee
             {
                 Amount = buildingApi.AmountApi.CreditScreeningFeeByDefaultMySpace,
@@ -114,7 +113,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                     {
                         Location = accessLocksApi.Location.FirstByDefault,
                         TimeRestrictionEnabled = ApiRequestData.FALSE,
-                        CustomNote = building.TextLorem.TextLoremForNote,
+                        CustomNote = building.AccessLocks.PinCodeTextLorem,
                         NoteImage = new Uri("https://cazamiostorage.blob.core.windows.net/staging-building-images-container-2024-06/103_638534506736861274.png?sv=2019-07-07&sr=c&sig=aIzYjCy%2BjHcegqNIQW3kBJcHarRcl%2Fwa5g7Y2gtGjTg%3D&se=9997-12-31T23%3A59%3A59Z&sp=r"),
                         ShowOrder = buildingApi.ShowOrderApi.OrderPinCode,
                         ConnectionType = buildingApi.ConnectionTypeApi.PinCode,
@@ -129,11 +128,11 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                         //CustomNote = Name
                         Location = accessLocksApi.Location.SecondByDefault,
                         TimeRestrictionEnabled = ApiRequestData.FALSE,
-                        CustomNote = building.TextLorem.TextLoremForNote,
+                        CustomNote = building.AccessLocks.NoteTextLorem,
                         NoteImage = new Uri("https://cazamiostorage.blob.core.windows.net/staging-building-images-container-2024-06/103_638534506950505619.png?sv=2019-07-07&sr=c&sig=aIzYjCy%2BjHcegqNIQW3kBJcHarRcl%2Fwa5g7Y2gtGjTg%3D&se=9997-12-31T23%3A59%3A59Z&sp=r"),
                         ShowOrder = buildingApi.ShowOrderApi.OrderNote,
                         ConnectionType = buildingApi.ConnectionTypeApi.Note,
-                        Name = building.TextLorem.TextLoremForNote,
+                        Name = building.AccessLocks.NoteTextLorem,
                     },
                 },
                 BrokerId = broker.BrokerIdApi,
@@ -146,9 +145,9 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                         SpecialOfferId = buildingApi.SpecialOfferId,
                         MonthsFree = buildingApi.MonthsFree.OneMonth,
                         LeaseTerms = buildingApi.LeaseTerms.TwelveMonths,
-                        AdditionalInfo = building.AdditionalInfo.ShortInfo,
+                        AdditionalInfo = building.SettingsConcessions.AdditionalInfoShort,
                         IsActive = ApiRequestData.TRUE,
-                        Name = building.Concessions.NameFirst,
+                        Name = building.SettingsConcessions.NameFirst,
                         IsTimeBased = ApiRequestData.TRUE,
                         DateFrom = buildingApi.DateFrom.TodayDate,
                         DateTo = buildingApi.DateTo.TodayDate,
@@ -163,7 +162,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                         SpecialOfferId = buildingApi.SpecialOfferId,
                         FreeStuff = buildingApi.FreeStuff.SelectItemsFreeNetflixGoogleSpeaker,
                         IsActive = ApiRequestData.TRUE,
-                        Name = building.FreeStuff.NameFirst,
+                        Name = building.SettingsFreeStuff.NameFirst,
                         IsTimeBased = ApiRequestData.TRUE,
                         DateFrom = buildingApi.DateFrom.TodayDate,
                         DateTo = buildingApi.DateTo.TodayDate,

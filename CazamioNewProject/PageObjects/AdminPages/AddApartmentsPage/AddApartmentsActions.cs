@@ -12,7 +12,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 {
     public partial class AddApartments
     {
-        Building building = new Building().Generate();
+        Building building = Building.Generate();
         Apartment apartment = new Apartment().Generate();
         Agent agent = new Agent().Generate();
         RequiredDocuments requiredDocuments = new RequiredDocuments().Generate();

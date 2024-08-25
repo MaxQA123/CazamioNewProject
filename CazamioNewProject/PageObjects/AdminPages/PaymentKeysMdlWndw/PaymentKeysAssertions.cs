@@ -13,8 +13,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentKeysMdlWndw
         {
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(getApiKeyActual, demo.PaymentSystems.Cardknox, $"Payment system not equal");
-                Assert.AreEqual(getItemApiKeyCardknoxActual, demo.PaymentSystems.ApiKeyCardknox, $"Api key not equal");
+                Assert.AreEqual(getApiKeyActual, building.PaymentSystems.Cardknox, $"Payment system not equal");
+                Assert.AreEqual(getItemApiKeyCardknoxActual, building.PaymentSystems.ApiKeyCardknox, $"Api key not equal");
             });
         }
 
@@ -22,8 +22,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentKeysMdlWndw
         {
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(getItemAuthorizeNetActual, demo.PaymentSystems.AuthorizeNet, $"Payment system not equal");
-                Assert.AreEqual(getItemApiKeyAuthorizeNetActual, demo.PaymentSystems.ApiKeyAuthorizeNet, $"Api key not equal");
+                Assert.AreEqual(getItemAuthorizeNetActual, building.PaymentSystems.AuthorizeNet, $"Payment system not equal");
+                Assert.AreEqual(getItemApiKeyAuthorizeNetActual, building.PaymentSystems.ApiKeyAuthorizeNet, $"Api key not equal");
             });
         }
     }

@@ -12,6 +12,9 @@ namespace CazamioNewProject.Objects
         public DescriptionsInternalNotesInfo DescriptionsInternalNotes { get; set; }
         public MySpaceAmountPaymentsInfo MySpaceAmountPayments { get; set; }
         public PaymentSystemsInfo PaymentSystems { get; set; }
+        public AccessLocksInfo AccessLocks { get; set; }
+        public SettingsConcessionsInfo SettingsConcessions { get; set; }
+        public SettingsFreeStuffInfo SettingsFreeStuff { get; set; }
 
         public static Demo Generate()
         {
@@ -25,6 +28,9 @@ namespace CazamioNewProject.Objects
                 DescriptionsInternalNotes = CreateDescriptionsInternalNotesInfo(),
                 MySpaceAmountPayments = CreateMySpaceAmountPaymentsInfo(),
                 PaymentSystems = CreatePaymentSystemsInfo(),
+                AccessLocks = CreateAccessLocksInfo(),
+                SettingsConcessions = CreateSettingsConcessionsInfo(),
+                SettingsFreeStuff = CreateSettingsFreeStuffInfo(),
             };
         }
 
@@ -124,6 +130,32 @@ namespace CazamioNewProject.Objects
             public string ApiKeyCardknox { get; set; }
             public string AuthorizeNet { get; set; }
             public string ApiKeyAuthorizeNet { get; set; }
+        }
+
+        public class AccessLocksInfo
+        {
+            public string MainEntranceByDefaultFirstNameLock { get; set; }
+            public string ApartmentByDefaultSecondNameLock { get; set; }
+            public string PinCodeTextLorem { get; set; }
+            public string NoteTextLorem { get; set; }
+        }
+
+        public class SettingsConcessionsInfo
+        {
+            public string NameFirst { get; set; }
+            public string RandomMonthsFree { get; set; }
+            public string OneMonthYearFree { get; set; }
+            public string TwoMonthsFree { get; set; }
+            public string RandomLeaseTerms { get; set; }
+            public string TwelveMonthsLeaseTerms { get; set; }
+            public string OneYearLeaseTerms { get; set; }
+            public string AdditionalInfoShort { get; set; }
+            public string AdditionalInfoLong { get; set; }
+        }
+
+        public class SettingsFreeStuffInfo
+        {
+            public string NameFirst { get; set; }
         }
 
         private static SaintJohnsonPlInfo CreateSaintJohnsonPlInfo()
@@ -245,6 +277,41 @@ namespace CazamioNewProject.Objects
                 ApiKeyCardknox = "czmodev359376936c0543b58126c97f9ff55c68",
                 AuthorizeNet = "AuthorizeNet",
                 ApiKeyAuthorizeNet = "2L7uB4UzeA9gf366",
+            };
+        }
+
+        private static AccessLocksInfo CreateAccessLocksInfo()
+        {
+            return new AccessLocksInfo
+            {
+                MainEntranceByDefaultFirstNameLock = "Main Entrance",
+                ApartmentByDefaultSecondNameLock = "Apartment",
+                PinCodeTextLorem = "Lorem PinCode Building (12345) (&%$#@!)",
+                NoteTextLorem = "Lorem NOTE Building (12345) (&%$#@!)",
+            };
+        }
+
+        private static SettingsConcessionsInfo CreateSettingsConcessionsInfo()
+        {
+            return new SettingsConcessionsInfo
+            {
+                NameFirst = "Conces Building 1",
+                RandomMonthsFree = GenerateRandomData.RandomNumberWithoutZero(1),
+                OneMonthYearFree = "1",
+                TwoMonthsFree = "2",
+                RandomLeaseTerms = GenerateRandomData.RandomNumberWithoutZero(1),
+                TwelveMonthsLeaseTerms = "12",
+                OneYearLeaseTerms = "1",
+                AdditionalInfoShort = "Lorem ADDITIONAL INFO BUILDING 12345 (09876) (*&%$#@!)",
+                AdditionalInfoLong = "Lorem ADDITIONAL INFO BUILDING 12345 (09876) Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,",
+            };
+        }
+
+        private static SettingsFreeStuffInfo CreateSettingsFreeStuffInfo()
+        {
+            return new SettingsFreeStuffInfo
+            {
+                NameFirst = "Free Stuff Building 1",
             };
         }
     }

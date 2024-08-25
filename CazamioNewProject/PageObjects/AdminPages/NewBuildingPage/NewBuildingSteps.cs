@@ -13,26 +13,26 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         public NewBuilding EnterBuildingDataWashingtonSquare()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputAddress, demo.WashingtonSquare.NumberNameAddressStatic);
+            InputGeneral.InputFunctionWithClear(FieldInputAddress, building.WashingtonSquare.NumberNameAddressStatic);
             WaitUntil.WaitSomeInterval(500);
             KeyBoardActions.ClickTab();
             KeyBoardActions.ClickEnterButton();
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputCity, demo.WashingtonSquare.City);
+            InputGeneral.InputFunctionWithClear(FieldInputCity, building.WashingtonSquare.City);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputState, demo.WashingtonSquare.State);
+            InputGeneral.InputFunctionWithClear(FieldInputState, building.WashingtonSquare.State);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputZip, demo.WashingtonSquare.Zip);
+            InputGeneral.InputFunctionWithClear(FieldInputZip, building.WashingtonSquare.Zip);
             WaitUntil.WaitSomeInterval(500);
             KeyBoardActions.ClickArrowDown();
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ClickEnterButton();
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputNeighborhood, demo.WashingtonSquare.Neighborhood);
+            InputGeneral.InputFunctionWithClear(FieldInputNeighborhood, building.WashingtonSquare.Neighborhood);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputBuildingName, demo.WashingtonSquare.BuildingName);
+            InputGeneral.InputFunctionWithClear(FieldInputBuildingName, building.WashingtonSquare.BuildingName);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLlcName, demo.WashingtonSquare.LlcName);
+            InputGeneral.InputFunctionWithClear(FieldInputLlcName, building.WashingtonSquare.LlcName);
 
             return this;
         }
@@ -41,26 +41,26 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         public NewBuilding EnterBuildingDataAlbermaleRd()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputAddress, demo.AlbermaleRd.NumberNameAddressStatic);
+            InputGeneral.InputFunctionWithClear(FieldInputAddress, building.AlbermaleRd.NumberNameAddressStatic);
             WaitUntil.WaitSomeInterval(500);
             KeyBoardActions.ClickTab();
             KeyBoardActions.ClickEnterButton();
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputCity, demo.AlbermaleRd.City);
+            InputGeneral.InputFunctionWithClear(FieldInputCity, building.AlbermaleRd.City);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputState, demo.AlbermaleRd.State);
+            InputGeneral.InputFunctionWithClear(FieldInputState, building.AlbermaleRd.State);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputZip, demo.AlbermaleRd.Zip);
+            InputGeneral.InputFunctionWithClear(FieldInputZip, building.AlbermaleRd.Zip);
             WaitUntil.WaitSomeInterval(500);
             KeyBoardActions.ClickArrowDown();
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ClickEnterButton();
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputNeighborhood, demo.AlbermaleRd.Neighborhood);
+            InputGeneral.InputFunctionWithClear(FieldInputNeighborhood, building.AlbermaleRd.Neighborhood);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputBuildingName, demo.AlbermaleRd.BuildingName);
+            InputGeneral.InputFunctionWithClear(FieldInputBuildingName, building.AlbermaleRd.BuildingName);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLlcName, demo.AlbermaleRd.LlcName);
+            InputGeneral.InputFunctionWithClear(FieldInputLlcName, building.AlbermaleRd.LlcName);
 
             return this;
         }
@@ -69,22 +69,22 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         public NewBuilding EnterBuildingDataEast51stStreetPedestrianCrossing()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputAddress, demo.East51stStreetPedestrianCrossing.NumberNameAddressStatic);
+            InputGeneral.InputFunctionWithClear(FieldInputAddress, building.East51stStreetPedestrianCrossing.NumberNameAddressStatic);
             WaitUntil.WaitSomeInterval(500);
             KeyBoardActions.ClickTab();
             KeyBoardActions.ClickEnterButton();
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputCity, demo.East51stStreetPedestrianCrossing.City);
+            InputGeneral.InputFunctionWithClear(FieldInputCity, building.East51stStreetPedestrianCrossing.City);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputState, demo.East51stStreetPedestrianCrossing.State);
+            InputGeneral.InputFunctionWithClear(FieldInputState, building.East51stStreetPedestrianCrossing.State);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputZip, demo.East51stStreetPedestrianCrossing.Zip);
+            InputGeneral.InputFunctionWithClear(FieldInputZip, building.East51stStreetPedestrianCrossing.Zip);
             WaitUntil.WaitSomeInterval(500);
             KeyBoardActions.ClickArrowDown();
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ClickEnterButton();
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputNeighborhood, demo.East51stStreetPedestrianCrossing.Neighborhood);
+            InputGeneral.InputFunctionWithClear(FieldInputNeighborhood, building.East51stStreetPedestrianCrossing.Neighborhood);
 
             return this;
         }
@@ -93,14 +93,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         public NewBuilding EnterBuildingDataSaintJohnsonPl()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputAddress, demo.SaintJohnsonPl.NumberNameAddressStatic);
+            InputGeneral.InputFunctionWithClear(FieldInputAddress, building.SaintJohnsonPl.NumberNameAddressStatic);
             WaitUntil.WaitSomeInterval(500);
             KeyBoardActions.ClickTab();
             KeyBoardActions.ClickEnterButton();
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputCity, demo.SaintJohnsonPl.City);
+            InputGeneral.InputFunctionWithClear(FieldInputCity, building.SaintJohnsonPl.City);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputState, demo.SaintJohnsonPl.State);
+            InputGeneral.InputFunctionWithClear(FieldInputState, building.SaintJohnsonPl.State);
             WaitUntil.WaitSomeInterval(100);
 
             return this;
@@ -110,14 +110,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         public NewBuilding EnterBuildingDataCrownSt()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputAddress, demo.CrownSt.NumberNameAddressStatic);
+            InputGeneral.InputFunctionWithClear(FieldInputAddress, building.CrownSt.NumberNameAddressStatic);
             WaitUntil.WaitSomeInterval(500);
             KeyBoardActions.ClickTab();
             KeyBoardActions.ClickEnterButton();
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputCity, demo.CrownSt.City);
+            InputGeneral.InputFunctionWithClear(FieldInputCity, building.CrownSt.City);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputState, demo.CrownSt.State);
+            InputGeneral.InputFunctionWithClear(FieldInputState, building.CrownSt.State);
             WaitUntil.WaitSomeInterval(100);
 
             return this;
@@ -127,9 +127,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         public NewBuilding EnterLongInternalNotesDescription()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputDescroption, demo.DescriptionsInternalNotes.DescriptionLong);
+            InputGeneral.InputFunctionWithClear(FieldInputDescroption, building.DescriptionsInternalNotes.DescriptionLong);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputInternalNotes, demo.DescriptionsInternalNotes.InternalNotesLong);
+            InputGeneral.InputFunctionWithClear(FieldInputInternalNotes, building.DescriptionsInternalNotes.InternalNotesLong);
 
             return this;
         }
@@ -138,9 +138,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         public NewBuilding EnterShortInternalNotesDescription()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputDescroption, demo.DescriptionsInternalNotes.DescriptionShort);
+            InputGeneral.InputFunctionWithClear(FieldInputDescroption, building.DescriptionsInternalNotes.DescriptionShort);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputInternalNotes, demo.DescriptionsInternalNotes.InternalNotesShort);
+            InputGeneral.InputFunctionWithClear(FieldInputInternalNotes, building.DescriptionsInternalNotes.InternalNotesShort);
 
             return this;
         }
@@ -150,9 +150,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         {
             WaitUntil.CustomElementIsVisible(FieldInputCreditScreeningFee);
             WaitUntil.CustomElementIsClickable(FieldInputCreditScreeningFee);
-            InputGeneral.InputFunctionWithClear(FieldInputCreditScreeningFee, demo.MySpaceAmountPayments.CreditScreeningFeeStatic);
+            InputGeneral.InputFunctionWithClear(FieldInputCreditScreeningFee, building.MySpaceAmountPayments.CreditScreeningFeeStatic);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputHoldDeposit, demo.MySpaceAmountPayments.HoldDepositStatic);
+            InputGeneral.InputFunctionWithClear(FieldInputHoldDeposit, building.MySpaceAmountPayments.HoldDepositStatic);
 
             return this;
         }
@@ -243,7 +243,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithoutClear(FieldInputPinCodeForNextEnter, GenerateRandomData.RandomNumberWithoutZero(1));
             KeyBoardActions.ClickSpaceButton();
-            InputGeneral.InputFunctionWithClear(FieldInputCustomNoteForAccess, building.TextLorem.TextLoremForPinCode);
+            InputGeneral.InputFunctionWithClear(FieldInputCustomNoteForAccess, building.AccessLocks.PinCodeTextLorem);
             WaitUntil.WaitSomeInterval(100);
             ButtonSelectImageForAccess.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_BUILDING_LOCK_PIN_CODE));
             WaitUntil.SuccessCustomElementIsVisible(MessageSuccessUploadImageForAccess);
@@ -261,7 +261,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             Button.Click(ButtonAccessType);
             Button.Click(ItemNote);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputCustomNoteForAccess, building.TextLorem.TextLoremForNote);
+            InputGeneral.InputFunctionWithClear(FieldInputCustomNoteForAccess, building.AccessLocks.NoteTextLorem);
             WaitUntil.WaitSomeInterval(100);
             ButtonSelectImageForAccess.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_BUILDING_LOCK_NOTE));
             WaitUntil.SuccessCustomElementIsVisible(MessageSuccessUploadImageForAccess);
@@ -280,15 +280,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         {
             WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
             WaitUntil.CustomElementIsClickable(FieldInputNameSpecials);
-            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.Concessions.NameFirst);
+            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.SettingsConcessions.NameFirst);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.Concessions.OneMonthYearFree);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.SettingsConcessions.OneMonthYearFree);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.TwelveMonthsLeaseTerms);
+            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.SettingsConcessions.TwelveMonthsLeaseTerms);
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();
-            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, building.AdditionalInfo.ShortInfo);
+            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, building.SettingsConcessions.AdditionalInfoShort);
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();
@@ -322,9 +322,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         {
             WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
             WaitUntil.CustomElementIsClickable(FieldInputNameSpecials);
-            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.Concessions.RandomMonthsFree);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.SettingsConcessions.RandomMonthsFree);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.TwelveMonthsLeaseTerms);
+            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.SettingsConcessions.TwelveMonthsLeaseTerms);
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();
@@ -353,15 +353,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             WaitUntil.ElementIsClickable(CheckBoxIsActive);
             Button.Click(CheckBoxIsActive);
             WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
-            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.Concessions.NameFirst);
+            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.SettingsConcessions.NameFirst);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.Concessions.TwoMonthsFree);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.SettingsConcessions.TwoMonthsFree);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.TwelveMonthsLeaseTerms);
+            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.SettingsConcessions.TwelveMonthsLeaseTerms);
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();
-            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, building.AdditionalInfo.LongInfo);
+            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, building.SettingsConcessions.AdditionalInfoLong);
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();
@@ -390,7 +390,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         {
             WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
             WaitUntil.CustomElementIsClickable(FieldInputNameSpecials);
-            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.FreeStuff.NameFirst);
+            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.SettingsFreeStuff.NameFirst);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(FieldInputSelectItemsFreeStuff);
             WaitUntil.WaitSomeInterval(100);
@@ -456,7 +456,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             WaitUntil.ElementIsClickable(CheckBoxIsActive);
             Button.Click(CheckBoxIsActive);
             WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
-            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.FreeStuff.NameFirst);
+            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, building.SettingsFreeStuff.NameFirst);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(FieldInputSelectItemsFreeStuff);
             WaitUntil.WaitSomeInterval(100);

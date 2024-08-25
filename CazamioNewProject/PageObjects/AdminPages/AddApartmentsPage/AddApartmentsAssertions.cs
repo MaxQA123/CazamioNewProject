@@ -80,9 +80,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [AllureStep("VerifyApartmentHoldDepositAddApartmentsPage")]
         public AddApartments VerifyApartmentHoldDepositAddApartmentsPage(string getApartmentHoldDepositFromAddApartments)
         {
-            Assert.AreEqual(getApartmentHoldDepositFromAddApartments, building.HoldDeposit.ByDefaultMySpace);
+            Assert.AreEqual(getApartmentHoldDepositFromAddApartments, building.MySpaceAmountPayments.HoldDepositByDefault);
 
-            Console.WriteLine($"Apartment Hold Deposit AR: {getApartmentHoldDepositFromAddApartments} = {building.HoldDeposit.ByDefaultMySpace} :ER");
+            Console.WriteLine($"Apartment Hold Deposit AR: {getApartmentHoldDepositFromAddApartments} = {building.MySpaceAmountPayments.HoldDepositByDefault} :ER");
 
             return this;
         }

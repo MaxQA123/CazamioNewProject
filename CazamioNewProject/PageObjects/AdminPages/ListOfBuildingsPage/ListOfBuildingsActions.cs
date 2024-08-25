@@ -11,7 +11,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
 {
     public partial class ListOfBuildings
     {
-        Building building = new Building().Generate();
+        Building building = Building.Generate();
         Apartment apartment = new Apartment().Generate();
 
         [AllureStep("ClickButtonAddBuilding")]
