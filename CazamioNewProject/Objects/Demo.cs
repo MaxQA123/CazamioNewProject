@@ -4,314 +4,84 @@ namespace CazamioNewProject.Objects
 {
     public class Demo
     {
-        public SaintJohnsonPlInfo SaintJohnsonPl { get; set; }
-        public WashingtonSquareInfo WashingtonSquare { get; set; }
-        public CrownStInfo CrownSt { get; set; }
-        public AlbermaleRdInfo AlbermaleRd { get; set; }
-        public East51stStreetPedestrianCrossingInfo East51stStreetPedestrianCrossing { get; set; }
-        public DescriptionsInternalNotesInfo DescriptionsInternalNotes { get; set; }
-        public MySpaceAmountPaymentsInfo MySpaceAmountPayments { get; set; }
-        public PaymentSystemsInfo PaymentSystems { get; set; }
-        public AccessLocksInfo AccessLocks { get; set; }
-        public SettingsConcessionsInfo SettingsConcessions { get; set; }
-        public SettingsFreeStuffInfo SettingsFreeStuff { get; set; }
+        public UnitBasicDataInfo UnitBasicData { get; set; }
 
         public static Demo Generate()
         {
             return new Demo
             {
-                SaintJohnsonPl = CreateSaintJohnsonPlInfo(),
-                WashingtonSquare = CreateWashingtonSquareInfo(),
-                CrownSt = CreateCrownStInfo(),
-                AlbermaleRd = CreateAlbermaleRdInfo(),
-                East51stStreetPedestrianCrossing = CreateEast51stStreetPedestrianCrossingInfo(),
-                DescriptionsInternalNotes = CreateDescriptionsInternalNotesInfo(),
-                MySpaceAmountPayments = CreateMySpaceAmountPaymentsInfo(),
-                PaymentSystems = CreatePaymentSystemsInfo(),
-                AccessLocks = CreateAccessLocksInfo(),
-                SettingsConcessions = CreateSettingsConcessionsInfo(),
-                SettingsFreeStuff = CreateSettingsFreeStuffInfo(),
+                UnitBasicData = CreateUnitBasicDataInfo(),
             };
         }
 
-        public class SaintJohnsonPlInfo
+        public class UnitBasicDataInfo
         {
-            public string NumberRandomNameAddressStatic { get; set; }
-            public string NumberNameAddressStatic { get; set; }
-            public string NumberAddress { get; set; }
-            public string AddressName { get; set; }
-            public string City { get; set; }
-            public string State { get; set; }
-            public string Zip { get; set; }
-            public string Neighborhood { get; set; }
-            public string BuildingName { get; set; }
-            public string LlcName { get; set; }
+            public string UnitNumberOneNumber { get; set; }
+            public string UnitNumberTwoNumbers { get; set; }
+            public string UnitNumberFourNumbers { get; set; }
+            public string UnitNumberMaxNumbersAlphabet { get; set; }
+            public string UnitNumberFourAlphabet { get; set; }
+            public string BedroomsOneNumber { get; set; }
+            public string BedroomsTwoNumbers { get; set; }
+            public string HalfBedrooms { get; set; }
+            public string BathroomsOneNumber { get; set; }
+            public string BathroomsOneNumbers { get; set; }
+            public string HalfBathrooms { get; set; }
+            public string SqFootOneNubmer { get; set; }
+            public string SqFootTwoNubmers { get; set; }
+            public string SqFootThreeNubmers { get; set; }
+            public string SqFootFourNubmers { get; set; }
+            public string LeasePriceOneNumber { get; set; }
+            public string LeasePriceTwoNumbers { get; set; }
+            public string LeasePriceThreeNumbers { get; set; }
+            public string LeasePriceFourNumbers { get; set; }
+            public string LeasePriceFiveNumbers { get; set; }
+            public string SecurityDepositOneNumber { get; set; }
+            public string SecurityDepositTwoNumbers { get; set; }
+            public string SecurityDepositThreeNumbers { get; set; }
+            public string SecurityDepositFourNumbers { get; set; }
+            public string SecurityDepositFiveNumbers { get; set; }
+            public string MonthlyRentsPrePaymentByDefault { get; set; }
+            public string MonthlyRentsPrePaymentOneNumber { get; set; }
+            public string FloorOneNumber { get; set; }
+            public string FloorTwoNumbers { get; set; }
+            public string ApartmentHoldDepositStatic { get; set; }
         }
 
-        public class WashingtonSquareInfo
+        private static UnitBasicDataInfo CreateUnitBasicDataInfo()
         {
-            public string NumberRandomNameAddressStatic { get; set; }
-            public string NumberNameAddressStatic { get; set; }
-            public string NumberAddress { get; set; }
-            public string AddressName { get; set; }
-            public string City { get; set; }
-            public string State { get; set; }
-            public string Zip { get; set; }
-            public string Neighborhood { get; set; }
-            public string BuildingName { get; set; }
-            public string LlcName { get; set; }
-        }
-
-        public class CrownStInfo
-        {
-            public string NumberRandomNameAddressStatic { get; set; }
-            public string NumberNameAddressStatic { get; set; }
-            public string NumberAddress { get; set; }
-            public string AddressName { get; set; }
-            public string City { get; set; }
-            public string State { get; set; }
-            public string Zip { get; set; }
-            public string Neighborhood { get; set; }
-            public string BuildingName { get; set; }
-            public string LlcName { get; set; }
-        }
-
-        public class AlbermaleRdInfo
-        {
-            public string NumberRandomNameAddressStatic { get; set; }
-            public string NumberNameAddressStatic { get; set; }
-            public string NumberAddress { get; set; }
-            public string AddressName { get; set; }
-            public string City { get; set; }
-            public string State { get; set; }
-            public string Zip { get; set; }
-            public string Neighborhood { get; set; }
-            public string BuildingName { get; set; }
-            public string LlcName { get; set; }
-        }
-
-        public class East51stStreetPedestrianCrossingInfo
-        {
-            public string NumberRandomNameAddressStatic { get; set; }
-            public string NumberNameAddressStatic { get; set; }
-            public string NumberAddress { get; set; }
-            public string AddressName { get; set; }
-            public string City { get; set; }
-            public string State { get; set; }
-            public string Zip { get; set; }
-            public string Neighborhood { get; set; }
-            public string BuildingName { get; set; }
-            public string LlcName { get; set; }
-        }
-
-        public class DescriptionsInternalNotesInfo
-        {
-            public string DescriptionShort { get; set; }
-            public string DescriptionLong { get; set; }
-            public string InternalNotesShort { get; set; }
-            public string InternalNotesLong { get; set; }
-            public string TextLongLoremCommon { get; set; }
-            public string TextShortLoremCommon { get; set; }
-        }
-
-        public class MySpaceAmountPaymentsInfo
-        {
-            public string CreditScreeningFeeByDefault { get; set; }
-            public string CreditScreeningFeeRandom { get; set; }
-            public string CreditScreeningFeeStatic { get; set; }
-            public string HoldDepositByDefault { get; set; }
-            public string HoldDepositRandom { get; set; }
-            public string HoldDepositStatic { get; set; }
-        }
-
-        public class PaymentSystemsInfo
-        {
-            public string Cardknox { get; set; }
-            public string ApiKeyCardknox { get; set; }
-            public string AuthorizeNet { get; set; }
-            public string ApiKeyAuthorizeNet { get; set; }
-        }
-
-        public class AccessLocksInfo
-        {
-            public string MainEntranceByDefaultFirstNameLock { get; set; }
-            public string ApartmentByDefaultSecondNameLock { get; set; }
-            public string PinCodeTextLorem { get; set; }
-            public string NoteTextLorem { get; set; }
-        }
-
-        public class SettingsConcessionsInfo
-        {
-            public string NameFirst { get; set; }
-            public string RandomMonthsFree { get; set; }
-            public string OneMonthYearFree { get; set; }
-            public string TwoMonthsFree { get; set; }
-            public string RandomLeaseTerms { get; set; }
-            public string TwelveMonthsLeaseTerms { get; set; }
-            public string OneYearLeaseTerms { get; set; }
-            public string AdditionalInfoShort { get; set; }
-            public string AdditionalInfoLong { get; set; }
-        }
-
-        public class SettingsFreeStuffInfo
-        {
-            public string NameFirst { get; set; }
-        }
-
-        private static SaintJohnsonPlInfo CreateSaintJohnsonPlInfo()
-        {
-            return new SaintJohnsonPlInfo
+            return new UnitBasicDataInfo
             {
-                NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(5) + " " + "Saint Johnson Place" ,
-                NumberNameAddressStatic = "9996 Saint Johnson Place",
-                NumberAddress = "9996",
-                AddressName = "Saint Johnson Place",
-                City = "Brooklyn",
-                State = "NY",
-                Zip = "11213",
-                Neighborhood = "Crown Heights",
-                BuildingName = "9996 Saint Johnson Place AGENT QA-Building Name (12345) (*&^%)",
-                LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
-            };
-        }
-
-        private static WashingtonSquareInfo CreateWashingtonSquareInfo()
-        {
-            return new WashingtonSquareInfo
-            {
-                NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(4) + " " + "Washington Square",
-                NumberNameAddressStatic = "6 Washington Square",
-                NumberAddress = "6",
-                AddressName = "Washington Square",
-                City = "New York",
-                State = "NY",
-                Zip = "10012",
-                Neighborhood = "Manhattan",
-                BuildingName = "6 Washington Square Broker QA-Building Name (12345) (09876) (*&^%)",
-                LlcName = "LLC Name QA Broker (12345) (09876) (*&^%)",
-            };
-        }
-
-        private static CrownStInfo CreateCrownStInfo()
-        {
-            return new CrownStInfo
-            {
-                NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(3) + " " + "Crown St",
-                NumberNameAddressStatic = "40-49 Crown St",
-                NumberAddress = "40-49",
-                AddressName = "Crown St",
-                City = "Brooklyn",
-                State = "NY",
-                Zip = "11225",
-                Neighborhood = "Crown Heights",
-                BuildingName = "40-49 Crown St Broker QA-Building Name (12345) (09876) (*&^%)",
-                LlcName = "LLC Name QA Broker (12345) (09876) (*&^%)",
-            };
-        }
-
-        private static AlbermaleRdInfo CreateAlbermaleRdInfo()
-        {
-            return new AlbermaleRdInfo
-            {
-                NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(2) + " " + "Albermale Rd",
-                NumberNameAddressStatic = "100A Albermale Rd",
-                NumberAddress = "100A",
-                AddressName = "Albermale Rd",
-                City = "Brooklyn",
-                State = "NY",
-                Zip = "11226",
-                Neighborhood = "East Flatbush",
-                BuildingName = "100A Albermale Rd AGENT QA-Building Name (12345) (*&^%)",
-                LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
-            };
-        }
-
-        private static East51stStreetPedestrianCrossingInfo CreateEast51stStreetPedestrianCrossingInfo()
-        {
-            return new East51stStreetPedestrianCrossingInfo
-            {
-                NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(1) + " " + "East 51st Street Pedestrian Crossing",
-                NumberNameAddressStatic = "100-109 East 51st Street Pedestrian Crossing",
-                NumberAddress = "100-109",
-                AddressName = "East 51st Street Pedestrian Crossing",
-                City = "New York",
-                State = "NY",
-                Zip = "10022",
-                Neighborhood = "Manhattan",
-                BuildingName = "100-109 East 51st Street Pedestrian Crossing AGENT QA-Building Name (12345) (*&^%)",
-                LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
-            };
-        }
-
-        private static DescriptionsInternalNotesInfo CreateDescriptionsInternalNotesInfo()
-        {
-            return new DescriptionsInternalNotesInfo
-            {
-                DescriptionShort = "DESCRIPTION for BUILDING (12345) (09876) (&%$#@!)",
-                DescriptionLong = "DESCRIPTION for BUILDING (12345) (09876) (&%$#@!) Lorem BUILDING ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,",
-                InternalNotesShort = "INTERNAL NOTES for BUILDING (12345) (09876) (&%$#@!)",
-                InternalNotesLong = "INTERNAL NOTES for BUILDING (12345) (09876) (&%$#@!) Lorem BUILDING ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,",
-                TextLongLoremCommon = "Lorem BUILDING ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,",
-                TextShortLoremCommon = "Lorem BUILDING ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing",
-            };
-        }
-
-        private static MySpaceAmountPaymentsInfo CreateMySpaceAmountPaymentsInfo()
-        {
-            return new MySpaceAmountPaymentsInfo
-            {
-                CreditScreeningFeeByDefault = "20",
-                CreditScreeningFeeRandom = GenerateRandomData.RandomNumberWithoutZero(2),
-                CreditScreeningFeeStatic = "15",
-                HoldDepositByDefault = "20",
-                HoldDepositRandom = GenerateRandomData.RandomNumberWithoutZero(3),
-                HoldDepositStatic = "900",
-            };
-        }
-
-        private static PaymentSystemsInfo CreatePaymentSystemsInfo()
-        {
-            return new PaymentSystemsInfo
-            {
-                Cardknox = "Cardknox",
-                ApiKeyCardknox = "czmodev359376936c0543b58126c97f9ff55c68",
-                AuthorizeNet = "AuthorizeNet",
-                ApiKeyAuthorizeNet = "2L7uB4UzeA9gf366",
-            };
-        }
-
-        private static AccessLocksInfo CreateAccessLocksInfo()
-        {
-            return new AccessLocksInfo
-            {
-                MainEntranceByDefaultFirstNameLock = "Main Entrance",
-                ApartmentByDefaultSecondNameLock = "Apartment",
-                PinCodeTextLorem = "Lorem PinCode Building (12345) (&%$#@!)",
-                NoteTextLorem = "Lorem NOTE Building (12345) (&%$#@!)",
-            };
-        }
-
-        private static SettingsConcessionsInfo CreateSettingsConcessionsInfo()
-        {
-            return new SettingsConcessionsInfo
-            {
-                NameFirst = "Conces Building 1",
-                RandomMonthsFree = GenerateRandomData.RandomNumberWithoutZero(1),
-                OneMonthYearFree = "1",
-                TwoMonthsFree = "2",
-                RandomLeaseTerms = GenerateRandomData.RandomNumberWithoutZero(1),
-                TwelveMonthsLeaseTerms = "12",
-                OneYearLeaseTerms = "1",
-                AdditionalInfoShort = "Lorem ADDITIONAL INFO BUILDING 12345 (09876) (*&%$#@!)",
-                AdditionalInfoLong = "Lorem ADDITIONAL INFO BUILDING 12345 (09876) Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,",
-            };
-        }
-
-        private static SettingsFreeStuffInfo CreateSettingsFreeStuffInfo()
-        {
-            return new SettingsFreeStuffInfo
-            {
-                NameFirst = "Free Stuff Building 1",
+                UnitNumberOneNumber = GenerateRandomData.RandomNumberWithoutZero(5) + " " + "Saint Johnson Place" ,
+                UnitNumberTwoNumbers = "9996 Saint Johnson Place",
+                UnitNumberFourNumbers = "9996",
+                UnitNumberMaxNumbersAlphabet = "Saint Johnson Place",
+                UnitNumberFourAlphabet = "Brooklyn",
+                BedroomsOneNumber = "NY",
+                BedroomsTwoNumbers = "11213",
+                HalfBedrooms = "Crown Heights",
+                BathroomsOneNumber = "9996 Saint Johnson Place AGENT QA-Building Name (12345) (*&^%)",
+                BathroomsOneNumbers = "LLC Name QA Agent (12345) (09876) (*&^%)",
+                HalfBathrooms = "Brooklyn",
+                SqFootOneNubmer = "NY",
+                SqFootTwoNubmers = "11213",
+                SqFootThreeNubmers = "Crown Heights",
+                SqFootFourNubmers = "9996 Saint Johnson Place AGENT QA-Building Name (12345) (*&^%)",
+                LeasePriceOneNumber = "LLC Name QA Agent (12345) (09876) (*&^%)",
+                LeasePriceTwoNumbers = "Brooklyn",
+                LeasePriceThreeNumbers = "NY",
+                LeasePriceFourNumbers = "11213",
+                LeasePriceFiveNumbers = "Crown Heights",
+                SecurityDepositOneNumber = "9996 Saint Johnson Place AGENT QA-Building Name (12345) (*&^%)",
+                SecurityDepositTwoNumbers = "LLC Name QA Agent (12345) (09876) (*&^%)",
+                SecurityDepositThreeNumbers = "NY",
+                SecurityDepositFourNumbers = "11213",
+                SecurityDepositFiveNumbers = "Crown Heights",
+                MonthlyRentsPrePaymentByDefault = "9996 Saint Johnson Place AGENT QA-Building Name (12345) (*&^%)",
+                MonthlyRentsPrePaymentOneNumber = "LLC Name QA Agent (12345) (09876) (*&^%)",
+                FloorOneNumber = "Brooklyn",
+                FloorTwoNumbers = "NY",
+                ApartmentHoldDepositStatic = "11213",
             };
         }
     }
