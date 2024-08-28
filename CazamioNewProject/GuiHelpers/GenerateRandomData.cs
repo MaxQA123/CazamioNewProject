@@ -21,6 +21,14 @@ namespace CazamioNewProject.GuiHelpers
                 .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
+        public static string RandomAlphabet(int size)
+        {
+            Random random = new Random();
+            const string chars = "QWERTYUIOPASDFGHJKLZXCVBNM";
+            return new string(Enumerable.Repeat(chars, size)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+
         public static string RandomNumberWithZero(int size)
         {
             Random random = new Random();
