@@ -796,7 +796,7 @@ namespace MarketplaceAdminGuiTest
 
             Pages.AddApartments
                 .VerifyBuildingNameAddApartmentsPage(getBuildingNameFromBuildingView, getBuildingNameFromAddApartments)
-                .EnterToAllFieldsMarkAdmAssignedBrkrOneNumber();
+                .EnterToAllFieldsOneWashingtonSquare();
 
             string getLeasePriceFromAddApartments = Pages.AddApartments.GetLeasePrice();
             string getUnitNumberFromAddApartments = Pages.AddApartments.GetUnitNumber();
@@ -928,7 +928,7 @@ namespace MarketplaceAdminGuiTest
 
             Pages.AddApartments
                 .VerifyBuildingNameAddApartmentsPage(getBuildingNameFromBuildingView, getBuildingNameFromAddApartments)
-                .EnterMandatoryFieldsMarkAdmAssignedAgBrkr()
+                .EnterMandatoryFieldsNineNineNineEightSaintJohnsonPlace()
                 .SelectCurrentDateAvailableFrom()
                 .SelectStatusDepositReceived()
                 .SelectApartmentTypeSingleFamily()

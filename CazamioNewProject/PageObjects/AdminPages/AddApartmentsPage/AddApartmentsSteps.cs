@@ -38,71 +38,71 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 
         }
 
-        [AllureStep("EnterToAllFieldsMarkAdmAssignedBrkrOneNumber")]
-        public AddApartments EnterToAllFieldsMarkAdmAssignedBrkrOneNumber()
+        [AllureStep("EnterToAllFieldsOneWashingtonSquare")]
+        public AddApartments EnterToAllFieldsOneWashingtonSquare()
         {
             WaitUntil.CustomElementIsVisible(FieldInputUnitNumber);
-            InputGeneral.InputFunctionWithClear(FieldInputUnitNumber, apartment.UnitNumber.UnitNumberMarkAdmAssignedRoleBrkr);
+            InputGeneral.InputFunctionWithClear(FieldInputUnitNumber, demo.UnitBasicData.UnitNumberOneNumberStatic);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputBedrooms, apartment.Bedrooms.OneNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputBedrooms, demo.UnitBasicData.BedroomsOneNumber);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputHalfBedrooms, apartment.HalfBedrooms.OneNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputHalfBedrooms, demo.UnitBasicData.HalfBedroomsOne);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputBathrooms, apartment.Bathrooms.OneNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputBathrooms, demo.UnitBasicData.BathroomsOneNumber);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputHalfBathrooms, apartment.HalfBathrooms.OneNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputHalfBathrooms, demo.UnitBasicData.HalfBathroomsOne);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputSqFoot, apartment.SqFoot.OneNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputSqFoot, demo.UnitBasicData.SqFootOneNubmer);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, apartment.LeasePrice.OneNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, demo.UnitBasicData.LeasePriceOneNumber);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputSecurityDeposit, apartment.SecurityDeposit.OneNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputSecurityDeposit, demo.UnitBasicData.SecurityDepositOneNumber);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputMonthlyRentsPrePayment, apartment.MonthlyRentsPrePayment.OneNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthlyRentsPrePayment, demo.UnitBasicData.MonthlyRentsPrePaymentOne);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputFloor, apartment.Floor.OneNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputFloor, demo.UnitBasicData.FloorOneNumber);
 
             return this;
         }
 
-        [AllureStep("EnterToAllFieldsBrokerAssignedBrkrFourNumber")]
-        public AddApartments EnterToAllFieldsBrokerAssignedBrkrFourNumber()
+        [AllureStep("EnterToAllFieldsThirtyDashThirtyNineCrownSt")]
+        public AddApartments EnterToAllFieldsThirtyDashThirtyNineCrownSt()
         {
             WaitUntil.CustomElementIsVisible(FieldInputUnitNumber);
-            InputGeneral.InputFunctionWithClear(FieldInputUnitNumber, apartment.UnitNumber.UnitNumberBrokerAssignedRoleBrkr);
+            InputGeneral.InputFunctionWithClear(FieldInputUnitNumber, demo.UnitBasicData.UnitNumberTwoNumbersStatic);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputBedrooms, apartment.Bedrooms.FourNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputBedrooms, demo.UnitBasicData.BedroomsTwoNumbers);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputHalfBedrooms, apartment.HalfBedrooms.FourNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputHalfBedrooms, demo.UnitBasicData.HalfBedroomsTwo);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputBathrooms, apartment.Bathrooms.FourNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputBathrooms, demo.UnitBasicData.BathroomsTwoNumbers);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputHalfBathrooms, apartment.HalfBathrooms.FourNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputHalfBathrooms, demo.UnitBasicData.HalfBathroomsTwo);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputSqFoot, apartment.SqFoot.FourNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputSqFoot, demo.UnitBasicData.SqFootFourNubmers);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, apartment.LeasePrice.FourNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, demo.UnitBasicData.LeasePriceFourNumbers);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputSecurityDeposit, apartment.SecurityDeposit.FourNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputSecurityDeposit, demo.UnitBasicData.SecurityDepositFourNumbers);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputMonthlyRentsPrePayment, apartment.MonthlyRentsPrePayment.OneNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthlyRentsPrePayment, demo.UnitBasicData.MonthlyRentsPrePaymentTwo);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputFloor, apartment.Floor.TwoNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputFloor, demo.UnitBasicData.FloorTwoNumbers);
 
             return this;
         }
 
-        [AllureStep("EnterMandatoryFieldsMarkAdmAssignedAgBrkr")]
-        public AddApartments EnterMandatoryFieldsMarkAdmAssignedAgBrkr()
+        [AllureStep("EnterMandatoryFieldsNineNineNineEightSaintJohnsonPlace")]
+        public AddApartments EnterMandatoryFieldsNineNineNineEightSaintJohnsonPlace()
         {
             WaitUntil.CustomElementIsVisible(FieldInputUnitNumber);
-            InputGeneral.InputFunctionWithClear(FieldInputUnitNumber, apartment.UnitNumber.UnitNumberMarkAdmAssignedRoleAgntBrkr);
+            InputGeneral.InputFunctionWithClear(FieldInputUnitNumber, demo.UnitBasicData.UnitNumberFourNumbersStatic);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputBedrooms, apartment.Bedrooms.TwoNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputBedrooms, demo.UnitBasicData.BedroomsTwoNumbers);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputBathrooms, apartment.Bathrooms.TwoNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputBathrooms, demo.UnitBasicData.BathroomsOneNumber);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, apartment.LeasePrice.TwoNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, demo.UnitBasicData.LeasePriceTwoNumbers);
             WaitUntil.WaitSomeInterval(100);
 
             return this;

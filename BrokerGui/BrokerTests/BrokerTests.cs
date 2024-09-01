@@ -581,7 +581,7 @@ namespace BrokerGuiTests
             Pages.AddApartments
                 .VerifyTitleAddApartmentsPage()
                 .SelectBuildingNameBrokerForBroker()
-                .EnterToAllFieldsBrokerAssignedBrkrFourNumber()
+                .EnterToAllFieldsThirtyDashThirtyNineCrownSt()
                 //.SelectCurrentDateAvailableFrom()
                 .SelectStatusApplicationSubmitted()
                 .SelectAgent()
