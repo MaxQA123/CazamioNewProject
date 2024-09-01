@@ -13,6 +13,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
     {
         Building building = Building.Generate();
         Apartment apartment = new Apartment().Generate();
+        Demo demo = Demo.Generate();
 
         [AllureStep("ClickButtonAddBuilding")]
         public ListOfBuildings ClickButtonAddBuilding()
@@ -25,26 +26,26 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
             return this;
         }
 
-        [AllureStep("SearchBuildingMarkAdmBroker")]
-        public ListOfBuildings SearchBuildingMarkAdmBroker()
+        [AllureStep("SearchBuildingOneWashingtonSquare")]
+        public ListOfBuildings SearchBuildingOneWashingtonSquare()
         {
             WaitUntil.CustomElementIsVisible(LoaderHidden, 10);
             WaitUntil.WaitSomeInterval(3000);
             WaitUntil.CustomElementIsVisible(FieldInputSearch);
             WaitUntil.CustomElementIsClickable(FieldInputSearch);
-            InputGeneral.InputFunctionWithClear(FieldInputSearch, apartment.BuildingShortAddress.MarkAdmAssignedBroker);
+            InputGeneral.InputFunctionWithClear(FieldInputSearch, demo.BuildingShortAddress.OneWashingtonSquare);
 
             return this;
         }
 
-        [AllureStep("SearchBuildingMarkAdmAgent")]
-        public ListOfBuildings SearchBuildingMarkAdmAgent()
+        [AllureStep("SearchNineNineNineEightSaintJohnsonPlace")]
+        public ListOfBuildings SearchNineNineNineEightSaintJohnsonPlace()
         {
             WaitUntil.CustomElementIsVisible(LoaderHidden, 10);
             WaitUntil.WaitSomeInterval(10000);
             WaitUntil.CustomElementIsVisible(FieldInputSearch);
             WaitUntil.CustomElementIsClickable(FieldInputSearch);
-            InputGeneral.InputFunctionWithClear(FieldInputSearch, apartment.BuildingShortAddress.MarkAdmAssignedAgent);
+            InputGeneral.InputFunctionWithClear(FieldInputSearch, demo.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace);
 
             return this;
         }

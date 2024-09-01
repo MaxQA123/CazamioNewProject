@@ -163,14 +163,14 @@ namespace CazamioNewProject.Objects
             return new SaintJohnsonPlInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(5) + " " + "Saint Johnson Place",
-                NumberNameAddressStatic = "9996 Saint Johnson Place",
-                NumberAddress = "9996",
+                NumberNameAddressStatic = "9998 Saint Johnson Place",
+                NumberAddress = "9998",
                 AddressName = "Saint Johnson Place",
                 City = "Brooklyn",
                 State = "NY",
                 Zip = "11213",
                 Neighborhood = "Crown Heights",
-                BuildingName = "9996 Saint Johnson Place AGENT QA-Building Name (12345) (*&^%)",
+                BuildingName = "9998 Saint Johnson Place AGENT QA-Building Name (12345) (*&^%)",
                 LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
             };
         }
@@ -180,14 +180,14 @@ namespace CazamioNewProject.Objects
             return new WashingtonSquareInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(4) + " " + "Washington Square",
-                NumberNameAddressStatic = "7 Washington Square",
-                NumberAddress = "7",
+                NumberNameAddressStatic = "1 Washington Square",
+                NumberAddress = "1",
                 AddressName = "Washington Square",
                 City = "New York",
                 State = "NY",
                 Zip = "10012",
                 Neighborhood = "Manhattan",
-                BuildingName = "7 Washington Square Broker QA-Building Name (12345) (09876) (*&^%)",
+                BuildingName = "1 Washington Square Broker QA-Building Name (12345) (09876) (*&^%)",
                 LlcName = "LLC Name QA Broker (12345) (09876) (*&^%)",
             };
         }
@@ -197,14 +197,14 @@ namespace CazamioNewProject.Objects
             return new CrownStInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(3) + " " + "Crown St",
-                NumberNameAddressStatic = "40-49 Crown St",
-                NumberAddress = "40-49",
+                NumberNameAddressStatic = "30-39 Crown St",
+                NumberAddress = "30-39",
                 AddressName = "Crown St",
                 City = "Brooklyn",
                 State = "NY",
                 Zip = "11225",
                 Neighborhood = "Crown Heights",
-                BuildingName = "40-49 Crown St Broker QA-Building Name (12345) (09876) (*&^%)",
+                BuildingName = "30-39 Crown St Broker QA-Building Name (12345) (09876) (*&^%)",
                 LlcName = "LLC Name QA Broker (12345) (09876) (*&^%)",
             };
         }
@@ -214,14 +214,14 @@ namespace CazamioNewProject.Objects
             return new AlbermaleRdInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(2) + " " + "Albermale Rd",
-                NumberNameAddressStatic = "100A Albermale Rd",
-                NumberAddress = "100A",
+                NumberNameAddressStatic = "9A Albermale Rd",
+                NumberAddress = "9A",
                 AddressName = "Albermale Rd",
                 City = "Brooklyn",
                 State = "NY",
                 Zip = "11226",
                 Neighborhood = "East Flatbush",
-                BuildingName = "100A Albermale Rd AGENT QA-Building Name (12345) (*&^%)",
+                BuildingName = "9A Albermale Rd AGENT QA-Building Name (12345) (*&^%)",
                 LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
             };
         }
@@ -231,14 +231,14 @@ namespace CazamioNewProject.Objects
             return new East51stStreetPedestrianCrossingInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(1) + " " + "East 51st Street Pedestrian Crossing",
-                NumberNameAddressStatic = "100-109 East 51st Street Pedestrian Crossing",
-                NumberAddress = "100-109",
+                NumberNameAddressStatic = "777W East 51st Street Pedestrian Crossing",
+                NumberAddress = "777W",
                 AddressName = "East 51st Street Pedestrian Crossing",
                 City = "New York",
                 State = "NY",
                 Zip = "10022",
                 Neighborhood = "Manhattan",
-                BuildingName = "100-109 East 51st Street Pedestrian Crossing AGENT QA-Building Name (12345) (*&^%)",
+                BuildingName = "777W East 51st Street Pedestrian Crossing AGENT QA-Building Name (12345) (*&^%)",
                 LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
             };
         }

@@ -113,7 +113,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         public AddApartments EnterUnitNumber()
         {
             WaitUntil.CustomElementIsVisible(FieldInputUnitNumber);
-            InputGeneral.InputFunctionWithClear(FieldInputUnitNumber, apartment.UnitNumber.UnitNumberBrokerAssignedRoleBrkr);
+            InputGeneral.InputFunctionWithClear(FieldInputUnitNumber, demo.UnitBasicData.UnitNumberOneNumberRandom);
 
             return this;
         }

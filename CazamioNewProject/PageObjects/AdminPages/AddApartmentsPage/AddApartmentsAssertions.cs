@@ -40,9 +40,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [AllureStep("VerifyMonthlyRentsPrePayment")]
         public AddApartments VerifyMonthlyRentsPrePayment(string getMonthlyRentsPrePayment)
         {
-            Assert.AreEqual(getMonthlyRentsPrePayment, apartment.MonthlyRentsPrePayment.OneNumber);
+            Assert.AreEqual(getMonthlyRentsPrePayment, demo.UnitBasicData.MonthlyRentsPrePaymentOne);
 
-            Console.WriteLine($"MonthlyRentsPrePayment AR: {getMonthlyRentsPrePayment} = {apartment.MonthlyRentsPrePayment.OneNumber} :ER MonthlyRentsPrePayment");
+            Console.WriteLine($"MonthlyRentsPrePayment AR: {getMonthlyRentsPrePayment} = {demo.UnitBasicData.MonthlyRentsPrePaymentOne} :ER MonthlyRentsPrePayment");
 
             return this;
         }

@@ -515,7 +515,7 @@ namespace MarketplaceAdminGuiTest
 
             //All the fields filled in, Cardknox
             //All tabs filled in
-            //Washington Square 23455
+            //Washington Square
 
             #endregion
 
@@ -769,7 +769,7 @@ namespace MarketplaceAdminGuiTest
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
-                .SearchBuildingMarkAdmBroker();
+                .SearchBuildingOneWashingtonSquare();
             Pages.ListOfBuildings
                 .SelectItemFirst();
             Pages.BuildingView
@@ -882,6 +882,7 @@ namespace MarketplaceAdminGuiTest
             #region Test data
 
             Apartment apartment = new Apartment().Generate();
+            Demo demo = Demo.Generate();
 
             #endregion
 
@@ -901,7 +902,7 @@ namespace MarketplaceAdminGuiTest
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
-                .SearchBuildingMarkAdmAgent();
+                .SearchNineNineNineEightSaintJohnsonPlace();
             Pages.ListOfBuildings
                 .SelectItemFirst();
             Pages.BuildingView
@@ -911,7 +912,7 @@ namespace MarketplaceAdminGuiTest
             string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
 
             Pages.BuildingView
-                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.MarkAdmAssignedAgent)
+                .VerifyBuildingAddress(getAddressBuildingViewActual, demo.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
             Pages.BuildingView
@@ -953,7 +954,6 @@ namespace MarketplaceAdminGuiTest
                 //Add assertion
                 .ClickTabImages()
                 .ClickButtonSaveApartment();
-
 
             #endregion
 

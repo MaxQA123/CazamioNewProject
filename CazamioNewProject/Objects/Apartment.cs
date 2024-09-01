@@ -4,16 +4,6 @@ namespace CazamioNewProject.Objects
 {
     public class Apartment
     {
-        public UnitNumberInfo UnitNumber { get; set; }
-        public BedroomsInfo Bedrooms { get; set; }
-        public HalfBedroomsInfo HalfBedrooms { get; set; }
-        public BathroomsInfo Bathrooms { get; set; }
-        public HalfBathroomsInfo HalfBathrooms { get; set; }
-        public SqFootInfo SqFoot { get; set; }
-        public LeasePriceInfo LeasePrice { get; set; }
-        public SecurityDepositInfo SecurityDeposit { get; set; }
-        public MonthlyRentsPrePaymentInfo MonthlyRentsPrePayment { get; set; }
-        public FloorInfo Floor { get; set; }
         public ApartmentStatusInfo ApartmentStatus { get; set; }
         public ApartmentTypeInfo ApartmentType { get; set; }
         public string ApartmentHoldDeposit { get; set; }
@@ -27,84 +17,6 @@ namespace CazamioNewProject.Objects
         public FreeStuffInfo FreeStuff { get; set; }
         public AdditionalInfoInfo AdditionalInfo { get; set; }
         public LinksToVideosInfo LinksToVideos { get; set; }
-
-        public class UnitNumberInfo
-        {
-            public string UnitNumberMarkAdmAssignedRoleAgntBrkr { get; set; }
-            public string UnitNumberMarkAdmAssignedRoleBrkr { get; set; }
-            public string UnitNumberBrokerAssignedRoleAgntBrkr { get; set; }
-            public string UnitNumberBrokerAssignedRoleBrkr { get; set; }
-            public string UnitNumberAgntBrkrAssignedRoleAgntBrkr { get; set; }
-        }
-
-        public class BedroomsInfo
-        {
-            public string OneNumber { get; set; }
-            public string TwoNumber { get; set; }
-            public string ThreeNumber { get; set; }
-            public string FourNumber { get; set; }
-        }
-
-        public class HalfBedroomsInfo
-        {
-            public string OneNumber { get; set; }
-            public string TwoNumber { get; set; }
-            public string ThreeNumber { get; set; }
-            public string FourNumber { get; set; }
-        }
-
-        public class BathroomsInfo
-        {
-            public string OneNumber { get; set; }
-            public string TwoNumber { get; set; }
-            public string ThreeNumber { get; set; }
-            public string FourNumber { get; set; }
-        }
-
-        public class HalfBathroomsInfo
-        {
-            public string OneNumber { get; set; }
-            public string TwoNumber { get; set; }
-            public string ThreeNumber { get; set; }
-            public string FourNumber { get; set; }
-        }
-
-        public class SqFootInfo
-        {
-            public string OneNumber { get; set; }
-            public string TwoNumber { get; set; }
-            public string ThreeNumber { get; set; }
-            public string FourNumber { get; set; }
-        }
-
-        public class LeasePriceInfo
-        {
-            public string OneNumber { get; set; }
-            public string TwoNumber { get; set; }
-            public string ThreeNumber { get; set; }
-            public string FourNumber { get; set; }
-        }
-
-        public class SecurityDepositInfo
-        {
-            public string OneNumber { get; set; }
-            public string TwoNumber { get; set; }
-            public string ThreeNumber { get; set; }
-            public string FourNumber { get; set; }
-        }
-
-        public class MonthlyRentsPrePaymentInfo
-        {
-            public string OneNumber { get; set; }
-            public string TwoNumber { get; set; }
-        }
-
-        public class FloorInfo
-        {
-            public string OneNumber { get; set; }
-            public string TwoNumber { get; set; }
-            public string ThreeNumber { get; set; }
-        }
 
         public class ApartmentStatusInfo
         {
@@ -198,53 +110,6 @@ namespace CazamioNewProject.Objects
 
         public Apartment Generate()
         {
-            string buildingShortAddressMarkAdmAssignedRoleBrkr = "1 Washington Square";
-            string unitNumberMarkAdmAssignedRoleBrkr = "9998";
-
-            string buildingShortAddressMarkAdmAssignedRoleAgBrkr = "9998 Saint Johnson Place";
-            string unitNumberMarkAdmAssignedRoleAgntBrkr = "1";
-
-            string buildingShortAddressBrokerAssignedRoleBrkr = "30-39 Crown St";
-            string unitNumberBrokerAssignedRoleBrkr = "1";
-
-            string buildingShortAddressBrokerAssignedRoleAgBrkr = "";
-            string unitNumberBrokerAssignedRoleAgntBrkr = "";
-
-            string unitNumberAgntBrkrAssignedRoleAgntBrkr = "1-9";
-
-            string bedroomsOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
-            string bedroomsTwoNumber = GenerateRandomData.RandomNumberWithoutZero(2);
-            string bedroomsThreeNumber = GenerateRandomData.RandomNumberWithoutZero(3);
-            string bedroomsFourNumber = GenerateRandomData.RandomNumberWithoutZero(4);
-            string halfBedroomsOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
-            string halfBedroomsTwoNumber = GenerateRandomData.RandomNumberWithoutZero(2);
-            string halfBedroomsThreeNumber = GenerateRandomData.RandomNumberWithoutZero(3);
-            string halfBedroomsFourNumber = GenerateRandomData.RandomNumberWithoutZero(4);
-            string bathroomsOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
-            string bathroomsTwoNumber = GenerateRandomData.RandomNumberWithoutZero(2);
-            string bathroomsThreeNumber = GenerateRandomData.RandomNumberWithoutZero(3);
-            string bathroomsFourNumber = GenerateRandomData.RandomNumberWithoutZero(4);
-            string halfBathroomsOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
-            string halfBathroomsTwoNumber = GenerateRandomData.RandomNumberWithoutZero(2);
-            string halfBathroomsTheeNumber = GenerateRandomData.RandomNumberWithoutZero(3);
-            string halfBathroomsFourNumber = GenerateRandomData.RandomNumberWithoutZero(4);
-            string sqFootOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
-            string sqFootTwoNumber = GenerateRandomData.RandomNumberWithoutZero(2);
-            string sqFootThreeNumber = GenerateRandomData.RandomNumberWithoutZero(3);
-            string sqFootFifteenNumber = GenerateRandomData.RandomNumberWithoutZero(4);
-            string leasePriceOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
-            string leasePriceTwoNumber = GenerateRandomData.RandomNumberWithoutZero(2);
-            string leasePriceThreeNumber = GenerateRandomData.RandomNumberWithoutZero(3);
-            string leasePriceFourNumber = GenerateRandomData.RandomNumberWithoutZero(4);
-            string securityDepositOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
-            string securityDepositTwoNumber = GenerateRandomData.RandomNumberWithoutZero(2);
-            string securityDepositThreeNumber = GenerateRandomData.RandomNumberWithoutZero(3);
-            string securityDepositFourNumber = GenerateRandomData.RandomNumberWithoutZero(4);
-            string monthlyRentsPrePaymentOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
-            string monthlyRentsPrePaymentTwoNumber = GenerateRandomData.RandomNumberWithoutZero(2);
-            string floorOneNumber = GenerateRandomData.RandomNumberWithoutZero(1);
-            string floorTwoNumber = GenerateRandomData.RandomNumberWithoutZero(2);
-            string floorThreeNumber = GenerateRandomData.RandomNumberWithoutZero(3);
             string itemOffMarket = "Off market";
             string itemOccupied = "Occupied";
             string itemVacant = "Vacant";
@@ -294,74 +159,6 @@ namespace CazamioNewProject.Objects
 
             var apartment = new Apartment()
             {
-                UnitNumber = new UnitNumberInfo
-                {
-                    UnitNumberMarkAdmAssignedRoleAgntBrkr = unitNumberMarkAdmAssignedRoleAgntBrkr,
-                    UnitNumberMarkAdmAssignedRoleBrkr = unitNumberMarkAdmAssignedRoleBrkr,
-                    UnitNumberBrokerAssignedRoleAgntBrkr = unitNumberBrokerAssignedRoleAgntBrkr,
-                    UnitNumberBrokerAssignedRoleBrkr = unitNumberBrokerAssignedRoleBrkr,
-                    UnitNumberAgntBrkrAssignedRoleAgntBrkr = unitNumberAgntBrkrAssignedRoleAgntBrkr
-                },
-                Bedrooms = new BedroomsInfo
-                {
-                    OneNumber = bedroomsOneNumber,
-                    TwoNumber = bedroomsTwoNumber,
-                    ThreeNumber = bedroomsThreeNumber,
-                    FourNumber = bedroomsFourNumber
-                },
-                HalfBedrooms = new HalfBedroomsInfo
-                {
-                    OneNumber = halfBedroomsOneNumber,
-                    TwoNumber = halfBedroomsTwoNumber,
-                    ThreeNumber = halfBedroomsThreeNumber,
-                    FourNumber  = halfBedroomsFourNumber
-                },
-                Bathrooms = new BathroomsInfo
-                {
-                    OneNumber = bathroomsOneNumber,
-                    TwoNumber = bathroomsTwoNumber,
-                    ThreeNumber = bathroomsThreeNumber,
-                    FourNumber = bathroomsFourNumber
-                },
-                HalfBathrooms = new HalfBathroomsInfo
-                {
-                    OneNumber = halfBathroomsOneNumber,
-                    TwoNumber = halfBathroomsTwoNumber,
-                    ThreeNumber = halfBathroomsTheeNumber,
-                    FourNumber = halfBathroomsFourNumber
-                },
-                SqFoot = new SqFootInfo
-                {
-                    OneNumber = sqFootOneNumber,
-                    TwoNumber = sqFootTwoNumber,
-                    ThreeNumber = sqFootThreeNumber,
-                    FourNumber = sqFootFifteenNumber
-                },
-                LeasePrice = new LeasePriceInfo
-                {
-                    OneNumber = leasePriceOneNumber,
-                    TwoNumber = leasePriceTwoNumber,
-                    ThreeNumber = leasePriceThreeNumber,
-                    FourNumber = leasePriceFourNumber
-                },
-                SecurityDeposit = new SecurityDepositInfo
-                {
-                    OneNumber = securityDepositOneNumber,
-                    TwoNumber = securityDepositTwoNumber,
-                    ThreeNumber = securityDepositThreeNumber,
-                    FourNumber = securityDepositFourNumber
-                },
-                MonthlyRentsPrePayment = new MonthlyRentsPrePaymentInfo
-                {
-                    OneNumber = monthlyRentsPrePaymentOneNumber,
-                    TwoNumber = monthlyRentsPrePaymentTwoNumber
-                },
-                Floor = new FloorInfo
-                {
-                    OneNumber = floorOneNumber,
-                    TwoNumber = floorTwoNumber,
-                    ThreeNumber = floorThreeNumber
-                },
                 ApartmentStatus = new ApartmentStatusInfo
                 {
                     OffMarket = itemOffMarket,
@@ -388,13 +185,6 @@ namespace CazamioNewProject.Objects
                     DefaultRentalTerms = defaultRentalTerms
                 },
                 TextLong = textLong,
-                BuildingShortAddress = new BuildingShortAddressInfo
-                {
-                    MarkAdmAssignedBroker = buildingShortAddressMarkAdmAssignedRoleBrkr,
-                    MarkAdmAssignedAgent = buildingShortAddressMarkAdmAssignedRoleAgBrkr,
-                    BrokerAssignedBroker = buildingShortAddressBrokerAssignedRoleBrkr,
-                    BrokerAssignedAgent = buildingShortAddressBrokerAssignedRoleAgBrkr
-                },
                 TextVariable = new TextVariableInfo
                 {
                     TextLongDescription = shortDescription + " " + textLong,

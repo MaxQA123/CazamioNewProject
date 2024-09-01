@@ -4,6 +4,7 @@ namespace CazamioNewProject.Objects
 {
     public class Demo
     {
+        public BuildingShortAddressInfo BuildingShortAddress { get; set; }
         public UnitBasicDataInfo UnitBasicData { get; set; }
 
         public static Demo Generate()
@@ -11,7 +12,17 @@ namespace CazamioNewProject.Objects
             return new Demo
             {
                 UnitBasicData = CreateUnitBasicDataInfo(),
+                BuildingShortAddress = CreateBuildingShortAddressInfo(),
             };
+        }
+
+        public class BuildingShortAddressInfo
+        {
+            public string OneWashingtonSquare { get; set; }
+            public string NineNineNineEightSaintJohnsonPlace { get; set; }
+            public string ThirtyDashTrirtyNineCrownSt { get; set; }
+            public string OneA1AAlbermaleRd { get; set; }
+            public string OneOneOneAEastFiftyOneStStreetPedestrianCrossing { get; set; }
         }
 
         public class UnitBasicDataInfo
@@ -56,20 +67,32 @@ namespace CazamioNewProject.Objects
             public string ApartmentHoldDepositStatic { get; set; }
         }
 
+        private static BuildingShortAddressInfo CreateBuildingShortAddressInfo()
+        {
+            return new BuildingShortAddressInfo
+            {
+                OneWashingtonSquare = "1 Washington Square",
+                NineNineNineEightSaintJohnsonPlace = "9998 Saint Johnson Place",
+                ThirtyDashTrirtyNineCrownSt = "30-39 Crown St",
+                OneA1AAlbermaleRd = "1A Albermale Rd",
+                OneOneOneAEastFiftyOneStStreetPedestrianCrossing = "111A East 51st Street Pedestrian Crossing",
+            };
+        }
+
         private static UnitBasicDataInfo CreateUnitBasicDataInfo()
         {
             return new UnitBasicDataInfo
             {
                 UnitNumberOneNumberRandom = GenerateRandomData.RandomNumberWithoutZero(1),
-                UnitNumberOneNumberStatic = "",
+                UnitNumberOneNumberStatic = "1",
                 UnitNumberTwoNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(2),
-                UnitNumberTwoNumbersStatic = "",
+                UnitNumberTwoNumbersStatic = "11",
                 UnitNumberFourNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(4),
-                UnitNumberFourNumbersStatic = "",
+                UnitNumberFourNumbersStatic = "9999",
                 UnitNumberMaxNumbersAlphabetRandom = GenerateRandomData.RandomNumberWithoutZero(1) + " " + GenerateRandomData.RandomAlphabet(1) + " " + GenerateRandomData.RandomNumberWithoutZero(1) + " " + GenerateRandomData.RandomAlphabet(1),
-                UnitNumberMaxNumbersAlphabetStatic = "",
+                UnitNumberMaxNumbersAlphabetStatic = "11AA",
                 UnitNumberFourAlphabetRandom = GenerateRandomData.RandomAlphabet(4),
-                UnitNumberFourAlphabetStatic = "",
+                UnitNumberFourAlphabetStatic = "ABCD",
                 BedroomsOneNumber = GenerateRandomData.RandomNumberWithoutZero(1),
                 BedroomsTwoNumbers = GenerateRandomData.RandomNumberWithoutZero(2),
                 HalfBedroomsOne = "1",
