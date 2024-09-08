@@ -295,9 +295,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         public AddApartments EnterDescriptionInternalNotes()
         {
             WaitUntil.CustomElementIsVisible(FieldInputDescription);
-            InputGeneral.InputFunctionWithClear(FieldInputDescription, apartment.TextVariable.TextLongDescription);
+            InputGeneral.InputFunctionWithClear(FieldInputDescription, demo.DescriptionsInternalNotes.DescriptionLong);
             WaitUntil.CustomElementIsVisible(FieldInputInternalNotes);
-            InputGeneral.InputFunctionWithClear(FieldInputInternalNotes, apartment.TextVariable.TextLongInternalNotes);
+            InputGeneral.InputFunctionWithClear(FieldInputInternalNotes, demo.DescriptionsInternalNotes.InternalNotesLong);
 
             return this;
         }
@@ -372,7 +372,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithoutClear(FieldInputPinCodeForNextEnter, GenerateRandomData.RandomNumberWithoutZero(1));
             KeyBoardActions.ClickSpaceButton();
-            InputGeneral.InputFunctionWithClear(FieldInputCustomNoteForAccess, apartment.TextVariable.TextLongPincode);
+            InputGeneral.InputFunctionWithClear(FieldInputCustomNoteForAccess, demo.AccessLocks.PincodeLongText);
             WaitUntil.WaitSomeInterval(100);
             ButtonSelectImageForAccess.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_APARTMENT_LOCK_PIN_CODE));
             WaitUntil.SuccessCustomElementIsVisible(MessageSuccessUploadImageForAccess);
@@ -391,7 +391,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.WaitSomeInterval(1000);
             Button.Click(ItemNote);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputCustomNoteForAccess, apartment.TextVariable.TextLongNote);
+            InputGeneral.InputFunctionWithClear(FieldInputCustomNoteForAccess, demo.AccessLocks.NoteLongText);
             WaitUntil.WaitSomeInterval(100);
             ButtonSelectImageForAccess.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_APARTMENT_LOCK_NOTE));
             WaitUntil.SuccessCustomElementIsVisible(MessageSuccessUploadImageForAccess);
@@ -416,7 +416,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputPhoneNumber, GenerateRandomData.RandomPhoneNumber(10));
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputNote, apartment.TextVariable.TextLongExistingOccupant);
+            InputGeneral.InputFunctionWithClear(FieldInputNote, demo.AccessLocks.ExistingOccupantLongText);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSaveForLock);
 
@@ -432,15 +432,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         {
             WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
             WaitUntil.CustomElementIsClickable(FieldInputNameSpecials);
-            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, apartment.Concessions.NameFirst);
+            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, demo.SettingsConcessions.NameFirst);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, apartment.Concessions.OneMonthYearFree);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, demo.SettingsConcessions.OneMonthYearFree);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, apartment.Concessions.TwelveMonthsLeaseTerms);
+            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, demo.SettingsConcessions.TwelveMonthsLeaseTerms);
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();
-            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, apartment.AdditionalInfo.ShortInfo);
+            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, demo.SettingsConcessions.AdditionalInfoLong);
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();
@@ -505,16 +505,16 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.ElementIsClickable(CheckBoxIsActive);
             Button.Click(CheckBoxIsActive);
             WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
-            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, apartment.Concessions.NameSecond);
+            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, demo.SettingsConcessions.NameFirst);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, apartment.Concessions.TwoMonthsFree);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, demo.SettingsConcessions.TwoMonthsFree);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, apartment.Concessions.OneYearLeaseTerms);
+            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, demo.SettingsConcessions.OneMonthYearFree);
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();
-            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, apartment.AdditionalInfo.LongInfo);
+            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, demo.SettingsConcessions.AdditionalInfoShort);
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();
@@ -543,7 +543,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         {
             WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
             WaitUntil.CustomElementIsClickable(FieldInputNameSpecials);
-            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, apartment.FreeStuff.NameFirst);
+            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, demo.SettingsFreeStuff.NameFirst);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(FieldInputSelectItemsFreeStuff);
             WaitUntil.WaitSomeInterval(100);
@@ -616,7 +616,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.ElementIsClickable(CheckBoxIsActive);
             Button.Click(CheckBoxIsActive);
             WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
-            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, apartment.FreeStuff.NameSecond);
+            InputGeneral.InputFunctionWithClear(FieldInputNameSpecials, demo.SettingsFreeStuff.NameFirst);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(FieldInputSelectItemsFreeStuff);
             WaitUntil.WaitSomeInterval(100);

@@ -178,7 +178,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         public AddApartments EnterHoldDepositOneThousand()
         {
             WaitUntil.CustomElementIsVisible(FieldInputApartmentHoldDeposit);
-            InputGeneral.InputFunctionWithClear(FieldInputApartmentHoldDeposit, apartment.HoldDeposit.OneThousand);
+            InputGeneral.InputFunctionWithClear(FieldInputApartmentHoldDeposit, demo.MySpaceAmountPayments.HoldDepositStatic);
 
             return this;
         }

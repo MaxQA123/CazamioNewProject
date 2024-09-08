@@ -60,9 +60,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [AllureStep("VerifyApartmentTypeAddApartmentsPage")]
         public AddApartments VerifyApartmentTypeAddApartmentsPage(string getApartmentType)
         {
-            Assert.AreEqual(getApartmentType, apartment.ApartmentType.MultiFamily);
+            Assert.AreEqual(getApartmentType, demo.ApartmentType.MultiFamily);
 
-            Console.WriteLine($"Apartment Type AR: {getApartmentType} = {apartment.ApartmentType.MultiFamily} :ER Apartment Type");
+            Console.WriteLine($"Apartment Type AR: {getApartmentType} = {demo.ApartmentType.MultiFamily} :ER Apartment Type");
 
             return this;
         }
