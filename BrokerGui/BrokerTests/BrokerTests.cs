@@ -580,7 +580,7 @@ namespace BrokerGuiTests
 
             Pages.AddApartments
                 .VerifyTitleAddApartmentsPage()
-                .SelectBuildingNameBrokerForBroker()
+                .SelectBuildingThirtyDashTrirtyNineCrownSt()
                 .EnterToAllFieldsThirtyDashThirtyNineCrownSt()
                 //.SelectCurrentDateAvailableFrom()
                 .SelectStatusApplicationSubmitted()

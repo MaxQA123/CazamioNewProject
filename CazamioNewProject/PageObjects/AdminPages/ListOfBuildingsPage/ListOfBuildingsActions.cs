@@ -12,8 +12,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
     public partial class ListOfBuildings
     {
         Building building = Building.Generate();
-        Apartment apartment = new Apartment().Generate();
-        Demo demo = Demo.Generate();
+        Apartment apartment = Apartment.Generate();
 
         [AllureStep("ClickButtonAddBuilding")]
         public ListOfBuildings ClickButtonAddBuilding()
@@ -33,7 +32,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
             WaitUntil.WaitSomeInterval(3000);
             WaitUntil.CustomElementIsVisible(FieldInputSearch);
             WaitUntil.CustomElementIsClickable(FieldInputSearch);
-            InputGeneral.InputFunctionWithClear(FieldInputSearch, demo.BuildingShortAddress.OneWashingtonSquare);
+            InputGeneral.InputFunctionWithClear(FieldInputSearch, apartment.BuildingShortAddress.OneWashingtonSquare);
 
             return this;
         }
@@ -45,7 +44,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
             WaitUntil.WaitSomeInterval(10000);
             WaitUntil.CustomElementIsVisible(FieldInputSearch);
             WaitUntil.CustomElementIsClickable(FieldInputSearch);
-            InputGeneral.InputFunctionWithClear(FieldInputSearch, demo.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace);
+            InputGeneral.InputFunctionWithClear(FieldInputSearch, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace);
 
             return this;
         }

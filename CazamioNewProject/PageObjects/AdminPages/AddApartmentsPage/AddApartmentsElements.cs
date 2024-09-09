@@ -45,15 +45,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return Browser._Driver.FindElement(By.XPath(xpath));
         }
 
-        public IWebElement ItemBuildingNameBrokerForBroker;
+        public IWebElement ItemBuildingThirtyDashTrirtyNineCrownSt;
 
-        public IWebElement SetItemBuildingNameBrokerForBroker()
+        public IWebElement SetItemBuildingThirtyDashTrirtyNineCrownSt()
         {
             // Создание экземпляра класса Owner
             Agent agent = new Agent().Generate();
 
             // Использование переменной экземпляра owner для построения XPath
-            var xpath = "//span[contains(text(), '" + apartment.BuildingShortAddress.BrokerAssignedBroker + "')]";
+            var xpath = "//span[contains(text(), '" + apartment.BuildingShortAddress.ThirtyDashTrirtyNineCrownSt + "')]";
 
             // Присвоение значения ItemForAutotestForBroker
             return Browser._Driver.FindElement(By.XPath(xpath));

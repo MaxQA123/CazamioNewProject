@@ -13,11 +13,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
     public partial class AddApartments
     {
         Building building = Building.Generate();
-        Apartment apartment = new Apartment().Generate();
+        Apartment apartment = Apartment.Generate();
         Agent agent = new Agent().Generate();
         RequiredDocuments requiredDocuments = new RequiredDocuments().Generate();
         TenantCreator tenantCreator = new TenantCreator().Generate();
-        Demo demo = Demo.Generate();
 
         #region Tabs
 
@@ -113,7 +112,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         public AddApartments EnterUnitNumber()
         {
             WaitUntil.CustomElementIsVisible(FieldInputUnitNumber);
-            InputGeneral.InputFunctionWithClear(FieldInputUnitNumber, demo.UnitBasicData.UnitNumberOneNumberRandom);
+            InputGeneral.InputFunctionWithClear(FieldInputUnitNumber, apartment.UnitBasicData.UnitNumberOneNumberRandom);
 
             return this;
         }
@@ -178,7 +177,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         public AddApartments EnterHoldDepositOneThousand()
         {
             WaitUntil.CustomElementIsVisible(FieldInputApartmentHoldDeposit);
-            InputGeneral.InputFunctionWithClear(FieldInputApartmentHoldDeposit, demo.MySpaceAmountPayments.HoldDepositStatic);
+            InputGeneral.InputFunctionWithClear(FieldInputApartmentHoldDeposit, apartment.MySpaceAmountPayments.HoldDepositStatic);
 
             return this;
         }

@@ -40,9 +40,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [AllureStep("VerifyMonthlyRentsPrePayment")]
         public AddApartments VerifyMonthlyRentsPrePayment(string getMonthlyRentsPrePayment)
         {
-            Assert.AreEqual(getMonthlyRentsPrePayment, demo.UnitBasicData.MonthlyRentsPrePaymentOne);
+            Assert.AreEqual(getMonthlyRentsPrePayment, apartment.UnitBasicData.MonthlyRentsPrePaymentOne);
 
-            Console.WriteLine($"MonthlyRentsPrePayment AR: {getMonthlyRentsPrePayment} = {demo.UnitBasicData.MonthlyRentsPrePaymentOne} :ER MonthlyRentsPrePayment");
+            Console.WriteLine($"MonthlyRentsPrePayment AR: {getMonthlyRentsPrePayment} = {apartment.UnitBasicData.MonthlyRentsPrePaymentOne} :ER MonthlyRentsPrePayment");
 
             return this;
         }
@@ -60,9 +60,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [AllureStep("VerifyApartmentTypeAddApartmentsPage")]
         public AddApartments VerifyApartmentTypeAddApartmentsPage(string getApartmentType)
         {
-            Assert.AreEqual(getApartmentType, demo.ApartmentType.MultiFamily);
+            Assert.AreEqual(getApartmentType, apartment.ApartmentType.MultiFamily);
 
-            Console.WriteLine($"Apartment Type AR: {getApartmentType} = {demo.ApartmentType.MultiFamily} :ER Apartment Type");
+            Console.WriteLine($"Apartment Type AR: {getApartmentType} = {apartment.ApartmentType.MultiFamily} :ER Apartment Type");
 
             return this;
         }
@@ -100,9 +100,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [AllureStep("VerifyRentalTermsAddApartmentsPage")]
         public AddApartments VerifyRentalTermsAddApartmentsPage(string getRentalTerms)
         {
-            Assert.AreEqual(getRentalTerms, apartment.RentalTerms.DefaultRentalTerms);
+            Assert.AreEqual(getRentalTerms, apartment.UnitBasicData.RentalTermsByDefault);
 
-            Console.WriteLine($"Rental Terms AR: {getRentalTerms} = {apartment.RentalTerms.DefaultRentalTerms} :ER Rental Terms");
+            Console.WriteLine($"Rental Terms AR: {getRentalTerms} = {apartment.UnitBasicData.RentalTermsByDefault} :ER Rental Terms");
 
             return this;
         }

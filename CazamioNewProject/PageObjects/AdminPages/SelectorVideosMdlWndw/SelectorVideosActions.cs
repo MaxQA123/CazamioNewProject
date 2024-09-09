@@ -9,6 +9,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.SelectorVideosMdlWndw
 {
     public partial class SelectorVideosMdlWndw
     {
-        Apartment apartment = new Apartment().Generate();
+        Apartment apartment = Apartment.Generate();
     }
 }
