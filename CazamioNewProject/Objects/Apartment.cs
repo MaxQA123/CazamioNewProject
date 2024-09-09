@@ -213,7 +213,7 @@ namespace CazamioNewProject.Objects
                 FloorTwoNumbers = GenerateRandomData.RandomNumberWithoutZero(2),
                 ApartmentHoldDepositStatic = "399",
                 RentalTermsByDefault = " 12 months ",
-                RentalTermsOneYear = "1",
+                RentalTermsOneYear = "1 year",
             };
         }
 

@@ -749,7 +749,7 @@ namespace MarketplaceAdminGuiTest
 
             #region Test data
 
-            Apartment apartment = new Apartment().Generate();
+            Apartment apartment = Apartment.Generate();
 
             #endregion
 
@@ -779,7 +779,7 @@ namespace MarketplaceAdminGuiTest
             string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
 
             Pages.BuildingView
-                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.MarkAdmAssignedBroker)
+                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneWashingtonSquare)
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
             Pages.BuildingView
@@ -881,8 +881,7 @@ namespace MarketplaceAdminGuiTest
 
             #region Test data
 
-            Apartment apartment = new Apartment().Generate();
-            Demo demo = Demo.Generate();
+            Apartment apartment = Apartment.Generate();
 
             #endregion
 
@@ -912,7 +911,7 @@ namespace MarketplaceAdminGuiTest
             string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
 
             Pages.BuildingView
-                .VerifyBuildingAddress(getAddressBuildingViewActual, demo.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
+                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
             Pages.BuildingView
