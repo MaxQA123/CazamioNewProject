@@ -802,7 +802,7 @@ namespace MarketplaceAdminGuiTest
             string getUnitNumberFromAddApartments = Pages.AddApartments.GetUnitNumber();
 
             Pages.AddApartments
-                .SelectStatusVacant()
+                //.SelectStatusVacant() By default the Vacant
                 .SelectAgent()
                 .SetFirstDayLastMonthsAvailableFrom()
                 .SelectApartmentTypeMultiFamily();

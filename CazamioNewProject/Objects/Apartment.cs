@@ -179,7 +179,7 @@ namespace CazamioNewProject.Objects
                 UnitNumberTwoNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(2),
                 UnitNumberTwoNumbersStatic = "11",
                 UnitNumberFourNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(4),
-                UnitNumberFourNumbersStatic = "9999",
+                UnitNumberFourNumbersStatic = "9998",
                 UnitNumberMaxNumbersAlphabetRandom = GenerateRandomData.RandomNumberWithoutZero(1) + " " + GenerateRandomData.RandomAlphabet(1) + " " + GenerateRandomData.RandomNumberWithoutZero(1) + " " + GenerateRandomData.RandomAlphabet(1),
                 UnitNumberMaxNumbersAlphabetStatic = "11AA",
                 UnitNumberFourAlphabetRandom = GenerateRandomData.RandomAlphabet(4),
@@ -212,7 +212,7 @@ namespace CazamioNewProject.Objects
                 FloorOneNumber = GenerateRandomData.RandomNumberWithoutZero(1),
                 FloorTwoNumbers = GenerateRandomData.RandomNumberWithoutZero(2),
                 ApartmentHoldDepositStatic = "399",
-                RentalTermsByDefault = " 12 months ",
+                RentalTermsByDefault = "12 months",
                 RentalTermsOneYear = "1 year",
             };
         }
@@ -269,7 +269,7 @@ namespace CazamioNewProject.Objects
         {
             return new AccessLocksInfo
             {
-                MainEntranceByDefaultFirstNameLock = "Main Entrance",
+                MainEntranceByDefaultFirstNameLock = "Main entrance",
                 ApartmentByDefaultSecondNameLock = "Apartment",
                 ExistingOccupantLongText = "Lorem ExistingOccupant APARTMENT 12345 (09876) *&^% $#@!. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
                 ExistingOccupantShortText = "Lorem ExistingOccupant APARTMENT 12345 (09876) *&^% $#@!",

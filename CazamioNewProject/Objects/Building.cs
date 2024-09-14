@@ -163,14 +163,14 @@ namespace CazamioNewProject.Objects
             return new SaintJohnsonPlInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(5) + " " + "Saint Johnson Place",
-                NumberNameAddressStatic = "9998 Saint Johnson Place",
-                NumberAddress = "9998",
+                NumberNameAddressStatic = "9999 Saint Johnson Place",
+                NumberAddress = "9999",
                 AddressName = "Saint Johnson Place",
                 City = "Brooklyn",
                 State = "NY",
                 Zip = "11213",
                 Neighborhood = "Crown Heights",
-                BuildingName = "9998 Saint Johnson Place AGENT QA-Building Name (12345) (*&^%)",
+                BuildingName = "AGENT QA-Building Name 9999 Saint Johnson Place (12345) (*&^%)",
                 LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
             };
         }
@@ -187,7 +187,7 @@ namespace CazamioNewProject.Objects
                 State = "NY",
                 Zip = "10012",
                 Neighborhood = "Manhattan",
-                BuildingName = "1 Washington Square Broker QA-Building Name (12345) (09876) (*&^%)",
+                BuildingName = "Broker QA-Building Name 1 Washington Square (12345) (09876) (*&^%)",
                 LlcName = "LLC Name QA Broker (12345) (09876) (*&^%)",
             };
         }
@@ -231,14 +231,14 @@ namespace CazamioNewProject.Objects
             return new East51stStreetPedestrianCrossingInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(1) + " " + "East 51st Street Pedestrian Crossing",
-                NumberNameAddressStatic = "777W East 51st Street Pedestrian Crossing",
-                NumberAddress = "777W",
+                NumberNameAddressStatic = "111A East 51st Street Pedestrian Crossing",
+                NumberAddress = "111A",
                 AddressName = "East 51st Street Pedestrian Crossing",
                 City = "New York",
                 State = "NY",
                 Zip = "10022",
                 Neighborhood = "Manhattan",
-                BuildingName = "777W East 51st Street Pedestrian Crossing AGENT QA-Building Name (12345) (*&^%)",
+                BuildingName = "QA-Building Name AGENT 111A East 51st Street Pedestrian Crossing (12345) (*&^%)",
                 LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
             };
         }
@@ -284,7 +284,7 @@ namespace CazamioNewProject.Objects
         {
             return new AccessLocksInfo
             {
-                MainEntranceByDefaultFirstNameLock = "Main Entrance",
+                MainEntranceByDefaultFirstNameLock = "Main entrance",
                 ApartmentByDefaultSecondNameLock = "Apartment",
                 PinCodeTextLorem = "Lorem PinCode Building (12345) (&%$#@!)",
                 NoteTextLorem = "Lorem NOTE Building (12345) (&%$#@!)",

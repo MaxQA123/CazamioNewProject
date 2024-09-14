@@ -1,0 +1,313 @@
+{
+  "uuid": "4e256368-1e9b-4650-8932-b875d10e4f07-tr-0-1002",
+  "historyId": "AgentGuiTests.TestsBaseGui.VerifySidebar",
+  "fullName": "AgentGuiTests.TestsBaseGui.VerifySidebar",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AgentGuiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifySidebar"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Agent"
+    },
+    {
+      "name": "subSuite",
+      "value": "VerifySidebar"
+    }
+  ],
+  "links": [],
+  "name": "VerifySidebar",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected: True\r\n  But was:  False\r\n",
+    "trace": "   at CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage.ListOfBuildings.__a$_around_VerifyTitleListOfBuildings_100663624_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfBuildingsPage\\ListOfBuildingsAssertions.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage.ListOfBuildings.__a$_around_VerifyTitleListOfBuildings_100663624_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage.ListOfBuildings.__a$_around_VerifyTitleListOfBuildings_100663624_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage.ListOfBuildings.VerifyTitleListOfBuildings()\r\n   at AgentGuiTests.TestsBaseGui.VerifySidebar() in C:\\Automation\\CazamioNewProject\\AgentGui\\AgentTests\\AgentTests.cs:line 82\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "VerifySidebar",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected: True\r\n  But was:  False\r\n",
+        "trace": "   at CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage.ListOfBuildings.__a$_around_VerifyTitleListOfBuildings_100663624_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfBuildingsPage\\ListOfBuildingsAssertions.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage.ListOfBuildings.__a$_around_VerifyTitleListOfBuildings_100663624_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage.ListOfBuildings.__a$_around_VerifyTitleListOfBuildings_100663624_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage.ListOfBuildings.VerifyTitleListOfBuildings()\r\n   at AgentGuiTests.TestsBaseGui.VerifySidebar() in C:\\Automation\\CazamioNewProject\\AgentGui\\AgentTests\\AgentTests.cs:line 82\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "EnterEmailPasswordAsAgent",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1726328925749,
+          "stop": 1726328926997
+        },
+        {
+          "name": "ClickIconShow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1726328926998,
+          "stop": 1726328927612
+        },
+        {
+          "name": "ClickButtonLetsGo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1726328927612,
+          "stop": 1726328931431
+        },
+        {
+          "name": "GetUserNameFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1726328931435,
+          "stop": 1726328932132
+        },
+        {
+          "name": "GetUserNameRoleFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1726328932136,
+          "stop": 1726328933345
+        },
+        {
+          "name": "VerifyAgentUserNameAndRole",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Lula AgentQA"
+            },
+            {
+              "name": "String",
+              "value": "Agent"
+            }
+          ],
+          "start": 1726328933350,
+          "stop": 1726328933414
+        },
+        {
+          "name": "UploadImageAvatarUserLandlordFirst",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1726328933417,
+          "stop": 1726328949742
+        },
+        {
+          "name": "VerifyChangingAvatarImageLandlord",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1726328949743,
+          "stop": 1726328950843
+        },
+        {
+          "name": "UploadImageAvatarUserLandlordSecond",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1726328950843,
+          "stop": 1726328952053
+        },
+        {
+          "name": "VerifyChangingAvatarImageLandlord",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1726328952053,
+          "stop": 1726328953163
+        },
+        {
+          "name": "ClicklinkRemovePhotoOfLandlord",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1726328953164,
+          "stop": 1726328954245
+        },
+        {
+          "name": "VerifyRewmoveAvatarImageLandlord",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1726328954245,
+          "stop": 1726328955314
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1726328955317,
+          "stop": 1726328961022
+        },
+        {
+          "name": "VerifyTitleListOfBuildings",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  Expected: True\r\n  But was:  False\r\n",
+            "trace": "   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.IsTrue(Boolean condition)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage.ListOfBuildings.__a$_around_VerifyTitleListOfBuildings_100663624_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfBuildingsPage\\ListOfBuildingsAssertions.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage.ListOfBuildings.__a$_around_VerifyTitleListOfBuildings_100663624_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1726328961053,
+          "stop": 1726328962358
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "827ea3fff5b64354b557b4425f286cda-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1726328918638,
+      "stop": 1726328965390
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1726328918637,
+  "stop": 1726328965404
+}
