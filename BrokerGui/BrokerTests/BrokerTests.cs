@@ -588,10 +588,7 @@ namespace BrokerGuiTests
                 .SelectApartmentTypePlex();
             JScriptExecutor.ScrollToDownWebPage();
             Pages.AddApartments
-                .EnterHoldDepositOneThousand()
-                .ClickButtonPaymentMethods();
-            Pages.PaymentOptionsMdlWndw
-                .SelectPaymentMethodsCrdtCrdDlvrChck();
+                .EnterHoldDepositOneThousand();
             Pages.AddApartments
                 .ClickTabImages()
                 //.ClickEightTimeskButtonRemove()

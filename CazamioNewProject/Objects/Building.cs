@@ -204,7 +204,7 @@ namespace CazamioNewProject.Objects
                 State = "NY",
                 Zip = "11225",
                 Neighborhood = "Crown Heights",
-                BuildingName = "30-39 Crown St Broker QA-Building Name (12345) (09876) (*&^%)",
+                BuildingName = " Broker QA-Building Name 30-39 Crown S (12345) (09876) (*&^%)",
                 LlcName = "LLC Name QA Broker (12345) (09876) (*&^%)",
             };
         }
@@ -214,14 +214,14 @@ namespace CazamioNewProject.Objects
             return new AlbermaleRdInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(2) + " " + "Albermale Rd",
-                NumberNameAddressStatic = "9A Albermale Rd",
-                NumberAddress = "9A",
+                NumberNameAddressStatic = "1A Albermale Rd",
+                NumberAddress = "1A",
                 AddressName = "Albermale Rd",
                 City = "Brooklyn",
                 State = "NY",
                 Zip = "11226",
                 Neighborhood = "East Flatbush",
-                BuildingName = "9A Albermale Rd AGENT QA-Building Name (12345) (*&^%)",
+                BuildingName = "AGENT QA-Building Name 1A Albermale Rd (12345) (*&^%)",
                 LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
             };
         }
