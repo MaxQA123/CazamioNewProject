@@ -21,17 +21,18 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             AccessLocksApi accessLocksApi = new AccessLocksApi().Generate();
             Broker broker = new Broker().Generate();
             Owner owner = new Owner().Generate();
+            DemoApi demoApi = DemoApi.Generate();
 
             var payload = new RequestCreateBuildingFullDataWithBroker();
             payload.Address = new Address
             {
-                Id = buildingApi.AddressIdApi,
-                Country = buildingApi.CountryApi,
-                Street = buildingApi.StreetApi.MarkAdmAssignedRoleBrkr,
-                State = buildingApi.StateApi,
-                City = buildingApi.CityApi.NewYork,
-                ZipCode = buildingApi.ZipCode.ZipBuildingMarkAdmAssignedRoleBrkr,
-                Neighborhood = buildingApi.NeighborhoodApi.BuildingMarkAdmAssignedRoleBrkr
+                Id = demoApi.WashingtonSquare.addressIdApi,
+                Country = demoApi.WashingtonSquare.CountryApi,
+                Street = demoApi.WashingtonSquare.NumberRandomNameAddressStatic,
+                State = demoApi.WashingtonSquare.State,
+                City = demoApi.WashingtonSquare.City,
+                ZipCode = demoApi.WashingtonSquare.Zip,
+                Neighborhood = demoApi.WashingtonSquare.Neighborhood
             }; 
             payload.PetPolicies = new string[]
             {

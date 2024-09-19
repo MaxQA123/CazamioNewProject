@@ -4,13 +4,13 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
 {
     public class BuildingApi
     {
-        public long AddressIdApi { get; set; }//0
-        public string CountryApi { get; set; }
-        public StreetApiInfo StreetApi { get; set; }//78954 Avenue A
-        public string StateApi { get; set; }
-        public CityApiInfo CityApi { get; set; }
-        public ZipCodeInfo ZipCode { get; set; }
-        public NeighborhoodApiInfo NeighborhoodApi { get; set; }
+        //public long AddressIdApi { get; set; }//0
+        //public string CountryApi { get; set; }
+        //public StreetApiInfo StreetApi { get; set; }//78954 Avenue A
+        //public string StateApi { get; set; }
+        //public CityApiInfo CityApi { get; set; }
+        //public ZipCodeInfo ZipCode { get; set; }
+        //public NeighborhoodApiInfo NeighborhoodApi { get; set; }
         public PetPoliciesApiInfo PetPoliciesApi { get; set; }
         public LlcNameApiInfo LlcNameApi { get; set; }
         public BuildingNameApiInfo BuildingNameApi { get; set; }
@@ -29,38 +29,38 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
         public BuildingIdInfo BuildingId { get; set; }
         public ImageIdInfo ImageId { get; set; }
 
-        public class StreetApiInfo
-        {
-            public string MarkAdmAssignedRoleAgntBrkr { get; set; }
-            public string MarkAdmAssignedRoleBrkr { get; set; }
-            public string BrokerAssignedRoleAgntBrkr { get; set; }
-            public string BrokerAssignedRoleBrkr { get; set; }
-            public string AgentBrokerAssignedRoleAgntBrkr { get; set; }
-        }
+        //public class StreetApiInfo
+        //{
+        //    public string MarkAdmAssignedRoleAgntBrkr { get; set; }
+        //    public string MarkAdmAssignedRoleBrkr { get; set; }
+        //    public string BrokerAssignedRoleAgntBrkr { get; set; }
+        //    public string BrokerAssignedRoleBrkr { get; set; }
+        //    public string AgentBrokerAssignedRoleAgntBrkr { get; set; }
+        //}
 
-        public class CityApiInfo
-        {
-            public string NewYork { get; set; }
-            public string Brooklyn { get; set; }
-        }
+        //public class CityApiInfo
+        //{
+        //    public string NewYork { get; set; }
+        //    public string Brooklyn { get; set; }
+        //}
 
-        public class ZipCodeInfo
-        {
-            public long ZipBuildingMarkAdmAssignedRoleAgntBrkr { get; set; }
-            public long ZipBuildingMarkAdmAssignedRoleBrkr { get; set; }
-            public long ZipBuildingBrokerAssignedRoleAgntBrkr { get; set; }
-            public long ZipBuildingBrokerAssignedRoleBrkr { get; set; }
-            public long ZipBuildingAgntBrkrAssignedRolegAgntBrkr { get; set; }
-        }
+        //public class ZipCodeInfo
+        //{
+        //    public long ZipBuildingMarkAdmAssignedRoleAgntBrkr { get; set; }
+        //    public long ZipBuildingMarkAdmAssignedRoleBrkr { get; set; }
+        //    public long ZipBuildingBrokerAssignedRoleAgntBrkr { get; set; }
+        //    public long ZipBuildingBrokerAssignedRoleBrkr { get; set; }
+        //    public long ZipBuildingAgntBrkrAssignedRolegAgntBrkr { get; set; }
+        //}
 
-        public class NeighborhoodApiInfo
-        {
-            public string BuildingMarkAdmAssignedRoleAgntBrkr { get; set; }
-            public string BuildingMarkAdmAssignedRoleBrkr { get; set; }
-            public string BuildingBrokerAssignedRoleAgntBrkr { get; set; }
-            public string BuildingBrokerAssignedRoleBrkr { get; set; }
-            public string BuildingAgntBrkrAssignedRoleAgntBrkr { get; set; }
-        }
+        //public class NeighborhoodApiInfo
+        //{
+        //    public string BuildingMarkAdmAssignedRoleAgntBrkr { get; set; }
+        //    public string BuildingMarkAdmAssignedRoleBrkr { get; set; }
+        //    public string BuildingBrokerAssignedRoleAgntBrkr { get; set; }
+        //    public string BuildingBrokerAssignedRoleBrkr { get; set; }
+        //    public string BuildingAgntBrkrAssignedRoleAgntBrkr { get; set; }
+        //}
 
         public class PetPoliciesApiInfo
         {
@@ -175,8 +175,8 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
 
         public BuildingApi Generate()
         {
-            long addressIdApi = 0;
-            string countryApi = "United States";
+            //long addressIdApi = 0;
+            //string countryApi = "United States";
             string llcNameForAgentBroker = "LLC QA Agent As Broker (12345) (!@#$%)";
             string llcNameForBroker = "LLC QA Broker (12345) (!@#$%)";
             string nameBuilfing = "QA-Building NAME (12345 !@#$%)";
@@ -187,7 +187,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
             long zipBuildingMarkAdmAssignedRoleAgntBrkr = 11213;
             string neighborhoodMarkAdmBuildingAssignedRoleAgntBrkr = "Crown Heights";
 
-            string streetApiMarkAdmAssignedRoleBrkr = "33 Washington Square";
+            //string streetApiMarkAdmAssignedRoleBrkr = "33 Washington Square";
             long zipBuildingMarkAdmAssignedRoleBrkr = 10012;
             string neighborhoodBuildingMarkAdmAssignedRoleBrkr = "Manhattan";
 
@@ -213,9 +213,9 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
 
             #endregion
 
-            string stateApi = "NY";
-            string cityApiNewYork = "New York";
-            string cityApiBrooklyn = "Brooklyn";
+            //string stateApi = "NY";
+            //string cityApiNewYork = "New York";
+            //string cityApiBrooklyn = "Brooklyn";
             string caseByCase = "CaseByCase";
             string petFee = "PetFee";
             string allPetsAllowed = "AllPetsAllowed";
@@ -257,38 +257,38 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
 
             var buildingApi = new BuildingApi()
             {
-                AddressIdApi = addressIdApi,
-                CountryApi = countryApi,
-                StreetApi = new StreetApiInfo
-                {
-                    MarkAdmAssignedRoleAgntBrkr = streetApiMarkAdmAssignedRoleAgntBrkr,
-                    MarkAdmAssignedRoleBrkr = streetApiMarkAdmAssignedRoleBrkr,
-                    BrokerAssignedRoleAgntBrkr = streetApiBrokerAssignedRoleAgntBrkr,
-                    BrokerAssignedRoleBrkr = streetApiBrokerAssignedRoleBrkr,
-                    AgentBrokerAssignedRoleAgntBrkr = streetApiAgentBrokerAssignedRoleAgntBrkr
-                },
-                StateApi = stateApi,
-                CityApi = new CityApiInfo
-                {
-                    NewYork = cityApiNewYork,
-                    Brooklyn = cityApiBrooklyn
-                },
-                ZipCode = new ZipCodeInfo
-                {
-                    ZipBuildingMarkAdmAssignedRoleAgntBrkr = zipBuildingMarkAdmAssignedRoleAgntBrkr,
-                    ZipBuildingMarkAdmAssignedRoleBrkr = zipBuildingMarkAdmAssignedRoleBrkr,
-                    ZipBuildingBrokerAssignedRoleAgntBrkr = zipBuildingBrokerAssignedRoleAgntBrkr,
-                    ZipBuildingBrokerAssignedRoleBrkr = zipBuildingBrokerAssignedRoleBrkr,
-                    ZipBuildingAgntBrkrAssignedRolegAgntBrkr = zipBuildingAgntBrkrAssignedRoleAgntBrkr
-                },
-                NeighborhoodApi = new NeighborhoodApiInfo
-                {
-                    BuildingMarkAdmAssignedRoleAgntBrkr = neighborhoodMarkAdmBuildingAssignedRoleAgntBrkr,
-                    BuildingMarkAdmAssignedRoleBrkr = neighborhoodBuildingMarkAdmAssignedRoleBrkr,
-                    BuildingBrokerAssignedRoleAgntBrkr = neighborhoodBrokerBuildingAssignedRoleAgntBrkr,
-                    BuildingBrokerAssignedRoleBrkr = neighborhoodBuildingBrokerAssignedRoleBrkr,
-                    BuildingAgntBrkrAssignedRoleAgntBrkr = neighborhoodAgntBrkrBuildingAssignedRoleAgntBrkr
-                },
+                //AddressIdApi = addressIdApi,
+                //CountryApi = countryApi,
+                //StreetApi = new StreetApiInfo
+                //{
+                //    MarkAdmAssignedRoleAgntBrkr = streetApiMarkAdmAssignedRoleAgntBrkr,
+                //    MarkAdmAssignedRoleBrkr = streetApiMarkAdmAssignedRoleBrkr,
+                //    BrokerAssignedRoleAgntBrkr = streetApiBrokerAssignedRoleAgntBrkr,
+                //    BrokerAssignedRoleBrkr = streetApiBrokerAssignedRoleBrkr,
+                //    AgentBrokerAssignedRoleAgntBrkr = streetApiAgentBrokerAssignedRoleAgntBrkr
+                //},
+                //StateApi = stateApi,
+                //CityApi = new CityApiInfo
+                //{
+                //    NewYork = cityApiNewYork,
+                //    Brooklyn = cityApiBrooklyn
+                //},
+                //ZipCode = new ZipCodeInfo
+                //{
+                //    ZipBuildingMarkAdmAssignedRoleAgntBrkr = zipBuildingMarkAdmAssignedRoleAgntBrkr,
+                //    ZipBuildingMarkAdmAssignedRoleBrkr = zipBuildingMarkAdmAssignedRoleBrkr,
+                //    ZipBuildingBrokerAssignedRoleAgntBrkr = zipBuildingBrokerAssignedRoleAgntBrkr,
+                //    ZipBuildingBrokerAssignedRoleBrkr = zipBuildingBrokerAssignedRoleBrkr,
+                //    ZipBuildingAgntBrkrAssignedRolegAgntBrkr = zipBuildingAgntBrkrAssignedRoleAgntBrkr
+                //},
+                //NeighborhoodApi = new NeighborhoodApiInfo
+                //{
+                //    BuildingMarkAdmAssignedRoleAgntBrkr = neighborhoodMarkAdmBuildingAssignedRoleAgntBrkr,
+                //    BuildingMarkAdmAssignedRoleBrkr = neighborhoodBuildingMarkAdmAssignedRoleBrkr,
+                //    BuildingBrokerAssignedRoleAgntBrkr = neighborhoodBrokerBuildingAssignedRoleAgntBrkr,
+                //    BuildingBrokerAssignedRoleBrkr = neighborhoodBuildingBrokerAssignedRoleBrkr,
+                //    BuildingAgntBrkrAssignedRoleAgntBrkr = neighborhoodAgntBrkrBuildingAssignedRoleAgntBrkr
+                //},
                 PetPoliciesApi = new PetPoliciesApiInfo
                 {
                     CaseByCase = caseByCase,
@@ -301,7 +301,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
                 LlcNameApi = new LlcNameApiInfo
                 {
                     LlcNameStreetApiMarkAdmAssignedRoleAgntBrkr = llcNameForAgentBroker + " " + streetApiMarkAdmAssignedRoleAgntBrkr,
-                    LlcNameStreetApiMarkAdmAssignedRoleBrkr = llcNameForBroker + " " + streetApiMarkAdmAssignedRoleBrkr,
+                    LlcNameStreetApiMarkAdmAssignedRoleBrkr = llcNameForBroker,
                     LlcNameStreetApiBrokerAssignedRoleAgntBrkr = llcNameForAgentBroker + " " + streetApiBrokerAssignedRoleAgntBrkr,
                     LlcNameStreetApiBrokerAssignedRoleBrkr = llcNameForBroker + " " + streetApiBrokerAssignedRoleBrkr,
                     LlcNameStreetApiAgentBrokerAssignedRoleAgntBrkr = llcNameForAgentBroker + " " + streetApiAgentBrokerAssignedRoleAgntBrkr
@@ -309,7 +309,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
                 BuildingNameApi = new BuildingNameApiInfo
                 {
                     BuildingNameStreetApiMarkAdmAssignedRoleAgntBrkr = nameBuilfing + " " + streetApiMarkAdmAssignedRoleAgntBrkr,
-                    BuldingNameStreetApiMarkAdmAssignedRoleBrkr = nameBuilfing + " " + streetApiMarkAdmAssignedRoleBrkr,
+                    BuldingNameStreetApiMarkAdmAssignedRoleBrkr = nameBuilfing,
                     BuldingNameStreetApiBrokerAssignedRoleAgntBrkr = nameBuilfing + " " + streetApiBrokerAssignedRoleAgntBrkr,
                     BuldingNameStreetApiBrokerAssignedRoleBrkr = nameBuilfing + " " + streetApiBrokerAssignedRoleBrkr,
                     BuldingNameStreetApiAgentBrokerAssignedRoleAgntBrkr = nameBuilfing + " " + streetApiAgentBrokerAssignedRoleAgntBrkr
