@@ -10,9 +10,11 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
         public CrownStInfo CrownSt { get; set; }
         public AlbermaleRdInfo AlbermaleRd { get; set; }
         public East51stStreetPedestrianCrossingInfo East51stStreetPedestrianCrossing { get; set; }
-        public DescriptionsInternalNotesInfo DescriptionsInternalNotes { get; set; }
+        public PetPoliciesApiInfo PetPoliciesApi { get; set; }
+        public AmountApiInfo AmountApi { get; set; }
+        public ShowOrderApiInfo ShowOrderApi { get; set; }
+        public ConnectionTypeApiInfo ConnectionTypeApi { get; set; }
         public MySpaceAmountPaymentsInfo MySpaceAmountPayments { get; set; }
-        public PaymentSystemsInfo PaymentSystems { get; set; }
         public AccessLocksInfo AccessLocks { get; set; }
         public SettingsConcessionsInfo SettingsConcessions { get; set; }
         public SettingsFreeStuffInfo SettingsFreeStuff { get; set; }
@@ -26,9 +28,11 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
                 CrownSt = CreateCrownStInfo(),
                 AlbermaleRd = CreateAlbermaleRdInfo(),
                 East51stStreetPedestrianCrossing = CreateEast51stStreetPedestrianCrossingInfo(),
-                DescriptionsInternalNotes = CreateDescriptionsInternalNotesInfo(),
+                PetPoliciesApi = CreatePetPoliciesApiInfo(),
+                AmountApi = CreateAmountApiInfo(),
+                ShowOrderApi = CreateShowOrderApiInfo(),
+                ConnectionTypeApi = CreateConnectionTypeApiInfo(),
                 MySpaceAmountPayments = CreateMySpaceAmountPaymentsInfo(),
-                PaymentSystems = CreatePaymentSystemsInfo(),
                 AccessLocks = CreateAccessLocksInfo(),
                 SettingsConcessions = CreateSettingsConcessionsInfo(),
                 SettingsFreeStuff = CreateSettingsFreeStuffInfo(),
@@ -49,6 +53,8 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
             public string Neighborhood { get; set; }
             public string BuildingName { get; set; }
             public string LlcName { get; set; }
+            public long BuildingIdForCreationBuilding { get; set; }
+            public long ImagesForCreationBuilding { get; set; }
         }
 
         public class WashingtonSquareInfo
@@ -64,6 +70,8 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
             public string Neighborhood { get; set; }
             public string BuildingName { get; set; }
             public string LlcName { get; set; }
+            public long BuildingIdForCreationBuilding { get; set; }
+            public long ImagesForCreationBuilding { get; set; }
         }
 
         public class CrownStInfo
@@ -111,14 +119,43 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
             public string LlcName { get; set; }
         }
 
-        public class DescriptionsInternalNotesInfo
+        public class PetPoliciesApiInfo
         {
-            public string DescriptionShort { get; set; }
-            public string DescriptionLong { get; set; }
-            public string InternalNotesShort { get; set; }
-            public string InternalNotesLong { get; set; }
-            public string TextLongLoremCommon { get; set; }
-            public string TextShortLoremCommon { get; set; }
+            public string CaseByCase { get; set; }
+            public string PetFee { get; set; }
+            public string AllPetsAllowed { get; set; }
+            public string SmallPetsAllowed { get; set; }
+            public string CatsOnly { get; set; }
+            public string NoPets { get; set; }
+        }
+
+        public class AmountApiInfo
+        {
+            public long CreditScreeningFeeByDefaultMySpace { get; set; }
+            public long CreditScreeningFeeByDefaultEvergreen { get; set; }
+            public long CreditScreeningFeeByDefaultDoorway { get; set; }
+            public long HoldDepositByDefaultMySpace { get; set; }
+            public long HoldDepositByDefaultEvergreen { get; set; }
+            public long HoldDepositByDefaultDoorway { get; set; }
+            public long CreditScreeningFeeOneNumber { get; set; }
+            public long CreditScreeningFeeTwoNumber { get; set; }
+            public long CreditScreeningFeeThreeNumber { get; set; }
+            public long HoldDepositOneNumber { get; set; }
+            public long HoldDepositTwoNumber { get; set; }
+            public long HoldDepositThreeNumber { get; set; }
+
+        }
+
+        public class ShowOrderApiInfo
+        {
+            public long OrderPinCode { get; set; }
+            public long OrderNote { get; set; }
+        }
+
+        public class ConnectionTypeApiInfo
+        {
+            public string NamePinCode { get; set; }
+            public string NameNote { get; set; }
         }
 
         public class MySpaceAmountPaymentsInfo
@@ -141,28 +178,37 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
 
         public class AccessLocksInfo
         {
-            public string MainEntranceByDefaultFirstNameLock { get; set; }
-            public string ApartmentByDefaultSecondNameLock { get; set; }
-            public string PinCodeTextLorem { get; set; }
-            public string NoteTextLorem { get; set; }
+            public string NamePinCode { get; set; }
+            public string NumberPinCode { get; set; }
         }
 
         public class SettingsConcessionsInfo
         {
-            public string NameFirst { get; set; }
-            public string RandomMonthsFree { get; set; }
-            public string OneMonthYearFree { get; set; }
-            public string TwoMonthsFree { get; set; }
-            public string RandomLeaseTerms { get; set; }
-            public string TwelveMonthsLeaseTerms { get; set; }
-            public string OneYearLeaseTerms { get; set; }
-            public string AdditionalInfoShort { get; set; }
-            public string AdditionalInfoLong { get; set; }
+            public long SpecialOfferId { get; set; }
+            public string OneMonth { get; set; }
+            public string TwoMonths { get; set; }
+            public string TwelveMonths { get; set; }
+            public string ElevenMonths { get; set; }
+            public DateTimeOffset TodayDate { get; set; }
+            public DateTimeOffset YesterdayDate { get; set; }
+            public DateTimeOffset TomorrowDate { get; set; }
+            public long SubmittedApplication { get; set; }
+            public long LeaseSigned { get; set; }
+            public long MoveIn { get; set; }
         }
 
         public class SettingsFreeStuffInfo
         {
-            public string NameFirst { get; set; }
+            public long SpecialOfferId { get; set; }
+            public string SelectItemsFreeNetflixGoogleSpeaker { get; set; }
+            public string SelectItemFreeNetflix { get; set; }
+            public string SelectItemGoogleSpeaker { get; set; }
+            public DateTimeOffset TodayDate { get; set; }
+            public DateTimeOffset YesterdayDate { get; set; }
+            public DateTimeOffset TomorrowDate { get; set; }
+            public long SubmittedApplication { get; set; }
+            public long LeaseSigned { get; set; }
+            public long MoveIn { get; set; }
         }
 
         private static SaintJohnsonPlInfo CreateSaintJohnsonPlInfo()
@@ -181,6 +227,9 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
                 Neighborhood = "Crown Heights",
                 BuildingName = "AGENT QA-Building Name 9999 Saint Johnson Place (12345) (*&^%)",
                 LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
+                BuildingIdForCreationBuilding = 0,
+                ImagesForCreationBuilding = 0,
+
             };
         }
 
@@ -199,6 +248,8 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
                 Neighborhood = "Manhattan",
                 BuildingName = "Broker QA-Building Name 1 Washington Square (12345) (09876) (*&^%)",
                 LlcName = "LLC Name QA Broker (12345) (09876) (*&^%)",
+                BuildingIdForCreationBuilding = 0,
+                ImagesForCreationBuilding = 0,
             };
         }
 
@@ -253,16 +304,53 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
             };
         }
 
-        private static DescriptionsInternalNotesInfo CreateDescriptionsInternalNotesInfo()
+        private static PetPoliciesApiInfo CreatePetPoliciesApiInfo()
         {
-            return new DescriptionsInternalNotesInfo
+            return new PetPoliciesApiInfo
             {
-                DescriptionShort = "DESCRIPTION for BUILDING (12345) (09876) (&%$#@!)",
-                DescriptionLong = "DESCRIPTION for BUILDING (12345) (09876) (&%$#@!) Lorem BUILDING ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,",
-                InternalNotesShort = "INTERNAL NOTES for BUILDING (12345) (09876) (&%$#@!)",
-                InternalNotesLong = "INTERNAL NOTES for BUILDING (12345) (09876) (&%$#@!) Lorem BUILDING ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,",
-                TextLongLoremCommon = "Lorem BUILDING ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,",
-                TextShortLoremCommon = "Lorem BUILDING ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing",
+                CaseByCase = "CaseByCase",
+                PetFee = "PetFee",
+                AllPetsAllowed = "AllPetsAllowed",
+                SmallPetsAllowed = "SmallPetsAllowed",
+                CatsOnly = "CatsOnly",
+                NoPets = "NoPets",
+            };
+        }
+
+        private static AmountApiInfo CreateAmountApiInfo()
+        {
+            return new AmountApiInfo
+            {
+                CreditScreeningFeeByDefaultMySpace = 20,
+                CreditScreeningFeeByDefaultEvergreen = 20,
+                CreditScreeningFeeByDefaultDoorway = 20,
+                HoldDepositByDefaultMySpace = 500,
+                HoldDepositByDefaultEvergreen = 1000,
+                HoldDepositByDefaultDoorway = 500,
+                CreditScreeningFeeOneNumber= 1,
+                CreditScreeningFeeTwoNumber = 11,
+                CreditScreeningFeeThreeNumber = 299,
+                HoldDepositOneNumber = 2,
+                HoldDepositTwoNumber = 19,
+                HoldDepositThreeNumber = 699
+             };
+        }
+
+        private static ShowOrderApiInfo CreateShowOrderApiInfo()
+        {
+            return new ShowOrderApiInfo
+            {
+                OrderPinCode = 0,
+                OrderNote = 1,
+            };
+        }
+
+        private static ConnectionTypeApiInfo CreateConnectionTypeApiInfo()
+        {
+            return new ConnectionTypeApiInfo
+            {
+                NamePinCode = "PinCode",
+                NameNote = "Note",
             };
         }
 
@@ -294,10 +382,8 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
         {
             return new AccessLocksInfo
             {
-                MainEntranceByDefaultFirstNameLock = "Main entrance",
-                ApartmentByDefaultSecondNameLock = "Apartment",
-                PinCodeTextLorem = "Lorem PinCode Building (12345) (&%$#@!)",
-                NoteTextLorem = "Lorem NOTE Building (12345) (&%$#@!)",
+                NamePinCode = "1 2 3 4 5",
+                NumberPinCode = "1 2 3 4 5",
             };
         }
 
@@ -305,15 +391,18 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
         {
             return new SettingsConcessionsInfo
             {
-                NameFirst = "Conces Building 1",
-                RandomMonthsFree = GenerateRandomData.RandomNumberWithoutZero(1),
-                OneMonthYearFree = "1",
-                TwoMonthsFree = "2",
-                RandomLeaseTerms = GenerateRandomData.RandomNumberWithoutZero(1),
-                TwelveMonthsLeaseTerms = "12",
-                OneYearLeaseTerms = "1",
-                AdditionalInfoShort = "Lorem ADDITIONAL INFO BUILDING 12345 (09876) (*&%$#@!)",
-                AdditionalInfoLong = "Lorem ADDITIONAL INFO BUILDING 12345 (09876) Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,",
+                SpecialOfferId = 0,
+                OneMonth = "2",
+                TwoMonths = "1",
+                TwelveMonths = "12",
+                ElevenMonths = "11",
+                //DateTimeOffset dateFromTodayDate = DateTimeOffset.Parse("2024-06-08T04:00:00.000Z");
+                TodayDate = DateTimeOffset.UtcNow,
+                YesterdayDate = DateTimeOffset.UtcNow.AddDays(-1),
+                TomorrowDate = DateTimeOffset.UtcNow.AddDays(+1),
+                SubmittedApplication = 0,
+                LeaseSigned = 1,
+                MoveIn = 2,
             };
         }
 
@@ -321,7 +410,17 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
         {
             return new SettingsFreeStuffInfo
             {
-                NameFirst = "Free Stuff Building 1",
+                SpecialOfferId = 0,
+                SelectItemFreeNetflix = "Free Netflix@@Google Speaker",
+                SelectItemGoogleSpeaker = "",
+                SelectItemsFreeNetflixGoogleSpeaker = "",
+                //DateTimeOffset dateFromTodayDate = DateTimeOffset.Parse("2024-06-08T04:00:00.000Z");
+                TodayDate = DateTimeOffset.UtcNow,
+                YesterdayDate = DateTimeOffset.UtcNow.AddDays(-1),
+                TomorrowDate = DateTimeOffset.UtcNow.AddDays(+1),
+                SubmittedApplication = 0,
+                LeaseSigned = 1,
+                MoveIn = 2,
             };
         }
     }

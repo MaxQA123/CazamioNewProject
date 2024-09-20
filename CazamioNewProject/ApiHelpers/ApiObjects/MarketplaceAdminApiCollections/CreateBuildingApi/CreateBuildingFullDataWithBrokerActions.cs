@@ -36,22 +36,22 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             }; 
             payload.PetPolicies = new string[]
             {
-                buildingApi.PetPoliciesApi.CaseByCase,
-                buildingApi.PetPoliciesApi.PetFee,
-                buildingApi.PetPoliciesApi.AllPetsAllowed,
-                buildingApi.PetPoliciesApi.SmallPetsAllowed,
-                buildingApi.PetPoliciesApi.CatsOnly,
-                buildingApi.PetPoliciesApi.NoPets
+                demoApi.PetPoliciesApi.CaseByCase,
+                demoApi.PetPoliciesApi.PetFee,
+                demoApi.PetPoliciesApi.AllPetsAllowed,
+                demoApi.PetPoliciesApi.SmallPetsAllowed,
+                demoApi.PetPoliciesApi.CatsOnly,
+                demoApi.PetPoliciesApi.NoPets
             };
             payload.OwnerId = owner.OwnerId.OwnerAndTenantPaysCommission;
-            payload.BuildingId = buildingApi.BuildingId.ForCreationBuilding;
-            payload.BuildingName = buildingApi.BuildingNameApi.BuldingNameStreetApiMarkAdmAssignedRoleBrkr;
-            payload.LlcName = buildingApi.LlcNameApi.LlcNameStreetApiMarkAdmAssignedRoleBrkr;
+            payload.BuildingId = demoApi.WashingtonSquare.BuildingIdForCreationBuilding;
+            payload.BuildingName = demoApi.WashingtonSquare.BuildingName;
+            payload.LlcName = demoApi.WashingtonSquare.LlcName;
             payload.Description = building.DescriptionsInternalNotes.DescriptionLong;
             payload.InternalNotes = building.DescriptionsInternalNotes.InternalNotesLong;
             payload.ScreeningFee = new ScreeningFee
             {
-                Amount = buildingApi.AmountApi.CreditScreeningFeeByDefaultMySpace,
+                Amount = demoApi.AmountApi.CreditScreeningFeeTwoNumber,
                 DeliverCheckNote = paymentOptions.DeliverCheckNote.ForBuildingScreening,
                 VenmoQrCode = paymentOptionsApi.VenmoQrCode.ScreeningFee,
                 ZelleAddress = paymentOptions.Zelle.ForBuildingScreening,
@@ -66,7 +66,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             };
             payload.HoldDeposit = new HoldDeposit
             {
-                Amount = buildingApi.AmountApi.HoldDepositByDefaultMySpace,
+                Amount = demoApi.AmountApi.HoldDepositThreeNumber,
                 DeliverCheckNote = paymentOptions.DeliverCheckNote.ForBuildingHold,
                 VenmoQrCode = paymentOptionsApi.VenmoQrCode.HoldDepositBuilding,
                 ZelleAddress = paymentOptions.Zelle.ForBuildingHold,
@@ -116,10 +116,10 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                         TimeRestrictionEnabled = ApiRequestData.FALSE,
                         CustomNote = building.AccessLocks.PinCodeTextLorem,
                         NoteImage = new Uri("https://cazamiostorage.blob.core.windows.net/staging-building-images-container-2024-06/103_638534506736861274.png?sv=2019-07-07&sr=c&sig=aIzYjCy%2BjHcegqNIQW3kBJcHarRcl%2Fwa5g7Y2gtGjTg%3D&se=9997-12-31T23%3A59%3A59Z&sp=r"),
-                        ShowOrder = buildingApi.ShowOrderApi.OrderPinCode,
-                        ConnectionType = buildingApi.ConnectionTypeApi.PinCode,
-                        Name = buildingApi.Name,
-                        PinCode = buildingApi.PinCode
+                        ShowOrder = demoApi.ShowOrderApi.OrderPinCode,
+                        ConnectionType = demoApi.ConnectionTypeApi.NamePinCode,
+                        Name = demoApi.AccessLocks.NamePinCode,
+                        PinCode = demoApi.AccessLocks.NumberPinCode
                     }
                 },
                 NoteLocks = new ELock[]
@@ -131,8 +131,8 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                         TimeRestrictionEnabled = ApiRequestData.FALSE,
                         CustomNote = building.AccessLocks.NoteTextLorem,
                         NoteImage = new Uri("https://cazamiostorage.blob.core.windows.net/staging-building-images-container-2024-06/103_638534506950505619.png?sv=2019-07-07&sr=c&sig=aIzYjCy%2BjHcegqNIQW3kBJcHarRcl%2Fwa5g7Y2gtGjTg%3D&se=9997-12-31T23%3A59%3A59Z&sp=r"),
-                        ShowOrder = buildingApi.ShowOrderApi.OrderNote,
-                        ConnectionType = buildingApi.ConnectionTypeApi.Note,
+                        ShowOrder = demoApi.ShowOrderApi.OrderNote,
+                        ConnectionType = demoApi.ConnectionTypeApi.NameNote,
                         Name = building.AccessLocks.NoteTextLorem,
                     },
                 },
@@ -143,16 +143,16 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             {
                    new Concession
                    {
-                        SpecialOfferId = buildingApi.SpecialOfferId,
-                        MonthsFree = buildingApi.MonthsFree.OneMonth,
-                        LeaseTerms = buildingApi.LeaseTerms.TwelveMonths,
+                        SpecialOfferId = demoApi.SettingsConcessions.SpecialOfferId,
+                        MonthsFree = demoApi.SettingsConcessions.OneMonth,
+                        LeaseTerms = demoApi.SettingsConcessions.TwelveMonths,
                         AdditionalInfo = building.SettingsConcessions.AdditionalInfoShort,
                         IsActive = ApiRequestData.TRUE,
                         Name = building.SettingsConcessions.NameFirst,
                         IsTimeBased = ApiRequestData.TRUE,
-                        DateFrom = buildingApi.DateFrom.TodayDate,
-                        DateTo = buildingApi.DateTo.TodayDate,
-                        TriggerEvent = buildingApi.TriggerEvent.SubmittedApplication,
+                        DateFrom = demoApi.SettingsConcessions.TodayDate,
+                        DateTo = demoApi.SettingsConcessions.TodayDate,
+                        TriggerEvent = demoApi.SettingsConcessions.SubmittedApplication,
                         GeneratedId = Guid.NewGuid()
                    }
             };
@@ -160,14 +160,14 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             {
                   new Concession
                   {
-                        SpecialOfferId = buildingApi.SpecialOfferId,
-                        FreeStuff = buildingApi.FreeStuff.SelectItemsFreeNetflixGoogleSpeaker,
+                        SpecialOfferId = demoApi.SettingsFreeStuff.SpecialOfferId,
+                        FreeStuff = demoApi.SettingsFreeStuff.SelectItemsFreeNetflixGoogleSpeaker,
                         IsActive = ApiRequestData.TRUE,
                         Name = building.SettingsFreeStuff.NameFirst,
                         IsTimeBased = ApiRequestData.TRUE,
-                        DateFrom = buildingApi.DateFrom.TodayDate,
-                        DateTo = buildingApi.DateTo.TodayDate,
-                        TriggerEvent = buildingApi.TriggerEvent.LeaseSigned,
+                        DateFrom = demoApi.SettingsFreeStuff.TodayDate,
+                        DateTo = demoApi.SettingsFreeStuff.TodayDate,
+                        TriggerEvent = demoApi.SettingsFreeStuff.LeaseSigned,
                         GeneratedId = Guid.NewGuid()
                   }
             };
@@ -175,22 +175,22 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             {
                 new Image
                 {
-                    Id = buildingApi.ImageId.ForCreationBuilding,
+                    Id = demoApi.WashingtonSquare.ImagesForCreationBuilding,
                     BlobUrl = new Uri("https://cazamiostorage.blob.core.windows.net/staging-building-images-container-2024-06/103_638534507763564461.png?sv=2019-07-07&sr=c&sig=aIzYjCy%2BjHcegqNIQW3kBJcHarRcl%2Fwa5g7Y2gtGjTg%3D&se=9997-12-31T23%3A59%3A59Z&sp=r")
                 },
                 new Image
                 {
-                    Id = buildingApi.ImageId.ForCreationBuilding,
+                    Id = demoApi.WashingtonSquare.ImagesForCreationBuilding,
                     BlobUrl = new Uri("https://cazamiostorage.blob.core.windows.net/staging-building-images-container-2024-06/103_638534507928267196.png?sv=2019-07-07&sr=c&sig=aIzYjCy%2BjHcegqNIQW3kBJcHarRcl%2Fwa5g7Y2gtGjTg%3D&se=9997-12-31T23%3A59%3A59Z&sp=r")
                 },
                 new Image
                 {
-                    Id = buildingApi.ImageId.ForCreationBuilding,
+                    Id = demoApi.WashingtonSquare.ImagesForCreationBuilding,
                     BlobUrl = new Uri("https://cazamiostorage.blob.core.windows.net/staging-building-images-container-2024-06/103_638534507945382415.png?sv=2019-07-07&sr=c&sig=aIzYjCy%2BjHcegqNIQW3kBJcHarRcl%2Fwa5g7Y2gtGjTg%3D&se=9997-12-31T23%3A59%3A59Z&sp=r")
                 },
                 new Image
                 {
-                    Id = buildingApi.ImageId.ForCreationBuilding,
+                    Id = demoApi.WashingtonSquare.ImagesForCreationBuilding,
                     BlobUrl = new Uri("https://cazamiostorage.blob.core.windows.net/staging-building-images-container-2024-06/103_638534507949273305.png?sv=2019-07-07&sr=c&sig=aIzYjCy%2BjHcegqNIQW3kBJcHarRcl%2Fwa5g7Y2gtGjTg%3D&se=9997-12-31T23%3A59%3A59Z&sp=r")
                 },
             };
