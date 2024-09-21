@@ -6,25 +6,25 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
     public partial class RequestCreateBuildingFullDataWithBroker
     {
         [JsonProperty("locks")]
-        public Locks Locks { get; set; }//
+        public Locks Locks { get; set; }
 
         [JsonProperty("screeningFee")]
-        public ScreeningFee ScreeningFee { get; set; }//
+        public HoldDeposit ScreeningFee { get; set; }
 
         [JsonProperty("amenities")]
-        public Amenity[] Amenities { get; set; }//
+        public Amenity[] Amenities { get; set; }
 
         [JsonProperty("images")]
         public Image[] Images { get; set; }
 
         [JsonProperty("apiKey")]
-        public ApiKey ApiKey { get; set; }//
+        public ApiKey ApiKey { get; set; }
 
         [JsonProperty("freeStuff")]
-        public Concession[] FreeStuff { get; set; }//
+        public FreeStuff[] FreeStuff { get; set; }
 
         [JsonProperty("concessions")]
-        public Concession[] Concessions { get; set; }//
+        public Concession[] Concessions { get; set; }
 
         [JsonProperty("petPolicies")]
         public string[] PetPolicies { get; set; }//
@@ -51,10 +51,10 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public Address Address { get; set; }//
 
         [JsonProperty("holdDeposit")]
-        public HoldDeposit HoldDeposit { get; set; }//
+        public HoldDeposit HoldDeposit { get; set; }
     }
 
-    public partial class Address
+    public partial class Address//
     {
         [JsonProperty("id")]
         public long Id { get; set; }
@@ -81,34 +81,34 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
     public partial class Amenity
     {
         [JsonProperty("id")]
-        public long Id { get; set; }//
+        public long Id { get; set; }
 
         [JsonProperty("name")]
-        public string Name { get; set; }//
+        public string Name { get; set; }
 
         [JsonProperty("amenityType")]
-        public string AmenityType { get; set; }//
+        public long AmenityType { get; set; }
     }
 
     public partial class ApiKey
     {
         [JsonProperty("id")]
-        public long Id { get; set; }//
+        public long Id { get; set; }
 
         [JsonProperty("isACHInclude")]
-        public bool IsAchInclude { get; set; }//
+        public bool IsAchInclude { get; set; }
 
         [JsonProperty("isDefault")]
-        public bool IsDefault { get; set; }//
+        public bool IsDefault { get; set; }
 
         [JsonProperty("key")]
-        public string Key { get; set; }//
+        public string Key { get; set; }
 
         [JsonProperty("authorizeNetApiLoginId")]
-        public object AuthorizeNetApiLoginId { get; set; }//
+        public object AuthorizeNetApiLoginId { get; set; }
 
         [JsonProperty("paymentSystem")]
-        public long PaymentSystem { get; set; }//
+        public long PaymentSystem { get; set; }
     }
 
     public partial class Concession
@@ -116,10 +116,10 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         [JsonProperty("specialOfferId")]
         public long SpecialOfferId { get; set; }
 
-        [JsonProperty("monthsFree", NullValueHandling = NullValueHandling.Ignore)]
-        public string MonthsFree { get; set; }//long
+        [JsonProperty("monthsFree")]
+        public long MonthsFree { get; set; }
 
-        [JsonProperty("leaseTerms", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty("leaseTerms")]
         public string LeaseTerms { get; set; }
 
         [JsonProperty("additionalInfo")]
@@ -135,55 +135,64 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public bool IsActive { get; set; }
 
         [JsonProperty("dateFrom")]
-        public DateTimeOffset DateFrom { get; set; }//"2024-06-08T04:00:00.000Z"
+        public DateTimeOffset DateFrom { get; set; }
 
         [JsonProperty("dateTo")]
-        public DateTimeOffset DateTo { get; set; }//"2024-07-01T03:59:59.999Z"
+        public DateTimeOffset DateTo { get; set; }
 
         [JsonProperty("triggerEvent")]
         public long TriggerEvent { get; set; }
 
         [JsonProperty("generatedId")]
         public Guid GeneratedId { get; set; }
-
-        [JsonProperty("freeStuff", NullValueHandling = NullValueHandling.Ignore)]
-        public string FreeStuff { get; set; }
     }
 
-    public partial class ScreeningFee
+    public partial class FreeStuff
     {
-        [JsonProperty("amount")]
-        public long Amount { get; set; }//
+        [JsonProperty("specialOfferId")]
+        public long SpecialOfferId { get; set; }
 
-        [JsonProperty("deliverCheckNote")]
-        public string DeliverCheckNote { get; set; }//
+        [JsonProperty("freeStuff")]
+        public string FreeStuffFreeStuff { get; set; }
 
-        [JsonProperty("venmoQRCode")]
-        public string VenmoQrCode { get; set; }//
+        [JsonProperty("isTimeBased")]
+        public bool IsTimeBased { get; set; }
 
-        [JsonProperty("zelleAddress")]
-        public string ZelleAddress { get; set; }//
+        [JsonProperty("name")]
+        public string Name { get; set; }
 
-        [JsonProperty("allowedPaymentMethods")]
-        public string[] AllowedPaymentMethods { get; set; }//
+        [JsonProperty("isActive")]
+        public bool IsActive { get; set; }
+
+        [JsonProperty("dateFrom")]
+        public DateTimeOffset DateFrom { get; set; }
+
+        [JsonProperty("dateTo")]
+        public DateTimeOffset DateTo { get; set; }
+
+        [JsonProperty("triggerEvent")]
+        public long TriggerEvent { get; set; }
+
+        [JsonProperty("generatedId")]
+        public Guid GeneratedId { get; set; }
     }
 
     public partial class HoldDeposit
     {
         [JsonProperty("amount")]
-        public long Amount { get; set; }//
+        public long Amount { get; set; }
 
         [JsonProperty("deliverCheckNote")]
-        public string DeliverCheckNote { get; set; }//
+        public string DeliverCheckNote { get; set; }
 
         [JsonProperty("venmoQRCode")]
-        public string VenmoQrCode { get; set; }//
+        public string VenmoQrCode { get; set; }
 
         [JsonProperty("zelleAddress")]
-        public string ZelleAddress { get; set; }//
+        public string ZelleAddress { get; set; }
 
         [JsonProperty("allowedPaymentMethods")]
-        public string[] AllowedPaymentMethods { get; set; }//
+        public string[] AllowedPaymentMethods { get; set; }
     }
 
     public partial class Image
@@ -231,13 +240,13 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public string CustomNote { get; set; }
 
         [JsonProperty("noteImage")]
-        public Uri NoteImage { get; set; }
+        public string NoteImage { get; set; }
 
         [JsonProperty("showOrder")]
-        public long ShowOrder { get; set; }//0
+        public long ShowOrder { get; set; }
 
         [JsonProperty("connectionType")]
-        public string ConnectionType { get; set; }
+        public long ConnectionType { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }

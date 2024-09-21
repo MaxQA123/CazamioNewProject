@@ -49,7 +49,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             payload.LlcName = demoApi.WashingtonSquare.LlcName;
             payload.Description = building.DescriptionsInternalNotes.DescriptionLong;
             payload.InternalNotes = building.DescriptionsInternalNotes.InternalNotesLong;
-            payload.ScreeningFee = new ScreeningFee
+            payload.ScreeningFee = new HoldDeposit
             {
                 Amount = demoApi.AmountApi.CreditScreeningFeeTwoNumber,
                 DeliverCheckNote = paymentOptions.DeliverCheckNote.ForBuildingScreening,
@@ -115,7 +115,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                         Location = accessLocksApi.Location.FirstByDefault,
                         TimeRestrictionEnabled = ApiRequestData.FALSE,
                         CustomNote = building.AccessLocks.PinCodeTextLorem,
-                        NoteImage = new Uri("https://cazamiostorage.blob.core.windows.net/staging-building-images-container-2024-06/103_638534506736861274.png?sv=2019-07-07&sr=c&sig=aIzYjCy%2BjHcegqNIQW3kBJcHarRcl%2Fwa5g7Y2gtGjTg%3D&se=9997-12-31T23%3A59%3A59Z&sp=r"),
+                        NoteImage = demoApi.AccessLocks.PinCodeNoteImage,
                         ShowOrder = demoApi.ShowOrderApi.OrderPinCode,
                         ConnectionType = demoApi.ConnectionTypeApi.NamePinCode,
                         Name = demoApi.AccessLocks.NamePinCode,
@@ -130,7 +130,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                         Location = accessLocksApi.Location.SecondByDefault,
                         TimeRestrictionEnabled = ApiRequestData.FALSE,
                         CustomNote = building.AccessLocks.NoteTextLorem,
-                        NoteImage = new Uri("https://cazamiostorage.blob.core.windows.net/staging-building-images-container-2024-06/103_638534506950505619.png?sv=2019-07-07&sr=c&sig=aIzYjCy%2BjHcegqNIQW3kBJcHarRcl%2Fwa5g7Y2gtGjTg%3D&se=9997-12-31T23%3A59%3A59Z&sp=r"),
+                        NoteImage = demoApi.AccessLocks.NoteNoteImage,
                         ShowOrder = demoApi.ShowOrderApi.OrderNote,
                         ConnectionType = demoApi.ConnectionTypeApi.NameNote,
                         Name = building.AccessLocks.NoteTextLorem,
@@ -144,7 +144,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                    new Concession
                    {
                         SpecialOfferId = demoApi.SettingsConcessions.SpecialOfferId,
-                        MonthsFree = demoApi.SettingsConcessions.OneMonth,
+                        MonthsFree = demoApi.SettingsConcessions.OneMonthFree,
                         LeaseTerms = demoApi.SettingsConcessions.TwelveMonths,
                         AdditionalInfo = building.SettingsConcessions.AdditionalInfoShort,
                         IsActive = ApiRequestData.TRUE,
@@ -156,12 +156,12 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                         GeneratedId = Guid.NewGuid()
                    }
             };
-            payload.FreeStuff = new Concession[]
+            payload.FreeStuff = new FreeStuff[]
             {
-                  new Concession
+                  new FreeStuff
                   {
                         SpecialOfferId = demoApi.SettingsFreeStuff.SpecialOfferId,
-                        FreeStuff = demoApi.SettingsFreeStuff.SelectItemsFreeNetflixGoogleSpeaker,
+                        FreeStuffFreeStuff = demoApi.SettingsFreeStuff.SelectItemsFreeNetflixGoogleSpeaker,
                         IsActive = ApiRequestData.TRUE,
                         Name = building.SettingsFreeStuff.NameFirst,
                         IsTimeBased = ApiRequestData.TRUE,

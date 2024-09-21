@@ -154,8 +154,8 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
 
         public class ConnectionTypeApiInfo
         {
-            public string NamePinCode { get; set; }
-            public string NameNote { get; set; }
+            public long NamePinCode { get; set; }
+            public long NameNote { get; set; }
         }
 
         public class MySpaceAmountPaymentsInfo
@@ -180,13 +180,15 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
         {
             public string NamePinCode { get; set; }
             public string NumberPinCode { get; set; }
+            public string PinCodeNoteImage { get; set; }
+            public string NoteNoteImage { get; set; }
         }
 
         public class SettingsConcessionsInfo
         {
             public long SpecialOfferId { get; set; }
-            public string OneMonth { get; set; }
-            public string TwoMonths { get; set; }
+            public long OneMonthFree { get; set; }
+            public long TwoMonthsFree { get; set; }
             public string TwelveMonths { get; set; }
             public string ElevenMonths { get; set; }
             public DateTimeOffset TodayDate { get; set; }
@@ -349,8 +351,8 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
         {
             return new ConnectionTypeApiInfo
             {
-                NamePinCode = "PinCode",
-                NameNote = "Note",
+                NamePinCode = 2,
+                NameNote = 3,
             };
         }
 
@@ -384,6 +386,8 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
             {
                 NamePinCode = "1 2 3 4 5",
                 NumberPinCode = "1 2 3 4 5",
+                PinCodeNoteImage = "https://cazamiostorage.blob.core.windows.net/staging-building-images-container-2024-09/103_638625153411898967.jpeg?sv=2019-07-07&sr=c&sig=KDsQ7Qeq9PcO1P3nZZCm5joeII9wWM4qxgjQxDUr5aw%3D&se=9997-12-31T23%3A59%3A59Z&sp=r",
+                NoteNoteImage = "",
             };
         }
 
@@ -392,14 +396,14 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
             return new SettingsConcessionsInfo
             {
                 SpecialOfferId = 0,
-                OneMonth = "2",
-                TwoMonths = "1",
+                OneMonthFree = 1,
+                TwoMonthsFree = 2,
                 TwelveMonths = "12",
                 ElevenMonths = "11",
                 //DateTimeOffset dateFromTodayDate = DateTimeOffset.Parse("2024-06-08T04:00:00.000Z");
-                TodayDate = DateTimeOffset.UtcNow,
+                TodayDate = DateTimeOffset.Parse("2024-09-20T21:00:00.000Z"),
                 YesterdayDate = DateTimeOffset.UtcNow.AddDays(-1),
-                TomorrowDate = DateTimeOffset.UtcNow.AddDays(+1),
+                TomorrowDate = DateTimeOffset.Parse("2024-09-30T20:59:59.999Z"),
                 SubmittedApplication = 0,
                 LeaseSigned = 1,
                 MoveIn = 2,
@@ -408,6 +412,10 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
 
         private static SettingsFreeStuffInfo CreateSettingsFreeStuffInfo()
         {
+            DateTime utcNow = DateTime.UtcNow;
+
+            string formattedDate = utcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ");
+
             return new SettingsFreeStuffInfo
             {
                 SpecialOfferId = 0,
@@ -415,9 +423,9 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
                 SelectItemGoogleSpeaker = "",
                 SelectItemsFreeNetflixGoogleSpeaker = "",
                 //DateTimeOffset dateFromTodayDate = DateTimeOffset.Parse("2024-06-08T04:00:00.000Z");
-                TodayDate = DateTimeOffset.UtcNow,
+                TodayDate = DateTimeOffset.Parse(formattedDate),
                 YesterdayDate = DateTimeOffset.UtcNow.AddDays(-1),
-                TomorrowDate = DateTimeOffset.UtcNow.AddDays(+1),
+                TomorrowDate = DateTimeOffset.Parse("2024-09-30T20:59:59.999Z"),
                 SubmittedApplication = 0,
                 LeaseSigned = 1,
                 MoveIn = 2,

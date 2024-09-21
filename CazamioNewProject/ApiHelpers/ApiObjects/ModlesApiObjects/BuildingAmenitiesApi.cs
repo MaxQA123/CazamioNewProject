@@ -26,8 +26,8 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
 
         public class AmenityTypeInfo
         {
-            public string Building { get; set; }
-            public string Apartment { get; set; }
+            public long Building { get; set; }
+            public long Apartment { get; set; }
         }
 
         public BuildingAmenitiesApiModel Generate()
@@ -46,7 +46,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
 
             #endregion
 
-            string buildingType = "Building";
+            long buildingType = 0;
 
             var buildingAmenitiesApiModel = new BuildingAmenitiesApiModel()
             {
