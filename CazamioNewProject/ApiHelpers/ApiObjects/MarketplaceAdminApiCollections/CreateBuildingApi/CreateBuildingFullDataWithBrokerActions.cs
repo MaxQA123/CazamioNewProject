@@ -126,7 +126,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                 {
                     new ELock
                     {
-                        //CustomNote = Name
+                        //CustomNote = Namekhgjhhgfghf
                         Location = accessLocksApi.Location.SecondByDefault,
                         TimeRestrictionEnabled = ApiRequestData.FALSE,
                         CustomNote = building.AccessLocks.NoteTextLorem,
