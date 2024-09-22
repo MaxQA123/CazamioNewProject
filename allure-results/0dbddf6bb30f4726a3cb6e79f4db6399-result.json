@@ -1,0 +1,116 @@
+{
+  "uuid": "806d330b-82bf-4da3-859e-210542513bef-tr-0-1015",
+  "historyId": "ApiTestsLandlord.MarketplaceAdminApiTests.CreateBuildingFullDataWithBroker",
+  "fullName": "ApiTestsLandlord.MarketplaceAdminApiTests.CreateBuildingFullDataWithBroker",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "ApiTestsLandlord"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateBuildingFullDataWithBroker"
+    },
+    {
+      "name": "testClass",
+      "value": "MarketplaceAdminApiTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "MarketplaceAdmin Api test"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateBuildingFullDataWithBroker"
+    }
+  ],
+  "links": [],
+  "name": "CreateBuildingFullDataWithBroker",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.Exception : No message provided",
+    "trace": "   at CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApi.BuildingCreation.CreateOwnerWithBrokerFullData(String token, RequestCreateBuildingFullDataWithBroker buildingBody) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\ApiHelpers\\ApiObjects\\MarketplaceAdminApiCollections\\CreateBuildingApi\\CreateBuildingFullDataWithBrokerActions.cs:line 216\r\n   at ApiTestsLandlord.MarketplaceAdminApiTests.CreateBuildingFullDataWithBroker() in C:\\Automation\\CazamioNewProject\\ApiTestsLandlord\\ApiLandlordTests\\MarketplaceAdminApiTests.cs:line 316"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateBuildingFullDataWithBroker",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.Exception : No message provided",
+        "trace": "   at CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApi.BuildingCreation.CreateOwnerWithBrokerFullData(String token, RequestCreateBuildingFullDataWithBroker buildingBody) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\ApiHelpers\\ApiObjects\\MarketplaceAdminApiCollections\\CreateBuildingApi\\CreateBuildingFullDataWithBrokerActions.cs:line 216\r\n   at ApiTestsLandlord.MarketplaceAdminApiTests.CreateBuildingFullDataWithBroker() in C:\\Automation\\CazamioNewProject\\ApiTestsLandlord\\ApiLandlordTests\\MarketplaceAdminApiTests.cs:line 316"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "VerifyUserData",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "ResponseLogInApiMarketplaceAdmin",
+              "value": "CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin.ResponseLogInApiMarketplaceAdmin"
+            },
+            {
+              "name": "MarketplaceAdmin",
+              "value": "CazamioNewProject.Objects.MarketplaceAdmin"
+            }
+          ],
+          "start": 1727010530804,
+          "stop": 1727010530833
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "81b4bdbb9b8d44a4a94dbf0cdfc019d8-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1727010528570,
+      "stop": 1727010532127
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1727010528569,
+  "stop": 1727010532137
+}

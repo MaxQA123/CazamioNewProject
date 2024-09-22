@@ -313,7 +313,7 @@ namespace ApiTestsLandlord
 
             #region Tests
 
-            BuildingCreation.CreateOwnerWithBrokerFullData(responseMarketplaceAdmin.AuthData.Token, buildingBody);
+            BuildingCreation.CreateBuildingWithBrokerFullData(responseMarketplaceAdmin.AuthData.Token, buildingBody);
 
             #endregion
         }

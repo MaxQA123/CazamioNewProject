@@ -401,7 +401,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
                 TwelveMonths = "12",
                 ElevenMonths = "11",
                 //DateTimeOffset dateFromTodayDate = DateTimeOffset.Parse("2024-06-08T04:00:00.000Z");
-                TodayDate = DateTimeOffset.Parse("2024-09-20T21:00:00.000Z"),
+                TodayDate = DateTimeOffset.UtcNow,
                 YesterdayDate = DateTimeOffset.UtcNow.AddDays(-1),
                 TomorrowDate = DateTimeOffset.Parse("2024-09-30T20:59:59.999Z"),
                 SubmittedApplication = 0,
@@ -412,9 +412,9 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
 
         private static SettingsFreeStuffInfo CreateSettingsFreeStuffInfo()
         {
-            DateTime utcNow = DateTime.UtcNow;
+            //DateTime utcNow = DateTime.UtcNow;
 
-            string formattedDate = utcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ");
+            //string formattedDate = utcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ");
 
             return new SettingsFreeStuffInfo
             {
@@ -423,7 +423,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects
                 SelectItemGoogleSpeaker = "",
                 SelectItemsFreeNetflixGoogleSpeaker = "",
                 //DateTimeOffset dateFromTodayDate = DateTimeOffset.Parse("2024-06-08T04:00:00.000Z");
-                TodayDate = DateTimeOffset.Parse(formattedDate),
+                TodayDate = DateTimeOffset.UtcNow,
                 YesterdayDate = DateTimeOffset.UtcNow.AddDays(-1),
                 TomorrowDate = DateTimeOffset.Parse("2024-09-30T20:59:59.999Z"),
                 SubmittedApplication = 0,

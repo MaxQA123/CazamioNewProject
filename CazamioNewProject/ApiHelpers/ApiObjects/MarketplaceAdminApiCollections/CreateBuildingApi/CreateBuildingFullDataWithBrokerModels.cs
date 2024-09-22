@@ -3,7 +3,7 @@ using System;
 
 namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApi
 {
-    public partial class RequestCreateBuildingFullDataWithBroker
+    public partial class RequestCreateBuildingFullDataBroker
     {
         [JsonProperty("locks")]
         public Locks Locks { get; set; }

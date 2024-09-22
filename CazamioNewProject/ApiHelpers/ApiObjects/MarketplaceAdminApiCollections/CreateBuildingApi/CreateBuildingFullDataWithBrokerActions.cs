@@ -9,7 +9,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
     //With broker +
     public partial class BuildingCreation
     {
-        public static RequestCreateBuildingFullDataWithBroker RequestBodyCreateBuildingFullDataBroker()
+        public static RequestCreateBuildingFullDataBroker RequestBodyCreateBuildingFullDataBroker()
         {
             BuildingApi buildingApi = new BuildingApi().Generate();
             Building building = Building.Generate();
@@ -23,7 +23,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             Owner owner = new Owner().Generate();
             DemoApi demoApi = DemoApi.Generate();
 
-            var payload = new RequestCreateBuildingFullDataWithBroker();
+            var payload = new RequestCreateBuildingFullDataBroker();
             payload.Address = new Address
             {
                 Id = demoApi.WashingtonSquare.addressIdApi,
@@ -197,13 +197,13 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             return payload;
         }
 
-        public static void CreateOwnerWithBrokerFullData(string token, RequestCreateBuildingFullDataWithBroker buildingBody)
+        public static void CreateBuildingWithBrokerFullData(string token, RequestCreateBuildingFullDataBroker buildingBody)
         {
 
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
 
             var restRequest = new RestRequest("api/buildings/create", Method.Post);
-            restRequest.AddHeaders(Headers.HeadersSuperAdmin(token));
+            restRequest.AddHeaders(Headers.HeadersMarketplaceAdmin(token));
 
             restRequest.AddJsonBody(buildingBody);
 
