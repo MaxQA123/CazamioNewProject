@@ -18,6 +18,7 @@ using CazamioNewProject.DbHelpers.OwnerPhoneNumbersTable;
 using CazamioNewProject.DbHelpers.OwnerManagementsTable;
 using CazamioNewProject.DbHelpers.OwnersDbTable;
 using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApi;
+using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApiMandatoryData;
 
 namespace ApiTestsLandlord
 {
@@ -314,6 +315,47 @@ namespace ApiTestsLandlord
             #region Tests
 
             BuildingCreation.CreateBuildingWithBrokerFullData(responseMarketplaceAdmin.AuthData.Token, buildingBody);
+
+            #endregion
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("MarketplaceAdmin Api test")]
+        [AllureSubSuite("CreateBuildingFullDataWithBroker")]
+
+        public void CreateBuildingMandatoryDataWithAgent()
+        {
+            #region Test Data
+
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+
+            MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
+
+            var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
+            var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
+            var rememberMe = ApiRequestData.TRUE;
+            var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
+
+            var buildingBody = BuildingCreationMandatoryData.RequestBodyCreateBuildingMandatoryDataWithAgent();
+
+            #endregion
+
+            #region Preconditions
+
+            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+
+            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+
+            #endregion
+
+            #region Tests
+
+            BuildingCreationMandatoryData.CreateBuildingWithAgentFullData(responseMarketplaceAdmin.AuthData.Token, buildingBody);
 
             #endregion
         }

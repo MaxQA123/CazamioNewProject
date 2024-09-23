@@ -43,7 +43,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                 demoApi.PetPoliciesApi.CatsOnly,
                 demoApi.PetPoliciesApi.NoPets
             };
-            payload.OwnerId = owner.OwnerId.OwnerAndTenantPaysCommission;
+            payload.OwnerId = owner.OwnerId.WithBroker;
             payload.BuildingId = demoApi.WashingtonSquare.BuildingIdForCreationBuilding;
             payload.BuildingName = demoApi.WashingtonSquare.BuildingName;
             payload.LlcName = demoApi.WashingtonSquare.LlcName;

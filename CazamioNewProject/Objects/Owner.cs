@@ -45,10 +45,8 @@ namespace CazamioNewProject.Objects
 
         public class OwnerIdInfo
         {
-            public long NoCommission { get; set; }
-            public long OwnerPaysComission { get; set; }
-            public long TenantPaysCommission { get; set; }
-            public long OwnerAndTenantPaysCommission { get; set; }//Arnoldoni Columbini
+            public long WithBroker { get; set; }
+            public long WithAgent { get; set; }
         }
 
         public class ListOwnersCompanyNameInfo
@@ -96,8 +94,8 @@ namespace CazamioNewProject.Objects
             long takeOffApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(1));
             long noCommission = 1;
             long ownerPaysComission = 2;
-            long tenantPaysCommission = 3;
-            long ownerAndTenantPaysCommission = 179;//Arnoldoni Columbini
+            long ownerIdWithBroker = 179;//Arnoldoni Columbini
+            long ownerIdWithAgent = 178;
 
             var owner = new Owner()
             {
@@ -136,10 +134,8 @@ namespace CazamioNewProject.Objects
                 PhoneNumberApi = phoneNumberApi,
                 OwnerId = new OwnerIdInfo
                 {
-                    NoCommission = noCommission,
-                    OwnerPaysComission = ownerPaysComission,
-                    TenantPaysCommission = tenantPaysCommission,
-                    OwnerAndTenantPaysCommission = ownerAndTenantPaysCommission
+                    WithBroker = ownerIdWithBroker,
+                    WithAgent = ownerIdWithAgent,
                 },
                 ListOwnersCompanyName = new ListOwnersCompanyNameInfo
                 {

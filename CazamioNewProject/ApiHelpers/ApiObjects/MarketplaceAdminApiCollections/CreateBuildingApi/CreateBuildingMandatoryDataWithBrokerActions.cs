@@ -2,16 +2,12 @@
 using CazamioNewProject.Objects;
 using RestSharp;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApiMandatoryData
 {
-    public partial class BuildingCreation
+    public partial class BuildingCreationMandatoryData
     {
-        public static RequestCreateBuildingMandatoryDataWithAgent RequestBodyCreateBuildingFullDataBroker()
+        public static RequestCreateBuildingMandatoryDataWithAgent RequestBodyCreateBuildingMandatoryDataWithAgent()
         {
             BuildingApi buildingApi = new BuildingApi().Generate();
             Building building = Building.Generate();
@@ -36,49 +32,49 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                 ZipCode = demoApi.WashingtonSquare.Zip,
                 Neighborhood = demoApi.WashingtonSquare.Neighborhood
             };
-            payload.PetPolicies = new string[]
-            {
-                demoApi.PetPoliciesApi.CaseByCase,
-                demoApi.PetPoliciesApi.PetFee,
-                demoApi.PetPoliciesApi.AllPetsAllowed,
-                demoApi.PetPoliciesApi.SmallPetsAllowed,
-                demoApi.PetPoliciesApi.CatsOnly,
-                demoApi.PetPoliciesApi.NoPets
-            };
-            payload.OwnerId = owner.OwnerId.OwnerAndTenantPaysCommission;
+            //payload.PetPolicies = new string[]
+            //{
+            //    demoApi.PetPoliciesApi.CaseByCase,
+            //    demoApi.PetPoliciesApi.PetFee,
+            //    demoApi.PetPoliciesApi.AllPetsAllowed,
+            //    demoApi.PetPoliciesApi.SmallPetsAllowed,
+            //    demoApi.PetPoliciesApi.CatsOnly,
+            //    demoApi.PetPoliciesApi.NoPets
+            //};
+            payload.OwnerId = owner.OwnerId.WithAgent;
             payload.BuildingId = demoApi.WashingtonSquare.BuildingIdForCreationBuilding;
-            payload.BuildingName = demoApi.WashingtonSquare.BuildingName;
-            payload.LlcName = demoApi.WashingtonSquare.LlcName;
-            payload.Description = building.DescriptionsInternalNotes.DescriptionLong;
-            payload.InternalNotes = building.DescriptionsInternalNotes.InternalNotesLong;
+            //payload.BuildingName = demoApi.WashingtonSquare.BuildingName;
+            //payload.LlcName = demoApi.WashingtonSquare.LlcName;
+            //payload.Description = building.DescriptionsInternalNotes.DescriptionLong;
+            //payload.InternalNotes = building.DescriptionsInternalNotes.InternalNotesLong;
             payload.ScreeningFee = new HoldDeposit
             {
                 Amount = demoApi.AmountApi.CreditScreeningFeeTwoNumber,
-                DeliverCheckNote = paymentOptions.DeliverCheckNote.ForBuildingScreening,
-                VenmoQrCode = paymentOptionsApi.VenmoQrCode.ScreeningFee,
-                ZelleAddress = paymentOptions.Zelle.ForBuildingScreening,
+                DeliverCheckNote = ApiRequestData.NULL,
+                VenmoQrCode = ApiRequestData.NULL,
+                ZelleAddress = ApiRequestData.NULL,
                 AllowedPaymentMethods = new string[]
                 {
                     paymentOptionsApi.AllowedPaymentMethods.CreditCard,
-                    paymentOptionsApi.AllowedPaymentMethods.Ach,
-                    paymentOptionsApi.AllowedPaymentMethods.DeliverCheck,
-                    paymentOptionsApi.AllowedPaymentMethods.Zelle,
-                    paymentOptionsApi.AllowedPaymentMethods.Venmo
+                    //paymentOptionsApi.AllowedPaymentMethods.Ach,
+                    //paymentOptionsApi.AllowedPaymentMethods.DeliverCheck,
+                    //paymentOptionsApi.AllowedPaymentMethods.Zelle,
+                    //paymentOptionsApi.AllowedPaymentMethods.Venmo
                 }
             };
             payload.HoldDeposit = new HoldDeposit
             {
                 Amount = demoApi.AmountApi.HoldDepositThreeNumber,
-                DeliverCheckNote = paymentOptions.DeliverCheckNote.ForBuildingHold,
-                VenmoQrCode = paymentOptionsApi.VenmoQrCode.HoldDepositBuilding,
-                ZelleAddress = paymentOptions.Zelle.ForBuildingHold,
+                DeliverCheckNote = ApiRequestData.NULL,
+                VenmoQrCode = ApiRequestData.NULL,
+                ZelleAddress = ApiRequestData.NULL,
                 AllowedPaymentMethods = new string[]
                 {
                     paymentOptionsApi.AllowedPaymentMethods.CreditCard,
-                    paymentOptionsApi.AllowedPaymentMethods.Ach,
-                    paymentOptionsApi.AllowedPaymentMethods.DeliverCheck,
-                    paymentOptionsApi.AllowedPaymentMethods.Zelle,
-                    paymentOptionsApi.AllowedPaymentMethods.Venmo
+                    //paymentOptionsApi.AllowedPaymentMethods.Ach,
+                    //paymentOptionsApi.AllowedPaymentMethods.DeliverCheck,
+                    //paymentOptionsApi.AllowedPaymentMethods.Zelle,
+                    //paymentOptionsApi.AllowedPaymentMethods.Venmo
                 }
             };
             payload.ApiKey = new ApiKey
@@ -95,13 +91,11 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                 BluetoothLocks = new object[0],
                 WifiLocks = new object[0],
                 CabLocks = new object[0],
-                //BrokerId = broker.BrokerIdApi,
-                //IsAgent = ApiRequestData.FALSE
             };
             return payload;
         }
 
-        public static void CreateOwnerWithBrokerFullData(string token, RequestCreateBuildingMandatoryDataWithAgent buildingBody)
+        public static void CreateBuildingWithAgentFullData(string token, RequestCreateBuildingMandatoryDataWithAgent buildingBody)
         {
 
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
