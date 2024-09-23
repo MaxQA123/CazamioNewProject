@@ -355,7 +355,7 @@ namespace ApiTestsLandlord
 
             #region Tests
 
-            BuildingCreationMandatoryData.CreateBuildingWithAgentFullData(responseMarketplaceAdmin.AuthData.Token, buildingBody);
+            BuildingCreationMandatoryData.CreateBuildingMandatoryDataWithAgent(responseMarketplaceAdmin.AuthData.Token, buildingBody);
 
             #endregion
         }

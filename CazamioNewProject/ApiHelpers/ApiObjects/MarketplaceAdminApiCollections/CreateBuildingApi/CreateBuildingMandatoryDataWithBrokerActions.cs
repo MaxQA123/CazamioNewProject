@@ -32,15 +32,15 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                 ZipCode = demoApi.WashingtonSquare.Zip,
                 Neighborhood = demoApi.WashingtonSquare.Neighborhood
             };
-            //payload.PetPolicies = new string[]
-            //{
-            //    demoApi.PetPoliciesApi.CaseByCase,
-            //    demoApi.PetPoliciesApi.PetFee,
-            //    demoApi.PetPoliciesApi.AllPetsAllowed,
-            //    demoApi.PetPoliciesApi.SmallPetsAllowed,
-            //    demoApi.PetPoliciesApi.CatsOnly,
-            //    demoApi.PetPoliciesApi.NoPets
-            //};
+            payload.PetPolicies = new string[]
+            {
+                //demoApi.PetPoliciesApi.CaseByCase,
+                //demoApi.PetPoliciesApi.PetFee,
+                //demoApi.PetPoliciesApi.AllPetsAllowed,
+                //demoApi.PetPoliciesApi.SmallPetsAllowed,
+                //demoApi.PetPoliciesApi.CatsOnly,
+                //demoApi.PetPoliciesApi.NoPets
+            };
             payload.OwnerId = owner.OwnerId.WithAgent;
             payload.BuildingId = demoApi.WashingtonSquare.BuildingIdForCreationBuilding;
             //payload.BuildingName = demoApi.WashingtonSquare.BuildingName;
@@ -86,16 +86,16 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                 AuthorizeNetApiLoginId = ApiRequestData.NULL,
                 PaymentSystem = paymentSettingsApi.PaymentSystem.CardknoxType
             };
-            payload.Locks = new Locks
-            {
-                BluetoothLocks = new object[0],
-                WifiLocks = new object[0],
-                CabLocks = new object[0],
-            };
+            //payload.Locks = new Locks
+            //{
+            //    BluetoothLocks = new object[0],
+            //    WifiLocks = new object[0],
+            //    CabLocks = new object[0],
+            //};
             return payload;
         }
 
-        public static void CreateBuildingWithAgentFullData(string token, RequestCreateBuildingMandatoryDataWithAgent buildingBody)
+        public static void CreateBuildingMandatoryDataWithAgent(string token, RequestCreateBuildingMandatoryDataWithAgent buildingBody)
         {
 
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);

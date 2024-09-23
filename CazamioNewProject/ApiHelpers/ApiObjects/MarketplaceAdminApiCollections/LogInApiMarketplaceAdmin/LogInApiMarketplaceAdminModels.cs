@@ -27,6 +27,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
 
         [JsonProperty("brand")]
         public string Brand { get; set; }
+
     }
 
     public partial class AuthData
@@ -42,6 +43,9 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
 
         [JsonProperty("user")]
         public User User { get; set; }
+
+        [JsonProperty("wasUserRegistered")]
+        public bool WasUserRegistered { get; set; }
     }
 
     public partial class User
@@ -66,5 +70,8 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
 
         [JsonProperty("isGenerated")]
         public bool IsGenerated { get; set; }
+
+        [JsonProperty("loginLinkPasswordUpdated")]
+        public bool LoginLinkPasswordUpdated { get; set; }
     }
 }
