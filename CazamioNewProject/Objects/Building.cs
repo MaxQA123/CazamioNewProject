@@ -163,14 +163,14 @@ namespace CazamioNewProject.Objects
             return new SaintJohnsonPlInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(5) + " " + "Saint Johnson Place",
-                NumberNameAddressStatic = "9999 Saint Johnson Place",
-                NumberAddress = "9999",
+                NumberNameAddressStatic = "9998 Saint Johnson Place",
+                NumberAddress = "9998",
                 AddressName = "Saint Johnson Place",
                 City = "Brooklyn",
                 State = "NY",
                 Zip = "11213",
                 Neighborhood = "Crown Heights",
-                BuildingName = "AGENT QA-Building Name 9999 Saint Johnson Place (12345) (*&^%)",
+                BuildingName = "AGENT QA-Building Name 9998 Saint Johnson Place (12345) (*&^%)",
                 LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
             };
         }
@@ -214,14 +214,14 @@ namespace CazamioNewProject.Objects
             return new AlbermaleRdInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(2) + " " + "Albermale Rd",
-                NumberNameAddressStatic = "1A Albermale Rd",
-                NumberAddress = "1A",
+                NumberNameAddressStatic = "9A Albermale Rd",
+                NumberAddress = "9A",
                 AddressName = "Albermale Rd",
                 City = "Brooklyn",
                 State = "NY",
                 Zip = "11226",
                 Neighborhood = "East Flatbush",
-                BuildingName = "AGENT QA-Building Name 1A Albermale Rd (12345) (*&^%)",
+                BuildingName = "AGENT QA-Building Name 9A Albermale Rd (12345) (*&^%)",
                 LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
             };
         }
@@ -231,14 +231,14 @@ namespace CazamioNewProject.Objects
             return new East51stStreetPedestrianCrossingInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(1) + " " + "East 51st Street Pedestrian Crossing",
-                NumberNameAddressStatic = "111A East 51st Street Pedestrian Crossing",
-                NumberAddress = "111A",
+                NumberNameAddressStatic = "777W East 51st Street Pedestrian Crossing",
+                NumberAddress = "777W",
                 AddressName = "East 51st Street Pedestrian Crossing",
                 City = "New York",
                 State = "NY",
                 Zip = "10022",
                 Neighborhood = "Manhattan",
-                BuildingName = "QA-Building Name AGENT 111A East 51st Street Pedestrian Crossing (12345) (*&^%)",
+                BuildingName = "QA-Building Name AGENT 777W East 51st Street Pedestrian Crossing (12345) (*&^%)",
                 LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
             };
         }
