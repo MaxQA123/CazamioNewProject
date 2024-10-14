@@ -231,14 +231,14 @@ namespace CazamioNewProject.Objects
             return new East51stStreetPedestrianCrossingInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(1) + " " + "East 51st Street Pedestrian Crossing",
-                NumberNameAddressStatic = "777W East 51st Street Pedestrian Crossing",
-                NumberAddress = "777W",
+                NumberNameAddressStatic = "111A East 51st Street Pedestrian Crossing",
+                NumberAddress = "111A",
                 AddressName = "East 51st Street Pedestrian Crossing",
                 City = "New York",
                 State = "NY",
                 Zip = "10022",
                 Neighborhood = "Manhattan",
-                BuildingName = "QA-Building Name AGENT 777W East 51st Street Pedestrian Crossing (12345) (*&^%)",
+                BuildingName = "QA-Building Name AGENT 111A East 51st Street Pedestrian Crossing (12345) (*&^%)",
                 LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
             };
         }
