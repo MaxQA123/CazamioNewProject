@@ -580,6 +580,7 @@ namespace BrokerGuiTests
 
             Pages.AddApartments
                 .VerifyTitleAddApartmentsPage()
+                .SelectBuildingThirtyDashTrirtyNineCrownSt()
                 .EnterToAllFieldsThirtyDashThirtyNineCrownSt()
                 //.SelectCurrentDateAvailableFrom()
                 .SelectStatusApplicationSubmitted()
@@ -645,7 +646,6 @@ namespace BrokerGuiTests
 
             Pages.AddApartments
                 .VerifyTitleAddApartmentsPage()
-                .SelectBuildingThirtyDashTrirtyNineCrownSt()
                 .EnterUnitNumber();
             KeyBoardActions.ScrollToDown();
             Pages.AddApartments

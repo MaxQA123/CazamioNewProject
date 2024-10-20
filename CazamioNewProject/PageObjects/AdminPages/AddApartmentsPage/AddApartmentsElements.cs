@@ -39,7 +39,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             Agent agent = new Agent().Generate();
 
             // Использование переменной экземпляра owner для построения XPath
-            var xpath = "//span[text() = '" + agent.FullNameCreatedAgentMySpace.FirstAgent + "']";
+            var xpath = "//ng-dropdown-panel//span[text() = '" + agent.FullNameCreatedAgentMySpace.FirstAgent + "']";
 
             // Присвоение значения ItemForAutotestForBroker
             return Browser._Driver.FindElement(By.XPath(xpath));
@@ -53,7 +53,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             Agent agent = new Agent().Generate();
 
             // Использование переменной экземпляра owner для построения XPath
-            var xpath = "//span[contains(text(), '" + apartment.BuildingShortAddress.ThirtyDashTrirtyNineCrownSt + "')]";
+            var xpath = "//ng-dropdown-panel//span[contains(text(), '" + apartment.BuildingShortAddress.ThirtyDashTrirtyNineCrownSt + "')]";
 
             // Присвоение значения ItemForAutotestForBroker
             return Browser._Driver.FindElement(By.XPath(xpath));
@@ -104,22 +104,22 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [FindsBy(How = How.XPath, Using = ("//ng-select[@formcontrolname = 'status']//div[@aria-selected= 'true']//span"))]
         public IWebElement InputStatus;
 
-        [FindsBy(How = How.XPath, Using = ("//div/span[text() = 'Off market']"))]
+        [FindsBy(How = How.XPath, Using = ("//ng-dropdown-panel//div/span[text() = 'Off market']"))]
         public IWebElement ItemOffMarket;
 
-        [FindsBy(How = How.XPath, Using = ("//div/span[text() = 'Occupied']"))]
+        [FindsBy(How = How.XPath, Using = ("//ng-dropdown-panel//div/span[text() = 'Occupied']"))]
         public IWebElement ItemOccupied;
 
-        [FindsBy(How = How.XPath, Using = ("//div/span[text() = 'Vacant']"))]
+        [FindsBy(How = How.XPath, Using = ("//ng-dropdown-panel//div/span[text() = 'Vacant']"))]
         public IWebElement ItemVacant;
 
-        [FindsBy(How = How.XPath, Using = ("//div/span[text() = 'Deposit Received']"))]
+        [FindsBy(How = How.XPath, Using = ("//ng-dropdown-panel//div/span[text() = 'Deposit Received']"))]
         public IWebElement ItemDepositReceived;
 
-        [FindsBy(How = How.XPath, Using = ("//div/span[text() = 'Application Submitted']"))]
+        [FindsBy(How = How.XPath, Using = ("//ng-dropdown-panel//div/span[text() = 'Application Submitted']"))]
         public IWebElement ItemApplicationSubmitted;
 
-        [FindsBy(How = How.XPath, Using = ("//div/span[text() = 'Signed lease']"))]
+        [FindsBy(How = How.XPath, Using = ("//ng-dropdown-panel//div/span[text() = 'Signed lease']"))]
         public IWebElement ItemSignedLease;
 
         [FindsBy(How = How.XPath, Using = ("//ng-select[@formcontrolname = 'broker']"))]
