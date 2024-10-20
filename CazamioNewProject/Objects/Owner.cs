@@ -65,7 +65,7 @@ namespace CazamioNewProject.Objects
             string lLCBrOwnerOwnerAndTenantPaysCommissio = "LLC Br Owner OwnerAndTenantPaysCommissio";
             string lLCAgBrOwnerNocommisionsAutoTest = "LLC Ag-Br Owner No commisions AutoTest";
             string ownerOwnerPaysAutotest = "Owner OwnerPays Autotest";
-            string ownerTenantPays = "Owner TenantPays LLC 12345 (!@#$%)";
+            string ownerTenantPays = "Ibrah Owner TenantPays LLC 12345 (!@#$%)";
             string FullName = Name.FirstName() + " " + Name.LastName();
             string firstName = Name.FirstName();
             string lastName = Name.LastName();

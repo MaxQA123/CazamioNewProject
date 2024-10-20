@@ -11,7 +11,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSelectUser);
             WaitUntil.WaitSomeInterval(100);
-            KeyBoardActions.ClickEnterButton();
+            Button.Click(ItemBrokerUser);
+            //KeyBoardActions.ClickEnterButton();
 
             return this;
         }

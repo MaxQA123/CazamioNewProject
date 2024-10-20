@@ -26,6 +26,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw
         [FindsBy(How = How.XPath, Using = ("//ng-dropdown-panel//span[text() = 'Marie Urmstrong']"))]
         public IWebElement ItemAgentUser;
 
+        [FindsBy(How = How.XPath, Using = ("//ng-dropdown-panel//span[text() = 'Leoautotest Feabroker']"))]
+        public IWebElement ItemBrokerUser;
+
         [FindsBy(How = How.XPath, Using = ("//textarea[@id = 'note']"))]
         public IWebElement FieldInputInternalNotes;
 

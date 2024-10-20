@@ -11,7 +11,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage
         [FindsBy(How = How.XPath, Using = ("//button//span[text() = 'Create Owner']"))]
         public IWebElement ButtonCreateOwner;
 
-        [FindsBy(How = How.XPath, Using = ("//tbody//tr//td[3]"))]
+        [FindsBy(How = How.XPath, Using = ("//tbody//tr//td[4]"))]
         public IWebElement FirstOwnerEmailOnPage;
 
         [FindsBy(How = How.XPath, Using = ("//span[text() = 'Owner has been successfully created']"))]

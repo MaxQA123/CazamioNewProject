@@ -580,7 +580,6 @@ namespace BrokerGuiTests
 
             Pages.AddApartments
                 .VerifyTitleAddApartmentsPage()
-                .SelectBuildingThirtyDashTrirtyNineCrownSt()
                 .EnterToAllFieldsThirtyDashThirtyNineCrownSt()
                 //.SelectCurrentDateAvailableFrom()
                 .SelectStatusApplicationSubmitted()
@@ -591,7 +590,7 @@ namespace BrokerGuiTests
                 .EnterHoldDepositOneThousand();
             Pages.AddApartments
                 .ClickTabImages()
-                //.ClickEightTimeskButtonRemove()
+                .ClickEightTimeskButtonRemove()
                 .ClickButtonSelectVideo()
                 .UplodImagesFileEnterLinksYouTubeVimeo()
                 .ClickButtonSaveApartment();
@@ -646,6 +645,7 @@ namespace BrokerGuiTests
 
             Pages.AddApartments
                 .VerifyTitleAddApartmentsPage()
+                .SelectBuildingThirtyDashTrirtyNineCrownSt()
                 .EnterUnitNumber();
             KeyBoardActions.ScrollToDown();
             Pages.AddApartments
