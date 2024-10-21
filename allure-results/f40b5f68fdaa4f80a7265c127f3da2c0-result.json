@@ -1,0 +1,993 @@
+{
+  "uuid": "ab902f2a-f464-40d3-8126-356cf2257ac4-tr-0-1005",
+  "historyId": "BrokerGuiTests.TestsBaseGui.AddBuildingAssignedBroker",
+  "fullName": "BrokerGuiTests.TestsBaseGui.AddBuildingAssignedBroker",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "BrokerGuiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddBuildingAssignedBroker"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "AddBuildingAssignedBroker"
+    }
+  ],
+  "links": [],
+  "name": "AddBuildingAssignedBroker",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+    "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_ClickEightTimeskButtonRemove_100663801_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApartmentsPage\\AddApartmentsSteps.cs:line 652\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_ClickEightTimeskButtonRemove_100663801_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_ClickEightTimeskButtonRemove_100663801_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.ClickEightTimeskButtonRemove() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApartmentsPage\\AddApartmentsActions.cs:line 36\r\n   at BrokerGuiTests.TestsBaseGui.AddBuildingAssignedBroker() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 403"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "AddBuildingAssignedBroker",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+        "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_ClickEightTimeskButtonRemove_100663801_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApartmentsPage\\AddApartmentsSteps.cs:line 652\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_ClickEightTimeskButtonRemove_100663801_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_ClickEightTimeskButtonRemove_100663801_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.ClickEightTimeskButtonRemove() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApartmentsPage\\AddApartmentsActions.cs:line 36\r\n   at BrokerGuiTests.TestsBaseGui.AddBuildingAssignedBroker() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 403"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "EnterEmailPasswordAsBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520779362,
+          "stop": 1729520780706
+        },
+        {
+          "name": "ClickIconShow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520780706,
+          "stop": 1729520781403
+        },
+        {
+          "name": "ClickButtonLetsGo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520781403,
+          "stop": 1729520785210
+        },
+        {
+          "name": "GetUserNameFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520785213,
+          "stop": 1729520786905
+        },
+        {
+          "name": "GetUserNameRoleFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520786916,
+          "stop": 1729520787096
+        },
+        {
+          "name": "VerifyBrokerUserNameAndRole",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Leoautotest Feabroker"
+            },
+            {
+              "name": "String",
+              "value": "Broker"
+            }
+          ],
+          "start": 1729520787099,
+          "stop": 1729520787161
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520787164,
+          "stop": 1729520794597
+        },
+        {
+          "name": "ClickButtonAddBuilding",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520794632,
+          "stop": 1729520805451
+        },
+        {
+          "name": "VerifyTitleListOfBuildingsPg",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520805486,
+          "stop": 1729520807654
+        },
+        {
+          "name": "SelectOwnerOwnerPaysWithBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520807655,
+          "stop": 1729520818998
+        },
+        {
+          "name": "EnterBuildingDataCrownSt",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickTab",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1729520820263,
+              "stop": 1729520820316
+            },
+            {
+              "name": "ClickEnterButton",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1729520820318,
+              "stop": 1729520820330
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520818998,
+          "stop": 1729520821722
+        },
+        {
+          "name": "ClickFieldInputInternalNotes",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520821724,
+          "stop": 1729520822474
+        },
+        {
+          "name": "GetValueFromFieldAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520822480,
+          "stop": 1729520822543
+        },
+        {
+          "name": "ClickTab",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520822543,
+          "stop": 1729520822557
+        },
+        {
+          "name": "GetValueFromFieldCreditScreeningFee",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520822561,
+          "stop": 1729520822681
+        },
+        {
+          "name": "VerifyValueByDefaulScreeningFee",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "20"
+            }
+          ],
+          "start": 1729520822686,
+          "stop": 1729520822686
+        },
+        {
+          "name": "ClickBtnSelectPaymentMethodsForCreditScreeningFee",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520822687,
+          "stop": 1729520823443
+        },
+        {
+          "name": "SelectPaymentMethodsCrdtCrdAchZll",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifySuccessSelectPmntMthds",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1729520826589,
+              "stop": 1729520827743
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520823445,
+          "stop": 1729520827743
+        },
+        {
+          "name": "ClickBtnEditForPaymentSystem",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520827747,
+          "stop": 1729520833506
+        },
+        {
+          "name": "SelectPaymentSystemAuthorizeNet",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520833508,
+          "stop": 1729520835357
+        },
+        {
+          "name": "GetItemAuthorizeNet",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520835358,
+          "stop": 1729520835398
+        },
+        {
+          "name": "GetItemApiKeyAuthorizeNet",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520835399,
+          "stop": 1729520835446
+        },
+        {
+          "name": "ClickButtonSave",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520835448,
+          "stop": 1729520836158
+        },
+        {
+          "name": "ClickThreeTimesButtonGeneralNext",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520836162,
+          "stop": 1729520838253
+        },
+        {
+          "name": "ClickTabFreeStuff",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520838254,
+          "stop": 1729520838909
+        },
+        {
+          "name": "ClickButtonAddSpecials",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520838909,
+          "stop": 1729520839624
+        },
+        {
+          "name": "AddFreeStuffInActive",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "SelectCurrentDay",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1729520844163,
+              "stop": 1729520845296
+            },
+            {
+              "name": "SelectCurrentDay",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1729520846222,
+              "stop": 1729520847349
+            },
+            {
+              "name": "ScrollToDown",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1729520847461,
+              "stop": 1729520847490
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520839625,
+          "stop": 1729520848811
+        },
+        {
+          "name": "ClickTabConcessions",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520848812,
+          "stop": 1729520849491
+        },
+        {
+          "name": "ClickButtonAddSpecials",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520849491,
+          "stop": 1729520850153
+        },
+        {
+          "name": "AddConcessionInActive",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickArrowDown",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1729520852815,
+              "stop": 1729520852833
+            },
+            {
+              "name": "ClickEnterButton",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1729520852833,
+              "stop": 1729520852850
+            },
+            {
+              "name": "ClickArrowDown",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1729520860289,
+              "stop": 1729520860301
+            },
+            {
+              "name": "ClickEnterButton",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1729520860301,
+              "stop": 1729520860311
+            },
+            {
+              "name": "SelectCurrentDay",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1729520861979,
+              "stop": 1729520863106
+            },
+            {
+              "name": "SelectCurrentDay",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1729520864002,
+              "stop": 1729520865133
+            },
+            {
+              "name": "ScrollToDown",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1729520865134,
+              "stop": 1729520865150
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520850153,
+          "stop": 1729520866488
+        },
+        {
+          "name": "ClickButtonGeneralNext",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520866488,
+          "stop": 1729520867146
+        },
+        {
+          "name": "ClickButtonSaveBuilding",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ScrollToDown",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1729520872168,
+              "stop": 1729520872174
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520867146,
+          "stop": 1729520877880
+        },
+        {
+          "name": "VerifyMessageSavedSuccessfullyBuilding",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520877880,
+          "stop": 1729520880664
+        },
+        {
+          "name": "VerifyTitleBuildingViewPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520880666,
+          "stop": 1729520884960
+        },
+        {
+          "name": "GetValueFromFieldNotInputAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520884961,
+          "stop": 1729520887040
+        },
+        {
+          "name": "VerifyBuildingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "20-29 Crown St"
+            },
+            {
+              "name": "String",
+              "value": "20-29 Crown St"
+            }
+          ],
+          "start": 1729520887041,
+          "stop": 1729520887146
+        },
+        {
+          "name": "ClickTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520887147,
+          "stop": 1729520887911
+        },
+        {
+          "name": "ClickButtonAddInTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520887912,
+          "stop": 1729520888739
+        },
+        {
+          "name": "EnterMandatoryFieldsNineNineNineEightSaintJohnsonPlace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520888751,
+          "stop": 1729520891256
+        },
+        {
+          "name": "ClickButtonPaymentMethods",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520891257,
+          "stop": 1729520891940
+        },
+        {
+          "name": "SelectAllPaymentMethodsWithoutAchHoldDepositApartment",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifySuccessSelectPmntMthds",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1729520897358,
+              "stop": 1729520898469
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520891941,
+          "stop": 1729520898469
+        },
+        {
+          "name": "ClickTabImages",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520898473,
+          "stop": 1729520899227
+        },
+        {
+          "name": "ClickEightTimeskButtonRemove",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Timed out after 10 seconds",
+            "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_ClickEightTimeskButtonRemove_100663801_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApartmentsPage\\AddApartmentsSteps.cs:line 652\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_ClickEightTimeskButtonRemove_100663801_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1729520899227,
+          "stop": 1729520909411
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "adb90aa541e84f1b9130cc82253fb619-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1729520770999,
+      "stop": 1729520912463
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1729520770998,
+  "stop": 1729520912474
+}

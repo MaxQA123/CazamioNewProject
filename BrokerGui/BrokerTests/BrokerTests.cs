@@ -392,7 +392,20 @@ namespace BrokerGuiTests
             string getAddressBuildingView = Pages.BuildingView.GetValueFromFieldNotInputAddress();
 
             Pages.BuildingView
-                .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
+                .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView)
+                .ClickTabApartments()
+                .ClickButtonAddInTabApartments();
+            Pages.AddApartments
+                .EnterMandatoryFieldsNineNineNineEightSaintJohnsonPlace()
+                .ClickButtonPaymentMethods();
+            Pages.PaymentOptionsMdlWndw
+                .SelectAllPaymentMethodsWithoutAchHoldDepositApartment();
+            Pages.AddApartments
+                .ClickTabImages()
+                .UploadFiveImages()
+                .ClickButtonSelectVideo()
+                .UplodImagesFileEnterLinksYouTubeVimeo()
+                .ClickButtonSaveApartment();
 
             #endregion
         }
