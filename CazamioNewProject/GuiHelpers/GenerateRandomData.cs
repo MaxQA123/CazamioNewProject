@@ -21,7 +21,7 @@ namespace CazamioNewProject.GuiHelpers
                 .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
-        public static string RandomAlphabet(int size)
+        public static string RandomAlphabetUpperCase(int size)
         {
             Random random = new Random();
             const string chars = "QWERTYUIOPASDFGHJKLZXCVBNM";

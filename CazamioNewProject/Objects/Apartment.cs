@@ -37,7 +37,7 @@ namespace CazamioNewProject.Objects
             public string OneWashingtonSquare { get; set; }
             public string NineNineNineEightSaintJohnsonPlace { get; set; }
             public string ThirtyDashTrirtyNineCrownSt { get; set; }
-            public string OneA1AAlbermaleRd { get; set; }
+            public string NineAAAlbermaleRd { get; set; }
             public string OneOneOneAEastFiftyOneStStreetPedestrianCrossing { get; set; }
         }
 
@@ -165,7 +165,7 @@ namespace CazamioNewProject.Objects
                 OneWashingtonSquare = "1 Washington Square",
                 NineNineNineEightSaintJohnsonPlace = "9998 Saint Johnson Place",
                 ThirtyDashTrirtyNineCrownSt = "30-39 Crown St",
-                OneA1AAlbermaleRd = "1A Albermale Rd",
+                NineAAAlbermaleRd = "9A Albermale Rd",
                 OneOneOneAEastFiftyOneStStreetPedestrianCrossing = "111A East 51st Street Pedestrian Crossing",
             };
         }
@@ -180,9 +180,9 @@ namespace CazamioNewProject.Objects
                 UnitNumberTwoNumbersStatic = "11",
                 UnitNumberFourNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(4),
                 UnitNumberFourNumbersStatic = "9997",
-                UnitNumberMaxNumbersAlphabetRandom = GenerateRandomData.RandomNumberWithoutZero(1) + " " + GenerateRandomData.RandomAlphabet(1) + " " + GenerateRandomData.RandomNumberWithoutZero(1) + " " + GenerateRandomData.RandomAlphabet(1),
+                UnitNumberMaxNumbersAlphabetRandom = GenerateRandomData.RandomNumberWithoutZero(1) + " " + GenerateRandomData.RandomAlphabetUpperCase(1) + " " + GenerateRandomData.RandomNumberWithoutZero(1) + " " + GenerateRandomData.RandomAlphabetUpperCase(1),
                 UnitNumberMaxNumbersAlphabetStatic = "1ABC",
-                UnitNumberFourAlphabetRandom = GenerateRandomData.RandomAlphabet(4),
+                UnitNumberFourAlphabetRandom = GenerateRandomData.RandomAlphabetUpperCase(4),
                 UnitNumberFourAlphabetStatic = "ABCD",
                 BedroomsOneNumber = GenerateRandomData.RandomNumberWithoutZero(1),
                 BedroomsTwoNumbers = GenerateRandomData.RandomNumberWithoutZero(2),

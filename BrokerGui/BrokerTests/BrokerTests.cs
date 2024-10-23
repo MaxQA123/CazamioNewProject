@@ -396,7 +396,7 @@ namespace BrokerGuiTests
                 .ClickTabApartments()
                 .ClickButtonAddInTabApartments();
             Pages.AddApartments
-                .EnterMandatoryFieldsNineNineNineEightSaintJohnsonPlace()
+                .EnterMandatoryFieldsThirtyDashThirtyNineCrownSt()
                 .ClickButtonPaymentMethods();
             Pages.PaymentOptionsMdlWndw
                 .SelectAllPaymentMethodsWithoutAchHoldDepositApartment();
@@ -608,6 +608,48 @@ namespace BrokerGuiTests
                 .ClickButtonSelectVideo()
                 .UplodImagesFileEnterLinksYouTubeVimeo()
                 .ClickButtonSaveApartment();
+
+            #endregion
+
+            WaitUntil.WaitSomeInterval(5000);
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Broker")]
+        [AllureSubSuite("AddApartmentAssignedAgent")]
+
+        public void AddApartmentAssignedAgent()
+        {
+            #region SettingsForBuilding
+
+            //All the fields filled in, Cardknox
+            //All tabs filled in
+            //9A Albermale Rd
+
+            #endregion
+
+            #region Preconditions Test
+
+            Pages.LogInLandlord
+                .EnterEmailPasswordAsBroker()
+                .ClickIconShow()
+                .ClickButtonLetsGo();
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+            Pages.ListOfApartments
+                .ClickButtonAdd();
+            Pages.AddApartments
+                .SelectBuildingNineAAlbermaleRoad()
+                .EnterDataInFieldsNineAAlbermaleRoad();
 
             #endregion
 
