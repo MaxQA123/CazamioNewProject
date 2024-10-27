@@ -142,7 +142,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputBathrooms, apartment.UnitBasicData.BathroomsOneNumber);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, apartment.UnitBasicData.LeasePriceTwoNumbers);
+            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, apartment.UnitBasicData.LeasePriceThreeNumbers);
             WaitUntil.WaitSomeInterval(100);
 
             return this;
@@ -702,8 +702,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 
         #region Tab Images
 
-        [AllureStep("ClickEightTimeskButtonRemove")]
-        public AddApartments ClickEightTimeskButtonRemove()
+        [AllureStep("ClickEightTimesButtonRemove")]
+        public AddApartments ClickEightTimesButtonRemove()
         {
             WaitUntil.CustomElementIsVisible(ButtonRemoveFile);
             WaitUntil.CustomElementIsClickable(ButtonRemoveFile);

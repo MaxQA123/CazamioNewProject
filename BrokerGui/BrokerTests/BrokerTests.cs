@@ -604,7 +604,7 @@ namespace BrokerGuiTests
                 .EnterHoldDepositOneThousand();
             Pages.AddApartments
                 .ClickTabImages()
-                .ClickEightTimeskButtonRemove()
+                .ClickEightTimesButtonRemove()
                 .ClickButtonSelectVideo()
                 .UplodImagesFileEnterLinksYouTubeVimeo()
                 .ClickButtonSaveApartment();
@@ -705,7 +705,7 @@ namespace BrokerGuiTests
             KeyBoardActions.ScrollToDown();
             Pages.AddApartments
                 .ClickTabImages()
-                .ClickEightTimeskButtonRemove()
+                .ClickEightTimesButtonRemove()
                 .ClickButtonSelectVideo()
                 .UplodImagesFileEnterLinksYouTubeVimeo()
                 .ClickButtonSaveApartment();

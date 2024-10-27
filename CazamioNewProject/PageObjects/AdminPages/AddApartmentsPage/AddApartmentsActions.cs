@@ -363,6 +363,24 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return this;
         }
 
+        [AllureStep("UploadEightImages")]
+        public AddApartments UploadEightImages()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonBrowseFiles);
+            WaitUntil.CustomElementIsClickable(ButtonBrowseFiles);
+            ButtonBrowseFiles.SendKeys(Path.GetFullPath(Path.Combine(Browser.RootPath() + UploadImages.IMAGE_APARTMENT_FIRST) + "\n" +
+                                                                      Browser.RootPath() + UploadImages.IMAGE_APARTMENT_SECOND + "\n" +
+                                                                      Browser.RootPath() + UploadImages.IMAGE_APARTMENT_THIRD + "\n" +
+                                                                      Browser.RootPath() + UploadImages.IMAGE_APARTMENT_FOURTH + "\n" +
+                                                                      Browser.RootPath() + UploadImages.IMAGE_APARTMENT_SECOND + "\n" +
+                                                                      Browser.RootPath() + UploadImages.IMAGE_APARTMENT_THIRD + "\n" +
+                                                                      Browser.RootPath() + UploadImages.IMAGE_APARTMENT_FOURTH + "\n" +
+                                                                      Browser.RootPath() + UploadImages.IMAGE_APARTMENT_FIFTH));
+            WaitUntil.WaitSomeInterval(10000);
+
+            return this;
+        }
+
         [AllureStep("ClickButtonSaveApartment")]
         public AddApartments ClickButtonSaveApartment()
         {
