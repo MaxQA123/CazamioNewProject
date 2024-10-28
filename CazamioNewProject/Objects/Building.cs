@@ -197,14 +197,14 @@ namespace CazamioNewProject.Objects
             return new CrownStInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(3) + " " + "Crown St",
-                NumberNameAddressStatic = "40-49 Crown St",
-                NumberAddress = "40-49",
+                NumberNameAddressStatic = "30-39 Crown St",
+                NumberAddress = "30-39",
                 AddressName = "Crown St",
                 City = "Brooklyn",
                 State = "NY",
                 Zip = "11225",
                 Neighborhood = "Crown Heights",
-                BuildingName = " Broker QA-Building Name 40-49 Crown S (12345) (09876) (*&^%)",
+                BuildingName = " Broker QA-Building Name 30-39 Crown S (12345) (09876) (*&^%)",
                 LlcName = "LLC Name QA Broker (12345) (09876) (*&^%)",
             };
         }

@@ -402,7 +402,6 @@ namespace BrokerGuiTests
                 .SelectAllPaymentMethodsWithoutAchHoldDepositApartment();
             Pages.AddApartments
                 .ClickTabImages()
-                .UploadFiveImages()
                 .ClickButtonSelectVideo()
                 .UplodImagesFileEnterLinksYouTubeVimeo()
                 .ClickButtonSaveApartment();

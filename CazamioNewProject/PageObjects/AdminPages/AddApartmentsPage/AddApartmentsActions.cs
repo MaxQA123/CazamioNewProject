@@ -386,9 +386,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         {
             WaitUntil.WaitSomeInterval(10000);
             KeyBoardActions.ScrollToDown();
-            WaitUntil.WaitSomeInterval(5000);
-            WaitUntil.CustomElementIsVisible(ButtonSaveApartment);
-            WaitUntil.CustomElementIsClickable(ButtonSaveApartment);
+            WaitUntil.WaitSomeInterval(10000);
             Button.Click(ButtonSaveApartment);
 
             return this;
