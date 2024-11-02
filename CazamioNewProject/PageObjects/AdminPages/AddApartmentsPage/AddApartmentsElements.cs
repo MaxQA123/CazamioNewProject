@@ -178,7 +178,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [FindsBy(How = How.XPath, Using = ("//app-required-documents//span[@class = 'dropdown-multiselect__caret']"))]
         public IWebElement ButtonRequiredDocuments;
 
-        [FindsBy(How = How.XPath, Using = ("//input[@aria-label = 'Social Security Card']"))]
+        [FindsBy(How = How.XPath, Using = ("//li//div[text() = 'Social Security Card']"))]
         public IWebElement ItemSocialSecurityCardRequiredDoc;
 
         [FindsBy(How = How.XPath, Using = ("//span[text() =  ' 12 months ']"))]
