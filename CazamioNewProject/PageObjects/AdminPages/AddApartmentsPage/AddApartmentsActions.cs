@@ -182,6 +182,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return this;
         }
 
+        [AllureStep("EnterHoldDepositThreeNumbers")]
+        public AddApartments EnterHoldDepositThreeNumbers()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputApartmentHoldDeposit);
+            InputGeneral.InputFunctionWithClear(FieldInputApartmentHoldDeposit, apartment.MySpaceAmountPayments.HoldDepositRandom);
+
+            return this;
+        }
+
         [AllureStep("ClickButtonSetFromBuilding")]
         public AddApartments ClickButtonSetFromBuilding()
         {

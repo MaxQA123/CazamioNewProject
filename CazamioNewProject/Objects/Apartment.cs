@@ -80,9 +80,11 @@ namespace CazamioNewProject.Objects
             public string MonthlyRentsPrePaymentTwo { get; set; }
             public string FloorOneNumber { get; set; }
             public string FloorTwoNumbers { get; set; }
+            public string FloorThreeNumbers { get; set; }
             public string ApartmentHoldDepositStatic { get; set; }
             public string RentalTermsByDefault { get; set; }
             public string RentalTermsOneYear { get; set; }
+            public string RentalTermsTenMonths { get; set; }
         }
 
         public class ApartmentStatusInfo
@@ -211,9 +213,11 @@ namespace CazamioNewProject.Objects
                 MonthlyRentsPrePaymentTwo = "2",
                 FloorOneNumber = GenerateRandomData.RandomNumberWithoutZero(1),
                 FloorTwoNumbers = GenerateRandomData.RandomNumberWithoutZero(2),
+                FloorThreeNumbers = GenerateRandomData.RandomNumberWithoutZero(3),
                 ApartmentHoldDepositStatic = "399",
                 RentalTermsByDefault = "12 months",
                 RentalTermsOneYear = "1 year",
+                RentalTermsTenMonths = "10 months",
             };
         }
 

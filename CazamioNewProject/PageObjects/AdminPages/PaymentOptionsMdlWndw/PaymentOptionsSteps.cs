@@ -59,6 +59,21 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             return this;
         }
 
+        [AllureStep("SelectPaymentMethodsCrdtCrdAch")]
+        public PaymentOptionsMdlWndw SelectPaymentMethodsCrdtCrdAch()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ItemCreditCard);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ItemAch);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonSave);
+            VerifySuccessSelectPmntMthds();
+            WaitUntil.SuccessCustomElementIsVisible(MessageSuccessPaymentMethodsSelectedMdlWndwOptns);
+
+            return this;
+        }
+
         [AllureStep("SelectPaymentMethodsCrdtCrdDlvrChck")]
         public PaymentOptionsMdlWndw SelectPaymentMethodsCrdtCrdDlvrChck()
         {

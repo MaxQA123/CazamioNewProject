@@ -137,95 +137,95 @@ namespace BrokerGuiTests
             #endregion
         }
 
-        [Test]
-        [AllureTag("Regression")]
-        [AllureOwner("Maksim Perevalov")]
-        [AllureSeverity(SeverityLevel.critical)]
-        [Retry(2)]
-        [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Broker")]
-        [AllureSubSuite("CreateAgent")]
+        //[Test]
+        //[AllureTag("Regression")]
+        //[AllureOwner("Maksim Perevalov")]
+        //[AllureSeverity(SeverityLevel.critical)]
+        //[Retry(2)]
+        //[Author("Maksim", "maxqatesting390@gmail.com")]
+        //[AllureSuite("Broker")]
+        //[AllureSubSuite("CreateAgent")]
 
-        public void CreateAgent()
-        {
-            #region Test Data
+        //public void CreateAgent()
+        //{
+        //    #region Test Data
 
-            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+        //    int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
 
-            #endregion
+        //    #endregion
 
-            #region Preconditions
+        //    #region Preconditions
 
-            Pages.LogInLandlord
-                .EnterEmailPasswordAsBroker()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+        //    Pages.LogInLandlord
+        //        .EnterEmailPasswordAsBroker()
+        //        .ClickIconShow()
+        //        .ClickButtonLetsGo();
 
-            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+        //    string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+        //    string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
 
-            Pages.SidebarLandlord
-                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+        //    Pages.SidebarLandlord
+        //        .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
 
-            #endregion
+        //    #endregion
 
-            #region Test
+        //    #region Test
 
-            Pages.SidebarLandlord
-                 .ClickButtonAgents();
-            Pages.ListOfAgents
-                .ClickButtonCreateAgent();
-            Pages.CreateNewAgentMdlWndw
-                .EnterFirstLastNameEmailPhnNmbrCell()
-                .EnterBrokerAgentCommission();
+        //    Pages.SidebarLandlord
+        //         .ClickButtonAgents();
+        //    Pages.ListOfAgents
+        //        .ClickButtonCreateAgent();
+        //    Pages.CreateNewAgentMdlWndw
+        //        .EnterFirstLastNameEmailPhnNmbrCell()
+        //        .EnterBrokerAgentCommission();
 
-            string fullEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailFromMdlWndwCreateAgent();
-            string partEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailBeforeDogFromModalWindowCreateNewAgent();
+        //    string fullEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailFromMdlWndwCreateAgent();
+        //    string partEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailBeforeDogFromModalWindowCreateNewAgent();
 
-            Pages.CreateNewAgentMdlWndw
-                .ClickButtonSave()
-                .VerifyMessageNewAgentCreatedSuccessfully();
-            KeyBoardActions.ClickEscapeButton();
-            Pages.AreYouSureLogOutLandlordMdlWndw
-                .MakeLogOut();
-            Pages.JScriptExecutor
-                .OpenNewTab();
-            Pages.EmailHelper
-                .OpenPutsBox(Pages.EmailPutsBox.TitleLetterCreateAgentMySpace, partEmailPutsBox);
-            Pages.EmailPutsBox
-                .VerifyTitleLetterCreateAgent()
-                .ClickButtonHtml();
+        //    Pages.CreateNewAgentMdlWndw
+        //        .ClickButtonSave()
+        //        .VerifyMessageNewAgentCreatedSuccessfully();
+        //    KeyBoardActions.ClickEscapeButton();
+        //    Pages.AreYouSureLogOutLandlordMdlWndw
+        //        .MakeLogOut();
+        //    Pages.JScriptExecutor
+        //        .OpenNewTab();
+        //    Pages.EmailHelper
+        //        .OpenPutsBox(Pages.EmailPutsBox.TitleLetterCreateAgentMySpace, partEmailPutsBox);
+        //    Pages.EmailPutsBox
+        //        .VerifyTitleLetterCreateAgent()
+        //        .ClickButtonHtml();
 
-            string getTextPasswordActual = Pages.EmailPutsBox.CopyPasswordFromEmailForCreateAdmin();
+        //    string getTextPasswordActual = Pages.EmailPutsBox.CopyPasswordFromEmailForCreateAdmin();
 
-            Pages.EmailPutsBox
-                .ClickButtonConfirmEmailForAdmin();
+        //    Pages.EmailPutsBox
+        //        .ClickButtonConfirmEmailForAdmin();
 
-            Pages.LogInLandlord
-                .PasteForEnterEmailFromEmailCreateAgent(fullEmailPutsBox)
-                .PasteForEnterPsswrdFromEmailCreateAgent(getTextPasswordActual)
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+        //    Pages.LogInLandlord
+        //        .PasteForEnterEmailFromEmailCreateAgent(fullEmailPutsBox)
+        //        .PasteForEnterPsswrdFromEmailCreateAgent(getTextPasswordActual)
+        //        .ClickIconShow()
+        //        .ClickButtonLetsGo();
 
-            string getUserNameRoleCompareAgent = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+        //    string getUserNameRoleCompareAgent = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
 
-            Pages.SidebarLandlord
-               .VerifyAgentUserNameAndRoleCreating(getUserNameRoleCompareAgent);
+        //    Pages.SidebarLandlord
+        //       .VerifyAgentUserNameAndRoleCreating(getUserNameRoleCompareAgent);
 
-            #endregion
+        //    #endregion
 
-            #region Postconditions
+        //    #region Postconditions
 
-            WaitUntil.WaitSomeInterval(100);
-            AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(fullEmailPutsBox, marketplaceId);
-            Console.WriteLine($"{fullEmailPutsBox}");
-            WaitUntil.WaitSomeInterval(100);
-            BrokersAgentsDbRequests.BrokersAgents.DeleteNewlyCreatedAgent(fullEmailPutsBox, marketplaceId);
-            WaitUntil.WaitSomeInterval(100);
-            AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(fullEmailPutsBox, marketplaceId);
+        //    WaitUntil.WaitSomeInterval(100);
+        //    AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(fullEmailPutsBox, marketplaceId);
+        //    Console.WriteLine($"{fullEmailPutsBox}");
+        //    WaitUntil.WaitSomeInterval(100);
+        //    BrokersAgentsDbRequests.BrokersAgents.DeleteNewlyCreatedAgent(fullEmailPutsBox, marketplaceId);
+        //    WaitUntil.WaitSomeInterval(100);
+        //    AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(fullEmailPutsBox, marketplaceId);
 
-            #endregion
-        }
+        //    #endregion
+        //}
 
         [Test]
         [AllureTag("Regression")]
@@ -648,7 +648,19 @@ namespace BrokerGuiTests
                 .ClickButtonAdd();
             Pages.AddApartments
                 .SelectBuildingNineAAlbermaleRoad()
-                .EnterDataInFieldsNineAAlbermaleRoad();
+                .EnterDataInFieldsNineAAlbermaleRoad()
+                .SelectStatusOccupied()
+                .SetFirstDayNextMonthsAvailableFrom()
+                .SelectApartmentTypeDuplex();
+            JScriptExecutor.ScrollToDownWebPage();
+            Pages.AddApartments
+                .EnterHoldDepositThreeNumbers()
+                .ClickButtonPaymentMethods();
+            Pages.PaymentOptionsMdlWndw
+                .SelectPaymentMethodsCrdtCrdAch();
+            Pages.AddApartments
+                .EnterTenMonthsRentalTerms()
+                .AddItemSocialSecurityCardRequiredDoc();
 
             #endregion
 

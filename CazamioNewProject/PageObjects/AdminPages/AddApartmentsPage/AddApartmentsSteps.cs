@@ -127,7 +127,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputMonthlyRentsPrePayment, apartment.UnitBasicData.MonthlyRentsPrePaymentTwo);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputFloor, apartment.UnitBasicData.FloorTwoNumbers);
+            InputGeneral.InputFunctionWithClear(FieldInputFloor, apartment.UnitBasicData.FloorThreeNumbers);
 
             return this;
         }
@@ -323,6 +323,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return this;
         }
 
+        [AllureStep("SelectApartmentTypeDuplex")]
+        public AddApartments SelectApartmentTypeDuplex()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonApartmentType);
+            Button.Click(ButtonApartmentType);
+            WaitUntil.CustomElementIsVisible(ItemDuplex);
+            WaitUntil.CustomElementIsClickable(ItemDuplex);
+            Button.Click(ItemDuplex);
+
+            return this;
+        }
+
         [AllureStep("SelectApartmentTypePlex")]
         public AddApartments SelectApartmentTypePlex()
         {
@@ -366,6 +378,31 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             Button.Click(ButtonTwelveMonths);
             InputGeneral.InputFunctionWithClear(FieldInputRentalTermsFirstValue, apartment.UnitBasicData.RentalTermsOneYear);
             KeyBoardActions.ClickEnterButton();
+            return this;
+        }
+
+        [AllureStep("EnterTenMonthsRentalTerms")]
+        public AddApartments EnterTenMonthsRentalTerms()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonApartmentStatus);
+            WaitUntil.CustomElementIsClickable(ButtonApartmentStatus);
+            Button.Click(ButtonTwelveMonths);
+            InputGeneral.InputFunctionWithClear(FieldInputRentalTermsFirstValue, apartment.UnitBasicData.RentalTermsTenMonths);
+            KeyBoardActions.ClickEnterButton();
+            KeyBoardActions.ClickArrowDown();
+            KeyBoardActions.ClickEnterButton();
+            return this;
+        }
+
+        [AllureStep("AddItemSocialSecurityCardRequiredDoc")]
+        public AddApartments AddItemSocialSecurityCardRequiredDoc()
+        {
+            Button.Click(ButtonRequiredDocuments);
+            WaitUntil.CustomElementIsVisible(ItemSocialSecurityCardRequiredDoc);
+            Button.Click(ItemSocialSecurityCardRequiredDoc);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonRequiredDocuments);
+
             return this;
         }
 
