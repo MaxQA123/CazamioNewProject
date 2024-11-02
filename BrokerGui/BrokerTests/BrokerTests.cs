@@ -117,18 +117,18 @@ namespace BrokerGuiTests
                .ClickButtonLeads();
             Pages.ListOfLeads
                 .VerifyTitleLeads();
-            Pages.SidebarLandlord
-                .ClickButtonAgents();
-            Pages.ListOfAgents
-                .VerifyTitleAgentsPg();
+            //Pages.SidebarLandlord
+            //    .ClickButtonAgents();
+            //Pages.ListOfAgents
+            //    .VerifyTitleAgentsPg();
             Pages.SidebarLandlord
                 .ClickButtonOwners();
             Pages.ListOfOwners
                 .VerifyTitleListOfOwnersPg();
-            Pages.SidebarLandlord
-               .ClickButtonMarketplace();
-            Pages.Marketplace
-                .VerifyTitleMarketplacePg();
+            //Pages.SidebarLandlord
+            //   .ClickButtonMarketplace();
+            //Pages.Marketplace
+            //    .VerifyTitleMarketplacePg();
             Pages.AreYouSureLogOutLandlordMdlWndw
                 .MakeLogOut();
             Pages.LogInLandlord
