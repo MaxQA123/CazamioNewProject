@@ -670,6 +670,17 @@ namespace BrokerGuiTests
                 .ClickButtonGeneralNext()
                 .SelectFourtyFourAmenities()
                 .SelectThreeAmenitiesIncludedInMonthlyRent();
+            JScriptExecutor.ScrollToDownWebPage();
+            Pages.AddApartments
+                .ClickButtonGeneralNext()
+                .ClickButtonAddLock()
+                .AddItemAccessTypePinCodeWithoutImage()
+                .ClickButtonAddLock()
+                .AddItemAccessTypeNoteWithoutImage()
+                .ClickTwiceButtonGeneralNext()
+                .ClickButtonSelectVideo()
+                .UplodFileVideoEnterLinksYouTubeVimeo()
+                .ClickButtonSaveApartment();
 
             #endregion
 

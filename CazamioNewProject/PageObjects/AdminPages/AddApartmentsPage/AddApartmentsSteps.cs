@@ -7,6 +7,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 {
     public partial class AddApartments
     {
+        [AllureStep("ClickTwiceButtonGeneralNext")]
+        public AddApartments ClickTwiceButtonGeneralNext()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonGeneralNext);
+            WaitUntil.CustomElementIsClickable(ButtonGeneralNext);
+            Button.Click(ButtonGeneralNext);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonGeneralNext);
+
+            return this;
+        }
+
         #region Tad units
 
         [AllureStep("SelectBuildingThirtyDashTrirtyNineCrownSt")]
@@ -557,6 +569,34 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return this;
         }
 
+        [AllureStep("AddItemAccessTypePinCodeWithoutImage")]
+        public AddApartments AddItemAccessTypePinCodeWithoutImage()
+        {
+            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.CustomElementIsVisible(ButtonAccessType);
+            Button.Click(ButtonAccessType);
+            WaitUntil.WaitSomeInterval(1000);
+            KeyBoardActions.ClickEnterButton();
+            //Button.Click(ItemPinCode);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputPinCodeForFirstEnter, GenerateRandomData.RandomNumberWithoutZero(1));
+            KeyBoardActions.ClickSpaceButton();
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithoutClear(FieldInputPinCodeForNextEnter, GenerateRandomData.RandomNumberWithoutZero(1));
+            KeyBoardActions.ClickSpaceButton();
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithoutClear(FieldInputPinCodeForNextEnter, GenerateRandomData.RandomNumberWithoutZero(1));
+            KeyBoardActions.ClickSpaceButton();
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithoutClear(FieldInputPinCodeForNextEnter, GenerateRandomData.RandomNumberWithoutZero(1));
+            KeyBoardActions.ClickSpaceButton();
+            InputGeneral.InputFunctionWithClear(FieldInputCustomNoteForAccess, apartment.AccessLocks.PincodeLongText);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonSaveForLock);
+
+            return this;
+        }
+
         [AllureStep("AddItemAccessTypeNote")]
         public AddApartments AddItemAccessTypeNote()
         {
@@ -570,6 +610,22 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.WaitSomeInterval(100);
             ButtonSelectImageForAccess.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_APARTMENT_LOCK_NOTE));
             WaitUntil.SuccessCustomElementIsVisible(MessageSuccessUploadImageForAccess);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonSaveForLock);
+
+            return this;
+        }
+
+        [AllureStep("AddItemAccessTypeNoteWithoutImage")]
+        public AddApartments AddItemAccessTypeNoteWithoutImage()
+        {
+            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.CustomElementIsVisible(ButtonAccessType);
+            Button.Click(ButtonAccessType);
+            WaitUntil.WaitSomeInterval(1000);
+            Button.Click(ItemNote);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputCustomNoteForAccess, apartment.AccessLocks.NoteLongText);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSaveForLock);
 
@@ -853,6 +909,17 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
                                                                       Browser.RootPath() + UploadImages.IMAGE_APARTMENT_THIRD + "\n" +
                                                                       Browser.RootPath() + UploadImages.IMAGE_APARTMENT_FOURTH + "\n" +
                                                                       Browser.RootPath() + UploadImages.IMAGE_APARTMENT_FIFTH));
+            WaitUntil.WaitSomeInterval(5000);
+            Pages.SelectorVideosMdlWndw
+                .UplodFileEnterLinksYouTubeVimeo();
+            WaitUntil.WaitSomeInterval(10000);
+
+            return this;
+        }
+
+        [AllureStep("UplodFileVideoEnterLinksYouTubeVimeo")]
+        public AddApartments UplodFileVideoEnterLinksYouTubeVimeo()
+        {
             WaitUntil.WaitSomeInterval(5000);
             Pages.SelectorVideosMdlWndw
                 .UplodFileEnterLinksYouTubeVimeo();
