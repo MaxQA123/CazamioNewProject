@@ -177,11 +177,11 @@ namespace CazamioNewProject.Objects
             return new UnitBasicDataInfo
             {
                 UnitNumberOneNumberRandom = GenerateRandomData.RandomNumberWithoutZero(1),
-                UnitNumberOneNumberStatic = "2",
+                UnitNumberOneNumberStatic = "1",
                 UnitNumberTwoNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(2),
                 UnitNumberTwoNumbersStatic = "11",
                 UnitNumberFourNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(4),
-                UnitNumberFourNumbersStatic = "9997",
+                UnitNumberFourNumbersStatic = "9999",
                 UnitNumberMaxNumbersAlphabetRandom = GenerateRandomData.RandomNumberWithoutZero(1) + " " + GenerateRandomData.RandomAlphabetUpperCase(1) + " " + GenerateRandomData.RandomNumberWithoutZero(1) + " " + GenerateRandomData.RandomAlphabetUpperCase(1),
                 UnitNumberMaxNumbersAlphabetStatic = "1ABC",
                 UnitNumberFourAlphabetRandom = GenerateRandomData.RandomAlphabetUpperCase(4),

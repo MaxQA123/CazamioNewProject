@@ -644,6 +644,11 @@ namespace BrokerGuiTests
 
             Pages.SidebarLandlord
                 .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+
+            #endregion
+
+            #region Test
+
             Pages.ListOfApartments
                 .ClickButtonAdd();
             Pages.AddApartments
@@ -660,7 +665,11 @@ namespace BrokerGuiTests
                 .SelectPaymentMethodsCrdtCrdAch();
             Pages.AddApartments
                 .EnterTenMonthsRentalTerms()
-                .AddItemSocialSecurityCardRequiredDoc();
+                .AddItemSocialSecurityCardRequiredDoc()
+                .EnterShortDescriptionInternalNotes()
+                .ClickButtonGeneralNext()
+                .SelectFourtyFourAmenities()
+                .SelectThreeAmenitiesIncludedInMonthlyRent();
 
             #endregion
 

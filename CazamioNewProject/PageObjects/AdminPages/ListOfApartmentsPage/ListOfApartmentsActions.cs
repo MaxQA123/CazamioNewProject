@@ -8,10 +8,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage
         [AllureStep("ClickButtonAdd")]
         public ListOfApartments ClickButtonAdd()
         {
-            WaitUntil.WaitSomeInterval(5000);
-            WaitUntil.CustomElementIsVisible(LoaderHidden, 10);
-            WaitUntil.CustomElementIsVisible(ButtonAdd);
-            WaitUntil.CustomElementIsClickable(ButtonAdd);
+            WaitUntil.WaitSomeInterval(10000);
             Button.Click(ButtonAdd);
 
             return this;

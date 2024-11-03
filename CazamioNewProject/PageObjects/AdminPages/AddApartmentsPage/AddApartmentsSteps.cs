@@ -25,6 +25,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [AllureStep("SelectBuildingNineAAlbermaleRoad")]
         public AddApartments SelectBuildingNineAAlbermaleRoad()
         {
+            WaitUntil.CustomElementIsVisible(LoaderHidden, 10);
+            WaitUntil.WaitSomeInterval(5000);
             WaitUntil.CustomElementIsVisible(ButtonBuildingName);
             WaitUntil.CustomElementIsClickable(ButtonBuildingName);
             Button.Click(ButtonBuildingName);
@@ -82,7 +84,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         public AddApartments EnterToAllFieldsThirtyDashThirtyNineCrownSt()
         {
             WaitUntil.CustomElementIsVisible(FieldInputUnitNumber);
-            InputGeneral.InputFunctionWithClear(FieldInputUnitNumber, apartment.UnitBasicData.UnitNumberTwoNumbersStatic);
+            InputGeneral.InputFunctionWithClear(FieldInputUnitNumber, apartment.UnitBasicData.UnitNumberFourAlphabetRandom);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputBedrooms, apartment.UnitBasicData.BedroomsTwoNumbers);
             WaitUntil.WaitSomeInterval(100);
@@ -370,6 +372,17 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return this;
         }
 
+        [AllureStep("EnterShortDescriptionInternalNotes")]
+        public AddApartments EnterShortDescriptionInternalNotes()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputDescription);
+            InputGeneral.InputFunctionWithClear(FieldInputDescription, apartment.DescriptionsInternalNotes.DescriptionShort);
+            WaitUntil.CustomElementIsVisible(FieldInputInternalNotes);
+            InputGeneral.InputFunctionWithClear(FieldInputInternalNotes, apartment.DescriptionsInternalNotes.InternalNotesShort);
+
+            return this;
+        }
+
         [AllureStep("EnterOneYearRentalTerms")]
         public AddApartments EnterOneYearRentalTerms()
         {
@@ -419,6 +432,75 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
             SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
             SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+
+            return this;
+        }
+
+        [AllureStep("SelectFourtyFourAmenities")]
+        public AddApartments SelectFourtyFourAmenities()
+        {
+            ClickFieldInputSearchForAmenities();
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+            SelectAmenitiesForApartment(ListOfAmenitiesForApartmentAdminsPage.FIRST_TAG, " ");
+
+            return this;
+        }
+
+        [AllureStep("SelectThreeAmenitiesIncludedInMonthlyRent")]
+        public AddApartments SelectThreeAmenitiesIncludedInMonthlyRent()
+        {
+            ClickFieldInputSearchForDefaultIncludedInMonthlyRentAmenities();
+            Button.Click(ItemHeatIncluded);
+            Button.Click(ItemHotWaterIncluded);
+            Button.Click(ItemNetflixIncluded);
+            Button.Click(ItemSewerIncluded);
+            Button.Click(ItemWifiIncluded);
+            Button.Click(ItemWaterIncluded);
+            Button.Click(ItemSmartHubIncluded);
+            Button.Click(ItemElectricIncluded);
+            Button.Click(ItemGasIncluded);
 
             return this;
         }
