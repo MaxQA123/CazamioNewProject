@@ -162,6 +162,22 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return this;
         }
 
+        [AllureStep("EnterDataForOneOneOneAEastStPedestrianCrossing")]
+        public AddApartments EnterDataForOneOneOneAEastStPedestrianCrossing()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputUnitNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputUnitNumber, apartment.UnitBasicData.UnitNumberMaxNumbersAlphabetRandom);
+            //WaitUntil.WaitSomeInterval(100);
+            //InputGeneral.InputFunctionWithClear(FieldInputBedrooms, apartment.UnitBasicData.BedroomsTwoNumbers);
+            //WaitUntil.WaitSomeInterval(100);
+            //InputGeneral.InputFunctionWithClear(FieldInputBathrooms, apartment.UnitBasicData.BathroomsOneNumber);
+            //WaitUntil.WaitSomeInterval(100);
+            //InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, apartment.UnitBasicData.LeasePriceThreeNumbers);
+            //WaitUntil.WaitSomeInterval(100);
+
+            return this;
+        }
+
         [AllureStep("EnterMandatoryFieldsThirtyDashThirtyNineCrownSt")]
         public AddApartments EnterMandatoryFieldsThirtyDashThirtyNineCrownSt()
         {

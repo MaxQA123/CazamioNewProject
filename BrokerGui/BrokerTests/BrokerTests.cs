@@ -559,8 +559,6 @@ namespace BrokerGuiTests
         {
             #region SettingsForBuilding
 
-            //All the fields filled in, Cardknox
-            //All tabs filled in
             //30-39Crown St
 
             #endregion
@@ -626,8 +624,6 @@ namespace BrokerGuiTests
         {
             #region SettingsForBuilding
 
-            //All the fields filled in, Cardknox
-            //All tabs filled in
             //9A Albermale Rd
 
             #endregion

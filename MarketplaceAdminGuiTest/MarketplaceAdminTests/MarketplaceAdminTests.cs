@@ -741,8 +741,6 @@ namespace MarketplaceAdminGuiTest
         {
             #region SettingsForBuilding
 
-            //All the fields filled in, Cardknox
-            //All tabs filled in
             //1 Washington Square
 
             #endregion
@@ -873,8 +871,6 @@ namespace MarketplaceAdminGuiTest
         {
             #region SettingsForBuilding
 
-            //All the fields filled in, Cardknox
-            //All tabs filled in
             //9998 Saint Johnson Place
 
             #endregion

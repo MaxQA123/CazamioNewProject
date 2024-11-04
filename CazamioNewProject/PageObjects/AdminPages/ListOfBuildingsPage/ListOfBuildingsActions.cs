@@ -49,6 +49,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
             return this;
         }
 
+        [AllureStep("SearchOneOneOneAEastStPerestrian")]
+        public ListOfBuildings SearchOneOneOneAEastStPerestrian()
+        {
+            WaitUntil.CustomElementIsVisible(LoaderHidden, 10);
+            WaitUntil.WaitSomeInterval(10000);
+            WaitUntil.CustomElementIsVisible(FieldInputSearch);
+            WaitUntil.CustomElementIsClickable(FieldInputSearch);
+            InputGeneral.InputFunctionWithClear(FieldInputSearch, apartment.BuildingShortAddress.OneOneOneAEastFiftyOneStStreetPedestrianCrossing);
+
+            return this;
+        }
+
         [AllureStep("SelectItemFirst")]
         public ListOfBuildings SelectItemFirst()
         {

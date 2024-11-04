@@ -1,5 +1,6 @@
 using Allure.Commons;
 using CazamioNewProject.GuiHelpers;
+using CazamioNewProject.Objects;
 using CazamioNewProject.PageObjects;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
@@ -123,7 +124,6 @@ namespace AgentBrokerGui
         {
             #region SettingsForBuilding
 
-            //Added Filled only mandatory the data, but full address, AuthorizeNet
             //East 51st Street Pedestrian Crossing
 
             #endregion
@@ -206,6 +206,73 @@ namespace AgentBrokerGui
                 .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
 
             #endregion
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Broker")]
+        [AllureSubSuite("AddBuildingAssignedAgentBroker")]
+
+        public void AddApartmentAssignedAgentBroker()
+        {
+            #region SettingsForBuilding
+
+            //111A East 51st Street Pedestrian Crossing
+
+            #endregion
+
+            #region Test data
+
+            Apartment apartment = Apartment.Generate();
+
+            #endregion
+
+            #region Preconditions Test
+
+            Pages.LogInLandlord
+                .EnterEmailPasswordAsAgentBroker()
+                .ClickIconShow()
+                .ClickButtonLetsGo();
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyAgentBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+
+            Pages.SidebarLandlord
+                .ClickButtonBuildings();
+            Pages.ListOfBuildings
+                .SearchOneOneOneAEastStPerestrian();
+            Pages.ListOfBuildings
+                .SelectItemFirst();
+            Pages.BuildingView
+                .VerifyTitleBuildingViewPage();
+
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
+
+            Pages.BuildingView
+                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneOneOneAEastFiftyOneStStreetPedestrianCrossing)
+                .ClickTabApartments();
+            KeyBoardActions.ScrollToDown();
+            Pages.BuildingView
+                .ClickButtonAddInTabApartments();
+
+            #endregion
+
+            #region Test
+
+            Pages.AddApartments
+                .EnterDataForOneOneOneAEastStPedestrianCrossing();
+
+            #endregion
+
+            WaitUntil.WaitSomeInterval(5000);
         }
     }
 }
