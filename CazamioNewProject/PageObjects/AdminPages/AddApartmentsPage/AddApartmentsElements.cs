@@ -118,7 +118,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [FindsBy(How = How.XPath, Using = ("//ng-select[@formcontrolname = 'status']//div[@aria-selected= 'true']//span"))]
         public IWebElement InputStatus;
 
-        [FindsBy(How = How.XPath, Using = ("//ng-dropdown-panel//div/span[text() = 'Off market']"))]
+        [FindsBy(How = How.XPath, Using = ("//ng-dropdown-panel//div/span[text() = 'Off Market']"))]
         public IWebElement ItemOffMarket;
 
         [FindsBy(How = How.XPath, Using = ("//ng-dropdown-panel//div/span[text() = 'Occupied']"))]

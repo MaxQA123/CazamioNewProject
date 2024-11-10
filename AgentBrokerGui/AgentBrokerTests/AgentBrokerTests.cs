@@ -268,7 +268,19 @@ namespace AgentBrokerGui
             #region Test
 
             Pages.AddApartments
-                .EnterDataForOneOneOneAEastStPedestrianCrossing();
+                .EnterDataForOneOneOneAEastStPedestrianCrossing()
+                .SelectStatusOffMarket()
+                .SelectApartmentTypeLoft()
+                .ClickButtonPaymentMethods();
+            Pages.PaymentOptionsMdlWndw
+                .SelectPaymentMethodCreditCard();
+            Pages.AddApartments
+                .ClickTabAmenities()
+                .SelectThreeAmenitiesIncludedInMonthlyRent()
+                .ClickTabAccess()
+                .ClickButtonAddLock()
+                .AddItemAccessTypeNote()
+                .ClickTabConcessions();
 
             #endregion
 

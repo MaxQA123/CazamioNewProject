@@ -320,7 +320,6 @@ namespace BrokerGuiTests
         {
             #region SettingsForBuilding
 
-            //Added Filled only mandatory the data, AuthorizeNet
             //Crown St
 
             #endregion
@@ -422,8 +421,6 @@ namespace BrokerGuiTests
         {
             #region SettingsForBuilding
 
-            //All the fields filled in, Cardknox
-            //All tabs filled in
             //Albermale Rd
 
             #endregion
@@ -543,7 +540,6 @@ namespace BrokerGuiTests
 
             #endregion
 
-            WaitUntil.WaitSomeInterval(5000);
         }
 
         [Test]
@@ -608,7 +604,6 @@ namespace BrokerGuiTests
 
             #endregion
 
-            WaitUntil.WaitSomeInterval(5000);
         }
 
         [Test]
@@ -680,7 +675,6 @@ namespace BrokerGuiTests
 
             #endregion
 
-            WaitUntil.WaitSomeInterval(5000);
         }
 
         [Test]
@@ -696,7 +690,6 @@ namespace BrokerGuiTests
         {
             #region SettingsForBuilding
 
-            //All the fields filled in, Cardknox
             //All tabs filled in
 
             #endregion

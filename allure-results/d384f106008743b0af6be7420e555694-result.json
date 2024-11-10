@@ -1,0 +1,208 @@
+{
+  "uuid": "f1b527f3-77c8-4111-9025-35a0e79cf0d4-tr-0-1007",
+  "historyId": "BrokerGuiTests.TestsBaseGui.AddApartmentAssignedAgent",
+  "fullName": "BrokerGuiTests.TestsBaseGui.AddApartmentAssignedAgent",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "BrokerGuiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddApartmentAssignedAgent"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "AddApartmentAssignedAgent"
+    }
+  ],
+  "links": [],
+  "name": "AddApartmentAssignedAgent",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.NoSuchElementException : Could not find element by: By.XPath: //button//span[text() = 'Add']; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception",
+    "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.__a$_around_ClickButtonAdd_100663638_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfApartmentsPage\\ListOfApartmentsActions.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.__a$_around_ClickButtonAdd_100663638_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.__a$_around_ClickButtonAdd_100663638_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.ClickButtonAdd()\r\n   at BrokerGuiTests.TestsBaseGui.AddApartmentAssignedAgent() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 648"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "AddApartmentAssignedAgent",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.NoSuchElementException : Could not find element by: By.XPath: //button//span[text() = 'Add']; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception",
+        "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.__a$_around_ClickButtonAdd_100663638_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfApartmentsPage\\ListOfApartmentsActions.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.__a$_around_ClickButtonAdd_100663638_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.__a$_around_ClickButtonAdd_100663638_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.ClickButtonAdd()\r\n   at BrokerGuiTests.TestsBaseGui.AddApartmentAssignedAgent() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 648"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "EnterEmailPasswordAsBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1731247274526,
+          "stop": 1731247275831
+        },
+        {
+          "name": "ClickIconShow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1731247275832,
+          "stop": 1731247276427
+        },
+        {
+          "name": "ClickButtonLetsGo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1731247276427,
+          "stop": 1731247280239
+        },
+        {
+          "name": "GetUserNameFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1731247280250,
+          "stop": 1731247282044
+        },
+        {
+          "name": "GetUserNameRoleFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1731247282047,
+          "stop": 1731247282189
+        },
+        {
+          "name": "VerifyBrokerUserNameAndRole",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Leoautotest Feabroker"
+            },
+            {
+              "name": "String",
+              "value": "Broker"
+            }
+          ],
+          "start": 1731247282200,
+          "stop": 1731247282268
+        },
+        {
+          "name": "ClickButtonAdd",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Could not find element by: By.XPath: //button//span[text() = 'Add']; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception",
+            "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.__a$_around_ClickButtonAdd_100663638_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfApartmentsPage\\ListOfApartmentsActions.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.__a$_around_ClickButtonAdd_100663638_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1731247282275,
+          "stop": 1731247292958
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "fe684c1f39f14f8c8a38c663307b0e74-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1731247268219,
+      "stop": 1731247296696
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1731247268218,
+  "stop": 1731247296707
+}

@@ -48,28 +48,35 @@ namespace CazamioNewProject.Objects
             public string UnitNumberTwoNumbersRandom { get; set; }
             public string UnitNumberTwoNumbersStatic { get; set; }
             public string UnitNumberFourNumbersRandom { get; set; }
+            public string UnitNumberThreeNumbersAlphabetStatic { get; set; }
+            public string UnitNumberThreeNumbersAlphabetRandom { get; set; }
             public string UnitNumberFourNumbersStatic { get; set; }
             public string UnitNumberMaxNumbersAlphabetRandom { get; set; }
             public string UnitNumberMaxNumbersAlphabetStatic { get; set; }
             public string UnitNumberFourAlphabetRandom { get; set; }
             public string UnitNumberFourAlphabetStatic { get; set; }
-            public string BedroomsOneNumber { get; set; }
-            public string BedroomsTwoNumbers { get; set; }
+            public string BedroomsOneNumberRandom { get; set; }
+            public string BedroomsTwoNumbersRandom { get; set; }
+            public string BedroomsOneNumberStatic { get; set; }
+            public string BedroomsTwoNumberStatic { get; set; }
             public string HalfBedroomsOne { get; set; }
             public string HalfBedroomsTwo { get; set; }
-            public string BathroomsOneNumber { get; set; }
-            public string BathroomsTwoNumbers { get; set; }
+            public string BathroomsOneNumberRandom { get; set; }
+            public string BathroomsTwoNumbersRandom { get; set; }
+            public string BathroomsOneNumberStatic { get; set; }
+            public string BathroomsTwoNumberStatic { get; set; }
             public string HalfBathroomsOne { get; set; }
             public string HalfBathroomsTwo { get; set; }
             public string SqFootOneNubmer { get; set; }
             public string SqFootTwoNubmers { get; set; }
             public string SqFootThreeNubmers { get; set; }
             public string SqFootFourNubmers { get; set; }
-            public string LeasePriceOneNumber { get; set; }
-            public string LeasePriceTwoNumbers { get; set; }
-            public string LeasePriceThreeNumbers { get; set; }
-            public string LeasePriceFourNumbers { get; set; }
-            public string LeasePriceFiveNumbers { get; set; }
+            public string LeasePriceOneNumberRandom { get; set; }
+            public string LeasePriceTwoNumbersRandom { get; set; }
+            public string LeasePriceThreeNumbersRandom { get; set; }
+            public string LeasePriceFourNumbersRandom { get; set; }
+            public string LeasePriceFiveNumbersRandom { get; set; }
+            public string LeasePriceFourNumbersStatic { get; set; }
             public string SecurityDepositOneNumber { get; set; }
             public string SecurityDepositTwoNumbers { get; set; }
             public string SecurityDepositThreeNumbers { get; set; }
@@ -180,29 +187,36 @@ namespace CazamioNewProject.Objects
                 UnitNumberOneNumberStatic = "1",
                 UnitNumberTwoNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(2),
                 UnitNumberTwoNumbersStatic = "11",
+                UnitNumberThreeNumbersAlphabetRandom = GenerateRandomData.RandomNumberWithoutZero(1) + " " + GenerateRandomData.RandomAlphabetUpperCase(1) + " " + GenerateRandomData.RandomNumberWithoutZero(1),
+                UnitNumberThreeNumbersAlphabetStatic = "1AB",
                 UnitNumberFourNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(4),
                 UnitNumberFourNumbersStatic = "9999",
                 UnitNumberMaxNumbersAlphabetRandom = GenerateRandomData.RandomNumberWithoutZero(1) + " " + GenerateRandomData.RandomAlphabetUpperCase(1) + " " + GenerateRandomData.RandomNumberWithoutZero(1) + " " + GenerateRandomData.RandomAlphabetUpperCase(1),
                 UnitNumberMaxNumbersAlphabetStatic = "1ABC",
                 UnitNumberFourAlphabetRandom = GenerateRandomData.RandomAlphabetUpperCase(4),
                 UnitNumberFourAlphabetStatic = "ABCD",
-                BedroomsOneNumber = GenerateRandomData.RandomNumberWithoutZero(1),
-                BedroomsTwoNumbers = GenerateRandomData.RandomNumberWithoutZero(2),
+                BedroomsOneNumberStatic = "1",
+                BedroomsTwoNumberStatic = "2",
+                BedroomsOneNumberRandom = GenerateRandomData.RandomNumberWithoutZero(1),
+                BedroomsTwoNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(2),
                 HalfBedroomsOne = "1",
                 HalfBedroomsTwo = "2",
-                BathroomsOneNumber = GenerateRandomData.RandomNumberWithoutZero(1),
-                BathroomsTwoNumbers = GenerateRandomData.RandomNumberWithoutZero(2),
+                BathroomsOneNumberRandom = GenerateRandomData.RandomNumberWithoutZero(1),
+                BathroomsTwoNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(2),
+                BathroomsOneNumberStatic = "1",
+                BathroomsTwoNumberStatic = "2",
                 HalfBathroomsOne = "1",
                 HalfBathroomsTwo = "2",
                 SqFootOneNubmer = GenerateRandomData.RandomNumberWithoutZero(1),
                 SqFootTwoNubmers = GenerateRandomData.RandomNumberWithoutZero(2),
                 SqFootThreeNubmers = GenerateRandomData.RandomNumberWithoutZero(3),
                 SqFootFourNubmers = GenerateRandomData.RandomNumberWithoutZero(4),
-                LeasePriceOneNumber = GenerateRandomData.RandomNumberWithoutZero(1),
-                LeasePriceTwoNumbers = GenerateRandomData.RandomNumberWithoutZero(2),
-                LeasePriceThreeNumbers = GenerateRandomData.RandomNumberWithoutZero(3),
-                LeasePriceFourNumbers = GenerateRandomData.RandomNumberWithoutZero(4),
-                LeasePriceFiveNumbers = GenerateRandomData.RandomNumberWithoutZero(5),
+                LeasePriceOneNumberRandom = GenerateRandomData.RandomNumberWithoutZero(1),
+                LeasePriceTwoNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(2),
+                LeasePriceThreeNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(3),
+                LeasePriceFourNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(4),
+                LeasePriceFiveNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(5),
+                LeasePriceFourNumbersStatic = "1555",
                 SecurityDepositOneNumber = GenerateRandomData.RandomNumberWithoutZero(1),
                 SecurityDepositTwoNumbers = GenerateRandomData.RandomNumberWithoutZero(2),
                 SecurityDepositThreeNumbers = GenerateRandomData.RandomNumberWithoutZero(3),

@@ -1,0 +1,238 @@
+{
+  "uuid": "248242d3-657c-4d93-abcd-e12a43e74179-tr-0-1004",
+  "historyId": "AgentBrokerGui.TestsBaseGui.AddApartmentAssignedAgentBroker",
+  "fullName": "AgentBrokerGui.TestsBaseGui.AddApartmentAssignedAgentBroker",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AgentBrokerGui"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddApartmentAssignedAgentBroker"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "AddBuildingAssignedAgentBroker"
+    }
+  ],
+  "links": [],
+  "name": "AddApartmentAssignedAgentBroker",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+    "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage.ListOfBuildings.__a$_around_SelectItemFirst_100663624_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfBuildingsPage\\ListOfBuildingsActions.cs:line 68\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage.ListOfBuildings.__a$_around_SelectItemFirst_100663624_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage.ListOfBuildings.__a$_around_SelectItemFirst_100663624_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage.ListOfBuildings.SelectItemFirst() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfBuildingsPage\\ListOfBuildingsActions.cs:line 14\r\n   at AgentBrokerGui.TestsBaseGui.AddApartmentAssignedAgentBroker() in C:\\Automation\\CazamioNewProject\\AgentBrokerGui\\AgentBrokerTests\\AgentBrokerTests.cs:line 251"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "AddApartmentAssignedAgentBroker",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+        "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage.ListOfBuildings.__a$_around_SelectItemFirst_100663624_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfBuildingsPage\\ListOfBuildingsActions.cs:line 68\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage.ListOfBuildings.__a$_around_SelectItemFirst_100663624_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage.ListOfBuildings.__a$_around_SelectItemFirst_100663624_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage.ListOfBuildings.SelectItemFirst() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfBuildingsPage\\ListOfBuildingsActions.cs:line 14\r\n   at AgentBrokerGui.TestsBaseGui.AddApartmentAssignedAgentBroker() in C:\\Automation\\CazamioNewProject\\AgentBrokerGui\\AgentBrokerTests\\AgentBrokerTests.cs:line 251"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "EnterEmailPasswordAsAgentBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1731248703942,
+          "stop": 1731248705301
+        },
+        {
+          "name": "ClickIconShow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1731248705302,
+          "stop": 1731248705899
+        },
+        {
+          "name": "ClickButtonLetsGo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1731248705900,
+          "stop": 1731248709744
+        },
+        {
+          "name": "GetUserNameFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1731248709747,
+          "stop": 1731248714473
+        },
+        {
+          "name": "GetUserNameRoleFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1731248714476,
+          "stop": 1731248714541
+        },
+        {
+          "name": "VerifyAgentBrokerUserNameAndRole",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Agentus Brokerus"
+            },
+            {
+              "name": "String",
+              "value": "Agent"
+            }
+          ],
+          "start": 1731248714547,
+          "stop": 1731248715072
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1731248715074,
+          "stop": 1731248720667
+        },
+        {
+          "name": "SearchOneOneOneAEastStPerestrian",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1731248720685,
+          "stop": 1731248731650
+        },
+        {
+          "name": "SelectItemFirst",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Timed out after 10 seconds",
+            "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage.ListOfBuildings.__a$_around_SelectItemFirst_100663624_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfBuildingsPage\\ListOfBuildingsActions.cs:line 68\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage.ListOfBuildings.__a$_around_SelectItemFirst_100663624_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1731248731651,
+          "stop": 1731248743926
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "91ac09dde7d74eae8d956df6942d3acc-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1731248692702,
+      "stop": 1731248746792
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1731248692701,
+  "stop": 1731248746804
+}
