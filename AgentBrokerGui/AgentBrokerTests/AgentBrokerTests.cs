@@ -278,9 +278,12 @@ namespace AgentBrokerGui
                 .ClickTabAmenities()
                 .SelectThreeAmenitiesIncludedInMonthlyRent()
                 .ClickTabAccess()
+                .ClickToggleSelfTourStatus()
                 .ClickButtonAddLock()
                 .AddItemAccessTypeNote()
-                .ClickTabConcessions();
+                .ClickTabSpecials()
+                .ClickButtonAddSpecials()
+                .AddConcessionIsActiveWithoutName();
 
             #endregion
 

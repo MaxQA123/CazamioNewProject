@@ -290,6 +290,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 
         #region Tab Access
 
+        [AllureStep("ClickToggleSelfTourStatus")]
+        public AddApartments ClickToggleSelfTourStatus()
+        {
+            WaitUntil.CustomElementIsVisible(ToggleSelfTourStatus);
+            Button.Click(ToggleSelfTourStatus);
+
+            return this;
+        }
+
         [AllureStep("ClickButtonAddLock")]
         public AddApartments ClickButtonAddLock()
         {

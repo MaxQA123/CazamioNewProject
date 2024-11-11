@@ -253,6 +253,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 
         #region TabAccess
 
+        [FindsBy(How = How.XPath, Using = "//mat-slide-toggle//button[@id = 'mat-mdc-slide-toggle-2-button']")]
+        public IWebElement ToggleSelfTourStatus;
+
         [FindsBy(How = How.XPath, Using = "//button//span[text() = 'Add lock']")]
         public IWebElement ButtonAddLock;
 

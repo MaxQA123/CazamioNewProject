@@ -728,34 +728,22 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return this;
         }
 
-        //[AllureStep("AddConcessionIsActiveWithoutName")]
-        //public AddApartments AddConcessionIsActiveWithoutName()
-        //{
-        //    WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
-        //    WaitUntil.CustomElementIsClickable(FieldInputNameSpecials);
-        //    InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, building.Concessions.MonthsFree);
-        //    WaitUntil.WaitSomeInterval(100);
-        //    InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, building.Concessions.LeaseTerms);
-        //    WaitUntil.WaitSomeInterval(100);
-        //    KeyBoardActions.ClickArrowDown();
-        //    KeyBoardActions.ClickEnterButton();
-        //    WaitUntil.WaitSomeInterval(100);
-        //    Button.Click(ButtonYesSpecials);
-        //    WaitUntil.WaitSomeInterval(100);
-        //    Button.Click(FieldInputDateFrom);
-        //    WaitUntil.WaitSomeInterval(100);
-        //    Pages.DatePicker
-        //        .SelectCurrentDay();
-        //    WaitUntil.WaitSomeInterval(100);
-        //    Button.Click(FieldInputDateTo);
-        //    WaitUntil.WaitSomeInterval(100);
-        //    Pages.DatePicker
-        //        .SelectCurrentDayPlusOneDay();
-        //    WaitUntil.WaitSomeInterval(100);
-        //    Button.Click(ButtonSaveSpecials);
+        [AllureStep("AddConcessionIsActiveWithoutName")]
+        public AddApartments AddConcessionIsActiveWithoutName()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputNameSpecials);
+            WaitUntil.CustomElementIsClickable(FieldInputNameSpecials);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, apartment.SettingsConcessions.TwoMonthsFree);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputLeaseTerms, apartment.SettingsConcessions.RandomLeaseTerms);
+            WaitUntil.WaitSomeInterval(100);
+            KeyBoardActions.ClickArrowDown();
+            KeyBoardActions.ClickEnterButton();
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonSaveSpecials);
 
-        //    return this;
-        //}
+            return this;
+        }
 
         [AllureStep("AddConcessionInActive")]
         public AddApartments AddConcessionInActive()
@@ -858,7 +846,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             Button.Click(FieldInputDateTo);
             WaitUntil.WaitSomeInterval(100);
             Pages.DatePicker
-                .SelectCurrentDayPlusOneDay();
+                .SelectCurrentDay();
             WaitUntil.WaitSomeInterval(100);
             KeyBoardActions.ScrollToDown();
             Button.Click(ButtonLeaseSignedTriggerEvent);
