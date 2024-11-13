@@ -283,7 +283,14 @@ namespace AgentBrokerGui
                 .AddItemAccessTypeNote()
                 .ClickTabSpecials()
                 .ClickButtonAddSpecials()
-                .AddConcessionIsActiveWithoutName();
+                .AddConcessionIsActiveWithoutName()
+                .ClickTabImages()
+                .UploadFiveImages();
+            //JScriptExecutor.ScrollToDownWebPage();
+            Pages.AddApartments
+                .ClickButtonSelectVideo()
+                .UploadOneFileVideo()
+                .ClickButtonSaveApartment();
 
             #endregion
 

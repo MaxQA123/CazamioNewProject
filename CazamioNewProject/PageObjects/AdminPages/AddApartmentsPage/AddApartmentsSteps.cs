@@ -927,7 +927,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
                                                                       Browser.RootPath() + UploadImages.IMAGE_APARTMENT_FIFTH));
             WaitUntil.WaitSomeInterval(5000);
             Pages.SelectorVideosMdlWndw
-                .UplodFileEnterLinksYouTubeVimeo();
+                .UploadFileEnterLinksYouTubeVimeo();
             WaitUntil.WaitSomeInterval(10000);
 
             return this;
@@ -938,7 +938,19 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         {
             WaitUntil.WaitSomeInterval(5000);
             Pages.SelectorVideosMdlWndw
-                .UplodFileEnterLinksYouTubeVimeo();
+                .UploadFileEnterLinksYouTubeVimeo();
+            WaitUntil.WaitSomeInterval(10000);
+
+            return this;
+        }
+
+        [AllureStep("UploadOneFileVideo")]
+        public AddApartments UploadOneFileVideo()
+        {
+            KeyBoardActions.ScrollToDown();
+            WaitUntil.WaitSomeInterval(5000);
+            Pages.SelectorVideosMdlWndw
+                .UploadFileVideo();
             WaitUntil.WaitSomeInterval(10000);
 
             return this;
