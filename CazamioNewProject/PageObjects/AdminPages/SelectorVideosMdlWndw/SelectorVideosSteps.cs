@@ -21,6 +21,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.SelectorVideosMdlWndw
             return this;
         }
 
+        [AllureStep("EnterLinksYouTubeVimeo")]
+        public SelectorVideosMdlWndw EnterLinksYouTubeVimeo()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputYouTubeShareLink);
+            InputGeneral.InputFunctionWithClear(FieldInputYouTubeShareLink, apartment.LinksForVideo.LinkYouTube);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonSave);
+            WaitUntil.WaitSomeInterval(5000);
+
+            return this;
+        }
+
         [AllureStep("UploadFileVideo")]
         public SelectorVideosMdlWndw UploadFileVideo()
         {

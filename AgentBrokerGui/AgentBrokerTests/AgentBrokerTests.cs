@@ -296,5 +296,93 @@ namespace AgentBrokerGui
 
             WaitUntil.WaitSomeInterval(5000);
         }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Broker")]
+        [AllureSubSuite("AddApartmentAssignedAgBr")]
+
+        public void AddApartmentAssignedAgBr()
+        {
+            #region SettingsForBuilding
+
+            //111A East 51st Street Pedestrian Crossing
+
+            #endregion
+
+            #region Test data
+
+            Apartment apartment = Apartment.Generate();
+
+            #endregion
+
+            #region Preconditions Test
+
+            Pages.LogInLandlord
+                .EnterEmailPasswordAsAgentBroker()
+                .ClickIconShow()
+                .ClickButtonLetsGo();
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyAgentBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+
+            Pages.SidebarLandlord
+                .ClickButtonBuildings();
+            Pages.ListOfBuildings
+                .SearchOneOneOneAEastStPerestrian();
+            Pages.ListOfBuildings
+                .SelectItemFirst();
+            Pages.BuildingView
+                .VerifyTitleBuildingViewPage();
+
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
+
+            Pages.BuildingView
+                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneOneOneAEastFiftyOneStStreetPedestrianCrossing)
+                .ClickTabApartments();
+            KeyBoardActions.ScrollToDown();
+            Pages.BuildingView
+                .ClickButtonAddInTabApartments();
+
+            #endregion
+
+            #region Test
+
+            Pages.AddApartments
+                .EnterFullDataForOneOneOneAEastStPedestrianCrossing()
+                .SelectStatusSignedLease()
+                .SelectCurrentDatePlusOneDayAvailableFrom()
+                .SelectAgent()
+                .SelectApartmentTypeLoft();
+            JScriptExecutor.ScrollToDownWebPage();
+            Pages.AddApartments
+                .ClickButtonSetFromBuilding()
+                .SetSomeItemsRentalTerms()
+                .EnterShortDescriptionInternalNotes()
+                .ClickTwiceButtonGeneralNext()
+                .ClickToggleSelfTourStatus()
+                .ClickButtonAddLock()
+                .AddItemAccessTypePinCode()
+                .ClickButtonGeneralNext()
+                .ClickTabFreeStuff()
+                .ClickButtonAddSpecials()
+                .AddFreeStuffIsActiveWithoutName()
+                .ClickButtonGeneralNext()
+                .ClickButtonSelectVideo()
+                .SetLinksYouTubeVimeo()
+                .ClickButtonSaveApartment();
+
+            #endregion
+
+            WaitUntil.WaitSomeInterval(5000);
+        }
     }
 }

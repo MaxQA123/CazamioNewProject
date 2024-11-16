@@ -832,7 +832,7 @@ namespace MarketplaceAdminGuiTest
 
             Pages.AddApartments
                 .VerifyRequiredDocumentsByDefaultMySpaceAddApartments(getThreeRecentPaystubsAddApartments, getEmploymentVerificationLetterAddApartments, getGovIssuedIdAddApartments, getTwoMostRecentBankStatementsAddApartments, getThreeMostRecentRentPaymentsAddApartments, getMostRecentTaxReturnAddApartments)
-                .EnterDescriptionInternalNotes()
+                .EnterLongDescriptionInternalNotes()
                 .ClickButtonGeneralNext()
                 .SelectAllAmenitiesIncludedInMonthlyRent()
                 .SelectFiveAmenities()
@@ -932,7 +932,7 @@ namespace MarketplaceAdminGuiTest
             Pages.PaymentOptionsMdlWndw
                 .SelectAllPaymentMethodsWithoutAchHoldDepositApartment();
             Pages.AddApartments
-                .EnterOneYearRentalTerms()
+                .SetOneYearRentalTerms()
                 .ClickTabAmenities()
                 .ClickTabAccess()
                 .ClickTabSpecials()

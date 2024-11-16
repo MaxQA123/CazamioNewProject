@@ -45,7 +45,7 @@ namespace CazamioNewProject.Objects
         {
             public string UnitNumberOneNumberRandom { get; set; }
             public string UnitNumberOneNumberStatic { get; set; }
-            public string UnitNumberTwoNumbersRandom { get; set; }
+            public string UnitNumberTwoNumberLetterRandom { get; set; }
             public string UnitNumberTwoNumbersStatic { get; set; }
             public string UnitNumberFourNumbersRandom { get; set; }
             public string UnitNumberThreeNumbersAlphabetStatic { get; set; }
@@ -57,20 +57,23 @@ namespace CazamioNewProject.Objects
             public string UnitNumberFourAlphabetStatic { get; set; }
             public string BedroomsOneNumberRandom { get; set; }
             public string BedroomsTwoNumbersRandom { get; set; }
+            public string BedroomsZeroNumberStatic { get; set; }
             public string BedroomsOneNumberStatic { get; set; }
             public string BedroomsTwoNumberStatic { get; set; }
-            public string HalfBedroomsOne { get; set; }
-            public string HalfBedroomsTwo { get; set; }
+            public string HalfBedroomsOneStatic { get; set; }
+            public string HalfBedroomsTwoStatic { get; set; }
             public string BathroomsOneNumberRandom { get; set; }
             public string BathroomsTwoNumbersRandom { get; set; }
+            public string BathroomsZeroNumberStatic { get; set; }
             public string BathroomsOneNumberStatic { get; set; }
             public string BathroomsTwoNumberStatic { get; set; }
-            public string HalfBathroomsOne { get; set; }
-            public string HalfBathroomsTwo { get; set; }
+            public string HalfBathroomsOneStatic { get; set; }
+            public string HalfBathroomsTwoStatic { get; set; }
             public string SqFootOneNubmer { get; set; }
             public string SqFootTwoNubmers { get; set; }
             public string SqFootThreeNubmers { get; set; }
             public string SqFootFourNubmers { get; set; }
+            public string SqFootZero { get; set; }
             public string LeasePriceOneNumberRandom { get; set; }
             public string LeasePriceTwoNumbersRandom { get; set; }
             public string LeasePriceThreeNumbersRandom { get; set; }
@@ -81,17 +84,23 @@ namespace CazamioNewProject.Objects
             public string SecurityDepositTwoNumbers { get; set; }
             public string SecurityDepositThreeNumbers { get; set; }
             public string SecurityDepositFourNumbers { get; set; }
+            public string SecurityDepositFourNumbersStatic { get; set; }
             public string SecurityDepositFiveNumbers { get; set; }
             public string MonthlyRentsPrePaymentByDefault { get; set; }
             public string MonthlyRentsPrePaymentOne { get; set; }
             public string MonthlyRentsPrePaymentTwo { get; set; }
+            public string MonthlyRentsPrePaymentZero { get; set; }
             public string FloorOneNumber { get; set; }
             public string FloorTwoNumbers { get; set; }
             public string FloorThreeNumbers { get; set; }
+            public string FloorZero { get; set; }
             public string ApartmentHoldDepositStatic { get; set; }
             public string RentalTermsByDefault { get; set; }
+            public string RentalTermsOneMonth { get; set; }
+            public string RentalTermsSixMonths { get; set; }
             public string RentalTermsOneYear { get; set; }
             public string RentalTermsTenMonths { get; set; }
+            public string RentalTermsEighteenMonths { get; set; }
         }
 
         public class ApartmentStatusInfo
@@ -185,7 +194,7 @@ namespace CazamioNewProject.Objects
             {
                 UnitNumberOneNumberRandom = GenerateRandomData.RandomNumberWithoutZero(1),
                 UnitNumberOneNumberStatic = "1",
-                UnitNumberTwoNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(2),
+                UnitNumberTwoNumberLetterRandom = GenerateRandomData.RandomNumberWithoutZero(1) + " " + GenerateRandomData.RandomAlphabetUpperCase(1),
                 UnitNumberTwoNumbersStatic = "11",
                 UnitNumberThreeNumbersAlphabetRandom = GenerateRandomData.RandomNumberWithoutZero(1) + " " + GenerateRandomData.RandomAlphabetUpperCase(1) + " " + GenerateRandomData.RandomNumberWithoutZero(1),
                 UnitNumberThreeNumbersAlphabetStatic = "1AB",
@@ -195,22 +204,25 @@ namespace CazamioNewProject.Objects
                 UnitNumberMaxNumbersAlphabetStatic = "1ABC",
                 UnitNumberFourAlphabetRandom = GenerateRandomData.RandomAlphabetUpperCase(4),
                 UnitNumberFourAlphabetStatic = "ABCD",
+                BedroomsZeroNumberStatic = "0",
                 BedroomsOneNumberStatic = "1",
                 BedroomsTwoNumberStatic = "2",
                 BedroomsOneNumberRandom = GenerateRandomData.RandomNumberWithoutZero(1),
                 BedroomsTwoNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(2),
-                HalfBedroomsOne = "1",
-                HalfBedroomsTwo = "2",
+                HalfBedroomsOneStatic = "1",
+                HalfBedroomsTwoStatic = "2",
                 BathroomsOneNumberRandom = GenerateRandomData.RandomNumberWithoutZero(1),
                 BathroomsTwoNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(2),
+                BathroomsZeroNumberStatic = "0",
                 BathroomsOneNumberStatic = "1",
                 BathroomsTwoNumberStatic = "2",
-                HalfBathroomsOne = "1",
-                HalfBathroomsTwo = "2",
+                HalfBathroomsOneStatic = "1",
+                HalfBathroomsTwoStatic = "2",
                 SqFootOneNubmer = GenerateRandomData.RandomNumberWithoutZero(1),
                 SqFootTwoNubmers = GenerateRandomData.RandomNumberWithoutZero(2),
                 SqFootThreeNubmers = GenerateRandomData.RandomNumberWithoutZero(3),
                 SqFootFourNubmers = GenerateRandomData.RandomNumberWithoutZero(4),
+                SqFootZero = "0",
                 LeasePriceOneNumberRandom = GenerateRandomData.RandomNumberWithoutZero(1),
                 LeasePriceTwoNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(2),
                 LeasePriceThreeNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(3),
@@ -222,16 +234,22 @@ namespace CazamioNewProject.Objects
                 SecurityDepositThreeNumbers = GenerateRandomData.RandomNumberWithoutZero(3),
                 SecurityDepositFourNumbers = GenerateRandomData.RandomNumberWithoutZero(4),
                 SecurityDepositFiveNumbers = GenerateRandomData.RandomNumberWithoutZero(5),
+                SecurityDepositFourNumbersStatic = "1333",
                 MonthlyRentsPrePaymentByDefault = "1",
                 MonthlyRentsPrePaymentOne = "1",
                 MonthlyRentsPrePaymentTwo = "2",
+                MonthlyRentsPrePaymentZero = "0",
                 FloorOneNumber = GenerateRandomData.RandomNumberWithoutZero(1),
                 FloorTwoNumbers = GenerateRandomData.RandomNumberWithoutZero(2),
                 FloorThreeNumbers = GenerateRandomData.RandomNumberWithoutZero(3),
+                FloorZero = "0",
                 ApartmentHoldDepositStatic = "399",
                 RentalTermsByDefault = "12 months",
                 RentalTermsOneYear = "1 year",
                 RentalTermsTenMonths = "10 months",
+                RentalTermsEighteenMonths = "18 months",
+                RentalTermsOneMonth = "1 month",
+                RentalTermsSixMonths = "6 months",
             };
         }
 
