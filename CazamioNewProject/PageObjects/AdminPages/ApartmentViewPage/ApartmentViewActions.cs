@@ -1,12 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CazamioNewProject.GuiHelpers;
+using CazamioNewProject.Objects;
+using NUnit.Allure.Attributes;
 
 namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
 {
-    internal class ApartmentViewActions
+    public partial class ApartmentView
     {
+        Apartment apartment = Apartment.Generate();
+        Application application = Application.Generate();
+
+        [AllureStep("ClickButtonGetLink")]
+        public ApartmentView ClickButtonGetLink()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonGetLink);
+            Button.Click(ButtonGetLink);
+
+            return this;
+        }
+
+        [AllureStep("EnterFieldInputFirstName")]
+        public ApartmentView EnterFieldInputFirstName()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputFirstName);
+            InputGeneral.InputFunctionWithClear(FieldInputFirstName, application.TenantsData.FirstNameNewTenantMainApplicant);
+
+            return this;
+        }
+
+        [AllureStep("EnterFieldInputLastName")]
+        public ApartmentView EnterFieldInputLastName()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputLastName);
+            InputGeneral.InputFunctionWithClear(FieldInputLastName, application.TenantsData.LastNameNewTenantMainApplicant);
+
+            return this;
+        }
     }
 }

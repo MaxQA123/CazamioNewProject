@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
 {
-    internal class ApartmentViewAssertions
+    public partial class ApartmentView
     {
     }
 }
