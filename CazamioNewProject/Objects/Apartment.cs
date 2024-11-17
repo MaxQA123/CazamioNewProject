@@ -79,6 +79,7 @@ namespace CazamioNewProject.Objects
             public string LeasePriceThreeNumbersRandom { get; set; }
             public string LeasePriceFourNumbersRandom { get; set; }
             public string LeasePriceFiveNumbersRandom { get; set; }
+            public string LeasePriceThreeNumbersStatic { get; set; }
             public string LeasePriceFourNumbersStatic { get; set; }
             public string SecurityDepositOneNumber { get; set; }
             public string SecurityDepositTwoNumbers { get; set; }
@@ -228,6 +229,7 @@ namespace CazamioNewProject.Objects
                 LeasePriceThreeNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(3),
                 LeasePriceFourNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(4),
                 LeasePriceFiveNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(5),
+                LeasePriceThreeNumbersStatic = "850",
                 LeasePriceFourNumbersStatic = "1555",
                 SecurityDepositOneNumber = GenerateRandomData.RandomNumberWithoutZero(1),
                 SecurityDepositTwoNumbers = GenerateRandomData.RandomNumberWithoutZero(2),
