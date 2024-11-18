@@ -1002,6 +1002,8 @@ namespace MarketplaceAdminGuiTest
             KeyBoardActions.ScrollToDown();
 
             #endregion
+
+            WaitUntil.WaitSomeInterval(5000);
         }
     }
 }

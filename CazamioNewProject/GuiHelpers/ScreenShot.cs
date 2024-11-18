@@ -1,7 +1,6 @@
 ﻿using OpenQA.Selenium;
 using System.IO;
 using System;
-using Allure.Commons;
 
 namespace CazamioNewProject.GuiHelpers
 {
@@ -24,11 +23,6 @@ namespace CazamioNewProject.GuiHelpers
             WaitUntil.WaitSomeInterval(2000);
             return name;
         }
-
-        //public static string MakeScreenShot()
-        //{
-        //    byte[] content = ((ITakesScreenshot)Browser.Driver).GetScreenshot().AsByteArray;
-        //    AllureLifecycle.Instance.AddAttachment("Failed Screenshots", "image/png", content);
-        //}
     }
 }
+
