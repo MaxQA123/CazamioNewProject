@@ -29,7 +29,7 @@ namespace CazamioNewProject.Objects
                 EmailNewTenantMainApplicant = "appl-myspace1-" + GenerateRandomData.RandomEmail(5),
                 FirstNameNewTenantMainApplicant = Name.FirstName(),
                 LastNameNewTenantMainApplicant = Name.LastName(),
-        };
+            };
         }
     }
 }

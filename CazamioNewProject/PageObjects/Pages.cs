@@ -33,6 +33,7 @@ using CazamioNewProject.PageObjects.AdminPages.TemplatesPage;
 using CazamioNewProject.PageObjects.EmailPutsBoxPage;
 using CazamioNewProject.PageObjects.TenantPages.Header;
 using CazamioNewProject.PageObjects.TenantPages.LogInPage;
+using CazamioNewProject.Tables.BuildingApartmentsTbls;
 using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 
@@ -49,7 +50,7 @@ namespace CazamioNewProject.PageObjects
             return page;
         }
 
-        #region Objects
+        #region Landlord objects
 
         public static SuperAdmin SuperAdmin => GetPage<SuperAdmin>();
         public static MarketplaceAdmin MarketplaceAdmin => GetPage<MarketplaceAdmin>();
@@ -87,7 +88,13 @@ namespace CazamioNewProject.PageObjects
 
         #endregion
 
-        #region Landlord Modal Windows
+        #region Landlord tables
+
+        public static BuildingApartments BuildingApartments => GetPage<BuildingApartments>();
+
+        #endregion
+
+        #region Landlord modal Windows
 
         public static CreateANewMarketplaceAdminMdlWindow CreateANewMarketplaceAdminMdlWindow => GetPage<CreateANewMarketplaceAdminMdlWindow>();
         public static AreYouSureLogOutLandlordMdlWndw AreYouSureLogOutLandlordMdlWndw => GetPage<AreYouSureLogOutLandlordMdlWndw>();

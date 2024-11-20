@@ -1000,6 +1000,8 @@ namespace MarketplaceAdminGuiTest
                 .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
+            Pages.BuildingApartments
+                .ClickFirstRow();
 
             #endregion
 
