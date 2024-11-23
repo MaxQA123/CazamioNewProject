@@ -9,20 +9,25 @@ namespace CazamioNewProject.Tables.BuildingApartmentsTbls
     public partial class BuildingApartments
     {
         public UnitColumnInfo UnitColumn { get; set; }
+        public StatusColumnInfo StatusColumn { get; set; }
 
         public static BuildingApartments Generate()
         {
             return new BuildingApartments
             {
                 UnitColumn = CreateUnitColumnInfo(),
+                StatusColumn = CreateStatusColumnInfo(),
             };
         }
 
         public class UnitColumnInfo
         {
             public string UnitForNineNineNineEightSaintJohnsonPlace { get; set; }
-            public string FirstNameNewTenantMainApplicant { get; set; }
-            public string LastNameNewTenantMainApplicant { get; set; }
+        }
+
+        public class StatusColumnInfo
+        {
+            public string DepositReceived { get; set; }
         }
 
         private static UnitColumnInfo CreateUnitColumnInfo()
@@ -30,8 +35,14 @@ namespace CazamioNewProject.Tables.BuildingApartmentsTbls
             return new UnitColumnInfo
             {
                 UnitForNineNineNineEightSaintJohnsonPlace = "",
-                //FirstNameNewTenantMainApplicant = Name.FirstName(),
-                //LastNameNewTenantMainApplicant = Name.LastName(),
+            };
+        }
+
+        private static StatusColumnInfo CreateStatusColumnInfo()
+        {
+            return new StatusColumnInfo
+            {
+                DepositReceived = "Deposit Received",
             };
         }
     }

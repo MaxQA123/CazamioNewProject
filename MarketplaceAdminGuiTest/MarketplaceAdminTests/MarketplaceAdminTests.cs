@@ -1001,11 +1001,11 @@ namespace MarketplaceAdminGuiTest
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
             Pages.BuildingApartments
-                .ClickFirstRow();
+                .SelectApartmentDepositReceived();
 
             #endregion
 
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(1000);
         }
     }
 }

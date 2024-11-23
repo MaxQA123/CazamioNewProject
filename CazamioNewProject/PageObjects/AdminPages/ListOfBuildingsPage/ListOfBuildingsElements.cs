@@ -14,7 +14,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
         [FindsBy(How = How.XPath, Using = "//button//span[text() = 'Add']")]
         public IWebElement ButtonAdd;
 
-        [FindsBy(How = How.XPath, Using = "//building-list//table//tbody//tr//td")]
+        [FindsBy(How = How.XPath, Using = "//building-list//table//tbody//tr")]
         public IWebElement ItemFirstBuildingOnPage;
 
         [FindsBy(How = How.XPath, Using = "//input[@id = 'field-search']")]
