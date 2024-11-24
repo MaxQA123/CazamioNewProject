@@ -1001,11 +1001,14 @@ namespace MarketplaceAdminGuiTest
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
             Pages.BuildingApartments
-                .ClickFirstRow();
+                .ClickRowByDepositReceived();
+            Pages.ApartmentView
+                .VerifyTitleApartmentViewPage()
+                .CreateNewApplicationAndTenant();
 
             #endregion
 
-            WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.WaitSomeInterval(10000);
         }
     }
 }

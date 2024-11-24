@@ -1,6 +1,7 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
 using CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage;
+using CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage;
 using CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls;
 using CazamioNewProject.PageObjects.AdminPages.BuildingViewPage;
@@ -86,6 +87,7 @@ namespace CazamioNewProject.PageObjects
         public static ListOfMarketplaceAdmins ListOfMarketplaceAdmins => GetPage<ListOfMarketplaceAdmins>();
         public static NewBuilding NewBuilding => GetPage<NewBuilding>();
         public static AddApartments AddApartments => GetPage<AddApartments>();
+        public static ApartmentView ApartmentView => GetPage<ApartmentView>();
 
         #endregion
 

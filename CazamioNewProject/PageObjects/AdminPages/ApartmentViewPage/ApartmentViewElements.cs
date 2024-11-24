@@ -5,6 +5,12 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
 {
     public partial class ApartmentView
     {
+        [FindsBy(How = How.XPath, Using = ("//app-loader//div[@class = 'hidden']"))]
+        public IWebElement LoaderHidden;
+
+        [FindsBy(How = How.XPath, Using = ("//div[text() = 'Apartment view']"))]
+        public IWebElement TitleApartmentViewPage;
+
         [FindsBy(How = How.XPath, Using = "//input[@placeholder = 'Look up existing lead or create new']")]
         public IWebElement FieldInputGetApplicationLink;
 

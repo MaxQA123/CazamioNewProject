@@ -26,7 +26,7 @@ namespace CazamioNewProject.Objects
         {
             return new TenantsDataInfo
             {
-                EmailNewTenantMainApplicant = "appl-myspace1-" + GenerateRandomData.RandomEmail(5),
+                EmailNewTenantMainApplicant = "appl-myspace1-" + GenerateRandomData.RandomEmail(5) + EmailNameDomen.PUTS_BOX,
                 FirstNameNewTenantMainApplicant = Name.FirstName(),
                 LastNameNewTenantMainApplicant = Name.LastName(),
             };

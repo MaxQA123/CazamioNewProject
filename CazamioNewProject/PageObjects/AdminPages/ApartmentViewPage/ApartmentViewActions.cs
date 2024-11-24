@@ -9,6 +9,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         Apartment apartment = Apartment.Generate();
         Application application = Application.Generate();
 
+        [AllureStep("EnterFieldInputFirstName")]
+        public ApartmentView EnterFieldInputGetApplicationLink()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputGetApplicationLink);
+            InputGeneral.InputFunctionWithClear(FieldInputGetApplicationLink, application.TenantsData.EmailNewTenantMainApplicant);
+
+            return this;
+        }
+
         [AllureStep("ClickButtonGetLink")]
         public ApartmentView ClickButtonGetLink()
         {
