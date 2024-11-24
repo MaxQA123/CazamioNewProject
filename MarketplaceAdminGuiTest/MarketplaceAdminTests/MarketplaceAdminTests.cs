@@ -1001,7 +1001,7 @@ namespace MarketplaceAdminGuiTest
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
             Pages.BuildingApartments
-                .SelectApartmentDepositReceived();
+                .ClickFirstRow();
 
             #endregion
 

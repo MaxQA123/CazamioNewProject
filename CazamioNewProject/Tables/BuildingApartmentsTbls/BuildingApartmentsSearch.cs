@@ -8,7 +8,7 @@ namespace CazamioNewProject.Tables.BuildingApartmentsTbls
 {
     public partial class BuildingApartments
     {
-        [FindsBy(How = How.XPath, Using = ("//table//tbody//tr"))]
+        [FindsBy(How = How.XPath, Using = ("//app-building-apartments//table//tbody//tr"))]
         public IWebElement FirstRow;
 
         [FindsBy(How = How.XPath, Using = ("//table//tbody//tr//td[text() = 'Deposit Received']/ancestor::tr"))]

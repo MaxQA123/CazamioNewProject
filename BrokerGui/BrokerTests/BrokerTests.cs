@@ -6,6 +6,7 @@ using CazamioNewProject.DbHelpers.OwnerManagementsTable;
 using CazamioNewProject.DbHelpers.OwnerPhoneNumbersTable;
 using CazamioNewProject.DbHelpers.OwnersDbTable;
 using CazamioNewProject.GuiHelpers;
+using CazamioNewProject.Objects;
 using CazamioNewProject.PageObjects;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
@@ -276,7 +277,7 @@ namespace BrokerGuiTests
                 .EnterPhoneExtensionNumbers()
                 .ClickButtonAddCommissionStructure();
             KeyBoardActions.ScrollToDown();
-            Pages.CreateANewOwnerMdlWndw               
+            Pages.CreateANewOwnerMdlWndw
                 .ClickButtonAddMgmt()
                 .SelectItemTenantPays()
                 .EnterDataTenantPays()
@@ -688,16 +689,16 @@ namespace BrokerGuiTests
 
         public void DemoAddApartment()
         {
-            #region SettingsForBuilding
+            #region Test data
 
-            //All tabs filled in
+            Apartment apartment = Apartment.Generate();
 
             #endregion
 
             #region Preconditions Test
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsBroker()
+                .EnterEmailPasswordAsMarketplaceAdmin()
                 .ClickIconShow()
                 .ClickButtonLetsGo();
 
@@ -705,45 +706,29 @@ namespace BrokerGuiTests
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
 
             Pages.SidebarLandlord
-                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare)
+                .VerifyMarketplaceAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+            Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
+                .SearchNineNineNineEightSaintJohnsonPlace();
+            Pages.ListOfBuildings
                 .SelectItemFirst();
-            KeyBoardActions.ScrollToDown();
-            WaitUntil.WaitSomeInterval(2000);
             Pages.BuildingView
-                .ClickTabApartments()
-                .ClickButtonClone();
+                .VerifyTitleBuildingViewPage();
 
-            #endregion
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
 
-            #region Test
-
-            Pages.AddApartments
-                .VerifyTitleAddApartmentsPage()
-                .EnterUnitNumber();
+            Pages.BuildingView
+                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
+                .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
-            Pages.AddApartments
-                .ClickTabImages()
-                .ClickEightTimesButtonRemove()
-                .ClickButtonSelectVideo()
-                .UplodImagesFileEnterLinksYouTubeVimeo()
-                .ClickButtonSaveApartment();
-
-            //Pages.SelectorVideosMdlWndw
-            //    .UplodFileEnterLinksYouTubeVimeo();
-
-            //    .SelectCurrentDateAvailableFrom()
-            //    .SelectStatusApplicationSubmitted()
-            //    .SelectAgent()
-            //    .SelectApartmentTypePlex();
-            //JScriptExecutor.ScrollToDownWebPage();
-            //Pages.AddApartments
-            //    .EnterHoldDepositOneThousand();
+            Pages.BuildingApartments
+                .ClickFirstRow();
 
             #endregion
 
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(1000);
         }
     }
 }

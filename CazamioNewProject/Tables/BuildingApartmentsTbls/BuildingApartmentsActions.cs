@@ -15,7 +15,9 @@ namespace CazamioNewProject.Tables.BuildingApartmentsTbls
         [AllureStep("ClickFirstRow")]
         public BuildingApartments ClickFirstRow()
         {
+            WaitUntil.WaitSomeInterval(5000);
             WaitUntil.CustomElementIsVisible(FirstRow);
+            WaitUntil.CustomElementIsClickable(FirstRow);
             Button.Click(FirstRow);
 
             return this;

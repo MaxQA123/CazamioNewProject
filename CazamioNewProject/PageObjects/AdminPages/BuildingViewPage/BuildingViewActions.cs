@@ -13,6 +13,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingViewPage
             WaitUntil.CustomElementIsVisible(TabApartments);
             WaitUntil.CustomElementIsClickable(TabApartments);
             Button.Click(TabApartments);
+            WaitUntil.WaitSomeInterval(1000);
 
             return this;
         }
