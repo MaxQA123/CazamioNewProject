@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CazamioNewProject.Tables.BuildingApartmentsTbls
+namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
 {
-    public partial class BuildingApartments
+    public partial class BuildingApartmentsTable
     {
         public UnitColumnInfo UnitColumn { get; set; }
         public StatusColumnInfo StatusColumn { get; set; }
 
-        public static BuildingApartments Generate()
+        public static BuildingApartmentsTable Generate()
         {
-            return new BuildingApartments
+            return new BuildingApartmentsTable
             {
                 UnitColumn = CreateUnitColumnInfo(),
                 StatusColumn = CreateStatusColumnInfo(),

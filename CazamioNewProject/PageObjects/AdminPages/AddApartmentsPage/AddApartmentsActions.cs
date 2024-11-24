@@ -441,5 +441,16 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 
             return this;
         }
+
+        [AllureStep("ClickFirstRow")]
+        public AddApartments ClickFirstRow()
+        {
+            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.CustomElementIsVisible(FirstRow);
+            WaitUntil.CustomElementIsClickable(FirstRow);
+            Button.Click(FirstRow);
+
+            return this;
+        }
     }
 }

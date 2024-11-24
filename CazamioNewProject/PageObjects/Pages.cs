@@ -2,6 +2,7 @@
 using CazamioNewProject.Objects;
 using CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage;
 using CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw;
+using CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls;
 using CazamioNewProject.PageObjects.AdminPages.BuildingViewPage;
 using CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.CreateANewBrokerMdlWndw;
@@ -33,7 +34,6 @@ using CazamioNewProject.PageObjects.AdminPages.TemplatesPage;
 using CazamioNewProject.PageObjects.EmailPutsBoxPage;
 using CazamioNewProject.PageObjects.TenantPages.Header;
 using CazamioNewProject.PageObjects.TenantPages.LogInPage;
-using CazamioNewProject.Tables.BuildingApartmentsTbls;
 using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 
@@ -59,6 +59,7 @@ namespace CazamioNewProject.PageObjects
         public static AgentBroker AgentBroker => GetPage<AgentBroker>();
         public static Building Building => GetPage<Building>();
         public static Apartment Apartment => GetPage<Apartment>();
+        public static BuildingApartmentsTable BuildingApartmentsTable => GetPage<BuildingApartmentsTable>();
         public static Demo Demo => GetPage<Demo>();
 
         #endregion

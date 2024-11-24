@@ -1,16 +1,11 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using NUnit.Allure.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CazamioNewProject.Tables.BuildingApartmentsTbls
+namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
 {
     public partial class BuildingApartments
     {
-        BuildingApartments buildingApartments = BuildingApartments.Generate();
+        BuildingApartmentsTable buildingApartmentsTable = BuildingApartmentsTable.Generate();
 
         [AllureStep("ClickFirstRow")]
         public BuildingApartments ClickFirstRow()

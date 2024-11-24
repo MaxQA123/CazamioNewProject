@@ -414,5 +414,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [FindsBy(How = How.XPath, Using = "//cazamio-button[@text = 'Next']")]
         public IWebElement ButtonGeneralNext;
 
+        [FindsBy(How = How.XPath, Using = ("//table//tbody//tr"))]
+        public IWebElement FirstRow;
+
     }
 }

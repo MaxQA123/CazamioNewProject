@@ -1,15 +1,14 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.PageObjects;
-using System;
 
-namespace CazamioNewProject.Tables.BuildingApartmentsTbls
+namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
 {
     public partial class BuildingApartments
     {
-        [FindsBy(How = How.XPath, Using = ("//app-building-apartments//table//tbody//tr"))]
+        [FindsBy(How = How.XPath, Using = ("//table//tbody//tr"))]
         public IWebElement FirstRow;
+
 
         [FindsBy(How = How.XPath, Using = ("//table//tbody//tr//td[text() = 'Deposit Received']/ancestor::tr"))]
         public IWebElement DemoOne;
