@@ -1,11 +1,7 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
+using CazamioNewProject.PageObjects.AdminPages.SidebarPage;
 using NUnit.Allure.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
 {
@@ -28,9 +24,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         [AllureStep("ClickButtonLetsGo")]
         public LogInLandlord ClickButtonLetsGo()
         {
-            WaitUntil.WaitSomeInterval(2000);
+            WaitUntil.WaitSomeInterval(500);
             Button.Click(ButtonLetsGoLogInPg);
-            WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.CustomElementIsVisible(SidebarLandlord.UserNameOfSidebar);
 
             return this;
         }

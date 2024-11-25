@@ -1,10 +1,5 @@
 ﻿using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 {
@@ -20,7 +15,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         public IWebElement linkRemovePhotoOfLandlord;
 
         [FindsBy(How = How.XPath, Using = "//div[@class = 'user-name']")]
-        public IWebElement UserNameOfSidebar;
+        public static IWebElement UserNameOfSidebar;
 
         [FindsBy(How = How.XPath, Using = "//div[@class = 'user-role']")]
         public IWebElement UserNameRoleOfSidebar;
