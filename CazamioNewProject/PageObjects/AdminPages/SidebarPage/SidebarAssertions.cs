@@ -10,7 +10,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("VerifySuperAdminUserNameAndRole")]
         public SidebarLandlord VerifySuperAdminUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
         {
-            WaitUntil.WaitSomeInterval(100);
+            WaitUntil.WaitSomeInterval(500);
             string getUserNameExpected = superAdmin.FullNameSuperAdmin;
             string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_SUPER_ADMIN;
 
@@ -29,7 +29,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("VerifyMarketplaceAdminUserNameAndRole")]
         public SidebarLandlord VerifyMarketplaceAdminUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
         {
-            WaitUntil.CustomElementIsVisible(UserNameRoleOfSidebar);
+            WaitUntil.WaitSomeInterval(500);
             string getUserNameExpected = marketplaceAdmin.FullNameMarketplaceAdmin;
             string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_MARKETPLACE_ADMIN;
 
@@ -47,7 +47,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("VerifyMarketplaceAdminUserNameAndRoleCreating")]
         public SidebarLandlord VerifyMarketplaceAdminUserNameAndRoleCreating(string getUserNameRoleMarketplaceAdmin)
         {
-            WaitUntil.CustomElementIsVisible(UserNameRoleOfSidebar);
+            WaitUntil.WaitSomeInterval(500);
             string getUserNameExpected = marketplaceAdmin.FullNameMarketplaceAdmin;
             string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_MARKETPLACE_ADMIN;
 
@@ -63,7 +63,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("VerifyBrokerUserNameAndRole")]
         public SidebarLandlord VerifyBrokerUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
         {
-            WaitUntil.CustomElementIsVisible(UserNameRoleOfSidebar);
+            WaitUntil.WaitSomeInterval(500);
             string getUserNameExpected = broker.FullUserNameBroker;
             string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_BROKER;
 
@@ -81,7 +81,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("VerifyBrokerUserNameAndRoleCreating")]
         public SidebarLandlord VerifyBrokerUserNameAndRoleCreating(string getUserNameRoleCompareBroker)
         {
-            WaitUntil.CustomElementIsVisible(UserNameRoleOfSidebar);
+            WaitUntil.WaitSomeInterval(500);
             string getUserNameExpected = broker.FullUserNameBroker;
             string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_BROKER;
 
@@ -97,7 +97,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("VerifyAgentUserNameAndRole")]
         public SidebarLandlord VerifyAgentUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
         {
-            WaitUntil.CustomElementIsVisible(UserNameRoleOfSidebar);
+            WaitUntil.WaitSomeInterval(500);
             string getUserNameExpected = agent.FullNameCreatedAgentMySpace.FirstAgent;
             string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_AGENT;
 
@@ -116,7 +116,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("VerifyAgentUserNameAndRoleCreating")]
         public SidebarLandlord VerifyAgentUserNameAndRoleCreating(string getUserNameRoleCompareAgent)
         {
-            WaitUntil.CustomElementIsVisible(UserNameRoleOfSidebar);
+            WaitUntil.WaitSomeInterval(500);
             string getUserNameExpected = agent.FullNameCreatedAgentMySpace.FirstAgent;
             string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_AGENT;
 

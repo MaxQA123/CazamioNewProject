@@ -25,8 +25,8 @@ namespace CazamioNewProject.GuiHelpers
     {
         public static void Click(IWebElement element)
         {
-            //WaitUntil.CustomElementIsVisible(element);
             WaitUntil.WaitSomeInterval(500);
+            WaitUntil.CustomElementIsVisible(element);
             element.Click();
         }
     }

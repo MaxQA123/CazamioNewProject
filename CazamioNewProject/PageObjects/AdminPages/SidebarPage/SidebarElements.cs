@@ -14,8 +14,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [FindsBy(How = How.XPath, Using = "//div[@class= 'remove-account-photo']")]
         public IWebElement linkRemovePhotoOfLandlord;
 
-        [FindsBy(How = How.XPath, Using = "//div[@class = 'user-name']")]
-        public static IWebElement UserNameOfSidebar;
+        [FindsBy(How = How.XPath, Using = "//app-sidebar//div[@class = 'user-name']")]
+        public IWebElement UserNameOfSidebar;
 
         [FindsBy(How = How.XPath, Using = "//div[@class = 'user-role']")]
         public IWebElement UserNameRoleOfSidebar;

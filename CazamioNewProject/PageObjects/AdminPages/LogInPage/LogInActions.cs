@@ -24,9 +24,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         [AllureStep("ClickButtonLetsGo")]
         public LogInLandlord ClickButtonLetsGo()
         {
-            WaitUntil.WaitSomeInterval(500);
             Button.Click(ButtonLetsGoLogInPg);
-            WaitUntil.CustomElementIsVisible(SidebarLandlord.UserNameOfSidebar);
 
             return this;
         }
