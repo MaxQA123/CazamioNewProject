@@ -771,7 +771,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.WaitSomeInterval(100);
             Pages.DatePicker
                .ClickButtonDropDownYearMonth()
-               .SelectCurrentYear();
+               .SelectNextYear();
             Pages.DatePicker
                 .SelectNextMonth();
             Pages.DatePicker
@@ -865,7 +865,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.WaitSomeInterval(100);
             Pages.DatePicker
                .ClickButtonDropDownYearMonth()
-               .SelectCurrentYear();
+               .SelectNextYear();
             Pages.DatePicker
                 .SelectNextMonth();
             Pages.DatePicker

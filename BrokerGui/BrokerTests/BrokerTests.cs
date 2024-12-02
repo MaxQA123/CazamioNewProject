@@ -76,18 +76,14 @@ namespace BrokerGuiTests
 
             #region Test
 
-            //Pages.SidebarLandlord
-            //    .UploadImageLogoLandlordFirst()
-            //    .VerifyChangingLogoImageLandlord()
-            //    .UploadImageLogoLandlordSecond()
-            //    .VerifyChangingLogoImageLandlord()
-            //    .UploadImageAvatarUserLandlordFirst()
-            //    .VerifyChangingAvatarImageLandlord()
-            //    .UploadImageAvatarUserLandlordSecond()
-            //    .VerifyChangingAvatarImageLandlord()
-            //    .ClicklinkRemovePhotoOfLandlord()
-            //    .VerifyRewmoveAvatarImageLandlord()
-            //    .ClickButtonDashboard();
+            Pages.SidebarLandlord
+                .UploadImageAvatarUserLandlordFirst()
+                .VerifyChangingAvatarImageLandlord()
+                .UploadImageAvatarUserLandlordSecond()
+                .VerifyChangingAvatarImageLandlord()
+                .ClicklinkRemovePhotoOfLandlord()
+                .VerifyRewmoveAvatarImageLandlord()
+                .ClickButtonDashboard();
             Pages.Dashboard
                 .VerifyTitleOfDashboardPg();
             Pages.SidebarLandlord

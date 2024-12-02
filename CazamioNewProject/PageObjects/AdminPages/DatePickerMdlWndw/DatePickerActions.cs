@@ -100,6 +100,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.DatePickerMdlWndw
             element.Click();
         }
 
+        [AllureStep("SelectNextYear")]
+        public void SelectNextYear()
+        {
+            WaitUntil.WaitSomeInterval(1000);
+            int nextYear = DateTime.Now.Year + 1; // Получаем следующий год
+            var wait = new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(10));
+
+            // Ожидаем, пока элемент с текстом следующего года станет видимым, и кликаем
+            var element = wait.Until(drv => drv.FindElement(By.XPath($"//mat-multi-year-view//table//tbody//button//span[contains(text(), '{nextYear}')]")));
+            element.Click();
+        }
+
         #endregion
 
         [AllureStep("ClickButtonDropDownYearMonth")]

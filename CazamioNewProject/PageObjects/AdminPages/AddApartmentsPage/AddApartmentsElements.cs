@@ -130,7 +130,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [FindsBy(How = How.XPath, Using = ("//ng-dropdown-panel//div/span[text() = 'Signed Lease']"))]
         public IWebElement ItemSignedLease;
 
-        [FindsBy(How = How.XPath, Using = ("//ng-select[@formcontrolname = 'broker']"))]
+        [FindsBy(How = How.XPath, Using = ("//ng-select[@formcontrolname = 'agent']"))]
         public IWebElement ButtonAssignedAgent;
 
         [FindsBy(How = How.XPath, Using = ("//input[@formcontrolname = 'availableFrom']"))]

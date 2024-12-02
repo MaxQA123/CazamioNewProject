@@ -304,7 +304,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             WaitUntil.WaitSomeInterval(100);
             Pages.DatePicker
                 .ClickButtonDropDownYearMonth()
-                .SelectCurrentYear();
+                .SelectNextYear();
             Pages.DatePicker
                 .SelectNextMonth();
             Pages.DatePicker
