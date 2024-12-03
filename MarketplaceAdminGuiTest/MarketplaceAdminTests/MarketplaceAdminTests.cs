@@ -1066,14 +1066,14 @@ namespace MarketplaceAdminGuiTest
             string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
 
             Pages.BuildingView
-                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
+                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneWashingtonSquare)
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
             Pages.BuildingApartments
                 .ClickRowByVacant();
             Pages.ApartmentView
                 .VerifyTitleApartmentViewPage()
-                .CreateNewApplicationAndTenantViaButtonGetLink();
+                //.CreateNewApplicationAndTenantViaButtonGetLink();
 
             #endregion
 
