@@ -34,5 +34,20 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
             var element = wait.Until(driver => driver.FindElement(By.XPath(xpath)));
             element.Click();
         }
+
+        [AllureStep("ClickRowByVacant")]
+        public void ClickRowByVacant()
+        {
+            BuildingApartmentsTable buildingApartmentsTable = BuildingApartmentsTable.Generate();
+
+            var xpath = "//table//tbody//tr//td[text() = '" + buildingApartmentsTable.StatusColumn.Vacant + "']";
+
+            // Создаём объект WebDriverWait с таймаутом
+            WebDriverWait wait = new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(10));
+
+            // Ждём, пока элемент станет доступным, и выполняем клик
+            var element = wait.Until(driver => driver.FindElement(By.XPath(xpath)));
+            element.Click();
+        }
     }
 }

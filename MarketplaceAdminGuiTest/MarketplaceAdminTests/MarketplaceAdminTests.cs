@@ -21,7 +21,9 @@ namespace MarketplaceAdminGuiTest
 
     public class TestsBaseGui : MarketplaceAdminBase
     {
+        //Amount order 12
         [Test]
+        [Order(2)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -49,6 +51,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
+        [Order(1)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -151,6 +154,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
+        [Order(4)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -247,6 +251,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
+        [Order(3)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -337,6 +342,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
+        [Order(6)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -416,6 +422,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
+        [Order(5)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -501,6 +508,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
+        [Order(7)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -637,6 +645,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
+        [Order(8)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -729,6 +738,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
+        [Order(10)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -860,6 +870,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
+        [Order(9)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -956,6 +967,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
+        [Order(11)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -1004,7 +1016,64 @@ namespace MarketplaceAdminGuiTest
                 .ClickRowByDepositReceived();
             Pages.ApartmentView
                 .VerifyTitleApartmentViewPage()
-                .CreateNewApplicationAndTenant();
+                .CreateNewApplicationAndTenantViaButtonGetLink();
+
+            #endregion
+
+            WaitUntil.WaitSomeInterval(10000);
+        }
+
+        [Test]
+        [Order(12)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("MarketplaceAdmin")]
+        [AllureSubSuite("CreateApplicationForApartmentVacant")]
+
+        public void CreateApplicationForApartmentVacant()
+        {
+            #region Test data
+
+            Apartment apartment = Apartment.Generate();
+
+            #endregion
+
+            #region Preconditions Test
+
+            Pages.LogInLandlord
+                .EnterEmailPasswordAsMarketplaceAdmin()
+                .ClickIconShow()
+                .ClickButtonLetsGo();
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyMarketplaceAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+            Pages.SidebarLandlord
+                .ClickButtonBuildings();
+            Pages.ListOfBuildings
+                .SearchBuildingOneWashingtonSquare();
+            Pages.ListOfBuildings
+                .SelectItemFirst();
+            Pages.BuildingView
+                .VerifyTitleBuildingViewPage();
+
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
+
+            Pages.BuildingView
+                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
+                .ClickTabApartments();
+            KeyBoardActions.ScrollToDown();
+            Pages.BuildingApartments
+                .ClickRowByVacant();
+            Pages.ApartmentView
+                .VerifyTitleApartmentViewPage()
+                .CreateNewApplicationAndTenantViaButtonGetLink();
 
             #endregion
 

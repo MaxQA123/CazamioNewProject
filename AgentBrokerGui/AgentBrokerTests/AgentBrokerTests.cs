@@ -13,7 +13,9 @@ namespace AgentBrokerGui
 
     public class TestsBaseGui : AgentBrokerBase
     {
+        //Amount order 5
         [Test]
+        [Order(1)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -42,6 +44,7 @@ namespace AgentBrokerGui
         }
 
         [Test]
+        [Order(2)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -112,6 +115,7 @@ namespace AgentBrokerGui
         }
 
         [Test]
+        [Order(3)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -209,6 +213,7 @@ namespace AgentBrokerGui
         }
 
         [Test]
+        [Order(5)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -298,6 +303,7 @@ namespace AgentBrokerGui
         }
 
         [Test]
+        [Order(4)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]

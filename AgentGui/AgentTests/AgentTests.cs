@@ -12,7 +12,9 @@ namespace AgentGuiTests
 
     public class TestsBaseGui : AgentBase
     {
+        //Amount order 2
         [Test]
+        [Order(2)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -40,6 +42,7 @@ namespace AgentGuiTests
         }
 
         [Test]
+        [Order(1)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]

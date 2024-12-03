@@ -28,6 +28,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
         public class StatusColumnInfo
         {
             public string DepositReceived { get; set; }
+            public string Vacant { get; set; }
         }
 
         private static UnitColumnInfo CreateUnitColumnInfo()
@@ -43,6 +44,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
             return new StatusColumnInfo
             {
                 DepositReceived = "Deposit Received",
+                Vacant = "Vacant",
             };
         }
     }

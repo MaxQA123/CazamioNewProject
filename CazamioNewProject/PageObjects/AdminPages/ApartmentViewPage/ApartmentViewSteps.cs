@@ -10,8 +10,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
 {
     public partial class ApartmentView
     {
-        [AllureStep("ClickButtonGetLink")]
-        public ApartmentView CreateNewApplicationAndTenant()
+        [AllureStep("CreateNewApplicationAndTenantViaButtonGetLink")]
+        public ApartmentView CreateNewApplicationAndTenantViaButtonGetLink()
         {
             WaitUntil.CustomElementIsVisible(FieldInputGetApplicationLink);
             InputGeneral.InputFunctionWithClear(FieldInputGetApplicationLink, application.TenantsData.EmailNewTenantMainApplicant);
