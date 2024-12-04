@@ -197,7 +197,7 @@ namespace MarketplaceAdminGuiTest
                 .VerifyTitleCreateNewBroker()
                 .EnterFirstLastNamesEmail();
 
-            string getFullEmail = Pages.CreateANewBrokerMdlWndw.CopyEmailFromModalWindowCreateNewBroker();
+            string getFullEmail = Pages.CreateANewBrokerMdlWndw.CopyEmailFromFieldEmail();
             string getEmailBeforeDog = Pages.CreateANewBrokerMdlWndw.CopyEmailBeforeDogFromModalWindowCreateNewBroker();
 
             Pages.CreateANewBrokerMdlWndw
@@ -293,7 +293,7 @@ namespace MarketplaceAdminGuiTest
                 .EnterFirstLastNameEmailPhnNmbrCell()
                 .EnterBrokerAgentCommission();
 
-            string fullEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailFromMdlWndwCreateAgent();
+            string fullEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailFromFieldEmail();
             string partEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailBeforeDogFromModalWindowCreateNewAgent();
 
             Pages.CreateNewAgentMdlWndw
@@ -521,8 +521,6 @@ namespace MarketplaceAdminGuiTest
         {
             #region SettingsForBuilding
 
-            //All the fields filled in, Cardknox
-            //All tabs filled in
             //Washington Square
 
             #endregion
@@ -659,7 +657,6 @@ namespace MarketplaceAdminGuiTest
 
             #region SettingsForBuilding
 
-            //Added Filled only mandatory the data, AuthorizeNet
             //Saint Johnson Place
 
             #endregion
@@ -978,6 +975,12 @@ namespace MarketplaceAdminGuiTest
 
         public void CreateApplicationForApartmentDepositReceived()
         {
+            #region SettingsForBuilding
+
+            //Saint Johnson Place
+
+            #endregion
+
             #region Test data
 
             Apartment apartment = Apartment.Generate();
@@ -1014,9 +1017,20 @@ namespace MarketplaceAdminGuiTest
             KeyBoardActions.ScrollToDown();
             Pages.BuildingApartments
                 .ClickRowByDepositReceived();
+
+            #endregion
+
+            #region Test
+
             Pages.ApartmentView
                 .VerifyTitleApartmentViewPage()
-                .CreateNewApplicationAndTenantViaButtonGetLink();
+                .EnterNewEmailFirstLastNames();
+
+            string fullEmailPutsBox = Pages.ApartmentView.CopyEmailFromFieldGetApplicationLink();
+            string partEmailPutsBox = Pages.ApartmentView.CopyEmailBeforeDogFromFieldGetApplicationLink();
+
+            //Pages.ApartmentView
+            //    .VerifyCopiedTheLinkToApplication();
 
             #endregion
 
@@ -1072,7 +1086,7 @@ namespace MarketplaceAdminGuiTest
             Pages.BuildingApartments
                 .ClickRowByVacant();
             Pages.ApartmentView
-                .VerifyTitleApartmentViewPage()
+                .VerifyTitleApartmentViewPage();
                 //.CreateNewApplicationAndTenantViaButtonGetLink();
 
             #endregion

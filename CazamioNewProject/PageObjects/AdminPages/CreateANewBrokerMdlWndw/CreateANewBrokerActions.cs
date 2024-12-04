@@ -22,14 +22,13 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateANewBrokerMdlWndw
             return this;
         }
 
-        [AllureStep("CopyEmailFromModalWindowCreateNewBroker")]
-        public string CopyEmailFromModalWindowCreateNewBroker()
+        [AllureStep("CopyEmailFromFieldEmail")]
+        public string CopyEmailFromFieldEmail()
         {
-            WaitUntil.WaitSomeInterval(500);
-            string copyEmail = FieldInputEmail.GetAttribute("value");
-            string copyEmailActual = copyEmail.ToString();
+            WaitUntil.CustomElementIsVisible(FieldInputEmail);
+            string fullEmail = FieldInputEmail.GetAttribute("value");
 
-            return copyEmailActual;
+            return fullEmail;
         }
 
         [AllureStep("CopyEmailBeforeDogFromModalWindowCreateNewBroker")]

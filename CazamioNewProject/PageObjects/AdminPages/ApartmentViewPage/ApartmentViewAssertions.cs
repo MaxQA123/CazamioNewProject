@@ -21,5 +21,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
 
             return this;
         }
+
+        [AllureStep("VerifyCopiedTheLinkToApplication")]
+        public ApartmentView VerifyCopiedTheLinkToApplication()
+        {
+            WaitUntil.CustomElementIsVisible(MessageCopiedTheLinkToApplication);
+            Assert.IsTrue(Successfully.IsVisible(MessageCopiedTheLinkToApplication));
+
+            return this;
+        }
     }
 }

@@ -59,7 +59,7 @@ namespace CazamioNewProject.GuiHelpers
     {
         public static Boolean IsVisible(IWebElement element)
         {
-            WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.WaitSomeInterval(100);
             try
             {
                 if (element.Enabled == true)
@@ -77,27 +77,28 @@ namespace CazamioNewProject.GuiHelpers
         }
     }
 
-    public class SuccessfullyTwo
-    {
-        public static Boolean IsVisible(IWebElement element)
-        {
-            WaitUntil.WaitSomeInterval(1000);
-            try
-            {
-                if (element.Enabled == true)
-                {
-                    Console.WriteLine(element.GetAttribute("value"));
 
-                    return true;
-                }
+    //public class SuccessfullyTwo
+    //{
+    //    public static Boolean IsVisible(IWebElement element)
+    //    {
+    //        WaitUntil.WaitSomeInterval(1000);
+    //        try
+    //        {
+    //            if (element.Enabled == true)
+    //            {
+    //                Console.WriteLine(element.GetAttribute("value"));
 
-                return false;
+    //                return true;
+    //            }
+
+    //            return false;
 
 
-            }
-            catch (NoSuchElementException) { return false; }
+    //        }
+    //        catch (NoSuchElementException) { return false; }
 
-            catch (StaleElementReferenceException) { return false; }
-        }
-    }
+    //        catch (StaleElementReferenceException) { return false; }
+    //    }
+    //}
 }

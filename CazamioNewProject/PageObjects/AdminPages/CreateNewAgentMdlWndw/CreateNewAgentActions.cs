@@ -15,14 +15,13 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateNewAgentMdlWndw
     {
         Agent agent = new Agent().Generate();
 
-        [AllureStep("CopyEmailFromMdlWndwCreateAgent")]
-        public string CopyEmailFromMdlWndwCreateAgent()
+        [AllureStep("CopyEmailFromFieldEmail")]
+        public string CopyEmailFromFieldEmail()
         {
-            WaitUntil.WaitSomeInterval(500);
-            string copyEmail = Browser._Driver.FindElement(By.XPath("//input[@id = 'email']")).GetAttribute("value");
-            string copyEmailActual = copyEmail.ToString();
+            WaitUntil.CustomElementIsVisible(FieldInputEmail);
+            string fullEmail = FieldInputEmail.GetAttribute("value");
 
-            return copyEmailActual;
+            return fullEmail;
         }
 
         [AllureStep("CopyEmailBeforeDogFromModalWindowCreateNewAgent")]

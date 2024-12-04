@@ -1,6 +1,8 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
 using NUnit.Allure.Attributes;
+using OpenQA.Selenium;
+using System.Text.RegularExpressions;
 
 namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
 {
@@ -8,6 +10,27 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
     {
         Apartment apartment = Apartment.Generate();
         Application application = Application.Generate();
+
+        [AllureStep("CopyEmailFromFieldGetApplicationLink")]
+        public string CopyEmailFromFieldGetApplicationLink()
+        {
+            WaitUntil.WaitSomeInterval(500);
+            WaitUntil.CustomElementIsVisible(FieldInputGetApplicationLink);
+            string fullEmail = FieldInputGetApplicationLink.GetAttribute("value");
+
+            return fullEmail;
+        }
+
+        [AllureStep("CopyEmailBeforeDogFromFieldGetApplicationLink")]
+        public string CopyEmailBeforeDogFromFieldGetApplicationLink()
+        {
+            WaitUntil.WaitSomeInterval(500);
+            string copyPartEmail = FieldInputGetApplicationLink.GetAttribute("value");
+            Regex regexPartEmail = new Regex(@"^...................");
+            string partEmail = regexPartEmail.Match(copyPartEmail).ToString();
+
+            return partEmail;
+        }
 
         [AllureStep("EnterFieldInputFirstName")]
         public ApartmentView EnterFieldInputGetApplicationLink()
