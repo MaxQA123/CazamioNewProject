@@ -9,6 +9,7 @@ using CazamioNewProject.DbHelpers.OwnersDbTable;
 using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
 using CazamioNewProject.PageObjects;
+using CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using NUnit.Framework;
@@ -634,7 +635,7 @@ namespace MarketplaceAdminGuiTest
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingView = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+            string getAddressBuildingView = Pages.BuildingView.GetValueFromStringAddress();
 
             Pages.BuildingView
                 .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
@@ -725,7 +726,7 @@ namespace MarketplaceAdminGuiTest
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingView = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+            string getAddressBuildingView = Pages.BuildingView.GetValueFromStringAddress();
 
             Pages.BuildingView
                 .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
@@ -780,7 +781,7 @@ namespace MarketplaceAdminGuiTest
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromStringAddress();
             string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
 
             Pages.BuildingView
@@ -911,7 +912,7 @@ namespace MarketplaceAdminGuiTest
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromStringAddress();
             string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
 
             Pages.BuildingView
@@ -984,6 +985,8 @@ namespace MarketplaceAdminGuiTest
             #region Test data
 
             Apartment apartment = Apartment.Generate();
+            Building building = Building.Generate();
+            BuildingApartmentsTable bildingApartmentsTable = BuildingApartmentsTable.Generate();
 
             #endregion
 
@@ -1008,7 +1011,7 @@ namespace MarketplaceAdminGuiTest
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromStringAddress();
             string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
 
             Pages.BuildingView
@@ -1026,10 +1029,12 @@ namespace MarketplaceAdminGuiTest
                 .VerifyTitleApartmentViewPage()
                 .EnterNewEmailFirstLastNames();
 
+            string leasePriceValue = Pages.ApartmentView.GetLeasePriceValueOfString();
             string fullEmailPutsBox = Pages.ApartmentView.CopyEmailFromFieldGetApplicationLink();
             string partEmailPutsBox = Pages.ApartmentView.CopyEmailBeforeDogFromFieldGetApplicationLink();
 
             //Pages.ApartmentView
+            //    .ClickButtonGetLink()
             //    .VerifyCopiedTheLinkToApplication();
 
             #endregion
@@ -1076,7 +1081,7 @@ namespace MarketplaceAdminGuiTest
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromStringAddress();
             string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
 
             Pages.BuildingView

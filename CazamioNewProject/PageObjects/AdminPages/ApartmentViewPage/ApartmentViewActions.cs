@@ -14,7 +14,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         [AllureStep("CopyEmailFromFieldGetApplicationLink")]
         public string CopyEmailFromFieldGetApplicationLink()
         {
-            WaitUntil.WaitSomeInterval(500);
             WaitUntil.CustomElementIsVisible(FieldInputGetApplicationLink);
             string fullEmail = FieldInputGetApplicationLink.GetAttribute("value");
 
@@ -30,6 +29,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
             string partEmail = regexPartEmail.Match(copyPartEmail).ToString();
 
             return partEmail;
+        }
+
+        [AllureStep("GetLeasePriceValueOfString")]
+        public string GetLeasePriceValueOfString()
+        {
+            WaitUntil.CustomElementIsVisible(LeasePriceValueOfString);
+            string fullEmail = LeasePriceValueOfString.Text;
+
+            return fullEmail;
         }
 
         [AllureStep("EnterFieldInputFirstName")]

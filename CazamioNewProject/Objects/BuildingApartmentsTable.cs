@@ -10,6 +10,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
     {
         public UnitColumnInfo UnitColumn { get; set; }
         public StatusColumnInfo StatusColumn { get; set; }
+        public AgentColumnnInfo AgentColumn { get; set; }
 
         public static BuildingApartmentsTable Generate()
         {
@@ -17,6 +18,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
             {
                 UnitColumn = CreateUnitColumnInfo(),
                 StatusColumn = CreateStatusColumnInfo(),
+                AgentColumn = CreateAgentColumnnInfo(),
             };
         }
 
@@ -29,6 +31,11 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
         {
             public string DepositReceived { get; set; }
             public string Vacant { get; set; }
+        }
+
+        public class AgentColumnnInfo
+        {
+            public string NotAssigned { get; set; }
         }
 
         private static UnitColumnInfo CreateUnitColumnInfo()
@@ -45,6 +52,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
             {
                 DepositReceived = "Deposit Received",
                 Vacant = "Vacant",
+            };
+        }
+
+        private static AgentColumnnInfo CreateAgentColumnnInfo()
+        {
+            return new AgentColumnnInfo
+            {
+                NotAssigned = "Not assigned",
             };
         }
     }

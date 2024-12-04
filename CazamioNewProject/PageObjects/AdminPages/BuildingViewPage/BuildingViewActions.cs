@@ -18,8 +18,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingViewPage
             return this;
         }
 
-        [AllureStep("GetValueFromFieldNotInputAddress")]
-        public string GetValueFromFieldNotInputAddress()
+        [AllureStep("GetValueFromStringAddress")]
+        public string GetValueFromStringAddress()
         {
             WaitUntil.WaitSomeInterval(2000);
             WaitUntil.CustomElementIsVisible(FieldNotInputAddress);

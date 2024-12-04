@@ -25,5 +25,12 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
 
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Copied the link to application.']")]
         public IWebElement MessageCopiedTheLinkToApplication;
+
+        #region tab Apartment Details
+
+        [FindsBy(How = How.XPath, Using = "//div[text()=' Lease Price ']/following-sibling::div[contains(@class, 'item-result-text')]")]
+        public IWebElement LeasePriceValueOfString;
+
+        #endregion
     }
 }
