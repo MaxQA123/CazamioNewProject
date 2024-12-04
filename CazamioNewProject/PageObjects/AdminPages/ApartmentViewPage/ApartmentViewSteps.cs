@@ -20,7 +20,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
             WaitUntil.CustomElementIsVisible(FieldInputLastName);
             InputGeneral.InputFunctionWithClear(FieldInputLastName, application.TenantsData.LastNameNewTenantMainApplicant);
 
-            return this;//
+            return this;////
         }
     }
 }
