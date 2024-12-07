@@ -11,11 +11,44 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         Apartment apartment = Apartment.Generate();
         Application application = Application.Generate();
 
+        #region Tabs
+
+        [AllureStep("ClickTabApplications")]
+        public ApartmentView ClickTabApplications()
+        {
+            WaitUntil.CustomElementIsVisible(TabApplications);
+            Button.Click(TabApplications);
+
+            return this;
+        }
+
+        #endregion
+
+        #region Apartment view
+
         [AllureStep("CopyEmailFromFieldGetApplicationLink")]
         public string CopyEmailFromFieldGetApplicationLink()
         {
             WaitUntil.CustomElementIsVisible(FieldInputGetApplicationLink);
             string fullEmail = FieldInputGetApplicationLink.GetAttribute("value");
+
+            return fullEmail;
+        }
+
+        [AllureStep("GetFirstNameFromFieldFirstName")]
+        public string GetFirstNameFromFieldFirstName()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputFirstName);
+            string fullEmail = FieldInputFirstName.GetAttribute("value");
+
+            return fullEmail;
+        }
+
+        [AllureStep("GetLastNameFromFieldLastName")]
+        public string GetLastNameFromFieldLastName()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputLastName);
+            string fullEmail = FieldInputLastName.GetAttribute("value");
 
             return fullEmail;
         }
@@ -75,5 +108,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
 
             return this;
         }
+
+        #endregion
     }
 }

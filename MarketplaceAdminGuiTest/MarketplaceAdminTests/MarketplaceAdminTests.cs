@@ -1018,7 +1018,7 @@ namespace MarketplaceAdminGuiTest
                 .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
-            Pages.BuildingApartments
+            Pages.BuildingApartmentsTbl
                 .ClickRowByDepositReceived();
 
             #endregion
@@ -1030,16 +1030,24 @@ namespace MarketplaceAdminGuiTest
                 .EnterNewEmailFirstLastNames();
 
             string leasePriceValue = Pages.ApartmentView.GetLeasePriceValueOfString();
+            string firstNameTenantMainApplicant = Pages.ApartmentView.GetFirstNameFromFieldFirstName();
+            string lastNameTenantMainApplicant = Pages.ApartmentView.GetLastNameFromFieldLastName();
             string fullEmailPutsBox = Pages.ApartmentView.CopyEmailFromFieldGetApplicationLink();
             string partEmailPutsBox = Pages.ApartmentView.CopyEmailBeforeDogFromFieldGetApplicationLink();
 
-            //Pages.ApartmentView
-            //    .ClickButtonGetLink()
-            //    .VerifyCopiedTheLinkToApplication();
+            Pages.ApartmentView
+                //.ClickButtonGetLink()
+                //.VerifyCopiedTheLinkToApplication()
+                .ClickTabApplications();
+            KeyBoardActions.ScrollToDown();
+
+            string apartmentAddress = Pages.ApartmentApplicationsTbl.GetApartmentAddressFromFirstRow();
+            string firstName = Pages.ApartmentApplicationsTbl.GetFirstNameTenantMainApplicantFromFirstRow();
+            string lastName = Pages.ApartmentApplicationsTbl.GetSecondNameTenantMainApplicantFromFirstRow();
 
             #endregion
 
-            WaitUntil.WaitSomeInterval(10000);
+            WaitUntil.WaitSomeInterval(5000);
         }
 
         [Test]
@@ -1088,7 +1096,7 @@ namespace MarketplaceAdminGuiTest
                 .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneWashingtonSquare)
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
-            Pages.BuildingApartments
+            Pages.BuildingApartmentsTbl
                 .ClickRowByVacant();
             Pages.ApartmentView
                 .VerifyTitleApartmentViewPage();

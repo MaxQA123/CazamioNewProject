@@ -1,6 +1,7 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
 using CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage;
+using CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls;
 using CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage;
 using CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls;
@@ -93,7 +94,8 @@ namespace CazamioNewProject.PageObjects
 
         #region Landlord tables
 
-        public static BuildingApartments BuildingApartments => GetPage<BuildingApartments>();
+        public static BuildingApartmentsTbl BuildingApartmentsTbl => GetPage<BuildingApartmentsTbl>();
+        public static ApartmentApplicationsTbl ApartmentApplicationsTbl => GetPage<ApartmentApplicationsTbl>();
 
         #endregion
 

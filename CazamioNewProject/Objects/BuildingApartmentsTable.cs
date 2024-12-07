@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
 {
-    public partial class BuildingApartmentsTable
+    public class BuildingApartmentsTable
     {
         public UnitColumnInfo UnitColumn { get; set; }
         public StatusColumnInfo StatusColumn { get; set; }
-        public AgentColumnnInfo AgentColumn { get; set; }
+        public PriceColumnInfo PriceColumn { get; set; }
+        public BedroomsColumnInfo BedroomsColumn { get; set; }
+        public BathroomsColumnInfo BathroomsColumn { get; set; }
 
         public static BuildingApartmentsTable Generate()
         {
@@ -18,7 +20,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
             {
                 UnitColumn = CreateUnitColumnInfo(),
                 StatusColumn = CreateStatusColumnInfo(),
-                AgentColumn = CreateAgentColumnnInfo(),
+                PriceColumn = CreatePriceColumnInfo(),
+                BedroomsColumn = CreateBedroomsColumnInfo(),
+                BathroomsColumn = CreateBathroomsColumnInfo(),
             };
         }
 
@@ -33,9 +37,19 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
             public string Vacant { get; set; }
         }
 
-        public class AgentColumnnInfo
+        public class PriceColumnInfo
         {
-            public string NotAssigned { get; set; }
+            public string Price { get; set; }
+        }
+
+        public class BedroomsColumnInfo
+        {
+            public string Bed { get; set; }
+        }
+
+        public class BathroomsColumnInfo
+        {
+            public string Bath { get; set; }
         }
 
         private static UnitColumnInfo CreateUnitColumnInfo()
@@ -55,11 +69,27 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
             };
         }
 
-        private static AgentColumnnInfo CreateAgentColumnnInfo()
+        private static PriceColumnInfo CreatePriceColumnInfo()
         {
-            return new AgentColumnnInfo
+            return new PriceColumnInfo
             {
-                NotAssigned = "Not assigned",
+                Price = "",
+            };
+        }
+
+        private static BedroomsColumnInfo CreateBedroomsColumnInfo()
+        {
+            return new BedroomsColumnInfo
+            {
+                Bed = "",
+            };
+        }
+
+        private static BathroomsColumnInfo CreateBathroomsColumnInfo()
+        {
+            return new BathroomsColumnInfo
+            {
+                Bath = "",
             };
         }
     }

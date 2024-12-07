@@ -6,12 +6,12 @@ using System;
 
 namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
 {
-    public partial class BuildingApartments
+    public partial class BuildingApartmentsTbl
     {
         //BuildingApartmentsTable buildingApartmentsTable = BuildingApartmentsTable.Generate();
 
         [AllureStep("ClickFirstRow")]
-        public BuildingApartments ClickFirstRow()
+        public BuildingApartmentsTbl ClickFirstRow()
         {
             WaitUntil.CustomElementIsVisible(FirstRow);
             WaitUntil.CustomElementIsClickable(FirstRow);

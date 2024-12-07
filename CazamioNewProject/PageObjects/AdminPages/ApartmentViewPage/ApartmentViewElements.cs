@@ -5,6 +5,27 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
 {
     public partial class ApartmentView
     {
+        #region Tabs
+
+        [FindsBy(How = How.XPath, Using = "//a[text() = ' Apartment Details ']")]
+        public IWebElement TabApartmentDetails;
+
+        [FindsBy(How = How.XPath, Using = "//a[text() = ' Apartment Access ']")]
+        public IWebElement TabApartmentAccess;
+
+        [FindsBy(How = How.XPath, Using = "//a[text() = ' Applications ']")]
+        public IWebElement TabApplications;
+
+        [FindsBy(How = How.XPath, Using = "//a[text() = ' Concessions - Specials ']")]
+        public IWebElement TabConcessionsSpecials;
+
+        [FindsBy(How = How.XPath, Using = "//a[text() = ' History of changes ']")]
+        public IWebElement TabHistoryOChanges;
+
+        #endregion
+
+        #region Apartment view
+
         [FindsBy(How = How.XPath, Using = ("//app-loader//div[@class = 'hidden']"))]
         public IWebElement LoaderHidden;
 
@@ -25,6 +46,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
 
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Copied the link to application.']")]
         public IWebElement MessageCopiedTheLinkToApplication;
+
+        #endregion
 
         #region tab Apartment Details
 
