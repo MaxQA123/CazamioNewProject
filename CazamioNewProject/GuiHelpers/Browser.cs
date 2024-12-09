@@ -28,6 +28,7 @@ namespace CazamioNewProject.GuiHelpers
             AllureConfigFilesHelper.CreateJsonConfigFile();
             new DriverManager().SetUpDriver(new ChromeConfig());
             var options = new ChromeOptions();
+            //Switch for run autotests in background
             //options.AddArgument("--headless=new");
             _webDriver = new ChromeDriver(options);
             _Driver.Manage().Cookies.DeleteAllCookies();
