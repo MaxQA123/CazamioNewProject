@@ -204,7 +204,7 @@ namespace AgentBrokerGui
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingView = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+            string getAddressBuildingView = Pages.BuildingView.GetValueFromStringAddress();
 
             Pages.BuildingView
                 .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
@@ -258,7 +258,7 @@ namespace AgentBrokerGui
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromStringAddress();
             string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
 
             Pages.BuildingView
@@ -348,7 +348,7 @@ namespace AgentBrokerGui
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromStringAddress();
             string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
 
             Pages.BuildingView
