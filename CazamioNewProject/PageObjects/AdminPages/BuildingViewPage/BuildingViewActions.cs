@@ -18,22 +18,22 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingViewPage
             return this;
         }
 
-        [AllureStep("GetValueFromStringAddress")]
-        public string GetValueFromStringAddress()
+        [AllureStep("GetValueOfStringAddress")]
+        public string GetValueOfStringAddress()
         {
             WaitUntil.WaitSomeInterval(2000);
-            WaitUntil.CustomElementIsVisible(FieldNotInputAddress);
-            string getValue = FieldNotInputAddress.Text;
+            WaitUntil.CustomElementIsVisible(ValueOfStringAddress);
+            string getValue = ValueOfStringAddress.Text;
             string getValueActual = getValue.ToString();
 
             return getValueActual;
         }
 
-        [AllureStep("GetValueFromFieldNotInputBuildingName")]
-        public string GetValueFromFieldNotInputBuildingName()
+        [AllureStep("GetValueOfStringBuildingName")]
+        public string GetValueOfStringBuildingName()
         {
-            WaitUntil.CustomElementIsVisible(FieldNotInputBuildingName);
-            string getValue = FieldNotInputBuildingName.Text;
+            WaitUntil.CustomElementIsVisible(ValueOfStringBuildingName);
+            string getValue = ValueOfStringBuildingName.Text;
             string getValueActual = getValue.ToString();
 
             return getValueActual;

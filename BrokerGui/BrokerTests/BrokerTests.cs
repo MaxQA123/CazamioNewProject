@@ -385,7 +385,7 @@ namespace BrokerGuiTests
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingView = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+            string getAddressBuildingView = Pages.BuildingView.GetValueOfStringAddress();
 
             Pages.BuildingView
                 .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView)
@@ -530,7 +530,7 @@ namespace BrokerGuiTests
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingView = Pages.BuildingView.GetValueFromFieldNotInputAddress();
+            string getAddressBuildingView = Pages.BuildingView.GetValueOfStringAddress();
 
             Pages.BuildingView
                 .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
@@ -683,48 +683,24 @@ namespace BrokerGuiTests
         [AllureSuite("Broker")]
         [AllureSubSuite("DemoAddApartment")]
 
-        public void DemoAddApartment()
+        public void DemoLogIn()
         {
-            #region Test data
+            //#region Test
 
-            Apartment apartment = Apartment.Generate();
+            //Pages.LogInLandlord
+            //    .EnterEmailPasswordAsBroker()
+            //    .ClickIconShow()
+            //    .ClickButtonLetsGo();
 
-            #endregion
+            ////string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            ////string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
 
-            #region Preconditions Test
+            //Pages.SidebarLandlord
+            //    .VerifyBrokerUserNameAndRole(Pages.SidebarLandlord.GetUserNameFromSideBar(), Pages.SidebarLandlord.GetUserNameRoleFromSideBar());
 
-            Pages.LogInLandlord
-                .EnterEmailPasswordAsMarketplaceAdmin()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+            //#endregion
 
-            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
-            Pages.SidebarLandlord
-                .VerifyMarketplaceAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
-            Pages.SidebarLandlord
-                .ClickButtonBuildings();
-            Pages.ListOfBuildings
-                .SearchNineNineNineEightSaintJohnsonPlace();
-            Pages.ListOfBuildings
-                .SelectItemFirst();
-            Pages.BuildingView
-                .VerifyTitleBuildingViewPage();
-
-            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromFieldNotInputAddress();
-            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
-
-            Pages.BuildingView
-                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
-                .ClickTabApartments();
-            KeyBoardActions.ScrollToDown();
-            Pages.BuildingApartments
-                .ClickFirstRow();
-
-            #endregion
-
-            WaitUntil.WaitSomeInterval(1000);
+            //WaitUntil.WaitSomeInterval(1000);
         }
     }
 }

@@ -9,9 +9,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
         public IWebElement FirstRow;
 
         [FindsBy(How = How.XPath, Using = ("//app-applications//table//tbody//tr//td[2]"))]
-        public IWebElement ValueFromColumnApartmentFirstRow;
+        public IWebElement VlOfClmnApartmentFirstRow;
 
         [FindsBy(How = How.XPath, Using = ("//app-applications//table//tbody//tr//td[3]//div"))]
-        public IWebElement VlMainApplicantFrmClmnApplicantsFrstRw;
+        public IWebElement VlMainApplicantOfClmnApplicantsFrstRw;
+
+        [FindsBy(How = How.XPath, Using = ("//app-applications//table//tbody//tr//td[4]"))]
+        public IWebElement VlOfClmnPriceFrstRw;
+
+        [FindsBy(How = How.XPath, Using = ("//app-applications//table//tbody//tr//td[7]"))]
+        public IWebElement VlOfClmnAgentFrstRw;
+
+        [FindsBy(How = How.XPath, Using = ("//app-applications//table//tbody//tr//td[10]//div[@class = 'statuses-wrapper']//span//span"))]
+        public IWebElement VlLabelOfClmnStatusFrstRw;
     }
 }

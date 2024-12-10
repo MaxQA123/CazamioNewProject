@@ -12,10 +12,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingViewPage
         public IWebElement TitleBuildingViewPage;
 
         [FindsBy(How = How.XPath, Using = ("//div[@class = 'form-result-wrapper']/div/div[2]"))]
-        public IWebElement FieldNotInputAddress;
+        public IWebElement ValueOfStringAddress;
 
         [FindsBy(How = How.XPath, Using = ("//building-view//form//div/div"))]
-        public IWebElement FieldNotInputBuildingName;
+        public IWebElement ValueOfStringBuildingName;
 
         #region TabsLine
 

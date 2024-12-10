@@ -12,7 +12,7 @@ namespace AgentGuiTests
 
     public class TestsBaseGui : AgentBase
     {
-        //Amount order 2
+        //Amount order 2 next must be 3
         [Test]
         [Order(2)]
         [AllureTag("Regression")]

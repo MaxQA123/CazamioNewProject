@@ -13,7 +13,7 @@ namespace AgentBrokerGui
 
     public class TestsBaseGui : AgentBrokerBase
     {
-        //Amount order 5
+        //Amount order 5 next must be 6
         [Test]
         [Order(1)]
         [AllureTag("Regression")]
@@ -204,7 +204,7 @@ namespace AgentBrokerGui
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingView = Pages.BuildingView.GetValueFromStringAddress();
+            string getAddressBuildingView = Pages.BuildingView.GetValueOfStringAddress();
 
             Pages.BuildingView
                 .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
@@ -258,8 +258,8 @@ namespace AgentBrokerGui
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromStringAddress();
-            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
+            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
 
             Pages.BuildingView
                 .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneOneOneAEastFiftyOneStStreetPedestrianCrossing)
@@ -348,8 +348,8 @@ namespace AgentBrokerGui
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromStringAddress();
-            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
+            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
 
             Pages.BuildingView
                 .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneOneOneAEastFiftyOneStStreetPedestrianCrossing)

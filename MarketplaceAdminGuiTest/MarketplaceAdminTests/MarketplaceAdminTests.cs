@@ -22,7 +22,7 @@ namespace MarketplaceAdminGuiTest
 
     public class TestsBaseGui : MarketplaceAdminBase
     {
-        //Amount order 12
+        //Amount order 12 next must be 13
         [Test]
         [Order(2)]
         [AllureTag("Regression")]
@@ -635,7 +635,7 @@ namespace MarketplaceAdminGuiTest
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingView = Pages.BuildingView.GetValueFromStringAddress();
+            string getAddressBuildingView = Pages.BuildingView.GetValueOfStringAddress();
 
             Pages.BuildingView
                 .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
@@ -726,7 +726,7 @@ namespace MarketplaceAdminGuiTest
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingView = Pages.BuildingView.GetValueFromStringAddress();
+            string getAddressBuildingView = Pages.BuildingView.GetValueOfStringAddress();
 
             Pages.BuildingView
                 .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
@@ -781,8 +781,8 @@ namespace MarketplaceAdminGuiTest
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromStringAddress();
-            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
+            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
 
             Pages.BuildingView
                 .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneWashingtonSquare)
@@ -912,8 +912,8 @@ namespace MarketplaceAdminGuiTest
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromStringAddress();
-            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
+            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
 
             Pages.BuildingView
                 .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
@@ -1011,8 +1011,8 @@ namespace MarketplaceAdminGuiTest
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromStringAddress();
-            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
+            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
 
             Pages.BuildingView
                 .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
@@ -1029,9 +1029,9 @@ namespace MarketplaceAdminGuiTest
                 .VerifyTitleApartmentViewPage()
                 .EnterNewEmailFirstLastNames();
 
-            string leasePriceValue = Pages.ApartmentView.GetLeasePriceValueOfString();
-            string firstNameTenantMainApplicant = Pages.ApartmentView.GetFirstNameFromFieldFirstName();
-            string lastNameTenantMainApplicant = Pages.ApartmentView.GetLastNameFromFieldLastName();
+            string leasePriceFromUnit = Pages.ApartmentView.GetLeasePriceValueOfString();
+            string firstNameTenantMainApplicantFromUnit = Pages.ApartmentView.GetFirstNameFromFieldFirstName();
+            string lastNameTenantMainApplicantFromUnit = Pages.ApartmentView.GetLastNameFromFieldLastName();
             string fullEmailPutsBox = Pages.ApartmentView.CopyEmailFromFieldGetApplicationLink();
             string partEmailPutsBox = Pages.ApartmentView.CopyEmailBeforeDogFromFieldGetApplicationLink();
 
@@ -1041,9 +1041,15 @@ namespace MarketplaceAdminGuiTest
                 .ClickTabApplications();
             KeyBoardActions.ScrollToDown();
 
-            string apartmentAddress = Pages.ApartmentApplicationsTbl.GetApartmentAddressFromFirstRow();
-            string firstName = Pages.ApartmentApplicationsTbl.GetFirstNameTenantMainApplicantFromFirstRow();
-            string lastName = Pages.ApartmentApplicationsTbl.GetSecondNameTenantMainApplicantFromFirstRow();
+            string apartmentAddressFromApp = Pages.ApartmentApplicationsTbl.GetApartmentAddressFromFirstRow();
+            string firstNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetFirstNameTenantMainApplicantFromFirstRow();
+            string lastNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetLastNameTenantMainApplicantFromFirstRow();
+            string leasePriceFromApplicationFromApp = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
+            string agentFromApplicationFromApp = Pages.ApartmentApplicationsTbl.GetAgentFromFrstRw();
+            string statusFromApplicationFromApp = Pages.ApartmentApplicationsTbl.GetStatusFromFrstRw();
+
+            Pages.ApartmentApplicationsTbl
+                .VerifyFullDataByApplication(getAddressBuildingViewActual, apartmentAddressFromApp, firstNameTenantMainApplicantFromUnit, firstNameTenantMainApplicantFromApp, lastNameTenantMainApplicantFromUnit, lastNameTenantMainApplicantFromApp);
 
             #endregion
 
@@ -1089,8 +1095,8 @@ namespace MarketplaceAdminGuiTest
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingViewActual = Pages.BuildingView.GetValueFromStringAddress();
-            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueFromFieldNotInputBuildingName();
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
+            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
 
             Pages.BuildingView
                 .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneWashingtonSquare)
