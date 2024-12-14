@@ -45,7 +45,7 @@ namespace CazamioNewProject.Objects
 
         public class CreatedOnColumnInfo
         {
-            public string Date { get; set; }
+            public string DateCurrent { get; set; }
         }
 
         public class AgentColumnnInfo
@@ -88,7 +88,7 @@ namespace CazamioNewProject.Objects
         {
             return new CreatedOnColumnInfo
             {
-                Date = DateTime.Now.ToString("MM/dd/yyyy"), // Форматирует текущую дату как "12/14/2024"
+                DateCurrent = DateTime.Now.ToString("MM/dd/yyyy"), // Форматирует текущую дату как "12/14/2024"
             };
         }
 

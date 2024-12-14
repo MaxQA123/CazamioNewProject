@@ -27,22 +27,22 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
             return this;
         }
 
-        [AllureStep("VerifyTitleLetterCreateAgent")]
-        public EmailPutsBox VerifyTitleLetterCreateAgent()
+        [AllureStep("VerifySubjectLetterCreateAgentMySpace")]
+        public EmailPutsBox VerifySubjectLetterCreateAgentMySpace()
         {
-            WaitUntil.CustomElementIsVisible(TitleLetterCreateAgentMySpace);
-            Assert.IsTrue(TitleLetterCreateAgentMySpace.Displayed);
-            Console.WriteLine(TitleLetterCreateAgentMySpace.Text);
+            WaitUntil.CustomElementIsVisible(SubjectLetterCreateAgentMySpace);
+            Assert.IsTrue(SubjectLetterCreateAgentMySpace.Displayed);
+            Console.WriteLine(SubjectLetterCreateAgentMySpace.Text);
 
             return this;
         }
 
-        [AllureStep("VerifyTitleLetterCreateTenant")]
-        public EmailPutsBox VerifyTitleLetterCreateTenant()
+        [AllureStep("VerifySubjectLetterCreateTenantViaGetLink")]
+        public EmailPutsBox VerifySubjectLetterCreateTenantViaGetLink()
         {
-            WaitUntil.CustomElementIsVisible(TitleLetterCreateTenant);
-            Assert.IsTrue(TitleLetterCreateTenant.Displayed);
-            Console.WriteLine(TitleLetterCreateTenant.Text);
+            WaitUntil.CustomElementIsVisible(SubjectLetterCreateTenantViaGetLink);
+            Assert.IsTrue(SubjectLetterCreateTenantViaGetLink.Displayed);
+            Console.WriteLine(SubjectLetterCreateTenantViaGetLink.Text);
 
             return this;
         }

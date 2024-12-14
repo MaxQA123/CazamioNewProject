@@ -306,9 +306,9 @@ namespace MarketplaceAdminGuiTest
             Pages.JScriptExecutor
                 .OpenNewTab();
             Pages.EmailHelper
-                .OpenPutsBox(Pages.EmailPutsBox.TitleLetterCreateAgentMySpace, partEmailPutsBox);
+                .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateAgentMySpace, partEmailPutsBox);
             Pages.EmailPutsBox
-                .VerifyTitleLetterCreateAgent()
+                .VerifySubjectLetterCreateAgentMySpace()
                 .ClickButtonHtml();
 
             string getTextPasswordActual = Pages.EmailPutsBox.CopyPasswordFromEmailForCreateAdmin();
@@ -1045,12 +1045,20 @@ namespace MarketplaceAdminGuiTest
             string firstNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetFirstNameTenantMainApplicantFromFirstRow();
             string lastNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetLastNameTenantMainApplicantFromFirstRow();
             string leasePriceFromApplication = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
-            string dateCreatedFromApplication = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
+            string dateCreatedFromApplication = Pages.ApartmentApplicationsTbl.GetDateCreatedFromFirstRow();
             string agentFromApplication = Pages.ApartmentApplicationsTbl.GetAgentFromFrstRw();
             string statusFromApplication = Pages.ApartmentApplicationsTbl.GetStatusFromFrstRw();
 
             Pages.ApartmentApplicationsTbl
                 .VerifyFullDataByApplication(getAddressBuildingViewActual, apartmentAddressFromApp, firstNameTenantMainApplicantFromUnit, firstNameTenantMainApplicantFromApp, lastNameTenantMainApplicantFromUnit, lastNameTenantMainApplicantFromApp, leasePriceFromUnit, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.NotAssigned, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft);
+            Pages.JScriptExecutor
+               .OpenNewTab();
+            Pages.EmailHelper
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, partEmailPutsBox);
+            Pages.EmailPutsBox
+                .VerifySubjectLetterCreateTenantViaGetLink()
+                .ClickButtonHtml()
+                .ClickButtonStartYourApplicationNowlForTenant();
 
             #endregion
 

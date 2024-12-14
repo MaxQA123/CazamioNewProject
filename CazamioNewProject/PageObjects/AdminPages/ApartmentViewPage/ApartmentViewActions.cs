@@ -1,7 +1,6 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
 using NUnit.Allure.Attributes;
-using OpenQA.Selenium;
 using System.Text.RegularExpressions;
 
 namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
@@ -10,6 +9,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
     {
         Apartment apartment = Apartment.Generate();
         Application application = Application.Generate();
+        EmailNotifications emailNotifications = EmailNotifications.Generate();
 
         #region Tabs
 
@@ -52,6 +52,42 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
 
             return fullEmail;
         }
+
+        [AllureStep("GetVlUnitNumber")]
+        public string GetVlUnitNumber()
+        {
+            WaitUntil.WaitSomeInterval(500);
+
+            // Получение текста уведомления из EmailNotifications
+            string subjectNotification = EmailNotifications.Generate().SubjectsTenantGeneral.CreateTenantViaGetLink;
+
+            // Извлечение номера квартиры из строки
+            Regex regexUnitNumber = new Regex(@"#\s\d+");
+            string unitNumberAc = regexUnitNumber.Match(VlUnitNumber.Text).ToString();
+
+            // Замена номера квартиры в subjectNotification
+            string updatedText = ReplaceUnitNumber(subjectNotification, unitNumberAc);
+
+            // Возвращение обновленного текста
+            return updatedText;
+        }
+
+        private static string ReplaceUnitNumber(string subjectNotification, string unitNumber)
+        {
+            // Замена текста между "Place" и "now" (номер квартиры)
+            return Regex.Replace(subjectNotification, @"#\s\d+", unitNumber);
+        }
+
+        //[AllureStep("GetVlUnitNumber")]
+        //public string GetVlUnitNumber()
+        //{
+        //    WaitUntil.WaitSomeInterval(500);
+        //    string unitNumber = VlUnitNumber.Text;
+        //    Regex regexUnitNumber = new Regex(@"#\s\d+");
+        //    string unitNumberAc = regexUnitNumber.Match(unitNumber).ToString();
+
+        //    return unitNumberAc;
+        //}
 
         [AllureStep("CopyEmailBeforeDogFromFieldGetApplicationLink")]
         public string CopyEmailBeforeDogFromFieldGetApplicationLink()

@@ -12,10 +12,16 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
 
         #endregion
 
-        #region BodyLetterOfTenant
+        #region SubjectLetterOfTenant
 
         [FindsBy(How = How.XPath, Using = "//td[text() = 'You’re (Almost) In!']")]
-        public IWebElement TitleLetterCreateTenant;
+        public IWebElement SubjectLetterCreateTenant;
+
+        [FindsBy(How = How.XPath, Using = "//table//tr//td[2]")]
+        public IWebElement SubjectLetterCreateTenantViaGetLink;
+
+        [FindsBy(How = How.XPath, Using = "//a[text() = 'Start Your Application Now!']")]
+        public IWebElement ButtonStartYourApplicationNow;
 
         [FindsBy(How = How.XPath, Using = "//a[contains(@href, 'https://u28342774.ct.sendgrid.net/ls/click')]")]
         public IWebElement ButtonConfirmEmailForTenant;
@@ -25,7 +31,7 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
 
         #endregion
 
-        #region BodyLetterOfAdmin
+        #region SubjectLetterOfAdmin
 
         [FindsBy(How = How.XPath, Using = "//table[@class ='es-content']//tbody//tr[3]//table[@class = 'es-content-body']//a[contains(@href, 'https://u28342774.ct.sendgrid.net/ls/click')]")]
         public IWebElement ButtonResetPasswordForAdmin;
@@ -37,7 +43,7 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         public IWebElement TitleLetterCreateBrokerMySpace;
 
         [FindsBy(How = How.XPath, Using = "//td[text() = 'Welcome Aboard as an Agent at Noyo Properties NYC!']")]
-        public IWebElement TitleLetterCreateAgentMySpace;
+        public IWebElement SubjectLetterCreateAgentMySpace;
 
         [FindsBy(How = How.XPath, Using = "//td[@class = 'esd-block-text']//p[contains(text(), 'Password:')]")]
         public IWebElement TextPasswordForConfirmAdmin;

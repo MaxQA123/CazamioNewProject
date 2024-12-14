@@ -55,7 +55,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
         public string GetDateCreatedFromFirstRow()
         {
             WaitUntil.WaitSomeInterval(500);
-            string getFirstName = VlMainApplicantOfClmnApplicantsFrstRw.Text;
+            string getFirstName = VlOfClmnCreatedOnFrstRw.Text;
             Regex regexGetFirstName = new Regex(@"^.{1,10}");
             string firstName = regexGetFirstName.Match(getFirstName).ToString();
 

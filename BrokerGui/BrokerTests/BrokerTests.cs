@@ -12,6 +12,7 @@ using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using NUnit.Framework;
 using System;
+using System.Text.RegularExpressions;
 
 namespace BrokerGuiTests
 {
@@ -685,22 +686,74 @@ namespace BrokerGuiTests
 
         public void DemoLogIn()
         {
-            //#region Test
+            #region SettingsForBuilding
 
-            //Pages.LogInLandlord
-            //    .EnterEmailPasswordAsBroker()
-            //    .ClickIconShow()
-            //    .ClickButtonLetsGo();
+            //Saint Johnson Place
 
-            ////string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            ////string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+            #endregion
 
-            //Pages.SidebarLandlord
-            //    .VerifyBrokerUserNameAndRole(Pages.SidebarLandlord.GetUserNameFromSideBar(), Pages.SidebarLandlord.GetUserNameRoleFromSideBar());
+            #region Test data
 
-            //#endregion
+            Apartment apartment = Apartment.Generate();
+            Building building = Building.Generate();
+            ApartmentApplicationsTable apartmentApplicationsTable = ApartmentApplicationsTable.Generate();
 
-            //WaitUntil.WaitSomeInterval(1000);
+            #endregion
+
+            #region Preconditions Test
+
+            Pages.LogInLandlord
+                .EnterEmailPasswordAsMarketplaceAdmin()
+                .ClickIconShow()
+                .ClickButtonLetsGo();
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyMarketplaceAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+            Pages.SidebarLandlord
+                .ClickButtonBuildings();
+            Pages.ListOfBuildings
+                .SearchNineNineNineEightSaintJohnsonPlace();
+            Pages.ListOfBuildings
+                .SelectItemFirst();
+            Pages.BuildingView
+                .VerifyTitleBuildingViewPage();
+
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
+            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
+
+            Pages.BuildingView
+                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
+                .ClickTabApartments();
+            KeyBoardActions.ScrollToDown();
+            Pages.BuildingApartmentsTbl
+                .ClickRowByDepositReceived();
+
+            #endregion
+
+            #region Test
+
+            Pages.ApartmentView
+                .VerifyTitleApartmentViewPage();
+
+            string getUnitNumber = Pages.ApartmentView.GetVlUnitNumber();
+
+            //string getUnitNumber = Pages.ApartmentView.GetVlUnitNumber();
+
+            //// Исходный текст
+            //string originalText = "Welcome to Noyo Properties NYC!  Let's begin your application process for 9998 Saint Johnson Place #1 now!";
+
+            //// Замена с использованием регулярного выражения
+            //string updatedText = Regex.Replace(originalText, @"#\d+", getUnitNumber);
+
+            Pages.ApartmentView
+                .EnterNewEmailFirstLastNames();
+
+            #endregion
+
+            WaitUntil.WaitSomeInterval(1000);
         }
     }
 }

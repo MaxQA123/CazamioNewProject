@@ -9,6 +9,22 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
     {
         #region BodyLetterOfTenant
 
+        [AllureStep("ClickButtonStartYourApplicationNowlForTenant")]
+        public EmailPutsBox ClickButtonStartYourApplicationNowlForTenant()
+        {
+            WaitUntil.WaitSomeInterval(3000);
+            List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
+            Browser._Driver.SwitchTo().Window(tabsList[2]);
+            WaitUntil.WaitSomeInterval(1000);
+            ButtonStartYourApplicationNow.Click();
+            WaitUntil.WaitSomeInterval(3000);
+            List<string> tabsListSecond = new List<string>(Browser._Driver.WindowHandles);
+            Browser._Driver.SwitchTo().Window(tabsListSecond[3]);
+            WaitUntil.WaitSomeInterval(3000);
+
+            return this;
+        }
+
         [AllureStep("ClickButtonConfirmEmailForTenant")]
         public EmailPutsBox ClickButtonConfirmEmailForTenant()
         {

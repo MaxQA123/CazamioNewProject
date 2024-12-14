@@ -63,6 +63,7 @@ namespace CazamioNewProject.PageObjects
         public static Apartment Apartment => GetPage<Apartment>();
         public static BuildingApartmentsTable BuildingApartmentsTable => GetPage<BuildingApartmentsTable>();
         public static Demo Demo => GetPage<Demo>();
+        public static EmailNotifications EmailNotofications => GetPage<EmailNotifications>();
 
         #endregion
 
@@ -116,7 +117,6 @@ namespace CazamioNewProject.PageObjects
 
         public static EmailPutsBox EmailPutsBox => GetPage<EmailPutsBox>();
         public static EmailHelper EmailHelper => GetPage<EmailHelper>();
-
         public static JScriptExecutor JScriptExecutor => GetPage<JScriptExecutor>();
 
         #region Tanant pages
