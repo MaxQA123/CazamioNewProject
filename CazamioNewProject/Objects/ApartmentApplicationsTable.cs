@@ -57,6 +57,7 @@ namespace CazamioNewProject.Objects
         {
             public string Draft { get; set; }
             public string Vacant { get; set; }
+            public string CloseBtn { get; set; }
         }
 
         private static ApartmentColumnInfo CreateApartmentColumnInfo()
@@ -105,6 +106,7 @@ namespace CazamioNewProject.Objects
             {
                 Draft = "Draft",
                 Vacant = "Vacant",
+                CloseBtn = "",
             };
         }
     }

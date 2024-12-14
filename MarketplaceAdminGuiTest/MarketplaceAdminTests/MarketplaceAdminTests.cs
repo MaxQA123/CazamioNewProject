@@ -986,7 +986,7 @@ namespace MarketplaceAdminGuiTest
 
             Apartment apartment = Apartment.Generate();
             Building building = Building.Generate();
-            BuildingApartmentsTable bildingApartmentsTable = BuildingApartmentsTable.Generate();
+            ApartmentApplicationsTable apartmentApplicationsTable = ApartmentApplicationsTable.Generate();
 
             #endregion
 
@@ -1036,20 +1036,20 @@ namespace MarketplaceAdminGuiTest
             string partEmailPutsBox = Pages.ApartmentView.CopyEmailBeforeDogFromFieldGetApplicationLink();
 
             Pages.ApartmentView
-                //.ClickButtonGetLink()
-                //.VerifyCopiedTheLinkToApplication()
+                .ClickButtonGetLink()
+                .VerifyCopiedTheLinkToApplication()
                 .ClickTabApplications();
             KeyBoardActions.ScrollToDown();
 
             string apartmentAddressFromApp = Pages.ApartmentApplicationsTbl.GetApartmentAddressFromFirstRow();
             string firstNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetFirstNameTenantMainApplicantFromFirstRow();
             string lastNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetLastNameTenantMainApplicantFromFirstRow();
-            string leasePriceFromApplicationFromApp = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
-            string agentFromApplicationFromApp = Pages.ApartmentApplicationsTbl.GetAgentFromFrstRw();
-            string statusFromApplicationFromApp = Pages.ApartmentApplicationsTbl.GetStatusFromFrstRw();
+            string leasePriceFromApplication = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
+            string agentFromApplication = Pages.ApartmentApplicationsTbl.GetAgentFromFrstRw();
+            string statusFromApplication = Pages.ApartmentApplicationsTbl.GetStatusFromFrstRw();
 
             Pages.ApartmentApplicationsTbl
-                .VerifyFullDataByApplication(getAddressBuildingViewActual, apartmentAddressFromApp, firstNameTenantMainApplicantFromUnit, firstNameTenantMainApplicantFromApp, lastNameTenantMainApplicantFromUnit, lastNameTenantMainApplicantFromApp);
+                .VerifyFullDataByApplication(getAddressBuildingViewActual, apartmentAddressFromApp, firstNameTenantMainApplicantFromUnit, firstNameTenantMainApplicantFromApp, lastNameTenantMainApplicantFromUnit, lastNameTenantMainApplicantFromApp, leasePriceFromUnit, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.NotAssigned, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft);
 
             #endregion
 

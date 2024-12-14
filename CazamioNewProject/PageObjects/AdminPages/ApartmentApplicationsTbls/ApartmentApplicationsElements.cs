@@ -5,6 +5,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
 {
     public partial class ApartmentApplicationsTbl
     {
+        #region Elements from first row
+
         [FindsBy(How = How.XPath, Using = ("//app-applications//table//tbody//tr"))]
         public IWebElement FirstRow;
 
@@ -22,5 +24,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
 
         [FindsBy(How = How.XPath, Using = ("//app-applications//table//tbody//tr//td[10]//div[@class = 'statuses-wrapper']//span//span"))]
         public IWebElement VlLabelOfClmnStatusFrstRw;
+
+        [FindsBy(How = How.XPath, Using = ("//app-applications//table//tbody//tr//td[10]//div[@class = 'btn-wrapper']//cazamio-button[@text = 'Close']"))]
+        public IWebElement CloseNameBtnOfClmnStatusFrstRw;
+
+        #endregion
     }
 }
