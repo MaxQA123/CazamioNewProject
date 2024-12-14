@@ -88,7 +88,7 @@ namespace CazamioNewProject.Objects
         {
             return new CreatedOnColumnInfo
             {
-                Date = "",
+                Date = DateTime.Now.ToString("MM/dd/yyyy"), // Форматирует текущую дату как "12/14/2024"
             };
         }
 

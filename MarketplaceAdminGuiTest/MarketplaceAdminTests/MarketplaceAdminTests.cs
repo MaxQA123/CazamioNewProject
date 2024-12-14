@@ -1045,6 +1045,7 @@ namespace MarketplaceAdminGuiTest
             string firstNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetFirstNameTenantMainApplicantFromFirstRow();
             string lastNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetLastNameTenantMainApplicantFromFirstRow();
             string leasePriceFromApplication = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
+            string dateCreatedFromApplication = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
             string agentFromApplication = Pages.ApartmentApplicationsTbl.GetAgentFromFrstRw();
             string statusFromApplication = Pages.ApartmentApplicationsTbl.GetStatusFromFrstRw();
 

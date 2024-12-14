@@ -42,21 +42,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
             return regexGetSecondName.Match(fullName).Groups[1].Value;
         }
 
-        //[AllureStep("GetSecondNameTenantMainApplicantFromFirstRow")]
-        //public string GetSecondNameTenantMainApplicantFromFirstRow()
-        //{
-        //    WaitUntil.WaitSomeInterval(500);
-
-        //    // Получаем значение из элемента
-        //    string fullName = VlMainApplicantOfClmnApplicantsFrstRw.Text;
-
-        //    // Регулярное выражение для второго слова
-        //    Regex regexGetSecondName = new Regex(@"^\w+\s+(\w+)");
-
-        //    // Ищем совпадение и сразу возвращаем второе слово
-        //    return regexGetSecondName.Match(fullName).Groups[1].Value;
-        //}
-
         [AllureStep("GetPriceFromFirstRow")]
         public string GetPriceFromFirstRow()
         {
@@ -64,6 +49,17 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
             string price = VlOfClmnPriceFrstRw.Text;
 
             return price;
+        }
+
+        [AllureStep("GetDateCreatedFromFirstRow")]
+        public string GetDateCreatedFromFirstRow()
+        {
+            WaitUntil.WaitSomeInterval(500);
+            string getFirstName = VlMainApplicantOfClmnApplicantsFrstRw.Text;
+            Regex regexGetFirstName = new Regex(@"^.{1,10}");
+            string firstName = regexGetFirstName.Match(getFirstName).ToString();
+
+            return firstName;
         }
 
         [AllureStep("GetAgentFromFrstRw")]
