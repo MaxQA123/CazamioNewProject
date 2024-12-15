@@ -38,11 +38,10 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         }
 
         [AllureStep("VerifySubjectLetterCreateTenantViaGetLink")]
-        public EmailPutsBox VerifySubjectLetterCreateTenantViaGetLink()
+        public EmailPutsBox VerifySubjectLetterCreateTenantViaGetLink(string getSubjectExpected, string getSubjectFromEmail)
         {
             WaitUntil.CustomElementIsVisible(SubjectLetterCreateTenantViaGetLink);
-            Assert.IsTrue(SubjectLetterCreateTenantViaGetLink.Displayed);
-            Console.WriteLine(SubjectLetterCreateTenantViaGetLink.Text);
+            Assert.AreEqual(getSubjectExpected, getSubjectFromEmail);
 
             return this;
         }

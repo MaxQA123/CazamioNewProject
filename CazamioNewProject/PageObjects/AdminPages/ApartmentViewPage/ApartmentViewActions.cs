@@ -54,8 +54,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
             return fullEmail;
         }
 
-        [AllureStep("GetVlUnitNumber")]
-        public string GetVlUnitNumber()
+        [AllureStep("GetSubjectExpected")]
+        public string GetSubjectExpected()
         {
             WaitUntil.WaitSomeInterval(1000);
             WaitUntil.CustomElementIsVisible(VlUnitNumber);
@@ -80,42 +80,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
 
             return updatedText;
         }
-
-        //[AllureStep("GetVlUnitNumber")]
-        //public string GetVlUnitNumber()
-        //{
-        //    WaitUntil.WaitSomeInterval(500);
-
-        //    // Получение текста уведомления из EmailNotifications
-        //    string subjectNotification = EmailNotifications.Generate().SubjectsTenantGeneral.CreateTenantViaGetLink;
-
-        //    // Извлечение номера квартиры из строки
-        //    Regex regexUnitNumber = new Regex(@"#\d+");
-        //    string unitNumberAc = regexUnitNumber.Match(VlUnitNumber.Text).ToString();
-
-        //    // Замена номера квартиры в subjectNotification
-        //    string updatedText = ReplaceUnitNumber(subjectNotification, unitNumberAc);
-
-        //    // Возвращение обновленного текста
-        //    return updatedText;
-        //}
-
-        //private static string ReplaceUnitNumber(string subjectNotification, string unitNumber)
-        //{
-        //    // Замена текста между "Place" и "now" (номер квартиры)
-        //    return Regex.Replace(subjectNotification, @"#\s\d+", unitNumber);
-        //}
-
-        //[AllureStep("GetVlUnitNumber")]
-        //public string GetVlUnitNumber()
-        //{
-        //    WaitUntil.WaitSomeInterval(500);
-        //    string unitNumber = VlUnitNumber.Text;
-        //    Regex regexUnitNumber = new Regex(@"#\s\d+");
-        //    string unitNumberAc = regexUnitNumber.Match(unitNumber).ToString();
-
-        //    return unitNumberAc;
-        //}
 
         [AllureStep("CopyEmailBeforeDogFromFieldGetApplicationLink")]
         public string CopyEmailBeforeDogFromFieldGetApplicationLink()

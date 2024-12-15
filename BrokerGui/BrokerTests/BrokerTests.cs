@@ -738,7 +738,7 @@ namespace BrokerGuiTests
             Pages.ApartmentView
                 .VerifyTitleApartmentViewPage();
 
-            string getUnitNumber = Pages.ApartmentView.GetVlUnitNumber();
+            string getUnitNumber = Pages.ApartmentView.GetSubjectExpected();
 
             Pages.ApartmentView
                 .EnterNewEmailFirstLastNames();

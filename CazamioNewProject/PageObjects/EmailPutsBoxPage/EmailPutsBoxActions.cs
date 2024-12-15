@@ -20,6 +20,19 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
 
         #endregion
 
+        #region SubjectLetterOfTenant
+
+        [AllureStep("GetSubjectLetterCreateTenantViaGetLink")]
+        public string GetSubjectLetterCreateTenantViaGetLink()
+        {
+            WaitUntil.CustomElementIsVisible(SubjectLetterCreateTenantViaGetLink);
+            string fullSubject = SubjectLetterCreateTenantViaGetLink.Text;
+
+            return fullSubject;
+        }
+
+        #endregion
+
         //public class VerifyPutsBox
         //{
         //    public static void VerifyVisibilityOfToaster(string email)
