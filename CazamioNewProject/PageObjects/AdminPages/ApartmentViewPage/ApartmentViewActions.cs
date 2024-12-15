@@ -61,22 +61,13 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
             WaitUntil.CustomElementIsVisible(VlUnitNumber);
             // Получение текста уведомления из EmailNotifications
             string subjectNotification = EmailNotifications.Generate().SubjectsTenantGeneral.CreateTenantViaGetLink;
-            Console.WriteLine("Original Notification: " + subjectNotification);
 
             // Извлечение номера квартиры из строки
             Regex regexUnitNumber = new Regex(@"#\s*\d+");
             string unitNumberAc = regexUnitNumber.Match(VlUnitNumber.Text).ToString();
-            Console.WriteLine("Extracted Unit Number: " + unitNumberAc);
-
-            // Проверка извлеченного номера квартиры
-            if (string.IsNullOrEmpty(unitNumberAc))
-            {
-                throw new Exception("Unit number could not be extracted. Check the input format of VlUnitNumber.Text.");
-            }
 
             // Замена номера квартиры в subjectNotification
             string updatedText = ReplaceUnitNumber(subjectNotification, unitNumberAc);
-            Console.WriteLine("Updated Notification: " + updatedText);
 
             // Возвращение обновленного текста
             return updatedText;
@@ -84,15 +75,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
 
         private static string ReplaceUnitNumber(string subjectNotification, string unitNumber)
         {
-            // Лог для проверки входных данных
-            Console.WriteLine("Before Replacement: " + subjectNotification);
-            Console.WriteLine("Unit Number to Replace With: " + unitNumber);
-
             // Замена номера квартиры в тексте
             string updatedText = Regex.Replace(subjectNotification, @"#\s*\d+", unitNumber);
-
-            // Лог для проверки результата
-            Console.WriteLine("After Replacement: " + updatedText);
 
             return updatedText;
         }

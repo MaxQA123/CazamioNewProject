@@ -740,14 +740,6 @@ namespace BrokerGuiTests
 
             string getUnitNumber = Pages.ApartmentView.GetVlUnitNumber();
 
-            //string getUnitNumber = Pages.ApartmentView.GetVlUnitNumber();
-
-            //// Исходный текст
-            //string originalText = "Welcome to Noyo Properties NYC!  Let's begin your application process for 9998 Saint Johnson Place #1 now!";
-
-            //// Замена с использованием регулярного выражения
-            //string updatedText = Regex.Replace(originalText, @"#\d+", getUnitNumber);
-
             Pages.ApartmentView
                 .EnterNewEmailFirstLastNames();
 
