@@ -46,6 +46,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
         public string GetPriceFromFirstRow()
         {
             WaitUntil.CustomElementIsVisible(VlOfClmnPriceFrstRw);
+            WaitUntil.WaitSomeInterval(1000);
             string price = VlOfClmnPriceFrstRw.Text;
 
             return price;

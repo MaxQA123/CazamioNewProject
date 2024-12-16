@@ -987,6 +987,7 @@ namespace MarketplaceAdminGuiTest
             Apartment apartment = Apartment.Generate();
             Building building = Building.Generate();
             ApartmentApplicationsTable apartmentApplicationsTable = ApartmentApplicationsTable.Generate();
+            TenantCreator tenantCreator = TenantCreator.Generate();
 
             #endregion
 
@@ -1030,11 +1031,11 @@ namespace MarketplaceAdminGuiTest
 
             Pages.ApartmentView
                 .VerifyTitleApartmentViewPage()
-                .EnterNewEmailFirstLastNames();
+                .EnterFieldInputGetApplicationLink();
 
             string leasePriceFromUnit = Pages.ApartmentView.GetLeasePriceValueOfString();
-            string firstNameTenantMainApplicantFromUnit = Pages.ApartmentView.GetFirstNameFromFieldFirstName();
-            string lastNameTenantMainApplicantFromUnit = Pages.ApartmentView.GetLastNameFromFieldLastName();
+            //string firstNameTenantMainApplicantFromUnit = Pages.ApartmentView.GetFirstNameFromFieldFirstName();
+            //string lastNameTenantMainApplicantFromUnit = Pages.ApartmentView.GetLastNameFromFieldLastName();
             string fullEmailPutsBox = Pages.ApartmentView.CopyEmailFromFieldGetApplicationLink();
             string partEmailPutsBox = Pages.ApartmentView.CopyEmailBeforeDogFromFieldGetApplicationLink();
 
@@ -1053,7 +1054,7 @@ namespace MarketplaceAdminGuiTest
             string statusFromApplication = Pages.ApartmentApplicationsTbl.GetStatusFromFrstRw();
 
             Pages.ApartmentApplicationsTbl
-                .VerifyFullDataByApplication(getAddressBuildingViewActual, apartmentAddressFromApp, firstNameTenantMainApplicantFromUnit, firstNameTenantMainApplicantFromApp, lastNameTenantMainApplicantFromUnit, lastNameTenantMainApplicantFromApp, leasePriceFromUnit, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.NotAssigned, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft);
+                .VerifyFullDataByApplication(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreator.FirstLastNameData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreator.FirstLastNameData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp, leasePriceFromUnit, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.NotAssigned, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft);
             Pages.JScriptExecutor
                .OpenNewTab();
             Pages.EmailHelper

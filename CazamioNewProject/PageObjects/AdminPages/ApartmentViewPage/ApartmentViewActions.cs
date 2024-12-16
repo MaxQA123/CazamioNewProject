@@ -40,18 +40,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         public string GetFirstNameFromFieldFirstName()
         {
             WaitUntil.CustomElementIsVisible(FieldInputFirstName);
-            string fullEmail = FieldInputFirstName.GetAttribute("value");
+            string firstName = FieldInputFirstName.GetAttribute("value");
 
-            return fullEmail;
+            return firstName;
         }
 
         [AllureStep("GetLastNameFromFieldLastName")]
         public string GetLastNameFromFieldLastName()
         {
             WaitUntil.CustomElementIsVisible(FieldInputLastName);
-            string fullEmail = FieldInputLastName.GetAttribute("value");
+            string LastName = FieldInputLastName.GetAttribute("value");
 
-            return fullEmail;
+            return LastName;
         }
 
         [AllureStep("GetSubjectExpected")]
@@ -91,10 +91,11 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         [AllureStep("GetLeasePriceValueOfString")]
         public string GetLeasePriceValueOfString()
         {
+            WaitUntil.WaitSomeInterval(1000);
             WaitUntil.CustomElementIsVisible(LeasePriceValueOfString);
-            string fullEmail = LeasePriceValueOfString.Text;
+            string leasePrice = LeasePriceValueOfString.Text;
 
-            return fullEmail;
+            return leasePrice;
         }
 
         [AllureStep("EnterFieldInputFirstName")]

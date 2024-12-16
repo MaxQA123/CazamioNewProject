@@ -62,8 +62,14 @@ namespace CazamioNewProject.PageObjects
         public static Building Building => GetPage<Building>();
         public static Apartment Apartment => GetPage<Apartment>();
         public static BuildingApartmentsTable BuildingApartmentsTable => GetPage<BuildingApartmentsTable>();
-        public static Demo Demo => GetPage<Demo>();
+        public static DemoTemplate Demo => GetPage<DemoTemplate>();
         public static EmailNotifications EmailNotofications => GetPage<EmailNotifications>();
+
+        #endregion
+
+        #region Tenant objects
+
+        public static TenantCreator TenantCreator => GetPage<TenantCreator>();
 
         #endregion
 

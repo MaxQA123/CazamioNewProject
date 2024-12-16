@@ -27,7 +27,7 @@ namespace CazamioNewProject.Objects
         {
             return new SubjectsTenantGeneralInfo
             {
-                CreateTenantViaGetLink = "Welcome to Noyo Properties NYC!  Let's begin your application process for 9998 Saint Johnson Place #1 now!",
+                CreateTenantViaGetLink = "Welcome to Noyo Properties NYC! Let's begin your application process for 9998 Saint Johnson Place #1 now!",
             };
         }
     }

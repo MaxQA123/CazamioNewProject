@@ -5,65 +5,60 @@ namespace CazamioNewProject.Objects
 {
     public class TenantCreator
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string FirstNameTenant { get; set; }
-        public string LastNameTenant { get; set; }
-        public string FullNameTenant { get; set; }
-        public string RandomFirstName { get; set; }
-        public EmailInfo Email { get; set; }
-        public NameDataInfo NameData { get; set; }
+        public FirstLastNameDataInfo FirstLastNameData { get; set; }
+        public EmailMySpaceInfo EmailMySpace { get; set; }
 
-        public class EmailInfo
+        public static TenantCreator Generate()
         {
-            public string RandomEmailAddressPutsBox { get; set; }
-            public string RandomShortEmail { get; set; }
-            public string CreatedEmailTenant { get; set; }
+            return new TenantCreator
+            {
+                FirstLastNameData = CreateFirstLastNameDataInfo(),
+                EmailMySpace = CreateEmailMySpaceInfo(),
+            };
         }
 
-        public class NameDataInfo
+        public class FirstLastNameDataInfo
         {
             public string ConstantFirstName { get; set; }
             public string ConstantLastName { get; set; }
+            public string ConstantFirstLastName { get; set; }
+            public string ConstantFirstNameTenant { get; set; }
+            public string ConstantLastNameTenant { get; set; }
+            public string ConstantFirstLastNameTenant { get; set; }
             public string RandomFirstName { get; set; }
             public string RandomLastName { get; set; }
-            public string CreatedFirstName { get; set; }
             public string CreatedLastName { get; set; }
-            public string ConstantFirstLastName { get; set; }
         }
 
-        public TenantCreator Generate()
+        public class EmailMySpaceInfo
         {
-            string constantFirstName = "Appl Tenant QA";
-            string constantLastName = "Lee Wu Alabanesku";
-            string randomFirstName = Name.FirstName();
-            string randomLastName = Name.LastName();
-            string randomShortEmail = GenerateRandomData.RandomEmail(5) + GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomEmail(2);
-            string createdEmailTenant = "appl-qaautotest15@putsbox.com";
-            string createdFirstName = "Magdolina";
-            string createdLastName = "Feofanovna";
-            string constantFirstLastName = createdFirstName + " " + createdLastName;
-           
-            var tenantApplicant = new TenantCreator()
+            public string RandomEmail { get; set; }
+            public string ConstantEmail { get; set; }
+            public string EmailAlreadyCreated { get; set; }
+        }
+
+        private static FirstLastNameDataInfo CreateFirstLastNameDataInfo()
+        {
+            return new FirstLastNameDataInfo
             {
-                Email = new EmailInfo
-                {
-                    RandomEmailAddressPutsBox = randomShortEmail + EmailNameDomen.PUTS_BOX,
-                    RandomShortEmail = randomShortEmail,
-                    CreatedEmailTenant = createdEmailTenant
-                },
-                NameData = new NameDataInfo
-                {
-                    ConstantFirstName = constantFirstName,
-                    ConstantLastName = constantLastName,
-                    RandomFirstName = randomFirstName,
-                    RandomLastName = randomLastName,
-                    CreatedFirstName = createdFirstName,
-                    CreatedLastName = createdLastName,
-                    ConstantFirstLastName = constantFirstLastName
-                },
+                ConstantFirstName = "MainAppl",
+                ConstantLastName = "JoeMainQA",
+                ConstantFirstLastName = "MainAppl JoeMainQA",
+                ConstantFirstNameTenant = "Tenant",
+                ConstantLastNameTenant = "Generated",
+                ConstantFirstLastNameTenant = "Tenant Generated",
+                RandomFirstName = "Appl" + Name.FirstName(),
+                RandomLastName = "Main" + Name.LastName(),
             };
-            return tenantApplicant;
+        }
+
+        private static EmailMySpaceInfo CreateEmailMySpaceInfo()
+        {
+            return new EmailMySpaceInfo
+            {
+                RandomEmail = "appl-myspace1-" + GenerateRandomData.RandomEmail(5) + EmailNameDomen.PUTS_BOX,
+                EmailAlreadyCreated = "appl-qaautotest15@putsbox.com",
+            };
         }
     }
 }
