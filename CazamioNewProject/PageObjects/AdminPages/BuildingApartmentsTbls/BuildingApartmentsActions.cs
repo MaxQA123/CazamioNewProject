@@ -49,5 +49,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
             var element = wait.Until(driver => driver.FindElement(By.XPath(xpath)));
             element.Click();
         }
+
+        [AllureStep("GetVlOfClmnUnitFrstRw")]
+        public string GetVlOfClmnUnitFrstRw()
+        {
+            WaitUntil.CustomElementIsVisible(VlOfClmnUnitFrstRw);
+            string unitNumber = VlOfClmnUnitFrstRw.Text;
+
+            return unitNumber;
+        }
     }
 }

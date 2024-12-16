@@ -1018,6 +1018,9 @@ namespace MarketplaceAdminGuiTest
                 .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
+
+            string getSubjectExpected = Pages.ApartmentView.GetSubjectExpected();
+
             Pages.BuildingApartmentsTbl
                 .ClickRowByDepositReceived();
 
@@ -1026,11 +1029,7 @@ namespace MarketplaceAdminGuiTest
             #region Test
 
             Pages.ApartmentView
-                .VerifyTitleApartmentViewPage();
-
-            string getSubjectExpected = Pages.ApartmentView.GetSubjectExpected();
-
-            Pages.ApartmentView
+                .VerifyTitleApartmentViewPage()
                 .EnterNewEmailFirstLastNames();
 
             string leasePriceFromUnit = Pages.ApartmentView.GetLeasePriceValueOfString();
