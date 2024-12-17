@@ -1034,8 +1034,6 @@ namespace MarketplaceAdminGuiTest
                 .EnterFieldInputGetApplicationLink();
 
             string leasePriceFromUnit = Pages.ApartmentView.GetLeasePriceValueOfString();
-            //string firstNameTenantMainApplicantFromUnit = Pages.ApartmentView.GetFirstNameFromFieldFirstName();
-            //string lastNameTenantMainApplicantFromUnit = Pages.ApartmentView.GetLastNameFromFieldLastName();
             string fullEmailPutsBox = Pages.ApartmentView.CopyEmailFromFieldGetApplicationLink();
             string partEmailPutsBox = Pages.ApartmentView.CopyEmailBeforeDogFromFieldGetApplicationLink();
 

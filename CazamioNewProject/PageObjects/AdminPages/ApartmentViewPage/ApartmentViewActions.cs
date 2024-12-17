@@ -91,8 +91,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         [AllureStep("GetLeasePriceValueOfString")]
         public string GetLeasePriceValueOfString()
         {
-            WaitUntil.WaitSomeInterval(1000);
             WaitUntil.CustomElementIsVisible(LeasePriceValueOfString);
+            WaitUntil.WaitSomeInterval(2000);
             string leasePrice = LeasePriceValueOfString.Text;
 
             return leasePrice;
