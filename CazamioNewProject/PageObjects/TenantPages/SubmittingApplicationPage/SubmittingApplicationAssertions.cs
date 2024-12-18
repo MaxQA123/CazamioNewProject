@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CazamioNewProject.GuiHelpers;
+using NUnit.Allure.Attributes;
+using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +11,12 @@ namespace CazamioNewProject.PageObjects.TenantPages.SubmittingApplicationPage
 {
     public partial class SubmittingApplication
     {
+        [AllureStep("VerifyChangingAvatarImageLandlord")]
+        public SubmittingApplication VerifyMessageAccountWasSuccessfullyActivated()
+        {
+            Assert.IsTrue(Successfully.IsVisible(MessageAccountWasSuccessfullyActivated));
+
+            return this;
+        }
     }
 }

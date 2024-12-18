@@ -1065,6 +1065,8 @@ namespace MarketplaceAdminGuiTest
             Pages.EmailPutsBox
                 .ClickButtonHtml()
                 .ClickButtonStartYourApplicationNowlForTenant();
+            Pages.SubmittingApplication
+                .VerifyMessageAccountWasSuccessfullyActivated();
 
             #endregion
 
