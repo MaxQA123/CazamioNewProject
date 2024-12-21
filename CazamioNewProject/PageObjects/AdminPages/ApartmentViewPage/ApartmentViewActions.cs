@@ -11,6 +11,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         Apartment apartment = Apartment.Generate();
         Application application = Application.Generate();
         EmailNotifications emailNotifications = EmailNotifications.Generate();
+        TenantCreator tenantCreator = TenantCreator.Generate();
 
         #region Tabs
 
@@ -82,7 +83,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         {
             WaitUntil.WaitSomeInterval(500);
             string copyPartEmail = FieldInputGetApplicationLink.GetAttribute("value");
-            Regex regexPartEmail = new Regex(@"^...................");
+            Regex regexPartEmail = new Regex(@"^.........................");
             string partEmail = regexPartEmail.Match(copyPartEmail).ToString();
 
             return partEmail;
@@ -102,7 +103,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         public ApartmentView EnterFieldInputGetApplicationLink()
         {
             WaitUntil.CustomElementIsVisible(FieldInputGetApplicationLink);
-            InputGeneral.InputFunctionWithClear(FieldInputGetApplicationLink, application.TenantsData.EmailNewTenantMainApplicant);
+            InputGeneral.InputFunctionWithClear(FieldInputGetApplicationLink, tenantCreator.EmailMySpace.RandomEmail);
 
             return this;
         }
@@ -120,7 +121,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         public ApartmentView EnterFieldInputFirstName()
         {
             WaitUntil.CustomElementIsVisible(FieldInputFirstName);
-            InputGeneral.InputFunctionWithClear(FieldInputFirstName, application.TenantsData.FirstNameNewTenantMainApplicant);
+            InputGeneral.InputFunctionWithClear(FieldInputFirstName, tenantCreator.FirstLastNameData.ConstantFirstName);
 
             return this;
         }
@@ -129,7 +130,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         public ApartmentView EnterFieldInputLastName()
         {
             WaitUntil.CustomElementIsVisible(FieldInputLastName);
-            InputGeneral.InputFunctionWithClear(FieldInputLastName, application.TenantsData.LastNameNewTenantMainApplicant);
+            InputGeneral.InputFunctionWithClear(FieldInputLastName, tenantCreator.FirstLastNameData.ConstantLastName);
 
             return this;
         }

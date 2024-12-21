@@ -56,7 +56,7 @@ namespace CazamioNewProject.Objects
         {
             return new EmailMySpaceInfo
             {
-                RandomEmail = "appl-myspace1-" + GenerateRandomData.RandomEmail(5) + EmailNameDomen.PUTS_BOX,
+                RandomEmail = "appl-myspace-" + GenerateRandomData.RandomNumberByDateTime() + EmailNameDomen.PUTS_BOX,
                 EmailAlreadyCreated = "appl-qaautotest15@putsbox.com",
             };
         }

@@ -37,6 +37,14 @@ namespace CazamioNewProject.GuiHelpers
                 .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
+        public static string RandomNumberByDateTime()
+        {
+            // Получение текущей даты и времени в формате "MMddyyyyHHmm" 211220241234
+            string dateTimeFormatted = DateTime.Now.ToString("MMddyyyyHHmm");
+
+            return dateTimeFormatted;
+        }
+
         public static string RandomEmail(int size)
         {
             Random random = new Random();

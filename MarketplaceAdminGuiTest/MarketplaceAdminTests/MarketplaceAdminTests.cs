@@ -985,7 +985,6 @@ namespace MarketplaceAdminGuiTest
             #region Test data
 
             Apartment apartment = Apartment.Generate();
-            Building building = Building.Generate();
             ApartmentApplicationsTable apartmentApplicationsTable = ApartmentApplicationsTable.Generate();
             TenantCreator tenantCreator = TenantCreator.Generate();
 
@@ -1013,14 +1012,13 @@ namespace MarketplaceAdminGuiTest
                 .VerifyTitleBuildingViewPage();
 
             string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
-            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
 
             Pages.BuildingView
                 .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
 
-            string getSubjectExpected = Pages.ApartmentView.GetSubjectExpected();
+            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectExpected();
 
             Pages.BuildingApartmentsTbl
                 .ClickRowByDepositReceived();
@@ -1034,7 +1032,6 @@ namespace MarketplaceAdminGuiTest
                 .EnterFieldInputGetApplicationLink();
 
             string leasePriceFromUnit = Pages.ApartmentView.GetLeasePriceValueOfString();
-            string fullEmailPutsBox = Pages.ApartmentView.CopyEmailFromFieldGetApplicationLink();
             string partEmailPutsBox = Pages.ApartmentView.CopyEmailBeforeDogFromFieldGetApplicationLink();
 
             Pages.ApartmentView
@@ -1052,7 +1049,7 @@ namespace MarketplaceAdminGuiTest
             string statusFromApplication = Pages.ApartmentApplicationsTbl.GetStatusFromFrstRw();
 
             Pages.ApartmentApplicationsTbl
-                .VerifyFullDataByApplication(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreator.FirstLastNameData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreator.FirstLastNameData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp, leasePriceFromUnit, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.NotAssigned, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft);
+                .VerifyFullDataByApplication(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreator.FirstLastNameData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreator.FirstLastNameData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp, leasePriceFromUnit, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.NotAssigned, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
             Pages.JScriptExecutor
                .OpenNewTab();
             Pages.EmailHelper
@@ -1061,16 +1058,16 @@ namespace MarketplaceAdminGuiTest
             string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
 
             Pages.EmailPutsBox
-                .VerifySubjectLetterCreateTenantViaGetLink(getSubjectExpected, getSubjectFromEmail);
+                .VerifySubjectLetterCreateTenantViaGetLink(getSubjectEmailExpected, getSubjectFromEmail);
             Pages.EmailPutsBox
                 .ClickButtonHtml()
                 .ClickButtonStartYourApplicationNowlForTenant();
             Pages.SubmittingApplication
                 .VerifyMessageAccountWasSuccessfullyActivated();
 
-            #endregion
-
             WaitUntil.WaitSomeInterval(5000);
+
+            #endregion
         }
 
         [Test]
