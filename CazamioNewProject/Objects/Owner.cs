@@ -5,147 +5,208 @@ namespace CazamioNewProject.Objects
 {
     public class Owner
     {
-        public string CompanyName { get; set; }
-        public string CompanyNameWithBroker { get; set; }
-        public string CompanyNameWithAgent { get; set; }
-        public ListOwnersCompanyNameInfo ListOwnersCompanyName { get; set; }
-        public string FullName { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string EmailAddress { get; set; }
-        public string ShortEmail { get; set; }
-        public string OfficeLocation { get; set; }
-        public string InternalNotes { get; set; }
-        public string PhoneNumber { get; set; }
-        public long PhoneNumberApi { get; set; }
-        public string ExtensionNumber { get; set; }
-        public long ExtensionNumberApi { get; set; }
-        public string OwnerNumberOfMonths { get; set; }
-        public string TenantNumberOfMonths { get; set; }
-        public string OwnerPercentage { get; set; }
-        public string TenantPercentage { get; set; }
-        public string TakeOff { get; set; }
-        public long OwnerNumberOfMonthsApi { get; set; }
-        public long TenantNumberOfMonthsApi { get; set; }
-        public long OwnerPercentageApi { get; set; }
-        public long TenantPercentageApi { get; set; }
-        public long TakeOffApi { get; set; }
-        public string EmailAddressOwnerForAgent { get; set; }
-        public string EmailAddressOwnerForBroker { get; set; }
-        public TypesCommissionStructureInfo TypesCommissionStructure{ get; set; }
-        public OwnerIdInfo OwnerId { get; set; }
+        public CompanyNameInfo CompanyName { get; set; }
+        public OwnerNameInfo OwnerName { get; set; }
+        public OwnerEmailInfo OwnerEmail { get; set; }
+        public OfficeLocationInfo OfficeLocation { get; set; }
+        public UserAssignedInfo UserAssigned { get; set; }
+        public InternalNotesInfo InternalNotes { get; set; }
+        public PhoneNumberInfo PhoneNumber { get; set; }
+        public CommissionStructureInfo CommissionStructure { get; set; }
 
-        public class TypesCommissionStructureInfo
+        public static Owner Generate()
         {
-            public string None { get; set; }
-            public string OwnerPays { get; set; }
-            public string TenantPays { get; set; }
-            public string OwnerAndTenantPays { get; set; }
-        }
-
-        public class OwnerIdInfo
-        {
-            public long WithBroker { get; set; }
-            public long WithAgent { get; set; }
-        }
-
-        public class ListOwnersCompanyNameInfo
-        {
-            public string OwnerNoCommission { get; set; }
-            public string OwnerWithOwnerPaysComission { get; set; }
-            public string OwnerWithTenantPaysCommission { get; set; }
-            public string OwnerWithOwnerAndTenantPaysCommission { get; set; }
-        }
-
-        public Owner Generate()
-        {
-            string companyName = "OOO assigned role";
-            string roleBroker = "Broker";
-            string roleAgent = "Agent";
-            string lLCBrOwnerOwnerAndTenantPaysCommissio = "LLC Br Owner OwnerAndTenantPaysCommissio";
-            string lLCAgBrOwnerNocommisionsAutoTest = "LLC Ag-Br Owner No commisions AutoTest";
-            string ownerOwnerPaysAutotest = "Owner OwnerPays Autotest";
-            string ownerTenantPays = "Ibrah Owner TenantPays LLC 12345 (!@#$%)";
-            string FullName = Name.FirstName() + " " + Name.LastName();
-            string firstName = Name.FirstName();
-            string lastName = Name.LastName();
-            string shortEmail = GenerateRandomData.RandomEmail(5) + GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomEmail(2);
-            string officeLocation = Address.City();
-            string internalNotes = "Owner lorem ipsum (12345) (&%$#@!)";
-            string phoneNumber = "585" + GenerateRandomData.RandomPhoneNumber(7);
-            long phoneNumberApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10));
-            long extensionNumberApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(1));
-            string extensionNumber = "325" + GenerateRandomData.RandomPhoneNumber(7);
-            string ownerNumberOfMonths = GenerateRandomData.RandomNumberWithoutZero(1);
-            string tenantNumberOfMonths = GenerateRandomData.RandomNumberWithoutZero(1);
-            string ownerPercentage = GenerateRandomData.RandomNumberWithoutZero(2);
-            string tenantPercentage = GenerateRandomData.RandomNumberWithoutZero(2);
-            string takeOff = GenerateRandomData.RandomNumberWithoutZero(2);
-            string emailAddressOwnerForAgent = "owner2forag5bro@putsbox.com";
-            string emailAddressOwnerForBroker = "owner2for5broker@putsbox.com";
-            string noneCommissionStructure = "None";
-            string ownerPays = "OwnerPays";
-            string tenantPays = "TenantPays";
-            string ownerAndTenantPays = "OwnerAndTenantPays";
-            long ownerNumberOfMonthsApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(1));
-            long tenantNumberOfMonthsApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(1));
-            long ownerPercentageApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(2));
-            long tenantPercentageApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(2));
-            long takeOffApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(1));
-            long noCommission = 1;
-            long ownerPaysComission = 2;
-            long ownerIdWithBroker = 179;//Arnoldoni Columbini
-            long ownerIdWithAgent = 178;
-
-            var owner = new Owner()
+            return new Owner
             {
-                CompanyName = companyName,
-                CompanyNameWithAgent = companyName + " " + roleAgent,
-                CompanyNameWithBroker = companyName + " " + roleBroker,
-                FullName = FullName,
-                FirstName = firstName,
-                LastName = lastName,
-                EmailAddress = shortEmail + EmailNameDomen.PUTS_BOX,
-                ShortEmail = shortEmail,
-                OfficeLocation = officeLocation,
-                InternalNotes = internalNotes,
-                PhoneNumber = phoneNumber,
-                ExtensionNumber = extensionNumber,
-                OwnerNumberOfMonths = ownerNumberOfMonths,
-                TenantNumberOfMonths = tenantNumberOfMonths,
-                OwnerPercentage = ownerPercentage,
-                TenantPercentage = tenantPercentage,
-                TakeOff = takeOff,
-                EmailAddressOwnerForAgent = emailAddressOwnerForAgent,
-                EmailAddressOwnerForBroker = emailAddressOwnerForBroker,
-                TypesCommissionStructure = new TypesCommissionStructureInfo
-                {
-                    None = noneCommissionStructure,
-                    OwnerPays = ownerPays,
-                    TenantPays = tenantPays,
-                    OwnerAndTenantPays = ownerAndTenantPays
-                },
-                OwnerNumberOfMonthsApi = ownerNumberOfMonthsApi,
-                TenantNumberOfMonthsApi = tenantNumberOfMonthsApi,
-                OwnerPercentageApi = ownerPercentageApi,
-                TenantPercentageApi = tenantPercentageApi,
-                TakeOffApi = takeOffApi,
-                ExtensionNumberApi = extensionNumberApi,
-                PhoneNumberApi = phoneNumberApi,
-                OwnerId = new OwnerIdInfo
-                {
-                    WithBroker = ownerIdWithBroker,
-                    WithAgent = ownerIdWithAgent,
-                },
-                ListOwnersCompanyName = new ListOwnersCompanyNameInfo
-                {
-                    OwnerNoCommission = lLCAgBrOwnerNocommisionsAutoTest,
-                    OwnerWithOwnerPaysComission = ownerOwnerPaysAutotest,
-                    OwnerWithTenantPaysCommission = ownerTenantPays,
-                    OwnerWithOwnerAndTenantPaysCommission = lLCBrOwnerOwnerAndTenantPaysCommissio
-                },
+                CompanyName = CreateCompanyNameInfo(),
+                OwnerName = CreateOwnerNameInfo(),
+                OwnerEmail = CreateOwnerEmailInfo(),
+                OfficeLocation = CreateOfficeLocationInfo(),
+                UserAssigned = CreateUserAssignedInfo(),
+                InternalNotes = CreateInternalNotesInfo(),
+                PhoneNumber = CreatePhoneNumberInfo(),
+                CommissionStructure = CreateCommissionStructureInfo(),
             };
-            return owner;
+        }
+
+        public class CompanyNameInfo
+        {
+            public string OneLetter { get; set; }
+            public string AssignedBrokerMaxSymbols { get; set; }
+            public string AssignedAgentMaxSymbols { get; set; }
+        }
+
+        public class OwnerNameInfo
+        {
+            public string OneLetter { get; set; }
+            public string FirstNameRandom { get; set; }
+            public string LastNameRandom { get; set; }
+            public string FirstLastNameRandom { get; set; }
+        }
+
+        public class OwnerEmailInfo
+        {
+            public string yahoo { get; set; }
+            public string putsbox { get; set; }
+            public string xitroo { get; set; }
+            public string gmail { get; set; }
+            public string EmailAddressOwnerForBroker { get; set; }
+            public string EmailAddressOwnerForAgent { get; set; }
+        }
+
+        public class OfficeLocationInfo
+        {
+            public string NewYork { get; set; }
+            public string Dallas { get; set; }
+            public string Washington { get; set; }
+        }
+
+        public class UserAssignedInfo
+        {
+            public long OwnerIdWithBroker { get; set; }
+            public long OwnerIdWithAgent { get; set; }
+        }
+
+        public class InternalNotesInfo
+        {
+            public string Long { get; set; }
+            public string Short { get; set; }
+        }
+
+        public class PhoneNumberInfo
+        {
+            public string BasicFirst { get; set; }
+            public string ExtensionFirst { get; set; }
+            public string BasicSecond { get; set; }
+            public string ExtensionSecond { get; set; }
+            public long BasicApi { get; set; }
+            public long ExtensionApi { get; set; }
+        }
+
+        public class CommissionStructureInfo
+        {
+            public long NoCommissionIdApi { get; set; }
+            public long OwnerPaysComissionIdApi { get; set; }
+            public string NoCommissionName { get; set; }
+            public string OwnerPaysName { get; set; }
+            public string TenantPaysName { get; set; }
+            public string OwnerAndTenantPaysName { get; set; }
+            public string OwnerNumberOfMonthsMin { get; set; }
+            public string TenantNumberOfMonthsMin { get; set; }
+            public string OwnerPercentageMin { get; set; }
+            public string TenantPercentageMin { get; set; }
+            public string TakeOffMin { get; set; }
+            public string OwnerNumberOfMonthsStatic { get; set; }
+            public string TenantNumberOfMonthsStatic { get; set; }
+            public string OwnerPercentageStatic { get; set; }
+            public string TenantPercentageStatic { get; set; }
+            public string TakeOffStatic { get; set; }
+            public long OwnerNumberOfMonthsApi { get; set; }
+            public long TenantNumberOfMonthsApi { get; set; }
+            public long OwnerPercentageApi { get; set; }
+            public long TenantPercentageApi { get; set; }
+        }
+
+        private static CompanyNameInfo CreateCompanyNameInfo()
+        {
+            return new CompanyNameInfo
+            {
+                OneLetter = "L",
+                AssignedBrokerMaxSymbols = "LLC assigned BROKER (!@#%$#) 12345 67890",
+                AssignedAgentMaxSymbols = "LLC assigned AGENT W(!@#%$#) 12345 67890",
+            };
+        }
+
+        private static OwnerNameInfo CreateOwnerNameInfo()
+        {
+            return new OwnerNameInfo
+            {
+                OneLetter = "T",
+                FirstNameRandom = Name.FirstName(),
+                LastNameRandom = Name.LastName(),
+                FirstLastNameRandom = Name.FirstName() + " " + Name.LastName(),
+            };
+        }
+
+        private static OwnerEmailInfo CreateOwnerEmailInfo()
+        {
+            return new OwnerEmailInfo
+            {
+                yahoo = GenerateRandomData.RandomEmail(1) + "@yahoo.com",
+                putsbox = GenerateRandomData.RandomEmail(3) + "@putsbox",
+                xitroo = GenerateRandomData.RandomEmail(10) + "@xitroo",
+                gmail = GenerateRandomData.RandomEmail(15) + "@gmail",
+                EmailAddressOwnerForBroker = "owner2for5broker@putsbox.com",
+                EmailAddressOwnerForAgent = "owner2forag5bro@putsbox.com",
+            };
+        }
+
+        private static OfficeLocationInfo CreateOfficeLocationInfo()
+        {
+            return new OfficeLocationInfo
+            {
+                NewYork = "New York",
+                Dallas = "Dallas",
+                Washington = "Washington",
+            };
+        }
+
+        private static UserAssignedInfo CreateUserAssignedInfo()
+        {
+            return new UserAssignedInfo
+            {
+                OwnerIdWithBroker = 179, //Arnoldoni Columbini
+                OwnerIdWithAgent = 178,
+            };
+        }
+
+        private static InternalNotesInfo CreateInternalNotesInfo()
+        {
+            return new InternalNotesInfo
+            {
+                Long = "QA test owner INTERNAL NOTES Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,",
+                Short = "QA test owner INTERNAL NOTES",
+            };
+        }
+
+        private static PhoneNumberInfo CreatePhoneNumberInfo()
+        {
+            return new PhoneNumberInfo
+            {
+                BasicFirst = "912" + GenerateRandomData.RandomPhoneNumber(7),
+                ExtensionFirst = "320",
+                BasicSecond = "585" + GenerateRandomData.RandomPhoneNumber(7),
+                ExtensionSecond = "325",
+                BasicApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
+                ExtensionApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
+            };
+        }
+
+        private static CommissionStructureInfo CreateCommissionStructureInfo()
+        {
+            return new CommissionStructureInfo
+            {
+                NoCommissionIdApi = 1,
+                OwnerPaysComissionIdApi = 2,
+                NoCommissionName = "None",
+                OwnerPaysName = "OwnerPays",
+                TenantPaysName = "TenantPays",
+                OwnerAndTenantPaysName = "OwnerAndTenantPays",
+                OwnerNumberOfMonthsMin = "0.1",
+                TenantNumberOfMonthsMin = "0.1",
+                OwnerPercentageMin = "0.1",
+                TenantPercentageMin = "0.1",
+                TakeOffMin = "0.1",
+                OwnerNumberOfMonthsStatic = "1",
+                TenantNumberOfMonthsStatic = "2",
+                OwnerPercentageStatic = "55.99",
+                TenantPercentageStatic = "79.8",
+                TakeOffStatic = "15",
+                OwnerNumberOfMonthsApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
+                TenantNumberOfMonthsApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
+                OwnerPercentageApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
+                TenantPercentageApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
+            };
         }
     }
 }

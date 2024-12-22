@@ -11,7 +11,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw
 {
     public partial class CreateANewOwnerMdlWndw
     {
-        Owner owner = new Owner().Generate();
+        Owner owner = Owner.Generate();
 
         [AllureStep("EnterCompanyNameForAgentRole")]
         public CreateANewOwnerMdlWndw EnterCompanyNameForAgentRole()

@@ -9,8 +9,10 @@ namespace CazamioNewProject.Objects
         public OwnerNameInfo OwnerName { get; set; }
         public OwnerEmailInfo OwnerEmail { get; set; }
         public OfficeLocationInfo OfficeLocation { get; set; }
+        public UserAssignedInfo UserAssigned { get; set; }
         public InternalNotesInfo InternalNotes { get; set; }
         public PhoneNumberInfo PhoneNumber { get; set; }
+        public CommissionStructureInfo CommissionStructure { get; set; }
 
         public static Demo Generate()
         {
@@ -20,8 +22,10 @@ namespace CazamioNewProject.Objects
                 OwnerName = CreateOwnerNameInfo(),
                 OwnerEmail = CreateOwnerEmailInfo(),
                 OfficeLocation = CreateOfficeLocationInfo(),
+                UserAssigned = CreateUserAssignedInfo(),
                 InternalNotes = CreateInternalNotesInfo(),
                 PhoneNumber = CreatePhoneNumberInfo(),
+                CommissionStructure = CreateCommissionStructureInfo(),
             };
         }
 
@@ -46,6 +50,8 @@ namespace CazamioNewProject.Objects
             public string putsbox { get; set; }
             public string xitroo { get; set; }
             public string gmail { get; set; }
+            public string EmailAddressOwnerForBroker { get; set; }
+            public string EmailAddressOwnerForAgent { get; set; }
         }
 
         public class OfficeLocationInfo
@@ -53,6 +59,12 @@ namespace CazamioNewProject.Objects
             public string NewYork { get; set; }
             public string Dallas { get; set; }
             public string Washington { get; set; }
+        }
+
+        public class UserAssignedInfo
+        {
+            public long OwnerIdWithBroker { get; set; }
+            public long OwnerIdWithAgent { get; set; }
         }
 
         public class InternalNotesInfo
@@ -69,6 +81,30 @@ namespace CazamioNewProject.Objects
             public string ExtensionSecond { get; set; }
             public long BasicApi { get; set; }
             public long ExtensionApi { get; set; }
+        }
+
+        public class CommissionStructureInfo
+        {
+            public long NoCommissionIdApi { get; set; }
+            public long OwnerPaysComissionIdApi { get; set; }
+            public string NoCommissionName { get; set; }
+            public string OwnerPaysName { get; set; }
+            public string TenantPaysName { get; set; }
+            public string OwnerAndTenantPaysName { get; set; }
+            public string OwnerNumberOfMonthsMin { get; set; }
+            public string TenantNumberOfMonthsMin { get; set; }
+            public string OwnerPercentageMin { get; set; }
+            public string TenantPercentageMin { get; set; }
+            public string TakeOffMin { get; set; }
+            public string OwnerNumberOfMonthsStatic { get; set; }
+            public string TenantNumberOfMonthsStatic { get; set; }
+            public string OwnerPercentageStatic { get; set; }
+            public string TenantPercentageStatic { get; set; }
+            public string TakeOffStatic { get; set; }
+            public long OwnerNumberOfMonthsApi { get; set; }
+            public long TenantNumberOfMonthsApi { get; set; }
+            public long OwnerPercentageApi { get; set; }
+            public long TenantPercentageApi { get; set; }
         }
 
         private static CompanyNameInfo CreateCompanyNameInfo()
@@ -100,6 +136,8 @@ namespace CazamioNewProject.Objects
                 putsbox = GenerateRandomData.RandomEmail(3) + "@putsbox",
                 xitroo = GenerateRandomData.RandomEmail(10) + "@xitroo",
                 gmail = GenerateRandomData.RandomEmail(15) + "@gmail",
+                EmailAddressOwnerForBroker = "owner2for5broker@putsbox.com",
+                EmailAddressOwnerForAgent = "owner2forag5bro@putsbox.com",
             };
         }
 
@@ -110,6 +148,15 @@ namespace CazamioNewProject.Objects
                 NewYork = "New York",
                 Dallas = "Dallas",
                 Washington = "Washington",
+            };
+        }
+
+        private static UserAssignedInfo CreateUserAssignedInfo()
+        {
+            return new UserAssignedInfo
+            {
+                OwnerIdWithBroker = 179, //Arnoldoni Columbini
+                OwnerIdWithAgent = 178,
             };
         }
 
@@ -132,6 +179,33 @@ namespace CazamioNewProject.Objects
                 ExtensionSecond = "325",
                 BasicApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
                 ExtensionApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
+            };
+        }
+
+        private static CommissionStructureInfo CreateCommissionStructureInfo()
+        {
+            return new CommissionStructureInfo
+            {
+                NoCommissionIdApi = 1,
+                OwnerPaysComissionIdApi = 2,
+                NoCommissionName = "None",
+                OwnerPaysName = "OwnerPays",
+                TenantPaysName = "TenantPays",
+                OwnerAndTenantPaysName = "OwnerAndTenantPays",
+                OwnerNumberOfMonthsMin = "0.1",
+                TenantNumberOfMonthsMin = "0.1",
+                OwnerPercentageMin = "0.1",
+                TenantPercentageMin = "0.1",
+                TakeOffMin = "0.1",
+                OwnerNumberOfMonthsStatic = "1",
+                TenantNumberOfMonthsStatic = "2",
+                OwnerPercentageStatic = "55.99",
+                TenantPercentageStatic = "79.8",
+                TakeOffStatic = "15",
+                OwnerNumberOfMonthsApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
+                TenantNumberOfMonthsApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
+                OwnerPercentageApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
+                TenantPercentageApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
             };
         }
     }

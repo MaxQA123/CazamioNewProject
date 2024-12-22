@@ -13,18 +13,18 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
     {
         public static RequestCreateOwnerRequiredData RequestBodyAgentRequiredData()
         {
-            Owner owner = new Owner().Generate();
+            Owner owner = Owner.Generate();
             Agent agent = new Agent().Generate();
 
             var payload = new RequestCreateOwnerRequiredData();
-            payload.CompanyName = owner.CompanyNameWithAgent;
-            payload.OwnerEmail = owner.EmailAddress;
-            payload.OwnerName = owner.FullName;
+            payload.CompanyName = owner.CompanyName.AssignedAgentMaxSymbols;
+            payload.OwnerEmail = owner.OwnerEmail.putsbox;
+            payload.OwnerName = owner.OwnerName.FirstLastNameRandom;
             payload.PhoneNumbers = new PhoneNumberModel[0];
             payload.Managements = new Management[0];
             payload.CommissionStructures = new CommissionStructureOwnerPays[]
             {
-            new CommissionStructureOwnerPays { Id = 0, PayType = owner.TypesCommissionStructure.OwnerPays, OwnerNumberOfMonths = owner.OwnerNumberOfMonthsApi, TakeOff = owner.TakeOffApi },
+            new CommissionStructureOwnerPays { Id = 0, /*PayType = owner.CommissionStructure.OwnerPaysComissionIdApi*/, OwnerNumberOfMonths = owner.CommissionStructure.OwnerNumberOfMonthsApi, /*TakeOff = owner.TakeOffApi*/ },
             };
             payload.BrokerId = agent.AgentIdApi;
             payload.IsAgent = ApiRequestData.TRUE;
