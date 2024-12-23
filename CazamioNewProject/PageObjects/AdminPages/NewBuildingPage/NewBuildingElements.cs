@@ -15,10 +15,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         public IWebElement SetItemOwnerOwnerAndTenantPaysCommissionWithBroker()
         {
             // Создание экземпляра класса Owner
-            Owner owner = new Owner().Generate();
+            Owner owner = Owner.Generate();
 
             // Использование переменной экземпляра owner для построения XPath
-            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.ListOwnersCompanyName.OwnerWithOwnerAndTenantPaysCommission + "']";
+            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.CommissionStructure.OwnerAndTenantPaysName + "']";
 
             // Присвоение значения ItemForAutotestForBroker
             return Browser._Driver.FindElement(By.XPath(xpath));
@@ -29,10 +29,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         public IWebElement SetOwnerNoCommissionAgent()
         {
             // Создание экземпляра класса Owner
-            Owner owner = new Owner().Generate();
+            Owner owner = Owner.Generate();
 
             // Использование переменной экземпляра owner для построения XPath
-            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.ListOwnersCompanyName.OwnerNoCommission + "']";
+            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.CommissionStructure.NoCommissionName + "']";
 
             // Присвоение значения ItemForAutotestForBroker
             return Browser._Driver.FindElement(By.XPath(xpath));
@@ -43,10 +43,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         public IWebElement SetOwnerOwnerPaysBroker()
         {
             // Создание экземпляра класса Owner
-            Owner owner = new Owner().Generate();
+            Owner owner = Owner.Generate();
 
             // Использование переменной экземпляра owner для построения XPath
-            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.ListOwnersCompanyName.OwnerWithOwnerPaysComission + "']";
+            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.CommissionStructure.OwnerPaysName + "']";
 
             // Присвоение значения ItemForAutotestForBroker
             return Browser._Driver.FindElement(By.XPath(xpath));
@@ -57,10 +57,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         public IWebElement SetOwnerTenantPaysCommissionAgent()
         {
             // Создание экземпляра класса Owner
-            Owner owner = new Owner().Generate();
+            Owner owner = Owner.Generate();
 
             // Использование переменной экземпляра owner для построения XPath
-            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.ListOwnersCompanyName.OwnerWithTenantPaysCommission + "']";
+            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.CommissionStructure.TenantPaysName + "']";
 
             // Присвоение значения ItemForAutotestForBroker
             return Browser._Driver.FindElement(By.XPath(xpath));

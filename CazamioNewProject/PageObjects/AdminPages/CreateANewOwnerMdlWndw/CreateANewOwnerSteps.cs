@@ -28,13 +28,24 @@ namespace CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw
             return this;
         }
 
+        [AllureStep("EnterPhoneExtensionNumbersFull")]
+        public CreateANewOwnerMdlWndw EnterPhoneExtensionNumbersFull()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputPhoneNumber, owner.PhoneNumber.BasicFirst);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputExtensionNumber, owner.PhoneNumber.ExtensionFirst);
+
+            return this;
+        }
+
         [AllureStep("EnterPhoneExtensionNumbers")]
         public CreateANewOwnerMdlWndw EnterPhoneExtensionNumbers()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputPhoneNumber, owner.PhoneNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputPhoneNumber, owner.PhoneNumber.BasicSecond);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputExtensionNumber, owner.ExtensionNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputExtensionNumber, owner.PhoneNumber.ExtensionSecond);
 
             return this;
         }
@@ -70,29 +81,29 @@ namespace CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw
             return this;
         }
 
-        [AllureStep("EnterDataOwnerAndTenantPays")]
-        public CreateANewOwnerMdlWndw EnterDataOwnerAndTenantPays()
+        [AllureStep("EnterDataOwnerAndTenantPaysMin")]
+        public CreateANewOwnerMdlWndw EnterDataOwnerAndTenantPaysMin()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputOwnerNumberOfMonths, owner.OwnerNumberOfMonths);
+            InputGeneral.InputFunctionWithClear(FieldInputOwnerNumberOfMonths, owner.CommissionStructure.OwnerNumberOfMonthsMin);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputTenantNumberOfMonths, owner.TenantNumberOfMonths);
+            InputGeneral.InputFunctionWithClear(FieldInputTenantNumberOfMonths, owner.CommissionStructure.TenantNumberOfMonthsMin);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputOwnerPercentage, owner.OwnerPercentage);
+            InputGeneral.InputFunctionWithClear(FieldInputOwnerPercentage, owner.CommissionStructure.OwnerPercentageMin);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputTenantPercentage, owner.TenantPercentage);
+            InputGeneral.InputFunctionWithClear(FieldInputTenantPercentage, owner.CommissionStructure.TenantPercentageMin);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputTakeOff, owner.TakeOff);
+            InputGeneral.InputFunctionWithClear(FieldInputTakeOff, owner.CommissionStructure.TakeOffMin);
 
             return this;
         }
 
-        [AllureStep("EnterDataTenantPays")]
-        public CreateANewOwnerMdlWndw EnterDataTenantPays()
+        [AllureStep("EnterDataTenantPaysMax")]
+        public CreateANewOwnerMdlWndw EnterDataTenantPaysMax()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputTenantNumberOfMonths, owner.TenantNumberOfMonths);
+            InputGeneral.InputFunctionWithClear(FieldInputTenantNumberOfMonths, owner.CommissionStructure.TenantNumberOfMonthsMax);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputTakeOff, owner.TakeOff);
+            InputGeneral.InputFunctionWithClear(FieldInputTakeOff, owner.CommissionStructure.TakeOffMax);
 
             return this;
         }
@@ -101,9 +112,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw
         public CreateANewOwnerMdlWndw EnterDataOwnerPays()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputOwnerNumberOfMonths, owner.OwnerNumberOfMonths);
+            InputGeneral.InputFunctionWithClear(FieldInputOwnerNumberOfMonths, owner.CommissionStructure.OwnerNumberOfMonthsStatic);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputTakeOff, owner.TakeOff);
+            InputGeneral.InputFunctionWithClear(FieldInputTakeOff, owner.CommissionStructure.TakeOffStatic);
 
             return this;
         }
@@ -112,24 +123,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw
         public CreateANewOwnerMdlWndw EnterFullDataMgmt()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputMgmtName, owner.FullName);
+            InputGeneral.InputFunctionWithClear(FieldInputMgmtName, owner.OwnerName.FirstLastNameRandom);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputMgmtEmail, owner.EmailAddress);
+            InputGeneral.InputFunctionWithClear(FieldInputMgmtEmail, owner.OwnerEmail.xitroo);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputPhoneNumberMgmt, owner.PhoneNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputPhoneNumberMgmt, owner.PhoneNumber.BasicFirst);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputMgmtExtensionNumber, owner.ExtensionNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputMgmtExtensionNumber, owner.PhoneNumber.ExtensionFirst);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputMgmtOfficeLocation, owner.OfficeLocation);
-
-            return this;
-        }
-
-        [AllureStep("EnterMandatoryDataMgmt")]
-        public CreateANewOwnerMdlWndw EnterMandatoryDataMgmt()
-        {
-            WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputMgmtName, owner.FullName);
+            InputGeneral.InputFunctionWithClear(FieldInputMgmtOfficeLocation, owner.OfficeLocation.Dallas);
 
             return this;
         }

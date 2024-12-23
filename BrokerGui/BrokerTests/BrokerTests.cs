@@ -265,19 +265,19 @@ namespace BrokerGuiTests
                 .ClickButtonCreateOwner();
             Pages.CreateANewOwnerMdlWndw
                 .VerifyTitleCreateANewOwner()
-                .EnterCompanyNameForBrokerRole()
-                .EnterOwnerName()
-                .EnterOwnerEmaiL()
-                .EnterOfficeLocation()
-                .EnterInternalNotes()
+                .EnterCompanyNameBrokerMaxSymbols()
+                .EnterOwnerFirstName()
+                .EnterOwnerEmaiLXitroo()
+                .EnterOfficeLocationDallas()
+                .EnterInternalNotesShort()
                 .ClickButtonAddPhoneNumber()
-                .EnterPhoneExtensionNumbers()
+                .EnterPhoneNumber()
                 .ClickButtonAddCommissionStructure();
             KeyBoardActions.ScrollToDown();
             Pages.CreateANewOwnerMdlWndw
                 .ClickButtonAddMgmt()
                 .SelectItemTenantPays()
-                .EnterDataTenantPays()
+                .EnterDataTenantPaysMax()
                 .ScrollDown()
                 .EnterMandatoryDataMgmt();
 
@@ -740,8 +740,8 @@ namespace BrokerGuiTests
 
             string getUnitNumber = Pages.ApartmentView.GetSubjectExpected();
 
-            Pages.ApartmentView
-                .EnterNewEmailFirstLastNames();
+            //Pages.ApartmentView
+            //    .EnterNewEmailFirstLastNames();
 
             #endregion
 

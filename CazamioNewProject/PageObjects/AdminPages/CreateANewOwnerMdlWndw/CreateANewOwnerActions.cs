@@ -1,11 +1,6 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
 using NUnit.Allure.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw
 {
@@ -13,56 +8,119 @@ namespace CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw
     {
         Owner owner = Owner.Generate();
 
-        [AllureStep("EnterCompanyNameForAgentRole")]
-        public CreateANewOwnerMdlWndw EnterCompanyNameForAgentRole()
+        [AllureStep("EnterCompanyNameOneLetter")]
+        public CreateANewOwnerMdlWndw EnterCompanyNameOneLetter()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputCompanyName, owner.CompanyNameWithAgent);
+            InputGeneral.InputFunctionWithClear(FieldInputCompanyName, owner.CompanyName.OneLetter);
 
             return this;
         }
 
-        [AllureStep("EnterCompanyNameForBrokerRole")]
-        public CreateANewOwnerMdlWndw EnterCompanyNameForBrokerRole()
+        [AllureStep("EnterCompanyNameAgentMaxSymbols")]
+        public CreateANewOwnerMdlWndw EnterCompanyNameAgentMaxSymbols()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputCompanyName, owner.CompanyNameWithBroker);
+            InputGeneral.InputFunctionWithClear(FieldInputCompanyName, owner.CompanyName.AssignedAgentMaxSymbols);
 
             return this;
         }
 
-        [AllureStep("EnterOwnerName")]
-        public CreateANewOwnerMdlWndw EnterOwnerName()
+        [AllureStep("EnterCompanyNameBrokerMaxSymbols")]
+        public CreateANewOwnerMdlWndw EnterCompanyNameBrokerMaxSymbols()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputOwnerName, owner.FullName);
+            InputGeneral.InputFunctionWithClear(FieldInputCompanyName, owner.CompanyName.AssignedBrokerMaxSymbols);
 
             return this;
         }
 
-        [AllureStep("EnterOwnerEmaiL")]
-        public CreateANewOwnerMdlWndw EnterOwnerEmaiL()
+        [AllureStep("EnterOwnerFirstName")]
+        public CreateANewOwnerMdlWndw EnterOwnerFirstName()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputOwnerEmail, owner.EmailAddress);
+            InputGeneral.InputFunctionWithClear(FieldInputOwnerName, owner.OwnerName.FirstNameRandom);
 
             return this;
         }
 
-        [AllureStep("EnterOfficeLocation")]
-        public CreateANewOwnerMdlWndw EnterOfficeLocation()
+        [AllureStep("EnterOwnerFirstLastName")]
+        public CreateANewOwnerMdlWndw EnterOwnerFirstLastName()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputOfficeLocation, owner.OfficeLocation);
+            InputGeneral.InputFunctionWithClear(FieldInputOwnerName, owner.OwnerName.FirstLastNameRandom);
 
             return this;
         }
 
-        [AllureStep("EnterInternalNotes")]
-        public CreateANewOwnerMdlWndw EnterInternalNotes()
+        [AllureStep("EnterOwnerEmaiLGmail")]
+        public CreateANewOwnerMdlWndw EnterOwnerEmaiLGmail()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputInternalNotes, owner.InternalNotes);
+            InputGeneral.InputFunctionWithClear(FieldInputOwnerEmail, owner.OwnerEmail.gmail);
+
+            return this;
+        }
+
+        [AllureStep("EnterOwnerEmaiLYahoo")]
+        public CreateANewOwnerMdlWndw EnterOwnerEmaiLYahoo()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputOwnerEmail, owner.OwnerEmail.yahoo);
+
+            return this;
+        }
+
+        [AllureStep("EnterOwnerEmaiLXitroo")]
+        public CreateANewOwnerMdlWndw EnterOwnerEmaiLXitroo()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputOwnerEmail, owner.OwnerEmail.xitroo);
+
+            return this;
+        }
+
+        [AllureStep("EnterOfficeLocationWashington")]
+        public CreateANewOwnerMdlWndw EnterOfficeLocationWashington()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputOfficeLocation, owner.OfficeLocation.Washington);
+
+            return this;
+        }
+
+        [AllureStep("EnterOfficeLocationNewYork")]
+        public CreateANewOwnerMdlWndw EnterOfficeLocationNewYork()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputOfficeLocation, owner.OfficeLocation.NewYork);
+
+            return this;
+        }
+
+        [AllureStep("EnterOfficeLocationDallas")]
+        public CreateANewOwnerMdlWndw EnterOfficeLocationDallas()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputOfficeLocation, owner.OfficeLocation.Dallas);
+
+            return this;
+        }
+
+        [AllureStep("EnterInternalNotesShort")]
+        public CreateANewOwnerMdlWndw EnterInternalNotesShort()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputInternalNotes, owner.InternalNotes.Short);
+
+            return this;
+        }
+
+        [AllureStep("EnterInternalNotesLong")]
+        public CreateANewOwnerMdlWndw EnterInternalNotesLong()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputInternalNotes, owner.InternalNotes.Long);
 
             return this;
         }
@@ -72,6 +130,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw
         {
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonAddPhoneNumber);
+
+            return this;
+        }
+
+        [AllureStep("EnterPhoneNumber")]
+        public CreateANewOwnerMdlWndw EnterPhoneNumber()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputPhoneNumber, owner.PhoneNumber.BasicSecond);
 
             return this;
         }
@@ -129,6 +196,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw
         {
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonAddMgmt);
+
+            return this;
+        }
+
+        [AllureStep("EnterMandatoryDataMgmt")]
+        public CreateANewOwnerMdlWndw EnterMandatoryDataMgmt()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputMgmtName, owner.OwnerName.FirstLastNameRandom);
 
             return this;
         }

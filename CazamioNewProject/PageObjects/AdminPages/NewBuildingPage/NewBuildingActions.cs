@@ -13,7 +13,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         private static IWebElement _tabsForSwitchingOnPage;
 
         Building building = Building.Generate();
-        Owner owner = new Owner().Generate();
+        Owner owner = Owner.Generate();
 
         [AllureStep("SelectorTabsOnNewBuildingsPg")]
         public static IList<IWebElement> SelectorTabsOnNewBuildingsPg(string _locationTab)

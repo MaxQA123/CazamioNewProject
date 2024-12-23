@@ -24,7 +24,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             payload.Managements = new Management[0];
             payload.CommissionStructures = new CommissionStructureOwnerPays[]
             {
-            new CommissionStructureOwnerPays { Id = 0, /*PayType = owner.CommissionStructure.OwnerPaysComissionIdApi*/, OwnerNumberOfMonths = owner.CommissionStructure.OwnerNumberOfMonthsApi, /*TakeOff = owner.TakeOffApi*/ },
+            new CommissionStructureOwnerPays { /*Id = 0, PayType = owner.CommissionStructure.OwnerPaysComissionIdApi, OwnerNumberOfMonths = owner.CommissionStructure.OwnerNumberOfMonthsApi, TakeOff = owner.TakeOffApi*/ },
             };
             payload.BrokerId = agent.AgentIdApi;
             payload.IsAgent = ApiRequestData.TRUE;

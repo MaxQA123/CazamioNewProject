@@ -96,6 +96,8 @@ namespace CazamioNewProject.Objects
             public string OwnerPercentageMin { get; set; }
             public string TenantPercentageMin { get; set; }
             public string TakeOffMin { get; set; }
+            public string TenantNumberOfMonthsMax { get; set; }
+            public string TakeOffMax { get; set; }
             public string OwnerNumberOfMonthsStatic { get; set; }
             public string TenantNumberOfMonthsStatic { get; set; }
             public string OwnerPercentageStatic { get; set; }
@@ -133,9 +135,9 @@ namespace CazamioNewProject.Objects
             return new OwnerEmailInfo
             {
                 yahoo = GenerateRandomData.RandomEmail(1) + "@yahoo.com",
-                putsbox = GenerateRandomData.RandomEmail(3) + "@putsbox",
-                xitroo = GenerateRandomData.RandomEmail(10) + "@xitroo",
-                gmail = GenerateRandomData.RandomEmail(15) + "@gmail",
+                putsbox = GenerateRandomData.RandomEmail(3) + "@putsbox.com",
+                xitroo = GenerateRandomData.RandomEmail(10) + "@xitroo.com",
+                gmail = GenerateRandomData.RandomEmail(15) + "@gmail.com",
                 EmailAddressOwnerForBroker = "owner2for5broker@putsbox.com",
                 EmailAddressOwnerForAgent = "owner2forag5bro@putsbox.com",
             };
@@ -174,7 +176,7 @@ namespace CazamioNewProject.Objects
             return new PhoneNumberInfo
             {
                 BasicFirst = "912" + GenerateRandomData.RandomPhoneNumber(7),
-                ExtensionFirst = "320",
+                ExtensionFirst = "320" + GenerateRandomData.RandomPhoneNumber(7),
                 BasicSecond = "585" + GenerateRandomData.RandomPhoneNumber(7),
                 ExtensionSecond = "325",
                 BasicApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
@@ -197,6 +199,8 @@ namespace CazamioNewProject.Objects
                 OwnerPercentageMin = "0.1",
                 TenantPercentageMin = "0.1",
                 TakeOffMin = "0.1",
+                TenantNumberOfMonthsMax = "99.99",
+                TakeOffMax = "9.99",
                 OwnerNumberOfMonthsStatic = "1",
                 TenantNumberOfMonthsStatic = "2",
                 OwnerPercentageStatic = "55.99",

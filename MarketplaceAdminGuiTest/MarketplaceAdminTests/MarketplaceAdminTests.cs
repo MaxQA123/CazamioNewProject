@@ -383,12 +383,12 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonCreateOwner();
             Pages.CreateANewOwnerMdlWndw
                 .VerifyTitleCreateANewOwner()
-                .EnterCompanyNameForBrokerRole()
-                .EnterOwnerName()
-                .EnterOwnerEmaiL()
-                .EnterOfficeLocation()
+                .EnterCompanyNameOneLetter()
+                .EnterOwnerFirstName()
+                .EnterOwnerEmaiLGmail()
+                .EnterOfficeLocationWashington()
                 .SelectBroker()
-                .EnterInternalNotes()
+                .EnterInternalNotesShort()
                 .ClickButtonAddPhoneNumber()
                 .EnterPhoneExtensionNumbers()
                 .ClickButtonAddCommissionStructure();
@@ -463,14 +463,14 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonCreateOwner();
             Pages.CreateANewOwnerMdlWndw
                 .VerifyTitleCreateANewOwner()
-                .EnterCompanyNameForAgentRole()
-                .EnterOwnerName()
-                .EnterOwnerEmaiL()
-                .EnterOfficeLocation()
+                .EnterCompanyNameAgentMaxSymbols()
+                .EnterOwnerFirstLastName()
+                .EnterOwnerEmaiLYahoo()
+                .EnterOfficeLocationNewYork()
                 .SelectAgent()
-                .EnterInternalNotes()
+                .EnterInternalNotesLong()
                 .ClickButtonAddPhoneNumber()
-                .EnterPhoneExtensionNumbers()
+                .EnterPhoneExtensionNumbersFull()
                 .ClickButtonAddCommissionStructure();
             KeyBoardActions.ScrollToDown();
             Pages.CreateANewOwnerMdlWndw
@@ -478,7 +478,7 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonAddMgmt()
                 .ClickButtonPayType()
                 .SelectItemOwnerAndTenantPays()
-                .EnterDataOwnerAndTenantPays()
+                .EnterDataOwnerAndTenantPaysMin()
                 .ScrollDown()
                 .EnterFullDataMgmt();
 
