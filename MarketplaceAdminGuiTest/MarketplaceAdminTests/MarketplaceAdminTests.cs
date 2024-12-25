@@ -785,7 +785,7 @@ namespace MarketplaceAdminGuiTest
             string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
 
             Pages.BuildingView
-                //.VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneWashingtonSquare)
+                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneWashingtonSquare)
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
             Pages.BuildingView
