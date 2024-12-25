@@ -168,8 +168,8 @@ namespace CazamioNewProject.Objects
             return new SaintJohnsonPlInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(5) + " " + "Saint Johnson Place",
-                //NumberNameAddressStatic = "9998 Saint Johnson Place",
-                NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(5) + " " + "Saint Johnson Place",
+                NumberNameAddressStatic = "9998 Saint Johnson Place",
+                //NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(5) + " " + "Saint Johnson Place",
                 NumberNameAddress = "9998 Saint Johnson Place",
                 NumberAddress = "9998",
                 //NumberAddress = GenerateRandomData.RandomNumberWithoutZero(5),
@@ -188,8 +188,8 @@ namespace CazamioNewProject.Objects
             return new WashingtonSquareInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(4) + " " + "Washington Square",
-                //NumberNameAddressStatic = "1 Washington Square",
-                NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(4) + " " + "Washington Square",
+                NumberNameAddressStatic = "1 Washington Square",
+                //NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(4) + " " + "Washington Square",
                 NumberNameAddress = "1 Washington Square",
                 NumberAddress = "1",
                 //NumberAddress = GenerateRandomData.RandomNumberWithoutZero(2),
@@ -208,8 +208,8 @@ namespace CazamioNewProject.Objects
             return new CrownStInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(3) + " " + "Crown St",
-                //NumberNameAddressStatic = "30-39 Crown St",
-                NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(2) + "-" + GenerateRandomData.RandomNumberWithoutZero(2) + " " + "Crown St",
+                NumberNameAddressStatic = "30-39 Crown St",
+                //NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(2) + "-" + GenerateRandomData.RandomNumberWithoutZero(2) + " " + "Crown St",
                 NumberNameAddress = "30-39 Crown St",
                 NumberAddress = "30-39",
                 //NumberAddress = GenerateRandomData.RandomNumberWithoutZero(2) + "-" + GenerateRandomData.RandomNumberWithoutZero(2),
@@ -228,8 +228,8 @@ namespace CazamioNewProject.Objects
             return new AlbermaleRdInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(2) + " " + "Albermale Rd",
-                //NumberNameAddressStatic = "9A Albermale Rd",
-                NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(1) + GenerateRandomData.RandomAlphabetUpperCase(1) + " " + "Albermale Rd",
+                NumberNameAddressStatic = "9A Albermale Rd",
+                //NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(1) + GenerateRandomData.RandomAlphabetUpperCase(1) + " " + "Albermale Rd",
                 NumberNameAddress = "9A Albermale Rd",
                 NumberAddress = "9A",
                 //NumberAddress = GenerateRandomData.RandomNumberWithoutZero(1) + GenerateRandomData.RandomAlphabetUpperCase(1),
@@ -249,6 +249,7 @@ namespace CazamioNewProject.Objects
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(1) + " " + "East 51st Street Pedestrian Crossing",
                 NumberNameAddressStatic = "111A East 51st Street Pedestrian Crossing",
+                //NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(2) + GenerateRandomData.RandomAlphabetUpperCase(1) + " " + "East 51st Street Pedestrian Crossing",
                 NumberNameAddress = "111A East 51st Street Pedestrian Crossing",
                 NumberAddress = "111A",
                 //NumberAddress = GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomAlphabetUpperCase(1),

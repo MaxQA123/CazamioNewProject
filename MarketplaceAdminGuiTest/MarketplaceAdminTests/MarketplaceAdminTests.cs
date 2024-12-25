@@ -865,6 +865,8 @@ namespace MarketplaceAdminGuiTest
                 //Add Assertion
 
             #endregion
+
+            WaitUntil.WaitSomeInterval(5000);
         }
 
         [Test]

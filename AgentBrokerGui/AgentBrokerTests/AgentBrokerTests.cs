@@ -155,7 +155,7 @@ namespace AgentBrokerGui
                 .ClickButtonAddBuilding();
             Pages.NewBuilding
                 .VerifyTitleNewBuildingPg()
-                .SelectOwnerTenantPaysCommissionWithAgent()
+                .SelectOwnerTenantPaysCommissionAgent()
                 .EnterBuildingDataEast51stStreetPedestrianCrossing()
                 .ClickFieldInputInternalNotes();
 
@@ -275,10 +275,7 @@ namespace AgentBrokerGui
             Pages.AddApartments
                 .EnterDataForOneOneOneAEastStPedestrianCrossing()
                 .SelectStatusOffMarket()
-                .SelectApartmentTypeLoft()
-                .ClickButtonPaymentMethods();
-            Pages.PaymentOptionsMdlWndw
-                .SelectPaymentMethodCreditCard();
+                .SelectApartmentTypeLoft();
             Pages.AddApartments
                 .ClickTabAmenities()
                 .SelectThreeAmenitiesIncludedInMonthlyRent()
@@ -291,7 +288,6 @@ namespace AgentBrokerGui
                 .AddConcessionIsActiveWithoutName()
                 .ClickTabImages()
                 .UploadFiveImages();
-            //JScriptExecutor.ScrollToDownWebPage();
             Pages.AddApartments
                 .ClickButtonSelectVideo()
                 .UploadOneFileVideo()
