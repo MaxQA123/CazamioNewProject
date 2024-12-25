@@ -345,7 +345,7 @@ namespace BrokerGuiTests
                 .ClickButtonAddBuilding();
             Pages.NewBuilding
                 .VerifyTitleNewBuildingPg()
-                .SelectOwnerOwnerPaysWithBroker()
+                .SelectOwnerOwnerPaysBroker()
                 .EnterBuildingDataCrownSt()
                 .ClickFieldInputInternalNotes();
 
@@ -446,7 +446,7 @@ namespace BrokerGuiTests
                 .ClickButtonAddBuilding();
             Pages.NewBuilding
                 .VerifyTitleNewBuildingPg()
-                .SelectOwnerTenantPaysCommissionWithAgent()
+                .SelectOwnerTenantPaysCommissionAgent()
                 .EnterBuildingDataAlbermaleRd();
 
             string getAddressNewBuildingActual = Pages.NewBuilding.GetValueFromFieldAddress();

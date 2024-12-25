@@ -13,6 +13,10 @@ namespace CazamioNewProject.Objects
         public InternalNotesInfo InternalNotes { get; set; }
         public PhoneNumberInfo PhoneNumber { get; set; }
         public CommissionStructureInfo CommissionStructure { get; set; }
+        public CreatedOwnerNoCommissionInfo CreatedOwnerNoCommission { get; set; }
+        public CreatedOwnerOwnerAndTenantPaysInfo CreatedOwnerOwnerAndTenantPays { get; set; }
+        public CreatedOwnerOwnerPaysInfo CreatedOwnerOwnerPays { get; set; }
+        public CreatedOwnerTenantPaysInfo CreatedOwnerTenantPays { get; set; }
 
         public static Owner Generate()
         {
@@ -26,6 +30,10 @@ namespace CazamioNewProject.Objects
                 InternalNotes = CreateInternalNotesInfo(),
                 PhoneNumber = CreatePhoneNumberInfo(),
                 CommissionStructure = CreateCommissionStructureInfo(),
+                CreatedOwnerNoCommission = CreateCreatedOwnerNoCommissionInfo(),
+                CreatedOwnerOwnerAndTenantPays = CreateCreatedOwnerOwnerAndTenantPaysInfo(),
+                CreatedOwnerOwnerPays = CreateCreatedOwnerOwnerPaysInfo(),
+                CreatedOwnerTenantPays = CreateCreatedOwnerTenantPaysInfo(),
             };
         }
 
@@ -107,6 +115,26 @@ namespace CazamioNewProject.Objects
             public long TenantNumberOfMonthsApi { get; set; }
             public long OwnerPercentageApi { get; set; }
             public long TenantPercentageApi { get; set; }
+        }
+
+        public class CreatedOwnerNoCommissionInfo
+        {
+            public string OwnerName { get; set; }
+        }
+
+        public class CreatedOwnerOwnerAndTenantPaysInfo
+        {
+            public string OwnerName { get; set; }
+        }
+
+        public class CreatedOwnerOwnerPaysInfo
+        {
+            public string OwnerName { get; set; }
+        }
+
+        public class CreatedOwnerTenantPaysInfo
+        {
+            public string OwnerName { get; set; }
         }
 
         private static CompanyNameInfo CreateCompanyNameInfo()
@@ -210,6 +238,38 @@ namespace CazamioNewProject.Objects
                 TenantNumberOfMonthsApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
                 OwnerPercentageApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
                 TenantPercentageApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
+            };
+        }
+
+        private static CreatedOwnerNoCommissionInfo CreateCreatedOwnerNoCommissionInfo()
+        {
+            return new CreatedOwnerNoCommissionInfo
+            {
+                OwnerName = "LLC Ag-Br Owner No commisions AutoTest",
+            };
+        }
+
+        private static CreatedOwnerOwnerAndTenantPaysInfo CreateCreatedOwnerOwnerAndTenantPaysInfo()
+        {
+            return new CreatedOwnerOwnerAndTenantPaysInfo
+            {
+                OwnerName = "LLC Br Owner OwnerAndTenantPaysCommissio",
+            };
+        }
+
+        private static CreatedOwnerOwnerPaysInfo CreateCreatedOwnerOwnerPaysInfo()
+        {
+            return new CreatedOwnerOwnerPaysInfo
+            {
+                OwnerName = "OOO Owner Assigned Broker OwnerPays Test",
+            };
+        }
+
+        private static CreatedOwnerTenantPaysInfo CreateCreatedOwnerTenantPaysInfo()
+        {
+            return new CreatedOwnerTenantPaysInfo
+            {
+                OwnerName = "Asig AgBr Owner TenantPays 12345 (!@#$%)",
             };
         }
     }

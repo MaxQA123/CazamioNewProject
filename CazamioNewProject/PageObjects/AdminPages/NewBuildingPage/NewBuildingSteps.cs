@@ -168,19 +168,19 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             return this;
         }
 
-        [AllureStep("OwnerOwnerAndTenantPaysCommissionWithBroker")]
-        public NewBuilding SelectOwnerOwnerAndTenantPaysCommissionWithBroker()
+        [AllureStep("SelectOwnerOwnerAndTenantPaysCommissionBroker")]
+        public NewBuilding SelectOwnerOwnerAndTenantPaysCommissionBroker()
         {
             WaitUntil.WaitSomeInterval(5000);
             Button.Click(ButtonMenuOwnerSelect);
             WaitUntil.WaitSomeInterval(5000);
-            Button.Click(SetItemOwnerOwnerAndTenantPaysCommissionWithBroker());
+            Button.Click(SetItemOwnerOwnerAndTenantPaysCommissionBroker());
 
             return this;
         }
 
-        [AllureStep("SelectOwnerOwnerPaysWithBroker")]
-        public NewBuilding SelectOwnerOwnerPaysWithBroker()
+        [AllureStep("SelectOwnerOwnerPaysBroker")]
+        public NewBuilding SelectOwnerOwnerPaysBroker()
         {
             WaitUntil.WaitSomeInterval(5000);
             Button.Click(ButtonMenuOwnerSelect);
@@ -190,8 +190,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             return this;
         }
 
-        [AllureStep("SelectOwnerTenantPaysCommissionWithAgent")]
-        public NewBuilding SelectOwnerTenantPaysCommissionWithAgent()
+        [AllureStep("SelectOwnerTenantPaysCommissionAgent")]
+        public NewBuilding SelectOwnerTenantPaysCommissionAgent()
         {
             WaitUntil.WaitSomeInterval(5000);
             Button.Click(ButtonMenuOwnerSelect);
