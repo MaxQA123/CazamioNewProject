@@ -13,7 +13,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateNewAgentMdlWndw
 {
     public partial class CreateNewAgentMdlWndw
     {
-        Agent agent = new Agent().Generate();
+        Agent agent = Agent.Generate();
 
         [AllureStep("CopyEmailFromFieldEmail")]
         public string CopyEmailFromFieldEmail()

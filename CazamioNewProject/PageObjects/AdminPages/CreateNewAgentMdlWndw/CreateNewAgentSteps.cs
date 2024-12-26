@@ -8,11 +8,11 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateNewAgentMdlWndw
         [AllureStep("EnterFirstLastNameEmailPhnNmbrCell")]
         public CreateNewAgentMdlWndw EnterFirstLastNameEmailPhnNmbrCell()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputFirstName, agent.FirstName);
-            InputGeneral.InputFunctionWithClear(FieldInputLastName, agent.LastName);
-            InputGeneral.InputFunctionWithClear(FieldInputEmail, agent.EmailAddress);
-            InputGeneral.InputFunctionWithClear(FieldInputPhoneNumber, agent.PhoneNumber);
-            InputGeneral.InputFunctionWithClear(FieldInputCell, agent.Cell);
+            InputGeneral.InputFunctionWithClear(FieldInputFirstName, agent.AgentName.FirstNameRandom);
+            InputGeneral.InputFunctionWithClear(FieldInputLastName, agent.AgentName.LastNameRandom);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, agent.AgentEmail.FullEmail);
+            InputGeneral.InputFunctionWithClear(FieldInputPhoneNumber, agent.PhoneNumber.BasicFirst);
+            InputGeneral.InputFunctionWithClear(FieldInputCell, agent.PhoneNumber.CellFirst);
 
             return this;
         }
@@ -20,8 +20,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateNewAgentMdlWndw
         [AllureStep("EnterBrokerAgentCommission")]
         public CreateNewAgentMdlWndw EnterBrokerAgentCommission()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputBrokerCommission, agent.AgentCommission);
-            InputGeneral.InputFunctionWithClear(FieldInputAgentCommission, agent.BrokerCommission);
+            InputGeneral.InputFunctionWithClear(FieldInputBrokerCommission, agent.CommissionPercentage.ForBrokerRandom);
+            InputGeneral.InputFunctionWithClear(FieldInputAgentCommission, agent.CommissionPercentage.ForAgentRandom);
 
             return this;
         }

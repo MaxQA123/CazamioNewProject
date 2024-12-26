@@ -16,8 +16,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         SuperAdmin superAdmin = new SuperAdmin().Generate();
         MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
         Broker broker = new Broker().Generate();
-        Agent agent = new Agent().Generate();
-        AgentBroker agentBroker = new AgentBroker().Generate();
+        Agent agent = Agent.Generate();
+        AgentBroker agentBroker = AgentBroker.Generate();
 
         #region UploadImage
 

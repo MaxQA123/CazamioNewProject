@@ -12,8 +12,8 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.AgentBrokerApiCollections.LogI
         {
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(agentBroker.FullNameAgentBroker, responseBroker.AuthData.User.UserName, $"Name not equal");
-                Assert.AreEqual(agentBroker.EmailAddressAgentBroker, responseBroker.AuthData.User.UserEmail, $"Email not equal");
+                Assert.AreEqual(agentBroker.CreatedAgentMySpace.FullName, responseBroker.AuthData.User.UserName, $"Name not equal");
+                Assert.AreEqual(agentBroker.CreatedAgentMySpace.Email, responseBroker.AuthData.User.UserEmail, $"Email not equal");
                 Assert.AreEqual(GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE, responseBroker.MarketplaceId, $"MarketplaceId not equal");
             });
         }

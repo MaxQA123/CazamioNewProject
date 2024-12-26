@@ -39,7 +39,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         [AllureStep("EnterEmailPasswordAsAgent")]
         public LogInLandlord EnterEmailPasswordAsAgent()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, agent.EmailAddressAgent);
+            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, agent.CreatedAgentMySpace.Email);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
 
@@ -49,7 +49,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         [AllureStep("EnterEmailPasswordAsAgentBroker")]
         public LogInLandlord EnterEmailPasswordAsAgentBroker()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, agentBroker.EmailAddressAgentBroker);
+            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, agentBroker.CreatedAgentMySpace.Email);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
 

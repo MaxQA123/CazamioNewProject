@@ -14,7 +14,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public static RequestCreateOwnerRequiredData RequestBodyAgentRequiredData()
         {
             Owner owner = Owner.Generate();
-            Agent agent = new Agent().Generate();
+            Agent agent = Agent.Generate();
 
             var payload = new RequestCreateOwnerRequiredData();
             payload.CompanyName = owner.CompanyName.AssignedAgentMaxSymbols;
@@ -26,7 +26,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             {
             new CommissionStructureOwnerPays { /*Id = 0, PayType = owner.CommissionStructure.OwnerPaysComissionIdApi, OwnerNumberOfMonths = owner.CommissionStructure.OwnerNumberOfMonthsApi, TakeOff = owner.TakeOffApi*/ },
             };
-            payload.BrokerId = agent.AgentIdApi;
+            payload.BrokerId = agent.CreatedAgentMySpace.AgentIdApi;
             payload.IsAgent = ApiRequestData.TRUE;
 
             return payload;

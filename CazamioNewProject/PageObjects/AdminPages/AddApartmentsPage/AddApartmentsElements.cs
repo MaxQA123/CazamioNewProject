@@ -35,13 +35,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 
         public IWebElement SetItemAgent()
         {
-            // Создание экземпляра класса Owner
-            Agent agent = new Agent().Generate();
+            Agent agent = Agent.Generate();
 
-            // Использование переменной экземпляра owner для построения XPath
-            var xpath = "//ng-dropdown-panel//span[text() = '" + agent.FullNameCreatedAgentMySpace.FirstAgent + "']";
+            var xpath = "//ng-dropdown-panel//span[text() = '" + agent.CreatedAgentMySpace.FullName + "']";
 
-            // Присвоение значения ItemForAutotestForBroker
             return Browser._Driver.FindElement(By.XPath(xpath));
         }
 
@@ -49,7 +46,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 
         public IWebElement SetItemBuildingThirtyDashTrirtyNineCrownSt()
         {
-            Agent agent = new Agent().Generate();
 
             var xpath = "//ng-dropdown-panel//span[contains(text(), '" + apartment.BuildingShortAddress.ThirtyDashTrirtyNineCrownSt + "')]";
 
@@ -60,7 +56,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
 
         public IWebElement SetItemBuildingNineAAlbermaleRoad()
         {
-            Agent agent = new Agent().Generate();
 
             var xpath = "//ng-dropdown-panel//span[contains(text(), '" + apartment.BuildingShortAddress.NineAAAlbermaleRd + "')]";
 
