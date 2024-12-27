@@ -14,8 +14,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
     public partial class SidebarLandlord
     {
         SuperAdmin superAdmin = new SuperAdmin().Generate();
-        MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
-        Broker broker = new Broker().Generate();
+        MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
+        Broker broker = Broker.Generate();
         Agent agent = Agent.Generate();
         AgentBroker agentBroker = AgentBroker.Generate();
 

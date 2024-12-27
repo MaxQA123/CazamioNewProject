@@ -30,16 +30,13 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         public SidebarLandlord VerifyMarketplaceAdminUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
         {
             WaitUntil.WaitSomeInterval(500);
-            string getUserNameExpected = marketplaceAdmin.FullNameMarketplaceAdmin;
+            string getUserNameExpected = marketplaceAdmin.CreatedMarkAdmMySpace.FullName;
             string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_MARKETPLACE_ADMIN;
 
             Assert.Multiple(() =>
             {
                 Assert.AreEqual(getUserNameExpected, getUserNameActual, $"User Name not equal");
                 Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleActual, $"User Name Role not equal");
-
-                Console.WriteLine($"First Last name EX: {getUserNameExpected} First Last name AC: {getUserNameActual}");
-                Console.WriteLine($"Name Role EX: {getUserNameRoleExpected} Name Role AC: {getUserNameRoleActual}");
             });
             return this;
         }
@@ -47,15 +44,12 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("VerifyMarketplaceAdminUserNameAndRoleCreating")]
         public SidebarLandlord VerifyMarketplaceAdminUserNameAndRoleCreating(string getUserNameRoleMarketplaceAdmin)
         {
-            WaitUntil.WaitSomeInterval(500);
-            string getUserNameExpected = marketplaceAdmin.FullNameMarketplaceAdmin;
+            WaitUntil.WaitSomeInterval(100);
             string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_MARKETPLACE_ADMIN;
 
             Assert.Multiple(() =>
             {
                 Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleMarketplaceAdmin, $"User Name Role not equal");
-
-                Console.WriteLine($"Name Role EX: {getUserNameRoleExpected} Name Role AC: {getUserNameRoleMarketplaceAdmin}");
             });
             return this;
         }
@@ -64,7 +58,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         public SidebarLandlord VerifyBrokerUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
         {
             WaitUntil.WaitSomeInterval(500);
-            string getUserNameExpected = broker.FullUserNameBroker;
+            string getUserNameExpected = broker.CreatedBrokerMySpace.FullName;
             string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_BROKER;
 
             Assert.Multiple(() =>
@@ -81,15 +75,12 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("VerifyBrokerUserNameAndRoleCreating")]
         public SidebarLandlord VerifyBrokerUserNameAndRoleCreating(string getUserNameRoleCompareBroker)
         {
-            WaitUntil.WaitSomeInterval(500);
-            string getUserNameExpected = broker.FullUserNameBroker;
+            WaitUntil.WaitSomeInterval(100);
             string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_BROKER;
 
             Assert.Multiple(() =>
             {
                 Assert.AreEqual(getUserNameRoleExpected, getUserNameRoleCompareBroker, $"User Name Role not equal");
-
-                Console.WriteLine($"Name Role EX: {getUserNameRoleExpected} Name Role AC: {getUserNameRoleCompareBroker}");
             });
             return this;
         }

@@ -7,7 +7,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdl
 {
     public partial class CreateANewMarketplaceAdminMdlWindow
     {
-        MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
+        MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
 
         [AllureStep("ClickButtonCreate")]
         public CreateANewMarketplaceAdminMdlWindow ClickButtonCreate()

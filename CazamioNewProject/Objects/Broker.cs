@@ -5,37 +5,84 @@ namespace CazamioNewProject.Objects
 {
     public class Broker
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string EmailAddress { get; set; }
-        public string ShortEmail { get; set; }
-        public string EmailAddressBroker { get; set; }
-        public string FullUserNameBroker { get; set; }
-        public string DeviceFingerprint { get; set; }
-        public long BrokerIdApi { get; set; }
+        public BrokerNameInfo BrokerName { get; set; }
+        public BrokerEmailInfo BrokerEmail { get; set; }
+        public CreatedBrokerMySpaceInfo CreatedBrokerMySpace { get; set; }
+        public BasicDataApiInfo BasicDataApi { get; set; }
 
-        public Broker Generate()
+        public static Broker Generate()
         {
-            string firsName = "BrokerQA";
-            string lastName = Name.LastName();
-            string shortEmail = GenerateRandomData.RandomEmail(5) + GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomEmail(2);
-            string emailAddressBroker = "broker3autotest@putsbox.com";
-            string fullUserNameBroker = "Leoautotest Feabroker";
-            string deviceFingerprint = "d86d2f3b2f8e0030f57cfb1ce82f3f25";
-            long brokerIdApi = 103;
-
-            var broker = new Broker()
+            return new Broker
             {
-                FirstName = firsName,
-                LastName = lastName,
-                EmailAddress = shortEmail + EmailNameDomen.PUTS_BOX,
-                ShortEmail = shortEmail,
-                EmailAddressBroker = emailAddressBroker,
-                FullUserNameBroker = fullUserNameBroker,
-                DeviceFingerprint = deviceFingerprint,
-                BrokerIdApi = brokerIdApi
+                BrokerName = CreateBrokerNameInfo(),
+                BrokerEmail = CreateBrokerEmailInfo(),
+                CreatedBrokerMySpace = CreateCreatedBrokerMySpaceInfo(),
+                BasicDataApi = CreateBasicDataApiInfo(),
             };
-            return broker;
+        }
+
+        public class BrokerNameInfo
+        {
+            public string FirstNameRandom { get; set; }
+            public string LastNameRandom { get; set; }
+            public string FirstLastNameRandom { get; set; }
+        }
+
+        public class BrokerEmailInfo
+        {
+            public string FullEmail { get; set; }
+        }
+
+        public class CreatedBrokerMySpaceInfo
+        {
+            public string FullName { get; set; }
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+            public string Email { get; set; }
+            public long BrokerIdApi { get; set; }
+        }
+
+        public class BasicDataApiInfo
+        {
+            public string DeviceFingerprint { get; set; }
+        }
+
+        private static BrokerNameInfo CreateBrokerNameInfo()
+        {
+            return new BrokerNameInfo
+            {
+                FirstNameRandom = Name.FirstName(),
+                LastNameRandom = Name.LastName(),
+                FirstLastNameRandom = Name.FirstName() + " " + Name.LastName(),
+            };
+        }
+
+        private static BrokerEmailInfo CreateBrokerEmailInfo()
+        {
+            return new BrokerEmailInfo
+            {
+                FullEmail = GenerateRandomData.RandomEmail(5) + GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomEmail(2) + EmailNameDomen.PUTS_BOX,
+            };
+        }
+
+        private static CreatedBrokerMySpaceInfo CreateCreatedBrokerMySpaceInfo()
+        {
+            return new CreatedBrokerMySpaceInfo
+            {
+                FullName = "Leoautotest Feabroker",
+                FirstName = "Leoautotest",
+                LastName = "Feabroker",
+                Email = "broker3autotest@putsbox.com",
+                BrokerIdApi = 103,
+            };
+        }
+
+        private static BasicDataApiInfo CreateBasicDataApiInfo()
+        {
+            return new BasicDataApiInfo
+            {
+                DeviceFingerprint = "d86d2f3b2f8e0030f57cfb1ce82f3f25",
+            };
         }
     }
 }

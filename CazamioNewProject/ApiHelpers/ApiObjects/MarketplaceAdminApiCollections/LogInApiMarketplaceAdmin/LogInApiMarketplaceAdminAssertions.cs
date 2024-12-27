@@ -13,8 +13,8 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         {
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(marketplaceAdmin.FullNameMarketplaceAdmin, responseMarketplaceAdmin.AuthData.User.UserName, $"Name not equal");
-                Assert.AreEqual(marketplaceAdmin.EmailAddressMarketplaceAdmin, responseMarketplaceAdmin.AuthData.User.UserEmail, $"Email not equal");
+                Assert.AreEqual(marketplaceAdmin.CreatedMarkAdmMySpace.FullName, responseMarketplaceAdmin.AuthData.User.UserName, $"Name not equal");
+                Assert.AreEqual(marketplaceAdmin.CreatedMarkAdmMySpace.Email, responseMarketplaceAdmin.AuthData.User.UserEmail, $"Email not equal");
                 Assert.AreEqual(GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE, responseMarketplaceAdmin.MarketplaceId, $"MarketplaceId not equal");
             });
         }

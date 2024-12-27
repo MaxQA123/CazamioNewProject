@@ -19,7 +19,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         [AllureStep("EnterEmailPasswordAsMarketplaceAdmin")]
         public LogInLandlord EnterEmailPasswordAsMarketplaceAdmin()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, marketplaceAdmin.EmailAddressMarketplaceAdmin);
+            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, marketplaceAdmin.CreatedMarkAdmMySpace.Email);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
 
@@ -29,7 +29,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         [AllureStep("EnterEmailPasswordAsBroker")]
         public LogInLandlord EnterEmailPasswordAsBroker()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, broker.EmailAddressBroker);
+            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, broker.CreatedBrokerMySpace.Email);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
 

@@ -5,63 +5,47 @@ namespace CazamioNewProject.Objects
 {
     public class Demo
     {
-        public AgentNameInfo AgentName { get; set; }
-        public AgentEmailInfo AgentEmail { get; set; }
-        public PhoneNumberInfo PhoneNumber { get; set; }
-        public CommissionPercentageInfo CommissionPercentage { get; set; }
-        public CreatedAgentInfo CreatedAgent { get; set; }
+        public MarkAdmNameInfo MarkAdmName { get; set; }
+        public MarkAdmEmailInfo MarkAdmEmail { get; set; }
+        public SubdomainMarketplaceInfo SubdomainMarketplace { get; set; }
+        public CreatedMarkAdmMySpaceInfo CreatedMarkAdmMySpace { get; set; }
         public BasicDataApiInfo BasicDataApi { get; set; }
 
         public static Demo Generate()
         {
             return new Demo
             {
-                AgentName = CreateAgentNameInfo(),
-                AgentEmail = CreateAgentEmailInfo(),
-                PhoneNumber = CreatePhoneNumberInfo(),
-                CommissionPercentage = CreateCommissionPercentageInfo(),
-                CreatedAgent = CreateCreatedAgentInfo(),
+                MarkAdmName = CreateMarkAdmNameInfo(),
+                MarkAdmEmail = CreateMarkAdmEmailInfo(),
+                SubdomainMarketplace = CreateSubdomainMarketplaceInfo(),
+                CreatedMarkAdmMySpace = CreateCreatedMarkAdmMySpaceInfo(),
                 BasicDataApi = CreateBasicDataApiInfo(),
             };
         }
 
-        public class AgentNameInfo
+        public class MarkAdmNameInfo
         {
             public string FirstNameRandom { get; set; }
             public string LastNameRandom { get; set; }
             public string FirstLastNameRandom { get; set; }
         }
 
-        public class AgentEmailInfo
+        public class MarkAdmEmailInfo
         {
-            public string fullEmail { get; set; }
-            public string CreatedAgent { get; set; }
+            public string FullEmail { get; set; }
         }
 
-        public class PhoneNumberInfo
+        public class SubdomainMarketplaceInfo
         {
-            public string BasicFirst { get; set; }
-            public string CellFirst { get; set; }
+            public string MySpace { get; set; }
         }
 
-        public class CommissionPercentageInfo
+        public class CreatedMarkAdmMySpaceInfo
         {
-            public string ForBrokerRandom { get; set; }
-            public string ForAgentRandom { get; set; }
-            public long BrokerCommissionApi { get; set; }
-            public long AgentCommissionApi { get; set; }
-        }
-
-        public class CreatedAgentInfo
-        {
+            public string FullName { get; set; }
             public string FirstName { get; set; }
             public string LastName { get; set; }
             public string Email { get; set; }
-            public string PhoneNumber { get; set; }
-            public string Cell { get; set; }
-            public string BrokerCommission { get; set; }
-            public string AgentCommission { get; set; }
-            public long AgentIdApi { get; set; }
         }
 
         public class BasicDataApiInfo
@@ -69,9 +53,9 @@ namespace CazamioNewProject.Objects
             public string DeviceFingerprint { get; set; }
         }
 
-        private static AgentNameInfo CreateAgentNameInfo()
+        private static MarkAdmNameInfo CreateMarkAdmNameInfo()
         {
-            return new AgentNameInfo
+            return new MarkAdmNameInfo
             {
                 FirstNameRandom = Name.FirstName(),
                 LastNameRandom = Name.LastName(),
@@ -79,46 +63,30 @@ namespace CazamioNewProject.Objects
             };
         }
 
-        private static AgentEmailInfo CreateAgentEmailInfo()
+        private static MarkAdmEmailInfo CreateMarkAdmEmailInfo()
         {
-            return new AgentEmailInfo
+            return new MarkAdmEmailInfo
             {
-                fullEmail = GenerateRandomData.RandomEmail(5) + GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomEmail(2) + EmailNameDomen.PUTS_BOX,
+                FullEmail = GenerateRandomData.RandomEmail(5) + GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomEmail(2) + EmailNameDomen.PUTS_BOX,
             };
         }
 
-        private static PhoneNumberInfo CreatePhoneNumberInfo()
+        private static SubdomainMarketplaceInfo CreateSubdomainMarketplaceInfo()
         {
-            return new PhoneNumberInfo
+            return new SubdomainMarketplaceInfo
             {
-                BasicFirst = "912" + GenerateRandomData.RandomPhoneNumber(7),
-                CellFirst = "320" + GenerateRandomData.RandomPhoneNumber(7),
+                MySpace = "testlandlord15-demo",
             };
         }
 
-        private static CommissionPercentageInfo CreateCommissionPercentageInfo()
+        private static CreatedMarkAdmMySpaceInfo CreateCreatedMarkAdmMySpaceInfo()
         {
-            return new CommissionPercentageInfo
+            return new CreatedMarkAdmMySpaceInfo
             {
-                ForBrokerRandom = GenerateRandomData.RandomNumberWithoutZero(2),
-                ForAgentRandom = GenerateRandomData.RandomNumberWithoutZero(2),
-                BrokerCommissionApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(2)),
-                AgentCommissionApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(2)),
-            };
-        }
-
-        private static CreatedAgentInfo CreateCreatedAgentInfo()
-        {
-            return new CreatedAgentInfo
-            {
-                FirstName = "Lula",
-                LastName = "AgentQA",
-                Email = "agent5lula@putsbox.com",
-                PhoneNumber = "(212) 345-8765",
-                Cell = "(518) 123-0089",
-                BrokerCommission = "70",
-                AgentCommission = "30",
-                AgentIdApi = 154,
+                FullName = "Mark Adm",
+                FirstName = "Mark",
+                LastName = "Adm",
+                Email = "marketplaceadmin15@putsbox.com",
             };
         }
 
@@ -126,7 +94,7 @@ namespace CazamioNewProject.Objects
         {
             return new BasicDataApiInfo
             {
-                DeviceFingerprint = "d86d2f3b2f8e0030f57cfb1ce82f3f25",
+                DeviceFingerprint = "4f09dee986d77232105bed94285eafe7",
             };
         }
     }

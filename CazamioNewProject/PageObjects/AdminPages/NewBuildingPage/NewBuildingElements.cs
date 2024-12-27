@@ -18,7 +18,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             Owner owner = Owner.Generate();
 
             // Использование переменной экземпляра owner для построения XPath
-            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.CreatedOwnerOwnerAndTenantPays.OwnerName + "']";
+            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.CreatedOwnerOwnerAndTenantPaysMySpace.OwnerName + "']";
 
             // Присвоение значения ItemForAutotestForBroker
             return Browser._Driver.FindElement(By.XPath(xpath));
@@ -32,7 +32,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             Owner owner = Owner.Generate();
 
             // Использование переменной экземпляра owner для построения XPath
-            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.CreatedOwnerNoCommission.OwnerName + "']";
+            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.CreatedOwnerNoCommissioMySpace.OwnerName + "']";
 
             // Присвоение значения ItemForAutotestForBroker
             return Browser._Driver.FindElement(By.XPath(xpath));
@@ -46,7 +46,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             Owner owner = Owner.Generate();
 
             // Использование переменной экземпляра owner для построения XPath
-            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.CreatedOwnerOwnerPays.OwnerName + "']";
+            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.CreatedOwnerOwnerPaysMySpace.OwnerName + "']";
 
             // Присвоение значения ItemForAutotestForBroker
             return Browser._Driver.FindElement(By.XPath(xpath));
@@ -60,7 +60,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             Owner owner = Owner.Generate();
 
             // Использование переменной экземпляра owner для построения XPath
-            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.CreatedOwnerTenantPays.OwnerName + "']";
+            var xpath = "//ng-dropdown-panel[@aria-label = 'Options list']//div[text() = '" + owner.CreatedOwnerTenantPaysMySpace.OwnerName + "']";
 
             // Присвоение значения ItemForAutotestForBroker
             return Browser._Driver.FindElement(By.XPath(xpath));

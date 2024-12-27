@@ -13,10 +13,10 @@ namespace CazamioNewProject.Objects
         public InternalNotesInfo InternalNotes { get; set; }
         public PhoneNumberInfo PhoneNumber { get; set; }
         public CommissionStructureInfo CommissionStructure { get; set; }
-        public CreatedOwnerNoCommissionInfo CreatedOwnerNoCommission { get; set; }
-        public CreatedOwnerOwnerAndTenantPaysInfo CreatedOwnerOwnerAndTenantPays { get; set; }
-        public CreatedOwnerOwnerPaysInfo CreatedOwnerOwnerPays { get; set; }
-        public CreatedOwnerTenantPaysInfo CreatedOwnerTenantPays { get; set; }
+        public CreatedOwnerNoCommissioMySpaceInfo CreatedOwnerNoCommissioMySpace { get; set; }
+        public CreatedOwnerOwnerAndTenantPaysMySpaceInfo CreatedOwnerOwnerAndTenantPaysMySpace { get; set; }
+        public CreatedOwnerOwnerPaysMySpaceInfo CreatedOwnerOwnerPaysMySpace { get; set; }
+        public CreatedOwnerTenantPaysMySpaceInfo CreatedOwnerTenantPaysMySpace { get; set; }
 
         public static Owner Generate()
         {
@@ -30,10 +30,10 @@ namespace CazamioNewProject.Objects
                 InternalNotes = CreateInternalNotesInfo(),
                 PhoneNumber = CreatePhoneNumberInfo(),
                 CommissionStructure = CreateCommissionStructureInfo(),
-                CreatedOwnerNoCommission = CreateCreatedOwnerNoCommissionInfo(),
-                CreatedOwnerOwnerAndTenantPays = CreateCreatedOwnerOwnerAndTenantPaysInfo(),
-                CreatedOwnerOwnerPays = CreateCreatedOwnerOwnerPaysInfo(),
-                CreatedOwnerTenantPays = CreateCreatedOwnerTenantPaysInfo(),
+                CreatedOwnerNoCommissioMySpace = CreateCreatedOwnerNoCommissioMySpaceInfo(),
+                CreatedOwnerOwnerAndTenantPaysMySpace = CreateCreatedOwnerOwnerAndTenantPaysMySpaceInfo(),
+                CreatedOwnerOwnerPaysMySpace = CreateCreatedOwnerOwnerPaysMySpaceInfo(),
+                CreatedOwnerTenantPaysMySpace = CreateCreatedOwnerTenantPaysMySpaceInfo(),
             };
         }
 
@@ -117,22 +117,22 @@ namespace CazamioNewProject.Objects
             public long TenantPercentageApi { get; set; }
         }
 
-        public class CreatedOwnerNoCommissionInfo
+        public class CreatedOwnerNoCommissioMySpaceInfo
         {
             public string OwnerName { get; set; }
         }
 
-        public class CreatedOwnerOwnerAndTenantPaysInfo
+        public class CreatedOwnerOwnerAndTenantPaysMySpaceInfo
         {
             public string OwnerName { get; set; }
         }
 
-        public class CreatedOwnerOwnerPaysInfo
+        public class CreatedOwnerOwnerPaysMySpaceInfo
         {
             public string OwnerName { get; set; }
         }
 
-        public class CreatedOwnerTenantPaysInfo
+        public class CreatedOwnerTenantPaysMySpaceInfo
         {
             public string OwnerName { get; set; }
         }
@@ -241,33 +241,33 @@ namespace CazamioNewProject.Objects
             };
         }
 
-        private static CreatedOwnerNoCommissionInfo CreateCreatedOwnerNoCommissionInfo()
+        private static CreatedOwnerNoCommissioMySpaceInfo CreateCreatedOwnerNoCommissioMySpaceInfo()
         {
-            return new CreatedOwnerNoCommissionInfo
+            return new CreatedOwnerNoCommissioMySpaceInfo
             {
                 OwnerName = "LLC Ag-Br Owner No commisions AutoTest",
             };
         }
 
-        private static CreatedOwnerOwnerAndTenantPaysInfo CreateCreatedOwnerOwnerAndTenantPaysInfo()
+        private static CreatedOwnerOwnerAndTenantPaysMySpaceInfo CreateCreatedOwnerOwnerAndTenantPaysMySpaceInfo()
         {
-            return new CreatedOwnerOwnerAndTenantPaysInfo
+            return new CreatedOwnerOwnerAndTenantPaysMySpaceInfo
             {
                 OwnerName = "LLC Br Owner OwnerAndTenantPaysCommissio",
             };
         }
 
-        private static CreatedOwnerOwnerPaysInfo CreateCreatedOwnerOwnerPaysInfo()
+        private static CreatedOwnerOwnerPaysMySpaceInfo CreateCreatedOwnerOwnerPaysMySpaceInfo()
         {
-            return new CreatedOwnerOwnerPaysInfo
+            return new CreatedOwnerOwnerPaysMySpaceInfo
             {
                 OwnerName = "OOO Owner Assigned Broker OwnerPays Test",
             };
         }
 
-        private static CreatedOwnerTenantPaysInfo CreateCreatedOwnerTenantPaysInfo()
+        private static CreatedOwnerTenantPaysMySpaceInfo CreateCreatedOwnerTenantPaysMySpaceInfo()
         {
-            return new CreatedOwnerTenantPaysInfo
+            return new CreatedOwnerTenantPaysMySpaceInfo
             {
                 OwnerName = "Asig AgBr Owner TenantPays 12345 (!@#$%)",
             };

@@ -8,8 +8,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
     public partial class LogInLandlord
     {
         SuperAdmin superAdmin = new SuperAdmin().Generate();
-        MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
-        Broker broker = new Broker().Generate();
+        MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
+        Broker broker = Broker.Generate();
         Agent agent = Agent.Generate();
         AgentBroker agentBroker = AgentBroker.Generate();
 

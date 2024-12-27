@@ -12,7 +12,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateANewBrokerMdlWndw
 {
     public partial class CreateANewBrokerMdlWndw
     {
-        Broker broker = new Broker().Generate();
+        Broker broker = Broker.Generate();
 
         [AllureStep("ClickButtonCreate")]
         public CreateANewBrokerMdlWndw ClickButtonCreate()

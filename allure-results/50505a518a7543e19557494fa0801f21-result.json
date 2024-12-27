@@ -1,0 +1,328 @@
+{
+  "uuid": "a9601837-5894-4b68-a400-87b2852a3a80-tr-0-1003",
+  "historyId": "MarketplaceAdminGuiTest.TestsBaseGui.CreateBroker",
+  "fullName": "MarketplaceAdminGuiTest.TestsBaseGui.CreateBroker",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "MarketplaceAdminGuiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateBroker"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "MarketplaceAdmin"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateBroker"
+    }
+  ],
+  "links": [],
+  "name": "CreateBroker",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+    "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage.ListOfBrokers.__a$_around_VerifyMessageBrokerHasBeenSuccessfullyCreated_100663644_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfBrokersPage\\ListOfBrokersAssertions.cs:line 22\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage.ListOfBrokers.__a$_around_VerifyMessageBrokerHasBeenSuccessfullyCreated_100663644_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage.ListOfBrokers.__a$_around_VerifyMessageBrokerHasBeenSuccessfullyCreated_100663644_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage.ListOfBrokers.VerifyMessageBrokerHasBeenSuccessfullyCreated() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfBrokersPage\\ListOfBrokersActions.cs:line 15\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.CreateBroker() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 206"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateBroker",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+        "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage.ListOfBrokers.__a$_around_VerifyMessageBrokerHasBeenSuccessfullyCreated_100663644_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfBrokersPage\\ListOfBrokersAssertions.cs:line 22\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage.ListOfBrokers.__a$_around_VerifyMessageBrokerHasBeenSuccessfullyCreated_100663644_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage.ListOfBrokers.__a$_around_VerifyMessageBrokerHasBeenSuccessfullyCreated_100663644_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage.ListOfBrokers.VerifyMessageBrokerHasBeenSuccessfullyCreated() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfBrokersPage\\ListOfBrokersActions.cs:line 15\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.CreateBroker() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 206"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "EnterEmailPasswordAsMarketplaceAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1735317967200,
+          "stop": 1735317968515
+        },
+        {
+          "name": "ClickIconShow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1735317968516,
+          "stop": 1735317969210
+        },
+        {
+          "name": "ClickButtonLetsGo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1735317969212,
+          "stop": 1735317970116
+        },
+        {
+          "name": "GetUserNameFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1735317970128,
+          "stop": 1735317971759
+        },
+        {
+          "name": "GetUserNameRoleFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1735317971770,
+          "stop": 1735317971911
+        },
+        {
+          "name": "VerifyMarketplaceAdminUserNameAndRole",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Mark Adm"
+            },
+            {
+              "name": "String",
+              "value": "Marketplace Admin"
+            }
+          ],
+          "start": 1735317971923,
+          "stop": 1735317972617
+        },
+        {
+          "name": "ClickButtonBrokers",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1735317972657,
+          "stop": 1735317975494
+        },
+        {
+          "name": "VerifyTitleListOfBrokersPg",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1735317975495,
+          "stop": 1735317975883
+        },
+        {
+          "name": "ClickButtonCreateBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1735317975883,
+          "stop": 1735317976928
+        },
+        {
+          "name": "VerifyTitleCreateNewBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1735317976931,
+          "stop": 1735317977444
+        },
+        {
+          "name": "Enter first, last names, email broker's",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1735317977444,
+          "stop": 1735317980194
+        },
+        {
+          "name": "CopyEmailFromFieldEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1735317980197,
+          "stop": 1735317980276
+        },
+        {
+          "name": "CopyEmailBeforeDogFromModalWindowCreateNewBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1735317980280,
+          "stop": 1735317980830
+        },
+        {
+          "name": "ClickButtonCreate",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1735317980832,
+          "stop": 1735317981497
+        },
+        {
+          "name": "VerifyMessageBrokerHasBeenSuccessfullyCreated",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Timed out after 10 seconds",
+            "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage.ListOfBrokers.__a$_around_VerifyMessageBrokerHasBeenSuccessfullyCreated_100663644_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfBrokersPage\\ListOfBrokersAssertions.cs:line 22\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage.ListOfBrokers.__a$_around_VerifyMessageBrokerHasBeenSuccessfullyCreated_100663644_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1735317981499,
+          "stop": 1735317991647
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "6d674dbc83b6402a994f90b7b30a0705-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1735317958993,
+      "stop": 1735317994710
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1735317958992,
+  "stop": 1735317994721
+}

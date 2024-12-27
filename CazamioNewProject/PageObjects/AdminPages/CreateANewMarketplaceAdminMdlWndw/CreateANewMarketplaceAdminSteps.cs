@@ -9,13 +9,13 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdl
         public CreateANewMarketplaceAdminMdlWindow FillInMandatoryFields()
         {
             WaitUntil.CustomElementIsVisible(FieldInputFirstName);
-            InputGeneral.InputFunctionWithClear(FieldInputFirstName, marketplaceAdmin.FirstName);
+            InputGeneral.InputFunctionWithClear(FieldInputFirstName, marketplaceAdmin.MarkAdmName.FirstNameRandom);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLastName, marketplaceAdmin.LastName);
+            InputGeneral.InputFunctionWithClear(FieldInputLastName, marketplaceAdmin.MarkAdmName.LastNameRandom);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputEmail, marketplaceAdmin.EmailAddress);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, marketplaceAdmin.MarkAdmEmail.FullEmail);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputMarketplaceSubdomain, marketplaceAdmin.SubdomainMySpace);
+            InputGeneral.InputFunctionWithClear(FieldInputMarketplaceSubdomain, marketplaceAdmin.SubdomainMarketplace.MySpace);
 
             return this;
         }

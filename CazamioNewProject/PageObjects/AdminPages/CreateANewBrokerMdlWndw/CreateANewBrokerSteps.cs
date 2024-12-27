@@ -8,9 +8,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateANewBrokerMdlWndw
         [AllureStep("Enter first, last names, email broker's")]
         public CreateANewBrokerMdlWndw EnterFirstLastNamesEmail()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputFirstName, broker.FirstName);
-            InputGeneral.InputFunctionWithClear(FieldInputLastName, broker.LastName);
-            InputGeneral.InputFunctionWithClear(FieldInputEmail, broker.EmailAddress);
+            InputGeneral.InputFunctionWithClear(FieldInputFirstName, broker.BrokerName.FirstNameRandom);
+            InputGeneral.InputFunctionWithClear(FieldInputLastName, broker.BrokerName.LastNameRandom);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, broker.BrokerEmail.FullEmail);
 
             return this;
         }
