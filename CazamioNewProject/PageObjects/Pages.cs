@@ -70,7 +70,7 @@ namespace CazamioNewProject.PageObjects
 
         #region Tenant objects
 
-        public static TenantCreator TenantCreator => GetPage<TenantCreator>();
+        public static TenantCreatorMySpace TenantCreatorMySpace => GetPage<TenantCreatorMySpace>();
 
         #endregion
 

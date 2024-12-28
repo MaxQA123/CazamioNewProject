@@ -725,9 +725,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.WaitSomeInterval(1000);
             Button.Click(ItemExistingOccupant);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputName, tenantCreator.FirstLastNameData.RandomFirstName);
+            InputGeneral.InputFunctionWithClear(FieldInputName, tenantCreatorMySpace.FirstLastNameGeneralData.RandomFirstName);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputEmail, tenantCreator.EmailMySpace.RandomEmail);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, tenantCreatorMySpace.Emails.RandomEmail);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputPhoneNumber, GenerateRandomData.RandomPhoneNumber(10));
             WaitUntil.WaitSomeInterval(100);

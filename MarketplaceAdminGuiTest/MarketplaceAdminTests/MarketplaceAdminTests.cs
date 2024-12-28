@@ -988,7 +988,7 @@ namespace MarketplaceAdminGuiTest
 
             Apartment apartment = Apartment.Generate();
             ApartmentApplicationsTable apartmentApplicationsTable = ApartmentApplicationsTable.Generate();
-            TenantCreator tenantCreator = TenantCreator.Generate();
+            TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
 
             #endregion
 
@@ -1051,7 +1051,7 @@ namespace MarketplaceAdminGuiTest
             string statusFromApplication = Pages.ApartmentApplicationsTbl.GetStatusFromFrstRw();
 
             Pages.ApartmentApplicationsTbl
-                .VerifyFullDataByApplication(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreator.FirstLastNameData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreator.FirstLastNameData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp, leasePriceFromUnit, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.NotAssigned, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
+                .VerifyFullDataByApplication(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp, leasePriceFromUnit, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.NotAssigned, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
             Pages.JScriptExecutor
                .OpenNewTab();
             Pages.EmailHelper

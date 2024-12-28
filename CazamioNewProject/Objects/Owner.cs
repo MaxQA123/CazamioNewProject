@@ -228,7 +228,7 @@ namespace CazamioNewProject.Objects
                 TenantPercentageMin = "0.1",
                 TakeOffMin = "0.1",
                 TenantNumberOfMonthsMax = "99.99",
-                TakeOffMax = "9.99",
+                TakeOffMax = "99.99",
                 OwnerNumberOfMonthsStatic = "1",
                 TenantNumberOfMonthsStatic = "2",
                 OwnerPercentageStatic = "55.99",

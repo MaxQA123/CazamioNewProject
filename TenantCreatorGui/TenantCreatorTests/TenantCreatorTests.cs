@@ -12,7 +12,9 @@ namespace TenantCreatorGui
 
     public class TestsBaseGui : TenantCreatorBase
     {
+        //Amount order 1 next must be 2
         [Test]
+        [Order(2)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -26,12 +28,12 @@ namespace TenantCreatorGui
             Pages.Header
                 .ClickButtonLogIn();
             Pages.LogInTenant
-                .EnterEmailPasswordAsTenantCreator()
+                .EnterEmailPasswordAsTenantCreatorWithoutCreditReport()
                 .ClickIconShow()
                 .SetCheckBoxRememberMe()
                 .ClickButtonLogIn();
-            Pages.Header
-                .ClickButtonMyApplications();
+            //Pages.Header
+            //    .ClickButtonMyApplications();
             //Pages.MyAccountCazamioTenant
             //    .ClickTabAccountOnMyAccntPg()
             //    .ClickButtonEditMyAccntPgTabAccnt();

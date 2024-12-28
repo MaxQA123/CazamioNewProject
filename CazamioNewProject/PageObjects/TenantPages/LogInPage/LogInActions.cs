@@ -11,7 +11,7 @@ namespace CazamioNewProject.PageObjects.TenantPages.LogInPage
 {
     public partial class LogInTenant
     {
-        TenantCreator tenantCreator = TenantCreator.Generate();
+        TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
         //TenantGuarantor tenantGuarantor = new TenantGuarantor().Generate();
         //TenantOccupant tenantOccupant = new TenantOccupant().Generate();
 

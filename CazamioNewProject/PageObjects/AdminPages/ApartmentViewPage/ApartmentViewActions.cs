@@ -11,7 +11,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         Apartment apartment = Apartment.Generate();
         Application application = Application.Generate();
         EmailNotifications emailNotifications = EmailNotifications.Generate();
-        TenantCreator tenantCreator = TenantCreator.Generate();
+        TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
 
         #region Tabs
 
@@ -103,7 +103,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         public ApartmentView EnterFieldInputGetApplicationLink()
         {
             WaitUntil.CustomElementIsVisible(FieldInputGetApplicationLink);
-            InputGeneral.InputFunctionWithClear(FieldInputGetApplicationLink, tenantCreator.EmailMySpace.RandomEmail);
+            InputGeneral.InputFunctionWithClear(FieldInputGetApplicationLink, tenantCreatorMySpace.Emails.RandomEmail);
 
             return this;
         }
@@ -121,7 +121,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         public ApartmentView EnterFieldInputFirstName()
         {
             WaitUntil.CustomElementIsVisible(FieldInputFirstName);
-            InputGeneral.InputFunctionWithClear(FieldInputFirstName, tenantCreator.FirstLastNameData.ConstantFirstName);
+            InputGeneral.InputFunctionWithClear(FieldInputFirstName, tenantCreatorMySpace.FirstLastNameGeneralData.RandomFirstName);
 
             return this;
         }
@@ -130,7 +130,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         public ApartmentView EnterFieldInputLastName()
         {
             WaitUntil.CustomElementIsVisible(FieldInputLastName);
-            InputGeneral.InputFunctionWithClear(FieldInputLastName, tenantCreator.FirstLastNameData.ConstantLastName);
+            InputGeneral.InputFunctionWithClear(FieldInputLastName, tenantCreatorMySpace.FirstLastNameGeneralData.RandomLastName);
 
             return this;
         }

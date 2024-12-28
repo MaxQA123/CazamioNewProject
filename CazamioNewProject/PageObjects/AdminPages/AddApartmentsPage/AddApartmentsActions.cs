@@ -16,7 +16,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         Apartment apartment = Apartment.Generate();
         Agent agent = Agent.Generate();
         RequiredDocuments requiredDocuments = new RequiredDocuments().Generate();
-        TenantCreator tenantCreator = TenantCreator.Generate();
+        TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
 
         #region Tabs
 

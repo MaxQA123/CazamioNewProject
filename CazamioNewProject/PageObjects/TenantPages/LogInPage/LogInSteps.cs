@@ -1,21 +1,16 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using NUnit.Allure.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.TenantPages.LogInPage
 {
     public partial class LogInTenant
     {
-        [AllureStep("EnterEmailPasswordAsTenantCreator")]
-        public LogInTenant EnterEmailPasswordAsTenantCreator()
+        [AllureStep("EnterEmailPasswordAsTenantCreatorWithoutCreditReport")]
+        public LogInTenant EnterEmailPasswordAsTenantCreatorWithoutCreditReport()
         {
             WaitUntil.CustomElementIsVisible(FieldInputEmailAddress);
             WaitUntil.CustomElementIsClickable(FieldInputEmailAddress);
-            InputGeneral.InputFunctionWithClear(FieldInputEmailAddress, tenantCreator.EmailMySpace.EmailAlreadyCreated);
+            InputGeneral.InputFunctionWithClear(FieldInputEmailAddress, tenantCreatorMySpace.CreatedWitoutCreditReport.Email);
             InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
 
             return this;
