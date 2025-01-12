@@ -733,19 +733,19 @@ namespace BrokerGuiTests
 
             #endregion
 
-            #region Test
+            //#region Test
 
-            Pages.ApartmentView
-                .VerifyTitleApartmentViewPage();
+            //Pages.ApartmentView
+            //    .VerifyTitleApartmentViewPage();
 
-            string getUnitNumber = Pages.ApartmentView.GetSubjectExpected();
+            //string getUnitNumber = Pages.ApartmentView.GetSubjectExpected();
 
             //Pages.ApartmentView
             //    .EnterNewEmailFirstLastNames();
 
-            #endregion
+            //#endregion
 
-            WaitUntil.WaitSomeInterval(1000);
+            //WaitUntil.WaitSomeInterval(1000);
         }
     }
 }

@@ -1,0 +1,154 @@
+{
+  "uuid": "20ec3448-1fb0-41c0-952b-2a7e544ffef8-tr-0-1001",
+  "historyId": "AgentBrokerGui.TestsBaseGui.LogIn",
+  "fullName": "AgentBrokerGui.TestsBaseGui.LogIn",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AgentBrokerGui"
+    },
+    {
+      "name": "testMethod",
+      "value": "LogIn"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Agent Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "LogIn"
+    }
+  ],
+  "links": [],
+  "name": "LogIn",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+    "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_GetUserNameFromSideBar_100663470_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarActions.cs:line 295\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_GetUserNameFromSideBar_100663470_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_GetUserNameFromSideBar_100663470_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.GetUserNameFromSideBar() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarActions.cs:line 16\r\n   at AgentBrokerGui.TestsBaseGui.LogIn() in C:\\Automation\\CazamioNewProject\\AgentBrokerGui\\AgentBrokerTests\\AgentBrokerTests.cs:line 36"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "LogIn",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+        "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_GetUserNameFromSideBar_100663470_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarActions.cs:line 295\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_GetUserNameFromSideBar_100663470_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_GetUserNameFromSideBar_100663470_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.GetUserNameFromSideBar() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarActions.cs:line 16\r\n   at AgentBrokerGui.TestsBaseGui.LogIn() in C:\\Automation\\CazamioNewProject\\AgentBrokerGui\\AgentBrokerTests\\AgentBrokerTests.cs:line 36"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "EnterEmailPasswordAsAgentBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736704877098,
+          "stop": 1736704878553
+        },
+        {
+          "name": "ClickIconShow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736704878554,
+          "stop": 1736704879237
+        },
+        {
+          "name": "ClickButtonLetsGo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736704879237,
+          "stop": 1736704880066
+        },
+        {
+          "name": "GetUserNameFromSideBar",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Timed out after 10 seconds",
+            "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_GetUserNameFromSideBar_100663470_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarActions.cs:line 295\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_GetUserNameFromSideBar_100663470_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736704880075,
+          "stop": 1736704890221
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "18b20f76917d4f7988eb24e0152c06c1-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1736704866481,
+      "stop": 1736704894278
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1736704866480,
+  "stop": 1736704894288
+}
