@@ -1,0 +1,292 @@
+{
+  "uuid": "6e729437-fc58-4ef2-9b7d-656d29571545-tr-0-1012",
+  "historyId": "MarketplaceAdminGuiTest.TestsBaseGui.CreateApplicationForApartmentVacant",
+  "fullName": "MarketplaceAdminGuiTest.TestsBaseGui.CreateApplicationForApartmentVacant",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "MarketplaceAdminGuiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateApplicationForApartmentVacant"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "MarketplaceAdmin"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateApplicationForApartmentVacant"
+    }
+  ],
+  "links": [],
+  "name": "CreateApplicationForApartmentVacant",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected string length 19 but was 24. Strings differ at index 0.\r\n  Expected: \"1 Washington Square\"\r\n  But was:  \"9998 Saint Johnson Place\"\r\n  -----------^\r\n",
+    "trace": "   at CazamioNewProject.PageObjects.AdminPages.BuildingViewPage.BuildingView.__a$_around_VerifyBuildingAddress_100663737_o(String getAddressNewBuildingActual, String building) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\BuildingViewPage\\BuildingViewAssertions.cs:line 24\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingViewPage.BuildingView.__a$_around_VerifyBuildingAddress_100663737_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingViewPage.BuildingView.__a$_around_VerifyBuildingAddress_100663737_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingViewPage.BuildingView.VerifyBuildingAddress(String getAddressNewBuildingActual, String building)\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.CreateApplicationForApartmentVacant() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 1124\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateApplicationForApartmentVacant",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected string length 19 but was 24. Strings differ at index 0.\r\n  Expected: \"1 Washington Square\"\r\n  But was:  \"9998 Saint Johnson Place\"\r\n  -----------^\r\n",
+        "trace": "   at CazamioNewProject.PageObjects.AdminPages.BuildingViewPage.BuildingView.__a$_around_VerifyBuildingAddress_100663737_o(String getAddressNewBuildingActual, String building) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\BuildingViewPage\\BuildingViewAssertions.cs:line 24\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingViewPage.BuildingView.__a$_around_VerifyBuildingAddress_100663737_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingViewPage.BuildingView.__a$_around_VerifyBuildingAddress_100663737_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingViewPage.BuildingView.VerifyBuildingAddress(String getAddressNewBuildingActual, String building)\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.CreateApplicationForApartmentVacant() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 1124\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "EnterEmailPasswordAsMarketplaceAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736870306836,
+          "stop": 1736870308171
+        },
+        {
+          "name": "ClickIconShow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736870308171,
+          "stop": 1736870308834
+        },
+        {
+          "name": "ClickButtonLetsGo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736870308835,
+          "stop": 1736870309826
+        },
+        {
+          "name": "GetUserNameFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736870309856,
+          "stop": 1736870312076
+        },
+        {
+          "name": "GetUserNameRoleFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736870312084,
+          "stop": 1736870312368
+        },
+        {
+          "name": "VerifyMarketplaceAdminUserNameAndRole",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Mark Adm"
+            },
+            {
+              "name": "String",
+              "value": "Marketplace Admin"
+            }
+          ],
+          "start": 1736870312389,
+          "stop": 1736870312925
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736870312934,
+          "stop": 1736870319781
+        },
+        {
+          "name": "SearchBuildingOneWashingtonSquare",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736870319811,
+          "stop": 1736870325776
+        },
+        {
+          "name": "SelectItemFirst",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736870325777,
+          "stop": 1736870328663
+        },
+        {
+          "name": "VerifyTitleBuildingViewPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736870328665,
+          "stop": 1736870333275
+        },
+        {
+          "name": "GetValueOfStringAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736870333275,
+          "stop": 1736870335356
+        },
+        {
+          "name": "VerifyBuildingAddress",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  Expected string length 19 but was 24. Strings differ at index 0.\r\n  Expected: \"1 Washington Square\"\r\n  But was:  \"9998 Saint Johnson Place\"\r\n  -----------^\r\n",
+            "trace": "   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.AreEqual(Object expected, Object actual)\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingViewPage.BuildingView.__a$_around_VerifyBuildingAddress_100663737_o(String getAddressNewBuildingActual, String building) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\BuildingViewPage\\BuildingViewAssertions.cs:line 24\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingViewPage.BuildingView.__a$_around_VerifyBuildingAddress_100663737_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "1 Washington Square"
+            },
+            {
+              "name": "String",
+              "value": "9998 Saint Johnson Place"
+            }
+          ],
+          "start": 1736870335357,
+          "stop": 1736870335941
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "8e9ea5974a084a86b4ed4b1ff6cce589-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1736870297873,
+      "stop": 1736870338781
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1736870297871,
+  "stop": 1736870338792
+}

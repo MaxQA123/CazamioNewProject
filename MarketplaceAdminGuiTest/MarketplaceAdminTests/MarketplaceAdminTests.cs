@@ -1084,49 +1084,98 @@ namespace MarketplaceAdminGuiTest
 
         public void CreateApplicationForApartmentVacant()
         {
-            //#region Test data
+            #region SettingsForBuilding
 
-            //Apartment apartment = Apartment.Generate();
+            //Saint Johnson Place
 
-            //#endregion
+            #endregion
 
-            //#region Preconditions Test
+            #region Test data
 
-            //Pages.LogInLandlord
-            //    .EnterEmailPasswordAsMarketplaceAdmin()
-            //    .ClickIconShow()
-            //    .ClickButtonLetsGo();
+            Apartment apartment = Apartment.Generate();
+            ApartmentApplicationsTable apartmentApplicationsTable = ApartmentApplicationsTable.Generate();
+            TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
 
-            //string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            //string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+            #endregion
 
-            //Pages.SidebarLandlord
-            //    .VerifyMarketplaceAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
-            //Pages.SidebarLandlord
-            //    .ClickButtonBuildings();
-            //Pages.ListOfBuildings
-            //    .SearchBuildingOneWashingtonSquare();
-            //Pages.ListOfBuildings
-            //    .SelectItemFirst();
-            //Pages.BuildingView
-            //    .VerifyTitleBuildingViewPage();
+            #region Preconditions Test
 
-            //string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
-            //string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
+            Pages.LogInLandlord
+                .EnterEmailPasswordAsMarketplaceAdmin()
+                .ClickIconShow()
+                .ClickButtonLetsGo();
 
-            //Pages.BuildingView
-            //    .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneWashingtonSquare)
-            //    .ClickTabApartments();
-            //KeyBoardActions.ScrollToDown();
-            //Pages.BuildingApartmentsTbl
-            //    .ClickRowByVacant();
-            //Pages.ApartmentView
-            //    .VerifyTitleApartmentViewPage();
-            //    //.CreateNewApplicationAndTenantViaButtonGetLink();
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
 
-            //#endregion
+            Pages.SidebarLandlord
+                .VerifyMarketplaceAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+            Pages.SidebarLandlord
+                .ClickButtonBuildings();
+            Pages.ListOfBuildings
+                .SearchBuildingOneWashingtonSquare();
+            Pages.ListOfBuildings
+                .SelectItemFirst();
+            Pages.BuildingView
+                .VerifyTitleBuildingViewPage();
 
-            //WaitUntil.WaitSomeInterval(10000);
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
+
+            Pages.BuildingView
+                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneWashingtonSquare)
+                .ClickTabApartments();
+            KeyBoardActions.ScrollToDown();
+
+            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectExpected();
+
+            Pages.BuildingApartmentsTbl
+                .ClickRowByVacant();
+
+            #endregion
+
+            #region Test
+
+            Pages.ApartmentView
+                .VerifyTitleApartmentViewPage();
+
+            string leasePriceFromUnit = Pages.ApartmentView.GetLeasePriceValueOfString();
+
+            Pages.ApartmentView
+                .ClickButtonGetLink();
+
+            WaitUntil.WaitSomeInterval(5000);
+
+            //string apartmentAddressFromApp = Pages.ApartmentApplicationsTbl.GetApartmentAddressFromFirstRow();
+            //string firstNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetFirstNameTenantMainApplicantFromFirstRow();
+            //string lastNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetLastNameTenantMainApplicantFromFirstRow();
+            //string leasePriceFromApplication = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
+            //string dateCreatedFromApplication = Pages.ApartmentApplicationsTbl.GetDateCreatedFromFirstRow();
+            //string agentFromApplication = Pages.ApartmentApplicationsTbl.GetAgentFromFrstRw();
+            //string statusFromApplication = Pages.ApartmentApplicationsTbl.GetStatusFromFrstRw();
+
+            //Pages.ApartmentApplicationsTbl
+            //    .VerifyFullDataByApplication(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp, leasePriceFromUnit, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.NotAssigned, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
+
+            //string partEmailPutsBox = Pages.ApartmentView.CopyEmailBeforeDogFromFieldGetApplicationLink();
+
+            //Pages.JScriptExecutor
+            //   .OpenNewTab();
+            //Pages.EmailHelper
+            //   .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, partEmailPutsBox);
+
+            //string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+
+            //Pages.EmailPutsBox
+            //    .VerifySubjectLetterCreateTenantViaGetLink(getSubjectEmailExpected, getSubjectFromEmail);
+            //Pages.EmailPutsBox
+            //    .ClickButtonHtml()
+            //    .ClickButtonStartYourApplicationNowlForTenant();
+            //Pages.SubmittingApplication
+            //    .VerifyMessageAccountWasSuccessfullyActivated();
+
+            //WaitUntil.WaitSomeInterval(5000);
+
+            #endregion
         }
     }
 }

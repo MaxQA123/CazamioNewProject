@@ -236,7 +236,7 @@ namespace CazamioNewProject.Objects
                 SecurityDepositThreeNumbers = GenerateRandomData.RandomNumberWithoutZero(3),
                 SecurityDepositFourNumbers = GenerateRandomData.RandomNumberWithoutZero(4),
                 SecurityDepositFiveNumbers = GenerateRandomData.RandomNumberWithoutZero(5),
-                SecurityDepositFourNumbersStatic = "1333",
+                SecurityDepositFourNumbersStatic = "2333",
                 MonthlyRentsPrePaymentByDefault = "1",
                 MonthlyRentsPrePaymentOne = "1",
                 MonthlyRentsPrePaymentTwo = "2",

@@ -81,9 +81,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputSqFoot, apartment.UnitBasicData.SqFootOneNubmer);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, apartment.UnitBasicData.LeasePriceOneNumberRandom);
+            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, apartment.UnitBasicData.LeasePriceFourNumbersStatic);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputSecurityDeposit, apartment.UnitBasicData.SecurityDepositOneNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputSecurityDeposit, apartment.UnitBasicData.SecurityDepositFourNumbersStatic);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputMonthlyRentsPrePayment, apartment.UnitBasicData.MonthlyRentsPrePaymentOne);
             WaitUntil.WaitSomeInterval(100);
