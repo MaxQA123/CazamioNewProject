@@ -1086,7 +1086,7 @@ namespace MarketplaceAdminGuiTest
         {
             #region SettingsForBuilding
 
-            //Saint Johnson Place
+            //Washington square
 
             #endregion
 
@@ -1141,7 +1141,7 @@ namespace MarketplaceAdminGuiTest
             string leasePriceFromUnit = Pages.ApartmentView.GetLeasePriceValueOfString();
 
             Pages.ApartmentView
-                .ClickButtonGetLink();
+                .ClickButtonPlusApplication();
 
             WaitUntil.WaitSomeInterval(5000);
 

@@ -117,6 +117,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
             return this;
         }
 
+        [AllureStep("ClickButtonPlusApplication")]
+        public ApartmentView ClickButtonPlusApplication()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonPlusApplication);
+            Button.Click(ButtonPlusApplication);
+
+            return this;
+        }
+
         [AllureStep("EnterFieldInputFirstName")]
         public ApartmentView EnterFieldInputFirstName()
         {

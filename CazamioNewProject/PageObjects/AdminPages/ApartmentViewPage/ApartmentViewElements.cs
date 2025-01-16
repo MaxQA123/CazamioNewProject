@@ -41,6 +41,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         [FindsBy(How = How.XPath, Using = "//button[@title = 'Get Link']")]
         public IWebElement ButtonGetLink;
 
+        [FindsBy(How = How.XPath, Using = "//button[@title = '+Application']")]
+        public IWebElement ButtonPlusApplication;
+
         [FindsBy(How = How.XPath, Using = "//div[@id = 'creator_name']//div[@class = 'first-name-input-container']//input[@placeholder = 'First Name']")]
         public IWebElement FieldInputFirstName;
 

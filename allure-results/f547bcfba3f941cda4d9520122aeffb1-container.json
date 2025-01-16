@@ -1,0 +1,80 @@
+{
+  "uuid": "28362d00-9cfa-4798-afd7-9d91bd09899b-tc-0-1000",
+  "name": "MarketplaceAdminGuiTest.TestsBaseGui.CreateApplicationForApartmentVacant",
+  "children": [
+    "f586eb2f-e54a-4ea2-96b8-f298928c04b0-tr-0-1012"
+  ],
+  "befores": [
+    {
+      "name": "DobeforeAllTheTests",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1737040874964,
+      "stop": 1737040874964
+    },
+    {
+      "name": "SetUp",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.InvalidOperationException : session not created: This version of ChromeDriver only supports Chrome version 132\nCurrent browser version is 131.0.6778.265 with binary path C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe (SessionNotCreated)\r\nTearDown : System.NullReferenceException : Object reference not set to an instance of an object.",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.StartSession(ICapabilities desiredCapabilities)\r\n   at OpenQA.Selenium.WebDriver..ctor(ICommandExecutor executor, ICapabilities capabilities)\r\n   at OpenQA.Selenium.Chromium.ChromiumDriver..ctor(ChromiumDriverService service, ChromiumOptions options, TimeSpan commandTimeout)\r\n   at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeDriverService service, ChromeOptions options, TimeSpan commandTimeout)\r\n   at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeOptions options)\r\n   at CazamioNewProject.GuiHelpers.Browser.Initialize() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\Browser.cs:line 33\r\n   at MarketplaceAdminGuiTest.MarketplaceAdminBase.SetUp() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminBase\\MarketplaceAdminBase.cs:line 12\r\n--TearDown\r\n   at CazamioNewProject.GuiHelpers.ScreenShot.MakeScreenShot() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\ScreenShot.cs:line 12\r\n   at CazamioNewProject.GuiHelpers.BasicTests.BaseGui.DoAfterEach() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\BasicTests\\BaseGui.cs:line 27"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1737040874964,
+      "stop": 1737040874964
+    }
+  ],
+  "afters": [
+    {
+      "name": "DoAfterEach",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.InvalidOperationException : session not created: This version of ChromeDriver only supports Chrome version 132\nCurrent browser version is 131.0.6778.265 with binary path C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe (SessionNotCreated)\r\nTearDown : System.NullReferenceException : Object reference not set to an instance of an object.",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.StartSession(ICapabilities desiredCapabilities)\r\n   at OpenQA.Selenium.WebDriver..ctor(ICommandExecutor executor, ICapabilities capabilities)\r\n   at OpenQA.Selenium.Chromium.ChromiumDriver..ctor(ChromiumDriverService service, ChromiumOptions options, TimeSpan commandTimeout)\r\n   at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeDriverService service, ChromeOptions options, TimeSpan commandTimeout)\r\n   at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeOptions options)\r\n   at CazamioNewProject.GuiHelpers.Browser.Initialize() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\Browser.cs:line 33\r\n   at MarketplaceAdminGuiTest.MarketplaceAdminBase.SetUp() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminBase\\MarketplaceAdminBase.cs:line 12\r\n--TearDown\r\n   at CazamioNewProject.GuiHelpers.ScreenShot.MakeScreenShot() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\ScreenShot.cs:line 12\r\n   at CazamioNewProject.GuiHelpers.BasicTests.BaseGui.DoAfterEach() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\BasicTests\\BaseGui.cs:line 27"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1737040874965,
+      "stop": 1737040874965
+    },
+    {
+      "name": "DoAfterAllTheTests",
+      "status": "none",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "It's not possible to get status of OneTimeTearDown",
+        "trace": "See Allure.NUnit wiki"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1737040874965,
+      "stop": 1737040874965
+    }
+  ],
+  "links": [],
+  "start": 1737040864894,
+  "stop": 1737040875015
+}
