@@ -3,7 +3,7 @@ using SeleniumExtras.PageObjects;
 
 namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
 {
-    public partial class CreateApplication
+    public partial class CreateApplicationMdlWndw
     {
         [FindsBy(How = How.XPath, Using = ("//app-prepare-application//cazamio-mobile-button//button//div//span[text() = 'Cancel']"))]
         public IWebElement ButtonCancel;
@@ -22,6 +22,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         [FindsBy(How = How.XPath, Using = ("//app-prepare-application//h2[@class = 'Create application']"))]
         public IWebElement TitleCreateApplication;
 
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//div[text() = ' Main Applicant email address ']"))]
+        public IWebElement NameFieldMainApplicantEmailAddress;
+
         [FindsBy(How = How.XPath, Using = ("//app-prepare-application//input[@placeholder = 'Look up existing lead or create new']"))]
         public IWebElement FieldInputMainApplicantEmailAddress;
 
@@ -29,21 +32,54 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
 
         #region Second step with enter an address
 
-        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//h2[@class = 'Create application']"))]
-        public IWebElement New;
-
-        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//input[@placeholder = 'Look up existing lead or create new']"))]
-        public IWebElement NewA;
-
-        #endregion
-
-        #region Third step with enter the basic data of an application
-
         [FindsBy(How = How.XPath, Using = (""))]
         public IWebElement StrngLeadEmail;
 
         [FindsBy(How = How.XPath, Using = (""))]
         public IWebElement StrngUnitAddress;
+
+        #endregion
+
+        #region Third step with enter the basic data of an application
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//div[text() = ' Lead Email ']/following-sibling::div[1]"))]
+        public IWebElement VlFromStringLeadEmail;
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//div[text() = ' Unit Address ']/following-sibling::div[1]"))]
+        public IWebElement VlFromStringUnitAddress;
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//input[@id = 'requested-offer-price']"))]
+        public IWebElement FieldInputRequestedOfferPrice;
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//input[@id = 'lease-price']"))]
+        public IWebElement FieldInputLeasePrice;
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//input[@id = 'security-deposit']"))]
+        public IWebElement FieldInputSecurityDeposit;
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//input[@id = 'monthsFree']"))]
+        public IWebElement FieldInputMonthsFree;
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//input[@id = 'netPrice']"))]
+        public IWebElement FieldNetEffectiveRent;
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//input[@id = 'additionalInfo']"))]
+        public IWebElement FieldInputAdditionalInfo;
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//input[@id = 'rent-pre-payment']"))]
+        public IWebElement FieldInputMonthlyRentsPrePayment;
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//label[text() = 'Move in Date']/following-sibling::mat-form-field"))]
+        public IWebElement FieldButtonMoveInDate;
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//textarea[@id = 'requestedWork']"))]
+        public IWebElement FieldInputRequestedWork;
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//input[@formcontrolname = 'rentalTerms']"))]
+        public IWebElement FieldInputRentalTerms;
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//textarea[@id = 'referral-details']"))]
+        public IWebElement FieldInputReferralDetails;
 
         #endregion
     }

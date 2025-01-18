@@ -32,7 +32,7 @@ namespace CazamioNewProject.Objects
 
         public class EmailsInfo
         {
-            public string RandomEmail { get; set; }
+            public string RandomMainApplicantEmail { get; set; }
         }
 
         public class CreatedWitoutCreditReportInfo
@@ -67,7 +67,7 @@ namespace CazamioNewProject.Objects
         {
             return new EmailsInfo
             {
-                RandomEmail = "appl-myspace-" + GenerateRandomData.RandomNumberByDateTime() + EmailNameDomen.PUTS_BOX,
+                RandomMainApplicantEmail = "appl-myspace-" + GenerateRandomData.RandomNumberByDateTime() + EmailNameDomen.PUTS_BOX,
             };
         }
 

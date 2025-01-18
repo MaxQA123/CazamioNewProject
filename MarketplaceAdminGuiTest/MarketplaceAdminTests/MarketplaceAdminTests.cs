@@ -640,6 +640,8 @@ namespace MarketplaceAdminGuiTest
             Pages.BuildingView
                 .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
 
+            WaitUntil.WaitSomeInterval(1000);
+
             #endregion
         }
 
@@ -730,6 +732,8 @@ namespace MarketplaceAdminGuiTest
 
             Pages.BuildingView
                 .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
+
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
 
@@ -864,9 +868,9 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonSaveApartment();
                 //Add Assertion
 
-            #endregion
-
             WaitUntil.WaitSomeInterval(5000);
+
+            #endregion
         }
 
         [Test]
@@ -961,9 +965,9 @@ namespace MarketplaceAdminGuiTest
                 .ClickTabImages()
                 .ClickButtonSaveApartment();
 
-            #endregion
-
             WaitUntil.WaitSomeInterval(5000);
+
+            #endregion
         }
 
         [Test]
@@ -1142,6 +1146,13 @@ namespace MarketplaceAdminGuiTest
 
             Pages.ApartmentView
                 .ClickButtonPlusApplication();
+            Pages.CreateApplicationMdlWndw
+                .PassFirstStep();
+
+            string partEmailPutsBox = Pages.CreateApplicationMdlWndw.CopyEmailBeforeDogFromFieldGetApplicationLink();
+
+            Pages.CreateApplicationMdlWndw
+                .PassThirdStepFullData();
 
             WaitUntil.WaitSomeInterval(5000);
 
@@ -1155,8 +1166,6 @@ namespace MarketplaceAdminGuiTest
 
             //Pages.ApartmentApplicationsTbl
             //    .VerifyFullDataByApplication(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp, leasePriceFromUnit, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.NotAssigned, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
-
-            //string partEmailPutsBox = Pages.ApartmentView.CopyEmailBeforeDogFromFieldGetApplicationLink();
 
             //Pages.JScriptExecutor
             //   .OpenNewTab();

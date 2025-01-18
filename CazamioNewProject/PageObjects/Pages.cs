@@ -9,6 +9,7 @@ using CazamioNewProject.PageObjects.AdminPages.BuildingViewPage;
 using CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.CreateANewBrokerMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdlWndw;
+using CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.CreateNewAgentMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.DashboardPage;
 using CazamioNewProject.PageObjects.AdminPages.DatePickerMdlWndw;
@@ -119,6 +120,7 @@ namespace CazamioNewProject.PageObjects
         public static PetPoliciesMdlWndw PetPoliciesMdlWndw => GetPage<PetPoliciesMdlWndw>();
         public static SelectorVideosMdlWndw SelectorVideosMdlWndw => GetPage<SelectorVideosMdlWndw>();
         public static DatePicker DatePicker => GetPage<DatePicker>();
+        public static CreateApplicationMdlWndw CreateApplicationMdlWndw => GetPage<CreateApplicationMdlWndw>();
 
         #endregion
 

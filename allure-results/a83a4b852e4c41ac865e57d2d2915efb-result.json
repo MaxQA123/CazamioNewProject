@@ -1,0 +1,444 @@
+{
+  "uuid": "1bd3d12f-4dd5-4b49-b163-44b798304cde-tr-0-1012",
+  "historyId": "MarketplaceAdminGuiTest.TestsBaseGui.CreateApplicationForApartmentVacant",
+  "fullName": "MarketplaceAdminGuiTest.TestsBaseGui.CreateApplicationForApartmentVacant",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "MarketplaceAdminGuiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateApplicationForApartmentVacant"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "MarketplaceAdmin"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateApplicationForApartmentVacant"
+    }
+  ],
+  "links": [],
+  "name": "CreateApplicationForApartmentVacant",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <span _ngcontent-ng-c2362987486=\"\" class=\"cazamio-mobile-button-txt ng-star-inserted\">...</span> is not clickable at point (1038, 539). Other element would receive the click: <cazamio-mobile-button _ngcontent-ng-c1099749368=\"\" class=\"extra-large primary-action absolute-loader ng-star-inserted\" _nghost-ng-c2362987486=\"\" style=\"width: 48%;\">...</cazamio-mobile-button>\n  (Session info: chrome=132.0.6834.84)",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_PassFirstStep_100663681_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\CreateApplicationMdlWndw\\CreateApplicationSteps.cs:line 14\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_PassFirstStep_100663681_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_PassFirstStep_100663681_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.PassFirstStep() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\CreateApplicationMdlWndw\\CreateApplicationSteps.cs:line 12\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.CreateApplicationForApartmentVacant() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 1149"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateApplicationForApartmentVacant",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <span _ngcontent-ng-c2362987486=\"\" class=\"cazamio-mobile-button-txt ng-star-inserted\">...</span> is not clickable at point (1038, 539). Other element would receive the click: <cazamio-mobile-button _ngcontent-ng-c1099749368=\"\" class=\"extra-large primary-action absolute-loader ng-star-inserted\" _nghost-ng-c2362987486=\"\" style=\"width: 48%;\">...</cazamio-mobile-button>\n  (Session info: chrome=132.0.6834.84)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_PassFirstStep_100663681_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\CreateApplicationMdlWndw\\CreateApplicationSteps.cs:line 14\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_PassFirstStep_100663681_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_PassFirstStep_100663681_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.PassFirstStep() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\CreateApplicationMdlWndw\\CreateApplicationSteps.cs:line 12\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.CreateApplicationForApartmentVacant() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 1149"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "EnterEmailPasswordAsMarketplaceAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1737202885466,
+          "stop": 1737202886849
+        },
+        {
+          "name": "ClickIconShow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1737202886850,
+          "stop": 1737202887547
+        },
+        {
+          "name": "ClickButtonLetsGo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1737202887548,
+          "stop": 1737202888439
+        },
+        {
+          "name": "GetUserNameFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1737202888463,
+          "stop": 1737202889862
+        },
+        {
+          "name": "GetUserNameRoleFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1737202889871,
+          "stop": 1737202889921
+        },
+        {
+          "name": "VerifyMarketplaceAdminUserNameAndRole",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Mark Adm"
+            },
+            {
+              "name": "String",
+              "value": "Marketplace Admin"
+            }
+          ],
+          "start": 1737202889928,
+          "stop": 1737202890466
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1737202890477,
+          "stop": 1737202896580
+        },
+        {
+          "name": "SearchBuildingOneWashingtonSquare",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1737202896611,
+          "stop": 1737202902561
+        },
+        {
+          "name": "SelectItemFirst",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1737202902562,
+          "stop": 1737202905480
+        },
+        {
+          "name": "VerifyTitleBuildingViewPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1737202905483,
+          "stop": 1737202909788
+        },
+        {
+          "name": "GetValueOfStringAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1737202909789,
+          "stop": 1737202911877
+        },
+        {
+          "name": "VerifyBuildingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "1 Washington Square"
+            },
+            {
+              "name": "String",
+              "value": "1 Washington Square"
+            }
+          ],
+          "start": 1737202911877,
+          "stop": 1737202911998
+        },
+        {
+          "name": "ClickTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1737202911998,
+          "stop": 1737202913996
+        },
+        {
+          "name": "ScrollToDown",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1737202913997,
+          "stop": 1737202914044
+        },
+        {
+          "name": "GetSubjectExpected",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetVlOfClmnUnitFrstRw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1737202915062,
+              "stop": 1737202915134
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1737202914051,
+          "stop": 1737202915138
+        },
+        {
+          "name": "ClickRowByVacant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1737202915138,
+          "stop": 1737202915495
+        },
+        {
+          "name": "VerifyTitleAddApartmentsPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ScrollToUp",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1737202917475,
+              "stop": 1737202917480
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1737202915497,
+          "stop": 1737202917480
+        },
+        {
+          "name": "GetLeasePriceValueOfString",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1737202917481,
+          "stop": 1737202919555
+        },
+        {
+          "name": "ClickButtonPlusApplication",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1737202919558,
+          "stop": 1737202920362
+        },
+        {
+          "name": "PassFirstStep",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "element click intercepted: Element <span _ngcontent-ng-c2362987486=\"\" class=\"cazamio-mobile-button-txt ng-star-inserted\">...</span> is not clickable at point (1038, 539). Other element would receive the click: <cazamio-mobile-button _ngcontent-ng-c1099749368=\"\" class=\"extra-large primary-action absolute-loader ng-star-inserted\" _nghost-ng-c2362987486=\"\" style=\"width: 48%;\">...</cazamio-mobile-button>\n  (Session info: chrome=132.0.6834.84)",
+            "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_PassFirstStep_100663681_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\CreateApplicationMdlWndw\\CreateApplicationSteps.cs:line 14\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_PassFirstStep_100663681_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1737202920366,
+          "stop": 1737202924002
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "eb68e73063e94b5e96129e3d802559bd-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1737202877321,
+      "stop": 1737202927085
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1737202877320,
+  "stop": 1737202927095
+}

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
 {
-    public partial class CreateApplication
+    public partial class CreateApplicationMdlWndw
     {
     }
 }

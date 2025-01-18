@@ -103,7 +103,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         public ApartmentView EnterFieldInputGetApplicationLink()
         {
             WaitUntil.CustomElementIsVisible(FieldInputGetApplicationLink);
-            InputGeneral.InputFunctionWithClear(FieldInputGetApplicationLink, tenantCreatorMySpace.Emails.RandomEmail);
+            InputGeneral.InputFunctionWithClear(FieldInputGetApplicationLink, tenantCreatorMySpace.Emails.RandomMainApplicantEmail);
 
             return this;
         }
