@@ -63,6 +63,7 @@ namespace CazamioNewProject.PageObjects
         public static AgentBroker AgentBroker => GetPage<AgentBroker>();
         public static Building Building => GetPage<Building>();
         public static Apartment Apartment => GetPage<Apartment>();
+        public static Application Application => GetPage<Application>();
         public static BuildingApartmentsTable BuildingApartmentsTable => GetPage<BuildingApartmentsTable>();
         public static DemoTemplate Demo => GetPage<DemoTemplate>();
         public static EmailNotifications EmailNotofications => GetPage<EmailNotifications>();

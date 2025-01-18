@@ -19,7 +19,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
 
         #region First step with enter the email
 
-        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//h2[@class = 'Create application']"))]
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//h2[text() = 'Create application']"))]
         public IWebElement TitleCreateApplication;
 
         [FindsBy(How = How.XPath, Using = ("//app-prepare-application//div[text() = ' Main Applicant email address ']"))]
@@ -41,6 +41,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         #endregion
 
         #region Third step with enter the basic data of an application
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//div[text() = ' Lead Email ']"))]
+        public IWebElement StringLeadEmail;
 
         [FindsBy(How = How.XPath, Using = ("//app-prepare-application//div[text() = ' Lead Email ']/following-sibling::div[1]"))]
         public IWebElement VlFromStringLeadEmail;
@@ -80,6 +83,12 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
 
         [FindsBy(How = How.XPath, Using = ("//app-prepare-application//textarea[@id = 'referral-details']"))]
         public IWebElement FieldInputReferralDetails;
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//div[@class = 'add-fields-text']"))]
+        public IWebElement ButtonPlusAddRequestedWork;
+
+        [FindsBy(How = How.XPath, Using = (""))]
+        public IWebElement CheckTheBoxReferralAgent;
 
         #endregion
     }

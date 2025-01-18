@@ -1147,6 +1147,7 @@ namespace MarketplaceAdminGuiTest
             Pages.ApartmentView
                 .ClickButtonPlusApplication();
             Pages.CreateApplicationMdlWndw
+                .VerifyTitleCreateApplication()
                 .PassFirstStep();
 
             string partEmailPutsBox = Pages.CreateApplicationMdlWndw.CopyEmailBeforeDogFromFieldGetApplicationLink();

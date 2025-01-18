@@ -19,10 +19,31 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         [AllureStep("PassThirdStepFullData")]
         public CreateApplicationMdlWndw PassThirdStepFullData()
         {
-            WaitUntil.CustomElementIsVisible(FieldInputMainApplicantEmailAddress);
-            InputGeneral.InputFunctionWithClear(FieldInputMainApplicantEmailAddress, tenantCreatorMySpace.Emails.RandomMainApplicantEmail);
-            WaitUntil.WaitSomeInterval(2000);
-            Button.Click(ButtonNext);
+            WaitUntil.CustomElementIsVisible(StringLeadEmail);
+            InputGeneral.InputFunctionWithClear(FieldInputRequestedOfferPrice, application.RequestedOfferPrice.FirstPriceStatic);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, apartment.UnitBasicData.LeasePriceFourNumbersStatic);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputSecurityDeposit, apartment.UnitBasicData.SecurityDepositFourNumbersStatic);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, application.MonthsFree.OneMonth);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, apartment.SettingsConcessions.AdditionalInfoLong);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthlyRentsPrePayment, application.MonthlyRentsPrePayment.OneMonth);
+            KeyBoardActions.ClickTab();
+            Button.Click(FieldButtonMoveInDate);
+            Pages.DatePicker
+                .SelectCurrentDay();
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputRentalTerms, application.RentalTerms.TwelveMonth);
+            KeyBoardActions.ClickArrowDown();
+            KeyBoardActions.ClickEnterButton();
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(ButtonPlusAddRequestedWork);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputRequestedWork, application.RequestedWork.LongTextWashingtonSquare);
+            //Button.Click(ButtonCreate);
 
             return this;
         }
