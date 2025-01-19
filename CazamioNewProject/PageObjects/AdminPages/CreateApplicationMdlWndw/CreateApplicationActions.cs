@@ -30,5 +30,13 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
 
             return partEmail;
         }
+
+        [AllureStep("ClickButtonClose")]
+        public CreateApplicationMdlWndw ClickButtonClose()
+        {
+            Button.Click(ButtonClose);
+
+            return this;
+        }
     }
 }

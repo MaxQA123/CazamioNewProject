@@ -81,6 +81,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         [AllureStep("CopyEmailBeforeDogFromFieldGetApplicationLink")]
         public string CopyEmailBeforeDogFromFieldGetApplicationLink()
         {
+            KeyBoardActions.ClickArrowDown();
             WaitUntil.WaitSomeInterval(500);
             string copyPartEmail = FieldInputGetApplicationLink.GetAttribute("value");
             Regex regexPartEmail = new Regex(@"^.........................");

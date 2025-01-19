@@ -40,7 +40,7 @@ namespace CazamioNewProject.Objects
 
         public class PriceColumnInfo
         {
-            public string Price { get; set; }
+            public string PriceFourNumberStatic { get; set; }
         }
 
         public class CreatedOnColumnInfo
@@ -51,6 +51,7 @@ namespace CazamioNewProject.Objects
         public class AgentColumnnInfo
         {
             public string NotAssigned { get; set; }
+            public string AgentLulaAgentQA { get; set; }
         }
 
         public class StatusColumnInfo
@@ -80,7 +81,7 @@ namespace CazamioNewProject.Objects
         {
             return new PriceColumnInfo
             {
-                Price = "",
+                PriceFourNumberStatic = "$1555",
             };
         }
 
@@ -97,6 +98,7 @@ namespace CazamioNewProject.Objects
             return new AgentColumnnInfo
             {
                 NotAssigned = "Not assigned",
+                AgentLulaAgentQA = "Lula AgentQA",
             };
         }
 

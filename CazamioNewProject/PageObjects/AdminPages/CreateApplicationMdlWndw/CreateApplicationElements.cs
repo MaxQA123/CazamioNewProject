@@ -17,6 +17,12 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         [FindsBy(How = How.XPath, Using = ("//app-prepare-application//cazamio-mobile-button//button//div//span[text() = 'Create']"))]
         public IWebElement ButtonCreate;
 
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//cazamio-mobile-button//button//div//span[text() = 'Close']"))]
+        public IWebElement ButtonClose;
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//cazamio-mobile-button//button//div//span[text() = 'Add Applicant']"))]
+        public IWebElement ButtonAddApplicant;
+
         #region First step with enter the email
 
         [FindsBy(How = How.XPath, Using = ("//app-prepare-application//h2[text() = 'Create application']"))]
