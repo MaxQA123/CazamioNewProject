@@ -1153,7 +1153,9 @@ namespace MarketplaceAdminGuiTest
             string partEmailPutsBox = Pages.CreateApplicationMdlWndw.CopyEmailBeforeDogFromFieldGetApplicationLink();
 
             Pages.CreateApplicationMdlWndw
-                .PassThirdStepFullData();
+                .PassThirdStepFullData()
+                .VerifyTitleApplicationSuccessfullyCreated()
+                .VerifyTextLinkAlreadyCopied();
 
             WaitUntil.WaitSomeInterval(5000);
 

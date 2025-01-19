@@ -31,7 +31,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, apartment.SettingsConcessions.AdditionalInfoLong);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputMonthlyRentsPrePayment, application.MonthlyRentsPrePayment.OneMonth);
-            KeyBoardActions.ClickTab();
             Button.Click(FieldButtonMoveInDate);
             Pages.DatePicker
                 .SelectCurrentDay();
@@ -40,6 +39,11 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();
             WaitUntil.WaitSomeInterval(100);
+            KeyBoardActions.ClickTab();
+            Button.Click(CheckTheBoxReferralAgent);
+            KeyBoardActions.ClickTab();
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputReferralDetails, application.ReferralDetails.LongTextWashingtonSquare);
             Button.Click(ButtonPlusAddRequestedWork);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputRequestedWork, application.RequestedWork.LongTextWashingtonSquare);

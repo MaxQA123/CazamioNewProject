@@ -9,6 +9,7 @@ namespace CazamioNewProject.Objects
         public MonthlyRentsPrePaymentInfo MonthlyRentsPrePayment { get; set; }
         public RentalTermsInfo RentalTerms { get; set; }
         public RequestedWorkInfo RequestedWork { get; set; }
+        public ReferralDetailsInfo ReferralDetails { get; set; }
 
         public static Application Generate()
         {
@@ -19,6 +20,7 @@ namespace CazamioNewProject.Objects
                 MonthlyRentsPrePayment = CreateMonthlyRentsPrePaymentInfo(),
                 RentalTerms = CreateRentalTermsInfo(),
                 RequestedWork = CreateRequestedWorkInfo(),
+                ReferralDetails = CreateReferralDetailsInfo(),
             };
         }
 
@@ -43,6 +45,12 @@ namespace CazamioNewProject.Objects
         }
 
         public class RequestedWorkInfo
+        {
+            public string LongTextWashingtonSquare { get; set; }
+            public string ShortTextWashingtonSquare { get; set; }
+        }
+
+        public class ReferralDetailsInfo
         {
             public string LongTextWashingtonSquare { get; set; }
             public string ShortTextWashingtonSquare { get; set; }
@@ -84,8 +92,17 @@ namespace CazamioNewProject.Objects
         {
             return new RequestedWorkInfo
             {
-                LongTextWashingtonSquare = "Lorem 1 Washington Square Requested Workk. Lorem ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit.",
-                ShortTextWashingtonSquare = "Lorem 1 Washington Square Requested Workk.",
+                LongTextWashingtonSquare = "Lorem 1 Washington Square Requested Work. Lorem ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit.",
+                ShortTextWashingtonSquare = "Lorem 1 Washington Square Requested Work.",
+            };
+        }
+
+        private static ReferralDetailsInfo CreateReferralDetailsInfo()
+        {
+            return new ReferralDetailsInfo
+            {
+                LongTextWashingtonSquare = "Lorem 1 Washington Square Referral Details. Lorem ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit.",
+                ShortTextWashingtonSquare = "Lorem 1 Washington Square Referral Details.",
             };
         }
     }

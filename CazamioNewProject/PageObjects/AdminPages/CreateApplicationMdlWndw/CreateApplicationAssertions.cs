@@ -13,5 +13,23 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
 
             return this;
         }
+
+        [AllureStep("VerifyTitleApplicationSuccessfullyCreated")]
+        public CreateApplicationMdlWndw VerifyTitleApplicationSuccessfullyCreated()
+        {
+            WaitUntil.CustomElementIsVisible(TitleApplicationSuccessfullyCreated);
+            Assert.IsTrue(Successfully.IsVisible(TitleApplicationSuccessfullyCreated));
+
+            return this;
+        }
+
+        [AllureStep("VerifyTextLinkAlreadyCopied")]
+        public CreateApplicationMdlWndw VerifyTextLinkAlreadyCopied()
+        {
+            WaitUntil.CustomElementIsVisible(TextLinkAlreadyCopied);
+            Assert.IsTrue(Successfully.IsVisible(TextLinkAlreadyCopied));
+
+            return this;
+        }
     }
 }

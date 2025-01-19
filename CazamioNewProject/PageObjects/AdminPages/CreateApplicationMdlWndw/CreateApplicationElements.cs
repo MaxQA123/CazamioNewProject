@@ -84,11 +84,21 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         [FindsBy(How = How.XPath, Using = ("//app-prepare-application//textarea[@id = 'referral-details']"))]
         public IWebElement FieldInputReferralDetails;
 
-        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//div[@class = 'add-fields-text']"))]
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//div[@class='add-fields-text' and contains(., 'Requested Work')]//span[normalize-space(text())='+ Add']"))]
         public IWebElement ButtonPlusAddRequestedWork;
 
-        [FindsBy(How = How.XPath, Using = (""))]
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//mat-checkbox[@id='is-referral']//input[@id = 'is-referral-input']"))]
         public IWebElement CheckTheBoxReferralAgent;
+
+        #endregion
+
+        #region Fourth step with adding the applicants to an application
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//div[text() = 'Application successfully created']"))]
+        public IWebElement TitleApplicationSuccessfullyCreated;
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//div[text() = 'Link for the application was generated and already copied']"))]
+        public IWebElement TextLinkAlreadyCopied;
 
         #endregion
     }
