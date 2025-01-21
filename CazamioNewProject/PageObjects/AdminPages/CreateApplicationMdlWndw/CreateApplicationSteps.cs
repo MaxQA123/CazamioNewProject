@@ -48,6 +48,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputRequestedWork, application.RequestedWork.LongTextWashingtonSquare);
             Button.Click(ButtonCreate);
+            WaitUntil.WaitSomeInterval(5000);
 
             return this;
         }

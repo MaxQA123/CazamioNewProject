@@ -21,7 +21,9 @@ namespace BrokerGuiTests
 
     public class TestsBaseGui : BrokerBase
     {
+        //Amount order 8 next must be 9
         [Test]
+        [Order(1)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -49,6 +51,7 @@ namespace BrokerGuiTests
         }
 
         [Test]
+        [Order(2)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -226,6 +229,7 @@ namespace BrokerGuiTests
         //}
 
         [Test]
+        [Order(3)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -307,6 +311,7 @@ namespace BrokerGuiTests
         }
 
         [Test]
+        [Order(4)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -407,6 +412,7 @@ namespace BrokerGuiTests
         }
 
         [Test]
+        [Order(5)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -541,6 +547,7 @@ namespace BrokerGuiTests
         }
 
         [Test]
+        [Order(6)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -600,11 +607,14 @@ namespace BrokerGuiTests
                 .UplodImagesFileEnterLinksYouTubeVimeo()
                 .ClickButtonSaveApartment();
 
+            WaitUntil.WaitSomeInterval(5000);
+
             #endregion
 
         }
 
         [Test]
+        [Order(7)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -676,6 +686,118 @@ namespace BrokerGuiTests
         }
 
         [Test]
+        [Order(8)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Broker")]
+        [AllureSubSuite("CreateApplicationForApartmentOccupied")]
+
+        public void CreateApplicationForApartmentOccupied()
+        {
+            #region SettingsForBuilding
+
+            //Albermale Rd
+
+            #endregion
+
+            #region Test data
+
+            Apartment apartment = Apartment.Generate();
+            ApartmentApplicationsTable apartmentApplicationsTable = ApartmentApplicationsTable.Generate();
+            TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
+
+            #endregion
+
+            #region Preconditions Test
+
+            Pages.LogInLandlord
+               .EnterEmailPasswordAsBroker()
+               .ClickIconShow()
+               .ClickButtonLetsGo();
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+            Pages.SidebarLandlord
+                .ClickButtonBuildings();
+            Pages.ListOfBuildings
+                .SearchNineAAlbermaleRd();
+            //Pages.ListOfBuildings
+            //    .SelectItemFirst();
+            //Pages.BuildingView
+            //    .VerifyTitleBuildingViewPage();
+
+            //string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
+
+            //Pages.BuildingView
+            //    .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneWashingtonSquare)
+            //    .ClickTabApartments();
+            //KeyBoardActions.ScrollToDown();
+
+            //string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectExpected();
+
+            //Pages.BuildingApartmentsTbl
+            //    .ClickRowByVacant();
+
+            #endregion
+
+            #region Test
+
+            //Pages.ApartmentView
+            //    .VerifyTitleApartmentViewPage();
+            //Pages.ApartmentView
+            //    .ClickButtonPlusApplication();
+            //Pages.CreateApplicationMdlWndw
+            //    .VerifyTitleCreateApplication()
+            //    .PassFirstStep();
+
+            //string partEmailPutsBox = Pages.CreateApplicationMdlWndw.CopyEmailBeforeDogFromFieldGetApplicationLink();
+
+            //Pages.CreateApplicationMdlWndw
+            //    .PassThirdStepFullData()
+            //    .VerifyTitleApplicationSuccessfullyCreated()
+            //    .VerifyTextLinkAlreadyCopied()
+            //    .ClickButtonClose();
+            //Pages.ApartmentView
+            //    .ClickTabApplications();
+
+            //string apartmentAddressFromApp = Pages.ApartmentApplicationsTbl.GetApartmentAddressFromFirstRow();
+            //string firstNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetFirstNameTenantMainApplicantFromFirstRow();
+            //string lastNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetLastNameTenantMainApplicantFromFirstRow();
+            //string leasePriceFromApplication = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
+            //string dateCreatedFromApplication = Pages.ApartmentApplicationsTbl.GetDateCreatedFromFirstRow();
+            //string agentFromApplication = Pages.ApartmentApplicationsTbl.GetAgentFromFrstRw();
+            //string statusFromApplication = Pages.ApartmentApplicationsTbl.GetStatusFromFrstRw();
+
+            //Pages.ApartmentApplicationsTbl
+            //    .VerifyFullDataByApplication(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp, apartmentApplicationsTable.PriceColumn.PriceFourNumberStatic, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.AgentLulaAgentQA, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
+
+            //Pages.JScriptExecutor
+            //   .OpenNewTab();
+            //Pages.EmailHelper
+            //   .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, partEmailPutsBox);
+
+            //string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+
+            //Pages.EmailPutsBox
+            //    .VerifySubjectLetterCreateTenantViaGetLink(getSubjectEmailExpected, getSubjectFromEmail);
+            //Pages.EmailPutsBox
+            //    .ClickButtonHtml()
+            //    .ClickButtonStartYourApplicationNowlForTenant();
+            //Pages.SubmittingApplication
+            //    .VerifyMessageAccountWasSuccessfullyActivated();
+
+            WaitUntil.WaitSomeInterval(5000);
+
+            #endregion
+        }
+
+        [Test]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -710,26 +832,26 @@ namespace BrokerGuiTests
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
 
-            Pages.SidebarLandlord
-                .VerifyMarketplaceAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
-            Pages.SidebarLandlord
-                .ClickButtonBuildings();
-            Pages.ListOfBuildings
-                .SearchNineNineNineEightSaintJohnsonPlace();
-            Pages.ListOfBuildings
-                .SelectItemFirst();
-            Pages.BuildingView
-                .VerifyTitleBuildingViewPage();
+            //Pages.SidebarLandlord
+            //    .VerifyMarketplaceAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+            //Pages.SidebarLandlord
+            //    .ClickButtonBuildings();
+            //Pages.ListOfBuildings
+            //    .SearchNineNineNineEightSaintJohnsonPlace();
+            //Pages.ListOfBuildings
+            //    .SelectItemFirst();
+            //Pages.BuildingView
+            //    .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
-            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
+            //string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
+            //string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
 
-            Pages.BuildingView
-                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
-                .ClickTabApartments();
-            KeyBoardActions.ScrollToDown();
-            Pages.BuildingApartmentsTbl
-                .ClickRowByDepositReceived();
+            //Pages.BuildingView
+            //    .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
+            //    .ClickTabApartments();
+            //KeyBoardActions.ScrollToDown();
+            //Pages.BuildingApartmentsTbl
+            //    .ClickRowByDepositReceived();
 
             #endregion
 

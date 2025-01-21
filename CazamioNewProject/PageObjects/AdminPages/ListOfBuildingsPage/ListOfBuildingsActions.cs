@@ -61,6 +61,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
             return this;
         }
 
+        [AllureStep("SearchNineAAlbermaleRd")]
+        public ListOfBuildings SearchNineAAlbermaleRd()
+        {
+            WaitUntil.CustomElementIsVisible(LoaderHidden, 10);
+            WaitUntil.WaitSomeInterval(10000);
+            WaitUntil.CustomElementIsVisible(FieldInputSearch);
+            WaitUntil.CustomElementIsClickable(FieldInputSearch);
+            InputGeneral.InputFunctionWithClear(FieldInputSearch, apartment.BuildingShortAddress.NineAAAlbermaleRd);
+
+            return this;
+        }
+
         [AllureStep("SelectItemFirst")]
         public ListOfBuildings SelectItemFirst()
         {

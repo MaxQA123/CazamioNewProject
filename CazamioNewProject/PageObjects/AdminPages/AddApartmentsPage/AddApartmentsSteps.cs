@@ -969,7 +969,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             WaitUntil.WaitSomeInterval(5000);
             Pages.SelectorVideosMdlWndw
                 .UploadFileEnterLinksYouTubeVimeo();
-            WaitUntil.WaitSomeInterval(10000);
+            WaitUntil.WaitSomeInterval(15000);
 
             return this;
         }
