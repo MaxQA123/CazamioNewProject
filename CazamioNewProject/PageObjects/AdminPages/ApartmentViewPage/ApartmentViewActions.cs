@@ -55,12 +55,12 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
             return LastName;
         }
 
-        [AllureStep("GetSubjectExpected")]
-        public string GetSubjectExpected()
+        [AllureStep("GetSubjectWithoutAgent")]
+        public string GetSubjectWithoutAgent()
         {
             WaitUntil.WaitSomeInterval(1000);
             // Получение текста уведомления из EmailNotifications
-            string subjectNotification = EmailNotifications.Generate().SubjectsTenantGeneral.CreateTenantViaGetLink;
+            string subjectNotification = EmailNotifications.Generate().SubjectsTenantGeneral.CreateTenantViaGetLinkWithoutAgent;
             string unitNumberAc = Pages.BuildingApartmentsTbl.GetVlOfClmnUnitFrstRw();
 
             // Замена номера квартиры в subjectNotification
@@ -75,6 +75,31 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
             // Замена номера квартиры в тексте
             string updatedText = Regex.Replace(subjectNotification, @"(?<=#)\d+", unitNumber);
 
+            return updatedText;
+        }
+
+        [AllureStep("GetSubjectWithAgent")]
+        public string GetSubjectWithAgent()
+        {
+            WaitUntil.WaitSomeInterval(1000);
+
+            // Получение текста уведомления из EmailNotifications
+            string subjectNotification = EmailNotifications.Generate().SubjectsTenantGeneral.CreateTenantViaPlusAppWithAgent;
+            string unitNumberAc = Pages.BuildingApartmentsTbl.GetVlOfClmnUnitFrstRw();
+
+            // Замена только значения квартиры в тексте
+            string updatedText = ReplaceLastUnitNumber(subjectNotification, unitNumberAc);
+
+            // Возвращение обновленного текста
+            return updatedText;
+        }
+
+        private static string ReplaceLastUnitNumber(string subjectNotification, string unitNumber)
+        {
+            // Замена номера квартиры только в формате #<число>
+            string updatedText = Regex.Replace(subjectNotification, @"(?<=#)\d+", unitNumber);
+
+            // Возвращение обновленного текста
             return updatedText;
         }
 

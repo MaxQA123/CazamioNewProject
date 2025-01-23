@@ -1024,7 +1024,7 @@ namespace MarketplaceAdminGuiTest
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
 
-            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectExpected();
+            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithoutAgent();
 
             Pages.BuildingApartmentsTbl
                 .ClickRowByDepositReceived();
@@ -1064,7 +1064,7 @@ namespace MarketplaceAdminGuiTest
             string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
 
             Pages.EmailPutsBox
-                .VerifySubjectLetterCreateTenantViaGetLink(getSubjectEmailExpected, getSubjectFromEmail);
+                .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
             Pages.EmailPutsBox
                 .ClickButtonHtml()
                 .ClickButtonStartYourApplicationNowlForTenant();
@@ -1081,7 +1081,7 @@ namespace MarketplaceAdminGuiTest
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
-        [Retry(2)]
+        [Retry(1)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("MarketplaceAdmin")]
         [AllureSubSuite("CreateApplicationForApartmentVacant")]
@@ -1130,7 +1130,7 @@ namespace MarketplaceAdminGuiTest
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
 
-            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectExpected();
+            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithAgent();
 
             Pages.BuildingApartmentsTbl
                 .ClickRowByVacant();
@@ -1176,7 +1176,7 @@ namespace MarketplaceAdminGuiTest
             string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
 
             Pages.EmailPutsBox
-                .VerifySubjectLetterCreateTenantViaGetLink(getSubjectEmailExpected, getSubjectFromEmail);
+                .VerifySubjectLetterCreateTenantViaPlusAppWithAgent(getSubjectEmailExpected, getSubjectFromEmail);
             Pages.EmailPutsBox
                 .ClickButtonHtml()
                 .ClickButtonStartYourApplicationNowlForTenant();

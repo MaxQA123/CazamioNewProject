@@ -20,14 +20,16 @@ namespace CazamioNewProject.Objects
 
         public class SubjectsTenantGeneralInfo
         {
-            public string CreateTenantViaGetLink { get; set; }
+            public string CreateTenantViaGetLinkWithoutAgent { get; set; }
+            public string CreateTenantViaPlusAppWithAgent { get; set; }
         }
 
         private static SubjectsTenantGeneralInfo CreateSubjectsTenantGeneralInfo()
         {
             return new SubjectsTenantGeneralInfo
             {
-                CreateTenantViaGetLink = "Welcome to Noyo Properties NYC! Let's begin your application process for 9998 Saint Johnson Place #1 now!",
+                CreateTenantViaGetLinkWithoutAgent = "Welcome to Noyo Properties NYC! Let's begin your application process for 9998 Saint Johnson Place #1 now!",
+                CreateTenantViaPlusAppWithAgent = "Welcome to Noyo Properties NYC! Lula AgentQA created you an application for 1 Washington Square #8R.",
             };
         }
     }
