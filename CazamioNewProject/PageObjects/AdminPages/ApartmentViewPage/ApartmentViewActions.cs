@@ -97,7 +97,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         private static string ReplaceLastUnitNumber(string subjectNotification, string unitNumber)
         {
             // Замена номера квартиры только в формате #<число>
-            string updatedText = Regex.Replace(subjectNotification, @"(?<=#)\d+", unitNumber);
+            string updatedText = Regex.Replace(subjectNotification, @"(?<=#)\w{2}(?=\.)", unitNumber);
 
             // Возвращение обновленного текста
             return updatedText;
