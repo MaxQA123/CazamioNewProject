@@ -297,6 +297,7 @@ namespace MarketplaceAdminGuiTest
             string fullEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailFromFieldEmail();
             string partEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailBeforeDogFromModalWindowCreateNewAgent();
 
+
             Pages.CreateNewAgentMdlWndw
                 .ClickButtonSave()
                 .VerifyMessageNewAgentCreatedSuccessfully();
