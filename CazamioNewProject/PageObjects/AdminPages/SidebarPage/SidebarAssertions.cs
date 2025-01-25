@@ -144,7 +144,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         public SidebarLandlord VerifyChangingLogoImageLandlord()
         {
             WaitUntil.CustomElementIsVisible(MessageChangeImageLogoLandlordSuccess);
-            Assert.IsTrue(Successfully.IsVisible(MessageChangeImageLogoLandlordSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageChangeImageLogoLandlordSuccess));
 
             return this;
         }
@@ -152,7 +152,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("VerifyChangingAvatarImageLandlord")]
         public SidebarLandlord VerifyChangingAvatarImageLandlord()
         {
-            Assert.IsTrue(Successfully.IsVisible(MessageChangeImageAvatarUserSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageChangeImageAvatarUserSuccess));
 
             return this;
         }
@@ -160,7 +160,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("VerifyRewmoveAvatarImageLandlord")]
         public SidebarLandlord VerifyRewmoveAvatarImageLandlord()
         {
-            Assert.IsTrue(Successfully.IsVisible(MessageRemoveImageAvatarUserSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageRemoveImageAvatarUserSuccess));
 
             return this;
         }

@@ -9,7 +9,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfCommissionsPage
         [AllureStep("VerifyTitleListOfCommissions")]
         public ListOfCommissions VerifyTitleListOfCommissions()
         {
-            Assert.IsTrue(Successfully.IsVisible(TitleListOfCommissions));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleListOfCommissions));
 
             return this;
         }

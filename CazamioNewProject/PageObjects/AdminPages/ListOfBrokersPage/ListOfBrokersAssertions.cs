@@ -10,8 +10,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage
         [AllureStep("VerifyTitleListOfBrokersPg")]
         public ListOfBrokers VerifyTitleListOfBrokersPg()
         {
-            WaitUntil.CustomElementIsVisible(TitleListOfBrokers);
-            Assert.IsTrue(Successfully.IsVisible(TitleListOfBrokers));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleListOfBrokers));
 
             return this;
         }
@@ -19,8 +18,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage
         [AllureStep("VerifyMessageBrokerHasBeenSuccessfullyCreated")]
         public ListOfBrokers VerifyMessageBrokerHasBeenSuccessfullyCreated()
         {
-            WaitUntil.CustomElementIsVisible(MessageBrokerHasBeenSuccessfullyCreated);
-            Assert.IsTrue(Successfully.IsVisible(MessageBrokerHasBeenSuccessfullyCreated));
+            Assert.IsTrue(TitlesCheck.IsVisible(MessageBrokerHasBeenSuccessfullyCreated));
 
             return this;
         }

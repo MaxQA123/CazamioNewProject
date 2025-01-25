@@ -14,7 +14,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.MarketplacePage
         [AllureStep("VerifyTitleMarketplacePg")]
         public Marketplace VerifyTitleMarketplacePg()
         {
-            Assert.IsTrue(Successfully.IsVisible(TitleMarketplacePage));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleMarketplacePage));
 
             return this;
         }

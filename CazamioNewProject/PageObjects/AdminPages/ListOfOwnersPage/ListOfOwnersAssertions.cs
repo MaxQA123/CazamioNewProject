@@ -14,7 +14,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage
         [AllureStep("VerifyTitleListOfOwnersPg")]
         public ListOfOwners VerifyTitleListOfOwnersPg()
         {
-            Assert.IsTrue(Successfully.IsVisible(TitleListOfOwnersPg));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleListOfOwnersPg));
 
             return this;
         }
@@ -22,8 +22,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage
         [AllureStep("VerifyMessageSuccessCreatedOwner")]
         public ListOfOwners VerifyMessageSuccessCreatedOwner()
         {
-            WaitUntil.CustomElementIsVisible(MessageOwnerHasBeenSuccessfullyCreated);
-            Assert.IsTrue(Successfully.IsVisible(MessageOwnerHasBeenSuccessfullyCreated));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageOwnerHasBeenSuccessfullyCreated));
             WaitUntil.WaitSomeInterval(1000);
 
             return this;

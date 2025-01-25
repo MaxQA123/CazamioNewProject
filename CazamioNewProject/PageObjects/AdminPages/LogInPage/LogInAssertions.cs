@@ -9,8 +9,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         [AllureStep("VerifyTitle")]
         public LogInLandlord VerifyTitle()
         {
-            WaitUntil.CustomElementIsVisible(TitleLogInPg);
-            Assert.IsTrue(Successfully.IsVisible(TitleLogInPg));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleLogInPg));
 
             return this;
         }

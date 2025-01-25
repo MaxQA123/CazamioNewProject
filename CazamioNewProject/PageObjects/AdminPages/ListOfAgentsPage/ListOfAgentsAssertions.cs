@@ -9,7 +9,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfAgentsPage
         [AllureStep("VerifyTitleAgentsPg")]
         public ListOfAgents VerifyTitleAgentsPg()
         {
-            Assert.IsTrue(Successfully.IsVisible(TitleAgentsPage));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleAgentsPage));
 
             return this;
         }

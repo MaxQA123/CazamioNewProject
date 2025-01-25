@@ -9,7 +9,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfLeadsPage
         [AllureStep("VerifyTitleLeads")]
         public ListOfLeads VerifyTitleLeads()
         {
-            Assert.IsTrue(Successfully.IsVisible(TitleLeads));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleLeads));
 
             return this;
         }

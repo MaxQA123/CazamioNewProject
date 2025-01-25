@@ -14,7 +14,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentSettingsPage
         [AllureStep("VerifyTitlePaymentSettingsPage")]
         public PaymentSettings VerifyTitlePaymentSettingsPage()
         {
-            Assert.IsTrue(Successfully.IsVisible(TitlePaymentSettingsPage));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitlePaymentSettingsPage));
 
             return this;
         }

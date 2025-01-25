@@ -14,7 +14,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.TemplatesPage
         [AllureStep("VerifyTitleTemplatesPage")]
         public Templates VerifyTitleTemplatesPage()
         {
-            Assert.IsTrue(Successfully.IsVisible(TitleTemplatesPage));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleTemplatesPage));
 
             return this;
         }

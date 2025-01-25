@@ -9,8 +9,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage
         [AllureStep("VerifyTitleListOfApartments")]
         public ListOfApartments VerifyTitleListOfApartments()
         {
-            WaitUntil.CustomElementIsVisible(TitleListOfApartmentsPage);
-            Assert.IsTrue(Successfully.IsVisible(TitleListOfApartmentsPage));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleListOfApartmentsPage));
 
             return this;
         }

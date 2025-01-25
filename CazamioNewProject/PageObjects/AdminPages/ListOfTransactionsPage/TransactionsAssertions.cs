@@ -14,7 +14,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfTransactionsPage
         [AllureStep("VerifyTitleTransactionsPg")]
         public ListOfTransactions VerifyTitleTransactionsPg()
         {
-            Assert.IsTrue(Successfully.IsVisible(TitleTransactionsPage));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleTransactionsPage));
 
             return this;
         }
