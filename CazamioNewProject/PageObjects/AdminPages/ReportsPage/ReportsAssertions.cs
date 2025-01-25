@@ -9,8 +9,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ReportsPage
         [AllureStep("VerifyTitleReportsPage")]
         public Reports VerifyTitleReportsPage()
         {
-            WaitUntil.WaitSomeInterval(1000);
-            Assert.IsTrue(Successfully.IsVisible(TitleReportsPage));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleReportsPage));
 
             return this;
         }

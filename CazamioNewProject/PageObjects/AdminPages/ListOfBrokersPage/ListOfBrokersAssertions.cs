@@ -18,7 +18,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage
         [AllureStep("VerifyMessageBrokerHasBeenSuccessfullyCreated")]
         public ListOfBrokers VerifyMessageBrokerHasBeenSuccessfullyCreated()
         {
-            Assert.IsTrue(TitlesCheck.IsVisible(MessageBrokerHasBeenSuccessfullyCreated));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageBrokerHasBeenSuccessfullyCreated));
 
             return this;
         }
@@ -28,8 +28,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage
         {
             WaitUntil.WaitSomeInterval(500);
             Assert.AreEqual(getFullEmail, getEmailFromListOfBrokers);
-
-            Console.WriteLine($"Email a new broker: {getFullEmail}");
 
             return this;
         }

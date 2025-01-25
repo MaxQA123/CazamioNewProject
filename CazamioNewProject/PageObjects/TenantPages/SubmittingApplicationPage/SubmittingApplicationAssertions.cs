@@ -14,7 +14,7 @@ namespace CazamioNewProject.PageObjects.TenantPages.SubmittingApplicationPage
         [AllureStep("VerifyChangingAvatarImageLandlord")]
         public SubmittingApplication VerifyMessageAccountWasSuccessfullyActivated()
         {
-            Assert.IsTrue(Successfully.IsVisible(MessageAccountWasSuccessfullyActivated));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageAccountWasSuccessfullyActivated));
 
             return this;
         }

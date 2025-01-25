@@ -9,7 +9,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         [AllureStep("VerifyTitleCreateApplication")]
         public CreateApplicationMdlWndw VerifyTitleCreateApplication()
         {
-            Assert.IsTrue(Successfully.IsVisible(TitleCreateApplication));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleCreateApplication));
 
             return this;
         }
@@ -17,8 +17,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         [AllureStep("VerifyTitleApplicationSuccessfullyCreated")]
         public CreateApplicationMdlWndw VerifyTitleApplicationSuccessfullyCreated()
         {
-            WaitUntil.CustomElementIsVisible(TitleApplicationSuccessfullyCreated);
-            Assert.IsTrue(Successfully.IsVisible(TitleApplicationSuccessfullyCreated));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleApplicationSuccessfullyCreated));
 
             return this;
         }
@@ -26,8 +25,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         [AllureStep("VerifyTextLinkAlreadyCopied")]
         public CreateApplicationMdlWndw VerifyTextLinkAlreadyCopied()
         {
-            WaitUntil.CustomElementIsVisible(TextLinkAlreadyCopied);
-            Assert.IsTrue(Successfully.IsVisible(TextLinkAlreadyCopied));
+            Assert.IsTrue(TextSubtitle.IsVisible(TextLinkAlreadyCopied));
 
             return this;
         }

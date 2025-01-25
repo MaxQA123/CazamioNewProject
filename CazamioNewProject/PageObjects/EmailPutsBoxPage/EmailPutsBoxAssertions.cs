@@ -1,7 +1,6 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using NUnit.Allure.Attributes;
 using NUnit.Framework;
-using System;
 
 namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
 {
@@ -10,9 +9,7 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         [AllureStep("VerifyTitleLetterCreateAdmin")]
         public EmailPutsBox VerifyTitleLetterCreateAdmin()
         {
-            WaitUntil.CustomElementIsVisible(TitleLetterCreateAdminMySpace);
-            Assert.IsTrue(TitleLetterCreateAdminMySpace.Displayed);
-            Console.WriteLine(TitleLetterCreateAdminMySpace.Text);
+            Assert.IsTrue(SubjectEmail.IsVisible(TitleLetterCreateAdminMySpace));
 
             return this;
         }
@@ -20,9 +17,7 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         [AllureStep("VerifyTitleLetterCreateBroker")]
         public EmailPutsBox VerifyTitleLetterCreateBroker()
         {
-            WaitUntil.CustomElementIsVisible(TitleLetterCreateBrokerMySpace);
-            Assert.IsTrue(TitleLetterCreateBrokerMySpace.Displayed);
-            Console.WriteLine(TitleLetterCreateBrokerMySpace.Text);
+            Assert.IsTrue(SubjectEmail.IsVisible(TitleLetterCreateBrokerMySpace));
 
             return this;
         }
@@ -30,9 +25,7 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         [AllureStep("VerifySubjectLetterCreateAgentMySpace")]
         public EmailPutsBox VerifySubjectLetterCreateAgentMySpace()
         {
-            WaitUntil.CustomElementIsVisible(SubjectLetterCreateAgentMySpace);
-            Assert.IsTrue(SubjectLetterCreateAgentMySpace.Displayed);
-            Console.WriteLine(SubjectLetterCreateAgentMySpace.Text);
+            Assert.IsTrue(SubjectEmail.IsVisible(SubjectLetterCreateAgentMySpace));
 
             return this;
         }

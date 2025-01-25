@@ -9,8 +9,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.DashboardPage
         [AllureStep("VerifyTitleOfDashboardPg")]
         public Dashboard VerifyTitleOfDashboardPg()
         {
-            WaitUntil.CustomElementIsVisible(TitleDashboardPage);
-            Assert.IsTrue(Successfully.IsVisible(TitleDashboardPage));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleDashboardPage));
 
             return this;
         }

@@ -9,8 +9,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.Create_ANewOwnerMdlWndw
         [AllureStep("VerifyTitleCreateANewOwnerg")]
         public CreateANewOwnerMdlWndw VerifyTitleCreateANewOwner()
         {
-            WaitUntil.CustomElementIsVisible(TitleCreateANewOwner);
-            Assert.IsTrue(Successfully.IsVisible(TitleCreateANewOwner));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleCreateANewOwner));
 
             return this;
         }

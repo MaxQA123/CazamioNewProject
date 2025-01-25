@@ -9,7 +9,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdl
         [AllureStep("VerifyTitleCreateANewMarketplaceadmin")]
         public CreateANewMarketplaceAdminMdlWindow VerifyTitleCreateANewMarketplaceadmin()
         {
-            Assert.IsTrue(Successfully.IsVisible(TitleCreateANewMarketplaceadmin));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleCreateANewMarketplaceadmin));
 
             return this;
         }
@@ -17,7 +17,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdl
         [AllureStep("VerifyNameHostMarketplaceSubdomain")]
         public CreateANewMarketplaceAdminMdlWindow VerifyNameHostMarketplaceSubdomain()
         {
-            Assert.IsTrue(Successfully.IsVisible(NameHostMarketplaceSubdomain));
+            Assert.IsTrue(TextSubtitle.IsVisible(NameHostMarketplaceSubdomain));
 
             return this;
         }

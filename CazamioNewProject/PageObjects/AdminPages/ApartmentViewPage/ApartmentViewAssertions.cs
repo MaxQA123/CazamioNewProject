@@ -1,11 +1,6 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using NUnit.Allure.Attributes;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
 {
@@ -15,8 +10,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         public ApartmentView VerifyTitleApartmentViewPage()
         {
             WaitUntil.CustomElementIsVisible(LoaderHidden);
-            WaitUntil.CustomElementIsVisible(TitleApartmentViewPage);
-            Assert.IsTrue(Successfully.IsVisible(TitleApartmentViewPage));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleApartmentViewPage));
             KeyBoardActions.ScrollToUp();
 
             return this;
@@ -25,8 +19,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         [AllureStep("VerifyCopiedTheLinkToApplication")]
         public ApartmentView VerifyCopiedTheLinkToApplication()
         {
-            WaitUntil.CustomElementIsVisible(MessageCopiedTheLinkToApplication);
-            Assert.IsTrue(Successfully.IsVisible(MessageCopiedTheLinkToApplication));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageCopiedTheLinkToApplication));
 
             return this;
         }

@@ -9,7 +9,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateANewBrokerMdlWndw
         [AllureStep("VerifyTitleCreateNewBroker")]
         public CreateANewBrokerMdlWndw VerifyTitleCreateNewBroker()
         {
-            Assert.IsTrue(Successfully.IsVisible(TitleCreateNewBroker));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleCreateNewBroker));
 
             return this;
         }

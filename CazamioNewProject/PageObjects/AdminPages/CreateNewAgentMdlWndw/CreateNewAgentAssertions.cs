@@ -11,19 +11,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateNewAgentMdlWndw
 {
     public partial class CreateNewAgentMdlWndw
     {
-        //[AllureStep("VerifyFieldsOnMdlWndwCreateBroker")]
-        //public CreateNewAgentMdlWndw VerifyFieldsOnMdlWndwCreateBroker()
-        //{
-        //    Assert.IsTrue(Errors.IsInvisible(ErrorFirstNameCrtNwBrkrOnMdlwndw));
-
-        //    return this;
-        //}
-
         [AllureStep("VerifyMessageNewAgentCreatedSuccessfully")]
         public CreateNewAgentMdlWndw VerifyMessageNewAgentCreatedSuccessfully()
         {
-            WaitUntil.CustomElementIsVisible(MessageNewAgentCreatedSuccessfully);
-            Assert.IsTrue(Successfully.IsVisible(MessageNewAgentCreatedSuccessfully));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageNewAgentCreatedSuccessfully));
 
 
             return this;

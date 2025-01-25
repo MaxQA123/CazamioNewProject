@@ -18,7 +18,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
                 Assert.AreEqual(agentFromApplication, agentLulaAgentQA);
                 Assert.AreEqual(statusFromApplication, statusDraft);
                 Assert.AreEqual(dateCurrentCreatedFromApplication, dateCurrentCreatedExpectedResult);
-                Assert.IsTrue(Successfully.IsVisible(CloseNameBtnOfClmnStatusFrstRw));
+                Assert.IsTrue(ButtonName.IsVisible(CloseNameBtnOfClmnStatusFrstRw));
             });
 
             return this;

@@ -1,6 +1,4 @@
-﻿using NUnit.Allure.Attributes;
-using OpenQA.Selenium;
-using System;
+﻿using OpenQA.Selenium;
 
 namespace CazamioNewProject.GuiHelpers
 {
@@ -31,74 +29,4 @@ namespace CazamioNewProject.GuiHelpers
         }
     }
 
-    public class Errors
-    {
-        public static Boolean IsInvisible(IWebElement element)
-        {
-            WaitUntil.WaitSomeInterval(1000);
-            try
-            {
-                if (element.Enabled == true)
-                {
-                    Console.WriteLine(element.Text);
-
-                    return false;
-                }
-
-                return true;
-
-
-            }
-            catch (NoSuchElementException) { return true; }
-
-            catch (StaleElementReferenceException) { return true; }
-        }
-    }
-
-    public class Successfully
-    {
-        public static Boolean IsVisible(IWebElement element)
-        {
-            WaitUntil.WaitSomeInterval(100);
-            try
-            {
-                if (element.Enabled == true)
-                {
-                    Console.WriteLine(element.Text);
-
-                    return true;
-                }
-
-                return false;
-            }
-            catch (NoSuchElementException) { return false; }
-
-            catch (StaleElementReferenceException) { return false; }
-        }
-    }
-
-
-    //public class SuccessfullyTwo
-    //{
-    //    public static Boolean IsVisible(IWebElement element)
-    //    {
-    //        WaitUntil.WaitSomeInterval(1000);
-    //        try
-    //        {
-    //            if (element.Enabled == true)
-    //            {
-    //                Console.WriteLine(element.GetAttribute("value"));
-
-    //                return true;
-    //            }
-
-    //            return false;
-
-
-    //        }
-    //        catch (NoSuchElementException) { return false; }
-
-    //        catch (StaleElementReferenceException) { return false; }
-    //    }
-    //}
 }

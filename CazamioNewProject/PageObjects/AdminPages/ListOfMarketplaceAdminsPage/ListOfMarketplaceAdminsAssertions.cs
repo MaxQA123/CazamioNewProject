@@ -9,7 +9,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfMarketplaceAdminsPage
         [AllureStep("VerifyTitleListOfMarketplaceAdmins")]
         public ListOfMarketplaceAdmins VerifyTitleListOfMarketplaceAdmins()
         {
-            Assert.IsTrue(Successfully.IsVisible(TitleListOfMarketplaceAdmins));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleListOfMarketplaceAdmins));
 
             return this;
         }
@@ -17,8 +17,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfMarketplaceAdminsPage
         [AllureStep("VerifyMessageMarketplaceAdminHasBeenSuccessfullyCreated")]
         public ListOfMarketplaceAdmins VerifyMessageMarketplaceAdminHasBeenSuccessfullyCreated()
         {
-            WaitUntil.CustomElementIsVisible(MessageMarketplaceAdminHasBeenSuccessfullyCreated);
-            Assert.IsTrue(Successfully.IsVisible(MessageMarketplaceAdminHasBeenSuccessfullyCreated));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageMarketplaceAdminHasBeenSuccessfullyCreated));
 
             return this;
         }

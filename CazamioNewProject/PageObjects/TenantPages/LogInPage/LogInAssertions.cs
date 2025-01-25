@@ -10,7 +10,7 @@ namespace CazamioNewProject.PageObjects.TenantPages.LogInPage
         public LogInTenant VerifyMessageAccountWasSuccessfullyActivated()
         {
             WaitUntil.WaitSomeInterval(3000);
-            Assert.IsTrue(Successfully.IsVisible(MessageAccountWasSuccessfullyActivated));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageAccountWasSuccessfullyActivated));
 
             return this;
         }
@@ -19,7 +19,7 @@ namespace CazamioNewProject.PageObjects.TenantPages.LogInPage
         public LogInTenant VerifyMessageYouHaveSuccesfullyChangedYourPassword()
         {
             WaitUntil.WaitSomeInterval(3000);
-            Assert.IsTrue(Successfully.IsVisible(MessageYouHaveSuccesfullyChangedYourPassword));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageYouHaveSuccesfullyChangedYourPassword));
 
             return this;
         }
