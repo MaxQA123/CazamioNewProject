@@ -9,7 +9,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
         [AllureStep("TitlePaymentOptionsMdlWndwOptns")]
         public PaymentOptionsMdlWndw VerifyTitlePaymentOptions()
         {
-            Assert.IsTrue(Successfully.IsVisible(TitlePaymentOptions));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitlePaymentOptions));
 
             return this;
         }
@@ -17,8 +17,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
         [AllureStep("VerifySuccessSelectPmntMthds")]
         public PaymentOptionsMdlWndw VerifySuccessSelectPmntMthds()
         {
-            WaitUntil.CustomElementIsVisible(MessageSuccessMdlWndwOptns);
-            Assert.IsTrue(Successfully.IsVisible(MessageSuccessMdlWndwOptns));
+            //WaitUntil.CustomElementIsVisible(MessageSuccessMdlWndwOptns);
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccessMdlWndwOptns));
 
             return this;
         }

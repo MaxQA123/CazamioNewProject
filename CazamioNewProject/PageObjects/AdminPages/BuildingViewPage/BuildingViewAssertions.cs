@@ -12,16 +12,16 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingViewPage
             WaitUntil.CustomElementIsVisible(LoaderHidden);
             WaitUntil.WaitSomeInterval(3000);
             WaitUntil.CustomElementIsVisible(TitleBuildingViewPage);
-            Assert.IsTrue(Successfully.IsVisible(TitleBuildingViewPage));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleBuildingViewPage));
 
             return this;
         }
 
         [AllureStep("VerifyBuildingAddress")]
-        public BuildingView VerifyBuildingAddress(string getAddressNewBuildingActual, string building)
+        public BuildingView VerifyBuildingAddress(string getAddressNewBuildingActual, string getAddressBuildingView)
         {
             WaitUntil.WaitSomeInterval(100);
-            Assert.AreEqual(getAddressNewBuildingActual, building);
+            Assert.AreEqual(getAddressNewBuildingActual, getAddressBuildingView);
 
             return this;
         }

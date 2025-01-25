@@ -1,12 +1,10 @@
-﻿using NUnit.Allure.Attributes;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 
 namespace CazamioNewProject.GuiHelpers
 {
     public class KeyBoardActions
     {
-        [AllureStep("ClickArrowUp")]
         public static void ClickArrowUp()
         {
             new Actions(Browser._Driver)
@@ -15,7 +13,6 @@ namespace CazamioNewProject.GuiHelpers
                 .Perform();
         }
 
-        [AllureStep("ClickArrowDown")]
         public static void ClickArrowDown()
         {
             new Actions(Browser._Driver)
@@ -24,7 +21,6 @@ namespace CazamioNewProject.GuiHelpers
                 .Perform();
         }
 
-        [AllureStep("ClickArrowLeft")]
         public static void ClickArrowLeft()
         {
             new Actions(Browser._Driver)
@@ -33,7 +29,6 @@ namespace CazamioNewProject.GuiHelpers
                 .Perform();
         }
 
-        [AllureStep("ClickArrowRight")]
         public static void ClickArrowRight()
         {
             new Actions(Browser._Driver)
@@ -42,7 +37,6 @@ namespace CazamioNewProject.GuiHelpers
                 .Perform();
         }
 
-        [AllureStep("ClickEnterButton")]
         public static void ClickEnterButton()
         {
             new Actions(Browser._Driver)
@@ -51,7 +45,6 @@ namespace CazamioNewProject.GuiHelpers
                 .Perform();
         }
 
-        [AllureStep("ClickEscapeButton")]
         public static void ClickEscapeButton()
         {
             new Actions(Browser._Driver)
@@ -60,7 +53,6 @@ namespace CazamioNewProject.GuiHelpers
                 .Perform();
         }
 
-        [AllureStep("ClickSpaceButton")]
         public static void ClickSpaceButton()
         {
             new Actions(Browser._Driver)
@@ -69,7 +61,6 @@ namespace CazamioNewProject.GuiHelpers
                 .Perform();
         }
 
-        [AllureStep("ScrollToElement")]
         public static void ScrollToElement(IWebElement element)
         {
             new Actions(Browser._Driver)
@@ -78,7 +69,6 @@ namespace CazamioNewProject.GuiHelpers
                 .Perform();
         }
 
-        [AllureStep("ScrollToDown")]
         public static void ScrollToDown()
         {
             new Actions(Browser._Driver)
@@ -87,7 +77,6 @@ namespace CazamioNewProject.GuiHelpers
                 .Perform();
         }
 
-        [AllureStep("ScrollToUp")]
         public static void ScrollToUp()
         {
             new Actions(Browser._Driver)
@@ -96,7 +85,6 @@ namespace CazamioNewProject.GuiHelpers
                 .Perform();
         }
 
-        [AllureStep("ClickTab")]
         public static void ClickTab()
         {
             new Actions(Browser._Driver)
@@ -105,7 +93,6 @@ namespace CazamioNewProject.GuiHelpers
                 .Perform();
         }
 
-        [AllureStep("ClickBackspace")]
         public static void ClickBackspace()
         {
             new Actions(Browser._Driver)
@@ -114,7 +101,6 @@ namespace CazamioNewProject.GuiHelpers
                 .Perform();
         }
 
-        [AllureStep("ClickInsert")]
         public static void ClickInsert()
         {
             new Actions(Browser._Driver)
@@ -123,7 +109,6 @@ namespace CazamioNewProject.GuiHelpers
                 .Perform();
         }
 
-        [AllureStep("ClearValue")]
         public static void ClearValue()
         {
             new Actions(Browser._Driver)

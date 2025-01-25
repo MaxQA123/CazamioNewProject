@@ -2,10 +2,6 @@
 using NUnit.Allure.Attributes;
 using NUnit.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
 {
@@ -16,7 +12,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         {
             WaitUntil.CustomElementIsVisible(LoaderHidden);
             WaitUntil.WaitSomeInterval(1000);
-            Assert.IsTrue(Successfully.IsVisible(TitleNewBuildingPage));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleNewBuildingPage));
 
             return this;
         }
@@ -56,7 +52,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         {
             Assert.AreEqual(valueScreeningFeeByDefault, building.MySpaceAmountPayments.CreditScreeningFeeByDefault);
 
-            Console.WriteLine($"Value Screening Fee by default AR: {valueScreeningFeeByDefault} ER: {building.MySpaceAmountPayments.CreditScreeningFeeByDefault}");
+            Console.WriteLine($"Screening fee AR: {valueScreeningFeeByDefault} ER: {building.MySpaceAmountPayments.CreditScreeningFeeByDefault}");
 
             return this;
         }
@@ -66,7 +62,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         {
             Assert.AreEqual(getValueHoldDeposit, building.MySpaceAmountPayments.HoldDepositByDefault);
 
-            Console.WriteLine($"Value Screening Fee by default AR: {getValueHoldDeposit} ER: {building.MySpaceAmountPayments.HoldDepositByDefault}");
+            Console.WriteLine($"Hold depositAR: {getValueHoldDeposit} ER: {building.MySpaceAmountPayments.HoldDepositByDefault}");
 
             return this;
         }
@@ -97,8 +93,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         [AllureStep("VerifyMessageSavedSuccessfullyBuilding")]
         public NewBuilding VerifyMessageSavedSuccessfullyBuilding()
         {
-            WaitUntil.CustomElementIsVisible(MessageSavedSuccessfullyBuilding);
-            Assert.IsTrue(Successfully.IsVisible(MessageSavedSuccessfullyBuilding));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSavedSuccessfullyBuilding));
 
             return this;
         }

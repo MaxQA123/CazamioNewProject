@@ -14,7 +14,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.PetPoliciesMdlWndw
         [AllureStep("VerifyTitlePetPoliciesMdlWndw")]
         public PetPoliciesMdlWndw VerifyTitlePetPoliciesMdlWndw()
         {
-            Assert.IsTrue(Successfully.IsVisible(TitlePetPolicies));
+            Assert.IsTrue(TitlesCheck.IsVisible(TitlePetPolicies));
 
             return this;
         }
