@@ -21,7 +21,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         {
             WaitUntil.WaitSomeInterval(3000);
             Assert.AreEqual(getBuildingNameFromBuildingView, getBuildingNameFromAddApartments);
-            Console.WriteLine($"{getBuildingNameFromBuildingView} = {getBuildingNameFromAddApartments}");
+            Console.WriteLine($"Building name: {getBuildingNameFromBuildingView} = {getBuildingNameFromAddApartments}");
 
             return this;
         }
@@ -81,7 +81,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         {
             Assert.AreEqual(getApartmentHoldDepositFromAddApartments, building.MySpaceAmountPayments.HoldDepositByDefault);
 
-            Console.WriteLine($"Apartment Hold Deposit AR: {getApartmentHoldDepositFromAddApartments} = {building.MySpaceAmountPayments.HoldDepositByDefault} :ER");
+            Console.WriteLine($"Apartment Hold Deposit AR: {getApartmentHoldDepositFromAddApartments} ER: {building.MySpaceAmountPayments.HoldDepositByDefault} ");
 
             return this;
         }
@@ -101,7 +101,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         {
             Assert.AreEqual(getRentalTerms, apartment.UnitBasicData.RentalTermsByDefault);
 
-            Console.WriteLine($"Rental Terms AR: {getRentalTerms} = {apartment.UnitBasicData.RentalTermsByDefault} :ER Rental Terms");
+            Console.WriteLine($"Rental Terms AR: {getRentalTerms} ER: {apartment.UnitBasicData.RentalTermsByDefault}");
 
             return this;
         }

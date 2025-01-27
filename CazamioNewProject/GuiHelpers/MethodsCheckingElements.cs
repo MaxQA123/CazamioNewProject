@@ -53,7 +53,6 @@ namespace CazamioNewProject.GuiHelpers
             {
                 try
                 {
-                    // Проверяем, что элемент доступен и видим
                     if (element != null && element.Enabled)
                     {
                         Console.WriteLine($"Title name: {element.Text}");
@@ -69,11 +68,9 @@ namespace CazamioNewProject.GuiHelpers
                     // Игнорируем, так как элемент может быть временно недоступен
                 }
 
-                // Ждем перед следующей попыткой
                 Thread.Sleep(interval);
             }
 
-            // Если время истекло, возвращаем false
             return false;
         }
     }
@@ -90,7 +87,6 @@ namespace CazamioNewProject.GuiHelpers
             {
                 try
                 {
-                    // Проверяем, что элемент доступен и видим
                     if (element != null && element.Enabled)
                     {
                         Console.WriteLine($"Subject email: {element.Text}");
@@ -110,7 +106,6 @@ namespace CazamioNewProject.GuiHelpers
                 Thread.Sleep(interval);
             }
 
-            // Если время истекло, возвращаем false
             return false;
         }
     }
@@ -127,7 +122,6 @@ namespace CazamioNewProject.GuiHelpers
             {
                 try
                 {
-                    // Проверяем, что элемент доступен и видим
                     if (element != null && element.Enabled)
                     {
                         Console.WriteLine($"Button name: {element.Text}");
@@ -147,7 +141,6 @@ namespace CazamioNewProject.GuiHelpers
                 Thread.Sleep(interval);
             }
 
-            // Если время истекло, возвращаем false
             return false;
         }
     }
@@ -164,7 +157,6 @@ namespace CazamioNewProject.GuiHelpers
             {
                 try
                 {
-                    // Проверяем, что элемент доступен и видим
                     if (element != null && element.Enabled)
                     {
                         Console.WriteLine($"Subtitle: {element.Text}");
@@ -180,11 +172,9 @@ namespace CazamioNewProject.GuiHelpers
                     // Игнорируем, так как элемент может быть временно недоступен
                 }
 
-                // Ждем перед следующей попыткой
                 Thread.Sleep(interval);
             }
 
-            // Если время истекло, возвращаем false
             return false;
         }
     }

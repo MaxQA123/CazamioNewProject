@@ -646,7 +646,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             InputGeneral.InputFunctionWithClear(FieldInputCustomNoteForAccess, apartment.AccessLocks.PincodeLongText);
             WaitUntil.WaitSomeInterval(100);
             ButtonSelectImageForAccess.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_APARTMENT_LOCK_PIN_CODE));
-            WaitUntil.SuccessCustomElementIsVisible(MessageSuccessUploadImageForAccess);
+            ToasterSuccessfully.IsVisible(MessageSuccessUploadImageForAccess);
+            //WaitUntil.SuccessCustomElementIsVisible(MessageSuccessUploadImageForAccess);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSaveForLock);
 
@@ -693,7 +694,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             InputGeneral.InputFunctionWithClear(FieldInputCustomNoteForAccess, apartment.AccessLocks.NoteLongText);
             WaitUntil.WaitSomeInterval(100);
             ButtonSelectImageForAccess.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_APARTMENT_LOCK_NOTE));
-            WaitUntil.SuccessCustomElementIsVisible(MessageSuccessUploadImageForAccess);
+            ToasterSuccessfully.IsVisible(MessageSuccessUploadImageForAccess);
+            //WaitUntil.SuccessCustomElementIsVisible(MessageSuccessUploadImageForAccess);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSaveForLock);
 

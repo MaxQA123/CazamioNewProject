@@ -1082,7 +1082,7 @@ namespace MarketplaceAdminGuiTest
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
-        [Retry(1)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("MarketplaceAdmin")]
         [AllureSubSuite("CreateApplicationForApartmentVacant")]
@@ -1124,69 +1124,69 @@ namespace MarketplaceAdminGuiTest
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
-            //string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
 
-            //Pages.BuildingView
-            //    .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneWashingtonSquare)
-            //    .ClickTabApartments();
-            //KeyBoardActions.ScrollToDown();
+            Pages.BuildingView
+                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneWashingtonSquare)
+                .ClickTabApartments();
+            KeyBoardActions.ScrollToDown();
 
-            //string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithAgent();
+            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithAgent();
 
-            //Pages.BuildingApartmentsTbl
-            //    .ClickRowByVacant();
+            Pages.BuildingApartmentsTbl
+                .ClickRowByVacant();
 
             #endregion
 
-            //#region Test
+            #region Test
 
-            //Pages.ApartmentView
-            //    .VerifyTitleApartmentViewPage();
-            //Pages.ApartmentView
-            //    .ClickButtonPlusApplication();
-            //Pages.CreateApplicationMdlWndw
-            //    .VerifyTitleCreateApplication()
-            //    .PassFirstStep();
+            Pages.ApartmentView
+                .VerifyTitleApartmentViewPage();
+            Pages.ApartmentView
+                .ClickButtonPlusApplication();
+            Pages.CreateApplicationMdlWndw
+                .VerifyTitleCreateApplication()
+                .PassFirstStep();
 
-            //string partEmailPutsBox = Pages.CreateApplicationMdlWndw.CopyEmailBeforeDogFromFieldGetApplicationLink();
+            string partEmailPutsBox = Pages.CreateApplicationMdlWndw.CopyEmailBeforeDogFromFieldGetApplicationLink();
 
-            //Pages.CreateApplicationMdlWndw
-            //    .PassThirdStepFullData()
-            //    .VerifyTitleApplicationSuccessfullyCreated()
-            //    .VerifyTextLinkAlreadyCopied()
-            //    .ClickButtonClose();
-            //Pages.ApartmentView
-            //    .ClickTabApplications();
+            Pages.CreateApplicationMdlWndw
+                .PassThirdStepFullData()
+                .VerifyTitleApplicationSuccessfullyCreated()
+                .VerifyTextLinkAlreadyCopied()
+                .ClickButtonClose();
+            Pages.ApartmentView
+                .ClickTabApplications();
 
-            //string apartmentAddressFromApp = Pages.ApartmentApplicationsTbl.GetApartmentAddressFromFirstRow();
-            //string firstNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetFirstNameTenantMainApplicantFromFirstRow();
-            //string lastNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetLastNameTenantMainApplicantFromFirstRow();
-            //string leasePriceFromApplication = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
-            //string dateCreatedFromApplication = Pages.ApartmentApplicationsTbl.GetDateCreatedFromFirstRow();
-            //string agentFromApplication = Pages.ApartmentApplicationsTbl.GetAgentFromFrstRw();
-            //string statusFromApplication = Pages.ApartmentApplicationsTbl.GetStatusFromFrstRw();
+            string apartmentAddressFromApp = Pages.ApartmentApplicationsTbl.GetApartmentAddressFromFirstRow();
+            string firstNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetFirstNameTenantMainApplicantFromFirstRow();
+            string lastNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetLastNameTenantMainApplicantFromFirstRow();
+            string leasePriceFromApplication = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
+            string dateCreatedFromApplication = Pages.ApartmentApplicationsTbl.GetDateCreatedFromFirstRow();
+            string agentFromApplication = Pages.ApartmentApplicationsTbl.GetAgentFromFrstRw();
+            string statusFromApplication = Pages.ApartmentApplicationsTbl.GetStatusFromFrstRw();
 
-            //Pages.ApartmentApplicationsTbl
-            //    .VerifyFullDataByApplication(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp, apartmentApplicationsTable.PriceColumn.PriceFourNumberStatic, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.AgentLulaAgentQA, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
+            Pages.ApartmentApplicationsTbl
+                .VerifyFullDataByApplication(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp, apartmentApplicationsTable.PriceColumn.PriceFourNumberStatic, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.AgentLulaAgentQA, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
 
-            //Pages.JScriptExecutor
-            //   .OpenNewTab();
-            //Pages.EmailHelper
-            //   .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, partEmailPutsBox);
+            Pages.JScriptExecutor
+               .OpenNewTab();
+            Pages.EmailHelper
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, partEmailPutsBox);
 
-            //string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+            string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
 
-            //Pages.EmailPutsBox
-            //    .VerifySubjectLetterCreateTenantViaPlusAppWithAgent(getSubjectEmailExpected, getSubjectFromEmail);
-            //Pages.EmailPutsBox
-            //    .ClickButtonHtml()
-            //    .ClickButtonStartYourApplicationNowlForTenant();
-            //Pages.SubmittingApplication
-            //    .VerifyMessageAccountWasSuccessfullyActivated();
+            Pages.EmailPutsBox
+                .VerifySubjectLetterCreateTenantViaPlusAppWithAgent(getSubjectEmailExpected, getSubjectFromEmail);
+            Pages.EmailPutsBox
+                .ClickButtonHtml()
+                .ClickButtonStartYourApplicationNowlForTenant();
+            Pages.SubmittingApplication
+                .VerifyMessageAccountWasSuccessfullyActivated();
 
-            //WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(5000);
 
-            //#endregion
+            #endregion
         }
     }
 }
