@@ -34,6 +34,7 @@ using CazamioNewProject.PageObjects.AdminPages.ReportsPage;
 using CazamioNewProject.PageObjects.AdminPages.SelectorVideosMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.SidebarPage;
 using CazamioNewProject.PageObjects.AdminPages.TemplatesPage;
+using CazamioNewProject.PageObjects.AdminPages.ToasterMessages;
 using CazamioNewProject.PageObjects.EmailPutsBoxPage;
 using CazamioNewProject.PageObjects.TenantPages.Header;
 using CazamioNewProject.PageObjects.TenantPages.LogInPage;
@@ -78,6 +79,7 @@ namespace CazamioNewProject.PageObjects
 
         #region Landlord pages
 
+        public static ToasterMessages ToasterMessages => GetPage<ToasterMessages>();
         public static LogInLandlord LogInLandlord => GetPage<LogInLandlord>();
         public static SidebarLandlord SidebarLandlord => GetPage<SidebarLandlord>();
         public static Dashboard Dashboard => GetPage<Dashboard>();

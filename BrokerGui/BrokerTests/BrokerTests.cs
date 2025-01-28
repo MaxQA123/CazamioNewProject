@@ -606,6 +606,8 @@ namespace BrokerGuiTests
                 .ClickButtonSelectVideo()
                 .UplodImagesFileEnterLinksYouTubeVimeo()
                 .ClickButtonSaveApartment();
+            Pages.ToasterMessages
+                .VerifyMessageApartmentsWereSavedSuccessfully();
 
             WaitUntil.WaitSomeInterval(5000);
 
@@ -680,6 +682,8 @@ namespace BrokerGuiTests
                 .ClickButtonSelectVideo()
                 .UplodFileVideoEnterLinksYouTubeVimeo()
                 .ClickButtonSaveApartment();
+            Pages.ToasterMessages
+                .VerifyMessageApartmentsWereSavedSuccessfully();
 
             #endregion
 

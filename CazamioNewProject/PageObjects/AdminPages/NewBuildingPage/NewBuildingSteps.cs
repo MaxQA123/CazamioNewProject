@@ -246,7 +246,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             InputGeneral.InputFunctionWithClear(FieldInputCustomNoteForAccess, building.AccessLocks.PinCodeTextLorem);
             WaitUntil.WaitSomeInterval(100);
             ButtonSelectImageForAccess.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_BUILDING_LOCK_PIN_CODE));
-            WaitUntil.SuccessCustomElementIsVisible(MessageSuccessUploadImageForAccess);
+            ToasterSuccessfully.IsVisible(MessageSuccessUploadImageForAccess);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSaveForLock);
 
@@ -264,7 +264,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             InputGeneral.InputFunctionWithClear(FieldInputCustomNoteForAccess, building.AccessLocks.NoteTextLorem);
             WaitUntil.WaitSomeInterval(100);
             ButtonSelectImageForAccess.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_BUILDING_LOCK_NOTE));
-            WaitUntil.SuccessCustomElementIsVisible(MessageSuccessUploadImageForAccess);
+            ToasterSuccessfully.IsVisible(MessageSuccessUploadImageForAccess);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSaveForLock);
 

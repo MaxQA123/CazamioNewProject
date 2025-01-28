@@ -292,6 +292,8 @@ namespace AgentBrokerGui
                 .ClickButtonSelectVideo()
                 .UploadOneFileVideo()
                 .ClickButtonSaveApartment();
+            Pages.ToasterMessages
+                .VerifyMessageApartmentsWereSavedSuccessfully();
 
             #endregion
 
@@ -381,6 +383,8 @@ namespace AgentBrokerGui
                 .ClickButtonSelectVideo()
                 .SetLinksYouTubeVimeo()
                 .ClickButtonSaveApartment();
+            Pages.ToasterMessages
+                .VerifyMessageApartmentsWereSavedSuccessfully();
 
             #endregion
 

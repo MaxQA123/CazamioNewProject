@@ -13,14 +13,5 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
 
             return this;
         }
-
-        [AllureStep("VerifySuccessSelectPmntMthds")]
-        public PaymentOptionsMdlWndw VerifySuccessSelectPmntMthds()
-        {
-            //WaitUntil.CustomElementIsVisible(MessageSuccessMdlWndwOptns);
-            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccessMdlWndwOptns));
-
-            return this;
-        }
     }
 }

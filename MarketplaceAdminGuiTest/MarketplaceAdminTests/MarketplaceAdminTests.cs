@@ -867,7 +867,8 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonGeneralNext()
                 .UploadFiveImages()
                 .ClickButtonSaveApartment();
-                //Add Assertion
+            Pages.ToasterMessages
+                .VerifyMessageApartmentsWereSavedSuccessfully();
 
             WaitUntil.WaitSomeInterval(5000);
 
@@ -965,6 +966,8 @@ namespace MarketplaceAdminGuiTest
                 //Add assertion
                 .ClickTabImages()
                 .ClickButtonSaveApartment();
+            Pages.ToasterMessages
+                .VerifyMessageApartmentsWereSavedSuccessfully();
 
             WaitUntil.WaitSomeInterval(5000);
 

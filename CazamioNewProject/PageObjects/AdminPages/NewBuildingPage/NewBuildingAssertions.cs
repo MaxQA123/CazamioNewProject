@@ -32,7 +32,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         {
             Assert.AreEqual(nameLocationActual, building.AccessLocks.MainEntranceByDefaultFirstNameLock);
 
-            Console.WriteLine($"AR: {nameLocationActual} ER: {building.AccessLocks.MainEntranceByDefaultFirstNameLock}");
+            Console.WriteLine($"Location name AR: {nameLocationActual} ER: {building.AccessLocks.MainEntranceByDefaultFirstNameLock}");
 
             return this;
         }
@@ -42,7 +42,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         {
             Assert.AreEqual(copyActualNameLocationTwo, building.AccessLocks.ApartmentByDefaultSecondNameLock);
 
-            Console.WriteLine($"AR: {copyActualNameLocationTwo} ER: {building.AccessLocks.ApartmentByDefaultSecondNameLock}");
+            Console.WriteLine($"Location name AR: {copyActualNameLocationTwo} ER: {building.AccessLocks.ApartmentByDefaultSecondNameLock}");
 
             return this;
         }

@@ -14,8 +14,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             Button.Click(ItemCreditCard);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
-            VerifySuccessSelectPmntMthds();
-            WaitUntil.SuccessCustomElementIsVisible(MessageSuccessPaymentMethodsSelectedMdlWndwOptns);
+            Pages.ToasterMessages
+                .VerifyMessagePaymentMethodsSelected();
 
             return this;
         }
@@ -27,8 +27,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             Button.Click(ItemAch);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
-            VerifySuccessSelectPmntMthds();
-            WaitUntil.SuccessCustomElementIsVisible(MessageSuccessPaymentMethodsSelectedMdlWndwOptns);
+            Pages.ToasterMessages
+                .VerifyMessagePaymentMethodsSelected();
 
             return this;
         }
@@ -40,8 +40,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             Button.Click(ItemDeliverCheck);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
-            VerifySuccessSelectPmntMthds();
-            WaitUntil.SuccessCustomElementIsVisible(MessageSuccessPaymentMethodsSelectedMdlWndwOptns);
+            Pages.ToasterMessages
+                .VerifyMessagePaymentMethodsSelected();
 
             return this;
         }
@@ -53,8 +53,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             Button.Click(ItemZelle);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
-            VerifySuccessSelectPmntMthds();
-            WaitUntil.SuccessCustomElementIsVisible(MessageSuccessPaymentMethodsSelectedMdlWndwOptns);
+            Pages.ToasterMessages
+                .VerifyMessagePaymentMethodsSelected();
 
             return this;
         }
@@ -68,8 +68,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             Button.Click(ItemAch);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
-            VerifySuccessSelectPmntMthds();
-            WaitUntil.SuccessCustomElementIsVisible(MessageSuccessPaymentMethodsSelectedMdlWndwOptns);
+            Pages.ToasterMessages
+                .VerifyMessagePaymentMethodsSelected();
 
             return this;
         }
@@ -84,8 +84,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputDeliverCheckNoteApartment, paymentOptions.DeliverCheckNote.ForApartment);
             Button.Click(ButtonSave);
-            VerifySuccessSelectPmntMthds();
-            WaitUntil.SuccessCustomElementIsVisible(MessageSuccessPaymentMethodsSelectedMdlWndwOptns);
+            Pages.ToasterMessages
+                .VerifyMessagePaymentMethodsSelected();
 
             return this;
         }
@@ -109,7 +109,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             WaitUntil.WaitSomeInterval(100);
             ButtonForVenmoQrCodeImage.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_FOR_PAYMENT_VENMO_SCREENING));
             Button.Click(ButtonSave);
-            VerifySuccessSelectPmntMthds();
+            Pages.ToasterMessages
+                .VerifyMessagePaymentMethodsSelected();
 
             return this;
         }
@@ -132,7 +133,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             ButtonForVenmoQrCodeImage.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_FOR_PAYMENT_VENMO_HOLD_APARTMENT));
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
-            VerifySuccessSelectPmntMthds();
+            Pages.ToasterMessages
+                .VerifyMessagePaymentMethodsSelected();
 
             return this;
         }
@@ -157,7 +159,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             ButtonForVenmoQrCodeImage.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_FOR_PAYMENT_VENMO_SCREENING));
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
-            VerifySuccessSelectPmntMthds();
+            Pages.ToasterMessages
+                .VerifyMessagePaymentMethodsSelected();
 
             return this;
         }
@@ -173,7 +176,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             InputGeneral.InputFunctionWithClear(FieldInputZelleAddressOrPhoneBuilding, paymentOptions.Zelle.ForBuildingScreening);
             ButtonForVenmoQrCodeImage.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_FOR_PAYMENT_VENMO_SCREENING));
             Button.Click(ButtonSave);
-            VerifySuccessSelectPmntMthds();
+            Pages.ToasterMessages
+                .VerifyMessagePaymentMethodsSelected();
 
             return this;
         }
@@ -190,7 +194,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             InputGeneral.InputFunctionWithClear(FieldInputZelleAddressOrPhoneBuilding, paymentOptions.Zelle.ForBuildingHold);
             ButtonForVenmoQrCodeImage.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_FOR_PAYMENT_VENMO_HOLD_BUILDING));
             Button.Click(ButtonSave);
-            VerifySuccessSelectPmntMthds();
+            Pages.ToasterMessages
+                .VerifyMessagePaymentMethodsSelected();
 
             return this;
         }
@@ -207,7 +212,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             InputGeneral.InputFunctionWithClear(FieldInputZelleAddressOrPhoneBuilding, paymentOptions.Zelle.ForBuildingScreening);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
-            VerifySuccessSelectPmntMthds();
+            Pages.ToasterMessages
+                .VerifyMessagePaymentMethodsSelected();
 
             return this;
         }
@@ -230,7 +236,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             ButtonForVenmoQrCodeImage.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_FOR_PAYMENT_VENMO_HOLD_BUILDING));
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
-            VerifySuccessSelectPmntMthds();
+            Pages.ToasterMessages
+                .VerifyMessagePaymentMethodsSelected();
 
             return this;
         }

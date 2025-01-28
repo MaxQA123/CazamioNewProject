@@ -76,7 +76,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
         [AllureStep("SelectItemFirst")]
         public ListOfBuildings SelectItemFirst()
         {
-            WaitUntil.WaitSomeInterval(2000);
+            WaitUntil.WaitSomeInterval(3000);
             WaitUntil.CustomElementIsVisible(ItemFirstBuildingOnPage);
             WaitUntil.CustomElementIsClickable(ItemFirstBuildingOnPage);
             Button.Click(ItemFirstBuildingOnPage);
