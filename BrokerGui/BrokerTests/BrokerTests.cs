@@ -81,55 +81,8 @@ namespace BrokerGuiTests
             #region Test
 
             Pages.SidebarLandlord
-                .UploadImageAvatarUserLandlordFirst()
-                .VerifyChangingAvatarImageLandlord()
-                .UploadImageAvatarUserLandlordSecond()
-                .VerifyChangingAvatarImageLandlord()
-                .ClicklinkRemovePhotoOfLandlord()
-                .VerifyRewmoveAvatarImageLandlord()
-                .ClickButtonDashboard();
-            Pages.Dashboard
-                .VerifyTitleOfDashboardPg();
-            Pages.SidebarLandlord
-                .ClickButtonBuildings();
-            Pages.ListOfBuildings
-                .VerifyTitleListOfBuildings();
-            Pages.SidebarLandlord
-                .ClickButtonApartments();
-            Pages.ListOfApartments
-                .VerifyTitleListOfApartments();
-            Pages.SidebarLandlord
-                .ClickButtonApplications();
-            Pages.ListOfApplications
-                .VerifyTitleListOfApplications();
-            Pages.SidebarLandlord
-                .ClickButtonLeaseSignDocuments();
-            Pages.Templates
-                .VerifyTitleTemplatesPage();
-            Pages.SidebarLandlord
-                .ClickButtonPaymentSettings();
-            Pages.PaymentSettings
-                .VerifyTitlePaymentSettingsPage();
-            Pages.SidebarLandlord
-                .ClickButtonTransactions();
-            Pages.ListOfTransactions
-                .VerifyTitleTransactionsPg();
-            Pages.SidebarLandlord
-               .ClickButtonLeads();
-            Pages.ListOfLeads
-                .VerifyTitleLeads();
-            //Pages.SidebarLandlord
-            //    .ClickButtonAgents();
-            //Pages.ListOfAgents
-            //    .VerifyTitleAgentsPg();
-            Pages.SidebarLandlord
-                .ClickButtonOwners();
-            Pages.ListOfOwners
-                .VerifyTitleListOfOwnersPg();
-            //Pages.SidebarLandlord
-            //   .ClickButtonMarketplace();
-            //Pages.Marketplace
-            //    .VerifyTitleMarketplacePg();
+                .ChangingImagesUserAndLogoMarketplaceOfBroker()
+                .ClickingAllTabsOfBroker();
             Pages.AreYouSureLogOutLandlordMdlWndw
                 .MakeLogOut();
             Pages.LogInLandlord

@@ -139,30 +139,5 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 
             return this;
         }
-
-        [AllureStep("VerifyChangingLogoImageLandlord")]
-        public SidebarLandlord VerifyChangingLogoImageLandlord()
-        {
-            WaitUntil.CustomElementIsVisible(MessageChangeImageLogoLandlordSuccess);
-            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageChangeImageLogoLandlordSuccess));
-
-            return this;
-        }
-
-        [AllureStep("VerifyChangingAvatarImageLandlord")]
-        public SidebarLandlord VerifyChangingAvatarImageLandlord()
-        {
-            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageChangeImageAvatarUserSuccess));
-
-            return this;
-        }
-
-        [AllureStep("VerifyRewmoveAvatarImageLandlord")]
-        public SidebarLandlord VerifyRewmoveAvatarImageLandlord()
-        {
-            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageRemoveImageAvatarUserSuccess));
-
-            return this;
-        }
     }
 }

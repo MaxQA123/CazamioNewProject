@@ -26,6 +26,31 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
+        [AllureStep("VerifyChangingLogoImageLandlord")]
+        public ToasterMessages VerifyChangingLogoImageLandlord()
+        {
+            WaitUntil.CustomElementIsVisible(MessageChangeImageLogoLandlordSuccess);
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageChangeImageLogoLandlordSuccess));
+
+            return this;
+        }
+
+        [AllureStep("VerifyChangingAvatarImageLandlord")]
+        public ToasterMessages VerifyChangingAvatarImageLandlord()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageChangeImageAvatarUserSuccess));
+
+            return this;
+        }
+
+        [AllureStep("VerifyRewmoveAvatarImageLandlord")]
+        public ToasterMessages VerifyRewmoveAvatarImageLandlord()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageRemoveImageAvatarUserSuccess));
+
+            return this;
+        }
+
         #endregion
     }
 }

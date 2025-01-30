@@ -1,0 +1,420 @@
+{
+  "uuid": "6c7bfb49-c3b6-4b45-b896-baa5d4284d48-tr-0-1002",
+  "historyId": "BrokerGuiTests.TestsBaseGui.VerifySidebar",
+  "fullName": "BrokerGuiTests.TestsBaseGui.VerifySidebar",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "BrokerGuiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifySidebar"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "VerifySidebar"
+    }
+  ],
+  "links": [],
+  "name": "VerifySidebar",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+    "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 27\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfBroker_100663493_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarSteps.cs:line 217\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfBroker_100663493_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfBroker_100663493_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.ClickingAllTabsOfBroker() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarActions.cs:line 109\r\n   at BrokerGuiTests.TestsBaseGui.VerifySidebar() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 83"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "VerifySidebar",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+        "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 27\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfBroker_100663493_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarSteps.cs:line 217\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfBroker_100663493_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfBroker_100663493_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.ClickingAllTabsOfBroker() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarActions.cs:line 109\r\n   at BrokerGuiTests.TestsBaseGui.VerifySidebar() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 83"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "EnterEmailPasswordAsBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1738253121680,
+          "stop": 1738253122938
+        },
+        {
+          "name": "ClickIconShow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1738253122938,
+          "stop": 1738253123604
+        },
+        {
+          "name": "ClickButtonLetsGo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1738253123605,
+          "stop": 1738253124469
+        },
+        {
+          "name": "GetUserNameFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1738253124479,
+          "stop": 1738253125998
+        },
+        {
+          "name": "GetUserNameRoleFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1738253126006,
+          "stop": 1738253126072
+        },
+        {
+          "name": "VerifyBrokerUserNameAndRole",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Leoautotest Feabroker"
+            },
+            {
+              "name": "String",
+              "value": "Broker"
+            }
+          ],
+          "start": 1738253126092,
+          "stop": 1738253126633
+        },
+        {
+          "name": "ChangingImagesUserAndLogoMarketplaceOfBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyChangingAvatarImageLandlord",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738253139466,
+              "stop": 1738253140467
+            },
+            {
+              "name": "VerifyChangingAvatarImageLandlord",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738253140958,
+              "stop": 1738253141080
+            },
+            {
+              "name": "VerifyRewmoveAvatarImageLandlord",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738253141925,
+              "stop": 1738253142267
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1738253128650,
+          "stop": 1738253142267
+        },
+        {
+          "name": "ClickButtonDashboard",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1738253142268,
+          "stop": 1738253144060
+        },
+        {
+          "name": "ClickingAllTabsOfBroker",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Timed out after 10 seconds",
+            "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 27\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfBroker_100663493_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarSteps.cs:line 217\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfBroker_100663493_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyTitleOfDashboardPg",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738253145741,
+              "stop": 1738253145800
+            },
+            {
+              "name": "VerifyTitleListOfBuildings",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738253151514,
+              "stop": 1738253151748
+            },
+            {
+              "name": "VerifyTitleListOfApartments",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738253154461,
+              "stop": 1738253154532
+            },
+            {
+              "name": "VerifyTitleListOfApplications",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738253157705,
+              "stop": 1738253157764
+            },
+            {
+              "name": "VerifyTitleTemplatesPage",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738253161109,
+              "stop": 1738253161186
+            },
+            {
+              "name": "VerifyTitlePaymentSettingsPage",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738253164475,
+              "stop": 1738253164619
+            },
+            {
+              "name": "VerifyTitleTransactionsPg",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738253167920,
+              "stop": 1738253168855
+            },
+            {
+              "name": "VerifyTitleLeads",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738253171592,
+              "stop": 1738253171697
+            },
+            {
+              "name": "VerifyTitleListOfOwnersPg",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738253175063,
+              "stop": 1738253175150
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1738253144061,
+          "stop": 1738253186845
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "e49bbc63b2ae46d0b427780edfc8947e-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1738253113912,
+      "stop": 1738253189633
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1738253113911,
+  "stop": 1738253189644
+}

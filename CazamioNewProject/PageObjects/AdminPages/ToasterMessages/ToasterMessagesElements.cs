@@ -18,6 +18,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Payment methods selected, Click save to confirm']")]
         public IWebElement MessagePaymentMethodsSelected;
 
+        //Appeared if an image of a logo marketplace has been changed
+        [FindsBy(How = How.XPath, Using = "//span[text()= 'Logo image was changed']")]
+        public IWebElement MessageChangeImageLogoLandlordSuccess;
+
+        //Appeared if an image of a user avatar has been changed
+        [FindsBy(How = How.XPath, Using = "//span[text()= 'Profile image was changed']")]
+        public IWebElement MessageChangeImageAvatarUserSuccess;
+
+        //Appeared if an image of a user avatar has been removed
+        [FindsBy(How = How.XPath, Using = "//span[text()= 'Profile image was removed']")]
+        public IWebElement MessageRemoveImageAvatarUserSuccess;
+
         #endregion
     }
 }

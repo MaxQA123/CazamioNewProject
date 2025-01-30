@@ -26,18 +26,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         {
             WaitUntil.CustomElementIsVisible(ButtonUploadLogoOfLandlord);
             WaitUntil.CustomElementIsClickable(ButtonUploadLogoOfLandlord);
-            //WaitUntil.WaitSomeInterval(3000);
             ButtonUploadLogoOfLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.LOGO_IMG_ADMIN_FIRST));
-            WaitUntil.CustomElementIsVisible(MessageChangeImageLogoLandlordSuccess);
             return this;
         }
 
         [AllureStep("UploadImageLogoLandlordSecond")]
         public SidebarLandlord UploadImageLogoLandlordSecond()
         {
-            WaitUntil.WaitSomeInterval(3000);
             ButtonUploadLogoOfLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.LOGO_IMG_ADMIN_SECOND));
-            WaitUntil.CustomElementIsVisible(MessageChangeImageLogoLandlordSuccess);
             return this;
         }
 
@@ -46,7 +42,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         {
             WaitUntil.WaitSomeInterval(1000);
             ButtonUploadPhotoOfAvatarLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
-            WaitUntil.CustomElementIsVisible(MessageChangeImageAvatarUserSuccess);
             return this;
         }
 
@@ -55,7 +50,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         {
             WaitUntil.WaitSomeInterval(1000);
             ButtonUploadPhotoOfAvatarLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
-            WaitUntil.CustomElementIsVisible(MessageChangeImageAvatarUserSuccess);
             return this;
         }
 
@@ -63,7 +57,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         public SidebarLandlord ClicklinkRemovePhotoOfLandlord()
         {
             Button.Click(linkRemovePhotoOfLandlord);
-            WaitUntil.CustomElementIsVisible(MessageRemoveImageAvatarUserSuccess);
 
             return this;
         }

@@ -81,71 +81,8 @@ namespace MarketplaceAdminGuiTest
             #region Test
 
             Pages.SidebarLandlord
-                .UploadImageLogoLandlordFirst()
-                .VerifyChangingLogoImageLandlord()
-                .UploadImageLogoLandlordSecond()
-                .VerifyChangingLogoImageLandlord()
-                .UploadImageAvatarUserLandlordFirst()
-                .VerifyChangingAvatarImageLandlord()
-                .UploadImageAvatarUserLandlordSecond()
-                .VerifyChangingAvatarImageLandlord()
-                .ClicklinkRemovePhotoOfLandlord()
-                .VerifyRewmoveAvatarImageLandlord();
-            //    .ClickButtonDashboardSidebar();
-            //Pages.Dashboard
-            //    .VerifyTitleOfDashboardPg();
-            Pages.SidebarLandlord
-                .ClickButtonBuildings();
-            Pages.ListOfBuildings
-                .VerifyTitleListOfBuildings();
-            Pages.SidebarLandlord
-                .ClickButtonApartments();
-            Pages.ListOfApartments
-                .VerifyTitleListOfApartments();
-            Pages.SidebarLandlord
-                .ClickButtonApplications();
-            Pages.ListOfApplications
-                .VerifyTitleListOfApplications();
-            Pages.SidebarLandlord
-                .ClickButtonBrokers();
-            Pages.ListOfBrokers
-                .VerifyTitleListOfBrokersPg();
-            Pages.SidebarLandlord
-                .ClickButtonLeaseSignDocuments();
-            Pages.Templates
-                .VerifyTitleTemplatesPage();
-            Pages.SidebarLandlord
-                .ClickButtonPaymentSettings();
-            Pages.PaymentSettings
-                .VerifyTitlePaymentSettingsPage();
-            Pages.SidebarLandlord
-                .ClickButtonTransactions();
-            Pages.ListOfTransactions
-                .VerifyTitleTransactionsPg();
-            Pages.SidebarLandlord
-               .ClickButtonLeads();
-            Pages.ListOfLeads
-                .VerifyTitleLeads();
-            Pages.SidebarLandlord
-                .ClickButtonCommissions();
-            Pages.ListOfCommissions
-                .VerifyTitleListOfCommissions();
-            Pages.SidebarLandlord
-                .ClickButtonAgents();
-            Pages.ListOfAgents
-                .VerifyTitleAgentsPg();
-            Pages.SidebarLandlord
-                .ClickButtonOwners();
-            Pages.ListOfOwners
-                .VerifyTitleListOfOwnersPg();
-            Pages.SidebarLandlord
-               .ClickButtonMarketplace();
-            Pages.Marketplace
-                .VerifyTitleMarketplacePg();
-            Pages.SidebarLandlord
-                .ClickButtonReports();
-            Pages.Reports
-                .VerifyTitleReportsPage();
+                .ChangingImagesUserAndLogoMarketplaceOfMA()
+                .ClickingAllTabsOfMA();
             Pages.AreYouSureLogOutLandlordMdlWndw
                 .MakeLogOut();
             Pages.LogInLandlord

@@ -20,19 +20,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [FindsBy(How = How.XPath, Using = "//div[@class = 'user-role']")]
         public IWebElement UserNameRoleOfSidebar;
 
-        #region MessageSuccessfully
-
-        [FindsBy(How = How.XPath, Using = "//span[text()= 'Logo image was changed']")]
-        public IWebElement MessageChangeImageLogoLandlordSuccess;
-
-        [FindsBy(How = How.XPath, Using = "//span[text()= 'Profile image was changed']")]
-        public IWebElement MessageChangeImageAvatarUserSuccess;
-
-        [FindsBy(How = How.XPath, Using = "//span[text()= 'Profile image was removed']")]
-        public IWebElement MessageRemoveImageAvatarUserSuccess;
-
-        #endregion
-
         #region ButtonsTabs
 
         [FindsBy(How = How.XPath, Using = "//a[@href= '/dashboard']")]

@@ -1,0 +1,405 @@
+{
+  "uuid": "b24a85b3-b33c-48cc-b1b3-d222473a4827-tr-0-1002",
+  "historyId": "BrokerGuiTests.TestsBaseGui.VerifySidebar",
+  "fullName": "BrokerGuiTests.TestsBaseGui.VerifySidebar",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "BrokerGuiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifySidebar"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "VerifySidebar"
+    }
+  ],
+  "links": [],
+  "name": "VerifySidebar",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.NoSuchElementException : Could not find element by: By.XPath: //a[@href= '/commissions']; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception",
+    "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.SendKeys(String text)\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfBroker_100663493_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarSteps.cs:line 189\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfBroker_100663493_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfBroker_100663493_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.ClickingAllTabsOfBroker() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarActions.cs:line 130\r\n   at BrokerGuiTests.TestsBaseGui.VerifySidebar() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 83"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "VerifySidebar",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.NoSuchElementException : Could not find element by: By.XPath: //a[@href= '/commissions']; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception",
+        "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.SendKeys(String text)\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfBroker_100663493_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarSteps.cs:line 189\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfBroker_100663493_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfBroker_100663493_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.ClickingAllTabsOfBroker() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarActions.cs:line 130\r\n   at BrokerGuiTests.TestsBaseGui.VerifySidebar() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 83"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "EnterEmailPasswordAsBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1738252932418,
+          "stop": 1738252933742
+        },
+        {
+          "name": "ClickIconShow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1738252933742,
+          "stop": 1738252934449
+        },
+        {
+          "name": "ClickButtonLetsGo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1738252934449,
+          "stop": 1738252935327
+        },
+        {
+          "name": "GetUserNameFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1738252935350,
+          "stop": 1738252937007
+        },
+        {
+          "name": "GetUserNameRoleFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1738252937014,
+          "stop": 1738252937155
+        },
+        {
+          "name": "VerifyBrokerUserNameAndRole",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Leoautotest Feabroker"
+            },
+            {
+              "name": "String",
+              "value": "Broker"
+            }
+          ],
+          "start": 1738252937161,
+          "stop": 1738252937712
+        },
+        {
+          "name": "ChangingImagesUserAndLogoMarketplaceOfBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyChangingAvatarImageLandlord",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738252949967,
+              "stop": 1738252951386
+            },
+            {
+              "name": "VerifyChangingAvatarImageLandlord",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738252951798,
+              "stop": 1738252951932
+            },
+            {
+              "name": "VerifyRewmoveAvatarImageLandlord",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738252952705,
+              "stop": 1738252953207
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1738252939738,
+          "stop": 1738252953207
+        },
+        {
+          "name": "ClickButtonDashboard",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1738252953207,
+          "stop": 1738252955046
+        },
+        {
+          "name": "ClickingAllTabsOfBroker",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Could not find element by: By.XPath: //a[@href= '/commissions']; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception",
+            "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.SendKeys(String text)\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfBroker_100663493_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarSteps.cs:line 189\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfBroker_100663493_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyTitleOfDashboardPg",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738252956725,
+              "stop": 1738252956784
+            },
+            {
+              "name": "VerifyTitleListOfBuildings",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738252962515,
+              "stop": 1738252963131
+            },
+            {
+              "name": "VerifyTitleListOfApartments",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738252965862,
+              "stop": 1738252965944
+            },
+            {
+              "name": "VerifyTitleListOfApplications",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738252969240,
+              "stop": 1738252969300
+            },
+            {
+              "name": "VerifyTitleTemplatesPage",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738252972652,
+              "stop": 1738252972711
+            },
+            {
+              "name": "VerifyTitlePaymentSettingsPage",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738252975998,
+              "stop": 1738252976068
+            },
+            {
+              "name": "VerifyTitleTransactionsPg",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738252979339,
+              "stop": 1738252980082
+            },
+            {
+              "name": "VerifyTitleLeads",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1738252982816,
+              "stop": 1738252982939
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1738252955047,
+          "stop": 1738252984062
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "e9fe24680e4b441c8f6d230ed9d38257-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1738252924830,
+      "stop": 1738252986925
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1738252924829,
+  "stop": 1738252986936
+}
