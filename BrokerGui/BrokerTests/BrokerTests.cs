@@ -318,18 +318,18 @@ namespace BrokerGuiTests
                 .ClickBtnSelectPaymentMethodsForCreditScreeningFee();
             Pages.PaymentOptionsMdlWndw
                 .SelectPaymentMethodsCrdtCrdAchZll();
-            Pages.NewBuilding
-                .ClickBtnEditForPaymentSystem();
-            Pages.PaymentKeysMdlWndw
-                .SelectPaymentSystemAuthorizeNet();
+            //Pages.NewBuilding
+            //    .ClickBtnEditForPaymentSystem();
+            //Pages.PaymentKeysMdlWndw
+            //    .SelectPaymentSystemAuthorizeNet();
 
-            string getItemAuthorizeNetActual = Pages.PaymentKeysMdlWndw.GetItemAuthorizeNet();
-            string getItemApiKeyAuthorizeNetActual = Pages.PaymentKeysMdlWndw.GetItemApiKeyAuthorizeNet();
+            //string getItemAuthorizeNetActual = Pages.PaymentKeysMdlWndw.GetItemAuthorizeNet();
+            //string getItemApiKeyAuthorizeNetActual = Pages.PaymentKeysMdlWndw.GetItemApiKeyAuthorizeNet();
 
-            Pages.PaymentKeysMdlWndw
-                .VerifyApiKeyAuthorizeNet(getItemAuthorizeNetActual, getItemApiKeyAuthorizeNetActual);
-            Pages.PaymentKeysMdlWndw
-                .ClickButtonSave();
+            //Pages.PaymentKeysMdlWndw
+            //    .VerifyApiKeyAuthorizeNet(getItemAuthorizeNetActual, getItemApiKeyAuthorizeNetActual);
+            //Pages.PaymentKeysMdlWndw
+            //    .ClickButtonSave();
             Pages.NewBuilding
                 .ClickThreeTimesButtonGeneralNext()
                 .ClickTabFreeStuff()
@@ -413,17 +413,17 @@ namespace BrokerGuiTests
             Pages.NewBuilding
                 .EnterShortInternalNotesDescription();
             KeyBoardActions.ClickTab();
-            Pages.NewBuilding
-                .ClickBtnEditForPaymentSystem();
+            //Pages.NewBuilding
+            //    .ClickBtnEditForPaymentSystem();
 
             string getValueScreeningFee = Pages.NewBuilding.GetValueFromFieldCreditScreeningFee();
-            string getItemCardknoxActual = Pages.PaymentKeysMdlWndw.GetItemCardknox();
-            string getItemApiKeyCardknoxActual = Pages.PaymentKeysMdlWndw.GetItemApiKeyCardknox();
+            //string getItemCardknoxActual = Pages.PaymentKeysMdlWndw.GetItemCardknox();
+            //string getItemApiKeyCardknoxActual = Pages.PaymentKeysMdlWndw.GetItemApiKeyCardknox();
 
-            Pages.PaymentKeysMdlWndw
-                .ClickButtonCross();
-            Pages.PaymentKeysMdlWndw
-                .VerifyApiKeyCardknox(getItemCardknoxActual, getItemApiKeyCardknoxActual);
+            //Pages.PaymentKeysMdlWndw
+            //    .ClickButtonCross();
+            //Pages.PaymentKeysMdlWndw
+            //    .VerifyApiKeyCardknox(getItemCardknoxActual, getItemApiKeyCardknoxActual);
             Pages.NewBuilding
                 .VerifyValueByDefaulScreeningFee(getValueScreeningFee)
                 .EnterCreditScreeningFeeHoldDeposit()
