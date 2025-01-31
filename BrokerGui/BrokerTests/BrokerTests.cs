@@ -81,7 +81,7 @@ namespace BrokerGuiTests
             #region Test
 
             Pages.SidebarLandlord
-                .ChangingImagesUserAndLogoMarketplaceOfBroker()
+                .ChangingImageUserOfBroker()
                 .ClickingAllTabsOfBroker();
             Pages.AreYouSureLogOutLandlordMdlWndw
                 .MakeLogOut();

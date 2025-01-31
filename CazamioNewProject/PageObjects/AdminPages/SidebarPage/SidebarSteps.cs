@@ -29,8 +29,44 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("ChangingImagesUserAndLogoMarketplaceOfBroker")]
-        public SidebarLandlord ChangingImagesUserAndLogoMarketplaceOfBroker()
+        [AllureStep("ChangingImageUserOfBroker")]
+        public SidebarLandlord ChangingImageUserOfBroker()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonUploadPhotoOfAvatarLandlord);
+            WaitUntil.CustomElementIsClickable(ButtonUploadPhotoOfAvatarLandlord);
+            ButtonUploadPhotoOfAvatarLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
+            Pages.ToasterMessages
+               .VerifyChangingAvatarImageLandlord();
+            ButtonUploadPhotoOfAvatarLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
+            Pages.ToasterMessages
+                .VerifyChangingAvatarImageLandlord();
+            Button.Click(linkRemovePhotoOfLandlord);
+            Pages.ToasterMessages
+                .VerifyRewmoveAvatarImageLandlord();
+
+            return this;
+        }
+
+        [AllureStep("ChangingImageUserOfAgentBroker")]
+        public SidebarLandlord ChangingImageUserOfAgentBroker()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonUploadPhotoOfAvatarLandlord);
+            WaitUntil.CustomElementIsClickable(ButtonUploadPhotoOfAvatarLandlord);
+            ButtonUploadPhotoOfAvatarLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
+            Pages.ToasterMessages
+               .VerifyChangingAvatarImageLandlord();
+            ButtonUploadPhotoOfAvatarLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
+            Pages.ToasterMessages
+                .VerifyChangingAvatarImageLandlord();
+            Button.Click(linkRemovePhotoOfLandlord);
+            Pages.ToasterMessages
+                .VerifyRewmoveAvatarImageLandlord();
+
+            return this;
+        }
+
+        [AllureStep("ChangingImageUserOfAgent")]
+        public SidebarLandlord ChangingImageUserOfAgent()
         {
             WaitUntil.CustomElementIsVisible(ButtonUploadPhotoOfAvatarLandlord);
             WaitUntil.CustomElementIsClickable(ButtonUploadPhotoOfAvatarLandlord);
@@ -184,6 +220,76 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             WaitUntil.WaitSomeInterval(1000);
             Pages.ListOfOwners
                 .VerifyTitleListOfOwnersPg();
+
+            return this;
+        }
+
+        [AllureStep("ClickingAllTabsOfAgentBroker")]
+        public SidebarLandlord ClickingAllTabsOfAgentBroker()
+        {
+            WaitUntil.WaitSomeInterval(5000);
+            Button.Click(ButtonBuildingsSidebar);
+            Pages.ListOfBuildings
+                .VerifyTitleListOfBuildings();
+            WaitUntil.WaitSomeInterval(2000);
+            Button.Click(ButtonApartmentsSidebar);
+            Pages.ListOfApartments
+                .VerifyTitleListOfApartments();
+            WaitUntil.WaitSomeInterval(1000);
+            Button.Click(ButtonApplicationsSidebar);
+            WaitUntil.WaitSomeInterval(1000);
+            Pages.ListOfApplications
+                .VerifyTitleListOfApplications();
+            WaitUntil.WaitSomeInterval(1000);           
+            Button.Click(ButtonTransactionsSidebar);
+            WaitUntil.WaitSomeInterval(1000);
+            Pages.ListOfTransactions
+                .VerifyTitleTransactionsPg();
+            WaitUntil.WaitSomeInterval(1000);
+            Button.Click(ButtonLeadsSidebar);
+            WaitUntil.WaitSomeInterval(1000);
+            Pages.ListOfLeads
+                .VerifyTitleLeads();
+            WaitUntil.WaitSomeInterval(1000);
+            Button.Click(ButtonCommissionsSidebar);
+            WaitUntil.WaitSomeInterval(1000);
+            Pages.ListOfCommissions
+                .VerifyTitleListOfCommissions();
+
+            return this;
+        }
+
+        [AllureStep("ClickingAllTabsOfAgent")]
+        public SidebarLandlord ClickingAllTabsOfAgent()
+        {
+            WaitUntil.WaitSomeInterval(5000);
+            Button.Click(ButtonBuildingsSidebar);
+            Pages.ListOfBuildings
+                .VerifyTitleListOfBuildings();
+            WaitUntil.WaitSomeInterval(2000);
+            Button.Click(ButtonApartmentsSidebar);
+            Pages.ListOfApartments
+                .VerifyTitleListOfApartments();
+            WaitUntil.WaitSomeInterval(1000);
+            Button.Click(ButtonApplicationsSidebar);
+            WaitUntil.WaitSomeInterval(1000);
+            Pages.ListOfApplications
+                .VerifyTitleListOfApplications();
+            WaitUntil.WaitSomeInterval(1000);
+            Button.Click(ButtonTransactionsSidebar);
+            WaitUntil.WaitSomeInterval(1000);
+            Pages.ListOfTransactions
+                .VerifyTitleTransactionsPg();
+            WaitUntil.WaitSomeInterval(1000);
+            Button.Click(ButtonLeadsSidebar);
+            WaitUntil.WaitSomeInterval(1000);
+            Pages.ListOfLeads
+                .VerifyTitleLeads();
+            WaitUntil.WaitSomeInterval(1000);
+            Button.Click(ButtonCommissionsSidebar);
+            WaitUntil.WaitSomeInterval(1000);
+            Pages.ListOfCommissions
+                .VerifyTitleListOfCommissions();
 
             return this;
         }

@@ -21,7 +21,7 @@ namespace AgentBrokerGui
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Agent Broker")]
+        [AllureSuite("Agent-Broker")]
         [AllureSubSuite("LogIn")]
 
         public void LogIn()
@@ -50,7 +50,7 @@ namespace AgentBrokerGui
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Agent Broker")]
+        [AllureSuite("Agent-Broker")]
         [AllureSubSuite("VerifySidebar")]
 
         public void VerifySidebar()
@@ -73,39 +73,8 @@ namespace AgentBrokerGui
             #region Test
 
             Pages.SidebarLandlord
-                .UploadImageAvatarUserLandlordFirst()
-                .VerifyChangingAvatarImageLandlord()
-                .UploadImageAvatarUserLandlordSecond()
-                .VerifyChangingAvatarImageLandlord()
-                .ClicklinkRemovePhotoOfLandlord()
-                .VerifyRewmoveAvatarImageLandlord();
-            //.ClickButtonDashboardSidebar();
-            //Pages.Dashboard
-            //    .VerifyTitleOfDashboardPg();
-            Pages.SidebarLandlord
-                .ClickButtonBuildings();
-            Pages.ListOfBuildings
-                .VerifyTitleListOfBuildings();
-            Pages.SidebarLandlord
-                .ClickButtonApartments();
-            Pages.ListOfApartments
-                .VerifyTitleListOfApartments();
-            Pages.SidebarLandlord
-                .ClickButtonApplications();
-            Pages.ListOfApplications
-                .VerifyTitleListOfApplications();
-            Pages.SidebarLandlord
-                .ClickButtonTransactions();
-            Pages.ListOfTransactions
-                .VerifyTitleTransactionsPg();
-            Pages.SidebarLandlord
-                .ClickButtonLeads();
-            Pages.ListOfLeads
-                .VerifyTitleLeads();
-            Pages.SidebarLandlord
-                .ClickButtonCommissions();
-            Pages.ListOfCommissions
-                .VerifyTitleListOfCommissions();
+                .ChangingImageUserOfAgentBroker()
+                .ClickingAllTabsOfAgentBroker();
             Pages.AreYouSureLogOutLandlordMdlWndw
                 .MakeLogOut();
             Pages.LogInLandlord
@@ -121,7 +90,7 @@ namespace AgentBrokerGui
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Broker")]
+        [AllureSuite("Agent-Broker")]
         [AllureSubSuite("AddBuildingAssignedAgentBroker")]
 
         public void AddBuildingAssignedAgentBroker()
@@ -219,7 +188,7 @@ namespace AgentBrokerGui
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Broker")]
+        [AllureSuite("Agent-Broker")]
         [AllureSubSuite("AddBuildingAssignedAgentBroker")]
 
         public void AddApartmentAssignedAgentBroker()
@@ -307,7 +276,7 @@ namespace AgentBrokerGui
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Broker")]
+        [AllureSuite("Agent-Broker")]
         [AllureSubSuite("AddApartmentAssignedAgBr")]
 
         public void AddApartmentAssignedAgBr()

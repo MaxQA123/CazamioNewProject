@@ -71,45 +71,12 @@ namespace AgentGuiTests
             #region Test
 
             Pages.SidebarLandlord
-                .UploadImageAvatarUserLandlordFirst()
-                .VerifyChangingAvatarImageLandlord()
-                .UploadImageAvatarUserLandlordSecond()
-                .VerifyChangingAvatarImageLandlord()
-                .ClicklinkRemovePhotoOfLandlord()
-                .VerifyRewmoveAvatarImageLandlord();
-            //.ClickButtonDashboardSidebar();
-            //Pages.Dashboard
-            //    .VerifyTitleOfDashboardPg();
-            Pages.SidebarLandlord
-                .ClickButtonBuildings();
-            Pages.ListOfBuildings
-                .VerifyTitleListOfBuildings();
-            Pages.SidebarLandlord
-                .ClickButtonApartments();
-            Pages.ListOfApartments
-                .VerifyTitleListOfApartments();
-            Pages.SidebarLandlord
-                .ClickButtonApplications();
-            Pages.ListOfApplications
-                .VerifyTitleListOfApplications();
-            Pages.SidebarLandlord
-                .ClickButtonTransactions();
-            Pages.ListOfTransactions
-                .VerifyTitleTransactionsPg();
-            Pages.SidebarLandlord
-                .ClickButtonLeads();
-            Pages.ListOfLeads
-                .VerifyTitleLeads();
-            Pages.SidebarLandlord
-                .ClickButtonCommissions();
-            Pages.ListOfCommissions
-                .VerifyTitleListOfCommissions();
+                .ChangingImageUserOfAgent()
+                .ClickingAllTabsOfAgent();
             Pages.AreYouSureLogOutLandlordMdlWndw
                 .MakeLogOut();
             Pages.LogInLandlord
                 .VerifyTitle();
-
-            WaitUntil.WaitSomeInterval(2000);
 
             #endregion
         }
