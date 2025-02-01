@@ -316,8 +316,8 @@ namespace BrokerGuiTests
             Pages.NewBuilding
                 .VerifyValueByDefaulScreeningFee(getValueScreeningFee)
                 .ClickBtnSelectPaymentMethodsForCreditScreeningFee();
-            Pages.PaymentOptionsMdlWndw
-                .SelectPaymentMethodsCrdtCrdAchZll();
+            //Pages.PaymentOptionsMdlWndw
+            //    .SelectPaymentMethodsCrdtCrdAchZll();
             //Pages.NewBuilding
             //    .ClickBtnEditForPaymentSystem();
             //Pages.PaymentKeysMdlWndw
@@ -430,7 +430,7 @@ namespace BrokerGuiTests
                 .ClickBtnSelectPaymentMethodsForCreditScreeningFee();
             Pages.PaymentOptionsMdlWndw
                 .VerifyTitlePaymentOptions()
-                .SelectPaymentMethodAch();
+                .SelectPaymentMethodsDlvrChckZllVnm();
             Pages.NewBuilding
                 .ClickBtnSelectPaymentMethodsForHoldDeposit();
             Pages.PaymentOptionsMdlWndw

@@ -138,7 +138,7 @@ namespace AgentBrokerGui
                 .VerifyValueByDefaulScreeningFee(getValueScreeningFee)
                 .ClickBtnSelectPaymentMethodsForCreditScreeningFee();
             Pages.PaymentOptionsMdlWndw
-                .SelectCrdtCrdDlvrChckZlVnmForHoldBuilding();
+                .SelectCrdtCrdAchForHoldBuilding();
             //Pages.NewBuilding
             //    .ClickBtnEditForPaymentSystem();
             //Pages.PaymentKeysMdlWndw

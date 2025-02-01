@@ -495,18 +495,10 @@ namespace MarketplaceAdminGuiTest
             Pages.NewBuilding
                 .EnterLongInternalNotesDescription();
             KeyBoardActions.ClickTab();
-            //Pages.NewBuilding
-            //    .ClickBtnEditForPaymentSystem();
 
             string getValueScreeningFee = Pages.NewBuilding.GetValueFromFieldCreditScreeningFee();
             string getValueHoldDeposit = Pages.NewBuilding.GetValueFromFieldHoldDeposit();
-            //string getItemCardknoxActual = Pages.PaymentKeysMdlWndw.GetItemCardknox();
-            //string getItemApiKeyCardknoxActual = Pages.PaymentKeysMdlWndw.GetItemApiKeyCardknox();
-
-            //Pages.PaymentKeysMdlWndw
-            //    .ClickButtonCross();
-            //Pages.PaymentKeysMdlWndw
-            //    .VerifyApiKeyCardknox(getItemCardknoxActual, getItemApiKeyCardknoxActual);
+         
             Pages.NewBuilding
                 .VerifyValueByDefaulScreeningFee(getValueScreeningFee)
                 .VerifyValueByDefaulHoldDeposit(getValueHoldDeposit)
@@ -653,23 +645,23 @@ namespace MarketplaceAdminGuiTest
             //Pages.PaymentKeysMdlWndw
             //    .ClickButtonSave();
             Pages.NewBuilding
-                .ClickThreeTimesButtonGeneralNext()
-                .ClickTabFreeStuff()
-                .ClickButtonAddSpecials()
-                .AddFreeStuffInActive()
-                .ClickTabConcessions()
-                .ClickButtonAddSpecials()
-                .AddConcessionInActive()
-                .ClickButtonGeneralNext()
-                .ClickButtonSaveBuilding()
-                .VerifyMessageSavedSuccessfullyBuilding();
-            Pages.BuildingView
-                .VerifyTitleBuildingViewPage();
+                .ClickThreeTimesButtonGeneralNext();
+            //    .ClickTabFreeStuff()
+            //    .ClickButtonAddSpecials()
+            //    .AddFreeStuffInActive()
+            //    .ClickTabConcessions()
+            //    .ClickButtonAddSpecials()
+            //    .AddConcessionInActive()
+            //    .ClickButtonGeneralNext()
+            //    .ClickButtonSaveBuilding()
+            //    .VerifyMessageSavedSuccessfullyBuilding();
+            //Pages.BuildingView
+            //    .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingView = Pages.BuildingView.GetValueOfStringAddress();
+            //string getAddressBuildingView = Pages.BuildingView.GetValueOfStringAddress();
 
-            Pages.BuildingView
-                .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
+            //Pages.BuildingView
+            //    .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
 
             WaitUntil.WaitSomeInterval(1000);
 

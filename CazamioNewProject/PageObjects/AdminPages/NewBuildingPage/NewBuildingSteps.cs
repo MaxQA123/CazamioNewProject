@@ -500,6 +500,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         [AllureStep("ClickThreeTimesButtonGeneralNext")]
         public NewBuilding ClickThreeTimesButtonGeneralNext()
         {
+            WaitUntil.WaitSomeInterval(3000);
             WaitUntil.CustomElementIsVisible(ButtonGeneralNext);
             WaitUntil.CustomElementIsClickable(ButtonGeneralNext);
             Button.Click(ButtonGeneralNext);
