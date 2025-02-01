@@ -103,11 +103,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ItemVenmo);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputDeliverCheckNoteBuilding, paymentOptions.DeliverCheckNote.ForBuildingScreening);
-            WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputZelleAddressOrPhoneBuilding, paymentOptions.Zelle.ForBuildingScreening);
-            WaitUntil.WaitSomeInterval(100);
-            ButtonForVenmoQrCodeImage.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.IMAGE_FOR_PAYMENT_VENMO_SCREENING));
             Button.Click(ButtonSave);
             Pages.ToasterMessages
                 .VerifyMessagePaymentMethodsSelected();
