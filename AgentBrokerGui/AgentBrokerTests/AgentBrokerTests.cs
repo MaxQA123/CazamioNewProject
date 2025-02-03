@@ -138,19 +138,7 @@ namespace AgentBrokerGui
                 .VerifyValueByDefaulScreeningFee(getValueScreeningFee)
                 .ClickBtnSelectPaymentMethodsForCreditScreeningFee();
             Pages.PaymentOptionsMdlWndw
-                .SelectCrdtCrdAchForHoldBuilding();
-            //Pages.NewBuilding
-            //    .ClickBtnEditForPaymentSystem();
-            //Pages.PaymentKeysMdlWndw
-            //    .SelectPaymentSystemAuthorizeNet();
-
-            //string getItemAuthorizeNetActual = Pages.PaymentKeysMdlWndw.GetItemAuthorizeNet();
-            //string getItemApiKeyAuthorizeNetActual = Pages.PaymentKeysMdlWndw.GetItemApiKeyAuthorizeNet();
-
-            //Pages.PaymentKeysMdlWndw
-            //    .VerifyApiKeyAuthorizeNet(getItemAuthorizeNetActual, getItemApiKeyAuthorizeNetActual);
-            //Pages.PaymentKeysMdlWndw
-            //    .ClickButtonSave();
+                .SelectPaymentMethodAch();
             Pages.NewBuilding
                 .ClickThreeTimesButtonGeneralNext()
                 .ClickTabFreeStuff()

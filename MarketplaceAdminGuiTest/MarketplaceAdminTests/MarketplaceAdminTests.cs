@@ -505,12 +505,12 @@ namespace MarketplaceAdminGuiTest
                 .ClickBtnSelectPaymentMethodsForCreditScreeningFee();
             Pages.PaymentOptionsMdlWndw
                 .VerifyTitlePaymentOptions()
-                .SelectScreeningFeeAllPaymentMethods();
+                .SelectAllPaymentMethods();
             Pages.NewBuilding
                 .ClickBtnSelectPaymentMethodsForHoldDeposit();
             Pages.PaymentOptionsMdlWndw
                 .VerifyTitlePaymentOptions()
-                .SelectHoldDepositAllPaymentMethods();
+                .SelectAllPaymentMethods();
             Pages.NewBuilding
                 .ClickButtonSelectPetPolicies();
             Pages.PetPoliciesMdlWndw
@@ -631,39 +631,27 @@ namespace MarketplaceAdminGuiTest
                 .VerifyValueByDefaulScreeningFee(getValueScreeningFee)
                 .ClickBtnSelectPaymentMethodsForCreditScreeningFee();
             Pages.PaymentOptionsMdlWndw
-                .SelectPaymentMethodsCrdtCrdAchZll();
-            //Pages.NewBuilding
-            //    .ClickBtnEditForPaymentSystem();
-            //Pages.PaymentKeysMdlWndw
-            //    .SelectPaymentSystemAuthorizeNet();
-
-            //string getItemAuthorizeNetActual = Pages.PaymentKeysMdlWndw.GetItemAuthorizeNet();
-            //string getItemApiKeyAuthorizeNetActual = Pages.PaymentKeysMdlWndw.GetItemApiKeyAuthorizeNet();
-
-            //Pages.PaymentKeysMdlWndw
-            //    .VerifyApiKeyAuthorizeNet(getItemAuthorizeNetActual, getItemApiKeyAuthorizeNetActual);
-            //Pages.PaymentKeysMdlWndw
-            //    .ClickButtonSave();
+                .SelectPaymentMethodsAchZll();
             Pages.NewBuilding
-                .ClickThreeTimesButtonGeneralNext();
-            //    .ClickTabFreeStuff()
-            //    .ClickButtonAddSpecials()
-            //    .AddFreeStuffInActive()
-            //    .ClickTabConcessions()
-            //    .ClickButtonAddSpecials()
-            //    .AddConcessionInActive()
-            //    .ClickButtonGeneralNext()
-            //    .ClickButtonSaveBuilding()
-            //    .VerifyMessageSavedSuccessfullyBuilding();
-            //Pages.BuildingView
-            //    .VerifyTitleBuildingViewPage();
+                .ClickThreeTimesButtonGeneralNext()
+                .ClickTabFreeStuff()
+                .ClickButtonAddSpecials()
+                .AddFreeStuffInActive()
+                .ClickTabConcessions()
+                .ClickButtonAddSpecials()
+                .AddConcessionInActive()
+                .ClickButtonGeneralNext()
+                .ClickButtonSaveBuilding()
+                .VerifyMessageSavedSuccessfullyBuilding();
+            Pages.BuildingView
+                .VerifyTitleBuildingViewPage();
 
-            //string getAddressBuildingView = Pages.BuildingView.GetValueOfStringAddress();
+            string getAddressBuildingView = Pages.BuildingView.GetValueOfStringAddress();
 
-            //Pages.BuildingView
-            //    .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
+            Pages.BuildingView
+                .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
 
-            WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.WaitSomeInterval(5000);
 
             #endregion
 
@@ -876,7 +864,7 @@ namespace MarketplaceAdminGuiTest
                 .SelectApartmentTypeSingleFamily()
                 .ClickButtonPaymentMethods();
             Pages.PaymentOptionsMdlWndw
-                .SelectAllPaymentMethodsWithoutAchHoldDepositApartment();
+                .SelectPaymentMethodsDlvrChckZllVnm();
             Pages.AddApartments
                 .SetOneYearRentalTerms()
                 .ClickTabAmenities()

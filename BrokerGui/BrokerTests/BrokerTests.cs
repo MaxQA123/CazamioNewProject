@@ -314,22 +314,7 @@ namespace BrokerGuiTests
             string getValueScreeningFee = Pages.NewBuilding.GetValueFromFieldCreditScreeningFee();
 
             Pages.NewBuilding
-                .VerifyValueByDefaulScreeningFee(getValueScreeningFee)
-                .ClickBtnSelectPaymentMethodsForCreditScreeningFee();
-            //Pages.PaymentOptionsMdlWndw
-            //    .SelectPaymentMethodsCrdtCrdAchZll();
-            //Pages.NewBuilding
-            //    .ClickBtnEditForPaymentSystem();
-            //Pages.PaymentKeysMdlWndw
-            //    .SelectPaymentSystemAuthorizeNet();
-
-            //string getItemAuthorizeNetActual = Pages.PaymentKeysMdlWndw.GetItemAuthorizeNet();
-            //string getItemApiKeyAuthorizeNetActual = Pages.PaymentKeysMdlWndw.GetItemApiKeyAuthorizeNet();
-
-            //Pages.PaymentKeysMdlWndw
-            //    .VerifyApiKeyAuthorizeNet(getItemAuthorizeNetActual, getItemApiKeyAuthorizeNetActual);
-            //Pages.PaymentKeysMdlWndw
-            //    .ClickButtonSave();
+                .VerifyValueByDefaulScreeningFee(getValueScreeningFee);
             Pages.NewBuilding
                 .ClickThreeTimesButtonGeneralNext()
                 .ClickTabFreeStuff()
@@ -354,7 +339,7 @@ namespace BrokerGuiTests
                 .EnterMandatoryFieldsThirtyDashThirtyNineCrownSt()
                 .ClickButtonPaymentMethods();
             Pages.PaymentOptionsMdlWndw
-                .SelectAllPaymentMethodsWithoutAchHoldDepositApartment();
+                .SelectPaymentMethodsDlvrChckZllVnm();
             Pages.AddApartments
                 .ClickTabImages()
                 .ClickButtonSelectVideo()
@@ -413,17 +398,9 @@ namespace BrokerGuiTests
             Pages.NewBuilding
                 .EnterShortInternalNotesDescription();
             KeyBoardActions.ClickTab();
-            //Pages.NewBuilding
-            //    .ClickBtnEditForPaymentSystem();
 
             string getValueScreeningFee = Pages.NewBuilding.GetValueFromFieldCreditScreeningFee();
-            //string getItemCardknoxActual = Pages.PaymentKeysMdlWndw.GetItemCardknox();
-            //string getItemApiKeyCardknoxActual = Pages.PaymentKeysMdlWndw.GetItemApiKeyCardknox();
-
-            //Pages.PaymentKeysMdlWndw
-            //    .ClickButtonCross();
-            //Pages.PaymentKeysMdlWndw
-            //    .VerifyApiKeyCardknox(getItemCardknoxActual, getItemApiKeyCardknoxActual);
+         
             Pages.NewBuilding
                 .VerifyValueByDefaulScreeningFee(getValueScreeningFee)
                 .EnterCreditScreeningFeeHoldDeposit()
@@ -435,7 +412,7 @@ namespace BrokerGuiTests
                 .ClickBtnSelectPaymentMethodsForHoldDeposit();
             Pages.PaymentOptionsMdlWndw
                 .VerifyTitlePaymentOptions()
-                .SelectCrdtCrdDlvrChckZlVnmForHoldBuilding();
+                .SelectPaymentMethodsDlvrChckZllVnm();
             Pages.NewBuilding
                 .ClickButtonSelectPetPolicies();
             Pages.PetPoliciesMdlWndw
@@ -616,7 +593,7 @@ namespace BrokerGuiTests
                 .EnterHoldDepositThreeNumbers()
                 .ClickButtonPaymentMethods();
             Pages.PaymentOptionsMdlWndw
-                .SelectPaymentMethodsCrdtCrdAch();
+                .SelectPaymentMethodAch();
             Pages.AddApartments
                 .EnterTenMonthsRentalTerms()
                 .AddItemSocialSecurityCardRequiredDoc()
