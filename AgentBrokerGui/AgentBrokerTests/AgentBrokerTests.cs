@@ -252,9 +252,9 @@ namespace AgentBrokerGui
             Pages.ToasterMessages
                 .VerifyMessageApartmentsWereSavedSuccessfully();
 
-            #endregion
-
             WaitUntil.WaitSomeInterval(5000);
+
+            #endregion
         }
 
         [Test]
