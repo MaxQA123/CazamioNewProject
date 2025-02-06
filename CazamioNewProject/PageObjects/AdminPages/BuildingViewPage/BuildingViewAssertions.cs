@@ -20,7 +20,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingViewPage
         [AllureStep("VerifyBuildingAddress")]
         public BuildingView VerifyBuildingAddress(string getAddressNewBuildingActual, string getAddressBuildingView)
         {
-            WaitUntil.WaitSomeInterval(100);
+            WaitUntil.CustomElementIsVisible(LoaderHidden);
+            WaitUntil.WaitSomeInterval(3000);
             Assert.AreEqual(getAddressNewBuildingActual, getAddressBuildingView);
 
             return this;

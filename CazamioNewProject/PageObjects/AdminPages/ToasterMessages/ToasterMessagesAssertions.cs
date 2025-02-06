@@ -51,6 +51,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
+        [AllureStep("VerifyMessageSavedSuccessfullyIfCreatedBuilding")]
+        public ToasterMessages VerifyMessageSavedSuccessfullyIfCreatedBuilding()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSavedSuccessfullyIfCreatedBuilding));
+
+            return this;
+        }
+
         #endregion
     }
 }

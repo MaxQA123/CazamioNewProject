@@ -156,8 +156,9 @@ namespace AgentBrokerGui
                 //Add Assertions
                 .ClickButtonGeneralNext()
                 .UploadOneImages()
-                .ClickButtonSaveBuilding()
-                .VerifyMessageSavedSuccessfullyBuilding();
+                .ClickButtonSaveBuilding();
+            Pages.ToasterMessages
+               .VerifyMessageSavedSuccessfullyIfCreatedBuilding();
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 

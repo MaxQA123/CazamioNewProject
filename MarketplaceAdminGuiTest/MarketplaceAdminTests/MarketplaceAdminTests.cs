@@ -451,7 +451,7 @@ namespace MarketplaceAdminGuiTest
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
-        [Retry(2)]
+        [Retry(1)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("MarketplaceAdmin")]
         [AllureSubSuite("AddBuildingAssignedBroker")]
@@ -560,8 +560,9 @@ namespace MarketplaceAdminGuiTest
                 .VerifyNameConcessionAndFreeStuff(getNameConcession, getNameFreeStuff)
                 .ClickTabImages()
                 .UploadFourImages()
-                .ClickButtonSaveBuilding()
-                .VerifyMessageSavedSuccessfullyBuilding();
+                .ClickButtonSaveBuilding();
+            Pages.ToasterMessages
+                .VerifyMessageSavedSuccessfullyIfCreatedBuilding();
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
@@ -641,8 +642,9 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonAddSpecials()
                 .AddConcessionInActive()
                 .ClickButtonGeneralNext()
-                .ClickButtonSaveBuilding()
-                .VerifyMessageSavedSuccessfullyBuilding();
+                .ClickButtonSaveBuilding();
+            Pages.ToasterMessages
+                .VerifyMessageSavedSuccessfullyIfCreatedBuilding();
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 

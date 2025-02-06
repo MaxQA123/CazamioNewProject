@@ -30,6 +30,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
         [FindsBy(How = How.XPath, Using = "//span[text()= 'Profile image was removed']")]
         public IWebElement MessageRemoveImageAvatarUserSuccess;
 
+        //Appeared if created a new building
+        [FindsBy(How = How.XPath, Using = "//span[text() ='Saved successfully!']")]
+        public IWebElement MessageSavedSuccessfullyIfCreatedBuilding;
+
         #endregion
     }
 }

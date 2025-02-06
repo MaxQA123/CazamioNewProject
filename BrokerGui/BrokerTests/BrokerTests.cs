@@ -324,8 +324,9 @@ namespace BrokerGuiTests
                 .ClickButtonAddSpecials()
                 .AddConcessionInActive()
                 .ClickButtonGeneralNext()
-                .ClickButtonSaveBuilding()
-                .VerifyMessageSavedSuccessfullyBuilding();
+                .ClickButtonSaveBuilding();
+            Pages.ToasterMessages
+               .VerifyMessageSavedSuccessfullyIfCreatedBuilding();
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
@@ -345,6 +346,8 @@ namespace BrokerGuiTests
                 .ClickButtonSelectVideo()
                 .UplodImagesFileEnterLinksYouTubeVimeo()
                 .ClickButtonSaveApartment();
+            Pages.ToasterMessages
+                .VerifyMessageApartmentsWereSavedSuccessfully();
 
             #endregion
         }
@@ -462,8 +465,9 @@ namespace BrokerGuiTests
                 .VerifyNameConcessionAndFreeStuff(getNameConcession, getNameFreeStuff)
                 .ClickTabImages()
                 .UploadFourImages()
-                .ClickButtonSaveBuilding()
-                .VerifyMessageSavedSuccessfullyBuilding();
+                .ClickButtonSaveBuilding();
+            Pages.ToasterMessages
+               .VerifyMessageSavedSuccessfullyIfCreatedBuilding();
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
