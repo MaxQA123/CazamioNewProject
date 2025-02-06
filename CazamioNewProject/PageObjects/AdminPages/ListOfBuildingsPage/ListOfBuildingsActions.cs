@@ -61,6 +61,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
             return this;
         }
 
+        [AllureStep("SearchThirtyDashThirtyNineCrownSt")]
+        public ListOfBuildings SearchThirtyDashThirtyNineCrownSt()
+        {
+            WaitUntil.CustomElementIsVisible(LoaderHidden, 10);
+            WaitUntil.WaitSomeInterval(10000);
+            WaitUntil.CustomElementIsVisible(FieldInputSearch);
+            WaitUntil.CustomElementIsClickable(FieldInputSearch);
+            InputGeneral.InputFunctionWithClear(FieldInputSearch, apartment.BuildingShortAddress.ThirtyDashTrirtyNineCrownSt);
+
+            return this;
+        }
+
         [AllureStep("SearchNineAAlbermaleRd")]
         public ListOfBuildings SearchNineAAlbermaleRd()
         {
@@ -80,6 +92,50 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
             WaitUntil.CustomElementIsVisible(ItemFirstBuildingOnPage);
             WaitUntil.CustomElementIsClickable(ItemFirstBuildingOnPage);
             Button.Click(ItemFirstBuildingOnPage);
+
+            return this;
+        }
+
+        [AllureStep("SelectOneWashingtonSquare")]
+        public ListOfBuildings SelectOneWashingtonSquare()
+        {
+            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.CustomElementIsVisible(ItemOneWashingtonSquare);
+            WaitUntil.CustomElementIsClickable(ItemOneWashingtonSquare);
+            Button.Click(ItemOneWashingtonSquare);
+
+            return this;
+        }
+
+        [AllureStep("SelectNineNineNineEightSaintJohnsonPlace")]
+        public ListOfBuildings SelectNineNineNineEightSaintJohnsonPlace()
+        {
+            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.CustomElementIsVisible(ItemNineNineNineEightSaintJohnsonPlace);
+            WaitUntil.CustomElementIsClickable(ItemNineNineNineEightSaintJohnsonPlace);
+            Button.Click(ItemNineNineNineEightSaintJohnsonPlace);
+
+            return this;
+        }
+
+        [AllureStep("SelectThirtyDashThirtyNineCrownSt")]
+        public ListOfBuildings SelectThirtyDashThirtyNineCrownSt()
+        {
+            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.CustomElementIsVisible(ItemThirtyDashThirtyNineCrownSt);
+            WaitUntil.CustomElementIsClickable(ItemThirtyDashThirtyNineCrownSt);
+            Button.Click(ItemThirtyDashThirtyNineCrownSt);
+
+            return this;
+        }
+
+        [AllureStep("SelectOneOneOneAEastStPerestrian")]
+        public ListOfBuildings SelectOneOneOneAEastStPerestrian()
+        {
+            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.CustomElementIsVisible(ItemOneOneOneAEastStPerestrian);
+            WaitUntil.CustomElementIsClickable(ItemOneOneOneAEastStPerestrian);
+            Button.Click(ItemOneOneOneAEastStPerestrian);
 
             return this;
         }

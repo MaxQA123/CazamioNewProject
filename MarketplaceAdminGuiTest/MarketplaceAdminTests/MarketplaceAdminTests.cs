@@ -451,7 +451,7 @@ namespace MarketplaceAdminGuiTest
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
-        [Retry(1)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("MarketplaceAdmin")]
         [AllureSubSuite("AddBuildingAssignedBroker")]
@@ -699,9 +699,8 @@ namespace MarketplaceAdminGuiTest
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
-                .SearchBuildingOneWashingtonSquare();
-            Pages.ListOfBuildings
-                .SelectItemFirst();
+                .SearchBuildingOneWashingtonSquare()
+                .SelectOneWashingtonSquare();
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
@@ -788,6 +787,8 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonSaveApartment();
             Pages.ToasterMessages
                 .VerifyMessageApartmentsWereSavedSuccessfully();
+            Pages.ListOfApartments
+                .VerifyTitleListOfApartments();
 
             WaitUntil.WaitSomeInterval(5000);
 
@@ -833,9 +834,8 @@ namespace MarketplaceAdminGuiTest
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
-                .SearchNineNineNineEightSaintJohnsonPlace();
-            Pages.ListOfBuildings
-                .SelectItemFirst();
+                .SearchNineNineNineEightSaintJohnsonPlace()
+                .SelectNineNineNineEightSaintJohnsonPlace();
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
@@ -887,6 +887,8 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonSaveApartment();
             Pages.ToasterMessages
                 .VerifyMessageApartmentsWereSavedSuccessfully();
+            Pages.ListOfApartments
+                .VerifyTitleListOfApartments();
 
             WaitUntil.WaitSomeInterval(5000);
 

@@ -210,9 +210,8 @@ namespace AgentBrokerGui
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
-                .SearchOneOneOneAEastStPerestrian();
-            Pages.ListOfBuildings
-                .SelectItemFirst();
+                .SearchOneOneOneAEastStPerestrian()
+                .SelectOneOneOneAEastStPerestrian();
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
@@ -252,6 +251,8 @@ namespace AgentBrokerGui
                 .ClickButtonSaveApartment();
             Pages.ToasterMessages
                 .VerifyMessageApartmentsWereSavedSuccessfully();
+            Pages.ListOfApartments
+               .VerifyTitleListOfApartments();
 
             WaitUntil.WaitSomeInterval(5000);
 
@@ -298,9 +299,8 @@ namespace AgentBrokerGui
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
-                .SearchOneOneOneAEastStPerestrian();
-            Pages.ListOfBuildings
-                .SelectItemFirst();
+                .SearchOneOneOneAEastStPerestrian()
+                .SelectOneOneOneAEastStPerestrian();
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
 
@@ -343,10 +343,12 @@ namespace AgentBrokerGui
                 .ClickButtonSaveApartment();
             Pages.ToasterMessages
                 .VerifyMessageApartmentsWereSavedSuccessfully();
-
-            #endregion
+            Pages.ListOfApartments
+               .VerifyTitleListOfApartments();
 
             WaitUntil.WaitSomeInterval(5000);
+
+            #endregion
         }
     }
 }

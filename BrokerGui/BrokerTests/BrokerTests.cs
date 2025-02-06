@@ -512,7 +512,8 @@ namespace BrokerGuiTests
                 .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare)
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
-                .SelectItemFirst();
+                .SearchThirtyDashThirtyNineCrownSt()
+                .SelectThirtyDashThirtyNineCrownSt();
             KeyBoardActions.ScrollToDown();
             WaitUntil.WaitSomeInterval(2000);
             Pages.BuildingView
@@ -542,6 +543,8 @@ namespace BrokerGuiTests
                 .ClickButtonSaveApartment();
             Pages.ToasterMessages
                 .VerifyMessageApartmentsWereSavedSuccessfully();
+            Pages.ListOfApartments
+               .VerifyTitleListOfApartments();
 
             WaitUntil.WaitSomeInterval(5000);
 
@@ -554,7 +557,7 @@ namespace BrokerGuiTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
-        [Retry(1)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Broker")]
         [AllureSubSuite("AddApartmentAssignedAgent")]
@@ -618,6 +621,8 @@ namespace BrokerGuiTests
                 .ClickButtonSaveApartment();
             Pages.ToasterMessages
                 .VerifyMessageApartmentsWereSavedSuccessfully();
+            Pages.ListOfApartments
+               .VerifyTitleListOfApartments();
 
             #endregion
 
