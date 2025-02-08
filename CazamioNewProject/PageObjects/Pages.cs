@@ -1,6 +1,7 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
 using CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage;
+using CazamioNewProject.PageObjects.AdminPages.AddressManagerPage;
 using CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls;
 using CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage;
 using CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw;
@@ -35,6 +36,8 @@ using CazamioNewProject.PageObjects.AdminPages.SelectorVideosMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.SidebarPage;
 using CazamioNewProject.PageObjects.AdminPages.TemplatesPage;
 using CazamioNewProject.PageObjects.AdminPages.ToasterMessages;
+using CazamioNewProject.PageObjects.AdminPages.UsersPage;
+using CazamioNewProject.PageObjects.AdminPages.VisitLogsPage;
 using CazamioNewProject.PageObjects.EmailPutsBoxPage;
 using CazamioNewProject.PageObjects.TenantPages.Header;
 using CazamioNewProject.PageObjects.TenantPages.LogInPage;
@@ -101,6 +104,9 @@ namespace CazamioNewProject.PageObjects
         public static NewBuilding NewBuilding => GetPage<NewBuilding>();
         public static AddApartments AddApartments => GetPage<AddApartments>();
         public static ApartmentView ApartmentView => GetPage<ApartmentView>();
+        public static VisitLogs VisitLogs => GetPage<VisitLogs>();
+        public static AddressManager AddressManager => GetPage<AddressManager>();
+        public static ListOfUsers ListOfUsers => GetPage<ListOfUsers>();
 
         #endregion
 

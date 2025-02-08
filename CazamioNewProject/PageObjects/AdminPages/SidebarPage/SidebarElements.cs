@@ -28,11 +28,23 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [FindsBy(How = How.XPath, Using = "//a[@href= '/buildings']")]
         public IWebElement ButtonBuildingsSidebar;
 
+        [FindsBy(How = How.XPath, Using = "//a[@href= '/administrator/buildings-list']")]
+        public IWebElement ButtonBuildingsSidebarForSuperAdmin;
+
         [FindsBy(How = How.XPath, Using = "//a[@href= '/apartments']")]
         public IWebElement ButtonApartmentsSidebar;
 
+        [FindsBy(How = How.XPath, Using = "//a[@href= '/administrator/apartments-list']")]
+        public IWebElement ButtonApartmentsSidebarForSuperAdmin;
+
         [FindsBy(How = How.XPath, Using = "//a[@href= '/applications']")]
         public IWebElement ButtonApplicationsSidebar;
+
+        [FindsBy(How = How.XPath, Using = "//a[@href= '/administrator/application-list']")]
+        public IWebElement ButtonApplicationsSidebarForSuperAdmin;
+
+        [FindsBy(How = How.XPath, Using = "//a[@href= '/administrator/marketplace-admins-list']")]
+        public IWebElement ButtonMarketplaceAdminsSidebarForSuperAdmin;
 
         [FindsBy(How = How.XPath, Using = "//a[@href= '/brokers']")]
         public IWebElement ButtonBrokersSidebar;
@@ -60,6 +72,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 
         [FindsBy(How = How.XPath, Using = "//a[@href= '/owners']")]
         public IWebElement ButtonOwnersSidebar;
+
+        [FindsBy(How = How.XPath, Using = "//a[@href= '/administrator/owners-list']")]
+        public IWebElement ButtonOwnersSidebarForSuperAdmin;
+
+        [FindsBy(How = How.XPath, Using = "//a[@href= '/administrator/visit-logs']")]
+        public IWebElement ButtonVisitLogsSidebarForSuperAdmin;
+
+        [FindsBy(How = How.XPath, Using = "//a[@href= '/administrator/address-manager']")]
+        public IWebElement ButtonAddressManagerSidebarForSuperAdmin;
+
+        [FindsBy(How = How.XPath, Using = "//a[@href= '/administrator/users']")]
+        public IWebElement ButtonUsersSidebarForSuperAdmin;
 
         [FindsBy(How = How.XPath, Using = "//a[@href= '/marketplace']")]
         public IWebElement ButtonMarketplaceSidebar;

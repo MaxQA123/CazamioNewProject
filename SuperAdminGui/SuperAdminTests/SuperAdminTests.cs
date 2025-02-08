@@ -15,17 +15,21 @@ namespace SuperAdminGui
 
     public class TestsBaseGui : SuperAdminBase
     {
+        //Amount order 2 next must be 3
         [Test]
+        [Order(1)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("SuperAdmin")]
+        [AllureSuite("Super Admin")]
         [AllureSubSuite("LogIn")]
 
         public void LogIn()
         {
+            #region Test
+
             Pages.LogInLandlord
                 .EnterEmailPasswordAsSuperAdmin()
                 .ClickIconShow()
@@ -38,16 +42,19 @@ namespace SuperAdminGui
                 .VerifySuperAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
 
             WaitUntil.WaitSomeInterval(2000);
+
+            #endregion
         }
 
         [Test]
+        [Order(2)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("SuperAdmin")]
-        [AllureSubSuite("CreateMarketplaceAdmin")]
+        [AllureSuite("Super Admin")]
+        [AllureSubSuite("Create Marketplace Admin")]
 
         public void CreateMarketplaceAdmin()
         {
@@ -128,6 +135,48 @@ namespace SuperAdminGui
             MarketplaceAdminsDbRequests.MarketplaceAdmins.DeleteNewlyCreatedMarketplaceAdmin(fullEmailPutsBox, marketplaceId);
             WaitUntil.WaitSomeInterval(100);
             AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(fullEmailPutsBox, marketplaceId);
+
+            #endregion
+        }
+
+        [Test]
+        [Order(1)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Super Admin")]
+        [AllureSubSuite("Verify Sidebar")]
+
+        public void VerifySidebar()
+        {
+            #region Preconditions
+
+            Pages.LogInLandlord
+                .EnterEmailPasswordAsSuperAdmin()
+                .ClickIconShow()
+                .ClickButtonLetsGo();
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifySuperAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+
+            #endregion
+
+            #region Test
+
+            Pages.SidebarLandlord
+                .ChangingImageUserOfSuperAdmin()
+                .ClickingAllTabsOfSuperAdmin();
+            Pages.AreYouSureLogOutLandlordMdlWndw
+                .MakeLogOut();
+            Pages.LogInLandlord
+                .VerifyTitle();
+
+            WaitUntil.WaitSomeInterval(2000);
 
             #endregion
         }

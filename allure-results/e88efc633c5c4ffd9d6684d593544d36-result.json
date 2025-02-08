@@ -1,0 +1,124 @@
+{
+  "uuid": "c2cf699c-11d9-4665-8959-00f79fa4a194-tr-0-1003",
+  "historyId": "SuperAdminGui.TestsBaseGui.VerifySidebar",
+  "fullName": "SuperAdminGui.TestsBaseGui.VerifySidebar",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "SuperAdminGui"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifySidebar"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Super Admin"
+    },
+    {
+      "name": "subSuite",
+      "value": "Verify Sidebar"
+    }
+  ],
+  "links": [],
+  "name": "VerifySidebar",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.ElementNotInteractableException : element not interactable\n  (Session info: chrome=133.0.6943.59)",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 28\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.__a$_around_ClickIconShow_100663612_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\LogInPage\\LogInActions.cs:line 19\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.__a$_around_ClickIconShow_100663612_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.__a$_around_ClickIconShow_100663612_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.ClickIconShow()\r\n   at SuperAdminGui.TestsBaseGui.VerifySidebar() in C:\\Automation\\CazamioNewProject\\SuperAdminGui\\SuperAdminTests\\SuperAdminTests.cs:line 156"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "VerifySidebar",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.ElementNotInteractableException : element not interactable\n  (Session info: chrome=133.0.6943.59)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 28\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.__a$_around_ClickIconShow_100663612_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\LogInPage\\LogInActions.cs:line 19\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.__a$_around_ClickIconShow_100663612_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.__a$_around_ClickIconShow_100663612_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.ClickIconShow()\r\n   at SuperAdminGui.TestsBaseGui.VerifySidebar() in C:\\Automation\\CazamioNewProject\\SuperAdminGui\\SuperAdminTests\\SuperAdminTests.cs:line 156"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "EnterEmailPasswordAsSuperAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739020781134,
+          "stop": 1739020782405
+        },
+        {
+          "name": "ClickIconShow",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "element not interactable\n  (Session info: chrome=133.0.6943.59)",
+            "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 28\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.__a$_around_ClickIconShow_100663612_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\LogInPage\\LogInActions.cs:line 19\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.__a$_around_ClickIconShow_100663612_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739020782406,
+          "stop": 1739020783113
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "ab13a9aa34084da18b459d9b9d3d316a-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1739020773548,
+      "stop": 1739020786211
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1739020773546,
+  "stop": 1739020786229
+}

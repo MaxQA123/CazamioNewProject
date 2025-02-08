@@ -83,6 +83,24 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
+        [AllureStep("ChangingImageUserOfSuperAdmin")]
+        public SidebarLandlord ChangingImageUserOfSuperAdmin()
+        {
+            WaitUntil.CustomElementIsVisible(ButtonUploadPhotoOfAvatarLandlord);
+            WaitUntil.CustomElementIsClickable(ButtonUploadPhotoOfAvatarLandlord);
+            ButtonUploadPhotoOfAvatarLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
+            Pages.ToasterMessages
+               .VerifyChangingAvatarImageLandlord();
+            ButtonUploadPhotoOfAvatarLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
+            Pages.ToasterMessages
+                .VerifyChangingAvatarImageLandlord();
+            Button.Click(linkRemovePhotoOfLandlord);
+            Pages.ToasterMessages
+                .VerifyRewmoveAvatarImageLandlord();
+
+            return this;
+        }
+
         [AllureStep("ClickingAllTabsOfMA")]
         public SidebarLandlord ClickingAllTabsOfMA()
         {
@@ -290,6 +308,48 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             WaitUntil.WaitSomeInterval(1000);
             Pages.ListOfCommissions
                 .VerifyTitleListOfCommissions();
+
+            return this;
+        }
+
+        [AllureStep("ClickingAllTabsOfSuperAdmin")]
+        public SidebarLandlord ClickingAllTabsOfSuperAdmin()
+        {
+            WaitUntil.WaitSomeInterval(500);
+            Button.Click(ButtonApartmentsSidebarForSuperAdmin);
+            Pages.ListOfApartments
+                .VerifyTitleListOfApartments();
+            WaitUntil.WaitSomeInterval(500);
+            Button.Click(ButtonBuildingsSidebarForSuperAdmin);
+            Pages.ListOfBuildings
+                .VerifyTitleListOfBuildings();
+            WaitUntil.WaitSomeInterval(500);
+            Button.Click(ButtonApplicationsSidebarForSuperAdmin);
+            WaitUntil.WaitSomeInterval(500);
+            Pages.ListOfApplications
+                .VerifyTitleListOfApplications();
+            WaitUntil.WaitSomeInterval(500);
+            Button.Click(ButtonMarketplaceAdminsSidebarForSuperAdmin);
+            WaitUntil.WaitSomeInterval(500);
+            Pages.ListOfMarketplaceAdmins
+                .VerifyTitleListOfMarketplaceAdmins();
+            WaitUntil.WaitSomeInterval(500);
+            Button.Click(ButtonOwnersSidebarForSuperAdmin);
+            WaitUntil.WaitSomeInterval(500);
+            Pages.ListOfOwners
+                .VerifyTitleListOfOwnersPg();
+            WaitUntil.WaitSomeInterval(500);
+            Button.Click(ButtonVisitLogsSidebarForSuperAdmin);
+            Pages.VisitLogs
+                .VerifyTitleVisitLogsPg();
+            WaitUntil.WaitSomeInterval(500);
+            Button.Click(ButtonAddressManagerSidebarForSuperAdmin);
+            Pages.AddressManager
+                .VerifyTitleAddressManagerPg();
+            WaitUntil.WaitSomeInterval(500);
+            Button.Click(ButtonUsersSidebarForSuperAdmin);
+            Pages.ListOfUsers
+                .VerifyTitleListOfUsersPg();
 
             return this;
         }

@@ -282,6 +282,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
+        [AllureStep("ClickButtonBuildingsForSuperAdmin")]
+        public SidebarLandlord ClickButtonBuildingsForSuperAdmin()
+        {
+            Button.Click(ButtonBuildingsSidebarForSuperAdmin);
+
+            return this;
+        }
+
         [AllureStep("GetUserNameFromSideBar")]
         public string GetUserNameFromSideBar()
         {
