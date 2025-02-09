@@ -32,9 +32,16 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputMonthlyRentsPrePayment, application.MonthlyRentsPrePayment.OneMonth);
             Button.Click(FieldButtonMoveInDate);
+
             Pages.DatePicker
-                .SelectCurrentDay();
-            WaitUntil.WaitSomeInterval(100);
+                .ClickButtonDropDownYearMonth()
+                .SelectCurrentYear();
+            Pages.DatePicker
+                .SelectNextMonth();
+            Pages.DatePicker
+                .SelectFisrtDayInNextMonth();
+
+            WaitUntil.WaitSomeInterval(5000);
             InputGeneral.InputFunctionWithClear(FieldInputRentalTerms, application.RentalTerms.TwelveMonth);
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();

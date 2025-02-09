@@ -35,6 +35,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
         {
             public string DepositReceived { get; set; }
             public string Vacant { get; set; }
+            public string Occupied { get; set; }
         }
 
         public class PriceColumnInfo
@@ -66,6 +67,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
             {
                 DepositReceived = "Deposit Received",
                 Vacant = "Vacant",
+                Occupied = "Occupied",
             };
         }
 

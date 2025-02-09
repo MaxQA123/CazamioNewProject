@@ -642,7 +642,7 @@ namespace BrokerGuiTests
         {
             #region SettingsForBuilding
 
-            //Albermale Rd
+            //9A Albermale Rd
 
             #endregion
 
@@ -669,35 +669,35 @@ namespace BrokerGuiTests
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
-                .SearchNineAAlbermaleRd();
-            //Pages.ListOfBuildings
-            //    .SelectItemFirst();
-            //Pages.BuildingView
-            //    .VerifyTitleBuildingViewPage();
+                .SearchNineAAlbermaleRd()
+                .SelectItemNineAAlbermaleRd();
+            Pages.BuildingView
+                .VerifyTitleBuildingViewPage();
 
-            //string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
 
-            //Pages.BuildingView
-            //    .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneWashingtonSquare)
-            //    .ClickTabApartments();
-            //KeyBoardActions.ScrollToDown();
+            Pages.BuildingView
+                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineAAAlbermaleRd)
+                .UpdateValueCreditScreeningFee()
+                .ClickTabApartments();
+            KeyBoardActions.ScrollToDown();
 
-            //string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectExpected();
+            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithoutAgent();
 
-            //Pages.BuildingApartmentsTbl
-            //    .ClickRowByVacant();
+            Pages.BuildingApartmentsTbl
+                .ClickRowByOccupied();
 
             #endregion
 
             #region Test
 
-            //Pages.ApartmentView
-            //    .VerifyTitleApartmentViewPage();
-            //Pages.ApartmentView
-            //    .ClickButtonPlusApplication();
-            //Pages.CreateApplicationMdlWndw
-            //    .VerifyTitleCreateApplication()
-            //    .PassFirstStep();
+            Pages.ApartmentView
+                .VerifyTitleApartmentViewPage();
+            Pages.ApartmentView
+                .ClickButtonPlusApplication();
+            Pages.CreateApplicationMdlWndw
+                .VerifyTitleCreateApplication()
+                .PassFirstStep();
 
             //string partEmailPutsBox = Pages.CreateApplicationMdlWndw.CopyEmailBeforeDogFromFieldGetApplicationLink();
 

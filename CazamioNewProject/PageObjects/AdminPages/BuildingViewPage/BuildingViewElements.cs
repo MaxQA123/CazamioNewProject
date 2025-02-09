@@ -5,6 +5,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingViewPage
 {
     public partial class BuildingView
     {
+        #region Building view page
+
         [FindsBy(How = How.XPath, Using = ("//app-loader//div[@class = 'hidden']"))]
         public IWebElement LoaderHidden;
 
@@ -16,6 +18,17 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingViewPage
 
         [FindsBy(How = How.XPath, Using = ("//building-view//form//div/div"))]
         public IWebElement ValueOfStringBuildingName;
+
+        [FindsBy(How = How.XPath, Using = ("//building-view//div[@class = 'credit-screening-fee']//span[text() = ' edit ']"))]
+        public IWebElement ButtonEditOfCreditScreeningFee;
+
+        [FindsBy(How = How.XPath, Using = ("//building-view//div[@class = 'credit-screening-fee']//span[text() = ' save ']"))]
+        public IWebElement ButtonSaveOfCreditScreeningFee;
+
+        [FindsBy(How = How.XPath, Using = ("//building-view//div[@class = 'credit-screening-fee']//input"))]
+        public IWebElement FieldInputCreditScreeningFee;
+
+        #endregion
 
         #region TabsLine
 

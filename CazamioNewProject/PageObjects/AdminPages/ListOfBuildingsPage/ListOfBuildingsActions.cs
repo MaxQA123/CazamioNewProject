@@ -140,6 +140,17 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
             return this;
         }
 
+        [AllureStep("SelectItemNineAAlbermaleRd")]
+        public ListOfBuildings SelectItemNineAAlbermaleRd()
+        {
+            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.CustomElementIsVisible(ItemNineAAlbermaleRd);
+            WaitUntil.CustomElementIsClickable(ItemNineAAlbermaleRd);
+            Button.Click(ItemNineAAlbermaleRd);
+
+            return this;
+        }
+
         [AllureStep("OpenPageApartmentView")]
         public ListOfBuildings OpenPageApartmentView()
         {

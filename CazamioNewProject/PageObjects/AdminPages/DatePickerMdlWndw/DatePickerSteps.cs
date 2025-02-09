@@ -5,10 +5,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.DatePickerMdlWndw
 {
     public partial class DatePicker
     {
-        //[AllureStep("SelectDateLastMonthsAvailableFrom")]
-        //public DatePicker SelectCurrentYear()
+        //[AllureStep("SetNextMonth")]
+        //public DatePicker SetNextMonth()
         //{
-        //    Button.Click(ButtonDropDownYearMonth);
+        //    Button.Click(SetNextMonth);
         //    WaitUntil.WaitSomeInterval(100);
         //    Pages.DatePicker
         //        .SelectCurrentYear();

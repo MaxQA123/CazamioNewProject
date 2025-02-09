@@ -13,6 +13,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageApartmentsWereSavedSuccessfully));
+            WaitUntil.CustomElementIsInVisible(MessageApartmentsWereSavedSuccessfully);
 
             return this;
         }
@@ -22,6 +23,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessagePaymentMethodsSelected));
+            WaitUntil.CustomElementIsInVisible(MessagePaymentMethodsSelected);
 
             return this;
         }
@@ -56,6 +58,17 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSavedSuccessfullyIfCreatedBuilding));
+            WaitUntil.CustomElementIsInVisible(MessageSavedSuccessfullyIfCreatedBuilding);
+
+            return this;
+        }
+
+        [AllureStep("VerifMessageScreeningFeeSaved")]
+        public ToasterMessages VerifMessageScreeningFeeSaved()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageScreeningFeeSaved));
+            WaitUntil.CustomElementIsInVisible(MessageScreeningFeeSaved);
 
             return this;
         }

@@ -150,7 +150,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         {
             WaitUntil.CustomElementIsVisible(FieldInputCreditScreeningFee);
             WaitUntil.CustomElementIsClickable(FieldInputCreditScreeningFee);
-            InputGeneral.InputFunctionWithClear(FieldInputCreditScreeningFee, building.MySpaceAmountPayments.CreditScreeningFeeStatic);
+            InputGeneral.InputFunctionWithClear(FieldInputCreditScreeningFee, building.MySpaceAmountPayments.CreditScreeningOne);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputHoldDeposit, building.MySpaceAmountPayments.HoldDepositStatic);
 

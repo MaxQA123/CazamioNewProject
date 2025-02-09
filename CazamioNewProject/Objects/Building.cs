@@ -123,7 +123,7 @@ namespace CazamioNewProject.Objects
         {
             public string CreditScreeningFeeByDefault { get; set; }
             public string CreditScreeningFeeRandom { get; set; }
-            public string CreditScreeningFeeStatic { get; set; }
+            public string CreditScreeningOne { get; set; }
             public string HoldDepositByDefault { get; set; }
             public string HoldDepositRandom { get; set; }
             public string HoldDepositStatic { get; set; }
@@ -282,7 +282,7 @@ namespace CazamioNewProject.Objects
             {
                 CreditScreeningFeeByDefault = "20",
                 CreditScreeningFeeRandom = GenerateRandomData.RandomNumberWithoutZero(2),
-                CreditScreeningFeeStatic = "15",
+                CreditScreeningOne = "1",
                 HoldDepositByDefault = "500",
                 HoldDepositRandom = GenerateRandomData.RandomNumberWithoutZero(3),
                 HoldDepositStatic = "900",

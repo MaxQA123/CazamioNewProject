@@ -50,6 +50,21 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
             element.Click();
         }
 
+        [AllureStep("ClickRowByOccupied")]
+        public void ClickRowByOccupied()
+        {
+            BuildingApartmentsTable buildingApartmentsTable = BuildingApartmentsTable.Generate();
+
+            var xpath = "//table//tbody//tr//td[text() = '" + buildingApartmentsTable.StatusColumn.Occupied + "']";
+
+            // Создаём объект WebDriverWait с таймаутом
+            WebDriverWait wait = new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(10));
+
+            // Ждём, пока элемент станет доступным, и выполняем клик
+            var element = wait.Until(driver => driver.FindElement(By.XPath(xpath)));
+            element.Click();
+        }
+
         [AllureStep("GetVlOfClmnUnitFrstRw")]
         public string GetVlOfClmnUnitFrstRw()
         {

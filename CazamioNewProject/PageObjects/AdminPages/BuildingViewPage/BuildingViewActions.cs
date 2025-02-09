@@ -1,10 +1,13 @@
 ﻿using CazamioNewProject.GuiHelpers;
+using CazamioNewProject.Objects;
 using NUnit.Allure.Attributes;
 
 namespace CazamioNewProject.PageObjects.AdminPages.BuildingViewPage
 {
     public partial class BuildingView
     {
+        Building building = Building.Generate();
+
         #region TabsLine
 
         [AllureStep("ClickTabApartments")]
