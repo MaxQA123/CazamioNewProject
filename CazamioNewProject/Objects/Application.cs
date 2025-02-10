@@ -32,6 +32,7 @@ namespace CazamioNewProject.Objects
         public class MonthsFreeInfo
         {
             public string OneMonth { get; set; }
+            public string TwoMonths { get; set; }
         }
 
         public class MonthlyRentsPrePaymentInfo
@@ -69,6 +70,7 @@ namespace CazamioNewProject.Objects
             return new MonthsFreeInfo
             {
                 OneMonth = "1",
+                TwoMonths = "2",
             };
         }
 

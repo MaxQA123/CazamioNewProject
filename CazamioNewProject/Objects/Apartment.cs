@@ -81,12 +81,14 @@ namespace CazamioNewProject.Objects
             public string LeasePriceFiveNumbersRandom { get; set; }
             public string LeasePriceThreeNumbersStatic { get; set; }
             public string LeasePriceFourNumbersStatic { get; set; }
+            public string LeasePriceFiveNumbersStatic { get; set; }
             public string SecurityDepositOneNumber { get; set; }
             public string SecurityDepositTwoNumbers { get; set; }
             public string SecurityDepositThreeNumbers { get; set; }
             public string SecurityDepositFourNumbers { get; set; }
             public string SecurityDepositFourNumbersStatic { get; set; }
             public string SecurityDepositFiveNumbers { get; set; }
+            public string SecurityDepositFiveNumbersStatic { get; set; }
             public string MonthlyRentsPrePaymentByDefault { get; set; }
             public string MonthlyRentsPrePaymentOne { get; set; }
             public string MonthlyRentsPrePaymentTwo { get; set; }
@@ -137,7 +139,7 @@ namespace CazamioNewProject.Objects
         {
             public string HoldDepositByDefault { get; set; }
             public string HoldDepositRandom { get; set; }
-            public string HoldDepositStatic { get; set; }
+            public string HoldDepositOneStatic { get; set; }
         }
 
         public class AccessLocksInfo
@@ -231,12 +233,14 @@ namespace CazamioNewProject.Objects
                 LeasePriceFiveNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(5),
                 LeasePriceThreeNumbersStatic = "850",
                 LeasePriceFourNumbersStatic = "1555",
+                LeasePriceFiveNumbersStatic = "10333",
                 SecurityDepositOneNumber = GenerateRandomData.RandomNumberWithoutZero(1),
                 SecurityDepositTwoNumbers = GenerateRandomData.RandomNumberWithoutZero(2),
                 SecurityDepositThreeNumbers = GenerateRandomData.RandomNumberWithoutZero(3),
                 SecurityDepositFourNumbers = GenerateRandomData.RandomNumberWithoutZero(4),
                 SecurityDepositFiveNumbers = GenerateRandomData.RandomNumberWithoutZero(5),
                 SecurityDepositFourNumbersStatic = "2333",
+                SecurityDepositFiveNumbersStatic = "15000",
                 MonthlyRentsPrePaymentByDefault = "1",
                 MonthlyRentsPrePaymentOne = "1",
                 MonthlyRentsPrePaymentTwo = "2",
@@ -299,7 +303,7 @@ namespace CazamioNewProject.Objects
             {
                 HoldDepositByDefault = "500",
                 HoldDepositRandom = GenerateRandomData.RandomNumberWithoutZero(3),
-                HoldDepositStatic = "900",
+                HoldDepositOneStatic = "1",
             };
         }
 

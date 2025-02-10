@@ -699,13 +699,13 @@ namespace BrokerGuiTests
                 .VerifyTitleCreateApplication()
                 .PassFirstStep();
 
-            //string partEmailPutsBox = Pages.CreateApplicationMdlWndw.CopyEmailBeforeDogFromFieldGetApplicationLink();
+            string partEmailPutsBox = Pages.CreateApplicationMdlWndw.CopyEmailBeforeDogFromFieldGetApplicationLink();
 
-            //Pages.CreateApplicationMdlWndw
-            //    .PassThirdStepFullData()
-            //    .VerifyTitleApplicationSuccessfullyCreated()
-            //    .VerifyTextLinkAlreadyCopied()
-            //    .ClickButtonClose();
+            Pages.CreateApplicationMdlWndw
+                .PassThirdStepAddressNineAAlbermaleRd()
+                .VerifyTitleApplicationSuccessfullyCreated()
+                .VerifyTextLinkAlreadyCopied()
+                .ClickButtonAddApplicant();
             //Pages.ApartmentView
             //    .ClickTabApplications();
 

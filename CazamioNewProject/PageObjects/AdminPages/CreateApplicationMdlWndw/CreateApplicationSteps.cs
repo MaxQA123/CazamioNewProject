@@ -32,7 +32,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputMonthlyRentsPrePayment, application.MonthlyRentsPrePayment.OneMonth);
             Button.Click(FieldButtonMoveInDate);
-
             Pages.DatePicker
                 .ClickButtonDropDownYearMonth()
                 .SelectCurrentYear();
@@ -40,7 +39,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
                 .SelectNextMonth();
             Pages.DatePicker
                 .SelectFisrtDayInNextMonth();
-
             WaitUntil.WaitSomeInterval(5000);
             InputGeneral.InputFunctionWithClear(FieldInputRentalTerms, application.RentalTerms.TwelveMonth);
             KeyBoardActions.ClickArrowDown();
@@ -54,6 +52,29 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             Button.Click(ButtonPlusAddRequestedWork);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputRequestedWork, application.RequestedWork.LongTextWashingtonSquare);
+            Button.Click(ButtonCreate);
+            WaitUntil.WaitSomeInterval(5000);
+
+            return this;
+        }
+
+        [AllureStep("PassThirdStepAddressNineAAlbermaleRd")]
+        public CreateApplicationMdlWndw PassThirdStepAddressNineAAlbermaleRd()
+        {
+            WaitUntil.CustomElementIsVisible(StringLeadEmail);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, application.MonthsFree.TwoMonths);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, apartment.SettingsConcessions.AdditionalInfoShort);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthlyRentsPrePayment, application.MonthlyRentsPrePayment.OneMonth);
+            Button.Click(FieldButtonMoveInDate);
+            //Pages.DatePicker
+            //    .ClickButtonDropDownYearMonth()
+            //    .SelectCurrentYear();
+            //Pages.DatePicker
+            //    .SelectNextMonth();
+            Pages.DatePicker
+                .SelectFisrtDayInNextMonth();
             Button.Click(ButtonCreate);
             WaitUntil.WaitSomeInterval(5000);
 

@@ -31,6 +31,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             return partEmail;
         }
 
+        [AllureStep("ClickButtonAddApplicant")]
+        public CreateApplicationMdlWndw ClickButtonAddApplicant()
+        {
+            Button.Click(ButtonAddApplicant);
+
+            return this;
+        }
+
         [AllureStep("ClickButtonClose")]
         public CreateApplicationMdlWndw ClickButtonClose()
         {
