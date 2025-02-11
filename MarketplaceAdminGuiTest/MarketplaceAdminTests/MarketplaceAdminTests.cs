@@ -561,7 +561,7 @@ namespace MarketplaceAdminGuiTest
                 .ClickTabImages()
                 .UploadFourImages()
                 .ClickButtonSaveBuilding();
-            Pages.ToasterMessages
+            Pages.ToasterMessagesLandlord
                 .VerifyMessageSavedSuccessfullyIfCreatedBuilding();
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
@@ -643,7 +643,7 @@ namespace MarketplaceAdminGuiTest
                 .AddConcessionInActive()
                 .ClickButtonGeneralNext()
                 .ClickButtonSaveBuilding();
-            Pages.ToasterMessages
+            Pages.ToasterMessagesLandlord
                 .VerifyMessageSavedSuccessfullyIfCreatedBuilding();
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
@@ -785,7 +785,7 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonGeneralNext()
                 .UploadFiveImages()
                 .ClickButtonSaveApartment();
-            Pages.ToasterMessages
+            Pages.ToasterMessagesLandlord
                 .VerifyMessageApartmentsWereSavedSuccessfully();
             Pages.ListOfApartments
                 .VerifyTitleListOfApartments();
@@ -885,7 +885,7 @@ namespace MarketplaceAdminGuiTest
                 //Add assertion
                 .ClickTabImages()
                 .ClickButtonSaveApartment();
-            Pages.ToasterMessages
+            Pages.ToasterMessagesLandlord
                 .VerifyMessageApartmentsWereSavedSuccessfully();
             Pages.ListOfApartments
                 .VerifyTitleListOfApartments();

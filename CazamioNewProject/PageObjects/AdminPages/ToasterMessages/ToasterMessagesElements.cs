@@ -3,7 +3,7 @@ using SeleniumExtras.PageObjects;
 
 namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
 {
-    public partial class ToasterMessages
+    public partial class ToasterMessagesLandlord
     {
         #region Common Success toasters 
 
@@ -49,6 +49,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
         //Appeared if created a new apartment
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Apartments were saved successfully.']")]
         public IWebElement MessageApartmentsWereSavedSuccessfully;
+
+        #endregion
+
+        #region For Add Applicant modal window Success toasters 
+
+        //Appeared if created a new tenant-occupant and guarantor
+        [FindsBy(How = How.XPath, Using = "//span[text() = 'Added applicants to application']")]
+        public IWebElement MessageAddedApplicantsToApplication;
 
         #endregion
     }

@@ -1,6 +1,7 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
 using CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage;
+using CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.AddressManagerPage;
 using CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls;
 using CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage;
@@ -77,12 +78,14 @@ namespace CazamioNewProject.PageObjects
         #region Tenant objects
 
         public static TenantCreatorMySpace TenantCreatorMySpace => GetPage<TenantCreatorMySpace>();
+        public static TenantOccupantMySpace TenantOccupantMySpace => GetPage<TenantOccupantMySpace>();
+        public static TenantGuarantorMySpace TenantGuarantorMySpace => GetPage<TenantGuarantorMySpace>();
 
         #endregion
 
         #region Landlord pages
 
-        public static ToasterMessages ToasterMessages => GetPage<ToasterMessages>();
+        public static ToasterMessagesLandlord ToasterMessagesLandlord => GetPage<ToasterMessagesLandlord>();
         public static LogInLandlord LogInLandlord => GetPage<LogInLandlord>();
         public static SidebarLandlord SidebarLandlord => GetPage<SidebarLandlord>();
         public static Dashboard Dashboard => GetPage<Dashboard>();
@@ -130,6 +133,7 @@ namespace CazamioNewProject.PageObjects
         public static SelectorVideosMdlWndw SelectorVideosMdlWndw => GetPage<SelectorVideosMdlWndw>();
         public static DatePicker DatePicker => GetPage<DatePicker>();
         public static CreateApplicationMdlWndw CreateApplicationMdlWndw => GetPage<CreateApplicationMdlWndw>();
+        public static AddApplicantMdlWndw AddApplicantMdlWndw => GetPage<AddApplicantMdlWndw>();
 
         #endregion
 

@@ -1,12 +1,12 @@
-﻿using System;
+﻿using CazamioNewProject.Objects;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw
 {
-    public partial class AddApplicant
+    public partial class AddApplicantMdlWndw
     {
+        TenantOccupantMySpace tenantOccupantMySpace = TenantOccupantMySpace.Generate();
+        TenantGuarantorMySpace tenantGuarantorMySpace = TenantGuarantorMySpace.Generate();
     }
 }

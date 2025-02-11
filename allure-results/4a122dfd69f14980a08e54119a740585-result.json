@@ -1,0 +1,566 @@
+{
+  "uuid": "4bc403e6-4dff-4a45-8db4-5bf25ee0fa78-tr-0-1008",
+  "historyId": "BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied",
+  "fullName": "BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "BrokerGuiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateApplicationForApartmentOccupied"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateApplicationForApartmentOccupied"
+    }
+  ],
+  "links": [],
+  "name": "CreateApplicationForApartmentOccupied",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.InvalidSelectorException : invalid selector: Unable to locate an element with the xpath expression //app-prepare-application//div[@class = 'step applicants ng-star-inserted']//div[@class = 'email-input no-margin ng-star-inserted']//input'] because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '//app-prepare-application//div[@class = 'step applicants ng-star-inserted']//div[@class = 'email-input no-margin ng-star-inserted']//input']' is not a valid XPath expression.\n  (Session info: chrome=133.0.6943.59); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_Enabled()\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.<>c__DisplayClass5_0.<CustomElementIsVisible>b__0(IWebDriver e) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 74\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw.AddApplicantMdlWndw.__a$_around_AddOneNewlyCreatedOccupantGuarantor_100663812_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApplicantMdlWndw\\AddApplicantSteps.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw.AddApplicantMdlWndw.__a$_around_AddOneNewlyCreatedOccupantGuarantor_100663812_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw.AddApplicantMdlWndw.__a$_around_AddOneNewlyCreatedOccupantGuarantor_100663812_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw.AddApplicantMdlWndw.AddOneNewlyCreatedOccupantGuarantor() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApplicantMdlWndw\\AddApplicantAssertions.cs:line 12\r\n   at BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 709"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateApplicationForApartmentOccupied",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.InvalidSelectorException : invalid selector: Unable to locate an element with the xpath expression //app-prepare-application//div[@class = 'step applicants ng-star-inserted']//div[@class = 'email-input no-margin ng-star-inserted']//input'] because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '//app-prepare-application//div[@class = 'step applicants ng-star-inserted']//div[@class = 'email-input no-margin ng-star-inserted']//input']' is not a valid XPath expression.\n  (Session info: chrome=133.0.6943.59); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_Enabled()\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.<>c__DisplayClass5_0.<CustomElementIsVisible>b__0(IWebDriver e) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 74\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw.AddApplicantMdlWndw.__a$_around_AddOneNewlyCreatedOccupantGuarantor_100663812_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApplicantMdlWndw\\AddApplicantSteps.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw.AddApplicantMdlWndw.__a$_around_AddOneNewlyCreatedOccupantGuarantor_100663812_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw.AddApplicantMdlWndw.__a$_around_AddOneNewlyCreatedOccupantGuarantor_100663812_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw.AddApplicantMdlWndw.AddOneNewlyCreatedOccupantGuarantor() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApplicantMdlWndw\\AddApplicantAssertions.cs:line 12\r\n   at BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 709"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "EnterEmailPasswordAsBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285196749,
+          "stop": 1739285198232
+        },
+        {
+          "name": "ClickIconShow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285198233,
+          "stop": 1739285198901
+        },
+        {
+          "name": "ClickButtonLetsGo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285198902,
+          "stop": 1739285199828
+        },
+        {
+          "name": "GetUserNameFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285199844,
+          "stop": 1739285201980
+        },
+        {
+          "name": "GetUserNameRoleFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285201990,
+          "stop": 1739285202435
+        },
+        {
+          "name": "VerifyBrokerUserNameAndRole",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Leoautotest Feabroker"
+            },
+            {
+              "name": "String",
+              "value": "Broker"
+            }
+          ],
+          "start": 1739285202449,
+          "stop": 1739285203383
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285203612,
+          "stop": 1739285209864
+        },
+        {
+          "name": "SearchNineAAlbermaleRd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285209883,
+          "stop": 1739285220818
+        },
+        {
+          "name": "SelectItemNineAAlbermaleRd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285220822,
+          "stop": 1739285224697
+        },
+        {
+          "name": "VerifyTitleBuildingViewPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285224704,
+          "stop": 1739285228914
+        },
+        {
+          "name": "GetValueOfStringAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285228915,
+          "stop": 1739285230975
+        },
+        {
+          "name": "VerifyBuildingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "9A Albermale Rd"
+            },
+            {
+              "name": "String",
+              "value": "9A Albermale Rd"
+            }
+          ],
+          "start": 1739285230976,
+          "stop": 1739285234005
+        },
+        {
+          "name": "UpdateValueCreditScreeningFee",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifMessageScreeningFeeSaved",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1739285235976,
+              "stop": 1739285244260
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285234006,
+          "stop": 1739285244260
+        },
+        {
+          "name": "ClickTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285244261,
+          "stop": 1739285246031
+        },
+        {
+          "name": "GetSubjectWithoutAgent",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetVlOfClmnUnitFrstRw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1739285247087,
+              "stop": 1739285247159
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285246070,
+          "stop": 1739285247163
+        },
+        {
+          "name": "ClickRowByOccupied",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285247164,
+          "stop": 1739285247510
+        },
+        {
+          "name": "VerifyTitleAddApartmentsPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285247512,
+          "stop": 1739285251274
+        },
+        {
+          "name": "ClickButtonPlusApplication",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285251277,
+          "stop": 1739285252670
+        },
+        {
+          "name": "VerifyTitleCreateApplication",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285252678,
+          "stop": 1739285252834
+        },
+        {
+          "name": "PassFirstStep",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285252835,
+          "stop": 1739285256869
+        },
+        {
+          "name": "CopyEmailBeforeDogFromFieldGetApplicationLink",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285256871,
+          "stop": 1739285258924
+        },
+        {
+          "name": "PassThirdStepAddressNineAAlbermaleRd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "SelectFisrtDayInNextMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1739285262587,
+              "stop": 1739285263771
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285258926,
+          "stop": 1739285269440
+        },
+        {
+          "name": "VerifyTitleApplicationSuccessfullyCreated",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285269441,
+          "stop": 1739285269616
+        },
+        {
+          "name": "VerifyTextLinkAlreadyCopied",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285269616,
+          "stop": 1739285269677
+        },
+        {
+          "name": "ClickButtonAddApplicant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285269677,
+          "stop": 1739285270379
+        },
+        {
+          "name": "AddOneNewlyCreatedOccupantGuarantor",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "invalid selector: Unable to locate an element with the xpath expression //app-prepare-application//div[@class = 'step applicants ng-star-inserted']//div[@class = 'email-input no-margin ng-star-inserted']//input'] because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '//app-prepare-application//div[@class = 'step applicants ng-star-inserted']//div[@class = 'email-input no-margin ng-star-inserted']//input']' is not a valid XPath expression.\n  (Session info: chrome=133.0.6943.59); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception",
+            "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_Enabled()\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.<>c__DisplayClass5_0.<CustomElementIsVisible>b__0(IWebDriver e) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 74\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw.AddApplicantMdlWndw.__a$_around_AddOneNewlyCreatedOccupantGuarantor_100663812_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApplicantMdlWndw\\AddApplicantSteps.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw.AddApplicantMdlWndw.__a$_around_AddOneNewlyCreatedOccupantGuarantor_100663812_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyTitleAddApplicantMdlWndw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1739285270386,
+              "stop": 1739285270448
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739285270386,
+          "stop": 1739285270682
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "7aaf5b3740ec49edba1b48188ab7edd6-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1739285185244,
+      "stop": 1739285273823
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1739285185241,
+  "stop": 1739285273838
+}

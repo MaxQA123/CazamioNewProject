@@ -19,7 +19,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             Button.Click(ItemVenmo);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
-            Pages.ToasterMessages
+            Pages.ToasterMessagesLandlord
                 .VerifyMessagePaymentMethodsSelected();
 
             return this;
@@ -36,7 +36,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             Button.Click(ItemVenmo);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
-            Pages.ToasterMessages
+            Pages.ToasterMessagesLandlord
                 .VerifyMessagePaymentMethodsSelected();
 
             return this;
@@ -69,7 +69,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             Button.Click(ItemZelle);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
-            Pages.ToasterMessages
+            Pages.ToasterMessagesLandlord
                 .VerifyMessagePaymentMethodsSelected();
 
             return this;
@@ -83,7 +83,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
             Button.Click(ItemAch);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonSave);
-            Pages.ToasterMessages
+            Pages.ToasterMessagesLandlord
                 .VerifyMessagePaymentMethodsSelected();
 
             return this;

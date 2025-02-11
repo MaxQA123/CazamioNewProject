@@ -15,7 +15,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingViewPage
             WaitUntil.CustomElementIsVisible(FieldInputCreditScreeningFee);
             InputGeneral.InputFunctionWithClear(FieldInputCreditScreeningFee, building.MySpaceAmountPayments.CreditScreeningOne);
             Button.Click(ButtonSaveOfCreditScreeningFee);
-            Pages.ToasterMessages
+            Pages.ToasterMessagesLandlord
                 .VerifMessageScreeningFeeSaved();
 
             return this;
