@@ -41,6 +41,7 @@ namespace CazamioNewProject.Objects
         public class PriceColumnInfo
         {
             public string PriceFourNumberStatic { get; set; }
+            public string PriceFiveNumberStatic { get; set; }
         }
 
         public class CreatedOnColumnInfo
@@ -82,6 +83,7 @@ namespace CazamioNewProject.Objects
             return new PriceColumnInfo
             {
                 PriceFourNumberStatic = "$1555",
+                PriceFiveNumberStatic = "$10333",
             };
         }
 

@@ -651,6 +651,7 @@ namespace BrokerGuiTests
             Apartment apartment = Apartment.Generate();
             ApartmentApplicationsTable apartmentApplicationsTable = ApartmentApplicationsTable.Generate();
             TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
+            TenantOccupantMySpace tenantOccupantMySpace = TenantOccupantMySpace.Generate();
 
             #endregion
 
@@ -714,13 +715,14 @@ namespace BrokerGuiTests
             string apartmentAddressFromApp = Pages.ApartmentApplicationsTbl.GetApartmentAddressFromFirstRow();
             string firstNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetFirstNameTenantMainApplicantFromFirstRow();
             string lastNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetLastNameTenantMainApplicantFromFirstRow();
+            string firstLastNameFromApp = Pages.ApartmentApplicationsTbl.GetFirstLastNameTenantOccupantFromFirstRow();
             string leasePriceFromApplication = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
             string dateCreatedFromApplication = Pages.ApartmentApplicationsTbl.GetDateCreatedFromFirstRow();
             string agentFromApplication = Pages.ApartmentApplicationsTbl.GetAgentFromFrstRw();
             string statusFromApplication = Pages.ApartmentApplicationsTbl.GetStatusFromFrstRw();
 
-            //Pages.ApartmentApplicationsTbl
-            //    .VerifyFullDataByApplication(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp, apartmentApplicationsTable.PriceColumn.PriceFourNumberStatic, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.AgentLulaAgentQA, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
+            Pages.ApartmentApplicationsTbl
+                .VerifyFullDataByApplicationTenantsMainOccupant(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, firstLastNameFromApp, tenantOccupantMySpace.FirstLastNameGeneralData.ConstantFirstLastNameTenant, lastNameTenantMainApplicantFromApp, apartmentApplicationsTable.PriceColumn.PriceFiveNumberStatic, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.NotAssigned, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
 
             //Pages.JScriptExecutor
             //   .OpenNewTab();

@@ -42,6 +42,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
             return regexGetSecondName.Match(fullName).Groups[1].Value;
         }
 
+        [AllureStep("GetFirstLastNameTenantOccupantFromFirstRow")]
+        public string GetFirstLastNameTenantOccupantFromFirstRow()
+        {
+            WaitUntil.CustomElementIsVisible(VlOccupantOfClmnApplicantsFrstRw);
+            string apartmentAddress = VlOccupantOfClmnApplicantsFrstRw.Text;
+
+            return apartmentAddress;
+        }
+
         [AllureStep("GetPriceFromFirstRow")]
         public string GetPriceFromFirstRow()
         {

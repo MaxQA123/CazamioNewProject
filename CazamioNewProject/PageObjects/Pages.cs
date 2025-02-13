@@ -43,6 +43,7 @@ using CazamioNewProject.PageObjects.EmailPutsBoxPage;
 using CazamioNewProject.PageObjects.TenantPages.Header;
 using CazamioNewProject.PageObjects.TenantPages.LogInPage;
 using CazamioNewProject.PageObjects.TenantPages.SubmittingApplicationPage;
+using CazamioNewProject.PageObjects.TenantPages.ToasterMessages;
 using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 
@@ -143,6 +144,7 @@ namespace CazamioNewProject.PageObjects
 
         #region Tanant pages
 
+        public static ToasterMessagesTenants ToasterMessagesTenants => GetPage<ToasterMessagesTenants>();
         public static Header Header => GetPage<Header>();
         public static LogInTenant LogInTenant => GetPage<LogInTenant>();
         public static SubmittingApplication SubmittingApplication => GetPage<SubmittingApplication>();

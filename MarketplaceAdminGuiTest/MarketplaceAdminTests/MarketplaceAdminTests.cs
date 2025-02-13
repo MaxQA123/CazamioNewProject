@@ -980,7 +980,7 @@ namespace MarketplaceAdminGuiTest
             string statusFromApplication = Pages.ApartmentApplicationsTbl.GetStatusFromFrstRw();
 
             Pages.ApartmentApplicationsTbl
-                .VerifyFullDataByApplication(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp, leasePriceFromUnit, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.NotAssigned, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
+                .VerifyFullDataByApplicationTenantMain(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp, leasePriceFromUnit, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.NotAssigned, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
             Pages.JScriptExecutor
                .OpenNewTab();
             Pages.EmailHelper
@@ -993,7 +993,7 @@ namespace MarketplaceAdminGuiTest
             Pages.EmailPutsBox
                 .ClickButtonHtml()
                 .ClickButtonStartYourApplicationNowlForTenant();
-            Pages.SubmittingApplication
+            Pages.ToasterMessagesTenants
                 .VerifyMessageAccountWasSuccessfullyActivated();
 
             WaitUntil.WaitSomeInterval(5000);
@@ -1091,7 +1091,7 @@ namespace MarketplaceAdminGuiTest
             string statusFromApplication = Pages.ApartmentApplicationsTbl.GetStatusFromFrstRw();
 
             Pages.ApartmentApplicationsTbl
-                .VerifyFullDataByApplication(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp, apartmentApplicationsTable.PriceColumn.PriceFourNumberStatic, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.AgentLulaAgentQA, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
+                .VerifyFullDataByApplicationTenantMain(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp, apartmentApplicationsTable.PriceColumn.PriceFourNumberStatic, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.AgentLulaAgentQA, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
 
             Pages.JScriptExecutor
                .OpenNewTab();
@@ -1105,7 +1105,7 @@ namespace MarketplaceAdminGuiTest
             Pages.EmailPutsBox
                 .ClickButtonHtml()
                 .ClickButtonStartYourApplicationNowlForTenant();
-            Pages.SubmittingApplication
+            Pages.ToasterMessagesTenants
                 .VerifyMessageAccountWasSuccessfullyActivated();
 
             WaitUntil.WaitSomeInterval(5000);

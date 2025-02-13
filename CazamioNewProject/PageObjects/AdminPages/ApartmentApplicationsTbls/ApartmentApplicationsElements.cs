@@ -16,6 +16,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
         [FindsBy(How = How.XPath, Using = ("//app-applications//table//tbody//tr//td[3]//div"))]
         public IWebElement VlMainApplicantOfClmnApplicantsFrstRw;
 
+        [FindsBy(How = How.XPath, Using = ("//app-applications//table//tbody//tr//td[3]//div[2]"))]
+        public IWebElement VlOccupantOfClmnApplicantsFrstRw;
+
         [FindsBy(How = How.XPath, Using = ("//app-applications//table//tbody//tr//td[4]"))]
         public IWebElement VlOfClmnPriceFrstRw;
 
