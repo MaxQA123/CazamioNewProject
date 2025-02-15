@@ -55,12 +55,26 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
             return LastName;
         }
 
-        [AllureStep("GetSubjectWithoutAgent")]
-        public string GetSubjectWithoutAgent()
+        [AllureStep("GetSubjectWithoutAgentSaintJohnsonPlace")]
+        public string GetSubjectWithoutAgentSaintJohnsonPlace()
         {
             WaitUntil.WaitSomeInterval(1000);
             // Получение текста уведомления из EmailNotifications
-            string subjectNotification = EmailNotifications.Generate().SubjectsTenantGeneral.CreateTenantViaGetLinkWithoutAgent;
+            string subjectNotification = EmailNotifications.Generate().SubjectsCreateTenantPlusApp.CreateTenantViaGetLinkWithoutAgentSaintJohnsonPlace;
+            string unitNumberAc = Pages.BuildingApartmentsTbl.GetVlOfClmnUnitFrstRw();
+
+            // Замена номера квартиры в subjectNotification
+            string updatedText = ReplaceUnitNumber(subjectNotification, unitNumberAc);
+
+            // Возвращение обновленного текста
+            return updatedText;
+        }
+
+        [AllureStep("GetSubjectWithoutAgentAlbermaleRd")]
+        public string GetSubjectWithoutAgentAlbermaleRd()
+        {
+            WaitUntil.WaitSomeInterval(1000);
+            string subjectNotification = EmailNotifications.Generate().SubjectsCreateTenantPlusApp.CreateTenantViaGetLinkWithoutAgentAlbermaleRd;
             string unitNumberAc = Pages.BuildingApartmentsTbl.GetVlOfClmnUnitFrstRw();
 
             // Замена номера квартиры в subjectNotification
@@ -78,13 +92,13 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
             return updatedText;
         }
 
-        [AllureStep("GetSubjectWithAgent")]
-        public string GetSubjectWithAgent()
+        [AllureStep("GetSubjectWithAgentWashingtonSquare")]
+        public string GetSubjectWithAgentWashingtonSquare()
         {
             WaitUntil.WaitSomeInterval(1000);
 
             // Получение текста уведомления из EmailNotifications
-            string subjectNotification = EmailNotifications.Generate().SubjectsTenantGeneral.CreateTenantViaPlusAppWithAgent;
+            string subjectNotification = EmailNotifications.Generate().SubjectsCreateTenantPlusApp.CreateTenantViaPlusAppWithAgentWashingtonSquare;
             string unitNumberAc = Pages.BuildingApartmentsTbl.GetVlOfClmnUnitFrstRw();
 
             // Замена только значения квартиры в тексте

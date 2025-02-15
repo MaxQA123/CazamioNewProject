@@ -16,11 +16,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw
             InputGeneral.InputFunctionWithClear(SecondFieldInputEmailAddress, tenantGuarantorMySpace.Emails.RandomEmail);
             WaitUntil.CustomElementIsClickable(CheckBoxThisIsAGuarantorSecondEmailAddressField);
             Button.Click(CheckBoxThisIsAGuarantorSecondEmailAddressField);
-            WaitUntil.CustomElementIsClickable(BtnAdd);
-            Button.Click(BtnAdd);
-            Pages.ToasterMessagesLandlord
-                .VerifMessageAddedApplicantsToApplication();
-
+           
             return this;
         }
     }

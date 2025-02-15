@@ -949,7 +949,7 @@ namespace MarketplaceAdminGuiTest
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
 
-            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithoutAgent();
+            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithoutAgentSaintJohnsonPlace();
 
             Pages.BuildingApartmentsTbl
                 .ClickRowByDepositReceived();
@@ -1055,7 +1055,7 @@ namespace MarketplaceAdminGuiTest
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
 
-            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithAgent();
+            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithAgentWashingtonSquare();
 
             Pages.BuildingApartmentsTbl
                 .ClickRowByVacant();

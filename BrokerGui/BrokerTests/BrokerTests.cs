@@ -633,7 +633,7 @@ namespace BrokerGuiTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
-        [Retry(2)]
+        [Retry(1)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Broker")]
         [AllureSubSuite("CreateApplicationForApartmentOccupied")]
@@ -683,7 +683,7 @@ namespace BrokerGuiTests
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
 
-            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithoutAgent();
+            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithoutAgentAlbermaleRd();
 
             Pages.BuildingApartmentsTbl
                 .ClickRowByOccupied();
@@ -700,7 +700,7 @@ namespace BrokerGuiTests
                 .VerifyTitleCreateApplication()
                 .PassFirstStep();
 
-            string partEmailPutsBox = Pages.CreateApplicationMdlWndw.CopyEmailBeforeDogFromFieldGetApplicationLink();
+            string partEmailPutsBoxMainApplicant = Pages.CreateApplicationMdlWndw.CopyEmailBeforeDogFromFieldGetApplicationLink();
 
             Pages.CreateApplicationMdlWndw
                 .PassThirdStepAddressNineAAlbermaleRd()
@@ -709,6 +709,12 @@ namespace BrokerGuiTests
                 .ClickButtonAddApplicant();
             Pages.AddApplicantMdlWndw
                 .AddOneNewlyCreatedOccupantGuarantor();
+
+            string partEmailPutsBoxOccupant = Pages.AddApplicantMdlWndw.CopyEmailBeforeDogFromFirstFieldInputEmailAddress();
+            string partEmailPutsBoxGuarantor = Pages.AddApplicantMdlWndw.CopyEmailBeforeDogFromSecondFieldInputEmailAddress();
+
+            Pages.AddApplicantMdlWndw
+                 .ClickBtnAdd();
             Pages.ApartmentView
                 .ClickTabApplications();
 
@@ -724,20 +730,24 @@ namespace BrokerGuiTests
             Pages.ApartmentApplicationsTbl
                 .VerifyFullDataByApplicationTenantsMainOccupant(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, firstLastNameFromApp, tenantOccupantMySpace.FirstLastNameGeneralData.ConstantFirstLastNameTenant, lastNameTenantMainApplicantFromApp, apartmentApplicationsTable.PriceColumn.PriceFiveNumberStatic, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.NotAssigned, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
 
-            //Pages.JScriptExecutor
-            //   .OpenNewTab();
-            //Pages.EmailHelper
-            //   .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, partEmailPutsBox);
+            Pages.JScriptExecutor
+               .OpenNewTab();
+            Pages.EmailHelper
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, partEmailPutsBoxMainApplicant);
 
-            //string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+            string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
 
-            //Pages.EmailPutsBox
-            //    .VerifySubjectLetterCreateTenantViaGetLink(getSubjectEmailExpected, getSubjectFromEmail);
-            //Pages.EmailPutsBox
-            //    .ClickButtonHtml()
-            //    .ClickButtonStartYourApplicationNowlForTenant();
-            //Pages.SubmittingApplication
-            //    .VerifyMessageAccountWasSuccessfullyActivated();
+            Pages.EmailPutsBox
+                .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
+            Pages.EmailPutsBox
+                .ClickButtonHtml()
+                .ClickButtonStartYourApplicationNowlForTenant();
+            Pages.ToasterMessagesTenants
+                .VerifyMessageAccountWasSuccessfullyActivated();
+            Pages.JScriptExecutor
+               .OpenNewTab();
+            Pages.EmailHelper
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, partEmailPutsBoxOccupant);
 
             WaitUntil.WaitSomeInterval(5000);
 

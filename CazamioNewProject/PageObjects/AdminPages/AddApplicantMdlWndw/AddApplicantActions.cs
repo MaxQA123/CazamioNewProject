@@ -1,6 +1,7 @@
-﻿using CazamioNewProject.Objects;
-using System;
-using System.Collections.Generic;
+﻿using CazamioNewProject.GuiHelpers;
+using CazamioNewProject.Objects;
+using NUnit.Allure.Attributes;
+using System.Text.RegularExpressions;
 
 namespace CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw
 {
@@ -8,5 +9,38 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw
     {
         TenantOccupantMySpace tenantOccupantMySpace = TenantOccupantMySpace.Generate();
         TenantGuarantorMySpace tenantGuarantorMySpace = TenantGuarantorMySpace.Generate();
+
+        [AllureStep("ClickBtnAdd")]
+        public AddApplicantMdlWndw ClickBtnAdd()
+        {
+            WaitUntil.CustomElementIsClickable(BtnAdd);
+            Button.Click(BtnAdd);
+            Pages.ToasterMessagesLandlord
+               .VerifMessageAddedApplicantsToApplication();
+
+            return this;
+        }
+
+        [AllureStep("CopyEmailBeforeDogFromFirstFieldInputEmailAddress")]
+        public string CopyEmailBeforeDogFromFirstFieldInputEmailAddress()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            string copyPartEmail = FirstFieldInputEmailAddress.Text;
+            Regex regexPartEmail = new Regex(@"^.........................");
+            string partEmail = regexPartEmail.Match(copyPartEmail).ToString();
+
+            return partEmail;
+        }
+
+        [AllureStep("CopyEmailBeforeDogFromSecondFieldInputEmailAddress")]
+        public string CopyEmailBeforeDogFromSecondFieldInputEmailAddress()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            string copyPartEmail = SecondFieldInputEmailAddress.Text;
+            Regex regexPartEmail = new Regex(@"^.........................");
+            string partEmail = regexPartEmail.Match(copyPartEmail).ToString();
+
+            return partEmail;
+        }
     }
 }
