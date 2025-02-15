@@ -25,7 +25,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw
         public string CopyEmailBeforeDogFromFirstFieldInputEmailAddress()
         {
             WaitUntil.WaitSomeInterval(100);
-            string copyPartEmail = FirstFieldInputEmailAddress.Text;
+            string copyPartEmail = FirstFieldInputEmailAddress.GetAttribute("value");
             Regex regexPartEmail = new Regex(@"^.........................");
             string partEmail = regexPartEmail.Match(copyPartEmail).ToString();
 
