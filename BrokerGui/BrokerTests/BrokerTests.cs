@@ -729,7 +729,7 @@ namespace BrokerGuiTests
 
             Pages.ApartmentApplicationsTbl
                 .VerifyFullDataByApplicationTenantsMainOccupant(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, firstLastNameFromApp, tenantOccupantMySpace.FirstLastNameGeneralData.ConstantFirstLastNameTenant, lastNameTenantMainApplicantFromApp, apartmentApplicationsTable.PriceColumn.PriceFiveNumberStatic, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.NotAssigned, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
-
+            //Main applicant
             Pages.JScriptExecutor
                .OpenNewTab();
             Pages.EmailHelper
@@ -744,7 +744,6 @@ namespace BrokerGuiTests
                 .ClickButtonStartYourApplicationNowlForTenant();
             Pages.ToasterMessagesTenants
                 .VerifyMessageAccountWasSuccessfullyActivated();
-
             Pages.PleaseChangeYourPasswordMdlWndw
                 .QuicklyPass();
             Pages.PleaseTellUsYourNameMdlWndw
@@ -781,17 +780,15 @@ namespace BrokerGuiTests
                 .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
             Pages.EmailPutsBox
                 .ClickButtonHtml()
-                .ClickButtonStartYourApplicationNowlForTenantSecond();
+                .ClickButtonStartYourApplicationNowlForTenantThird();
             Pages.ToasterMessagesTenants
                 .VerifyMessageAccountWasSuccessfullyActivated();
-
             Pages.PleaseChangeYourPasswordMdlWndw
                 .QuicklyPass();
             Pages.PleaseTellUsYourNameMdlWndw
                 .QuicklyPassForGuarantor();
             Pages.Header
                 .LogOut();
-
 
             WaitUntil.WaitSomeInterval(5000);
 
