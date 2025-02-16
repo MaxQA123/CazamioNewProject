@@ -50,7 +50,7 @@ namespace CazamioNewProject.Objects
                 CreateTenantViaGetLinkWithoutAgentSaintJohnsonPlace = "Welcome to Noyo Properties NYC! Let's begin your application process for 9998 Saint Johnson Place #1 now!",
                 CreateTenantViaGetLinkWithoutAgentAlbermaleRd = "Welcome to Noyo Properties NYC! Let's begin your application process for 9A Albermale Rd #1 now!",
                 CreateTenantViaPlusAppWithAgentWashingtonSquare = "Welcome to Noyo Properties NYC! Lula AgentQA created you an application for 1 Washington Square #8R.",
-                CreateTenantOccupantViaPlusAppWithoutAgentAlbermaleRd = "Welcome to Noyo Properties NYC! Let's begin your application process for 9A Albermale Rd #7M6C now!",
+                CreateTenantOccupantViaPlusAppWithoutAgentAlbermaleRd = "Welcome to Noyo Properties NYC! Let's begin your application process for 9A Albermale Rd #1 now!",
             };
         }
     }

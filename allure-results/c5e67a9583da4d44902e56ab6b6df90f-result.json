@@ -1,0 +1,1010 @@
+{
+  "uuid": "9261e291-f822-4d10-826a-7f3e7f0c2e98-tr-0-1008",
+  "historyId": "BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied",
+  "fullName": "BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "BrokerGuiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateApplicationForApartmentOccupied"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateApplicationForApartmentOccupied"
+    }
+  ],
+  "links": [],
+  "name": "CreateApplicationForApartmentOccupied",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.NoSuchElementException : Could not find element by: By.XPath: //a[text() = 'Start Your Application Now!']; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception",
+    "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_ClickButtonStartYourApplicationNowlForTenantSecond_100663450_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\EmailPutsBoxPage\\EmailPutsBoxSteps.cs:line 35\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_ClickButtonStartYourApplicationNowlForTenantSecond_100663450_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_ClickButtonStartYourApplicationNowlForTenantSecond_100663450_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.ClickButtonStartYourApplicationNowlForTenantSecond() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\EmailPutsBoxPage\\EmailPutsBoxSteps.cs:line 114\r\n   at BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 753"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateApplicationForApartmentOccupied",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.NoSuchElementException : Could not find element by: By.XPath: //a[text() = 'Start Your Application Now!']; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception",
+        "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_ClickButtonStartYourApplicationNowlForTenantSecond_100663450_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\EmailPutsBoxPage\\EmailPutsBoxSteps.cs:line 35\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_ClickButtonStartYourApplicationNowlForTenantSecond_100663450_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_ClickButtonStartYourApplicationNowlForTenantSecond_100663450_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.ClickButtonStartYourApplicationNowlForTenantSecond() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\EmailPutsBoxPage\\EmailPutsBoxSteps.cs:line 114\r\n   at BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 753"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "EnterEmailPasswordAsBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691119673,
+          "stop": 1739691121142
+        },
+        {
+          "name": "ClickIconShow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691121143,
+          "stop": 1739691122063
+        },
+        {
+          "name": "ClickButtonLetsGo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691122063,
+          "stop": 1739691122939
+        },
+        {
+          "name": "GetUserNameFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691122956,
+          "stop": 1739691125338
+        },
+        {
+          "name": "GetUserNameRoleFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691125346,
+          "stop": 1739691125458
+        },
+        {
+          "name": "VerifyBrokerUserNameAndRole",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Leoautotest Feabroker"
+            },
+            {
+              "name": "String",
+              "value": "Broker"
+            }
+          ],
+          "start": 1739691125470,
+          "stop": 1739691125999
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691126009,
+          "stop": 1739691132817
+        },
+        {
+          "name": "SearchNineAAlbermaleRd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691132838,
+          "stop": 1739691144035
+        },
+        {
+          "name": "SelectItemNineAAlbermaleRd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691144035,
+          "stop": 1739691148232
+        },
+        {
+          "name": "VerifyTitleBuildingViewPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691148235,
+          "stop": 1739691152085
+        },
+        {
+          "name": "GetValueOfStringAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691152085,
+          "stop": 1739691154158
+        },
+        {
+          "name": "VerifyBuildingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "9A Albermale Rd"
+            },
+            {
+              "name": "String",
+              "value": "9A Albermale Rd"
+            }
+          ],
+          "start": 1739691154158,
+          "stop": 1739691157181
+        },
+        {
+          "name": "UpdateValueCreditScreeningFee",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifMessageScreeningFeeSaved",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1739691159186,
+              "stop": 1739691167173
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691157181,
+          "stop": 1739691167173
+        },
+        {
+          "name": "ClickTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691167174,
+          "stop": 1739691168946
+        },
+        {
+          "name": "GetSubjectWithoutAgentAlbermaleRd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetVlOfClmnUnitFrstRw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1739691170044,
+              "stop": 1739691170124
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691169022,
+          "stop": 1739691170133
+        },
+        {
+          "name": "ClickRowByOccupied",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691170134,
+          "stop": 1739691170447
+        },
+        {
+          "name": "VerifyTitleAddApartmentsPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691170449,
+          "stop": 1739691174978
+        },
+        {
+          "name": "ClickButtonPlusApplication",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691174981,
+          "stop": 1739691176097
+        },
+        {
+          "name": "VerifyTitleCreateApplication",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691176100,
+          "stop": 1739691176508
+        },
+        {
+          "name": "PassFirstStep",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691176509,
+          "stop": 1739691180440
+        },
+        {
+          "name": "CopyEmailBeforeDogFromFieldGetApplicationLink",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691180443,
+          "stop": 1739691182500
+        },
+        {
+          "name": "PassThirdStepAddressNineAAlbermaleRd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "SelectFisrtDayInNextMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1739691186209,
+              "stop": 1739691187379
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691182507,
+          "stop": 1739691193066
+        },
+        {
+          "name": "VerifyTitleApplicationSuccessfullyCreated",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691193067,
+          "stop": 1739691193121
+        },
+        {
+          "name": "VerifyTextLinkAlreadyCopied",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691193122,
+          "stop": 1739691193177
+        },
+        {
+          "name": "ClickButtonAddApplicant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691193177,
+          "stop": 1739691193861
+        },
+        {
+          "name": "AddOneNewlyCreatedOccupantGuarantor",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyTitleAddApplicantMdlWndw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1739691193872,
+              "stop": 1739691193931
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691193871,
+          "stop": 1739691207567
+        },
+        {
+          "name": "CopyEmailBeforeDogFromFirstFieldInputEmailAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691207570,
+          "stop": 1739691207741
+        },
+        {
+          "name": "CopyEmailBeforeDogFromSecondFieldInputEmailAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691207743,
+          "stop": 1739691207904
+        },
+        {
+          "name": "ClickBtnAdd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifMessageAddedApplicantsToApplication",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1739691208652,
+              "stop": 1739691218249
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691207909,
+          "stop": 1739691218249
+        },
+        {
+          "name": "ClickTabApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691218251,
+          "stop": 1739691218972
+        },
+        {
+          "name": "GetApartmentAddressFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691218973,
+          "stop": 1739691219038
+        },
+        {
+          "name": "GetFirstNameTenantMainApplicantFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691219039,
+          "stop": 1739691219585
+        },
+        {
+          "name": "GetLastNameTenantMainApplicantFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691219586,
+          "stop": 1739691220141
+        },
+        {
+          "name": "GetFirstLastNameTenantOccupantFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691220141,
+          "stop": 1739691220194
+        },
+        {
+          "name": "GetPriceFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691220194,
+          "stop": 1739691220248
+        },
+        {
+          "name": "GetDateCreatedFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691220249,
+          "stop": 1739691220833
+        },
+        {
+          "name": "GetAgentFromFrstRw",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691220833,
+          "stop": 1739691220877
+        },
+        {
+          "name": "GetStatusFromFrstRw",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691220878,
+          "stop": 1739691220923
+        },
+        {
+          "name": "VerifyFullDataByApplicationTenantsMainOccupant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "9A Albermale Rd"
+            },
+            {
+              "name": "String",
+              "value": "9A Albermale Rd"
+            },
+            {
+              "name": "String",
+              "value": "Tenant"
+            },
+            {
+              "name": "String",
+              "value": "Tenant"
+            },
+            {
+              "name": "String",
+              "value": "Generated"
+            },
+            {
+              "name": "String",
+              "value": "Tenant Generated"
+            },
+            {
+              "name": "String",
+              "value": "Tenant Generated"
+            },
+            {
+              "name": "String",
+              "value": "Generated"
+            },
+            {
+              "name": "String",
+              "value": "$10333"
+            },
+            {
+              "name": "String",
+              "value": "$10333"
+            },
+            {
+              "name": "String",
+              "value": "Not assigned"
+            },
+            {
+              "name": "String",
+              "value": "Not assigned"
+            },
+            {
+              "name": "String",
+              "value": "Draft"
+            },
+            {
+              "name": "String",
+              "value": "Draft"
+            },
+            {
+              "name": "String",
+              "value": "02/16/2025"
+            },
+            {
+              "name": "String",
+              "value": "02/16/2025"
+            }
+          ],
+          "start": 1739691220925,
+          "stop": 1739691220972
+        },
+        {
+          "name": "OpenNewTab",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691220973,
+          "stop": 1739691221099
+        },
+        {
+          "name": "GetSubjectLetterCreateTenantViaGetLink",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691226257,
+          "stop": 1739691226298
+        },
+        {
+          "name": "VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Welcome to Noyo Properties NYC! Let's begin your application process for 9A Albermale Rd #7M6C now!"
+            },
+            {
+              "name": "String",
+              "value": "Welcome to Noyo Properties NYC! Let's begin your application process for 9A Albermale Rd #7M6C now!"
+            }
+          ],
+          "start": 1739691226298,
+          "stop": 1739691226315
+        },
+        {
+          "name": "ClickButtonHtml",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691226315,
+          "stop": 1739691227701
+        },
+        {
+          "name": "ClickButtonStartYourApplicationNowlForTenant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691227702,
+          "stop": 1739691238072
+        },
+        {
+          "name": "VerifyChangingAvatarImageLandlord",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691238074,
+          "stop": 1739691238155
+        },
+        {
+          "name": "OpenNewTab",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691238155,
+          "stop": 1739691238252
+        },
+        {
+          "name": "VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Welcome to Noyo Properties NYC! Let's begin your application process for 9A Albermale Rd #7M6C now!"
+            },
+            {
+              "name": "String",
+              "value": "Welcome to Noyo Properties NYC! Let's begin your application process for 9A Albermale Rd #7M6C now!"
+            }
+          ],
+          "start": 1739691242213,
+          "stop": 1739691242233
+        },
+        {
+          "name": "ClickButtonHtml",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691242234,
+          "stop": 1739691243618
+        },
+        {
+          "name": "ClickButtonStartYourApplicationNowlForTenantSecond",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Could not find element by: By.XPath: //a[text() = 'Start Your Application Now!']; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception",
+            "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_ClickButtonStartYourApplicationNowlForTenantSecond_100663450_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\EmailPutsBoxPage\\EmailPutsBoxSteps.cs:line 35\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_ClickButtonStartYourApplicationNowlForTenantSecond_100663450_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1739691243619,
+          "stop": 1739691247911
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "3f18fe74ee08464a8797a1679c732f2c-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1739691108533,
+      "stop": 1739691250461
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1739691108531,
+  "stop": 1739691250472
+}

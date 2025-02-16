@@ -6,10 +6,18 @@ namespace CazamioNewProject.PageObjects.TenantPages.ToasterMessages
 {
     public partial class ToasterMessagesTenants
     {
-        [AllureStep("VerifyChangingAvatarImageLandlord")]
+        [AllureStep("VerifyMessageAccountWasSuccessfullyActivated")]
         public ToasterMessagesTenants VerifyMessageAccountWasSuccessfullyActivated()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageAccountWasSuccessfullyActivated));
+
+            return this;
+        }
+
+        [AllureStep("VerifyMessageFirstSuccessfullUpdatedPassword")]
+        public ToasterMessagesTenants VerifyMessageFirstSuccessfullUpdatedPassword()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageFirstSuccessfullUpdatedPassword));
 
             return this;
         }

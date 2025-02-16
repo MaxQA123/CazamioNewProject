@@ -42,6 +42,8 @@ using CazamioNewProject.PageObjects.AdminPages.VisitLogsPage;
 using CazamioNewProject.PageObjects.EmailPutsBoxPage;
 using CazamioNewProject.PageObjects.TenantPages.Header;
 using CazamioNewProject.PageObjects.TenantPages.LogInPage;
+using CazamioNewProject.PageObjects.TenantPages.PleaseChangeYourPasswordMdlWndw;
+using CazamioNewProject.PageObjects.TenantPages.PleaseTellUsYourNameMdlWndw;
 using CazamioNewProject.PageObjects.TenantPages.SubmittingApplicationPage;
 using CazamioNewProject.PageObjects.TenantPages.ToasterMessages;
 using OpenQA.Selenium;
@@ -74,15 +76,7 @@ namespace CazamioNewProject.PageObjects
         public static DemoTemplate Demo => GetPage<DemoTemplate>();
         public static EmailNotifications EmailNotofications => GetPage<EmailNotifications>();
 
-        #endregion
-
-        #region Tenant objects
-
-        public static TenantCreatorMySpace TenantCreatorMySpace => GetPage<TenantCreatorMySpace>();
-        public static TenantOccupantMySpace TenantOccupantMySpace => GetPage<TenantOccupantMySpace>();
-        public static TenantGuarantorMySpace TenantGuarantorMySpace => GetPage<TenantGuarantorMySpace>();
-
-        #endregion
+        #endregion 
 
         #region Landlord pages
 
@@ -142,12 +136,27 @@ namespace CazamioNewProject.PageObjects
         public static EmailHelper EmailHelper => GetPage<EmailHelper>();
         public static JScriptExecutor JScriptExecutor => GetPage<JScriptExecutor>();
 
+        #region Tenant objects
+
+        public static TenantCreatorMySpace TenantCreatorMySpace => GetPage<TenantCreatorMySpace>();
+        public static TenantOccupantMySpace TenantOccupantMySpace => GetPage<TenantOccupantMySpace>();
+        public static TenantGuarantorMySpace TenantGuarantorMySpace => GetPage<TenantGuarantorMySpace>();
+
+        #endregion
+
         #region Tanant pages
 
         public static ToasterMessagesTenants ToasterMessagesTenants => GetPage<ToasterMessagesTenants>();
         public static Header Header => GetPage<Header>();
         public static LogInTenant LogInTenant => GetPage<LogInTenant>();
         public static SubmittingApplication SubmittingApplication => GetPage<SubmittingApplication>();
+
+        #endregion
+
+        #region Tanant modal windows
+
+        public static PleaseChangeYourPasswordMdlWndw PleaseChangeYourPasswordMdlWndw => GetPage<PleaseChangeYourPasswordMdlWndw>();
+        public static PleaseTellUsYourNameMdlWndw PleaseTellUsYourNameMdlWndw => GetPage<PleaseTellUsYourNameMdlWndw>();
 
         #endregion
     }

@@ -744,10 +744,23 @@ namespace BrokerGuiTests
                 .ClickButtonStartYourApplicationNowlForTenant();
             Pages.ToasterMessagesTenants
                 .VerifyMessageAccountWasSuccessfullyActivated();
+
+            Pages.PleaseChangeYourPasswordMdlWndw
+                .QuicklyPass();
+            Pages.PleaseTellUsYourNameMdlWndw
+                .QuicklyPass();
+
             Pages.JScriptExecutor
                .OpenNewTab();
             Pages.EmailHelper
                .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, partEmailPutsBoxOccupant);
+            Pages.EmailPutsBox
+                .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
+            Pages.EmailPutsBox
+                .ClickButtonHtml()
+                .ClickButtonStartYourApplicationNowlForTenantSecond();
+            Pages.ToasterMessagesTenants
+                .VerifyMessageAccountWasSuccessfullyActivated();
 
             WaitUntil.WaitSomeInterval(5000);
 
