@@ -21,5 +21,13 @@ namespace CazamioNewProject.PageObjects.TenantPages.ToasterMessages
 
             return this;
         }
+
+        [AllureStep("VerifyMessageSecondSuccessfullyUpdatedName")]
+        public ToasterMessagesTenants VerifyMessageSecondSuccessfullyUpdatedName()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSecondSuccessfullyUpdatedName));
+
+            return this;
+        }
     }
 }

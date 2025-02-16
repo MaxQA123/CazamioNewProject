@@ -748,8 +748,12 @@ namespace BrokerGuiTests
             Pages.PleaseChangeYourPasswordMdlWndw
                 .QuicklyPass();
             Pages.PleaseTellUsYourNameMdlWndw
-                .QuicklyPass();
-
+                .QuicklyPassForMainApplicant();
+            Pages.LeasePriceAdjustmentMdlWndw
+                .ClickBtnCancel();
+            Pages.Header
+                .LogOut();
+            //Occupant
             Pages.JScriptExecutor
                .OpenNewTab();
             Pages.EmailHelper
@@ -761,6 +765,33 @@ namespace BrokerGuiTests
                 .ClickButtonStartYourApplicationNowlForTenantSecond();
             Pages.ToasterMessagesTenants
                 .VerifyMessageAccountWasSuccessfullyActivated();
+
+            Pages.PleaseChangeYourPasswordMdlWndw
+                .QuicklyPass();
+            Pages.PleaseTellUsYourNameMdlWndw
+                .QuicklyPassForOccupant();
+            Pages.Header
+                .LogOut();
+            //Guarantor
+            Pages.JScriptExecutor
+               .OpenNewTab();
+            Pages.EmailHelper
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, partEmailPutsBoxGuarantor);
+            Pages.EmailPutsBox
+                .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
+            Pages.EmailPutsBox
+                .ClickButtonHtml()
+                .ClickButtonStartYourApplicationNowlForTenantSecond();
+            Pages.ToasterMessagesTenants
+                .VerifyMessageAccountWasSuccessfullyActivated();
+
+            Pages.PleaseChangeYourPasswordMdlWndw
+                .QuicklyPass();
+            Pages.PleaseTellUsYourNameMdlWndw
+                .QuicklyPassForGuarantor();
+            Pages.Header
+                .LogOut();
+
 
             WaitUntil.WaitSomeInterval(5000);
 

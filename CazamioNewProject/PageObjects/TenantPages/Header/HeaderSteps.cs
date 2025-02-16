@@ -16,16 +16,16 @@ namespace CazamioNewProject.PageObjects.TenantPages.Header
             return this;
         }
 
-        [AllureStep("LogOutViaHeader")]
-        public Header LogOutViaHeader()
+        [AllureStep("LogOut")]
+        public Header LogOut()
         {
             WaitUntil.CustomElementIsVisible(ButtonInFormAvatar);
             WaitUntil.CustomElementIsClickable(ButtonInFormAvatar);
             Button.Click(ButtonInFormAvatar);
             WaitUntil.CustomElementIsVisible(ButtonSignOut);
             Button.Click(ButtonSignOut);
-            //Pages.MdlWndwAreYouSureLogOut
-            //    .ClickButtonYesIamSure();
+            Pages.ConfirmLogOutMdlWndw
+                .ConmfirmLogOut();
 
             return this;
         }

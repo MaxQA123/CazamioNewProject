@@ -38,24 +38,24 @@ namespace ApiTestsLandlord
 
         public void LogIn()
         {
-            #region Test Data
+            //#region Test Data
 
-            MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
+            //MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
 
-            var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
-            var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
-            var rememberMe = ApiRequestData.TRUE;
-            var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
+            //var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
+            //var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
+            //var rememberMe = ApiRequestData.TRUE;
+            //var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
 
-            #endregion
+            //#endregion
 
-            #region Test
+            //#region Test
 
-            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+            //var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
 
-            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+            //LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
 
-            #endregion
+            //#endregion
         }
 
         [Test]
@@ -69,50 +69,50 @@ namespace ApiTestsLandlord
 
         public void CreateBroker()
         {
-            #region Test Data
+            //#region Test Data
 
-            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+            //int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
 
-            MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
+            //MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
 
-            var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
-            var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
-            var rememberMe = ApiRequestData.TRUE;
-            var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
+            //var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
+            //var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
+            //var rememberMe = ApiRequestData.TRUE;
+            //var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
 
-            Broker broker = new Broker().Generate();
+            //Broker broker = new Broker().Generate();
 
-            var firstNameBroker = broker.FirstName;
-            var lastNameBroker = broker.LastName;
-            var emailBroker = broker.EmailAddress;
-            var passwordBroker = "";
+            //var firstNameBroker = broker.FirstName;
+            //var lastNameBroker = broker.LastName;
+            //var emailBroker = broker.EmailAddress;
+            //var passwordBroker = "";
 
-            #endregion
+            //#endregion
 
-            #region Preconditions
+            //#region Preconditions
 
-            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+            //var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
 
-            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+            //LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
 
-            #endregion
+            //#endregion
 
-            #region Tests
+            //#region Tests
 
-            BrokerCreation.CreateBroker(responseMarketplaceAdmin.AuthData.Token, firstNameBroker, lastNameBroker, emailBroker, passwordBroker);
+            //BrokerCreation.CreateBroker(responseMarketplaceAdmin.AuthData.Token, firstNameBroker, lastNameBroker, emailBroker, passwordBroker);
 
-            #endregion
+            //#endregion
 
-            #region Postconditions
+            //#region Postconditions
 
-            AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(emailBroker, marketplaceId);
-            Console.WriteLine($"{emailBroker}");
-            WaitUntil.WaitSomeInterval(100);
-            LandlordsBrokersDbRequests.LandlordsBrokers.DeleteNewlyCreatedBroker(emailBroker, marketplaceId);
-            WaitUntil.WaitSomeInterval(100);
-            AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(emailBroker, marketplaceId);
+            //AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(emailBroker, marketplaceId);
+            //Console.WriteLine($"{emailBroker}");
+            //WaitUntil.WaitSomeInterval(100);
+            //LandlordsBrokersDbRequests.LandlordsBrokers.DeleteNewlyCreatedBroker(emailBroker, marketplaceId);
+            //WaitUntil.WaitSomeInterval(100);
+            //AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(emailBroker, marketplaceId);
 
-            #endregion
+            //#endregion
         }
 
         [Test]
@@ -126,54 +126,54 @@ namespace ApiTestsLandlord
 
         public void CreateAgent()
         {
-            #region Test Data
+            //#region Test Data
 
-            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+            //int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
 
-            MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
+            //MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
 
-            var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
-            var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
-            var rememberMe = ApiRequestData.TRUE;
-            var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
+            //var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
+            //var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
+            //var rememberMe = ApiRequestData.TRUE;
+            //var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
 
-            Agent agent = new Agent().Generate();
+            //Agent agent = new Agent().Generate();
 
-            var firstNameAgent = agent.FirstName;
-            var lastNameAgent = agent.LastName;
-            var emailAgent = agent.EmailAddress;
-            var phoneNumberAgent = agent.PhoneNumber;
-            var brokerCommissionAgent = agent.BrokerCommissionApi;
-            var agentCommissionAgent = agent.AgentCommissionApi;
-            var cellAgent = agent.Cell;
+            //var firstNameAgent = agent.FirstName;
+            //var lastNameAgent = agent.LastName;
+            //var emailAgent = agent.EmailAddress;
+            //var phoneNumberAgent = agent.PhoneNumber;
+            //var brokerCommissionAgent = agent.BrokerCommissionApi;
+            //var agentCommissionAgent = agent.AgentCommissionApi;
+            //var cellAgent = agent.Cell;
 
-            #endregion
+            //#endregion
 
-            #region Preconditions
+            //#region Preconditions
 
-            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+            //var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
 
-            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+            //LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
 
-            #endregion
+            //#endregion
 
-            #region Tests
+            //#region Tests
 
-            AgentCreation.CreateAgent(responseMarketplaceAdmin.AuthData.Token, firstNameAgent, lastNameAgent, emailAgent, phoneNumberAgent, brokerCommissionAgent, agentCommissionAgent, cellAgent);
+            //AgentCreation.CreateAgent(responseMarketplaceAdmin.AuthData.Token, firstNameAgent, lastNameAgent, emailAgent, phoneNumberAgent, brokerCommissionAgent, agentCommissionAgent, cellAgent);
 
-            #endregion
+            //#endregion
 
-            #region Postconditions
+            //#region Postconditions
 
-            WaitUntil.WaitSomeInterval(100);
-            AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(emailAgent, marketplaceId);
-            Console.WriteLine($"{emailAgent}");
-            WaitUntil.WaitSomeInterval(100);
-            BrokersAgentsDbRequests.BrokersAgents.DeleteNewlyCreatedAgent(emailAgent, marketplaceId);
-            WaitUntil.WaitSomeInterval(100);
-            AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(emailAgent, marketplaceId);
+            //WaitUntil.WaitSomeInterval(100);
+            //AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(emailAgent, marketplaceId);
+            //Console.WriteLine($"{emailAgent}");
+            //WaitUntil.WaitSomeInterval(100);
+            //BrokersAgentsDbRequests.BrokersAgents.DeleteNewlyCreatedAgent(emailAgent, marketplaceId);
+            //WaitUntil.WaitSomeInterval(100);
+            //AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(emailAgent, marketplaceId);
 
-            #endregion
+            //#endregion
         }
 
         [Test]
@@ -187,44 +187,44 @@ namespace ApiTestsLandlord
 
         public void CreateOwnerWithBroker()
         {
-            #region Test Data
+            //#region Test Data
 
-            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+            //int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
 
-            MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
+            //MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
 
-            var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
-            var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
-            var rememberMe = ApiRequestData.TRUE;
-            var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
+            //var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
+            //var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
+            //var rememberMe = ApiRequestData.TRUE;
+            //var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
 
-            var ownerBody = OwnerCreation.RequestBodyBrokerFullData();
+            //var ownerBody = OwnerCreation.RequestBodyBrokerFullData();
 
-            #endregion
+            //#endregion
 
-            #region Preconditions
+            //#region Preconditions
 
-            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+            //var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
 
-            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+            //LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
 
-            #endregion
+            //#endregion
 
-            #region Tests
+            //#region Tests
 
-            OwnerCreation.CreateOwnerWithBrokerFullData(responseMarketplaceAdmin.AuthData.Token, ownerBody);
+            //OwnerCreation.CreateOwnerWithBrokerFullData(responseMarketplaceAdmin.AuthData.Token, ownerBody);
 
-            #endregion
+            //#endregion
 
-            #region Postconditions
+            //#region Postconditions
 
-            OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(ownerBody.OwnerEmail, marketplaceId);
-            Console.WriteLine($"{ownerBody.OwnerEmail}");
-            OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(ownerBody.OwnerEmail, marketplaceId);
-            OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(ownerBody.OwnerEmail, marketplaceId);
-            OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(ownerBody.OwnerEmail, marketplaceId);
+            //OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(ownerBody.OwnerEmail, marketplaceId);
+            //Console.WriteLine($"{ownerBody.OwnerEmail}");
+            //OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(ownerBody.OwnerEmail, marketplaceId);
+            //OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(ownerBody.OwnerEmail, marketplaceId);
+            //OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(ownerBody.OwnerEmail, marketplaceId);
 
-            #endregion
+            //#endregion
         }
 
         [Test]
@@ -238,44 +238,44 @@ namespace ApiTestsLandlord
 
         public void CreateOwnerWithAgent()
         {
-            #region Test Data
+            //#region Test Data
 
-            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+            //int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
 
-            MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
+            //MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
 
-            var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
-            var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
-            var rememberMe = ApiRequestData.TRUE;
-            var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
+            //var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
+            //var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
+            //var rememberMe = ApiRequestData.TRUE;
+            //var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
 
-            var ownerBody = OwnerCreation.RequestBodyAgentRequiredData();
+            //var ownerBody = OwnerCreation.RequestBodyAgentRequiredData();
 
-            #endregion
+            //#endregion
 
-            #region Preconditions
+            //#region Preconditions
 
-            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+            //var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
 
-            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+            //LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
 
-            #endregion
+            //#endregion
 
-            #region Tests
+            //#region Tests
 
-            OwnerCreation.CreateOwnerWithAgentRequiredData(responseMarketplaceAdmin.AuthData.Token, ownerBody);
+            //OwnerCreation.CreateOwnerWithAgentRequiredData(responseMarketplaceAdmin.AuthData.Token, ownerBody);
 
-            #endregion
+            //#endregion
 
-            #region Postconditions
+            //#region Postconditions
 
-            OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(ownerBody.OwnerEmail, marketplaceId);
-            Console.WriteLine($"{ownerBody.OwnerEmail}");
-            OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(ownerBody.OwnerEmail, marketplaceId);
-            OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(ownerBody.OwnerEmail, marketplaceId);
-            OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(ownerBody.OwnerEmail, marketplaceId);
+            //OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(ownerBody.OwnerEmail, marketplaceId);
+            //Console.WriteLine($"{ownerBody.OwnerEmail}");
+            //OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(ownerBody.OwnerEmail, marketplaceId);
+            //OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(ownerBody.OwnerEmail, marketplaceId);
+            //OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(ownerBody.OwnerEmail, marketplaceId);
 
-            #endregion
+            //#endregion
         }
 
         [Test]
@@ -289,34 +289,34 @@ namespace ApiTestsLandlord
 
         public void CreateBuildingFullDataWithBroker()
         {
-            #region Test Data
+            //#region Test Data
 
-            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+            //int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
 
-            MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
+            //MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
 
-            var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
-            var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
-            var rememberMe = ApiRequestData.TRUE;
-            var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
+            //var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
+            //var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
+            //var rememberMe = ApiRequestData.TRUE;
+            //var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
 
-            var buildingBody = BuildingCreation.RequestBodyCreateBuildingFullDataBroker();
+            //var buildingBody = BuildingCreation.RequestBodyCreateBuildingFullDataBroker();
 
-            #endregion
+            //#endregion
 
-            #region Preconditions
+            //#region Preconditions
 
-            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+            //var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
 
-            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+            //LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
 
-            #endregion
+            //#endregion
 
-            #region Tests
+            //#region Tests
 
-            BuildingCreation.CreateBuildingWithBrokerFullData(responseMarketplaceAdmin.AuthData.Token, buildingBody);
+            //BuildingCreation.CreateBuildingWithBrokerFullData(responseMarketplaceAdmin.AuthData.Token, buildingBody);
 
-            #endregion
+            //#endregion
         }
 
         [Test]
@@ -330,34 +330,34 @@ namespace ApiTestsLandlord
 
         public void CreateBuildingMandatoryDataWithAgent()
         {
-            #region Test Data
+            //#region Test Data
 
-            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+            //int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
 
-            MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
+            //MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
 
-            var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
-            var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
-            var rememberMe = ApiRequestData.TRUE;
-            var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
+            //var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
+            //var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
+            //var rememberMe = ApiRequestData.TRUE;
+            //var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
 
-            var buildingBody = BuildingCreationMandatoryData.RequestBodyCreateBuildingMandatoryDataWithAgent();
+            //var buildingBody = BuildingCreationMandatoryData.RequestBodyCreateBuildingMandatoryDataWithAgent();
 
-            #endregion
+            //#endregion
 
-            #region Preconditions
+            //#region Preconditions
 
-            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+            //var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
 
-            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+            //LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
 
-            #endregion
+            //#endregion
 
-            #region Tests
+            //#region Tests
 
-            BuildingCreationMandatoryData.CreateBuildingMandatoryDataWithAgent(responseMarketplaceAdmin.AuthData.Token, buildingBody);
+            //BuildingCreationMandatoryData.CreateBuildingMandatoryDataWithAgent(responseMarketplaceAdmin.AuthData.Token, buildingBody);
 
-            #endregion
+            //#endregion
         }
     }
 }

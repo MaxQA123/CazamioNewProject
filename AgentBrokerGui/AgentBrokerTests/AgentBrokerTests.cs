@@ -157,7 +157,7 @@ namespace AgentBrokerGui
                 .ClickButtonGeneralNext()
                 .UploadOneImages()
                 .ClickButtonSaveBuilding();
-            Pages.ToasterMessages
+            Pages.ToasterMessagesLandlord
                .VerifyMessageSavedSuccessfullyIfCreatedBuilding();
             Pages.BuildingView
                 .VerifyTitleBuildingViewPage();
@@ -249,7 +249,7 @@ namespace AgentBrokerGui
                 .ClickButtonSelectVideo()
                 .UploadOneFileVideo()
                 .ClickButtonSaveApartment();
-            Pages.ToasterMessages
+            Pages.ToasterMessagesLandlord
                 .VerifyMessageApartmentsWereSavedSuccessfully();
             Pages.ListOfApartments
                .VerifyTitleListOfApartments();
@@ -341,7 +341,7 @@ namespace AgentBrokerGui
                 .ClickButtonSelectVideo()
                 .SetLinksYouTubeVimeo()
                 .ClickButtonSaveApartment();
-            Pages.ToasterMessages
+            Pages.ToasterMessagesLandlord
                 .VerifyMessageApartmentsWereSavedSuccessfully();
             Pages.ListOfApartments
                .VerifyTitleListOfApartments();

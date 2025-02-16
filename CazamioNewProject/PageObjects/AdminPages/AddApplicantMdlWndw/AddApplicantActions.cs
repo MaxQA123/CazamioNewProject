@@ -36,7 +36,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw
         public string CopyEmailBeforeDogFromSecondFieldInputEmailAddress()
         {
             WaitUntil.WaitSomeInterval(100);
-            string copyPartEmail = SecondFieldInputEmailAddress.Text;
+            string copyPartEmail = SecondFieldInputEmailAddress.GetAttribute("value");
             Regex regexPartEmail = new Regex(@"^.........................");
             string partEmail = regexPartEmail.Match(copyPartEmail).ToString();
 

@@ -10,8 +10,11 @@ namespace CazamioNewProject.PageObjects.TenantPages.PleaseChangeYourPasswordMdlW
         {
             VerifyTitle();
             InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+            WaitUntil.WaitSomeInterval(100);
             WaitUntil.CustomElementIsClickable(BtnSave);
             Button.Click(BtnSave);
+            Pages.ToasterMessagesTenants
+                .VerifyMessageFirstSuccessfullUpdatedPassword();
 
             return this;
         }

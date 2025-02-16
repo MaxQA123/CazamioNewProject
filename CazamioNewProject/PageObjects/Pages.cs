@@ -40,7 +40,9 @@ using CazamioNewProject.PageObjects.AdminPages.ToasterMessages;
 using CazamioNewProject.PageObjects.AdminPages.UsersPage;
 using CazamioNewProject.PageObjects.AdminPages.VisitLogsPage;
 using CazamioNewProject.PageObjects.EmailPutsBoxPage;
+using CazamioNewProject.PageObjects.TenantPages.ConfirmLogOutMdlWndw;
 using CazamioNewProject.PageObjects.TenantPages.Header;
+using CazamioNewProject.PageObjects.TenantPages.LeasePriceAdjustmentMdlWndw;
 using CazamioNewProject.PageObjects.TenantPages.LogInPage;
 using CazamioNewProject.PageObjects.TenantPages.PleaseChangeYourPasswordMdlWndw;
 using CazamioNewProject.PageObjects.TenantPages.PleaseTellUsYourNameMdlWndw;
@@ -157,6 +159,8 @@ namespace CazamioNewProject.PageObjects
 
         public static PleaseChangeYourPasswordMdlWndw PleaseChangeYourPasswordMdlWndw => GetPage<PleaseChangeYourPasswordMdlWndw>();
         public static PleaseTellUsYourNameMdlWndw PleaseTellUsYourNameMdlWndw => GetPage<PleaseTellUsYourNameMdlWndw>();
+        public static LeasePriceAdjustmentMdlWndw LeasePriceAdjustmentMdlWndw => GetPage<LeasePriceAdjustmentMdlWndw>();
+        public static ConfirmLogOutMdlWndw ConfirmLogOutMdlWndw => GetPage<ConfirmLogOutMdlWndw>();
 
         #endregion
     }

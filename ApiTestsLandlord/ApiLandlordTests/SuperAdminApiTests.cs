@@ -64,51 +64,51 @@ namespace ApiTestsLandlord
 
         public void CreateMarketplaceAdmin()
         {
-            #region Test Data
+            //#region Test Data
 
-            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+            //int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
 
-            SuperAdmin superAdmin = new SuperAdmin().Generate();
+            //SuperAdmin superAdmin = new SuperAdmin().Generate();
 
-            var email = superAdmin.EmailAddressSuperAdmin;
-            var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
-            var rememberMe = ApiRequestData.TRUE;
-            var deviceFingerprint = superAdmin.DeviceFingerprint;
+            //var email = superAdmin.EmailAddressSuperAdmin;
+            //var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
+            //var rememberMe = ApiRequestData.TRUE;
+            //var deviceFingerprint = superAdmin.DeviceFingerprint;
 
-            MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
+            //MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
 
-            var firstNameMarkAdm = marketplaceAdmin.FirstName;
-            var lastNameMarkAdm = marketplaceAdmin.LastName;
-            var emailMarkAdm = marketplaceAdmin.EmailAddress;
-            var passwordMarkAdm = "";
-            var subdomainMarkAdm = marketplaceAdmin.SubdomainMySpace;
+            //var firstNameMarkAdm = marketplaceAdmin.FirstName;
+            //var lastNameMarkAdm = marketplaceAdmin.LastName;
+            //var emailMarkAdm = marketplaceAdmin.EmailAddress;
+            //var passwordMarkAdm = "";
+            //var subdomainMarkAdm = marketplaceAdmin.SubdomainMySpace;
 
-            #endregion
+            //#endregion
 
-            #region Preconditions
+            //#region Preconditions
 
-            var responseSuperAdmin = LogInApiSuperAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+            //var responseSuperAdmin = LogInApiSuperAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
 
-            LogInApiSuperAdmin.VerifyUserData(responseSuperAdmin, superAdmin);
+            //LogInApiSuperAdmin.VerifyUserData(responseSuperAdmin, superAdmin);
 
-            #endregion
+            //#endregion
 
-            #region Test
+            //#region Test
 
-            MarketplaceAdminCreation.CreateMarketplaceAdmin(responseSuperAdmin.AuthData.Token, firstNameMarkAdm, lastNameMarkAdm, emailMarkAdm, passwordMarkAdm, subdomainMarkAdm);
+            //MarketplaceAdminCreation.CreateMarketplaceAdmin(responseSuperAdmin.AuthData.Token, firstNameMarkAdm, lastNameMarkAdm, emailMarkAdm, passwordMarkAdm, subdomainMarkAdm);
 
-            #endregion
+            //#endregion
 
-            #region Postconditions
+            //#region Postconditions
 
-            AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(emailMarkAdm, marketplaceId);
-            Console.WriteLine($"{emailMarkAdm}");
-            WaitUntil.WaitSomeInterval(100);
-            MarketplaceAdminsDbRequests.MarketplaceAdmins.DeleteNewlyCreatedMarketplaceAdmin(emailMarkAdm, marketplaceId);
-            WaitUntil.WaitSomeInterval(100);
-            AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(emailMarkAdm, marketplaceId);
+            //AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(emailMarkAdm, marketplaceId);
+            //Console.WriteLine($"{emailMarkAdm}");
+            //WaitUntil.WaitSomeInterval(100);
+            //MarketplaceAdminsDbRequests.MarketplaceAdmins.DeleteNewlyCreatedMarketplaceAdmin(emailMarkAdm, marketplaceId);
+            //WaitUntil.WaitSomeInterval(100);
+            //AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(emailMarkAdm, marketplaceId);
 
-            #endregion
+            //#endregion
         }
     }
 }

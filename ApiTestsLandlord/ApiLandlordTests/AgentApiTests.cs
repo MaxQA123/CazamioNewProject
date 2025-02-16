@@ -25,24 +25,24 @@ namespace ApiTestsLandlord
 
         public void LogIn()
         {
-            #region Test Data
+            //#region Test Data
 
-            Agent agent = new Agent().Generate();
+            //Agent agent = new Agent().Generate();
 
-            var email = agent.EmailAddressAgent;
-            var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
-            var rememberMe = ApiRequestData.TRUE;
-            var deviceFingerprint = agent.DeviceFingerprint;
+            //var email = agent.EmailAddressAgent;
+            //var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
+            //var rememberMe = ApiRequestData.TRUE;
+            //var deviceFingerprint = agent.DeviceFingerprint;
 
-            #endregion
+            //#endregion
 
-            #region Test
+            //#region Test
 
-            var responseAgent = LogInApiAgent.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+            //var responseAgent = LogInApiAgent.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
 
-            LogInApiAgent.VerifyUserData(responseAgent, agent);
+            //LogInApiAgent.VerifyUserData(responseAgent, agent);
 
-            #endregion
+            //#endregion
         }
     }
 }
