@@ -129,6 +129,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
             return partEmail;
         }
 
+        [AllureStep("CopyEmailBeforeDogFromGetApplicationLink")]
+        public string CopyEmailBeforeDogFromGetApplicationLink()
+        {
+            KeyBoardActions.ClickArrowDown();
+            WaitUntil.WaitSomeInterval(500);
+            string copyPartEmail = FieldInputGetApplicationLink.GetAttribute("value");
+            Regex regexPartEmail = new Regex(@"^..................");
+            string partEmail = regexPartEmail.Match(copyPartEmail).ToString();
+
+            return partEmail;
+        }
+
         [AllureStep("GetLeasePriceValueOfString")]
         public string GetLeasePriceValueOfString()
         {
@@ -139,11 +151,20 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
             return leasePrice;
         }
 
-        [AllureStep("EnterFieldInputFirstName")]
-        public ApartmentView EnterFieldInputGetApplicationLink()
+        [AllureStep("EnterRandomEmailGetApplicationLink")]
+        public ApartmentView EnterRandomEmailGetApplicationLink()
         {
             WaitUntil.CustomElementIsVisible(FieldInputGetApplicationLink);
             InputGeneral.InputFunctionWithClear(FieldInputGetApplicationLink, tenantCreatorMySpace.Emails.RandomMainApplicantEmail);
+
+            return this;
+        }
+
+        [AllureStep("EnterExistEmailWithCreditReporGetApplicationLink")]
+        public ApartmentView EnterExistEmailWithCreditReporGetApplicationLink()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputGetApplicationLink);
+            InputGeneral.InputFunctionWithClear(FieldInputGetApplicationLink, tenantCreatorMySpace.CreatedWithCreditReport.Email);
 
             return this;
         }

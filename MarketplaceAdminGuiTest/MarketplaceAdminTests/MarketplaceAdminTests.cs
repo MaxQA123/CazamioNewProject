@@ -960,7 +960,7 @@ namespace MarketplaceAdminGuiTest
 
             Pages.ApartmentView
                 .VerifyTitleApartmentViewPage()
-                .EnterFieldInputGetApplicationLink();
+                .EnterRandomEmailGetApplicationLink();
 
             string leasePriceFromUnit = Pages.ApartmentView.GetLeasePriceValueOfString();
             string partEmailPutsBox = Pages.ApartmentView.CopyEmailBeforeDogFromFieldGetApplicationLink();

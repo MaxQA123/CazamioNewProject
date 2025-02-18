@@ -796,6 +796,112 @@ namespace BrokerGuiTests
         }
 
         [Test]
+        [Order(8)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(1)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Broker")]
+        [AllureSubSuite("CreateApplicationForApartmentApplicationSubmitted")]
+
+        public void CreateApplicationForApartmentApplicationSubmitted()
+        {
+            #region SettingsForBuilding
+
+            //30-39Crown St
+
+            #endregion
+
+            #region Test data
+
+            Apartment apartment = Apartment.Generate();
+            ApartmentApplicationsTable apartmentApplicationsTable = ApartmentApplicationsTable.Generate();
+            TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
+            TenantOccupantMySpace tenantOccupantMySpace = TenantOccupantMySpace.Generate();
+
+            #endregion
+
+            #region Preconditions Test
+
+            Pages.LogInLandlord
+               .EnterEmailPasswordAsBroker()
+               .ClickIconShow()
+               .ClickButtonLetsGo();
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+            Pages.SidebarLandlord
+                .ClickButtonBuildings();
+            Pages.ListOfBuildings
+                .SearchThirtyDashThirtyNineCrownSt()
+                .SelectThirtyDashThirtyNineCrownSt();
+            Pages.BuildingView
+                .VerifyTitleBuildingViewPage();
+
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
+
+            Pages.BuildingView
+                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.ThirtyDashTrirtyNineCrownSt)
+                .ClickTabApartments();
+            KeyBoardActions.ScrollToDown();
+
+            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithoutAgentAlbermaleRd();
+
+            Pages.BuildingApartmentsTbl
+                .ClickRowByApplicationSubmitted();
+
+            #endregion
+
+            #region Test
+
+            Pages.ApartmentView
+                .VerifyTitleApartmentViewPage()
+                .EnterExistEmailWithCreditReporGetApplicationLink();
+
+            string leasePriceFromUnit = Pages.ApartmentView.GetLeasePriceValueOfString();
+            string partEmailPutsBox = Pages.ApartmentView.CopyEmailBeforeDogFromGetApplicationLink();
+
+            //Pages.ApartmentView
+            //    .ClickButtonGetLink()
+            //    .VerifyCopiedTheLinkToApplication()
+            //    .ClickTabApplications();
+            //KeyBoardActions.ScrollToDown();
+
+            //string apartmentAddressFromApp = Pages.ApartmentApplicationsTbl.GetApartmentAddressFromFirstRow();
+            //string firstNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetFirstNameTenantMainApplicantFromFirstRow();
+            //string lastNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetLastNameTenantMainApplicantFromFirstRow();
+            //string leasePriceFromApplication = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
+            //string dateCreatedFromApplication = Pages.ApartmentApplicationsTbl.GetDateCreatedFromFirstRow();
+            //string agentFromApplication = Pages.ApartmentApplicationsTbl.GetAgentFromFrstRw();
+            //string statusFromApplication = Pages.ApartmentApplicationsTbl.GetStatusFromFrstRw();
+
+            //Pages.ApartmentApplicationsTbl
+            //    .VerifyFullDataByApplicationTenantMain(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp, leasePriceFromUnit, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.NotAssigned, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
+            //Pages.JScriptExecutor
+            //   .OpenNewTab();
+            //Pages.EmailHelper
+            //   .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, partEmailPutsBox);
+
+            //string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+
+            //Pages.EmailPutsBox
+            //    .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
+            //Pages.EmailPutsBox
+            //    .ClickButtonHtml()
+            //    .ClickButtonStartYourApplicationNowlForTenant();
+            //Pages.ToasterMessagesTenants
+            //    .VerifyMessageAccountWasSuccessfullyActivated();
+
+            WaitUntil.WaitSomeInterval(5000);
+
+            #endregion
+        }
+
+        [Test]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]

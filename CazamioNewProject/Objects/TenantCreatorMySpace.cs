@@ -7,8 +7,8 @@ namespace CazamioNewProject.Objects
     {
         public FirstLastNameGeneralDataInfo FirstLastNameGeneralData { get; set; }
         public EmailsInfo Emails { get; set; }
-        public CreatedWitoutCreditReportInfo CreatedWitoutCreditReport { get; set; }
-        public CreatedWitCreditReportInfo CreatedWitCreditReport { get; set; }
+        public CreatedWitoutCreditReportInfo CreatedWithoutCreditReport { get; set; }
+        public CreatedWitCreditReportInfo CreatedWithCreditReport { get; set; }
 
         public static TenantCreatorMySpace Generate()
         {
@@ -16,8 +16,8 @@ namespace CazamioNewProject.Objects
             {
                 FirstLastNameGeneralData = CreateFirstLastNameGeneralDataInfo(),
                 Emails = CreateEmailsInfo(),
-                CreatedWitoutCreditReport = CreateCreatedWitoutCreditReportInfo(),
-                CreatedWitCreditReport = CreateCreatedWitCreditReportInfo(),
+                CreatedWithoutCreditReport = CreateCreatedWitoutCreditReportInfo(),
+                CreatedWithCreditReport = CreateCreatedWitCreditReportInfo(),
             };
         }
 

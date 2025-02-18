@@ -10,7 +10,7 @@ namespace CazamioNewProject.PageObjects.TenantPages.LogInPage
         {
             WaitUntil.CustomElementIsVisible(FieldInputEmailAddress);
             WaitUntil.CustomElementIsClickable(FieldInputEmailAddress);
-            InputGeneral.InputFunctionWithClear(FieldInputEmailAddress, tenantCreatorMySpace.CreatedWitoutCreditReport.Email);
+            InputGeneral.InputFunctionWithClear(FieldInputEmailAddress, tenantCreatorMySpace.CreatedWithoutCreditReport.Email);
             InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
 
             return this;
