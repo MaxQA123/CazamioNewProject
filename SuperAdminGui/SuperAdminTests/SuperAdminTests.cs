@@ -33,13 +33,7 @@ namespace SuperAdminGui
             Pages.LogInLandlord
                 .LogInAsSuperAdmin();
 
-            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
-            Pages.SidebarLandlord
-                .VerifySuperAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
-
-            WaitUntil.WaitSomeInterval(2000);
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
         }
@@ -66,12 +60,6 @@ namespace SuperAdminGui
 
             Pages.LogInLandlord
                 .LogInAsSuperAdmin();
-
-            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
-            Pages.SidebarLandlord
-                .VerifySuperAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
 
             #endregion
 
@@ -119,8 +107,6 @@ namespace SuperAdminGui
             Pages.SidebarLandlord
                 .VerifyMarketplaceAdminUserNameAndRoleCreating(getUserNameRoleMarketplaceAdmin);
 
-            WaitUntil.WaitSomeInterval(2000);
-
             #endregion
 
             #region Postconditions
@@ -131,6 +117,8 @@ namespace SuperAdminGui
             MarketplaceAdminsDbRequests.MarketplaceAdmins.DeleteNewlyCreatedMarketplaceAdmin(fullEmailPutsBox, marketplaceId);
             WaitUntil.WaitSomeInterval(100);
             AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(fullEmailPutsBox, marketplaceId);
+
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
         }
@@ -152,12 +140,6 @@ namespace SuperAdminGui
             Pages.LogInLandlord
                 .LogInAsSuperAdmin();
 
-            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
-            Pages.SidebarLandlord
-                .VerifySuperAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
-
             #endregion
 
             #region Test
@@ -170,7 +152,7 @@ namespace SuperAdminGui
             Pages.LogInLandlord
                 .VerifyTitle();
 
-            WaitUntil.WaitSomeInterval(2000);
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
         }

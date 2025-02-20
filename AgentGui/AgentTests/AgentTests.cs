@@ -30,12 +30,6 @@ namespace AgentGuiTests
             Pages.LogInLandlord
                .LogInAsAgentMySpace();
 
-            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
-            Pages.SidebarLandlord
-                .VerifyAgentUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
-
             #endregion
         }
 
@@ -55,12 +49,6 @@ namespace AgentGuiTests
 
             Pages.LogInLandlord
                .LogInAsAgentMySpace();
-
-            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
-            Pages.SidebarLandlord
-                .VerifyAgentUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
 
             #endregion
 

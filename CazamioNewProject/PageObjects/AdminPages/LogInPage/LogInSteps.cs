@@ -17,6 +17,12 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
             Button.Click(IconShow);
             Button.Click(ButtonLetsGo);
 
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifySuperAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+
             return this;
         }
 
@@ -28,6 +34,12 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
             InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
             Button.Click(IconShow);
             Button.Click(ButtonLetsGo);
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyMarketplaceAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
 
             return this;
         }
@@ -41,6 +53,12 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
             Button.Click(IconShow);
             Button.Click(ButtonLetsGo);
 
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+
             return this;
         }
 
@@ -53,6 +71,12 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
             Button.Click(IconShow);
             Button.Click(ButtonLetsGo);
 
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyAgentUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+
             return this;
         }
 
@@ -64,6 +88,12 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
             InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
             Button.Click(IconShow);
             Button.Click(ButtonLetsGo);
+
+            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            Pages.SidebarLandlord
+                .VerifyAgentBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
 
             return this;
         }

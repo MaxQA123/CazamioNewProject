@@ -31,12 +31,6 @@ namespace AgentBrokerGui
             Pages.LogInLandlord
                 .LogInAsAgentBrokerMySpace();
 
-            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
-            Pages.SidebarLandlord
-                .VerifyAgentBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
-
             #endregion
 
         }
@@ -101,12 +95,6 @@ namespace AgentBrokerGui
 
             Pages.LogInLandlord
                 .LogInAsAgentBrokerMySpace();
-
-            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
-            Pages.SidebarLandlord
-                .VerifyAgentBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
 
@@ -192,13 +180,6 @@ namespace AgentBrokerGui
 
             Pages.LogInLandlord
                 .LogInAsAgentBrokerMySpace();
-
-            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
-            Pages.SidebarLandlord
-                .VerifyAgentBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
-
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
@@ -278,13 +259,6 @@ namespace AgentBrokerGui
 
             Pages.LogInLandlord
                 .LogInAsAgentBrokerMySpace();
-
-            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
-            Pages.SidebarLandlord
-                .VerifyAgentBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
-
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings

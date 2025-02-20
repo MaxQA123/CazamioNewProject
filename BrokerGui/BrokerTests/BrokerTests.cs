@@ -39,12 +39,6 @@ namespace BrokerGuiTests
             Pages.LogInLandlord
                 .LogInAsBrokerMySpace();
 
-            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
-            Pages.SidebarLandlord
-                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
-
             #endregion
         }
 
@@ -65,13 +59,6 @@ namespace BrokerGuiTests
             Pages.LogInLandlord
                  .LogInAsBrokerMySpace();
 
-            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
-            Pages.SidebarLandlord
-                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
-
-            WaitUntil.WaitSomeInterval(2000);
             #endregion
 
             #region Test
@@ -83,6 +70,8 @@ namespace BrokerGuiTests
                 .MakeLogOut();
             Pages.LogInLandlord
                 .VerifyTitle();
+
+            WaitUntil.WaitSomeInterval(2000);
 
             #endregion
         }
@@ -200,12 +189,6 @@ namespace BrokerGuiTests
             Pages.LogInLandlord
                 .LogInAsBrokerMySpace();
 
-            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
-            Pages.SidebarLandlord
-                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
-
             #endregion
 
             #region Test
@@ -278,12 +261,6 @@ namespace BrokerGuiTests
 
             Pages.LogInLandlord
                 .LogInAsBrokerMySpace();
-
-            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
-            Pages.SidebarLandlord
-                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
 
@@ -366,12 +343,6 @@ namespace BrokerGuiTests
 
             Pages.LogInLandlord
                 .LogInAsBrokerMySpace();
-
-            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
-            Pages.SidebarLandlord
-                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
 
@@ -492,12 +463,7 @@ namespace BrokerGuiTests
 
             Pages.LogInLandlord
                 .LogInAsBrokerMySpace();
-
-            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
             Pages.SidebarLandlord
-                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare)
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
                 .SearchThirtyDashThirtyNineCrownSt()
@@ -562,12 +528,6 @@ namespace BrokerGuiTests
 
             Pages.LogInLandlord
                 .LogInAsBrokerMySpace();
-
-            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
-            Pages.SidebarLandlord
-                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
 
             #endregion
 
@@ -645,12 +605,6 @@ namespace BrokerGuiTests
 
             Pages.LogInLandlord
                 .LogInAsBrokerMySpace();
-
-            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
-            Pages.SidebarLandlord
-                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
@@ -810,12 +764,6 @@ namespace BrokerGuiTests
 
             Pages.LogInLandlord
                 .LogInAsBrokerMySpace();
-
-            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
-            Pages.SidebarLandlord
-                .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
@@ -912,12 +860,6 @@ namespace BrokerGuiTests
 
             Pages.LogInLandlord
                 .LogInAsBrokerMySpace();
-
-            string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
-            //Pages.SidebarLandlord
-            //    .VerifyMarketplaceAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
             //Pages.SidebarLandlord
             //    .ClickButtonBuildings();
             //Pages.ListOfBuildings
