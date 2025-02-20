@@ -37,9 +37,7 @@ namespace BrokerGuiTests
             #region Test
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsBroker()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsBrokerMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -65,9 +63,7 @@ namespace BrokerGuiTests
             #region Preconditions
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsBroker()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                 .LogInAsBrokerMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -202,9 +198,7 @@ namespace BrokerGuiTests
             #region Preconditions
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsBroker()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsBrokerMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -283,9 +277,7 @@ namespace BrokerGuiTests
             #region Preconditions Test
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsBroker()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsBrokerMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -373,9 +365,7 @@ namespace BrokerGuiTests
             #region Preconditions Test
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsBroker()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsBrokerMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -501,9 +491,7 @@ namespace BrokerGuiTests
             #region Preconditions Test
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsBroker()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsBrokerMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -573,9 +561,7 @@ namespace BrokerGuiTests
             #region Preconditions Test
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsBroker()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsBrokerMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -658,9 +644,7 @@ namespace BrokerGuiTests
             #region Preconditions Test
 
             Pages.LogInLandlord
-               .EnterEmailPasswordAsBroker()
-               .ClickIconShow()
-               .ClickButtonLetsGo();
+                .LogInAsBrokerMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -825,9 +809,7 @@ namespace BrokerGuiTests
             #region Preconditions Test
 
             Pages.LogInLandlord
-               .EnterEmailPasswordAsBroker()
-               .ClickIconShow()
-               .ClickButtonLetsGo();
+                .LogInAsBrokerMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -929,9 +911,7 @@ namespace BrokerGuiTests
             #region Preconditions Test
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsMarketplaceAdmin()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsBrokerMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();

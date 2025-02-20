@@ -6,16 +6,16 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
     public partial class LogInLandlord
     {
         [FindsBy(How = How.XPath, Using = "//input[@placeholder = 'Email']")]
-        public IWebElement FieldInputEmailLogInPg;
+        public IWebElement FieldInputEmail;
 
         [FindsBy(How = How.XPath, Using = "//input[@placeholder = 'Password']")]
-        public IWebElement FieldInputPasswordLogInPg;
+        public IWebElement FieldInputPassword;
 
         [FindsBy(How = How.XPath, Using = "//span[@class= 'show-password']")]
-        public IWebElement IconShowLogInPg;
+        public IWebElement IconShow;
 
         [FindsBy(How = How.XPath, Using = "//button[@class = 'btn btn-warning btn-link btn-lg card-footer-btn']")]
-        public IWebElement ButtonLetsGoLogInPg;
+        public IWebElement ButtonLetsGo;
 
         [FindsBy(How = How.XPath, Using = "//h4[text() = 'Login']")]
         public IWebElement TitleLogInPg;

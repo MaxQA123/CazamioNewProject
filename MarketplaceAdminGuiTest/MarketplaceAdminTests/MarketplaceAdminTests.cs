@@ -38,9 +38,7 @@ namespace MarketplaceAdminGuiTest
             #region Test
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsMarketplaceAdmin()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsMarketplaceAdminMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -66,9 +64,7 @@ namespace MarketplaceAdminGuiTest
             #region Preconditions
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsMarketplaceAdmin()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsMarketplaceAdminMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -112,9 +108,7 @@ namespace MarketplaceAdminGuiTest
             #region Preconditions
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsMarketplaceAdmin()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsMarketplaceAdminMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -209,9 +203,7 @@ namespace MarketplaceAdminGuiTest
             #region Preconditions
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsMarketplaceAdmin()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsMarketplaceAdminMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -301,9 +293,7 @@ namespace MarketplaceAdminGuiTest
             #region Preconditions
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsMarketplaceAdmin()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsMarketplaceAdminMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -381,9 +371,7 @@ namespace MarketplaceAdminGuiTest
             #region Preconditions
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsMarketplaceAdmin()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsMarketplaceAdminMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -467,9 +455,7 @@ namespace MarketplaceAdminGuiTest
             #region Preconditions
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsMarketplaceAdmin()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsMarketplaceAdminMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -598,9 +584,7 @@ namespace MarketplaceAdminGuiTest
             #region Preconditions
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsMarketplaceAdmin()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsMarketplaceAdminMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -686,9 +670,7 @@ namespace MarketplaceAdminGuiTest
             #region Preconditions Test
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsMarketplaceAdmin()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsMarketplaceAdminMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -821,9 +803,7 @@ namespace MarketplaceAdminGuiTest
             #region Preconditions Test
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsMarketplaceAdmin()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsMarketplaceAdminMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -924,9 +904,7 @@ namespace MarketplaceAdminGuiTest
             #region Preconditions Test
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsMarketplaceAdmin()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsMarketplaceAdminMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -1030,9 +1008,7 @@ namespace MarketplaceAdminGuiTest
             #region Preconditions Test
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsMarketplaceAdmin()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                 .LogInAsMarketplaceAdminMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();

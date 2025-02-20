@@ -31,9 +31,7 @@ namespace SuperAdminGui
             #region Test
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsSuperAdmin()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsSuperAdmin();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -67,9 +65,7 @@ namespace SuperAdminGui
             #region Preconditions
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsSuperAdmin()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsSuperAdmin();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -154,9 +150,7 @@ namespace SuperAdminGui
             #region Preconditions
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsSuperAdmin()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsSuperAdmin();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();

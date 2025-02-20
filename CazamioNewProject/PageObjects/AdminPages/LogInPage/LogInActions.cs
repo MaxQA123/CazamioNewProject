@@ -1,6 +1,5 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
-using CazamioNewProject.PageObjects.AdminPages.SidebarPage;
 using NUnit.Allure.Attributes;
 
 namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
@@ -16,7 +15,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         [AllureStep("ClickIconShow")]
         public LogInLandlord ClickIconShow()
         {
-            Button.Click(IconShowLogInPg);
+            Button.Click(IconShow);
 
             return this;
         }
@@ -24,7 +23,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         [AllureStep("ClickButtonLetsGo")]
         public LogInLandlord ClickButtonLetsGo()
         {
-            Button.Click(ButtonLetsGoLogInPg);
+            Button.Click(ButtonLetsGo);
+
+            return this;
+        }
+
+        [AllureStep("ClickLinkForgotPassword")]
+        public LogInLandlord ClickLinkForgotPassword()
+        {
+            Button.Click(LinkForgotPassword);
 
             return this;
         }

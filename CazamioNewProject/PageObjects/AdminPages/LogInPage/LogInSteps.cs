@@ -6,80 +6,78 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
 {
     public partial class LogInLandlord
     {
-        [AllureStep("EnterEmailPasswordAsSuperAdmin")]
-        public LogInLandlord EnterEmailPasswordAsSuperAdmin()
+        #region MySpace
+
+        [AllureStep("LogInAsSuperAdmin")]
+        public LogInLandlord LogInAsSuperAdmin()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, superAdmin.EmailAddressSuperAdmin);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, superAdmin.EmailAddressSuperAdmin);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+            InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+            Button.Click(IconShow);
+            Button.Click(ButtonLetsGo);
 
             return this;
         }
 
-        [AllureStep("EnterEmailPasswordAsMarketplaceAdmin")]
-        public LogInLandlord EnterEmailPasswordAsMarketplaceAdmin()
+        [AllureStep("LogInAsMarketplaceAdminMySpace")]
+        public LogInLandlord LogInAsMarketplaceAdminMySpace()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, marketplaceAdmin.CreatedMarkAdmMySpace.Email);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, marketplaceAdmin.CreatedMarkAdmMySpace.Email);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+            InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+            Button.Click(IconShow);
+            Button.Click(ButtonLetsGo);
 
             return this;
         }
 
-        [AllureStep("EnterEmailPasswordAsBroker")]
-        public LogInLandlord EnterEmailPasswordAsBroker()
+        [AllureStep("LogInAsBrokerMySpace")]
+        public LogInLandlord LogInAsBrokerMySpace()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, broker.CreatedBrokerMySpace.Email);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, broker.CreatedBrokerMySpace.Email);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+            InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+            Button.Click(IconShow);
+            Button.Click(ButtonLetsGo);
 
             return this;
         }
 
-        [AllureStep("EnterEmailPasswordAsAgent")]
-        public LogInLandlord EnterEmailPasswordAsAgent()
+        [AllureStep("LogInAsAgentMySpace")]
+        public LogInLandlord LogInAsAgentMySpace()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, agent.CreatedAgentMySpace.Email);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, agent.CreatedAgentMySpace.Email);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+            InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+            Button.Click(IconShow);
+            Button.Click(ButtonLetsGo);
 
             return this;
         }
 
-        [AllureStep("EnterEmailPasswordAsAgentBroker")]
-        public LogInLandlord EnterEmailPasswordAsAgentBroker()
+        [AllureStep("LogInAsAgentBrokerMySpace")]
+        public LogInLandlord LogInAsAgentBrokerMySpace()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, agentBroker.CreatedAgentMySpace.Email);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, agentBroker.CreatedAgentMySpace.Email);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+            InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+            Button.Click(IconShow);
+            Button.Click(ButtonLetsGo);
 
             return this;
         }
 
-        [AllureStep("CopiedForEnterEmailLogInPg")]
+        #endregion
+
+        [AllureStep("CopyValueFromEmail")]
         public LogInLandlord CopiedForEnterEmailLogInPg(string _email)
         {
             WaitUntil.WaitSomeInterval(1000);
             List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
             Browser._Driver.SwitchTo().Window(tabsList[2]);
             WaitUntil.WaitSomeInterval(3000);
-            InputGeneral.InputFunctionWithClear(FieldInputEmailLogInPg, _email);
-
-            return this;
-        }
-
-        [AllureStep("EnterPasswordLogInPgAsBroker")]
-        public LogInLandlord EnterPasswordLogInPgAsBroker()
-        {
-            InputGeneral.InputFunctionWithClear(FieldInputPasswordLogInPg, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
-
-            return this;
-        }
-
-        [AllureStep("ClickLinkForgotPassword")]
-        public LogInLandlord ClickLinkForgotPassword()
-        {
-            Button.Click(LinkForgotPassword);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, _email);
 
             return this;
         }
@@ -91,7 +89,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
             List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
             Browser._Driver.SwitchTo().Window(tabsList[3]);
             WaitUntil.WaitSomeInterval(1000);
-            FieldInputPasswordLogInPg.SendKeys(code);
+            FieldInputPassword.SendKeys(code);
 
             return this;
         }
@@ -103,7 +101,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
             List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
             Browser._Driver.SwitchTo().Window(tabsList[3]);
             WaitUntil.WaitSomeInterval(1000);
-            FieldInputEmailLogInPg.SendKeys(_email);
+            FieldInputEmail.SendKeys(_email);
 
             return this;
         }
@@ -115,7 +113,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
             List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
             Browser._Driver.SwitchTo().Window(tabsList[3]);
             WaitUntil.WaitSomeInterval(1000);
-            FieldInputEmailLogInPg.SendKeys(_email);
+            FieldInputEmail.SendKeys(_email);
 
             return this;
         }
@@ -127,7 +125,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
             List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
             Browser._Driver.SwitchTo().Window(tabsList[3]);
             WaitUntil.WaitSomeInterval(1000);
-            FieldInputPasswordLogInPg.SendKeys(code);
+            FieldInputPassword.SendKeys(code);
 
             return this;
         }
@@ -139,7 +137,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
             List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
             Browser._Driver.SwitchTo().Window(tabsList[3]);
             WaitUntil.WaitSomeInterval(1000);
-            FieldInputEmailLogInPg.SendKeys(_email);
+            FieldInputEmail.SendKeys(_email);
 
             return this;
         }
@@ -151,7 +149,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
             List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
             Browser._Driver.SwitchTo().Window(tabsList[3]);
             WaitUntil.WaitSomeInterval(1000);
-            FieldInputPasswordLogInPg.SendKeys(code);
+            FieldInputPassword.SendKeys(code);
 
             return this;
         }

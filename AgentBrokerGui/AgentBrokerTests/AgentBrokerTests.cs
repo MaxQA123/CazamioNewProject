@@ -29,9 +29,7 @@ namespace AgentBrokerGui
             #region Test
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsAgentBroker()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsAgentBrokerMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -58,9 +56,7 @@ namespace AgentBrokerGui
             #region Preconditions
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsAgentBroker()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                 .LogInAsAgentBrokerMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -104,9 +100,7 @@ namespace AgentBrokerGui
             #region Preconditions Test
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsAgentBroker()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsAgentBrokerMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -197,9 +191,7 @@ namespace AgentBrokerGui
             #region Preconditions Test
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsAgentBroker()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsAgentBrokerMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -237,7 +229,6 @@ namespace AgentBrokerGui
                 .ClickTabAmenities()
                 .SelectThreeAmenitiesIncludedInMonthlyRent()
                 .ClickTabAccess()
-                .ClickToggleSelfTourStatus()
                 .ClickButtonAddLock()
                 .AddItemAccessTypeNote()
                 .ClickTabSpecials()
@@ -286,9 +277,7 @@ namespace AgentBrokerGui
             #region Preconditions Test
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsAgentBroker()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+                .LogInAsAgentBrokerMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -330,7 +319,6 @@ namespace AgentBrokerGui
                 .SetSomeItemsRentalTerms()
                 .EnterShortDescriptionInternalNotes()
                 .ClickTwiceButtonGeneralNext()
-                .ClickToggleSelfTourStatus()
                 .ClickButtonAddLock()
                 .AddItemAccessTypePinCode()
                 .ClickButtonGeneralNext()

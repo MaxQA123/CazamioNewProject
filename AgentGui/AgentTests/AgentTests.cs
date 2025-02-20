@@ -28,9 +28,7 @@ namespace AgentGuiTests
             #region Test
 
             Pages.LogInLandlord
-               .EnterEmailPasswordAsAgent()
-               .ClickIconShow()
-               .ClickButtonLetsGo();
+               .LogInAsAgentMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -56,9 +54,7 @@ namespace AgentGuiTests
             #region Preconditions
 
             Pages.LogInLandlord
-                .EnterEmailPasswordAsAgent()
-                .ClickIconShow()
-                .ClickButtonLetsGo();
+               .LogInAsAgentMySpace();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
