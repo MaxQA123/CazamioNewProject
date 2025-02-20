@@ -16,6 +16,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
             return apartmentAddress;
         }
 
+        [AllureStep("GetFullNameTenantMainApplicantFromFirstRow")]
+        public string GetFullNameTenantMainApplicantFromFirstRow()
+        {
+            WaitUntil.CustomElementIsVisible(VlMainApplicantOfClmnApplicantsFrstRw);
+            string apartmentAddress = VlMainApplicantOfClmnApplicantsFrstRw.Text;
+
+            return apartmentAddress;
+        }
+
         [AllureStep("GetFirstNameTenantMainApplicantFromFirstRow")]
         public string GetFirstNameTenantMainApplicantFromFirstRow()
         {

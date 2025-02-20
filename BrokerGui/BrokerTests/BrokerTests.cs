@@ -21,7 +21,7 @@ namespace BrokerGuiTests
 
     public class TestsBaseGui : BrokerBase
     {
-        //Amount order 8 next must be 9
+        //Amount order 9 next must be 10
         [Test]
         [Order(1)]
         [AllureTag("Regression")]
@@ -734,7 +734,7 @@ namespace BrokerGuiTests
         }
 
         [Test]
-        [Order(8)]
+        [Order(9)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -795,22 +795,21 @@ namespace BrokerGuiTests
             string leasePriceFromUnit = Pages.ApartmentView.GetLeasePriceValueOfString();
             string partEmailPutsBox = Pages.ApartmentView.CopyEmailBeforeDogFromGetApplicationLink();
 
-            //Pages.ApartmentView
-            //    .ClickButtonGetLink()
-            //    .VerifyCopiedTheLinkToApplication()
-            //    .ClickTabApplications();
-            //KeyBoardActions.ScrollToDown();
+            Pages.ApartmentView
+                .ClickButtonGetLink()
+                .VerifyCopiedTheLinkToApplication()
+                .ClickTabApplications();
+            KeyBoardActions.ScrollToDown();
 
-            //string apartmentAddressFromApp = Pages.ApartmentApplicationsTbl.GetApartmentAddressFromFirstRow();
-            //string firstNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetFirstNameTenantMainApplicantFromFirstRow();
-            //string lastNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetLastNameTenantMainApplicantFromFirstRow();
-            //string leasePriceFromApplication = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
-            //string dateCreatedFromApplication = Pages.ApartmentApplicationsTbl.GetDateCreatedFromFirstRow();
-            //string agentFromApplication = Pages.ApartmentApplicationsTbl.GetAgentFromFrstRw();
-            //string statusFromApplication = Pages.ApartmentApplicationsTbl.GetStatusFromFrstRw();
+            string apartmentAddressFromApp = Pages.ApartmentApplicationsTbl.GetApartmentAddressFromFirstRow();
+            string fullNameTenantMainApplicantFromAppAr = Pages.ApartmentApplicationsTbl.GetFullNameTenantMainApplicantFromFirstRow();
+            string leasePriceFromApplication = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
+            string dateCreatedFromApplication = Pages.ApartmentApplicationsTbl.GetDateCreatedFromFirstRow();
+            string agentFromApplication = Pages.ApartmentApplicationsTbl.GetAgentFromFrstRw();
+            string statusFromApplication = Pages.ApartmentApplicationsTbl.GetStatusFromFrstRw();
 
-            //Pages.ApartmentApplicationsTbl
-            //    .VerifyFullDataByApplicationTenantMain(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp, leasePriceFromUnit, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.NotAssigned, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
+            Pages.ApartmentApplicationsTbl
+                .VerifyFullDataByApplicationCreatedTenantMain(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.CreatedWithCreditReport.ConstantFirstLastName, fullNameTenantMainApplicantFromAppAr, leasePriceFromUnit, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.AgentLulaAgentQA, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
             //Pages.JScriptExecutor
             //   .OpenNewTab();
             //Pages.EmailHelper
