@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CazamioNewProject.PageObjects.TenantPages.Header
+namespace CazamioNewProject.PageObjects.TenantPages.MyAccountPage
 {
-    public partial class HeaderTenants
+    public partial class MyAccount
     {
     }
 }

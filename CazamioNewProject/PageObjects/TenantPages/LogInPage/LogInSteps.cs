@@ -5,13 +5,34 @@ namespace CazamioNewProject.PageObjects.TenantPages.LogInPage
 {
     public partial class LogInTenant
     {
-        [AllureStep("EnterEmailPasswordAsTenantCreatorWithoutCreditReport")]
-        public LogInTenant EnterEmailPasswordAsTenantCreatorWithoutCreditReport()
+        [AllureStep("LogInAsCreatorWithoutCreditReportMySpace")]
+        public LogInTenant LogInAsCreatorWithoutCreditReportMySpace()
         {
+            Pages.HeaderTenants
+               .ClickButtonLogIn();
             WaitUntil.CustomElementIsVisible(FieldInputEmailAddress);
             WaitUntil.CustomElementIsClickable(FieldInputEmailAddress);
             InputGeneral.InputFunctionWithClear(FieldInputEmailAddress, tenantCreatorMySpace.CreatedWithoutCreditReport.Email);
             InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+            Button.Click(IconShow);
+            Button.Click(CheckBoxRememberMe);
+            Button.Click(ButtonLogIn);
+
+            return this;
+        }
+
+        [AllureStep("LogInAsCreatorWithoutCreditReportMySpace")]
+        public LogInTenant LogInAsCreatorWithCreditReportMySpace()
+        {
+            Pages.HeaderTenants
+               .ClickButtonLogIn();
+            WaitUntil.CustomElementIsVisible(FieldInputEmailAddress);
+            WaitUntil.CustomElementIsClickable(FieldInputEmailAddress);
+            InputGeneral.InputFunctionWithClear(FieldInputEmailAddress, tenantCreatorMySpace.CreatedWithCreditReport.Email);
+            InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+            Button.Click(IconShow);
+            Button.Click(CheckBoxRememberMe);
+            Button.Click(ButtonLogIn);
 
             return this;
         }

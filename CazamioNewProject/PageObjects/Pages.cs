@@ -44,6 +44,7 @@ using CazamioNewProject.PageObjects.TenantPages.ConfirmLogOutMdlWndw;
 using CazamioNewProject.PageObjects.TenantPages.Header;
 using CazamioNewProject.PageObjects.TenantPages.LeasePriceAdjustmentMdlWndw;
 using CazamioNewProject.PageObjects.TenantPages.LogInPage;
+using CazamioNewProject.PageObjects.TenantPages.MyAccountPage;
 using CazamioNewProject.PageObjects.TenantPages.PleaseChangeYourPasswordMdlWndw;
 using CazamioNewProject.PageObjects.TenantPages.PleaseTellUsYourNameMdlWndw;
 using CazamioNewProject.PageObjects.TenantPages.SubmittingApplicationPage;
@@ -149,9 +150,10 @@ namespace CazamioNewProject.PageObjects
         #region Tanant pages
 
         public static ToasterMessagesTenants ToasterMessagesTenants => GetPage<ToasterMessagesTenants>();
-        public static Header Header => GetPage<Header>();
+        public static HeaderTenants HeaderTenants => GetPage<HeaderTenants>();
         public static LogInTenant LogInTenant => GetPage<LogInTenant>();
         public static SubmittingApplication SubmittingApplication => GetPage<SubmittingApplication>();
+        public static MyAccount MyAccount => GetPage<MyAccount>();
 
         #endregion
 

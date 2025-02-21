@@ -688,7 +688,7 @@ namespace BrokerGuiTests
                 .QuicklyPassForMainApplicant();
             Pages.LeasePriceAdjustmentMdlWndw
                 .ClickBtnCancel();
-            Pages.Header
+            Pages.HeaderTenants
                 .LogOut();
             //Occupant
             Pages.JScriptExecutor
@@ -707,7 +707,7 @@ namespace BrokerGuiTests
                 .QuicklyPass();
             Pages.PleaseTellUsYourNameMdlWndw
                 .QuicklyPassForOccupant();
-            Pages.Header
+            Pages.HeaderTenants
                 .LogOut();
             //Guarantor
             Pages.JScriptExecutor
@@ -725,7 +725,7 @@ namespace BrokerGuiTests
                 .QuicklyPass();
             Pages.PleaseTellUsYourNameMdlWndw
                 .QuicklyPassForGuarantor();
-            Pages.Header
+            Pages.HeaderTenants
                 .LogOut();
 
             WaitUntil.WaitSomeInterval(5000);
@@ -801,6 +801,7 @@ namespace BrokerGuiTests
                 .ClickTabApplications();
             KeyBoardActions.ScrollToDown();
 
+            string applicationIdFromAppLandlord = Pages.ApartmentApplicationsTbl.GetApplicationIdFromFirstRow();
             string apartmentAddressFromApp = Pages.ApartmentApplicationsTbl.GetApartmentAddressFromFirstRow();
             string fullNameTenantMainApplicantFromAppAr = Pages.ApartmentApplicationsTbl.GetFullNameTenantMainApplicantFromFirstRow();
             string leasePriceFromApplication = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
@@ -810,20 +811,17 @@ namespace BrokerGuiTests
 
             Pages.ApartmentApplicationsTbl
                 .VerifyFullDataByApplicationCreatedTenantMain(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.CreatedWithCreditReport.ConstantFirstLastName, fullNameTenantMainApplicantFromAppAr, leasePriceFromUnit, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.AgentLulaAgentQA, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
-            //Pages.JScriptExecutor
-            //   .OpenNewTab();
-            //Pages.EmailHelper
-            //   .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, partEmailPutsBox);
+            Pages.JScriptExecutor
+              .OpenNewTabHomePageTenant();
+            Pages.LogInTenant
+                .LogInAsCreatorWithCreditReportMySpace();
+            Pages.HeaderTenants
+                .ClickButtonMyApplications();
 
-            //string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+            string applicationIdFromAppTenant = Pages.MyAccount.GetApplicationId();
 
-            //Pages.EmailPutsBox
-            //    .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
-            //Pages.EmailPutsBox
-            //    .ClickButtonHtml()
-            //    .ClickButtonStartYourApplicationNowlForTenant();
-            //Pages.ToasterMessagesTenants
-            //    .VerifyMessageAccountWasSuccessfullyActivated();
+            Pages.MyAccount
+                .VerifyApplicationIdNumber(applicationIdFromAppLandlord, applicationIdFromAppTenant);
 
             WaitUntil.WaitSomeInterval(5000);
 

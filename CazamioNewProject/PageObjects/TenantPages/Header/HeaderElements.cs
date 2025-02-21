@@ -3,7 +3,7 @@ using SeleniumExtras.PageObjects;
 
 namespace CazamioNewProject.PageObjects.TenantPages.Header
 {
-    public partial class Header
+    public partial class HeaderTenants
     {
         [FindsBy(How = How.XPath, Using = "//a[@href = '/account/signup']")]
         public IWebElement ButtonSignUp;

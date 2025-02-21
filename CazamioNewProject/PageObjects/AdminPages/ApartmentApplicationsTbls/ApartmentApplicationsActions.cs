@@ -7,6 +7,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
 {
     public partial class ApartmentApplicationsTbl
     {
+        [AllureStep("GetApplicationIdFromFirstRow")]
+        public string GetApplicationIdFromFirstRow()
+        {
+            WaitUntil.CustomElementIsVisible(VlIdOfClmnApplicationIdFrstRw);
+            string apartmentAddress = VlIdOfClmnApplicationIdFrstRw.Text;
+
+            return apartmentAddress;
+        }
+
         [AllureStep("GetApartmentAddressFromFirstRow")]
         public string GetApartmentAddressFromFirstRow()
         {

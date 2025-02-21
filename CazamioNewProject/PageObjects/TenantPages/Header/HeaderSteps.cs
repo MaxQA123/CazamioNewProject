@@ -3,10 +3,10 @@ using NUnit.Allure.Attributes;
 
 namespace CazamioNewProject.PageObjects.TenantPages.Header
 {
-    public partial class Header
+    public partial class HeaderTenants
     {
         [AllureStep("SelectItemMyAccountViaButtonInFormAvatar")]
-        public Header SelectItemMyAccountViaButtonInFormAvatar()
+        public HeaderTenants SelectItemMyAccountViaButtonInFormAvatar()
         {
             WaitUntil.CustomElementIsVisible(ButtonInFormAvatar);
             Button.Click(ButtonInFormAvatar);
@@ -17,7 +17,7 @@ namespace CazamioNewProject.PageObjects.TenantPages.Header
         }
 
         [AllureStep("LogOut")]
-        public Header LogOut()
+        public HeaderTenants LogOut()
         {
             WaitUntil.CustomElementIsVisible(ButtonInFormAvatar);
             WaitUntil.CustomElementIsClickable(ButtonInFormAvatar);

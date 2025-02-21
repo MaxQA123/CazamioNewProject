@@ -25,28 +25,10 @@ namespace TenantCreatorGui
 
         public void LogIn()
         {
-            Pages.Header
-                .ClickButtonLogIn();
             Pages.LogInTenant
-                .EnterEmailPasswordAsTenantCreatorWithoutCreditReport()
-                .ClickIconShow()
-                .SetCheckBoxRememberMe()
-                .ClickButtonLogIn();
-            //Pages.Header
-            //    .ClickButtonMyApplications();
-            //Pages.MyAccountCazamioTenant
-            //    .ClickTabAccountOnMyAccntPg()
-            //    .ClickButtonEditMyAccntPgTabAccnt();
+                .LogInAsCreatorWithCreditReportMySpace();
 
-            //string getFirstNameForCompare = Pages.MyAccountCazamioTenant.GetFirstNameFromMyAccount();
-            //string getLastNameForCompare = Pages.MyAccountCazamioTenant.GetLastNameFromMyAccount();
-
-            //Pages.MyAccountCazamioTenant
-            //    .VerifyTenatFirstLastName(getFirstNameForCompare, getLastNameForCompare);
-            //Pages.Header
-            //    .LogOutFromAccountViaHeader();
-
-            WaitUntil.WaitSomeInterval(2000);
+            WaitUntil.WaitSomeInterval(5000);
         }
     }
 }

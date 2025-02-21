@@ -3,10 +3,10 @@ using NUnit.Allure.Attributes;
 
 namespace CazamioNewProject.PageObjects.TenantPages.Header
 {
-    public partial class Header
+    public partial class HeaderTenants
     {
         [AllureStep("ClickButtonSignUp")]
-        public Header ClickButtonSignUp()
+        public HeaderTenants ClickButtonSignUp()
         {
             WaitUntil.CustomElementIsVisible(ButtonSignUp);
             WaitUntil.CustomElementIsClickable(ButtonSignUp);
@@ -16,7 +16,7 @@ namespace CazamioNewProject.PageObjects.TenantPages.Header
         }
 
         [AllureStep("ClickButtonLogIn")]
-        public Header ClickButtonLogIn()
+        public HeaderTenants ClickButtonLogIn()
         {
             WaitUntil.CustomElementIsVisible(ButtonLogIn);
             WaitUntil.CustomElementIsClickable(ButtonLogIn);
@@ -26,7 +26,7 @@ namespace CazamioNewProject.PageObjects.TenantPages.Header
         }
 
         [AllureStep("ClickButtonMyApplications")]
-        public Header ClickButtonMyApplications()
+        public HeaderTenants ClickButtonMyApplications()
         {
             WaitUntil.CustomElementIsVisible(ButtonMyApplications);
             WaitUntil.CustomElementIsClickable(ButtonMyApplications);

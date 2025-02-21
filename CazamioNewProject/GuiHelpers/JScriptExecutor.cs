@@ -17,6 +17,19 @@ namespace CazamioNewProject.GuiHelpers
             return this;
         }
 
+        [AllureStep("OpenNewTabHomePageTenant")]
+        public JScriptExecutor OpenNewTabHomePageTenant()
+        {
+            ((IJavaScriptExecutor)Browser._Driver).ExecuteScript("window.open();");
+            Browser._Driver.SwitchTo().Window(Browser._Driver.WindowHandles.Last());
+
+            // Указать URL для перехода
+            string url = "https://testlandlord15-demo.casamio-test.lol/";
+            Browser._Driver.Navigate().GoToUrl(url);
+
+            return this;
+        }
+
         [AllureStep("CloseNewTab")]
         public JScriptExecutor CloseNewTab()
         {
