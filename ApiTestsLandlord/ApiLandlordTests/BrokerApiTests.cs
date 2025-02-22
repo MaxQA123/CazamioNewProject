@@ -34,24 +34,24 @@ namespace ApiTestsLandlord
 
         public void LogIn()
         {
-            //#region Test Data
+            #region Test Data
 
-            //Broker broker = new Broker().Generate();
+            Broker broker = Broker.Generate();
 
-            //var email = broker.EmailAddressBroker;
-            //var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
-            //var rememberMe = ApiRequestData.TRUE;
-            //var deviceFingerprint = broker.DeviceFingerprint;
+            var email = broker.CreatedBrokerMySpace.Email;
+            var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
+            var rememberMe = ApiRequestData.TRUE;
+            var deviceFingerprint = broker.BasicDataApi.DeviceFingerprint;
 
-            //#endregion
+            #endregion
 
-            //#region Test
+            #region Test
 
-            //var responseBroker = LogInApiBroker.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+            var responseBroker = LogInApiBroker.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
 
-            //LogInApiBroker.VerifyUserData(responseBroker, broker);
+            LogInApiBroker.VerifyUserData(responseBroker, broker);
 
-            //#endregion
+            #endregion
         }
 
         [Test]
