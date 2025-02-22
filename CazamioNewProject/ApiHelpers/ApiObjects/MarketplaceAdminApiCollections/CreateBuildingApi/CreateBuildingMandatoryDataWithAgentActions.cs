@@ -86,16 +86,28 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
 
             var response = restClient.Execute(restRequest);
 
-            // Логируем статус код и содержимое ответа
+            // Логируем статус код, заголовки и содержимое ответа
             Console.WriteLine("Response Status Code: " + response.StatusCode);
+            Console.WriteLine("Response Headers: " + string.Join(", ", response.Headers));
             Console.WriteLine("Response Content: " + response.Content);
 
             if (response.StatusCode != System.Net.HttpStatusCode.OK)
             {
-                // Если содержимое ответа пустое, добавляем больше информации
-                string errorMessage = string.IsNullOrEmpty(response.Content)
-                    ? $"Request failed with status code: {response.StatusCode}"
-                    : response.Content;
+                string errorMessage = $"Request failed with status code: {response.StatusCode}";
+
+                if (response.ErrorException != null)
+                {
+                    errorMessage += $"\nException: {response.ErrorException.Message}";
+                }
+
+                if (!string.IsNullOrEmpty(response.Content))
+                {
+                    errorMessage += $"\nResponse Content: {response.Content}";
+                }
+                else
+                {
+                    errorMessage += "\nNo additional error information provided by the server.";
+                }
 
                 throw new Exception(errorMessage);
             }
