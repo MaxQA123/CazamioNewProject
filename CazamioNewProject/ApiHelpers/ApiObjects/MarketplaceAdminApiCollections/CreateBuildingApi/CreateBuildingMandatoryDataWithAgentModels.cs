@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
 
 namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApiMandatoryData
 {
@@ -52,6 +51,12 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
 
         [JsonProperty("holdDeposit")]
         public HoldDeposit HoldDeposit { get; set; }
+
+        [JsonProperty("latitude")]
+        public double Latitude { get; set; }
+
+        [JsonProperty("longitude")]
+        public double Longitude { get; set; }
     }
 
     public partial class Address
@@ -103,15 +108,6 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
     {
         [JsonProperty("amount")]
         public long Amount { get; set; }
-
-        [JsonProperty("deliverCheckNote")]
-        public object DeliverCheckNote { get; set; }
-
-        [JsonProperty("venmoQRCode")]
-        public object VenmoQrCode { get; set; }
-
-        [JsonProperty("zelleAddress")]
-        public object ZelleAddress { get; set; }
 
         [JsonProperty("allowedPaymentMethods")]
         public string[] AllowedPaymentMethods { get; set; }

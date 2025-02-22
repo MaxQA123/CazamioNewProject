@@ -9,6 +9,7 @@ namespace CazamioNewProject.Objects
         public CrownStInfo CrownSt { get; set; }
         public AlbermaleRdInfo AlbermaleRd { get; set; }
         public East51stStreetPedestrianCrossingInfo East51stStreetPedestrianCrossing { get; set; }
+        public CommonApiDataInfo CommonApiData { get; set; }
         public DescriptionsInternalNotesInfo DescriptionsInternalNotes { get; set; }
         public MySpaceAmountPaymentsInfo MySpaceAmountPayments { get; set; }
         public PaymentSystemsInfo PaymentSystems { get; set; }
@@ -25,6 +26,7 @@ namespace CazamioNewProject.Objects
                 CrownSt = CreateCrownStInfo(),
                 AlbermaleRd = CreateAlbermaleRdInfo(),
                 East51stStreetPedestrianCrossing = CreateEast51stStreetPedestrianCrossingInfo(),
+                CommonApiData = CreateCommonApiDataInfo(),
                 DescriptionsInternalNotes = CreateDescriptionsInternalNotesInfo(),
                 MySpaceAmountPayments = CreateMySpaceAmountPaymentsInfo(),
                 PaymentSystems = CreatePaymentSystemsInfo(),
@@ -105,6 +107,19 @@ namespace CazamioNewProject.Objects
             public string State { get; set; }
             public string Zip { get; set; }
             public string Neighborhood { get; set; }
+            public string BuildingName { get; set; }
+            public string LlcName { get; set; }
+        }
+
+        public class CommonApiDataInfo
+        {
+            public long BuildingId { get; set; }
+            public string CountryUnitedStates { get; set; }
+            public string StreetRandom { get; set; }
+            public string CityNewYork { get; set; }
+            public string StateNy { get; set; }
+            public long ZipCode { get; set; }
+            public string NeighborhoodEmpty { get; set; }
             public string BuildingName { get; set; }
             public string LlcName { get; set; }
         }
@@ -258,6 +273,22 @@ namespace CazamioNewProject.Objects
                 State = "NY",
                 Zip = "10022",
                 Neighborhood = "Manhattan",
+                BuildingName = "QA-Building Name AGENT 111A East 51st Street Pedestrian Crossing (12345) (*&^%)",
+                LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
+            };
+        }
+
+        private static CommonApiDataInfo CreateCommonApiDataInfo()
+        {
+            return new CommonApiDataInfo
+            {
+                BuildingId = 0,
+                CountryUnitedStates = "United States",
+                StreetRandom = GenerateRandomData.RandomNumberWithoutZero(4) + " " + GenerateRandomData.GetRandomStreet(),
+                CityNewYork = "New York",
+                StateNy = "NY",
+                ZipCode = 10022,
+                NeighborhoodEmpty = "",
                 BuildingName = "QA-Building Name AGENT 111A East 51st Street Pedestrian Crossing (12345) (*&^%)",
                 LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
             };

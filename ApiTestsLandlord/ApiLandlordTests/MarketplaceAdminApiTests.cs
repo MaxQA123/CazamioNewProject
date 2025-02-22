@@ -191,12 +191,12 @@ namespace ApiTestsLandlord
 
             //int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
 
-            //MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
+            //MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
 
-            //var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
+            //var email = marketplaceAdmin.CreatedMarkAdmMySpace.Email;
             //var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
             //var rememberMe = ApiRequestData.TRUE;
-            //var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
+            //var deviceFingerprint = marketplaceAdmin.BasicDataApi.DeviceFingerprint;
 
             //var ownerBody = OwnerCreation.RequestBodyBrokerFullData();
 
@@ -238,44 +238,44 @@ namespace ApiTestsLandlord
 
         public void CreateOwnerWithAgent()
         {
-            //#region Test Data
+            #region Test Data
 
-            //int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
 
-            //MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
+            MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
 
-            //var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
-            //var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
-            //var rememberMe = ApiRequestData.TRUE;
-            //var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
+            var email = marketplaceAdmin.CreatedMarkAdmMySpace.Email;
+            var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
+            var rememberMe = ApiRequestData.TRUE;
+            var deviceFingerprint = marketplaceAdmin.BasicDataApi.DeviceFingerprint;
 
-            //var ownerBody = OwnerCreation.RequestBodyAgentRequiredData();
+            var ownerBody = OwnerCreation.RequestBodyAgentRequiredData();
 
-            //#endregion
+            #endregion
 
-            //#region Preconditions
+            #region Preconditions
 
-            //var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
 
-            //LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
 
-            //#endregion
+            #endregion
 
-            //#region Tests
+            #region Tests
 
-            //OwnerCreation.CreateOwnerWithAgentRequiredData(responseMarketplaceAdmin.AuthData.Token, ownerBody);
+            OwnerCreation.CreateOwnerWithAgentRequiredData(responseMarketplaceAdmin.AuthData.Token, ownerBody);
 
-            //#endregion
+            #endregion
 
-            //#region Postconditions
+            #region Postconditions
 
-            //OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(ownerBody.OwnerEmail, marketplaceId);
-            //Console.WriteLine($"{ownerBody.OwnerEmail}");
-            //OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(ownerBody.OwnerEmail, marketplaceId);
-            //OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(ownerBody.OwnerEmail, marketplaceId);
-            //OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(ownerBody.OwnerEmail, marketplaceId);
+            OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(ownerBody.OwnerEmail, marketplaceId);
+            Console.WriteLine($"{ownerBody.OwnerEmail}");
+            OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(ownerBody.OwnerEmail, marketplaceId);
+            OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(ownerBody.OwnerEmail, marketplaceId);
+            OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(ownerBody.OwnerEmail, marketplaceId);
 
-            //#endregion
+            #endregion
         }
 
         [Test]
@@ -330,34 +330,34 @@ namespace ApiTestsLandlord
 
         public void CreateBuildingMandatoryDataWithAgent()
         {
-            //#region Test Data
+            #region Test Data
 
-            //int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
 
-            //MarketplaceAdmin marketplaceAdmin = new MarketplaceAdmin().Generate();
+            #endregion
 
-            //var email = marketplaceAdmin.EmailAddressMarketplaceAdmin;
-            //var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
-            //var rememberMe = ApiRequestData.TRUE;
-            //var deviceFingerprint = marketplaceAdmin.DeviceFingerprint;
+            #region Preconditions
 
-            //var buildingBody = BuildingCreationMandatoryData.RequestBodyCreateBuildingMandatoryDataWithAgent();
+            MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
 
-            //#endregion
+            var email = marketplaceAdmin.CreatedMarkAdmMySpace.Email;
+            var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
+            var rememberMe = ApiRequestData.TRUE;
+            var deviceFingerprint = marketplaceAdmin.BasicDataApi.DeviceFingerprint;
 
-            //#region Preconditions
+            var buildingBody = BuildingCreationMandatoryData.RequestBodyCreateBuildingMandatoryDataWithAgent();
 
-            //var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
 
-            //LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
 
-            //#endregion
+            #endregion
 
-            //#region Tests
+            #region Tests
 
-            //BuildingCreationMandatoryData.CreateBuildingMandatoryDataWithAgent(responseMarketplaceAdmin.AuthData.Token, buildingBody);
+            BuildingCreationMandatoryData.CreateBuildingMandatoryDataWithAgent(responseMarketplaceAdmin.AuthData.Token, buildingBody);
 
-            //#endregion
+            #endregion
         }
     }
 }

@@ -1,0 +1,116 @@
+{
+  "uuid": "952246f8-fa8f-4c8d-b8ae-07ee91094e31-tr-0-1014",
+  "historyId": "ApiTestsLandlord.MarketplaceAdminApiTests.CreateOwnerWithAgent",
+  "fullName": "ApiTestsLandlord.MarketplaceAdminApiTests.CreateOwnerWithAgent",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "ApiTestsLandlord"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateOwnerWithAgent"
+    },
+    {
+      "name": "testClass",
+      "value": "MarketplaceAdminApiTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "MarketplaceAdmin Api test"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateOwnerWithAgent"
+    }
+  ],
+  "links": [],
+  "name": "CreateOwnerWithAgent",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.Exception : Value cannot be null. (Parameter 'value')",
+    "trace": "   at CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateOwnerApi.OwnerCreation.CreateOwnerWithAgentRequiredData(String token, RequestCreateOwnerRequiredData ownerBody) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\ApiHelpers\\ApiObjects\\MarketplaceAdminApiCollections\\CreateOwnerApi\\CreateOwnerWithAgentActions.cs:line 51\r\n   at ApiTestsLandlord.MarketplaceAdminApiTests.CreateOwnerWithAgent() in C:\\Automation\\CazamioNewProject\\ApiTestsLandlord\\ApiLandlordTests\\MarketplaceAdminApiTests.cs:line 266"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateOwnerWithAgent",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.Exception : Value cannot be null. (Parameter 'value')",
+        "trace": "   at CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateOwnerApi.OwnerCreation.CreateOwnerWithAgentRequiredData(String token, RequestCreateOwnerRequiredData ownerBody) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\ApiHelpers\\ApiObjects\\MarketplaceAdminApiCollections\\CreateOwnerApi\\CreateOwnerWithAgentActions.cs:line 51\r\n   at ApiTestsLandlord.MarketplaceAdminApiTests.CreateOwnerWithAgent() in C:\\Automation\\CazamioNewProject\\ApiTestsLandlord\\ApiLandlordTests\\MarketplaceAdminApiTests.cs:line 266"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "VerifyUserData",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "ResponseLogInApiMarketplaceAdmin",
+              "value": "CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin.ResponseLogInApiMarketplaceAdmin"
+            },
+            {
+              "name": "MarketplaceAdmin",
+              "value": "CazamioNewProject.Objects.MarketplaceAdmin"
+            }
+          ],
+          "start": 1740230776124,
+          "stop": 1740230776139
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "af574634ffe546768ce149da3d94795a-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1740230774048,
+      "stop": 1740230777252
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1740230774046,
+  "stop": 1740230777262
+}

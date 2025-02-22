@@ -5,6 +5,21 @@ namespace CazamioNewProject.GuiHelpers
 {
     public class GenerateRandomData
     {
+        private static readonly Random _random = new Random();
+
+        // Метод для случайного выбора адреса
+        public static string GetRandomStreet()
+        {
+            // Массив доступных адресов
+            string[] streets = { "Avenue A", "Bank Street", "Lincoln Place", "Hart Street", "West 126th Street" };
+
+            // Случайный индекс для выбора адреса
+            int index = _random.Next(streets.Length);
+
+            // Возвращаем случайный адрес
+            return streets[index];
+        }
+
         public static string RandomPhoneNumber(int size)
         {
             Random random = new Random();
