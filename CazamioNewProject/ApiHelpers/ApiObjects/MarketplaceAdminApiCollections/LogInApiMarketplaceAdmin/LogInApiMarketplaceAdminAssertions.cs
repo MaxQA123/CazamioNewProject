@@ -2,7 +2,6 @@
 using CazamioNewProject.Objects;
 using NUnit.Allure.Attributes;
 using NUnit.Framework;
-using System;
 
 namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin
 {

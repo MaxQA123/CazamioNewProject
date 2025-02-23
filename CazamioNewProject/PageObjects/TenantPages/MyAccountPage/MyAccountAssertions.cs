@@ -1,4 +1,5 @@
-﻿using NUnit.Allure.Attributes;
+﻿using CazamioNewProject.GuiHelpers;
+using NUnit.Allure.Attributes;
 using NUnit.Framework;
 using System;
 

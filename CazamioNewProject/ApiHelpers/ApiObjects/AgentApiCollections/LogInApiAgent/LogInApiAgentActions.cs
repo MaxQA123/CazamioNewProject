@@ -1,10 +1,6 @@
 ﻿using Newtonsoft.Json;
 using RestSharp;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.ApiHelpers.ApiObjects.AgentApiCollections.LogInApiAgent
 {
@@ -28,18 +24,42 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.AgentApiCollections.LogInApiAg
             var restRequest = new RestRequest("/api/identity/loginLandlord", Method.Post);
             restRequest.AddHeaders(Headers.HeadersForLogIn());
 
-            restRequest.AddJsonBody(RequestBody(email, password, deviceFingerprint, rememberMe));
+            // Логируем тело запроса
+            var requestBody = RequestBody(email, password, deviceFingerprint, rememberMe);
+            Console.WriteLine("Request Body:");
+            Console.WriteLine(JsonConvert.SerializeObject(requestBody, Formatting.Indented));
+
+            restRequest.AddJsonBody(requestBody);
 
             var response = restClient.Execute(restRequest);
 
-            var content = response.Content;
+            // Логируем статус код, заголовки и содержимое ответа
+            Console.WriteLine("Response Status Code: " + response.StatusCode);
+            Console.WriteLine("Response Headers: " + string.Join(", ", response.Headers));
+            Console.WriteLine("Response Content: " + response.Content);
 
             if (response.StatusCode != System.Net.HttpStatusCode.OK)
             {
-                throw new Exception(response.Content);
+                string errorMessage = $"Request failed with status code: {response.StatusCode}";
+
+                if (response.ErrorException != null)
+                {
+                    errorMessage += $"\nException: {response.ErrorException.Message}";
+                }
+
+                if (!string.IsNullOrEmpty(response.Content))
+                {
+                    errorMessage += $"\nResponse Content: {response.Content}";
+                }
+                else
+                {
+                    errorMessage += "\nNo additional error information provided by the server.";
+                }
+
+                throw new Exception(errorMessage);
             }
 
-            var dtoObject = JsonConvert.DeserializeObject<ResponseLogInAgent>(content);
+            var dtoObject = JsonConvert.DeserializeObject<ResponseLogInAgent>(response.Content);
 
             return dtoObject;
         }

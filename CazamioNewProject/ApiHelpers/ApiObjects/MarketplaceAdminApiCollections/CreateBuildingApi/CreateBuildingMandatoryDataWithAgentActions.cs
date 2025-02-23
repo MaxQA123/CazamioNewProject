@@ -1,5 +1,4 @@
-﻿using CazamioNewProject.ApiHelpers.ApiObjects.ModlesApiObjects;
-using CazamioNewProject.Objects;
+﻿using CazamioNewProject.Objects;
 using Newtonsoft.Json;
 using RestSharp;
 using System;
@@ -18,13 +17,13 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             {
                 Address = new Address
                 {
-                    Id = building.CommonApiData.BuildingId, // Указано в примере
-                    Country = building.CommonApiData.CountryUnitedStates, // Указано в примере
-                    Street = building.CommonApiData.StreetRandom, // Указано в примере
-                    State = building.CommonApiData.StateNy, // Указано в примере
-                    City = building.CommonApiData.CityNewYork, // Указано в примере
+                    Id = 0, // Указано в примере
+                    Country = "United States", // Указано в примере
+                    Street = "56789 Avenue A", // Указано в примере
+                    State = "NY", // Указано в примере
+                    City = "New York", // Указано в примере
                     ZipCode = 11234, // Указано в примере
-                    Neighborhood = building.CommonApiData.NeighborhoodEmpty // Указано в примере
+                    Neighborhood = "" // Указано в примере
                 },
                 PetPolicies = new object[0], // Пустой массив, как в примере
                 OwnerId = 1, // Указано в примере
@@ -112,25 +111,5 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                 throw new Exception(errorMessage);
             }
         }
-
-        //public static void CreateBuildingMandatoryDataWithAgent(string token, RequestCreateBuildingMandatoryDataWithAgent buildingBody)
-        //{
-
-        //    var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
-
-        //    var restRequest = new RestRequest("api/buildings/create", Method.Post);
-        //    restRequest.AddHeaders(Headers.HeadersMarketplaceAdmin(token));
-
-        //    restRequest.AddJsonBody(buildingBody);
-
-        //    var response = restClient.Execute(restRequest);
-
-        //    var content = response.Content;
-
-        //    if (response.StatusCode != System.Net.HttpStatusCode.OK)
-        //    {
-        //        throw new Exception(response.Content);
-        //    }
-        //}
     }
 }
