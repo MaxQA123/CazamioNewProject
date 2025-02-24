@@ -118,7 +118,7 @@ namespace CazamioNewProject.Objects
             public string StreetRandom { get; set; }
             public string CityNewYork { get; set; }
             public string StateNy { get; set; }
-            public long ZipCode { get; set; }
+            public string ZipCode { get; set; }
             public string NeighborhoodEmpty { get; set; }
             public string BuildingName { get; set; }
             public string LlcName { get; set; }
@@ -287,7 +287,7 @@ namespace CazamioNewProject.Objects
                 StreetRandom = GenerateRandomData.RandomNumberWithoutZero(4) + " " + GenerateRandomData.GetRandomStreet(),
                 CityNewYork = "New York",
                 StateNy = "NY",
-                ZipCode = 10022,
+                ZipCode = "10022",
                 NeighborhoodEmpty = "",
                 BuildingName = "QA-Building Name AGENT 111A East 51st Street Pedestrian Crossing (12345) (*&^%)",
                 LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",

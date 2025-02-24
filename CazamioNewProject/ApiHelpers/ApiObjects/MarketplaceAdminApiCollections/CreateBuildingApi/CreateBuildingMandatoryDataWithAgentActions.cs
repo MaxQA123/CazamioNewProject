@@ -9,62 +9,60 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
     {
         public static RequestCreateBuildingMandatoryDataWithAgent RequestBodyCreateBuildingMandatoryDataWithAgent()
         {
-            // Генерация данных
             Building building = Building.Generate();
 
-            // Создание payload
             var payload = new RequestCreateBuildingMandatoryDataWithAgent
             {
                 Address = new Address
                 {
-                    Id = 0, // Указано в примере
-                    Country = "United States", // Указано в примере
-                    Street = "56789 Avenue A", // Указано в примере
-                    State = "NY", // Указано в примере
-                    City = "New York", // Указано в примере
-                    ZipCode = 11234, // Указано в примере
-                    Neighborhood = "" // Указано в примере
+                    Id = building.CommonApiData.BuildingId, 
+                    Country = building.CommonApiData.CountryUnitedStates, 
+                    Street = building.CommonApiData.StreetRandom, 
+                    State = building.CommonApiData.StateNy, 
+                    City = building.CommonApiData.CityNewYork, 
+                    ZipCode = building.CommonApiData.ZipCode, 
+                    Neighborhood = "" 
                 },
-                PetPolicies = new object[0], // Пустой массив, как в примере
-                OwnerId = 1, // Указано в примере
-                BuildingId = 0, // Указано в примере
-                BuildingName = "", // Указано в примере
-                LlcName = "", // Указано в примере
-                Description = "", // Указано в примере
-                InternalNotes = "", // Указано в примере
+                PetPolicies = new object[0],
+                OwnerId = 1,
+                BuildingId = 0,
+                BuildingName = "",
+                LlcName = "",
+                Description = "",
+                InternalNotes = "",
                 ScreeningFee = new HoldDeposit
                 {
-                    Amount = 20, // Указано в примере
-                    AllowedPaymentMethods = new string[] { "CreditCard" } // Указано в примере
+                    Amount = 20,
+                    AllowedPaymentMethods = new string[] { "CreditCard" }
                 },
                 HoldDeposit = new HoldDeposit
                 {
-                    Amount = 500, // Указано в примере
-                    AllowedPaymentMethods = new string[] { "CreditCard" } // Указано в примере
+                    Amount = 500, 
+                    AllowedPaymentMethods = new string[] { "CreditCard" }
                 },
                 ApiKey = new ApiKey
                 {
-                    Id = 2, // Указано в примере
-                    IsAchInclude = true, // Указано в примере
-                    IsDefault = true, // Указано в примере
-                    Key = "czmodev359376936c0543b58126c97f9ff55c68", // Указано в примере
-                    AuthorizeNetApiLoginId = null, // Указано в примере
-                    PaymentSystem = 1 // Указано в примере
+                    Id = 2,
+                    IsAchInclude = true,
+                    IsDefault = true,
+                    Key = "czmodev359376936c0543b58126c97f9ff55c68",
+                    AuthorizeNetApiLoginId = null,
+                    PaymentSystem = 1
                 },
-                Amenities = new object[0], // Пустой массив, как в примере
+                Amenities = new object[0],
                 Locks = new Locks
                 {
-                    BluetoothLocks = new object[0], // Пустой массив, как в примере
-                    WifiLocks = new object[0], // Пустой массив, как в примере
-                    PinCodeLocks = new object[0], // Пустой массив, как в примере
-                    NoteLocks = new object[0], // Пустой массив, как в примере
-                    CabLocks = new object[0] // Пустой массив, как в примере
+                    BluetoothLocks = new object[0],
+                    WifiLocks = new object[0],
+                    PinCodeLocks = new object[0],
+                    NoteLocks = new object[0],
+                    CabLocks = new object[0]
                 },
-                Concessions = new object[0], // Пустой массив, как в примере
-                FreeStuff = new object[0], // Пустой массив, как в примере
-                Images = new object[0], // Пустой массив, как в примере
-                Latitude = 40.726596, // Указано в примере
-                Longitude = -73.9834084 // Указано в примере
+                Concessions = new object[0],
+                FreeStuff = new object[0],
+                Images = new object[0],
+                Latitude = 40.726596,
+                Longitude = -73.9834084
             };
 
             return payload;

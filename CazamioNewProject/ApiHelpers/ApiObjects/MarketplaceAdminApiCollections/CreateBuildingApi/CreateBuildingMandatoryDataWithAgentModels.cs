@@ -77,7 +77,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public string City { get; set; }
 
         [JsonProperty("zipCode")]
-        public long ZipCode { get; set; }
+        public string ZipCode { get; set; }
 
         [JsonProperty("neighborhood")]
         public string Neighborhood { get; set; }
