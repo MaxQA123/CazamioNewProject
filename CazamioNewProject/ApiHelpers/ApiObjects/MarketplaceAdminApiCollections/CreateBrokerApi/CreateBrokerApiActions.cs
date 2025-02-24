@@ -20,10 +20,9 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             return payload;
         }
 
-        public static void CreateBroker(string token, string brokerEmail)
+        public static RestResponse CreateBroker(string token, string brokerEmail)
         {
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
-
             var restRequest = new RestRequest("/api/identity/registerLandlord", Method.Post);
             restRequest.AddHeaders(Headers.HeadersSuperAdmin(token));
 
@@ -61,6 +60,8 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
 
                 throw new Exception(errorMessage);
             }
+
+            return response;
         }
     }
 }

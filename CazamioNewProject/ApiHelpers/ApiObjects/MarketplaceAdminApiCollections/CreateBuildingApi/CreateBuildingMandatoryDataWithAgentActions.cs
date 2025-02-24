@@ -68,14 +68,13 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             return payload;
         }
 
-        public static void CreateBuildingMandatoryDataWithAgent(string token, RequestCreateBuildingMandatoryDataWithAgent buildingBody)
+        public static RestResponse CreateBuildingMandatoryDataWithAgent(string token, RequestCreateBuildingMandatoryDataWithAgent buildingBody)
         {
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
 
             var restRequest = new RestRequest("api/buildings/create", Method.Post);
             restRequest.AddHeaders(Headers.HeadersMarketplaceAdmin(token));
 
-            // Логируем тело запроса
             Console.WriteLine("Request Body:");
             Console.WriteLine(JsonConvert.SerializeObject(buildingBody, Formatting.Indented));
 
@@ -83,7 +82,6 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
 
             var response = restClient.Execute(restRequest);
 
-            // Логируем статус код, заголовки и содержимое ответа
             Console.WriteLine("Response Status Code: " + response.StatusCode);
             Console.WriteLine("Response Headers: " + string.Join(", ", response.Headers));
             Console.WriteLine("Response Content: " + response.Content);
@@ -106,8 +104,10 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                     errorMessage += "\nNo additional error information provided by the server.";
                 }
 
-                throw new Exception(errorMessage);
+                throw new Exception(errorMessage); 
             }
+
+            return response; 
         }
     }
 }

@@ -109,13 +109,12 @@ namespace ApiTestsLandlord
 
             #region Tests
 
-            BrokerCreation.CreateBroker(responseMarketplaceAdmin.AuthData.Token, brokerEmail);
+            var responceBroker = BrokerCreation.CreateBroker(responseMarketplaceAdmin.AuthData.Token, brokerEmail);
 
             #endregion
 
             #region Postconditions
 
-            Console.WriteLine($"{brokerEmail}");
             AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(brokerEmail, marketplaceId);
             WaitUntil.WaitSomeInterval(100);
             LandlordsBrokersDbRequests.LandlordsBrokers.DeleteNewlyCreatedBroker(brokerEmail, marketplaceId);
@@ -338,7 +337,7 @@ namespace ApiTestsLandlord
 
             #region Tests
 
-            BuildingCreationMandatoryData.CreateBuildingMandatoryDataWithAgent(responseMarketplaceAdmin.AuthData.Token, buildingBody);
+            var responseBuilding = BuildingCreationMandatoryData.CreateBuildingMandatoryDataWithAgent(responseMarketplaceAdmin.AuthData.Token, buildingBody);
 
             #endregion
         }
