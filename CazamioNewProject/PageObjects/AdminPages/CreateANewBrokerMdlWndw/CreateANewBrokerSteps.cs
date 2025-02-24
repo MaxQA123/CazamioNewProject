@@ -10,7 +10,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateANewBrokerMdlWndw
         {
             InputGeneral.InputFunctionWithClear(FieldInputFirstName, broker.BrokerName.FirstNameRandom);
             InputGeneral.InputFunctionWithClear(FieldInputLastName, broker.BrokerName.LastNameRandom);
-            InputGeneral.InputFunctionWithClear(FieldInputEmail, broker.BrokerEmail.FullEmail);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, broker.BrokerEmail.FullEmailRandom);
 
             return this;
         }

@@ -93,9 +93,9 @@ namespace ApiTestsLandlord
             #region Test Data
 
             int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
-
             MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
             Broker broker = Broker.Generate();
+            var brokerEmail = broker.BrokerEmail.FullEmailRandom;
 
             #endregion
 
@@ -109,19 +109,20 @@ namespace ApiTestsLandlord
 
             #region Tests
 
-            BrokerCreation.CreateBroker(responseMarketplaceAdmin.AuthData.Token);
+            BrokerCreation.CreateBroker(responseMarketplaceAdmin.AuthData.Token, brokerEmail);
 
             #endregion
 
-            //#region Postconditions
+            #region Postconditions
 
-            //AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(broker.BrokerEmail.FullEmail, marketplaceId);
-            //WaitUntil.WaitSomeInterval(100);
-            //LandlordsBrokersDbRequests.LandlordsBrokers.DeleteNewlyCreatedBroker(broker.BrokerEmail.FullEmail, marketplaceId);
-            //WaitUntil.WaitSomeInterval(100);
-            //AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(broker.BrokerEmail.FullEmail, marketplaceId);
+            Console.WriteLine($"{brokerEmail}");
+            AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(brokerEmail, marketplaceId);
+            WaitUntil.WaitSomeInterval(100);
+            LandlordsBrokersDbRequests.LandlordsBrokers.DeleteNewlyCreatedBroker(brokerEmail, marketplaceId);
+            WaitUntil.WaitSomeInterval(100);
+            AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(brokerEmail, marketplaceId);
 
-            //#endregion
+            #endregion
         }
 
         [Test]

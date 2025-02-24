@@ -7,31 +7,20 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
 {
     public partial class BrokerCreation
     {
-        public static RequestCreateBroker RequestBody()
+        public static RequestCreateBroker RequestBody(string brokerEmail)
         {
             Broker broker = Broker.Generate();
 
             var payload = new RequestCreateBroker();
             payload.FirstName = broker.BrokerName.FirstNameRandom;
             payload.LastName = broker.BrokerName.LastNameRandom;
-            payload.Email = broker.BrokerEmail.FullEmail;
+            payload.Email = brokerEmail;
             payload.Password = "";
 
             return payload;
         }
 
-        //public static RequestCreateBroker RequestBody(string firstNameBroker, string lastNameBroker, string emailBroker, string passwordBroker)
-        //{
-        //    var payload = new RequestCreateBroker();
-        //    payload.FirstName = firstNameBroker;
-        //    payload.LastName = lastNameBroker;
-        //    payload.Email = emailBroker;
-        //    payload.Password = passwordBroker;
-
-        //    return payload;
-        //}
-
-        public static void CreateBroker(string token)
+        public static void CreateBroker(string token, string brokerEmail)
         {
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
 
@@ -39,7 +28,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             restRequest.AddHeaders(Headers.HeadersSuperAdmin(token));
 
             // Логируем тело запроса
-            var requestBody = RequestBody();
+            var requestBody = RequestBody(brokerEmail);
             Console.WriteLine("Request Body:");
             Console.WriteLine(JsonConvert.SerializeObject(requestBody, Formatting.Indented));
 
@@ -73,24 +62,5 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                 throw new Exception(errorMessage);
             }
         }
-
-        //public static void CreateBroker(string token, string firstNameBroker, string lastNameBroker, string emailBroker, string passwordBroker)
-        //{
-        //    var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
-
-        //    var restRequest = new RestRequest("/api/identity/registerLandlord", Method.Post);
-        //    restRequest.AddHeaders(Headers.HeadersSuperAdmin(token));
-
-        //    restRequest.AddJsonBody(RequestBody(firstNameBroker, lastNameBroker, emailBroker, passwordBroker));
-
-        //    var response = restClient.Execute(restRequest);
-
-        //    var content = response.Content;
-
-        //    if (response.StatusCode != System.Net.HttpStatusCode.OK)
-        //    {
-        //        throw new Exception(response.Content);
-        //    }
-        //}
     }
 }

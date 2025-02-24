@@ -30,7 +30,7 @@ namespace CazamioNewProject.Objects
 
         public class BrokerEmailInfo
         {
-            public string FullEmail { get; set; }
+            public string FullEmailRandom { get; set; }
         }
 
         public class CreatedBrokerMySpaceInfo
@@ -61,7 +61,7 @@ namespace CazamioNewProject.Objects
         {
             return new BrokerEmailInfo
             {
-                FullEmail = GenerateRandomData.RandomEmail(5) + GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomEmail(2) + EmailNameDomen.PUTS_BOX,
+                FullEmailRandom = GenerateRandomData.RandomEmail(5) + GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomEmail(2) + EmailNameDomen.PUTS_BOX,
             };
         }
 
