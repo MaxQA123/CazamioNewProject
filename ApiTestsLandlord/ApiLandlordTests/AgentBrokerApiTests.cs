@@ -29,16 +29,11 @@ namespace ApiTestsLandlord
 
             AgentBroker agentBroker = AgentBroker.Generate();
 
-            var email = agentBroker.CreatedAgentMySpace.Email;
-            var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
-            var rememberMe = ApiRequestData.TRUE;
-            var deviceFingerprint = agentBroker.BasicDataApi.DeviceFingerprint;
-
             #endregion
 
             #region Test
 
-            var responseAgentBroker = LogInApiAgentBroker.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+            var responseAgentBroker = LogInApiAgentBroker.ExecuteLogIn();
 
             LogInApiAgentBroker.VerifyUserData(responseAgentBroker, agentBroker);
 

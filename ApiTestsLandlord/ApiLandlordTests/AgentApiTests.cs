@@ -29,16 +29,11 @@ namespace ApiTestsLandlord
 
             Agent agent = Agent.Generate();
 
-            var email = agent.CreatedAgentMySpace.Email;
-            var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
-            var rememberMe = ApiRequestData.TRUE;
-            var deviceFingerprint = agent.BasicDataApi.DeviceFingerprint;
-
             #endregion
 
             #region Test
 
-            var responseAgent = LogInApiAgent.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+            var responseAgent = LogInApiAgent.ExecuteLogIn();
 
             LogInApiAgent.VerifyUserData(responseAgent, agent);
 

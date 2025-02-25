@@ -10,7 +10,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateNewAgentMdlWndw
         {
             InputGeneral.InputFunctionWithClear(FieldInputFirstName, agent.AgentName.FirstNameRandom);
             InputGeneral.InputFunctionWithClear(FieldInputLastName, agent.AgentName.LastNameRandom);
-            InputGeneral.InputFunctionWithClear(FieldInputEmail, agent.AgentEmail.FullEmail);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, agent.AgentEmail.FullEmailRandom);
             InputGeneral.InputFunctionWithClear(FieldInputPhoneNumber, agent.PhoneNumber.BasicFirst);
             InputGeneral.InputFunctionWithClear(FieldInputCell, agent.PhoneNumber.CellFirst);
 

@@ -1,41 +1,70 @@
-﻿using RestSharp;
+﻿using CazamioNewProject.Objects;
+using Newtonsoft.Json;
+using RestSharp;
 using System;
 
 namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateAgentApi
 {
     public partial class AgentCreation
     {
-        public static RequestCreateAgent RequestBody(string firstNameAgent, string lastNameAgent, string emailAgent, string phoneNumberAgent, long brokerCommissionAgent, long agentCommissionAgent, string cellAgent)
+        public static RequestCreateAgent RequestBodyCreateAgent()
         {
+            Agent agent = Agent.Generate();
+
             var payload = new RequestCreateAgent();
-            payload.FirstName = firstNameAgent;
-            payload.LastName = lastNameAgent;
-            payload.Email = emailAgent;
-            payload.PhoneNumber = phoneNumberAgent;
-            payload.BrokerCommission = brokerCommissionAgent;
-            payload.AgentCommission = agentCommissionAgent;
-            payload.Cell = cellAgent;
+            payload.FirstName = agent.AgentName.FirstNameRandom;
+            payload.LastName = agent.AgentName.LastNameRandom;
+            payload.Email = agent.AgentEmail.FullEmailRandom;
+            payload.PhoneNumber = agent.PhoneNumber.BasicFirst;
+            payload.BrokerCommission = agent.CommissionPercentage.BrokerCommissionApi;
+            payload.AgentCommission = agent.CommissionPercentage.AgentCommissionApi;
+            payload.Cell = agent.PhoneNumber.CellFirst;
 
             return payload;
         }
 
-        public static void CreateAgent(string token, string firstNameAgent, string lastNameAgent, string emailAgent, string phoneNumberAgent, long brokerCommissionAgent, long agentCommissionAgent, string cellAgent)
+        public static RestResponse CreateAgent(string token, RequestCreateAgent bodyRequestCreateAgent)
         {
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
 
             var restRequest = new RestRequest("/api/brokers/registerBroker", Method.Post);
             restRequest.AddHeaders(Headers.HeadersSuperAdmin(token));
 
-            restRequest.AddJsonBody(RequestBody(firstNameAgent, lastNameAgent, emailAgent, phoneNumberAgent, brokerCommissionAgent, agentCommissionAgent, cellAgent));
+            // Логируем тело запроса
+            Console.WriteLine("Request Body:");
+            Console.WriteLine(JsonConvert.SerializeObject(bodyRequestCreateAgent, Formatting.Indented));
+
+            restRequest.AddJsonBody(bodyRequestCreateAgent);
 
             var response = restClient.Execute(restRequest);
 
-            var content = response.Content;
+            // Логируем статус код, заголовки и содержимое ответа
+            Console.WriteLine("Response Status Code: " + response.StatusCode);
+            Console.WriteLine("Response Headers: " + string.Join(", ", response.Headers));
+            Console.WriteLine("Response Content: " + response.Content);
 
             if (response.StatusCode != System.Net.HttpStatusCode.OK)
             {
-                throw new Exception(response.Content);
+                string errorMessage = $"Request failed with status code: {response.StatusCode}";
+
+                if (response.ErrorException != null)
+                {
+                    errorMessage += $"\nException: {response.ErrorException.Message}";
+                }
+
+                if (!string.IsNullOrEmpty(response.Content))
+                {
+                    errorMessage += $"\nResponse Content: {response.Content}";
+                }
+                else
+                {
+                    errorMessage += "\nNo additional error information provided by the server.";
+                }
+
+                throw new Exception(errorMessage);
             }
+
+            return response;
         }
     }
 }

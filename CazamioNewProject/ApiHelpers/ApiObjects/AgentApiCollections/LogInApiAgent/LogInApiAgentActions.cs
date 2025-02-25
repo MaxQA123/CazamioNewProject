@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using CazamioNewProject.GuiHelpers;
+using CazamioNewProject.Objects;
+using Newtonsoft.Json;
 using RestSharp;
 using System;
 
@@ -6,18 +8,20 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.AgentApiCollections.LogInApiAg
 {
     public partial class LogInApiAgent
     {
-        public static RequestLogInAgent RequestBody(string email, string password, string deviceFingerprint, bool rememberMe)
+        public static RequestLogInAgent RequestBody()
         {
+            Agent agent = Agent.Generate();
+
             var payload = new RequestLogInAgent();
-            payload.Email = email;
-            payload.Password = password;
-            payload.DeviceFingerprint = deviceFingerprint;
-            payload.RememberMe = rememberMe;
+            payload.Email = agent.CreatedAgentMySpace.Email;
+            payload.Password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
+            payload.DeviceFingerprint = agent.BasicDataApi.DeviceFingerprint;
+            payload.RememberMe = ApiRequestData.TRUE;
 
             return payload;
         }
 
-        public static ResponseLogInAgent ExecuteLogIn(string email, string password, string deviceFingerprint, bool rememberMe)
+        public static ResponseLogInAgent ExecuteLogIn()
         {
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
 
@@ -25,7 +29,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.AgentApiCollections.LogInApiAg
             restRequest.AddHeaders(Headers.HeadersForLogIn());
 
             // Логируем тело запроса
-            var requestBody = RequestBody(email, password, deviceFingerprint, rememberMe);
+            var requestBody = RequestBody();
             Console.WriteLine("Request Body:");
             Console.WriteLine(JsonConvert.SerializeObject(requestBody, Formatting.Indented));
 

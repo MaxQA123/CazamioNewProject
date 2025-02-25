@@ -68,7 +68,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             return payload;
         }
 
-        public static RestResponse CreateBuildingMandatoryDataWithAgent(string token, RequestCreateBuildingMandatoryDataWithAgent buildingBody)
+        public static RestResponse CreateBuildingMandatoryDataWithAgent(string token, RequestCreateBuildingMandatoryDataWithAgent buildingRequestBody)
         {
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
 
@@ -76,9 +76,9 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             restRequest.AddHeaders(Headers.HeadersMarketplaceAdmin(token));
 
             Console.WriteLine("Request Body:");
-            Console.WriteLine(JsonConvert.SerializeObject(buildingBody, Formatting.Indented));
+            Console.WriteLine(JsonConvert.SerializeObject(buildingRequestBody, Formatting.Indented));
 
-            restRequest.AddJsonBody(buildingBody);
+            restRequest.AddJsonBody(buildingRequestBody);
 
             var response = restClient.Execute(restRequest);
 

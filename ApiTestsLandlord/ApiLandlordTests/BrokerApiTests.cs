@@ -38,16 +38,12 @@ namespace ApiTestsLandlord
 
             Broker broker = Broker.Generate();
 
-            var email = broker.CreatedBrokerMySpace.Email;
-            var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
-            var rememberMe = ApiRequestData.TRUE;
-            var deviceFingerprint = broker.BasicDataApi.DeviceFingerprint;
 
             #endregion
 
             #region Test
 
-            var responseBroker = LogInApiBroker.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+            var responseBroker = LogInApiBroker.ExecuteLogIn();
 
             LogInApiBroker.VerifyUserData(responseBroker, broker);
 
@@ -69,14 +65,9 @@ namespace ApiTestsLandlord
 
             //int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
 
-            //Broker broker = new Broker().Generate();
+            //Broker broker = Broker.Generate();
 
-            //var email = broker.EmailAddressBroker;
-            //var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
-            //var rememberMe = ApiRequestData.TRUE;
-            //var deviceFingerprint = broker.DeviceFingerprint;
-
-            //Agent agent = new Agent().Generate();
+            //Agent agent = Agent.Generate();
 
             //var firstNameAgent = agent.FirstName;
             //var lastNameAgent = agent.LastName;
@@ -90,7 +81,7 @@ namespace ApiTestsLandlord
 
             //#region Preconditions
 
-            //var responseBroker = LogInApiBroker.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+            //var responseBroker = LogInApiBroker.ExecuteLogIn();
 
             //LogInApiBroker.VerifyUserData(responseBroker, broker);
 
@@ -130,12 +121,7 @@ namespace ApiTestsLandlord
 
             //int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
 
-            //Broker broker = new Broker().Generate();
-
-            //var email = broker.EmailAddressBroker;
-            //var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
-            //var rememberMe = ApiRequestData.TRUE;
-            //var deviceFingerprint = broker.DeviceFingerprint;
+            //Broker broker = Broker.Generate();
 
             //var ownerBody = OwnerCreation.RequestCreateOwnerWithTenantPays();
 
@@ -143,7 +129,7 @@ namespace ApiTestsLandlord
 
             //#region Preconditions
 
-            //var responseBroker = LogInApiBroker.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+            //var responseBroker = LogInApiBroker.ExecuteLogIn();
 
             //LogInApiBroker.VerifyUserData(responseBroker, broker);
 
@@ -179,14 +165,9 @@ namespace ApiTestsLandlord
         {
             //#region Test Data
 
-            //Broker broker = new Broker().Generate();
-
             //int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
 
-            //var email = broker.EmailAddressBroker;
-            //var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
-            //var rememberMe = ApiRequestData.TRUE;
-            //var deviceFingerprint = broker.DeviceFingerprint;
+            //Broker broker = Broker.Generate();
 
             //var ownerBody = OwnerCreation.RequestBodyRequiredFieldsManagements();
 
@@ -194,7 +175,7 @@ namespace ApiTestsLandlord
 
             //#region Preconditions
 
-            //var responseBroker = LogInApiBroker.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+            //var responseBroker = LogInApiBroker.ExecuteLogIn();
 
             //LogInApiBroker.VerifyUserData(responseBroker, broker);
 
