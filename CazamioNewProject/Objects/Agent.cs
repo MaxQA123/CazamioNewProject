@@ -103,8 +103,8 @@ namespace CazamioNewProject.Objects
             {
                 ForBrokerRandom = GenerateRandomData.RandomNumberWithoutZero(2),
                 ForAgentRandom = GenerateRandomData.RandomNumberWithoutZero(2),
-                BrokerCommissionApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(2)),
-                AgentCommissionApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(2)),
+                BrokerCommissionApi = 33,
+                AgentCommissionApi = 67,
             };
         }
 

@@ -27,7 +27,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         {
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
 
-            var restRequest = new RestRequest("/api/brokers/registerBroker", Method.Post);
+            var restRequest = new RestRequest("/api/agents/registerAgent", Method.Post);
             restRequest.AddHeaders(Headers.HeadersSuperAdmin(token));
 
             // Логируем тело запроса

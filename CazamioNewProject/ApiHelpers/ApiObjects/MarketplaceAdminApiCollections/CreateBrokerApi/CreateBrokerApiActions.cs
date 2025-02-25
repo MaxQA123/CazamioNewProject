@@ -7,31 +7,30 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
 {
     public partial class BrokerCreation
     {
-        public static RequestCreateBroker RequestBody(string brokerEmail)
+        public static RequestCreateBroker RequestBodyCreateBroker()
         {
             Broker broker = Broker.Generate();
 
             var payload = new RequestCreateBroker();
             payload.FirstName = broker.BrokerName.FirstNameRandom;
             payload.LastName = broker.BrokerName.LastNameRandom;
-            payload.Email = brokerEmail;
+            payload.Email = broker.BrokerEmail.FullEmailRandom;
             payload.Password = "";
 
             return payload;
         }
 
-        public static RestResponse CreateBroker(string token, string brokerEmail)
+        public static RestResponse CreateBroker(string token, RequestCreateBroker requestBodyCreateBroker)
         {
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
             var restRequest = new RestRequest("/api/identity/registerLandlord", Method.Post);
             restRequest.AddHeaders(Headers.HeadersSuperAdmin(token));
 
             // Логируем тело запроса
-            var requestBody = RequestBody(brokerEmail);
             Console.WriteLine("Request Body:");
-            Console.WriteLine(JsonConvert.SerializeObject(requestBody, Formatting.Indented));
+            Console.WriteLine(JsonConvert.SerializeObject(requestBodyCreateBroker, Formatting.Indented));
 
-            restRequest.AddJsonBody(requestBody);
+            restRequest.AddJsonBody(requestBodyCreateBroker);
 
             var response = restClient.Execute(restRequest);
 
