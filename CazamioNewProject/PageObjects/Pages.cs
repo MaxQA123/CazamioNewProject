@@ -138,6 +138,7 @@ namespace CazamioNewProject.PageObjects
         public static EmailPutsBox EmailPutsBox => GetPage<EmailPutsBox>();
         public static EmailHelper EmailHelper => GetPage<EmailHelper>();
         public static JScriptExecutor JScriptExecutor => GetPage<JScriptExecutor>();
+        public static PaymentSettingsApiKey PaymentSettingsApiKey => GetPage<PaymentSettingsApiKey>();
 
         #region Tenant objects
 

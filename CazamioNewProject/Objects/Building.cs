@@ -119,9 +119,9 @@ namespace CazamioNewProject.Objects
             public string CityNewYork { get; set; }
             public string StateNy { get; set; }
             public string ZipCode { get; set; }
-            public string NeighborhoodEmpty { get; set; }
-            public string BuildingName { get; set; }
-            public string LlcName { get; set; }
+            public string EmptyString { get; set; }
+            public long ScreeningFeeByDefaultMySpace { get; set; }
+            public long HoldDepositByDefaultMySpace { get; set; }
         }
 
         public class DescriptionsInternalNotesInfo
@@ -288,9 +288,9 @@ namespace CazamioNewProject.Objects
                 CityNewYork = "New York",
                 StateNy = "NY",
                 ZipCode = "10022",
-                NeighborhoodEmpty = "",
-                BuildingName = "QA-Building Name AGENT 111A East 51st Street Pedestrian Crossing (12345) (*&^%)",
-                LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
+                EmptyString = "",
+                ScreeningFeeByDefaultMySpace = 20,
+                HoldDepositByDefaultMySpace = 500,
             };
         }
 

@@ -120,6 +120,7 @@ namespace CazamioNewProject.Objects
         public class CreatedOwnerNoCommissioMySpaceInfo
         {
             public string OwnerName { get; set; }
+            public long OwnerIdApi { get; set; }
         }
 
         public class CreatedOwnerOwnerAndTenantPaysMySpaceInfo
@@ -246,6 +247,7 @@ namespace CazamioNewProject.Objects
             return new CreatedOwnerNoCommissioMySpaceInfo
             {
                 OwnerName = "LLC Ag-Br Owner No commisions AutoTest",
+                OwnerIdApi = 1,
             };
         }
 

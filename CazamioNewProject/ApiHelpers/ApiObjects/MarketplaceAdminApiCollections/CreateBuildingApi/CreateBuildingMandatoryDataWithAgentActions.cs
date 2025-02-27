@@ -1,4 +1,5 @@
-﻿using CazamioNewProject.Objects;
+﻿using CazamioNewProject.GuiHelpers;
+using CazamioNewProject.Objects;
 using Newtonsoft.Json;
 using RestSharp;
 using System;
@@ -7,9 +8,13 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
 {
     public partial class BuildingCreationMandatoryData
     {
+        //Id = building.CommonApiData.BuildingId, always = 0
+        //BuildingId = 0, always = 0
         public static RequestCreateBuildingMandatoryDataWithAgent RequestBodyCreateBuildingMandatoryDataWithAgent()
         {
             Building building = Building.Generate();
+            Owner owner = Owner.Generate();
+            PaymentOptions paymentOptions = PaymentOptions.Generate();
 
             var payload = new RequestCreateBuildingMandatoryDataWithAgent
             {
@@ -21,30 +26,30 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                     State = building.CommonApiData.StateNy, 
                     City = building.CommonApiData.CityNewYork, 
                     ZipCode = building.CommonApiData.ZipCode, 
-                    Neighborhood = "" 
+                    Neighborhood = building.CommonApiData.EmptyString
                 },
                 PetPolicies = new object[0],
-                OwnerId = 1,
-                BuildingId = 0,
-                BuildingName = "",
-                LlcName = "",
-                Description = "",
-                InternalNotes = "",
+                OwnerId = owner.CreatedOwnerNoCommissioMySpace.OwnerIdApi,
+                BuildingId = building.CommonApiData.BuildingId,
+                BuildingName = building.CommonApiData.EmptyString,
+                LlcName = building.CommonApiData.EmptyString,
+                Description = building.CommonApiData.EmptyString,
+                InternalNotes = building.CommonApiData.EmptyString,
                 ScreeningFee = new HoldDeposit
                 {
-                    Amount = 20,
-                    AllowedPaymentMethods = new string[] { "CreditCard" }
+                    Amount = building.CommonApiData.ScreeningFeeByDefaultMySpace,
+                    AllowedPaymentMethods = new string[] { paymentOptions.PaymentMethodsName.CreditCard }
                 },
                 HoldDeposit = new HoldDeposit
                 {
-                    Amount = 500, 
-                    AllowedPaymentMethods = new string[] { "CreditCard" }
+                    Amount = building.CommonApiData.HoldDepositByDefaultMySpace, 
+                    AllowedPaymentMethods = new string[] { paymentOptions.PaymentMethodsName.CreditCard }
                 },
                 ApiKey = new ApiKey
                 {
                     Id = 2,
-                    IsAchInclude = true,
-                    IsDefault = true,
+                    IsAchInclude = CommonApiData.TRUE,
+                    IsDefault = CommonApiData.TRUE,
                     Key = "czmodev359376936c0543b58126c97f9ff55c68",
                     AuthorizeNetApiLoginId = null,
                     PaymentSystem = 1

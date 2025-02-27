@@ -41,6 +41,12 @@
         public const int MARKETPLACE_ID_MY_SPACE = 15;
     }
 
+    public class CommonApiData
+    {
+        public const bool TRUE = true;
+        public const bool FALSE = false;
+    }
+
     public class TestDataLandlord
     {
         public const string USER_NAME_ROLE_SUPER_ADMIN = "Super Admin";

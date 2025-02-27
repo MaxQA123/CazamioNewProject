@@ -3,48 +3,35 @@ namespace CazamioNewProject.Objects
 {
     public class PaymentOptions
     {
-        public DeliverCheckNoteInfo DeliverCheckNote { get; set; }
-        public ZelleInfo Zelle { get; set; }
+        public PaymentMethodsNameInfo PaymentMethodsName { get; set; }
 
-        public class DeliverCheckNoteInfo
+        public static PaymentOptions Generate()
         {
-            public string ForBuildingScreening { get; set; }
-            public string ForBuildingHold { get; set; }
-            public string ForApartment { get; set; }
-        }
-
-        public class ZelleInfo
-        {
-            public string ForBuildingScreening { get; set; }
-            public string ForBuildingHold { get; set; }
-            public string ForApartment { get; set; }
-        }
-
-        public PaymentOptions Generate()
-        {
-            string deliverCheckNoteForBuildingScreening = "Deliver check for Building screening (12345) (%$#@!) (09876)";
-            string deliverCheckNoteForBuildingHold = "Deliver check for Building hold (12345) (%$#@!) (09876)";
-            string deliverCheckNoteForApartment = "Deliver check for Apartment (12345) (%$#@!) (09876)";
-            string forZelleBuildingScreening = "screening5building@xitroo.com 2128712345";
-            string forZelleBuildingHold = "hold7building@xitroo.com 5180987456";
-            string zelleForApartment = "hold5apart@xitroo.com 5180987123";
-
-            var paymentOptions = new PaymentOptions()
+            return new PaymentOptions
             {
-                DeliverCheckNote = new DeliverCheckNoteInfo
-                {
-                    ForBuildingScreening = deliverCheckNoteForBuildingScreening,
-                    ForBuildingHold = deliverCheckNoteForBuildingHold,
-                    ForApartment = deliverCheckNoteForApartment
-                },
-                Zelle = new ZelleInfo
-                {
-                    ForBuildingScreening = forZelleBuildingScreening,
-                    ForBuildingHold = forZelleBuildingHold,
-                    ForApartment = zelleForApartment
-                },
+                PaymentMethodsName = CreatePaymentMethodsNameInfo(),
             };
-            return paymentOptions;
+        }
+
+        public class PaymentMethodsNameInfo
+        {
+            public string CreditCard { get; set; }
+            public string Ach { get; set; }
+            public string DeliverCheck { get; set; }
+            public string Zelle { get; set; }
+            public string Venmo { get; set; }
+        }
+
+        private static PaymentMethodsNameInfo CreatePaymentMethodsNameInfo()
+        {
+            return new PaymentMethodsNameInfo
+            {
+                CreditCard = "CreditCard",
+                Ach = "",
+                DeliverCheck = "",
+                Zelle = "",
+                Venmo = "",
+            };
         }
     }
 }

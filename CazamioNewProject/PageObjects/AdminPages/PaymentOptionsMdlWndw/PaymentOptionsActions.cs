@@ -1,12 +1,10 @@
-﻿using CazamioNewProject.GuiHelpers;
-using CazamioNewProject.Objects;
-using NUnit.Allure.Attributes;
+﻿using CazamioNewProject.Objects;
 
 namespace CazamioNewProject.PageObjects.AdminPages.PaymentOptionsMdlWndw
 {
     public partial class PaymentOptionsMdlWndw
     {
-        PaymentOptions paymentOptions = new PaymentOptions().Generate();
+        PaymentOptions paymentOptions = PaymentOptions.Generate();
 
         
     }
