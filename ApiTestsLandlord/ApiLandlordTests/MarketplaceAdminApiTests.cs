@@ -177,55 +177,9 @@ namespace ApiTestsLandlord
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("MarketplaceAdmin Api test")]
-        [AllureSubSuite("CreateOwnerWithBroker")]
+        [AllureSubSuite("CreateOwnerOwnerAndTenantPaysWithBroker")]
 
-        public void CreateOwnerWithBroker()
-        {
-            //#region Test Data
-
-            //int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
-
-            //MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
-
-            //var ownerBody = OwnerCreation.RequestBodyBrokerFullData();
-
-            //#endregion
-
-            //#region Preconditions
-
-            //var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
-
-            //LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
-
-            //#endregion
-
-            //#region Tests
-
-            //OwnerCreation.CreateOwnerWithBrokerFullData(responseMarketplaceAdmin.AuthData.Token, ownerBody);
-
-            //#endregion
-
-            //#region Postconditions
-
-            //OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(ownerBody.OwnerEmail, marketplaceId);
-            //Console.WriteLine($"{ownerBody.OwnerEmail}");
-            //OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(ownerBody.OwnerEmail, marketplaceId);
-            //OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(ownerBody.OwnerEmail, marketplaceId);
-            //OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(ownerBody.OwnerEmail, marketplaceId);
-
-            //#endregion
-        }
-
-        [Test]
-        [AllureTag("Regression")]
-        [AllureOwner("Maksim Perevalov")]
-        [AllureSeverity(SeverityLevel.critical)]
-        [Retry(2)]
-        [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin Api test")]
-        [AllureSubSuite("CreateOwnerWithAgent")]
-
-        public void CreateOwnerWithAgent()
+        public void CreateOwnerOwnerAndTenantPaysWithBroker()
         {
             #region Test Data
 
@@ -233,7 +187,7 @@ namespace ApiTestsLandlord
 
             MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
 
-            var ownerBody = OwnerCreation.RequestBodyAgentRequiredData();
+            var requestBodyOwner = OwnerCreation.RequestBodyCreateOwnerOwnerAndTenantPaysBr();
 
             #endregion
 
@@ -247,17 +201,61 @@ namespace ApiTestsLandlord
 
             #region Tests
 
-            OwnerCreation.CreateOwnerWithAgentRequiredData(responseMarketplaceAdmin.AuthData.Token, ownerBody);
+            OwnerCreation.CreateOwnerOwnerAndTenantPaysBr(responseMarketplaceAdmin.AuthData.Token, requestBodyOwner);
+
+            #endregion
+
+            //#region Postconditions
+
+            //OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(requestBodyOwner.OwnerEmail, marketplaceId);
+            //Console.WriteLine($"{requestBodyOwner.OwnerEmail}");
+            //OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(requestBodyOwner.OwnerEmail, marketplaceId);
+            //OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(requestBodyOwner.OwnerEmail, marketplaceId);
+            //OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(requestBodyOwner.OwnerEmail, marketplaceId);
+
+            //#endregion
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("MarketplaceAdmin Api test")]
+        [AllureSubSuite("CreateOwnerNoCommissionWithAgent")]
+
+        public void CreateOwnerNoCommissionWithAgent()
+        {
+            #region Test Data
+
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+            MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
+
+            var requestBodyOwner = OwnerCreation.RequestBodyOwnerNoCommissionAg();
+
+            #endregion
+
+            #region Preconditions
+
+            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
+
+            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+
+            #endregion
+
+            #region Tests
+
+            OwnerCreation.CreateOwnerNoCommissionAg(responseMarketplaceAdmin.AuthData.Token, requestBodyOwner);
 
             #endregion
 
             #region Postconditions
 
-            OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(ownerBody.OwnerEmail, marketplaceId);
-            Console.WriteLine($"{ownerBody.OwnerEmail}");
-            OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(ownerBody.OwnerEmail, marketplaceId);
-            OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(ownerBody.OwnerEmail, marketplaceId);
-            OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(ownerBody.OwnerEmail, marketplaceId);
+            OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(requestBodyOwner.OwnerEmail, marketplaceId);
+            OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(requestBodyOwner.OwnerEmail, marketplaceId);
+            OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(requestBodyOwner.OwnerEmail, marketplaceId);
+            OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(requestBodyOwner.OwnerEmail, marketplaceId);
 
             #endregion
         }

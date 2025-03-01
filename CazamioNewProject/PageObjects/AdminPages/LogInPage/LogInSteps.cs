@@ -65,7 +65,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         [AllureStep("LogInAsAgentMySpace")]
         public LogInLandlord LogInAsAgentMySpace()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputEmail, agent.CreatedAgentMySpace.Email);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, agent.CreatedAgentLulaMySpace.Email);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
             Button.Click(IconShow);

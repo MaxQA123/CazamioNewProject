@@ -13,7 +13,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.AgentApiCollections.LogInApiAg
             Agent agent = Agent.Generate();
 
             var payload = new RequestLogInAgent();
-            payload.Email = agent.CreatedAgentMySpace.Email;
+            payload.Email = agent.CreatedAgentLulaMySpace.Email;
             payload.Password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
             payload.DeviceFingerprint = agent.BasicDataApi.DeviceFingerprint;
             payload.RememberMe = ApiRequestData.TRUE;

@@ -3,45 +3,38 @@ namespace CazamioNewProject.Objects
 {
     public class PaymentSettingsApiKey
     {
-        public PaymentSystemInfo PaymentSystem { get; set; }
+        public TypePaymentSystemInfo TypePaymentSystem { get; set; }
         public ApiKeyInfo ApiKey { get; set; }
 
         public static PaymentSettingsApiKey Generate()
         {
             return new PaymentSettingsApiKey
             {
-                PaymentSystem = CreatePaymentSystemInfo(),
+                TypePaymentSystem = CreateTypePaymentSystemInfo(),
                 ApiKey = CreateApiKeyInfo(),
             };
         }
 
-        public class PaymentSystemInfo
+        public class TypePaymentSystemInfo
         {
-            public string CreditCard { get; set; }
-            public string Ach { get; set; }
-            public string DeliverCheck { get; set; }
-            public string Zelle { get; set; }
-            public string Venmo { get; set; }
+            public long Cardknox { get; set; }
+            public long AuthorizeNet { get; set; }
         }
 
         public class ApiKeyInfo
         {
-            public string CreditCard { get; set; }
-            public string Ach { get; set; }
-            public string DeliverCheck { get; set; }
-            public string Zelle { get; set; }
-            public string Venmo { get; set; }
+            public string Cardknox { get; set; }
+            public long IdCardknox { get; set; }
+            public string AuthorizeNet { get; set; }
+            public string LogInIdOfAuthorizeNet { get; set; }
         }
 
-        private static PaymentSystemInfo CreatePaymentSystemInfo()
+        private static TypePaymentSystemInfo CreateTypePaymentSystemInfo()
         {
-            return new PaymentSystemInfo
+            return new TypePaymentSystemInfo
             {
-                CreditCard = "CreditCard",
-                Ach = "",
-                DeliverCheck = "",
-                Zelle = "",
-                Venmo = "",
+                Cardknox = 1,
+                AuthorizeNet = 2,
             };
         }
 
@@ -49,11 +42,10 @@ namespace CazamioNewProject.Objects
         {
             return new ApiKeyInfo
             {
-                CreditCard = "CreditCard",
-                Ach = "",
-                DeliverCheck = "",
-                Zelle = "",
-                Venmo = "",
+                Cardknox = "czmodev359376936c0543b58126c97f9ff55c68",
+                IdCardknox = 2,
+                AuthorizeNet = "2L7uB4UzeA9gf366",
+                LogInIdOfAuthorizeNet = "44vvA3GPz",
             };
         }
         //public PaymentSystemInfo PaymentSystem { get; set; }

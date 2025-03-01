@@ -9,7 +9,7 @@ namespace CazamioNewProject.Objects
         public AgentEmailInfo AgentEmail { get; set; }
         public PhoneNumberInfo PhoneNumber { get; set; }
         public CommissionPercentageInfo CommissionPercentage { get; set; }
-        public CreatedAgentMySpaceInfo CreatedAgentMySpace { get; set; }
+        public CreatedAgentLulaMySpaceInfo CreatedAgentLulaMySpace { get; set; }
         public BasicDataApiInfo BasicDataApi { get; set; }
 
         public static Agent Generate()
@@ -20,7 +20,7 @@ namespace CazamioNewProject.Objects
                 AgentEmail = CreateAgentEmailInfo(),
                 PhoneNumber = CreatePhoneNumberInfo(),
                 CommissionPercentage = CreateCommissionPercentageInfo(),
-                CreatedAgentMySpace = CreateCreatedAgentMySpaceInfo(),
+                CreatedAgentLulaMySpace = CreateCreatedAgentLulaMySpaceInfo(),
                 BasicDataApi = CreateBasicDataApiInfo(),
             };
         }
@@ -52,7 +52,7 @@ namespace CazamioNewProject.Objects
             public long AgentCommissionApi { get; set; }
         }
 
-        public class CreatedAgentMySpaceInfo
+        public class CreatedAgentLulaMySpaceInfo
         {
             public string FullName { get; set; }
             public string FirstName { get; set; }
@@ -108,9 +108,9 @@ namespace CazamioNewProject.Objects
             };
         }
 
-        private static CreatedAgentMySpaceInfo CreateCreatedAgentMySpaceInfo()
+        private static CreatedAgentLulaMySpaceInfo CreateCreatedAgentLulaMySpaceInfo()
         {
-            return new CreatedAgentMySpaceInfo
+            return new CreatedAgentLulaMySpaceInfo
             {
                 FullName = "Lula AgentQA",
                 FirstName = "Lula",

@@ -62,6 +62,7 @@ namespace CazamioNewProject.Objects
             public string Cell { get; set; }
             public string BrokerCommission { get; set; }
             public string AgentCommission { get; set; }
+            public string AssignedUserId { get; set; }
             public long AgentIdApi { get; set; }
         }
 
@@ -120,6 +121,7 @@ namespace CazamioNewProject.Objects
                 Cell = "(212) 908-7321",
                 BrokerCommission = "35.5",
                 AgentCommission = "64.5",
+                AssignedUserId = "85b076fa-1cfb-4f6d-888d-70ae7be1bc88",
             };
         }
 

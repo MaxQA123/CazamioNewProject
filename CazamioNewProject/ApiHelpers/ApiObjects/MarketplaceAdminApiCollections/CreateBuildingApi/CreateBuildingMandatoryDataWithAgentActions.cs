@@ -15,6 +15,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             Building building = Building.Generate();
             Owner owner = Owner.Generate();
             PaymentOptions paymentOptions = PaymentOptions.Generate();
+            PaymentSettingsApiKey paymentSettingsApiKey = PaymentSettingsApiKey.Generate();
 
             var payload = new RequestCreateBuildingMandatoryDataWithAgent
             {
@@ -47,12 +48,12 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                 },
                 ApiKey = new ApiKey
                 {
-                    Id = 2,
+                    Id = paymentSettingsApiKey.ApiKey.IdCardknox,
                     IsAchInclude = CommonApiData.TRUE,
                     IsDefault = CommonApiData.TRUE,
-                    Key = "czmodev359376936c0543b58126c97f9ff55c68",
+                    Key = paymentSettingsApiKey.ApiKey.Cardknox,
                     AuthorizeNetApiLoginId = null,
-                    PaymentSystem = 1
+                    PaymentSystem = paymentSettingsApiKey.TypePaymentSystem.Cardknox
                 },
                 Amenities = new object[0],
                 Locks = new Locks

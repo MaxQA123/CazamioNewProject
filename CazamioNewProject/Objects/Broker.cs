@@ -40,6 +40,7 @@ namespace CazamioNewProject.Objects
             public string LastName { get; set; }
             public string Email { get; set; }
             public long BrokerIdApi { get; set; }
+            public string AssignedUserId { get; set; }
         }
 
         public class BasicDataApiInfo
@@ -74,6 +75,7 @@ namespace CazamioNewProject.Objects
                 LastName = "Feabroker",
                 Email = "broker3autotest@putsbox.com",
                 BrokerIdApi = 103,
+                AssignedUserId = "807d61ec-8d36-4748-9a1d-fd5fa755accd",
             };
         }
 

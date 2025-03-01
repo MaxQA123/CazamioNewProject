@@ -1,8 +1,9 @@
 ﻿using Newtonsoft.Json;
+using System;
 
 namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateOwnerApi
 {
-    public partial class RequestCreateOwnerFullData
+    public partial class RequestCreateOwnerOwnerAndTenantPaysBr
     {
         [JsonProperty("companyName")]
         public string CompanyName { get; set; }
@@ -20,7 +21,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public string Note { get; set; }
 
         [JsonProperty("phoneNumbers")]
-        public PhoneNumberModel[] PhoneNumbers { get; set; }
+        public PhoneNumbers[] PhoneNumbers { get; set; }
 
         [JsonProperty("managements")]
         public Management[] Managements { get; set; }
@@ -28,11 +29,8 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         [JsonProperty("commissionStructures")]
         public CommissionStructure[] CommissionStructures { get; set; }
 
-        [JsonProperty("brokerId")]
-        public long BrokerId { get; set; }
-
-        [JsonProperty("isAgent")]
-        public bool IsAgent { get; set; }
+        [JsonProperty("assignedUserId")]
+        public Guid AssignedUserId { get; set; }
     }
 
     public partial class CommissionStructure
@@ -80,13 +78,13 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
         public string Extension { get; set; }
     }
 
-    public partial class PhoneNumberModel
+    public partial class PhoneNumbers
     {
         [JsonProperty("id")]
         public long Id { get; set; }
 
         [JsonProperty("phoneNumber")]
-        public string PhoneNumber { get; set; }
+        public string PhoneNumber{ get; set; }
 
         [JsonProperty("extension")]
         public string Extension { get; set; }

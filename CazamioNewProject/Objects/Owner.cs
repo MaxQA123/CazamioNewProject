@@ -87,14 +87,15 @@ namespace CazamioNewProject.Objects
             public string ExtensionFirst { get; set; }
             public string BasicSecond { get; set; }
             public string ExtensionSecond { get; set; }
+            public long FirstBoxApi { get; set; }
             public long BasicApi { get; set; }
-            public long ExtensionApi { get; set; }
         }
 
         public class CommissionStructureInfo
         {
             public long NoCommissionIdApi { get; set; }
             public long OwnerPaysComissionIdApi { get; set; }
+            public long IdOwnerAndTenantPaysComissionIdApi { get; set; }
             public string NoCommissionName { get; set; }
             public string OwnerPaysName { get; set; }
             public string TenantPaysName { get; set; }
@@ -115,6 +116,7 @@ namespace CazamioNewProject.Objects
             public long TenantNumberOfMonthsApi { get; set; }
             public long OwnerPercentageApi { get; set; }
             public long TenantPercentageApi { get; set; }
+            public long TakeOffStaticApi { get; set; }
         }
 
         public class CreatedOwnerNoCommissioMySpaceInfo
@@ -208,8 +210,8 @@ namespace CazamioNewProject.Objects
                 ExtensionFirst = "320" + GenerateRandomData.RandomPhoneNumber(7),
                 BasicSecond = "585" + GenerateRandomData.RandomPhoneNumber(7),
                 ExtensionSecond = "325",
+                FirstBoxApi = 0,
                 BasicApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
-                ExtensionApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
             };
         }
 
@@ -219,6 +221,7 @@ namespace CazamioNewProject.Objects
             {
                 NoCommissionIdApi = 1,
                 OwnerPaysComissionIdApi = 2,
+                IdOwnerAndTenantPaysComissionIdApi =0,
                 NoCommissionName = "None",
                 OwnerPaysName = "OwnerPays",
                 TenantPaysName = "TenantPays",
@@ -235,10 +238,11 @@ namespace CazamioNewProject.Objects
                 OwnerPercentageStatic = "55.99",
                 TenantPercentageStatic = "79.8",
                 TakeOffStatic = "15",
-                OwnerNumberOfMonthsApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
-                TenantNumberOfMonthsApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
-                OwnerPercentageApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
-                TenantPercentageApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(10)),
+                OwnerNumberOfMonthsApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(1)),
+                TenantNumberOfMonthsApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(1)),
+                OwnerPercentageApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(2)),
+                TenantPercentageApi = long.Parse(GenerateRandomData.RandomNumberWithoutZero(2)),
+                TakeOffStaticApi = 15,
             };
         }
 

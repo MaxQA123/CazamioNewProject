@@ -37,7 +37,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         {
             Agent agent = Agent.Generate();
 
-            var xpath = "//ng-dropdown-panel//span[text() = '" + agent.CreatedAgentMySpace.FullName + "']";
+            var xpath = "//ng-dropdown-panel//span[text() = '" + agent.CreatedAgentLulaMySpace.FullName + "']";
 
             return Browser._Driver.FindElement(By.XPath(xpath));
         }
