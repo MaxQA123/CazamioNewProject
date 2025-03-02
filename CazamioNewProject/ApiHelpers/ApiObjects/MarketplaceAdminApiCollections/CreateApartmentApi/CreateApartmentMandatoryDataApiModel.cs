@@ -3,7 +3,7 @@ using System;
 
 namespace CazamioNewProject.CreateApartmentMandatoryDataApi
 {
-    public partial class RequestCreateApartmentMandatoryDataApi
+    public partial class RequestCreateApartmentMandatoryData
     {
         [JsonProperty("apartments")]
         public Apartment[] Apartments { get; set; }
@@ -39,10 +39,10 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
         public long SquareFeet { get; set; }
 
         [JsonProperty("priceDateFrom")]
-        public DateTimeOffset PriceDateFrom { get; set; }
+        public string PriceDateFrom { get; set; } // Изменено на string
 
         [JsonProperty("priceDateTo")]
-        public DateTimeOffset PriceDateTo { get; set; }
+        public string PriceDateTo { get; set; } // Изменено на string
 
         [JsonProperty("description")]
         public string Description { get; set; }
@@ -51,7 +51,7 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
         public string InternalNotes { get; set; }
 
         [JsonProperty("availableFrom")]
-        public DateTimeOffset AvailableFrom { get; set; }
+        public string AvailableFrom { get; set; } // Изменено на string
 
         [JsonProperty("apartmentType")]
         public string ApartmentType { get; set; }
@@ -59,8 +59,8 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
         [JsonProperty("status")]
         public string Status { get; set; }
 
-        [JsonProperty("brokerId")]
-        public object BrokerId { get; set; }
+        [JsonProperty("staffId")]
+        public object StaffId { get; set; }
 
         [JsonProperty("leaseDurations")]
         public string LeaseDurations { get; set; }
@@ -112,25 +112,10 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
 
         [JsonProperty("allowedPaymentMethods")]
         public string[] AllowedPaymentMethods { get; set; }
-
-        [JsonProperty("deliverCheckNote")]
-        public string DeliverCheckNote { get; set; }
-
-        [JsonProperty("venmoQRCode")]
-        public string VenmoQrCode { get; set; }
-
-        [JsonProperty("zelleAddress")]
-        public string ZelleAddress { get; set; }
     }
 
     public partial class Locks
     {
-        [JsonProperty("brokerId")]
-        public long BrokerId { get; set; }
-
-        [JsonProperty("isAgent")]
-        public bool IsAgent { get; set; }
-
         [JsonProperty("bluetoothLocks")]
         public object[] BluetoothLocks { get; set; }
 

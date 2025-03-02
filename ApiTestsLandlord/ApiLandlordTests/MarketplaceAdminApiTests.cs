@@ -19,6 +19,7 @@ using CazamioNewProject.DbHelpers.OwnerManagementsTable;
 using CazamioNewProject.DbHelpers.OwnersDbTable;
 using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApi;
 using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApiMandatoryData;
+using CazamioNewProject.CreateApartmentMandatoryDataApi;
 
 namespace ApiTestsLandlord
 {
@@ -27,6 +28,7 @@ namespace ApiTestsLandlord
 
     public class MarketplaceAdminApiTests : ApiBaseLandlord
     {
+        //Amount order 8 next must be 9
         [Test]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
@@ -54,6 +56,7 @@ namespace ApiTestsLandlord
         }
 
         [Test]
+        [Order(1)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -80,6 +83,7 @@ namespace ApiTestsLandlord
         }
 
         [Test]
+        [Order(2)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -124,6 +128,7 @@ namespace ApiTestsLandlord
         }
 
         [Test]
+        [Order(3)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -171,6 +176,7 @@ namespace ApiTestsLandlord
         }
 
         [Test]
+        [Order(4)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -205,18 +211,18 @@ namespace ApiTestsLandlord
 
             #endregion
 
-            //#region Postconditions
+            #region Postconditions
 
-            //OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(requestBodyOwner.OwnerEmail, marketplaceId);
-            //Console.WriteLine($"{requestBodyOwner.OwnerEmail}");
-            //OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(requestBodyOwner.OwnerEmail, marketplaceId);
-            //OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(requestBodyOwner.OwnerEmail, marketplaceId);
-            //OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(requestBodyOwner.OwnerEmail, marketplaceId);
+            OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(requestBodyOwner.OwnerEmail, marketplaceId);
+            OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(requestBodyOwner.OwnerEmail, marketplaceId);
+            OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(requestBodyOwner.OwnerEmail, marketplaceId);
+            OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(requestBodyOwner.OwnerEmail, marketplaceId);
 
-            //#endregion
+            #endregion
         }
 
         [Test]
+        [Order(5)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -261,6 +267,7 @@ namespace ApiTestsLandlord
         }
 
         [Test]
+        [Order(6)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -297,6 +304,7 @@ namespace ApiTestsLandlord
         }
 
         [Test]
+        [Order(7)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -326,6 +334,47 @@ namespace ApiTestsLandlord
             #region Tests
 
             var responseBuilding = BuildingCreationMandatoryData.CreateBuildingMandatoryDataWithAgent(responseMarketplaceAdmin.AuthData.Token, buildingRequestBody);
+
+            #endregion
+        }
+
+        [Test]
+        [Order(8)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("MarketplaceAdmin Api test")]
+        [AllureSubSuite("CreateApartmentMandatoryData")]
+
+        public void CreateApartmentMandatoryData()
+        {
+            #region SettingsForBuilding
+
+            //9998 Saint Johnson Place
+
+            #endregion
+
+            #region Test Data
+
+            MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
+
+            var requestBodyApartment = ApartmentCreation.RequestBodyCreateApartmentMandatoryData();
+
+            #endregion
+
+            #region Preconditions
+
+            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
+
+            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+
+            #endregion
+
+            #region Tests
+
+            ApartmentCreation.CreateApartmentMandatoryData(responseMarketplaceAdmin.AuthData.Token, requestBodyApartment);
 
             #endregion
         }

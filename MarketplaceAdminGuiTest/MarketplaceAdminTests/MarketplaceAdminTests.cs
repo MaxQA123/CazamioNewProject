@@ -24,7 +24,7 @@ namespace MarketplaceAdminGuiTest
     {
         //Amount order 12 next must be 13
         [Test]
-        [Order(2)]
+        [Order(1)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -44,7 +44,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(1)]
+        [Order(2)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]

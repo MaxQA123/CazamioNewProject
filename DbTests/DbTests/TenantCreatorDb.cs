@@ -4,6 +4,7 @@ using NUnit.Allure.Core;
 using NUnit.Framework;
 using System;
 using CazamioNewProject.DbHelpers.AspNetUsersTable;
+using CazamioNewProject.DbHelpers.BuildingsTable;
 
 namespace DbTests
 {
@@ -26,6 +27,19 @@ namespace DbTests
 
             var IdAgent = AspNetUsersDbRequests.AspNetUsers.GetMarketplaceIdByEmailAndMarketplaceId(email, marketplaceId).MarketplaceId;
             Console.WriteLine($"{IdAgent} :Id for agent from table AspNetUsers");
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("TestingDBAgent")]
+
+        public void GetBuildingId()
+        {
+            var BuildingId = BuildingsDbRequests.Buildings.GetBuildingIdNineNineNineEightSaintJohnsonPlace();
+            Console.WriteLine($"{BuildingId.AddressId} :BuildingId");
         }
     }
 }
