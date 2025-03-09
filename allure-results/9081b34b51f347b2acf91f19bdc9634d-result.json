@@ -1,0 +1,486 @@
+{
+  "uuid": "2c7617b8-2dcb-4331-b0af-6266e6f1abb8-tr-0-1003",
+  "historyId": "BrokerGuiTests.TestsBaseGui.CreateOwnerWithAssignedBroker",
+  "fullName": "BrokerGuiTests.TestsBaseGui.CreateOwnerWithAssignedBroker",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "BrokerGuiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateOwnerWithAssignedBroker"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateOwnerWithAssignedBroker"
+    }
+  ],
+  "links": [],
+  "name": "CreateOwnerWithAssignedBroker",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected: True\r\n  But was:  False\r\n",
+    "trace": "   at CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage.ListOfOwners.__a$_around_VerifyMessageSuccessCreatedOwner_100663670_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfOwnersPage\\ListOfOwnersAssertions.cs:line 25\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage.ListOfOwners.__a$_around_VerifyMessageSuccessCreatedOwner_100663670_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage.ListOfOwners.__a$_around_VerifyMessageSuccessCreatedOwner_100663670_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage.ListOfOwners.VerifyMessageSuccessCreatedOwner() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfOwnersPage\\ListOfOwnersActions.cs:line 15\r\n   at BrokerGuiTests.TestsBaseGui.CreateOwnerWithAssignedBroker() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 222\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateOwnerWithAssignedBroker",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected: True\r\n  But was:  False\r\n",
+        "trace": "   at CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage.ListOfOwners.__a$_around_VerifyMessageSuccessCreatedOwner_100663670_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfOwnersPage\\ListOfOwnersAssertions.cs:line 25\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage.ListOfOwners.__a$_around_VerifyMessageSuccessCreatedOwner_100663670_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage.ListOfOwners.__a$_around_VerifyMessageSuccessCreatedOwner_100663670_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage.ListOfOwners.VerifyMessageSuccessCreatedOwner() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfOwnersPage\\ListOfOwnersActions.cs:line 15\r\n   at BrokerGuiTests.TestsBaseGui.CreateOwnerWithAssignedBroker() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 222\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsBrokerMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1741450176202,
+              "stop": 1741450177714
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1741450177718,
+              "stop": 1741450177786
+            },
+            {
+              "name": "VerifyBrokerUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Leoautotest Feabroker"
+                },
+                {
+                  "name": "String",
+                  "value": "Broker"
+                }
+              ],
+              "start": 1741450177799,
+              "stop": 1741450178319
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1741450173447,
+          "stop": 1741450178319
+        },
+        {
+          "name": "ClickButtonOwners",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1741450178337,
+          "stop": 1741450182627
+        },
+        {
+          "name": "ClickButtonCreateOwner",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "WaitLoader",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1741450182629,
+              "stop": 1741450182644
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1741450182628,
+          "stop": 1741450183667
+        },
+        {
+          "name": "VerifyTitleCreateANewOwnerg",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1741450183685,
+          "stop": 1741450183759
+        },
+        {
+          "name": "EnterCompanyNameBrokerMaxSymbols",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1741450183760,
+          "stop": 1741450184728
+        },
+        {
+          "name": "EnterOwnerFirstName",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1741450184728,
+          "stop": 1741450185301
+        },
+        {
+          "name": "EnterOwnerEmaiLXitroo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1741450185301,
+          "stop": 1741450185970
+        },
+        {
+          "name": "EnterOfficeLocationDallas",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1741450185971,
+          "stop": 1741450186618
+        },
+        {
+          "name": "EnterInternalNotesShort",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1741450186618,
+          "stop": 1741450187394
+        },
+        {
+          "name": "ClickButtonAddPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1741450187395,
+          "stop": 1741450188168
+        },
+        {
+          "name": "EnterPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1741450188169,
+          "stop": 1741450188807
+        },
+        {
+          "name": "ClickButtonAddCommissionStructure",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1741450188808,
+          "stop": 1741450189609
+        },
+        {
+          "name": "ClickButtonAddMgmt",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1741450189634,
+          "stop": 1741450190427
+        },
+        {
+          "name": "SelectItemTenantPays",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1741450190428,
+          "stop": 1741450191947
+        },
+        {
+          "name": "EnterDataTenantPaysMax",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1741450191947,
+          "stop": 1741450193089
+        },
+        {
+          "name": "ScrollDown",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ScrollToElement",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1741450193204,
+              "stop": 1741450193255
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1741450193090,
+          "stop": 1741450193255
+        },
+        {
+          "name": "EnterMandatoryDataMgmt",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1741450193258,
+          "stop": 1741450193922
+        },
+        {
+          "name": "GetEmailFromFieldOwnerEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1741450193924,
+          "stop": 1741450194084
+        },
+        {
+          "name": "ClickButtonCreate",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1741450194087,
+          "stop": 1741450195256
+        },
+        {
+          "name": "VerifyMessageSuccessCreatedOwner",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  Expected: True\r\n  But was:  False\r\n",
+            "trace": "   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.IsTrue(Boolean condition)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage.ListOfOwners.__a$_around_VerifyMessageSuccessCreatedOwner_100663670_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfOwnersPage\\ListOfOwnersAssertions.cs:line 25\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage.ListOfOwners.__a$_around_VerifyMessageSuccessCreatedOwner_100663670_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1741450195257,
+          "stop": 1741450205540
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "383e942583784da88700ff1add4a991a-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1741450166602,
+      "stop": 1741450208442
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1741450166602,
+  "stop": 1741450208442
+}

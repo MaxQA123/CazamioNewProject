@@ -9,26 +9,26 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
 {
     public partial class ApartmentCreation
     {
-        public static RequestCreateApartmentMandatoryData RequestBodyCreateApartmentMandatoryData()
+        public static RequestCreateApartmentMandatoryData RequestBodyCreateApartmentApplicationSubmitted()
         {
-            //9998 Saint Johnson Place
+            //30-39 Crown St
             // Get BuildingId from BD
-            var buildingIdResult = BuildingsDbRequests.Buildings.GetBuildingIdNineNineNineEightSaintJohnsonPlace();
+            var buildingIdResult = BuildingsDbRequests.Buildings.GetBuildingIdThirtyDashTrirtyNineCrownSt();
             long buildingId = buildingIdResult.AddressId;
-            
+
             var payload = new RequestCreateApartmentMandatoryData
             {
                 Apartments = new Apartment[]
                 {
                     new Apartment
                     {
-                        Unit = GenerateRandomData.RandomNumberWithoutZero(4),
-                        LeasePrice = 850,
+                        Unit = GenerateRandomData.RandomAlphabetUpperCase(1) + GenerateRandomData.RandomAlphabetUpperCase(1) + GenerateRandomData.RandomAlphabetUpperCase(1) + GenerateRandomData.RandomAlphabetUpperCase(1),
+                        LeasePrice = 1555,
                         PaidMonths = 1,
-                        DepositPrice = 850,
+                        DepositPrice = 1555,
                         BrokerFeeRequired = false,
-                        BedroomQuantity = 3,
-                        BathroomQuantity = 2,
+                        BedroomQuantity = 2,
+                        BathroomQuantity = 1,
                         SquareFeet = 0,
                         PriceDateFrom = DateTime.Now.ToString("yyyy-MM-dd"),
                         PriceDateTo = DateTime.Now.AddDays(14).ToString("yyyy-MM-dd"),
@@ -36,9 +36,9 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
                         InternalNotes = "",
                         AvailableFrom = DateTime.Now.ToString("yyyy-MM-dd"),
                         ApartmentType = "MultiFamily",
-                        Status = "Vacant",
+                        Status = "ApplicationSubmitted",
                         StaffId = null,
-                        LeaseDurations = "12 months",
+                        LeaseDurations = "10 months",
                         Amenities = new object[0],
                         IncludedInMonthlyRentAmenities = new object[0],
                         Images = new object[0],
@@ -81,7 +81,7 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
             return payload;
         }
 
-        public static RestResponse CreateApartmentMandatoryData(string token, RequestCreateApartmentMandatoryData apartmentRequestBody)
+        public static RestResponse RequestCreateApartmentMandatoryData(string token, RequestCreateApartmentMandatoryData apartmentRequestBody)
         {
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
             var restRequest = new RestRequest("api/apartments/create", Method.Post);

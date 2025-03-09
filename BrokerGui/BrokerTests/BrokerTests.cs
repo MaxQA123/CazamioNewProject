@@ -1,4 +1,5 @@
 ﻿using Allure.Commons;
+using CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.LogInApiBroker;
 using CazamioNewProject.DbHelpers.AspNetUsersTable;
 using CazamioNewProject.DbHelpers.BrokersAgentsTable;
 using CazamioNewProject.DbHelpers.OwnerCommissionsStructureTable;
@@ -751,14 +752,29 @@ namespace BrokerGuiTests
 
             #endregion
 
-            #region Test data
+            //#region Test data
 
-            Apartment apartment = Apartment.Generate();
-            ApartmentApplicationsTable apartmentApplicationsTable = ApartmentApplicationsTable.Generate();
-            TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
-            TenantOccupantMySpace tenantOccupantMySpace = TenantOccupantMySpace.Generate();
+            //Apartment apartment = Apartment.Generate();
+            //ApartmentApplicationsTable apartmentApplicationsTable = ApartmentApplicationsTable.Generate();
+            //TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
+            //TenantOccupantMySpace tenantOccupantMySpace = TenantOccupantMySpace.Generate();
 
-            #endregion
+            //#endregion
+
+            //#region Test Data API
+
+            //Broker broker = Broker.Generate();
+            //var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentApplicationSubmitted();
+
+            //#endregion
+
+            //#region Preconditions API
+
+            //var responseBroker = LogInApiBroker.ExecuteLogIn();
+            //LogInApiBroker.VerifyUserData(responseBroker, broker);
+            //CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseBroker.AuthData.Token, requestBodyApartment);
+
+            //#endregion
 
             #region Preconditions Test
 

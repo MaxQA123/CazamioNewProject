@@ -1,20 +1,10 @@
 ﻿using Allure.Commons;
-using CazamioNewProject.ApiHelpers;
-using CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.CreateAgentApi;
-using CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.CreateOwnerApi;
 using CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.LogInApiBroker;
-using CazamioNewProject.DbHelpers.AspNetUsersTable;
-using CazamioNewProject.DbHelpers.BrokersAgentsTable;
-using CazamioNewProject.DbHelpers.OwnerCommissionsStructureTable;
-using CazamioNewProject.DbHelpers.OwnerManagementsTable;
-using CazamioNewProject.DbHelpers.OwnerPhoneNumbersTable;
-using CazamioNewProject.DbHelpers.OwnersDbTable;
-using CazamioNewProject.GuiHelpers;
+using CazamioNewProject.CreateApartmentMandatoryDataApi;
 using CazamioNewProject.Objects;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using NUnit.Framework;
-using System;
 
 namespace ApiTestsLandlord
 {
@@ -23,7 +13,9 @@ namespace ApiTestsLandlord
 
     public class BrokerApiTests
     {
+        //Amount order 4 next must be 5
         [Test]
+        [Order(1)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -51,6 +43,7 @@ namespace ApiTestsLandlord
         }
 
         [Test]
+        [Order(2)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -107,6 +100,7 @@ namespace ApiTestsLandlord
         }
 
         [Test]
+        [Order(4)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -153,6 +147,7 @@ namespace ApiTestsLandlord
         }
 
         [Test]
+        [Order(3)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -196,6 +191,41 @@ namespace ApiTestsLandlord
             //OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(ownerBody.OwnerEmail, marketplaceId);
 
             //#endregion
+        }
+
+        [Test]
+        [Order(5)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Broker Api test")]
+        [AllureSubSuite("CreateApartmentApplicationSubmitted")]
+
+        public void CreateApartmentApplicationSubmitted()
+        {
+            #region Test Data
+
+            Broker broker = Broker.Generate();
+
+            var requestBodyApartment = ApartmentCreation.RequestBodyCreateApartmentApplicationSubmitted();
+
+            #endregion
+
+            #region Preconditions
+
+            var responseBroker = LogInApiBroker.ExecuteLogIn();
+
+            LogInApiBroker.VerifyUserData(responseBroker, broker);
+
+            #endregion
+
+            #region Tests
+
+            ApartmentCreation.CreateApartmentMandatoryData(responseBroker.AuthData.Token, requestBodyApartment);
+
+            #endregion
         }
     }
 }
