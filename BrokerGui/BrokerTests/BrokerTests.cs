@@ -757,24 +757,23 @@ namespace BrokerGuiTests
             Apartment apartment = Apartment.Generate();
             ApartmentApplicationsTable apartmentApplicationsTable = ApartmentApplicationsTable.Generate();
             TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
-            TenantOccupantMySpace tenantOccupantMySpace = TenantOccupantMySpace.Generate();
 
             #endregion
 
-            //#region Test Data API
+            #region Test Data API
 
-            //Broker broker = Broker.Generate();
-            //var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentApplicationSubmitted();
+            Broker broker = Broker.Generate();
+            var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentApplicationSubmitted();
 
-            //#endregion
+            #endregion
 
-            //#region Preconditions API
+            #region Preconditions API
 
-            //var responseBroker = LogInApiBroker.ExecuteLogIn();
-            //LogInApiBroker.VerifyUserData(responseBroker, broker);
-            //CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseBroker.AuthData.Token, requestBodyApartment);
+            var responseBroker = LogInApiBroker.ExecuteLogIn();
+            LogInApiBroker.VerifyUserData(responseBroker, broker);
+            CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseBroker.AuthData.Token, requestBodyApartment);
 
-            //#endregion
+            #endregion
 
             #region Preconditions Test
 
@@ -809,7 +808,6 @@ namespace BrokerGuiTests
                 .EnterExistEmailWithCreditReporGetApplicationLink();
 
             string leasePriceFromUnit = Pages.ApartmentView.GetLeasePriceValueOfString();
-            string partEmailPutsBox = Pages.ApartmentView.CopyEmailBeforeDogFromGetApplicationLink();
 
             Pages.ApartmentView
                 .ClickButtonGetLink()

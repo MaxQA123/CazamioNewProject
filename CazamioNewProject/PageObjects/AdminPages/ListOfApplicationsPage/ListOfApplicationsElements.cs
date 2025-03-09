@@ -1,10 +1,5 @@
 ﻿using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsPage
 {
@@ -12,6 +7,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsPage
     {
         [FindsBy(How = How.XPath, Using = "//div[text()= 'List of applications']")]
         public IWebElement TitleListOfApplications;
+
+        [FindsBy(How = How.XPath, Using = ("//app-loader//div[@class = 'hidden']"))]
+        public IWebElement LoaderHidden;
 
         [FindsBy(How = How.XPath, Using = "//button//span[text() = '+Application']")]
         public IWebElement ButtonPlusApplication;

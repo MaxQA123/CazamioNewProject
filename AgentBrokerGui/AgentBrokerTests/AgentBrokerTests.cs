@@ -312,5 +312,89 @@ namespace AgentBrokerGui
 
             #endregion
         }
+
+        [Test]
+        [Order(9)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(1)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Agent-Broker")]
+        [AllureSubSuite("CreateApplicationForApartmentOffMarket")]
+
+        public void CreateApplicationForApartmentOffMarket()
+        {
+            #region SettingsForBuilding
+
+            //111A East 51st Street Pedestrian Crossing
+
+            #endregion
+
+            #region Test data
+
+            Apartment apartment = Apartment.Generate();
+            ApartmentApplicationsTable apartmentApplicationsTable = ApartmentApplicationsTable.Generate();
+            TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
+
+            #endregion
+
+            //#region Test Data API
+
+            //AgentBroker agentBroker = AgentBroker.Generate();
+            //var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentApplicationSubmitted();
+
+            //#endregion
+
+            //#region Preconditions API
+
+            //var responseBroker = LogInApiBroker.ExecuteLogIn();
+            //LogInApiBroker.VerifyUserData(responseBroker, broker);
+            //CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseBroker.AuthData.Token, requestBodyApartment);
+
+            //#endregion
+
+            #region Preconditions Test
+
+            Pages.LogInLandlord
+                .LogInAsAgentBrokerMySpace();
+            Pages.SidebarLandlord
+                .ClickButtonApplications();
+            Pages.ListOfApplications
+                .VerifyTitleListOfApplications()
+                .CreateApplicationForOneOneOneAEastStPedestrianCrossing();
+
+            #endregion
+
+            #region Test
+
+       
+
+            //string applicationIdFromAppLandlord = Pages.ApartmentApplicationsTbl.GetApplicationIdFromFirstRow();
+            //string apartmentAddressFromApp = Pages.ApartmentApplicationsTbl.GetApartmentAddressFromFirstRow();
+            //string fullNameTenantMainApplicantFromAppAr = Pages.ApartmentApplicationsTbl.GetFullNameTenantMainApplicantFromFirstRow();
+            //string leasePriceFromApplication = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
+            //string dateCreatedFromApplication = Pages.ApartmentApplicationsTbl.GetDateCreatedFromFirstRow();
+            //string agentFromApplication = Pages.ApartmentApplicationsTbl.GetAgentFromFrstRw();
+            //string statusFromApplication = Pages.ApartmentApplicationsTbl.GetStatusFromFrstRw();
+
+            //Pages.ApartmentApplicationsTbl
+            //    .VerifyFullDataByApplicationCreatedTenantMain(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.CreatedWithCreditReport.ConstantFirstLastName, fullNameTenantMainApplicantFromAppAr, leasePriceFromUnit, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.AgentLulaAgentQA, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
+            //Pages.JScriptExecutor
+            //  .OpenNewTabHomePageTenant();
+            //Pages.LogInTenant
+            //    .LogInAsCreatorWithCreditReportMySpace();
+            //Pages.HeaderTenants
+            //    .ClickButtonMyApplications();
+
+            //string applicationIdFromAppTenant = Pages.MyAccount.GetApplicationId();
+
+            //Pages.MyAccount
+            //    .VerifyApplicationIdNumber(applicationIdFromAppLandlord, applicationIdFromAppTenant);
+
+            WaitUntil.WaitSomeInterval(5000);
+
+            #endregion
+        }
     }
 }

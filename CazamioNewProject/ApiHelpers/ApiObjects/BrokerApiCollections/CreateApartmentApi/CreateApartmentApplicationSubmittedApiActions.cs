@@ -1,4 +1,5 @@
 ﻿using CazamioNewProject.ApiHelpers;
+using CazamioNewProject.DbHelpers.AspNetUsersTable;
 using CazamioNewProject.DbHelpers.BuildingsTable;
 using CazamioNewProject.GuiHelpers;
 using Newtonsoft.Json;
@@ -15,6 +16,8 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
             // Get BuildingId from BD
             var buildingIdResult = BuildingsDbRequests.Buildings.GetBuildingIdThirtyDashTrirtyNineCrownSt();
             long buildingId = buildingIdResult.AddressId;
+            var agentIdResult = AspNetUsersDbRequests.AspNetUsers.GetAgentIdByEmailAndMarketplaceId();
+            string agentId = agentIdResult.Id;
 
             var payload = new RequestCreateApartmentMandatoryData
             {
@@ -23,9 +26,9 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
                     new Apartment
                     {
                         Unit = GenerateRandomData.RandomAlphabetUpperCase(1) + GenerateRandomData.RandomAlphabetUpperCase(1) + GenerateRandomData.RandomAlphabetUpperCase(1) + GenerateRandomData.RandomAlphabetUpperCase(1),
-                        LeasePrice = 1555,
-                        PaidMonths = 1,
-                        DepositPrice = 1555,
+                        LeasePrice = 3333,
+                        PaidMonths = 2,
+                        DepositPrice = 7000,
                         BrokerFeeRequired = false,
                         BedroomQuantity = 2,
                         BathroomQuantity = 1,
@@ -37,7 +40,7 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
                         AvailableFrom = DateTime.Now.ToString("yyyy-MM-dd"),
                         ApartmentType = "MultiFamily",
                         Status = "ApplicationSubmitted",
-                        StaffId = null,
+                        StaffId = agentId,
                         LeaseDurations = "10 months",
                         Amenities = new object[0],
                         IncludedInMonthlyRentAmenities = new object[0],

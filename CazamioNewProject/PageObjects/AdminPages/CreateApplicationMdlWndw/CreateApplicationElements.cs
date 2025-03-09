@@ -38,8 +38,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
 
         #region Second step with enter an address
 
-        [FindsBy(How = How.XPath, Using = (""))]
-        public IWebElement StrngLeadEmail;
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//div[@class = 'address-input']"))]
+        public IWebElement UnitAddressFieldInput;
 
         [FindsBy(How = How.XPath, Using = (""))]
         public IWebElement StrngUnitAddress;

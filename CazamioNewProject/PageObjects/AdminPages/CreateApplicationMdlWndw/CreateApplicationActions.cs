@@ -31,6 +31,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             return partEmail;
         }
 
+        [AllureStep("ClickButtonNext")]
+        public CreateApplicationMdlWndw ClickButtonNext()
+        {
+            WaitUntil.WaitSomeInterval(2000);
+            Button.Click(ButtonNext);
+
+            return this;
+        }
+
         [AllureStep("ClickButtonAddApplicant")]
         public CreateApplicationMdlWndw ClickButtonAddApplicant()
         {
@@ -43,6 +52,23 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         public CreateApplicationMdlWndw ClickButtonClose()
         {
             Button.Click(ButtonClose);
+
+            return this;
+        }
+
+        [AllureStep("EnterEmailCreatedTenantCreatorMySpace")]
+        public CreateApplicationMdlWndw EnterEmailCreatedTenantCreatorMySpace()
+        {
+            InputGeneral.InputFunctionWithClear(FieldInputMainApplicantEmailAddress, tenantCreatorMySpace.CreatedWithCreditReport.Email);
+
+            return this;
+        }
+
+        [AllureStep("ClickUnitAddressFieldInput")]
+        public CreateApplicationMdlWndw ClickUnitAddressFieldInput()
+        {
+            WaitUntil.CustomElementIsVisible(UnitAddressFieldInput);
+            Button.Click(UnitAddressFieldInput);
 
             return this;
         }
