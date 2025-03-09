@@ -3,7 +3,7 @@ namespace CazamioNewProject.DbHelpers.AspNetUsersTable
 {
     public class AspNetUsersDbModels
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public object? UserName { get; set; }
         public object? NormalizedUserName { get; set; }
         public object? Email { get; set; }

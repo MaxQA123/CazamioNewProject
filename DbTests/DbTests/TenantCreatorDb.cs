@@ -34,12 +34,12 @@ namespace DbTests
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("TestingDBAgent")]
+        [AllureSuite("GetAgentId")]
 
-        public void GetBuildingId()
+        public void GetAgentId()
         {
-            var BuildingId = BuildingsDbRequests.Buildings.GetBuildingIdNineNineNineEightSaintJohnsonPlace();
-            Console.WriteLine($"{BuildingId.AddressId} :BuildingId");
+            var agentId = AspNetUsersDbRequests.AspNetUsers.GetAgentIdByEmailAndMarketplaceId();
+            Console.WriteLine($"{agentId.Id}");
         }
     }
 }

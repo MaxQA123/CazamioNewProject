@@ -63,6 +63,8 @@ namespace CazamioNewProject.Objects
             public string BrokerCommission { get; set; }
             public string AgentCommission { get; set; }
             public long AgentIdApi { get; set; }
+            public string UserId { get; set; }
+            public long MarketplaceId { get; set; }
         }
 
         public class BasicDataApiInfo
@@ -121,6 +123,8 @@ namespace CazamioNewProject.Objects
                 BrokerCommission = "70",
                 AgentCommission = "30",
                 AgentIdApi = 154,
+                UserId = "23d56fe2-f7f8-4d5f-89cf-31fe72b0e43a",
+                MarketplaceId = 15,
             };
         }
 

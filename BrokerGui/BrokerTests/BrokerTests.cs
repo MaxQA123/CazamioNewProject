@@ -752,14 +752,14 @@ namespace BrokerGuiTests
 
             #endregion
 
-            //#region Test data
+            #region Test data
 
-            //Apartment apartment = Apartment.Generate();
-            //ApartmentApplicationsTable apartmentApplicationsTable = ApartmentApplicationsTable.Generate();
-            //TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
-            //TenantOccupantMySpace tenantOccupantMySpace = TenantOccupantMySpace.Generate();
+            Apartment apartment = Apartment.Generate();
+            ApartmentApplicationsTable apartmentApplicationsTable = ApartmentApplicationsTable.Generate();
+            TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
+            TenantOccupantMySpace tenantOccupantMySpace = TenantOccupantMySpace.Generate();
 
-            //#endregion
+            #endregion
 
             //#region Test Data API
 
