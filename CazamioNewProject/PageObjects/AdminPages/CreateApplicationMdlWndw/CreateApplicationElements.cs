@@ -41,8 +41,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         [FindsBy(How = How.XPath, Using = ("//app-prepare-application//div[@class = 'address-input']"))]
         public IWebElement UnitAddressFieldInput;
 
-        [FindsBy(How = How.XPath, Using = (""))]
-        public IWebElement StrngUnitAddress;
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//ng-dropdown-panel//span[contains(@title, '111A East 51st Street Pedestrian Crossing')]"))]
+        public IWebElement OneOneOneAEastStPedestrianCrossingAddress;
 
         #endregion
 

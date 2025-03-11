@@ -361,14 +361,20 @@ namespace AgentBrokerGui
             Pages.SidebarLandlord
                 .ClickButtonApplications();
             Pages.ListOfApplications
-                .VerifyTitleListOfApplications()
-                .CreateApplicationForOneOneOneAEastStPedestrianCrossing();
+                .VerifyTitleListOfApplications();
 
             #endregion
 
             #region Test
 
-       
+            Pages.CreateApplicationMdlWndw
+                .PassFirstStepStaticEmail()
+                .PassSecondStepOneOneOneAEastStPedestrianCrossingAddress();
+
+            string getEmailAr = Pages.CreateApplicationMdlWndw.GetFullEmail();
+
+            Pages.CreateApplicationMdlWndw
+                .PassThirdStepOneOneOneAEastStPedestrianCrossingAddress();
 
             //string applicationIdFromAppLandlord = Pages.ApartmentApplicationsTbl.GetApplicationIdFromFirstRow();
             //string apartmentAddressFromApp = Pages.ApartmentApplicationsTbl.GetApartmentAddressFromFirstRow();

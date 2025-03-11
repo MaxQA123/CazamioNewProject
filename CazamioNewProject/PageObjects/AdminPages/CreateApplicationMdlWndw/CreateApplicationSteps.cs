@@ -5,12 +5,36 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
 {
     public partial class CreateApplicationMdlWndw
     {
-        [AllureStep("PassFirstStep")]
-        public CreateApplicationMdlWndw PassFirstStep()
+        [AllureStep("PassFirstStepRandomEmail")]
+        public CreateApplicationMdlWndw PassFirstStepRandomEmail()
         {
             WaitUntil.CustomElementIsVisible(FieldInputMainApplicantEmailAddress);
             InputGeneral.InputFunctionWithClear(FieldInputMainApplicantEmailAddress, tenantCreatorMySpace.Emails.RandomMainApplicantEmail);
             WaitUntil.WaitSomeInterval(2000);
+            Button.Click(ButtonNext);
+
+            return this;
+        }
+
+        [AllureStep("PassFirstStepStaticEmail")]
+        public CreateApplicationMdlWndw PassFirstStepStaticEmail()
+        {
+            Pages.ListOfApplications
+                .ClickButtonPlusApplication();
+            Pages.CreateApplicationMdlWndw
+                .VerifyTitleCreateApplication()
+                .EnterEmailCreatedTenantCreatorMySpace()
+                .ClickButtonNext();
+
+            return this;
+        }
+
+        [AllureStep("PassSecondStepOneOneOneAEastStPedestrianCrossingAddress")]
+        public CreateApplicationMdlWndw PassSecondStepOneOneOneAEastStPedestrianCrossingAddress()
+        {
+            Pages.CreateApplicationMdlWndw
+                .ClickUnitAddressFieldInput();
+            Button.Click(OneOneOneAEastStPedestrianCrossingAddress);
             Button.Click(ButtonNext);
 
             return this;
@@ -77,6 +101,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
                 .SelectFisrtDayInNextMonth();
             Button.Click(ButtonCreate);
             WaitUntil.WaitSomeInterval(5000);
+
+            return this;
+        }
+
+        [AllureStep("PassThirdStepOneOneOneAEastStPedestrianCrossingAddress")]
+        public CreateApplicationMdlWndw PassThirdStepOneOneOneAEastStPedestrianCrossingAddress()
+        {
+
+            //Button.Click(ButtonCreate);
 
             return this;
         }

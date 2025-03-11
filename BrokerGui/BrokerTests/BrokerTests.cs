@@ -637,7 +637,7 @@ namespace BrokerGuiTests
                 .ClickButtonPlusApplication();
             Pages.CreateApplicationMdlWndw
                 .VerifyTitleCreateApplication()
-                .PassFirstStep();
+                .PassFirstStepRandomEmail();
 
             string partEmailPutsBoxMainApplicant = Pages.CreateApplicationMdlWndw.CopyEmailBeforeDogFromFieldGetApplicationLink();
 

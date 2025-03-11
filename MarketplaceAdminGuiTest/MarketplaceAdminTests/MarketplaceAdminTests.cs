@@ -973,7 +973,7 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonPlusApplication();
             Pages.CreateApplicationMdlWndw
                 .VerifyTitleCreateApplication()
-                .PassFirstStep();
+                .PassFirstStepRandomEmail();
 
             string partEmailPutsBox = Pages.CreateApplicationMdlWndw.CopyEmailBeforeDogFromFieldGetApplicationLink();
 

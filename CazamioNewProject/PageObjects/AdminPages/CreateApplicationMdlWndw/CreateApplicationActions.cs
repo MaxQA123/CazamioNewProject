@@ -31,6 +31,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             return partEmail;
         }
 
+        [AllureStep("GetFullEmailOnThirdStep")]
+        public string GetFullEmailOnThirdStep()
+        {
+            WaitUntil.WaitSomeInterval(2000);
+            string fullEmail = VlFromStringLeadEmail.Text;
+
+            return fullEmail;
+        }
+
         [AllureStep("ClickButtonNext")]
         public CreateApplicationMdlWndw ClickButtonNext()
         {
