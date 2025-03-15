@@ -1,0 +1,338 @@
+{
+  "uuid": "61f488ba-b1aa-4a6a-8119-1a9fcf2e4417-tr-0-1003",
+  "historyId": "MarketplaceAdminGuiTest.TestsBaseGui.CreateBroker",
+  "fullName": "MarketplaceAdminGuiTest.TestsBaseGui.CreateBroker",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "MarketplaceAdminGuiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateBroker"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "MarketplaceAdmin"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateBroker"
+    }
+  ],
+  "links": [],
+  "name": "CreateBroker",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected string length 22 but was 24. Strings differ at index 0.\r\n  Expected: \"qsmph339ie@putsbox.com\"\r\n  But was:  \"mando123broker@gmail.com\"\r\n  -----------^\r\n",
+    "trace": "   at CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage.ListOfBrokers.__a$_around_VerifyEmailInListOfBrokers_100663701_o(String getFullEmail, String getEmailFromListOfBrokers) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfBrokersPage\\ListOfBrokersAssertions.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage.ListOfBrokers.__a$_around_VerifyEmailInListOfBrokers_100663701_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage.ListOfBrokers.__a$_around_VerifyEmailInListOfBrokers_100663701_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage.ListOfBrokers.VerifyEmailInListOfBrokers(String getFullEmail, String getEmailFromListOfBrokers)\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.CreateBroker() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 125\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateBroker",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected string length 22 but was 24. Strings differ at index 0.\r\n  Expected: \"qsmph339ie@putsbox.com\"\r\n  But was:  \"mando123broker@gmail.com\"\r\n  -----------^\r\n",
+        "trace": "   at CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage.ListOfBrokers.__a$_around_VerifyEmailInListOfBrokers_100663701_o(String getFullEmail, String getEmailFromListOfBrokers) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfBrokersPage\\ListOfBrokersAssertions.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage.ListOfBrokers.__a$_around_VerifyEmailInListOfBrokers_100663701_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage.ListOfBrokers.__a$_around_VerifyEmailInListOfBrokers_100663701_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage.ListOfBrokers.VerifyEmailInListOfBrokers(String getFullEmail, String getEmailFromListOfBrokers)\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.CreateBroker() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 125\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsMarketplaceAdminMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742033994349,
+              "stop": 1742033995632
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742033995643,
+              "stop": 1742033995746
+            },
+            {
+              "name": "VerifyMarketplaceAdminUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Mark Adm"
+                },
+                {
+                  "name": "String",
+                  "value": "Marketplace Admin"
+                }
+              ],
+              "start": 1742033995755,
+              "stop": 1742033996270
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742033991693,
+          "stop": 1742033996270
+        },
+        {
+          "name": "ClickButtonBrokers",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742033996290,
+          "stop": 1742034001390
+        },
+        {
+          "name": "VerifyTitleListOfBrokersPg",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742034001390,
+          "stop": 1742034001446
+        },
+        {
+          "name": "ClickButtonCreateBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742034001447,
+          "stop": 1742034002256
+        },
+        {
+          "name": "VerifyTitleCreateNewBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742034002261,
+          "stop": 1742034002322
+        },
+        {
+          "name": "Enter first, last names, email broker's",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742034002322,
+          "stop": 1742034004226
+        },
+        {
+          "name": "CopyEmailFromFieldEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742034004234,
+          "stop": 1742034004275
+        },
+        {
+          "name": "CopyEmailBeforeDogFromModalWindowCreateNewBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742034004277,
+          "stop": 1742034004822
+        },
+        {
+          "name": "ClickButtonCreate",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742034004826,
+          "stop": 1742034005502
+        },
+        {
+          "name": "VerifyMessageBrokerHasBeenSuccessfullyCreated",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742034005504,
+          "stop": 1742034009532
+        },
+        {
+          "name": "CopyEmailFirstRecordEmailForFirstBrokerInList",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742034009532,
+          "stop": 1742034010069
+        },
+        {
+          "name": "VerifyEmailInListOfBrokers",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  Expected string length 22 but was 24. Strings differ at index 0.\r\n  Expected: \"qsmph339ie@putsbox.com\"\r\n  But was:  \"mando123broker@gmail.com\"\r\n  -----------^\r\n",
+            "trace": "   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.AreEqual(Object expected, Object actual)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage.ListOfBrokers.__a$_around_VerifyEmailInListOfBrokers_100663701_o(String getFullEmail, String getEmailFromListOfBrokers) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfBrokersPage\\ListOfBrokersAssertions.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage.ListOfBrokers.__a$_around_VerifyEmailInListOfBrokers_100663701_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "qsmph339ie@putsbox.com"
+            },
+            {
+              "name": "String",
+              "value": "mando123broker@gmail.com"
+            }
+          ],
+          "start": 1742034010070,
+          "stop": 1742034010621
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "f1892e7763a5448faefc88529964560e-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1742033986164,
+      "stop": 1742034013320
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1742033986164,
+  "stop": 1742034013321
+}
