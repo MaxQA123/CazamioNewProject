@@ -46,9 +46,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             WaitUntil.CustomElementIsVisible(StringLeadEmail);
             InputGeneral.InputFunctionWithClear(FieldInputRequestedOfferPrice, application.RequestedOfferPrice.FirstPriceStatic);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, apartment.UnitBasicData.LeasePriceFourNumbersStatic);
+            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, apartment.UnitBasicData.LeasePriceFirstStatic);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputSecurityDeposit, apartment.UnitBasicData.SecurityDepositFourNumbersStatic);
+            InputGeneral.InputFunctionWithClear(FieldInputSecurityDeposit, apartment.UnitBasicData.SecurityDepositFirstStatic);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, application.MonthsFree.OneMonth);
             WaitUntil.WaitSomeInterval(100);
@@ -77,7 +77,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputRequestedWork, application.RequestedWork.LongTextWashingtonSquare);
             Button.Click(ButtonCreate);
-            WaitUntil.WaitSomeInterval(5000);
 
             return this;
         }
@@ -109,6 +108,40 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         public CreateApplicationMdlWndw PassThirdStepOneOneOneAEastStPedestrianCrossingAddress()
         {
 
+            WaitUntil.CustomElementIsVisible(StringLeadEmail);
+            InputGeneral.InputFunctionWithClear(FieldInputRequestedOfferPrice, application.RequestedOfferPrice.SecondPriceStatic);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, apartment.UnitBasicData.LeasePriceSecondStatic);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputSecurityDeposit, apartment.UnitBasicData.SecurityDepositSecondStatic);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, application.MonthsFree.OneMonth);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, apartment.SettingsConcessions.AdditionalInfoLong);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthlyRentsPrePayment, application.MonthlyRentsPrePayment.TwoMonth);
+            Button.Click(FieldButtonMoveInDate);
+            Pages.DatePicker
+                .ClickButtonDropDownYearMonth()
+                .SelectCurrentYear();
+            Pages.DatePicker
+                .SelectNextMonth();
+            Pages.DatePicker
+                .SelectFisrtDayInNextMonth();
+            WaitUntil.WaitSomeInterval(5000);
+            InputGeneral.InputFunctionWithClear(FieldInputRentalTerms, application.RentalTerms.TwoYears);
+            KeyBoardActions.ClickArrowDown();
+            KeyBoardActions.ClickArrowDown();
+            KeyBoardActions.ClickEnterButton();
+            WaitUntil.WaitSomeInterval(100);
+            KeyBoardActions.ClickTab();
+            Button.Click(CheckTheBoxReferralAgent);
+            KeyBoardActions.ClickTab();
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputReferralDetails, application.ReferralDetails.ShortTextEastStreet);
+            Button.Click(ButtonPlusAddRequestedWork);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputRequestedWork, application.RequestedWork.ShortTextEastStreet);
             //Button.Click(ButtonCreate);
 
             return this;

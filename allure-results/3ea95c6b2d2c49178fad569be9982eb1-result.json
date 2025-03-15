@@ -1,0 +1,194 @@
+{
+  "uuid": "fe06a76f-e33f-4c01-919a-e7eb1847f575-tr-0-1006",
+  "historyId": "AgentBrokerGui.TestsBaseGui.CreateApplicationForApartmentOffMarket",
+  "fullName": "AgentBrokerGui.TestsBaseGui.CreateApplicationForApartmentOffMarket",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AgentBrokerGui"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateApplicationForApartmentOffMarket"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Agent-Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateApplicationForApartmentOffMarket"
+    }
+  ],
+  "links": [],
+  "name": "CreateApplicationForApartmentOffMarket",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected: True\r\n  But was:  False\r\n",
+    "trace": "   at CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsPage.ListOfApplications.__a$_around_VerifyTitleListOfApplications_100663705_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfApplicationsPage\\ListOfApplicationsAssertions.cs:line 17\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsPage.ListOfApplications.__a$_around_VerifyTitleListOfApplications_100663705_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsPage.ListOfApplications.__a$_around_VerifyTitleListOfApplications_100663705_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsPage.ListOfApplications.VerifyTitleListOfApplications()\r\n   at AgentBrokerGui.TestsBaseGui.CreateApplicationForApartmentOffMarket() in C:\\Automation\\CazamioNewProject\\AgentBrokerGui\\AgentBrokerTests\\AgentBrokerTests.cs:line 363\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateApplicationForApartmentOffMarket",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected: True\r\n  But was:  False\r\n",
+        "trace": "   at CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsPage.ListOfApplications.__a$_around_VerifyTitleListOfApplications_100663705_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfApplicationsPage\\ListOfApplicationsAssertions.cs:line 17\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsPage.ListOfApplications.__a$_around_VerifyTitleListOfApplications_100663705_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsPage.ListOfApplications.__a$_around_VerifyTitleListOfApplications_100663705_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsPage.ListOfApplications.VerifyTitleListOfApplications()\r\n   at AgentBrokerGui.TestsBaseGui.CreateApplicationForApartmentOffMarket() in C:\\Automation\\CazamioNewProject\\AgentBrokerGui\\AgentBrokerTests\\AgentBrokerTests.cs:line 363\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsAgentBrokerMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742065415373,
+              "stop": 1742065416804
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742065416809,
+              "stop": 1742065416951
+            },
+            {
+              "name": "VerifyAgentBrokerUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Agentus Brokerus"
+                },
+                {
+                  "name": "String",
+                  "value": "Agent"
+                }
+              ],
+              "start": 1742065416960,
+              "stop": 1742065417502
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742065412482,
+          "stop": 1742065417502
+        },
+        {
+          "name": "ClickButtonApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742065417527,
+          "stop": 1742065420356
+        },
+        {
+          "name": "VerifyTitleListOfApplications",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  Expected: True\r\n  But was:  False\r\n",
+            "trace": "   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.IsTrue(Boolean condition)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsPage.ListOfApplications.__a$_around_VerifyTitleListOfApplications_100663705_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfApplicationsPage\\ListOfApplicationsAssertions.cs:line 17\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsPage.ListOfApplications.__a$_around_VerifyTitleListOfApplications_100663705_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742065420358,
+          "stop": 1742065430595
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "a0467086430c41c184655f62f6fc70cd-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1742065406090,
+      "stop": 1742065433353
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1742065406089,
+  "stop": 1742065433363
+}

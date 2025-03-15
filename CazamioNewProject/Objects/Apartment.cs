@@ -80,13 +80,15 @@ namespace CazamioNewProject.Objects
             public string LeasePriceFourNumbersRandom { get; set; }
             public string LeasePriceFiveNumbersRandom { get; set; }
             public string LeasePriceThreeNumbersStatic { get; set; }
-            public string LeasePriceFourNumbersStatic { get; set; }
+            public string LeasePriceFirstStatic { get; set; }
+            public string LeasePriceSecondStatic { get; set; }
             public string LeasePriceFiveNumbersStatic { get; set; }
             public string SecurityDepositOneNumber { get; set; }
             public string SecurityDepositTwoNumbers { get; set; }
             public string SecurityDepositThreeNumbers { get; set; }
-            public string SecurityDepositFourNumbers { get; set; }
-            public string SecurityDepositFourNumbersStatic { get; set; }
+            public string SecurityDepositFirsRandom { get; set; }
+            public string SecurityDepositFirstStatic { get; set; }
+            public string SecurityDepositSecondStatic { get; set; }
             public string SecurityDepositFiveNumbers { get; set; }
             public string SecurityDepositFiveNumbersStatic { get; set; }
             public string MonthlyRentsPrePaymentByDefault { get; set; }
@@ -232,14 +234,16 @@ namespace CazamioNewProject.Objects
                 LeasePriceFourNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(4),
                 LeasePriceFiveNumbersRandom = GenerateRandomData.RandomNumberWithoutZero(5),
                 LeasePriceThreeNumbersStatic = "850",
-                LeasePriceFourNumbersStatic = "1555",
+                LeasePriceFirstStatic = "1555",
+                LeasePriceSecondStatic = "2500",
                 LeasePriceFiveNumbersStatic = "10333",
                 SecurityDepositOneNumber = GenerateRandomData.RandomNumberWithoutZero(1),
                 SecurityDepositTwoNumbers = GenerateRandomData.RandomNumberWithoutZero(2),
                 SecurityDepositThreeNumbers = GenerateRandomData.RandomNumberWithoutZero(3),
-                SecurityDepositFourNumbers = GenerateRandomData.RandomNumberWithoutZero(4),
+                SecurityDepositFirsRandom = GenerateRandomData.RandomNumberWithoutZero(4),
                 SecurityDepositFiveNumbers = GenerateRandomData.RandomNumberWithoutZero(5),
-                SecurityDepositFourNumbersStatic = "2333",
+                SecurityDepositFirstStatic = "2333",
+                SecurityDepositSecondStatic = "5000",
                 SecurityDepositFiveNumbersStatic = "15000",
                 MonthlyRentsPrePaymentByDefault = "1",
                 MonthlyRentsPrePaymentOne = "1",

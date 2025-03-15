@@ -27,6 +27,7 @@ namespace CazamioNewProject.Objects
         public class RequestedOfferPriceInfo
         {
             public string FirstPriceStatic { get; set; }
+            public string SecondPriceStatic { get; set; }
         }
 
         public class MonthsFreeInfo
@@ -38,23 +39,27 @@ namespace CazamioNewProject.Objects
         public class MonthlyRentsPrePaymentInfo
         {
             public string OneMonth { get; set; }
+            public string TwoMonth { get; set; }
         }
 
         public class RentalTermsInfo
         {
             public string TwelveMonth { get; set; }
+            public string TwoYears { get; set; }
         }
 
         public class RequestedWorkInfo
         {
             public string LongTextWashingtonSquare { get; set; }
             public string ShortTextWashingtonSquare { get; set; }
+            public string ShortTextEastStreet { get; set; }
         }
 
         public class ReferralDetailsInfo
         {
             public string LongTextWashingtonSquare { get; set; }
             public string ShortTextWashingtonSquare { get; set; }
+            public string ShortTextEastStreet { get; set; }
         }
 
         private static RequestedOfferPriceInfo CreateRequestedOfferPriceInfo()
@@ -62,6 +67,7 @@ namespace CazamioNewProject.Objects
             return new RequestedOfferPriceInfo
             {
                 FirstPriceStatic = "1200",
+                SecondPriceStatic = "2500",
             };
         }
 
@@ -79,6 +85,7 @@ namespace CazamioNewProject.Objects
             return new MonthlyRentsPrePaymentInfo
             {
                 OneMonth = "1",
+                TwoMonth = "2",
             };
         }
 
@@ -87,6 +94,7 @@ namespace CazamioNewProject.Objects
             return new RentalTermsInfo
             {
                 TwelveMonth = "12",
+                TwoYears = "2",
             };
         }
 
@@ -96,6 +104,7 @@ namespace CazamioNewProject.Objects
             {
                 LongTextWashingtonSquare = "Lorem 1 Washington Square Requested Work. Lorem ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit.",
                 ShortTextWashingtonSquare = "Lorem 1 Washington Square Requested Work.",
+                ShortTextEastStreet = "Lorem 111A East 51st Street Referral Details.",
             };
         }
 
@@ -105,6 +114,7 @@ namespace CazamioNewProject.Objects
             {
                 LongTextWashingtonSquare = "Lorem 1 Washington Square Referral Details. Lorem ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit.",
                 ShortTextWashingtonSquare = "Lorem 1 Washington Square Referral Details.",
+                ShortTextEastStreet = "Lorem 111A East 51st Street Referral Details.",
             };
         }
     }
