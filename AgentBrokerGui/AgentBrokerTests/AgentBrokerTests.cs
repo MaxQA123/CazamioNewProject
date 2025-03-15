@@ -1,4 +1,5 @@
 using Allure.Commons;
+using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin;
 using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
 using CazamioNewProject.PageObjects;
@@ -339,20 +340,21 @@ namespace AgentBrokerGui
 
             #endregion
 
-            //#region Test Data API
+            #region Test Data API
 
-            //AgentBroker agentBroker = AgentBroker.Generate();
-            //var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentApplicationSubmitted();
+            MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
+            var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyRequestCreateApartmentOffMarketStatus();
 
-            //#endregion
+            #endregion
 
-            //#region Preconditions API
+            #region Preconditions API
 
-            //var responseBroker = LogInApiBroker.ExecuteLogIn();
-            //LogInApiBroker.VerifyUserData(responseBroker, broker);
-            //CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseBroker.AuthData.Token, requestBodyApartment);
+            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
 
-            //#endregion
+            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+            CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseMarketplaceAdmin.AuthData.Token, requestBodyApartment);
+
+            #endregion
 
             #region Preconditions Test
 
