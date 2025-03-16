@@ -29,5 +29,13 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
 
             return this;
         }
+
+        [AllureStep("VerifyTenantEmail")]
+        public CreateApplicationMdlWndw VerifyTenantEmail(string actualTenantEmail)
+        {
+            Assert.AreEqual(tenantCreatorMySpace.CreatedWithCreditReport.Email, actualTenantEmail);
+
+            return this;
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿using OpenQA.Selenium;
+﻿using CazamioNewProject.GuiHelpers;
+using CazamioNewProject.Objects;
+using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 
 namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
@@ -31,11 +33,26 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
         [FindsBy(How = How.XPath, Using = ("//app-applications//table//tbody//tr//td[7]"))]
         public IWebElement VlOfClmnAgentFrstRw;
 
-        [FindsBy(How = How.XPath, Using = ("//app-applications//table//tbody//tr//td[10]//div[@class = 'statuses-wrapper']//span//span"))]
-        public IWebElement VlLabelOfClmnStatusFrstRw;
+        public IWebElement GetVlLabelOfClmnDraftStatusFrstRw()
+        {
+            Application application = Application.Generate();
 
-        [FindsBy(How = How.XPath, Using = ("//app-applications//table//tbody//tr//td[10]//div[@class = 'btn-wrapper']//cazamio-button[@text = 'Close']"))]
-        public IWebElement CloseNameBtnOfClmnStatusFrstRw;
+            var xpath = "//app-applications//table//tbody//tr//td[10]//div//span[text() = '" + application.Statuses.Draft + "']";
+
+            return Browser._Driver.FindElement(By.XPath(xpath));
+        }
+
+        public IWebElement GetVlLabelOfClmnCloseBtnFrstRw()
+        {
+            Application application = Application.Generate();
+
+            var xpath = "//application-list//table//tbody//tr//td[10]//cazamio-button//span[text() = '" + application.Buttons.Close + "']";
+
+            return Browser._Driver.FindElement(By.XPath(xpath));
+        }
+
+        //[FindsBy(How = How.XPath, Using = ("//app-applications//table//tbody//tr//td[10]//div[@class = 'btn-wrapper']//cazamio-button[@text = 'Close']"))]
+        //public IWebElement CloseNameBtnOfClmnStatusFrstRw;
 
         #endregion
     }

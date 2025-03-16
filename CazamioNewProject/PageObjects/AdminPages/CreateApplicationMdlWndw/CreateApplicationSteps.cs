@@ -142,7 +142,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             Button.Click(ButtonPlusAddRequestedWork);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputRequestedWork, application.RequestedWork.ShortTextEastStreet);
-            //Button.Click(ButtonCreate);
+            Button.Click(ButtonCreate);
 
             return this;
         }

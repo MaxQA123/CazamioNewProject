@@ -17,6 +17,7 @@ using CazamioNewProject.PageObjects.AdminPages.DashboardPage;
 using CazamioNewProject.PageObjects.AdminPages.DatePickerMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.ListOfAgentsPage;
 using CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage;
+using CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsApplicationsTbls;
 using CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsPage;
 using CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage;
 using CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage;
@@ -115,6 +116,7 @@ namespace CazamioNewProject.PageObjects
 
         public static BuildingApartmentsTbl BuildingApartmentsTbl => GetPage<BuildingApartmentsTbl>();
         public static ApartmentApplicationsTbl ApartmentApplicationsTbl => GetPage<ApartmentApplicationsTbl>();
+        public static ListOfApplicationsApplicationsTbl ListOfApplicationsApplicationsTbl => GetPage<ListOfApplicationsApplicationsTbl>();
 
         #endregion
 

@@ -7,8 +7,8 @@ namespace CazamioNewProject.Objects
     {
         public FirstLastNameGeneralDataInfo FirstLastNameGeneralData { get; set; }
         public EmailsInfo Emails { get; set; }
-        public CreatedWitoutCreditReportInfo CreatedWithoutCreditReport { get; set; }
-        public CreatedWitCreditReportInfo CreatedWithCreditReport { get; set; }
+        public CreatedWithoutCreditReportInfo CreatedWithoutCreditReport { get; set; }
+        public CreatedWithCreditReportInfo CreatedWithCreditReport { get; set; }
 
         public static TenantCreatorMySpace Generate()
         {
@@ -16,8 +16,8 @@ namespace CazamioNewProject.Objects
             {
                 FirstLastNameGeneralData = CreateFirstLastNameGeneralDataInfo(),
                 Emails = CreateEmailsInfo(),
-                CreatedWithoutCreditReport = CreateCreatedWitoutCreditReportInfo(),
-                CreatedWithCreditReport = CreateCreatedWitCreditReportInfo(),
+                CreatedWithoutCreditReport = CreateCreatedWithoutCreditReportInfo(),
+                CreatedWithCreditReport = CreateCreatedWithCreditReportInfo(),
             };
         }
 
@@ -35,7 +35,7 @@ namespace CazamioNewProject.Objects
             public string RandomMainApplicantEmail { get; set; }
         }
 
-        public class CreatedWitoutCreditReportInfo
+        public class CreatedWithoutCreditReportInfo
         {
             public string ConstantFirstName { get; set; }
             public string ConstantLastName { get; set; }
@@ -43,7 +43,7 @@ namespace CazamioNewProject.Objects
             public string Email { get; set; }
         }
 
-        public class CreatedWitCreditReportInfo
+        public class CreatedWithCreditReportInfo
         {
             public string ConstantFirstName { get; set; }
             public string ConstantLastName { get; set; }
@@ -71,9 +71,9 @@ namespace CazamioNewProject.Objects
             };
         }
 
-        private static CreatedWitoutCreditReportInfo CreateCreatedWitoutCreditReportInfo()
+        private static CreatedWithoutCreditReportInfo CreateCreatedWithoutCreditReportInfo()
         {
-            return new CreatedWitoutCreditReportInfo
+            return new CreatedWithoutCreditReportInfo
             {
                 ConstantFirstName = "MainApplMySpace-WithoutCR",
                 ConstantLastName = "JoeMainMyspaceQA",
@@ -82,9 +82,9 @@ namespace CazamioNewProject.Objects
             };
         }
 
-        private static CreatedWitCreditReportInfo CreateCreatedWitCreditReportInfo()
+        private static CreatedWithCreditReportInfo CreateCreatedWithCreditReportInfo()
         {
-            return new CreatedWitCreditReportInfo
+            return new CreatedWithCreditReportInfo
             {
                 ConstantFirstName = "MainApplMySpace-WithCR",
                 ConstantLastName = "SaraMainMyspaceQA",

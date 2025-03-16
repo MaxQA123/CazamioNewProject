@@ -13,6 +13,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw
         [AllureStep("ClickBtnAdd")]
         public AddApplicantMdlWndw ClickBtnAdd()
         {
+            WaitUntil.WaitSomeInterval(1000);
             WaitUntil.CustomElementIsClickable(BtnAdd);
             Button.Click(BtnAdd);
             Pages.ToasterMessagesLandlord
@@ -41,6 +42,16 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw
             string partEmail = regexPartEmail.Match(copyPartEmail).ToString();
 
             return partEmail;
+        }
+
+        [AllureStep("AddOneAlreadyExistOccupant")]
+        public AddApplicantMdlWndw AddOneAlreadyExistOccupant()
+        {
+            VerifyTitleAddApplicantMdlWndw();
+            WaitUntil.CustomElementIsVisible(FirstFieldInputEmailAddress);
+            InputGeneral.InputFunctionWithClear(FirstFieldInputEmailAddress, tenantOccupantMySpace.CreatedWithCreditReport.Email);
+
+            return this;
         }
     }
 }
