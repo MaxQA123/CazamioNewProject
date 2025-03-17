@@ -1,0 +1,375 @@
+{
+  "uuid": "ee0df359-d17f-4bb7-8bb8-d0b340fd160e-tr-0-1006",
+  "historyId": "AgentBrokerGui.TestsBaseGui.CreateApplicationForApartmentOffMarket",
+  "fullName": "AgentBrokerGui.TestsBaseGui.CreateApplicationForApartmentOffMarket",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AgentBrokerGui"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateApplicationForApartmentOffMarket"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Agent-Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateApplicationForApartmentOffMarket"
+    }
+  ],
+  "links": [],
+  "name": "CreateApplicationForApartmentOffMarket",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds\r\n  ----> OpenQA.Selenium.NoSuchElementException : Could not find element by: By.XPath: //app-prepare-application//input[@id = 'monthsFree']; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception",
+    "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.ElementIsClickable(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 19\r\n   at CazamioNewProject.GuiHelpers.InputGeneral.InputFunctionWithClear(IWebElement element, String text) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 10\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_PassThirdStepOneOneOneAEastStPedestrianCrossingAddress_100663765_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\CreateApplicationMdlWndw\\CreateApplicationSteps.cs:line 118\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_PassThirdStepOneOneOneAEastStPedestrianCrossingAddress_100663765_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_PassThirdStepOneOneOneAEastStPedestrianCrossingAddress_100663765_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.PassThirdStepOneOneOneAEastStPedestrianCrossingAddress() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\CreateApplicationMdlWndw\\CreateApplicationSteps.cs:line 14\r\n   at AgentBrokerGui.TestsBaseGui.CreateApplicationForApartmentOffMarket() in C:\\Automation\\CazamioNewProject\\AgentBrokerGui\\AgentBrokerTests\\AgentBrokerTests.cs:line 381\r\n--NoSuchElementException\r\n   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_Displayed()\r\n   at SeleniumExtras.WaitHelpers.ExpectedConditions.<>c__DisplayClass7_0.<ElementToBeClickable>b__0(IWebDriver driver)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateApplicationForApartmentOffMarket",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds\r\n  ----> OpenQA.Selenium.NoSuchElementException : Could not find element by: By.XPath: //app-prepare-application//input[@id = 'monthsFree']; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception",
+        "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.ElementIsClickable(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 19\r\n   at CazamioNewProject.GuiHelpers.InputGeneral.InputFunctionWithClear(IWebElement element, String text) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 10\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_PassThirdStepOneOneOneAEastStPedestrianCrossingAddress_100663765_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\CreateApplicationMdlWndw\\CreateApplicationSteps.cs:line 118\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_PassThirdStepOneOneOneAEastStPedestrianCrossingAddress_100663765_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_PassThirdStepOneOneOneAEastStPedestrianCrossingAddress_100663765_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.PassThirdStepOneOneOneAEastStPedestrianCrossingAddress() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\CreateApplicationMdlWndw\\CreateApplicationSteps.cs:line 14\r\n   at AgentBrokerGui.TestsBaseGui.CreateApplicationForApartmentOffMarket() in C:\\Automation\\CazamioNewProject\\AgentBrokerGui\\AgentBrokerTests\\AgentBrokerTests.cs:line 381\r\n--NoSuchElementException\r\n   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_Displayed()\r\n   at SeleniumExtras.WaitHelpers.ExpectedConditions.<>c__DisplayClass7_0.<ElementToBeClickable>b__0(IWebDriver driver)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "VerifyUserData",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "ResponseLogInApiMarketplaceAdmin",
+              "value": "CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin.ResponseLogInApiMarketplaceAdmin"
+            },
+            {
+              "name": "MarketplaceAdmin",
+              "value": "CazamioNewProject.Objects.MarketplaceAdmin"
+            }
+          ],
+          "start": 1742221981903,
+          "stop": 1742221981916
+        },
+        {
+          "name": "LogInAsAgentBrokerMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742221986069,
+              "stop": 1742221987734
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742221987746,
+              "stop": 1742221989484
+            },
+            {
+              "name": "VerifyAgentBrokerUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Agentus Brokerus"
+                },
+                {
+                  "name": "String",
+                  "value": "Agent"
+                }
+              ],
+              "start": 1742221989497,
+              "stop": 1742221990282
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742221983142,
+          "stop": 1742221990282
+        },
+        {
+          "name": "ClickButtonApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742221990292,
+          "stop": 1742221994534
+        },
+        {
+          "name": "VerifyTitleListOfApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742221994538,
+          "stop": 1742221994587
+        },
+        {
+          "name": "PassFirstStepStaticEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickButtonPlusApplication",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742221994590,
+              "stop": 1742221996877
+            },
+            {
+              "name": "VerifyTitleCreateApplication",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742221996879,
+              "stop": 1742221996955
+            },
+            {
+              "name": "EnterEmailCreatedTenantCreatorMySpace",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742221996955,
+              "stop": 1742221997860
+            },
+            {
+              "name": "ClickButtonNext",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742221997860,
+              "stop": 1742222000541
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742221994589,
+          "stop": 1742222000541
+        },
+        {
+          "name": "PassSecondStepOneOneOneAEastStPedestrianCrossingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickUnitAddressFieldInput",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742222000543,
+              "stop": 1742222001236
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742222000542,
+          "stop": 1742222002582
+        },
+        {
+          "name": "GetFullEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742222002585,
+          "stop": 1742222002734
+        },
+        {
+          "name": "VerifyTenantEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "main-appl-2myspace@putsbox.com"
+            }
+          ],
+          "start": 1742222002737,
+          "stop": 1742222002737
+        },
+        {
+          "name": "PassThirdStepOneOneOneAEastStPedestrianCrossingAddress",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Timed out after 10 seconds",
+            "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.ElementIsClickable(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 19\r\n   at CazamioNewProject.GuiHelpers.InputGeneral.InputFunctionWithClear(IWebElement element, String text) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 10\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_PassThirdStepOneOneOneAEastStPedestrianCrossingAddress_100663765_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\CreateApplicationMdlWndw\\CreateApplicationSteps.cs:line 118\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_PassThirdStepOneOneOneAEastStPedestrianCrossingAddress_100663765_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742222002738,
+          "stop": 1742222015537
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "27dc6758417d49b1819f1e098c304327-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1742221968243,
+      "stop": 1742222018612
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1742221968242,
+  "stop": 1742222018625
+}

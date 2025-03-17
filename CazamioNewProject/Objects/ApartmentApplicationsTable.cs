@@ -48,14 +48,11 @@ namespace CazamioNewProject.Objects
         public class AgentColumnnInfo
         {
             public string NotAssigned { get; set; }
-            public string AgentLulaAgentQA { get; set; }
         }
 
         public class StatusColumnInfo
         {
             public string Draft { get; set; }
-            public string Vacant { get; set; }
-            public string CloseBtn { get; set; }
         }
 
         private static ApartmentColumnInfo CreateApartmentColumnInfo()
@@ -96,7 +93,6 @@ namespace CazamioNewProject.Objects
             return new AgentColumnnInfo
             {
                 NotAssigned = "Not assigned",
-                AgentLulaAgentQA = "Lula AgentQA",
             };
         }
 
@@ -105,8 +101,6 @@ namespace CazamioNewProject.Objects
             return new StatusColumnInfo
             {
                 Draft = "Draft",
-                Vacant = "Vacant",
-                CloseBtn = "",
             };
         }
     }

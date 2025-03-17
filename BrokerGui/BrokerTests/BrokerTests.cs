@@ -596,7 +596,7 @@ namespace BrokerGuiTests
             #region Test data
 
             Apartment apartment = Apartment.Generate();
-            ApartmentApplicationsTable apartmentApplicationsTable = ApartmentApplicationsTable.Generate();
+            Application application = Application.Generate();
             TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
             TenantOccupantMySpace tenantOccupantMySpace = TenantOccupantMySpace.Generate();
 
@@ -667,7 +667,15 @@ namespace BrokerGuiTests
             string statusFromApplication = Pages.ApartmentApplicationsTbl.GetVlLabelOfClmnDraftStatusFrstRw().Text;
 
             Pages.ApartmentApplicationsTbl
-                .VerifyFullDataByApplicationTenantsMainOccupant(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, firstLastNameFromApp, tenantOccupantMySpace.FirstLastNameGeneralData.ConstantFirstLastNameTenant, lastNameTenantMainApplicantFromApp, apartmentApplicationsTable.PriceColumn.PriceFiveNumberStatic, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.NotAssigned, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
+                .VerifyFullDataByApplicationTenantsMainOccupant
+                (getAddressBuildingViewActual, apartmentAddressFromApp, 
+                tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, 
+                tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, firstLastNameFromApp, 
+                tenantOccupantMySpace.FirstLastNameGeneralData.ConstantFirstLastNameTenant, lastNameTenantMainApplicantFromApp,
+                application.LeasePrice.ThirdPriceStatic, leasePriceFromApplication, 
+                agentFromApplication, application.BasicData.NotAssignetLabel, 
+                statusFromApplication, application.Statuses.Draft, 
+                dateCreatedFromApplication, application.BasicData.DateCurrent);
             //Main applicant
             Pages.JScriptExecutor
                .OpenNewTab();
@@ -755,8 +763,9 @@ namespace BrokerGuiTests
             #region Test data
 
             Apartment apartment = Apartment.Generate();
-            ApartmentApplicationsTable apartmentApplicationsTable = ApartmentApplicationsTable.Generate();
+            Application application = Application.Generate();
             TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
+            Agent agent = Agent.Generate();
 
             #endregion
 
@@ -824,7 +833,13 @@ namespace BrokerGuiTests
             string statusFromApplication = Pages.ApartmentApplicationsTbl.GetVlLabelOfClmnDraftStatusFrstRw().Text;
 
             Pages.ApartmentApplicationsTbl
-                .VerifyFullDataByApplicationCreatedTenantMain(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.CreatedWithCreditReport.ConstantFirstLastName, fullNameTenantMainApplicantFromAppAr, leasePriceFromUnit, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.AgentLulaAgentQA, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
+                .VerifyFullDataByApplicationCreatedTenantMain
+                (getAddressBuildingViewActual, apartmentAddressFromApp, 
+                tenantCreatorMySpace.CreatedWithCreditReport.ConstantFirstLastName, fullNameTenantMainApplicantFromAppAr, 
+                leasePriceFromUnit, leasePriceFromApplication, 
+                agentFromApplication, agent.CreatedAgentLulaMySpace.FullName, 
+                statusFromApplication, application.Statuses.Draft, 
+                dateCreatedFromApplication, application.BasicData.DateCurrent);
             Pages.JScriptExecutor
               .OpenNewTabHomePageTenant();
             Pages.LogInTenant

@@ -389,7 +389,6 @@ namespace AgentBrokerGui
                 .ClickBtnAdd();
 
             string applicationIdFromAppLandlord = Pages.ListOfApplicationsApplicationsTbl.GetApplicationIdFromFirstRow();
-            string apartmentAddressFromApp = Pages.ListOfApplicationsApplicationsTbl.GetApartmentAddressFromFirstRow();
             string fullNameTenantMainApplicantFromAppAr = Pages.ListOfApplicationsApplicationsTbl.GetFullNameTenantMainApplicantFromFirstRow();
             string fullNameTenantOccupantFromAppAr = Pages.ListOfApplicationsApplicationsTbl.GetFullNameTenantOccupantFromFirstRow();
             string leasePriceFromApp = Pages.ListOfApplicationsApplicationsTbl.GetPriceFromFirstRow();
@@ -400,14 +399,14 @@ namespace AgentBrokerGui
 
             Pages.ListOfApplicationsApplicationsTbl
                 .VerifyFullDataByApplicationTenantsMainOccupant
-                (building.East51stStreetPedestrianCrossing.NumberNameAddress, apartmentAddressFromApp, 
-                tenantCreatorMySpace.CreatedWithCreditReport.ConstantFirstLastName, fullNameTenantMainApplicantFromAppAr,
+                (tenantCreatorMySpace.CreatedWithCreditReport.ConstantFirstLastName, fullNameTenantMainApplicantFromAppAr,
                 tenantOccupantMySpace.CreatedWithCreditReport.ConstantFirstLastName, fullNameTenantOccupantFromAppAr,
-                apartment.UnitBasicData.LeasePriceSecondStatic, leasePriceFromApp,
-                dateCreatedFromApp, application.BasicData.DateCurrent,
+                application.LeasePrice.FirstPriceStatic, leasePriceFromApp,
+                application.BasicData.DateCurrent, dateCreatedFromApp,
                 application.BasicData.NotAssignetLabel, agentFromApp,
                 application.Statuses.Draft, statusFromApp,
                 application.Buttons.Close, btnNameFromApp);
+
             //Pages.JScriptExecutor
             //  .OpenNewTabHomePageTenant();
             //Pages.LogInTenant

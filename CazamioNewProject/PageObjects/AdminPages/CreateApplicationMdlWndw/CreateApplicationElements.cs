@@ -44,6 +44,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         [FindsBy(How = How.XPath, Using = ("//app-prepare-application//ng-dropdown-panel//span[contains(@title, '111A East 51st Street Pedestrian Crossing')]"))]
         public IWebElement OneOneOneAEastStPedestrianCrossingAddress;
 
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//div[@class = 'address-input']//input"))]
+        public IWebElement VlFromBtnUnitAddress;
+
         #endregion
 
         #region Third step with enter the basic data of an application

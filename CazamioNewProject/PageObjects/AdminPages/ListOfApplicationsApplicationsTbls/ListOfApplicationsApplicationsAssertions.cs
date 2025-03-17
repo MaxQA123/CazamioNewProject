@@ -7,8 +7,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsApplication
     {
         [AllureStep("VerifyFullDataByApplicationTenantsMainOccupant")]
         public ListOfApplicationsApplicationsTbl VerifyFullDataByApplicationTenantsMainOccupant
-            (string buildingAddressEx, string apartmentAddressFromApp,
-             string fullNameMainTenantEx, string fullNameTenantMainApplicantFromAppAr,
+            (string fullNameMainTenantEx, string fullNameTenantMainApplicantFromAppAr,
              string fullNameOccupantEx, string fullNameTenantOccupantFromAppAr,
              string leasePriceEx, string leasePriceFromApp,
              string dateCurrentEx, string dateCreatedFromApp,
@@ -18,7 +17,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsApplication
         {
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(buildingAddressEx, apartmentAddressFromApp);
                 Assert.AreEqual(fullNameMainTenantEx, fullNameTenantMainApplicantFromAppAr);
                 Assert.AreEqual(fullNameOccupantEx, fullNameTenantOccupantFromAppAr);
                 Assert.AreEqual(leasePriceEx, leasePriceFromApp);

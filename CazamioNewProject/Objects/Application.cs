@@ -7,6 +7,7 @@ namespace CazamioNewProject.Objects
     {
         public BasicDataInfo BasicData { get; set; }
         public RequestedOfferPriceInfo RequestedOfferPrice { get; set; }
+        public LeasePriceInfo LeasePrice { get; set; }
         public MonthsFreeInfo MonthsFree { get; set; }
         public MonthlyRentsPrePaymentInfo MonthlyRentsPrePayment { get; set; }
         public RentalTermsInfo RentalTerms { get; set; }
@@ -21,6 +22,7 @@ namespace CazamioNewProject.Objects
             {
                 BasicData = CreateBasicDataInfo(),
                 RequestedOfferPrice = CreateRequestedOfferPriceInfo(),
+                LeasePrice = CreateLeasePriceInfo(),
                 MonthsFree = CreateMonthsFreeInfo(),
                 MonthlyRentsPrePayment = CreateMonthlyRentsPrePaymentInfo(),
                 RentalTerms = CreateRentalTermsInfo(),
@@ -41,6 +43,13 @@ namespace CazamioNewProject.Objects
         {
             public string FirstPriceStatic { get; set; }
             public string SecondPriceStatic { get; set; }
+        }
+
+        public class LeasePriceInfo
+        {
+            public string FirstPriceStatic { get; set; }
+            public string SecondPriceStatic { get; set; }
+            public string ThirdPriceStatic { get; set; }
         }
 
         public class MonthsFreeInfo
@@ -104,6 +113,16 @@ namespace CazamioNewProject.Objects
             {
                 FirstPriceStatic = "1200",
                 SecondPriceStatic = "2500",
+            };
+        }
+
+        private static LeasePriceInfo CreateLeasePriceInfo()
+        {
+            return new LeasePriceInfo
+            {
+                FirstPriceStatic = "$2500",
+                SecondPriceStatic = "$1555",
+                ThirdPriceStatic = "$10333",
             };
         }
 

@@ -835,7 +835,7 @@ namespace MarketplaceAdminGuiTest
             #region Test data
 
             Apartment apartment = Apartment.Generate();
-            ApartmentApplicationsTable apartmentApplicationsTable = ApartmentApplicationsTable.Generate();
+            Application application = Application.Generate();
             TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
 
             #endregion
@@ -891,7 +891,14 @@ namespace MarketplaceAdminGuiTest
             string statusFromApplication = Pages.ApartmentApplicationsTbl.GetVlLabelOfClmnDraftStatusFrstRw().Text;
 
             Pages.ApartmentApplicationsTbl
-                .VerifyFullDataByApplicationTenantMain(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp, leasePriceFromUnit, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.NotAssigned, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
+                .VerifyFullDataByApplicationTenantMain
+                (getAddressBuildingViewActual, apartmentAddressFromApp, 
+                tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, 
+                tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp, 
+                leasePriceFromUnit, leasePriceFromApplication, 
+                agentFromApplication, application.BasicData.NotAssignetLabel, 
+                statusFromApplication, application.Statuses.Draft, 
+                dateCreatedFromApplication, application.BasicData.DateCurrent);
             Pages.JScriptExecutor
                .OpenNewTab();
             Pages.EmailHelper
@@ -933,8 +940,9 @@ namespace MarketplaceAdminGuiTest
             #region Test data
 
             Apartment apartment = Apartment.Generate();
-            ApartmentApplicationsTable apartmentApplicationsTable = ApartmentApplicationsTable.Generate();
+            Application application = Application.Generate();
             TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
+            Agent agent = Agent.Generate();
 
             #endregion
 
@@ -994,7 +1002,14 @@ namespace MarketplaceAdminGuiTest
             string statusFromApplication = Pages.ApartmentApplicationsTbl.GetVlLabelOfClmnDraftStatusFrstRw().Text;
 
             Pages.ApartmentApplicationsTbl
-                .VerifyFullDataByApplicationTenantMain(getAddressBuildingViewActual, apartmentAddressFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp, apartmentApplicationsTable.PriceColumn.PriceFourNumberStatic, leasePriceFromApplication, agentFromApplication, apartmentApplicationsTable.AgentColumn.AgentLulaAgentQA, statusFromApplication, apartmentApplicationsTable.StatusColumn.Draft, dateCreatedFromApplication, apartmentApplicationsTable.CreatedOnColumn.DateCurrent);
+                .VerifyFullDataByApplicationTenantMain
+                (getAddressBuildingViewActual, apartmentAddressFromApp, 
+                tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, 
+                tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp,
+                application.LeasePrice.SecondPriceStatic, leasePriceFromApplication, 
+                agentFromApplication, agent.CreatedAgentLulaMySpace.FullName, 
+                statusFromApplication, application.Statuses.Draft, 
+                dateCreatedFromApplication, application.BasicData.DateCurrent);
 
             Pages.JScriptExecutor
                .OpenNewTab();

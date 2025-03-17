@@ -40,6 +40,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             return fullEmail;
         }
 
+        [AllureStep("GetApartmentShortAddress")]
+        public string GetApartmentShortAddress()
+        {
+            WaitUntil.WaitSomeInterval(2000);
+            string address = VlFromBtnUnitAddress.GetAttribute("value");
+
+            return address;
+        }
+
         [AllureStep("ClickButtonNext")]
         public CreateApplicationMdlWndw ClickButtonNext()
         {

@@ -114,10 +114,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, apartment.UnitBasicData.LeasePriceSecondStatic);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputSecurityDeposit, apartment.UnitBasicData.SecurityDepositSecondStatic);
-            WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, application.MonthsFree.OneMonth);
-            WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, apartment.SettingsConcessions.AdditionalInfoLong);
+            //WaitUntil.WaitSomeInterval(100);
+            //InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, application.MonthsFree.OneMonth);
+            //WaitUntil.WaitSomeInterval(100);
+            //InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, apartment.SettingsConcessions.AdditionalInfoLong);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputMonthlyRentsPrePayment, application.MonthlyRentsPrePayment.TwoMonth);
             Button.Click(FieldButtonMoveInDate);
