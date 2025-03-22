@@ -105,8 +105,6 @@ namespace ApiTestsLandlord
             Console.WriteLine($"{emailMarkAdm}");
             WaitUntil.WaitSomeInterval(100);
             MarketplaceAdminsDbRequests.MarketplaceAdmins.DeleteNewlyCreatedMarketplaceAdmin(emailMarkAdm, marketplaceId);
-            WaitUntil.WaitSomeInterval(100);
-            AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(emailMarkAdm, marketplaceId);
 
             #endregion
         }

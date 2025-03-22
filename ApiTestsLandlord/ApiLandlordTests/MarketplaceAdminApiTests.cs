@@ -118,11 +118,10 @@ namespace ApiTestsLandlord
             #endregion
 
             #region Postconditions
+
             AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(requestBodyCreateBroker.Email, marketplaceId);
             WaitUntil.WaitSomeInterval(100);
             LandlordsBrokersDbRequests.LandlordsBrokers.DeleteNewlyCreatedBroker(requestBodyCreateBroker.Email, marketplaceId);
-            WaitUntil.WaitSomeInterval(100);
-            AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(requestBodyCreateBroker.Email, marketplaceId);
 
             #endregion
         }
@@ -169,8 +168,6 @@ namespace ApiTestsLandlord
             Console.WriteLine($"{bodyRequestCreateAgent.Email}");
             WaitUntil.WaitSomeInterval(100);
             BrokersAgentsDbRequests.BrokersAgents.DeleteNewlyCreatedAgent(bodyRequestCreateAgent.Email, marketplaceId);
-            WaitUntil.WaitSomeInterval(100);
-            AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(bodyRequestCreateAgent.Email, marketplaceId);
 
             #endregion
         }
@@ -213,9 +210,6 @@ namespace ApiTestsLandlord
 
             #region Postconditions
 
-            OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(requestBodyOwner.OwnerEmail, marketplaceId);
-            OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(requestBodyOwner.OwnerEmail, marketplaceId);
-            OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(requestBodyOwner.OwnerEmail, marketplaceId);
             OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(requestBodyOwner.OwnerEmail, marketplaceId);
 
             #endregion
@@ -258,9 +252,6 @@ namespace ApiTestsLandlord
 
             #region Postconditions
 
-            OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(requestBodyOwner.OwnerEmail, marketplaceId);
-            OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(requestBodyOwner.OwnerEmail, marketplaceId);
-            OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(requestBodyOwner.OwnerEmail, marketplaceId);
             OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(requestBodyOwner.OwnerEmail, marketplaceId);
 
             #endregion

@@ -1,4 +1,5 @@
 ﻿using CazamioNewProject.GuiHelpers;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -25,20 +26,69 @@ namespace CazamioNewProject.DbHelpers.OwnersDbTable
                 string data = null;
                 using (SqlConnection db = new(ConnectionDb.GET_CONNECTION_STRING_TO_DB))
                 {
-                    SqlCommand command = new("DELETE" +
-                               " FROM Owners" +
-                               " WHERE OwnerEmail = @Email AND MarketplaceId = @MarketplaceId", db);
-                    command.Parameters.AddWithValue("@Email", DbType.String).Value = email;
-                    command.Parameters.AddWithValue("@MarketplaceId", DbType.String).Value = marketplaceId;
                     db.Open();
+                    SqlTransaction transaction = db.BeginTransaction(); // Начинаем транзакцию
 
-                    SqlDataReader reader = command.ExecuteReader();
-                    if (reader.HasRows)
+                    try
                     {
-                        while (reader.Read())
+                        // Удаление из таблицы OwnerCommissionsStructure
+                        using (SqlCommand deleteCommissionsCommand = new(
+                            "DELETE FROM OwnerCommissionsStructure " +
+                            "WHERE OwnerId IN " +
+                            "(SELECT Id FROM Owners WHERE OwnerEmail = @OwnerEmail AND MarketplaceId = @MarketplaceId)", db, transaction))
                         {
-                            data = reader.GetValue(0).ToString();
+                            deleteCommissionsCommand.Parameters.AddWithValue("@OwnerEmail", email);
+                            deleteCommissionsCommand.Parameters.AddWithValue("@MarketplaceId", marketplaceId);
+                            deleteCommissionsCommand.ExecuteNonQuery();
                         }
+
+                        // Удаление из таблицы OwnerPhoneNumbers
+                        using (SqlCommand deletePhoneNumbersCommand = new(
+                            "DELETE FROM OwnerPhoneNumbers " +
+                            "WHERE OwnerId IN " +
+                            "(SELECT Id FROM Owners WHERE OwnerEmail = @OwnerEmail AND MarketplaceId = @MarketplaceId)", db, transaction))
+                        {
+                            deletePhoneNumbersCommand.Parameters.AddWithValue("@OwnerEmail", email);
+                            deletePhoneNumbersCommand.Parameters.AddWithValue("@MarketplaceId", marketplaceId);
+                            deletePhoneNumbersCommand.ExecuteNonQuery();
+                        }
+
+                        // Удаление из таблицы OwnerManagements
+                        using (SqlCommand deleteManagementsCommand = new(
+                            "DELETE FROM OwnerManagements " +
+                            "WHERE OwnerId IN " +
+                            "(SELECT Id FROM Owners WHERE OwnerEmail = @OwnerEmail AND MarketplaceId = @MarketplaceId)", db, transaction))
+                        {
+                            deleteManagementsCommand.Parameters.AddWithValue("@OwnerEmail", email);
+                            deleteManagementsCommand.Parameters.AddWithValue("@MarketplaceId", marketplaceId);
+                            deleteManagementsCommand.ExecuteNonQuery();
+                        }
+
+                        // Удаление из таблицы Owners
+                        using (SqlCommand deleteOwnerCommand = new(
+                            "DELETE FROM Owners " +
+                            "WHERE OwnerEmail = @OwnerEmail AND MarketplaceId = @MarketplaceId", db, transaction))
+                        {
+                            deleteOwnerCommand.Parameters.AddWithValue("@OwnerEmail", email);
+                            deleteOwnerCommand.Parameters.AddWithValue("@MarketplaceId", marketplaceId);
+                            int rowsAffected = deleteOwnerCommand.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                data = "Owner and all related records deleted successfully.";
+                            }
+                            else
+                            {
+                                data = "No records found to delete.";
+                            }
+                        }
+
+                        transaction.Commit(); // Подтверждаем транзакцию
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback(); // Откатываем транзакцию в случае ошибки
+                        data = $"Error: {ex.Message}";
                     }
                 }
                 return data;

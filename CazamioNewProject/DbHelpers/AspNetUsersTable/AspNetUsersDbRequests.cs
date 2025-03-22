@@ -124,7 +124,7 @@ namespace CazamioNewProject.DbHelpers.AspNetUsersTable
                 {
                     SqlCommand command = new("DELETE" +
                                " FROM AspNetUsers" +
-                               " WHERE Email = 'agent5lula@putsbox.com' AND MarketplaceId = '15'", db);
+                               " WHERE Email = @Email AND MarketplaceId = @MarketplaceId", db);
                     command.Parameters.AddWithValue("@Email", DbType.String).Value = email;
                     command.Parameters.AddWithValue("@MarketplaceId", DbType.String).Value = marketplaceId;
                     db.Open();

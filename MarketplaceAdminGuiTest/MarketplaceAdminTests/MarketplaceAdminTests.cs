@@ -158,8 +158,6 @@ namespace MarketplaceAdminGuiTest
             Console.WriteLine($"{getFullEmail}");
             WaitUntil.WaitSomeInterval(100);
             LandlordsBrokersDbRequests.LandlordsBrokers.DeleteNewlyCreatedBroker(getFullEmail, marketplaceId);
-            WaitUntil.WaitSomeInterval(100);
-            AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(getFullEmail, marketplaceId);
 
             #endregion
 
@@ -242,8 +240,6 @@ namespace MarketplaceAdminGuiTest
             Console.WriteLine($"{fullEmailPutsBox}");
             WaitUntil.WaitSomeInterval(100);
             BrokersAgentsDbRequests.BrokersAgents.DeleteNewlyCreatedAgent(fullEmailPutsBox, marketplaceId);
-            WaitUntil.WaitSomeInterval(100);
-            AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(fullEmailPutsBox, marketplaceId);
 
             #endregion
 
@@ -311,10 +307,6 @@ namespace MarketplaceAdminGuiTest
 
             #region Postconditions
 
-            OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(getOwnerEmailFromModalWndw, marketplaceId);
-            Console.WriteLine($"{getOwnerEmailFromModalWndw}");
-            OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(getOwnerEmailFromModalWndw, marketplaceId);
-            OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(getOwnerEmailFromModalWndw, marketplaceId);
             OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(getOwnerEmailFromModalWndw, marketplaceId);
 
             #endregion
@@ -389,10 +381,6 @@ namespace MarketplaceAdminGuiTest
 
             #region Postconditions
 
-            OwnerCommissionsStructureDbRequests.OwnerCommissionsStructure.DeleteRecordAboutOwnerCommissionsStructure(getOwnerEmailFromModalWndw, marketplaceId);
-            Console.WriteLine($"{getOwnerEmailFromModalWndw}");
-            OwnerPhoneNumbersDbRequests.OwnerPhoneNumbers.DeleteRecordAboutOwnerPhoneNumber(getOwnerEmailFromModalWndw, marketplaceId);
-            OwnerManagementsDbRequsts.OwnerManagements.DeleteRecordAboutOwnerManagements(getOwnerEmailFromModalWndw, marketplaceId);
             OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(getOwnerEmailFromModalWndw, marketplaceId);
 
             #endregion

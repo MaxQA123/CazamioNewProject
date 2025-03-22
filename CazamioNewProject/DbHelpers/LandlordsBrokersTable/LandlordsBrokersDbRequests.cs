@@ -25,20 +25,36 @@ namespace CazamioNewProject.DbHelpers.LandlordsBrokersTable
                 string data = null;
                 using (SqlConnection db = new(ConnectionDb.GET_CONNECTION_STRING_TO_DB))
                 {
-                    SqlCommand command = new("DELETE" +
-                               " FROM Landlords" +
-                               " WHERE UserId IN" +
-                               " (SELECT Id FROM AspNetUsers WHERE Email = @Email AND MarketplaceId = @MarketplaceId)", db);
-                    command.Parameters.AddWithValue("@Email", DbType.String).Value = email;
-                    command.Parameters.AddWithValue("@MarketplaceId", DbType.String).Value = marketplaceId;
                     db.Open();
 
-                    SqlDataReader reader = command.ExecuteReader();
-                    if (reader.HasRows)
+                    // Удаление из таблицы Landlords
+                    using (SqlCommand deleteBrokerCommand = new(
+                        "DELETE FROM Landlords " +
+                        "WHERE UserId IN " +
+                        "(SELECT Id FROM AspNetUsers WHERE Email = @Email AND MarketplaceId = @MarketplaceId)", db))
                     {
-                        while (reader.Read())
+                        deleteBrokerCommand.Parameters.AddWithValue("@Email", email);
+                        deleteBrokerCommand.Parameters.AddWithValue("@MarketplaceId", marketplaceId);
+                        deleteBrokerCommand.ExecuteNonQuery(); // Выполняем удаление
+                    }
+
+                    // Удаление из таблицы AspNetUsers
+                    using (SqlCommand deleteUserCommand = new(
+                        "DELETE FROM AspNetUsers " +
+                        "WHERE Email = @Email AND MarketplaceId = @MarketplaceId", db))
+                    {
+                        deleteUserCommand.Parameters.AddWithValue("@Email", email);
+                        deleteUserCommand.Parameters.AddWithValue("@MarketplaceId", marketplaceId);
+                        int rowsAffected = deleteUserCommand.ExecuteNonQuery(); // Выполняем удаление
+
+                        // Если нужно вернуть данные о том, была ли удалена запись
+                        if (rowsAffected > 0)
                         {
-                            data = reader.GetValue(0).ToString();
+                            data = "Broker and user records deleted successfully.";
+                        }
+                        else
+                        {
+                            data = "No records found to delete.";
                         }
                     }
                 }

@@ -69,21 +69,47 @@ namespace CazamioNewProject.DbHelpers.BrokersAgentsTable
                 string data = null;
                 using (SqlConnection db = new(ConnectionDb.GET_CONNECTION_STRING_TO_DB))
                 {
-                    SqlCommand command = new("DELETE" +
-                               " FROM Brokers" +
-                               " WHERE UserId IN" +
-                               " (SELECT Id FROM AspNetUsers WHERE Email = @Email AND MarketplaceId = @MarketplaceId)", db);
-                    command.Parameters.AddWithValue("@Email", DbType.String).Value = email;
-                    command.Parameters.AddWithValue("@MarketplaceId", DbType.String).Value = marketplaceId;
                     db.Open();
+                    SqlTransaction transaction = db.BeginTransaction(); // Начинаем транзакцию
 
-                    SqlDataReader reader = command.ExecuteReader();
-                    if (reader.HasRows)
+                    try
                     {
-                        while (reader.Read())
+                        // Удаление из таблицы Brokers
+                        using (SqlCommand deleteAgentCommand = new(
+                            "DELETE FROM Brokers " +
+                            "WHERE UserId IN " +
+                            "(SELECT Id FROM AspNetUsers WHERE Email = @Email AND MarketplaceId = @MarketplaceId)", db, transaction))
                         {
-                            data = reader.GetValue(0).ToString();
+                            deleteAgentCommand.Parameters.AddWithValue("@Email", email);
+                            deleteAgentCommand.Parameters.AddWithValue("@MarketplaceId", marketplaceId);
+                            deleteAgentCommand.ExecuteNonQuery();
                         }
+
+                        // Удаление из таблицы AspNetUsers
+                        using (SqlCommand deleteUserCommand = new(
+                            "DELETE FROM AspNetUsers " +
+                            "WHERE Email = @Email AND MarketplaceId = @MarketplaceId", db, transaction))
+                        {
+                            deleteUserCommand.Parameters.AddWithValue("@Email", email);
+                            deleteUserCommand.Parameters.AddWithValue("@MarketplaceId", marketplaceId);
+                            int rowsAffected = deleteUserCommand.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                data = "Agent and user records deleted successfully.";
+                            }
+                            else
+                            {
+                                data = "No records found to delete.";
+                            }
+                        }
+
+                        transaction.Commit(); // Подтверждаем транзакцию
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback(); // Откатываем транзакцию в случае ошибки
+                        data = $"Error: {ex.Message}";
                     }
                 }
                 return data;
