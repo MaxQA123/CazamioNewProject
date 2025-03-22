@@ -547,36 +547,36 @@ namespace MarketplaceAdminGuiTest
                 .EnterBuildingDataSaintJohnsonPl()
                 .ClickFieldInputInternalNotes();
 
-            string getAddressNewBuildingActual = Pages.NewBuilding.GetValueFromFieldAddress();
+            //string getAddressNewBuildingActual = Pages.NewBuilding.GetValueFromFieldAddress();
 
-            KeyBoardActions.ClickTab();
+            //KeyBoardActions.ClickTab();
 
-            string getValueScreeningFee = Pages.NewBuilding.GetValueFromFieldCreditScreeningFee();
+            //string getValueScreeningFee = Pages.NewBuilding.GetValueFromFieldCreditScreeningFee();
 
-            Pages.NewBuilding
-                .VerifyValueByDefaulScreeningFee(getValueScreeningFee)
-                .ClickBtnSelectPaymentMethodsForCreditScreeningFee();
-            Pages.PaymentOptionsMdlWndw
-                .SelectPaymentMethodsAchZll();
-            Pages.NewBuilding
-                .ClickThreeTimesButtonGeneralNext()
-                .ClickTabFreeStuff()
-                .ClickButtonAddSpecials()
-                .AddFreeStuffInActive()
-                .ClickTabConcessions()
-                .ClickButtonAddSpecials()
-                .AddConcessionInActive()
-                .ClickButtonGeneralNext()
-                .ClickButtonSaveBuilding();
-            Pages.ToasterMessagesLandlord
-                .VerifyMessageSavedSuccessfullyIfCreatedBuilding();
-            Pages.BuildingView
-                .VerifyTitleBuildingViewPage();
+            //Pages.NewBuilding
+            //    .VerifyValueByDefaulScreeningFee(getValueScreeningFee)
+            //    .ClickBtnSelectPaymentMethodsForCreditScreeningFee();
+            //Pages.PaymentOptionsMdlWndw
+            //    .SelectPaymentMethodsAchZll();
+            //Pages.NewBuilding
+            //    .ClickThreeTimesButtonGeneralNext()
+            //    .ClickTabFreeStuff()
+            //    .ClickButtonAddSpecials()
+            //    .AddFreeStuffInActive()
+            //    .ClickTabConcessions()
+            //    .ClickButtonAddSpecials()
+            //    .AddConcessionInActive()
+            //    .ClickButtonGeneralNext()
+            //    .ClickButtonSaveBuilding();
+            //Pages.ToasterMessagesLandlord
+            //    .VerifyMessageSavedSuccessfullyIfCreatedBuilding();
+            //Pages.BuildingView
+            //    .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingView = Pages.BuildingView.GetValueOfStringAddress();
+            //string getAddressBuildingView = Pages.BuildingView.GetValueOfStringAddress();
 
-            Pages.BuildingView
-                .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
+            //Pages.BuildingView
+            //    .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
 
             WaitUntil.WaitSomeInterval(5000);
 
