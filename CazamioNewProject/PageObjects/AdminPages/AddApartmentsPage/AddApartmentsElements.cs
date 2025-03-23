@@ -62,7 +62,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return Browser._Driver.FindElement(By.XPath(xpath));
         }
 
-        [FindsBy(How = How.XPath, Using = ("//ng-select[@bindlabel = 'buildingName']//div[@aria-haspopup = 'listbox']"))]
+        [FindsBy(How = How.XPath, Using = ("//ng-select[@bindlabel = 'buildingName']"))]
         public IWebElement ButtonBuildingName;
 
         [FindsBy(How = How.XPath, Using = ("//ng-select[@bindlabel = 'buildingName']//div[@class = 'ng-input']"))]
@@ -71,7 +71,29 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         [FindsBy(How = How.XPath, Using = ("//input[@id = 'unit']"))]
         public IWebElement FieldInputUnitNumber;
 
-        [FindsBy(How = How.XPath, Using = ("//div[@aria-selected = 'true']//span"))]
+        public (IWebElement Element, string BuildingName) ItemBuildingNameNineNineNineEightSaintJohnsonPlace()
+        {
+            Building building = Building.Generate();
+            string buildingName = building.SaintJohnsonPl.LongBuildingAddress;
+
+            var xpath = "//ng-select[@bindlabel = 'buildingName']//span[text() = '" + buildingName + "']";
+            IWebElement element = Browser._Driver.FindElement(By.XPath(xpath));
+
+            return (element, buildingName);
+        }
+
+        public (IWebElement Element, string BuildingName) ItemBuildingNameOneWashingtonSquare()
+        {
+            Building building = Building.Generate();
+            string buildingName = building.WashingtonSquare.BuildingName;
+
+            var xpath = "//ng-select[@bindlabel = 'buildingName']//span[text() = '" + buildingName + "']";
+            IWebElement element = Browser._Driver.FindElement(By.XPath(xpath));
+
+            return (element, buildingName);
+        }
+
+        [FindsBy(How = How.XPath, Using = ("//ng-select[@bindlabel = 'buildingName']//input"))]
         public IWebElement GetValueFromFieldBuildingName;
 
         [FindsBy(How = How.XPath, Using = ("//input[@id = 'bedrooms']"))]

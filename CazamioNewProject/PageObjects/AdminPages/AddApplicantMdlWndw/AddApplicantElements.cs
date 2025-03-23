@@ -8,16 +8,16 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw
         [FindsBy(How = How.XPath, Using = "//app-prepare-application//h2[text() = 'Add Applicant']")]
         public IWebElement TitleAddApplicantMdlWndw;
 
-        [FindsBy(How = How.XPath, Using = "//app-prepare-application//div[@class = 'step applicants ng-star-inserted']//div[@class = 'email-input no-margin ng-star-inserted']//input")]
+        [FindsBy(How = How.XPath, Using = "//app-prepare-application//div[@class = 'step applicants']//div[@class = 'email-input no-margin']//input")]
         public IWebElement FirstFieldInputEmailAddress;
 
-        [FindsBy(How = How.XPath, Using = "//app-prepare-application//div[@class = 'step applicants ng-star-inserted']//div[@class = 'checkbox-input ng-star-inserted']//input[@id = 'is-guarantor-input']")]
+        [FindsBy(How = How.XPath, Using = "//app-prepare-application//div[@class = 'step applicants']//div[@class = 'checkbox-input']//input[@id = 'is-guarantor-input']")]
         public IWebElement CheckBoxThisIsAGuarantorFirstEmailAddressField;
 
-        [FindsBy(How = How.XPath, Using = "//app-prepare-application//div[@class = 'step applicants ng-star-inserted']//div[@class = 'email-input no-margin ng-star-inserted'][2]//input")]
+        [FindsBy(How = How.XPath, Using = "//app-prepare-application//div[@class = 'step applicants']//div[@class = 'email-input no-margin'][2]//input")]
         public IWebElement SecondFieldInputEmailAddress;
 
-        [FindsBy(How = How.XPath, Using = "//app-prepare-application//div[@class = 'step applicants ng-star-inserted']//div[@class = 'checkbox-input ng-star-inserted'][2]//input[@id = 'is-guarantor-input']")]
+        [FindsBy(How = How.XPath, Using = "//app-prepare-application//div[@class = 'step applicants']//div[@class = 'checkbox-input'][2]//input[@id = 'is-guarantor-input']")]
         public IWebElement CheckBoxThisIsAGuarantorSecondEmailAddressField;
 
         [FindsBy(How = How.XPath, Using = "//app-prepare-application//div[text() = ' + Add another applicant ']")]

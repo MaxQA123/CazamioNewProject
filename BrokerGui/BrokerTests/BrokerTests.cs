@@ -567,6 +567,8 @@ namespace BrokerGuiTests
             Pages.ListOfApartments
                .VerifyTitleListOfApartments();
 
+            WaitUntil.WaitSomeInterval(5000);
+
             #endregion
 
         }

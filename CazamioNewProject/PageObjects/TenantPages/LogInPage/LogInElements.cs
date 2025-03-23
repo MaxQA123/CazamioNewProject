@@ -11,7 +11,7 @@ namespace CazamioNewProject.PageObjects.TenantPages.LogInPage
         [FindsBy(How = How.XPath, Using = "//input[@id = 'password']")]
         public IWebElement FieldInputPassword;
 
-        [FindsBy(How = How.XPath, Using = "//div[@class= 'show-password-container']//span[@class = 'ng-star-inserted']")]
+        [FindsBy(How = How.XPath, Using = "//div[@class= 'show-password-container']//span[text() = 'Show']")]
         public IWebElement IconShow;
 
         [FindsBy(How = How.XPath, Using = "//label[@for= 'checkbox-remember']//span[@class = 'check-label-box']")]
@@ -22,11 +22,5 @@ namespace CazamioNewProject.PageObjects.TenantPages.LogInPage
 
         [FindsBy(How = How.XPath, Using = "//a[text() = 'Forgot password?']")]
         public IWebElement ButtonForgotPassword;
-
-        [FindsBy(How = How.XPath, Using = "//span[text() = 'Account was successfully activated']")]
-        public IWebElement MessageAccountWasSuccessfullyActivated;
-
-        [FindsBy(How = How.XPath, Using = "//div[contains(text(), 'You have succesfully changed your password and you can now login back to your account.')]")]
-        public IWebElement MessageYouHaveSuccesfullyChangedYourPassword;
     }
 }

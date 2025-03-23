@@ -28,13 +28,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
 
         public IWebElement SetOwnerNoCommissionAgent()
         {
-            // Создание экземпляра класса Owner
             Owner owner = Owner.Generate();
 
-            // Использование переменной экземпляра owner для построения XPath
             var xpath = "//ng-dropdown-panel[@aria-label = 'Options List']//div[text() = '" + owner.CreatedOwnerNoCommissioMySpace.OwnerName + "']";
-            //app-assign-owner//ng-select//ng-dropdown-panel[@aria-label = 'Options List']//div[text() = 'LLC Ag-Br Owner No commisions AutoTest']
-            // Присвоение значения ItemForAutotestForBroker
+
             return Browser._Driver.FindElement(By.XPath(xpath));
         }
 
@@ -42,13 +39,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
 
         public IWebElement SetOwnerOwnerPaysBroker()
         {
-            // Создание экземпляра класса Owner
             Owner owner = Owner.Generate();
 
-            // Использование переменной экземпляра owner для построения XPath
-            var xpath = "//ng-dropdown-panel[@aria-label = 'Options lLst']//div[text() = '" + owner.CreatedOwnerOwnerPaysMySpace.OwnerName + "']";
+            var xpath = "//ng-dropdown-panel[@aria-label = 'Options List']//div[text() = '" + owner.CreatedOwnerOwnerPaysMySpace.OwnerName + "']";
 
-            // Присвоение значения ItemForAutotestForBroker
             return Browser._Driver.FindElement(By.XPath(xpath));
         }
 
@@ -56,13 +50,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
 
         public IWebElement SetOwnerTenantPaysCommissionAgent()
         {
-            // Создание экземпляра класса Owner
             Owner owner = Owner.Generate();
 
-            // Использование переменной экземпляра owner для построения XPath
             var xpath = "//ng-dropdown-panel[@aria-label = 'Options List']//div[text() = '" + owner.CreatedOwnerTenantPaysMySpace.OwnerName + "']";
 
-            // Присвоение значения ItemForAutotestForBroker
             return Browser._Driver.FindElement(By.XPath(xpath));
         }
 

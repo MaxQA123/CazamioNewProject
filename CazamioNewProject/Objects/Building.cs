@@ -49,6 +49,7 @@ namespace CazamioNewProject.Objects
             public string Neighborhood { get; set; }
             public string BuildingName { get; set; }
             public string LlcName { get; set; }
+            public string LongBuildingAddress { get; set; }
         }
 
         public class WashingtonSquareInfo
@@ -194,7 +195,9 @@ namespace CazamioNewProject.Objects
                 Zip = "11213",
                 Neighborhood = "Crown Heights",
                 BuildingName = "AGENT QA-Building Name 9998 Saint Johnson Place (12345) (*&^%)",
+                //BuildingName = "AGENT QA-Building Name Random Saint Johnson Place (12345) (*&^%)",
                 LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
+                LongBuildingAddress = "9998 Saint Johnson Place, Brooklyn, NY",
             };
         }
 
@@ -214,6 +217,7 @@ namespace CazamioNewProject.Objects
                 Zip = "10012",
                 Neighborhood = "Manhattan",
                 BuildingName = "Broker QA-Building Name 1 Washington Square (12345) (09876) (*&^%)",
+                //BuildingName = "Broker QA-Building Name Random Washington Square (12345) (09876) (*&^%)",
                 LlcName = "LLC Name QA Broker (12345) (09876) (*&^%)",
             };
         }
@@ -234,6 +238,7 @@ namespace CazamioNewProject.Objects
                 Zip = "11225",
                 Neighborhood = "Crown Heights",
                 BuildingName = " Broker QA-Building Name 30-39 Crown St (12345) (09876) (*&^%)",
+                //BuildingName = " Broker QA-Building Name Random Crown St (12345) (09876) (*&^%)",
                 LlcName = "LLC Name QA Broker (12345) (09876) (*&^%)",
             };
         }
@@ -254,6 +259,7 @@ namespace CazamioNewProject.Objects
                 Zip = "11226",
                 Neighborhood = "East Flatbush",
                 BuildingName = "AGENT QA-Building Name 9A Albermale Rd (12345) (*&^%)",
+                //BuildingName = "AGENT QA-Building Name Random Albermale Rd (12345) (*&^%)",
                 LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
             };
         }
@@ -274,6 +280,7 @@ namespace CazamioNewProject.Objects
                 Zip = "10022",
                 Neighborhood = "Manhattan",
                 BuildingName = "QA-Building Name AGENT 111A East 51st Street Pedestrian Crossing (12345) (*&^%)",
+                //BuildingName = "QA-Building Name AGENT Random East 51st Street Pedestrian Crossing (12345) (*&^%)",
                 LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
             };
         }

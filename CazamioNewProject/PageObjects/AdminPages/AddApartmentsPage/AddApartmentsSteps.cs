@@ -49,20 +49,34 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return this;
         }
 
-        [AllureStep("GetBuildingName")]
-        public string GetBuildingName()
+        [AllureStep("GetBuildingNameNineNineNineEightSaintJohnsonPlace")]
+        public string GetBuildingNameNineNineNineEightSaintJohnsonPlace()
         {
+            WaitUntil.WaitSomeInterval(3000);
             WaitUntil.CustomElementIsVisible(ButtonBuildingName);
             WaitUntil.CustomElementIsClickable(ButtonBuildingName);
             Button.Click(ButtonBuildingName);
-            WaitUntil.WaitSomeInterval(2000);
             WaitUntil.CustomElementIsVisible(ButtonBuildingName);
-            string getBuildingName = GetValueFromFieldBuildingName.Text;
-            string getBuildingNameActual = getBuildingName.ToString();
+            var result = ItemBuildingNameNineNineNineEightSaintJohnsonPlace();
+            string getBuildingNameActual = result.BuildingName;
             KeyBoardActions.ClickEnterButton();
 
             return getBuildingNameActual;
+        }
 
+        [AllureStep("GetBuildingNameOneWashingtonSquare")]
+        public string GetBuildingNameOneWashingtonSquare()
+        {
+            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.CustomElementIsVisible(ButtonBuildingName);
+            WaitUntil.CustomElementIsClickable(ButtonBuildingName);
+            Button.Click(ButtonBuildingName);
+            WaitUntil.CustomElementIsVisible(ButtonBuildingName);
+            var result = ItemBuildingNameOneWashingtonSquare();
+            string getBuildingNameActual = result.BuildingName;
+            KeyBoardActions.ClickEnterButton();
+
+            return getBuildingNameActual;
         }
 
         [AllureStep("EnterToAllFieldsOneWashingtonSquare")]
