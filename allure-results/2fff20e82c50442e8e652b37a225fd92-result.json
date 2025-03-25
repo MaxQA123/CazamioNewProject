@@ -1,0 +1,509 @@
+{
+  "uuid": "4dafb01d-f39e-4371-9ae5-9e0d50c120cd-tr-0-1004",
+  "historyId": "MarketplaceAdminGuiTest.TestsBaseGui.CreateAgent",
+  "fullName": "MarketplaceAdminGuiTest.TestsBaseGui.CreateAgent",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "MarketplaceAdminGuiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateAgent"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "MarketplaceAdmin"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateAgent"
+    }
+  ],
+  "links": [],
+  "name": "CreateAgent",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.Data.SqlClient.SqlException : Login failed for user 'CazaStage'.\r\nData:\r\n  HelpLink.ProdName: Microsoft SQL Server\r\n  HelpLink.EvtSrc: MSSQLServer\r\n  HelpLink.EvtID: 18456\r\n  HelpLink.BaseHelpUrl: https://go.microsoft.com/fwlink\r\n  HelpLink.LinkId: 20476",
+    "trace": "   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)\r\n   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)\r\n   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)\r\n   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)\r\n   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)\r\n   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)\r\n   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)\r\n   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)\r\n   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)\r\n   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)\r\n   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)\r\n   at System.Data.SqlClient.SqlConnection.Open()\r\n   at CazamioNewProject.DbHelpers.AspNetUsersTable.AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(String email, Int32 marketplaceId) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\DbHelpers\\AspNetUsersTable\\AspNetUsersDbRequests.cs:line 74\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.CreateAgent() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 239"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateAgent",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.Data.SqlClient.SqlException : Login failed for user 'CazaStage'.\r\nData:\r\n  HelpLink.ProdName: Microsoft SQL Server\r\n  HelpLink.EvtSrc: MSSQLServer\r\n  HelpLink.EvtID: 18456\r\n  HelpLink.BaseHelpUrl: https://go.microsoft.com/fwlink\r\n  HelpLink.LinkId: 20476",
+        "trace": "   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)\r\n   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)\r\n   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)\r\n   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)\r\n   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)\r\n   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)\r\n   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)\r\n   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)\r\n   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)\r\n   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)\r\n   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)\r\n   at System.Data.SqlClient.SqlConnection.Open()\r\n   at CazamioNewProject.DbHelpers.AspNetUsersTable.AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(String email, Int32 marketplaceId) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\DbHelpers\\AspNetUsersTable\\AspNetUsersDbRequests.cs:line 74\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.CreateAgent() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 239"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsMarketplaceAdminMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742919767290,
+              "stop": 1742919768641
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742919768662,
+              "stop": 1742919769461
+            },
+            {
+              "name": "VerifyMarketplaceAdminUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Mark Adm"
+                },
+                {
+                  "name": "String",
+                  "value": "Marketplace Admin"
+                }
+              ],
+              "start": 1742919769471,
+              "stop": 1742919770014
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742919763474,
+          "stop": 1742919770014
+        },
+        {
+          "name": "ClickButtonAgents",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742919770028,
+          "stop": 1742919775588
+        },
+        {
+          "name": "ClickButtonCreateAgent",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "WaitLoader",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742919775591,
+              "stop": 1742919775760
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742919775589,
+          "stop": 1742919777192
+        },
+        {
+          "name": "EnterFirstLastNameEmailPhnNmbrCell",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742919777196,
+          "stop": 1742919780293
+        },
+        {
+          "name": "EnterBrokerAgentCommission",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742919780294,
+          "stop": 1742919781841
+        },
+        {
+          "name": "CopyEmailFromFieldEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742919781844,
+          "stop": 1742919781909
+        },
+        {
+          "name": "CopyEmailBeforeDogFromModalWindowCreateNewAgent",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742919781911,
+          "stop": 1742919782468
+        },
+        {
+          "name": "ClickButtonSave",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742919782473,
+          "stop": 1742919783147
+        },
+        {
+          "name": "VerifyMessageNewAgentCreatedSuccessfully",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742919783148,
+          "stop": 1742919784648
+        },
+        {
+          "name": "MakeLogOut",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickButtonLogOutSidebar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742919785784,
+              "stop": 1742919788484
+            },
+            {
+              "name": "ClickButtonYesIAmSure",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742919789517,
+              "stop": 1742919790281
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742919784771,
+          "stop": 1742919790281
+        },
+        {
+          "name": "OpenNewTab",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742919790282,
+          "stop": 1742919790472
+        },
+        {
+          "name": "VerifySubjectLetterCreateAgentMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742919795610,
+          "stop": 1742919795662
+        },
+        {
+          "name": "ClickButtonHtml",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742919795662,
+          "stop": 1742919797026
+        },
+        {
+          "name": "ClickButtonConfirmEmailForAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742919800100,
+          "stop": 1742919810358
+        },
+        {
+          "name": "PasteForEnterEmailFromEmailCreateAgent",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "fznpw979fm@putsbox.com"
+            }
+          ],
+          "start": 1742919810367,
+          "stop": 1742919812656
+        },
+        {
+          "name": "PasteForEnterPsswrdFromEmailCreateAgent",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "OC52+)qv"
+            }
+          ],
+          "start": 1742919812657,
+          "stop": 1742919814809
+        },
+        {
+          "name": "ClickIconShow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742919814810,
+          "stop": 1742919815490
+        },
+        {
+          "name": "ClickButtonLetsGo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742919815492,
+          "stop": 1742919816276
+        },
+        {
+          "name": "GetUserNameRoleFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742919816285,
+          "stop": 1742919818289
+        },
+        {
+          "name": "VerifyAgentUserNameAndRoleCreating",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Agent"
+            }
+          ],
+          "start": 1742919818297,
+          "stop": 1742919818800
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "b9646cb4d10d466291693fecc92981ff-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1742919753820,
+      "stop": 1742919824930
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1742919753819,
+  "stop": 1742919824946
+}

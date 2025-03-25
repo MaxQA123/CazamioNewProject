@@ -1,0 +1,568 @@
+{
+  "uuid": "3e59d326-1aca-490d-8cea-90e55588814d-tr-0-1006",
+  "historyId": "MarketplaceAdminGuiTest.TestsBaseGui.CreateOwnerWithAssignedAgent",
+  "fullName": "MarketplaceAdminGuiTest.TestsBaseGui.CreateOwnerWithAssignedAgent",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "MarketplaceAdminGuiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateOwnerWithAssignedAgent"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "MarketplaceAdmin"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateOwnerWithAssignedAgent"
+    }
+  ],
+  "links": [],
+  "name": "CreateOwnerWithAssignedAgent",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.Data.SqlClient.SqlException : Cannot open database \"CazamioStageDb\" requested by the login. The login failed.\r\nLogin failed for user 'CazaQA'.\r\nData:\r\n  HelpLink.ProdName: Microsoft SQL Server\r\n  HelpLink.EvtSrc: MSSQLServer\r\n  HelpLink.EvtID: 4060\r\n  HelpLink.BaseHelpUrl: https://go.microsoft.com/fwlink\r\n  HelpLink.LinkId: 20476",
+    "trace": "   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)\r\n   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)\r\n   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)\r\n   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)\r\n   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)\r\n   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)\r\n   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)\r\n   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)\r\n   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)\r\n   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)\r\n   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)\r\n   at System.Data.SqlClient.SqlConnection.Open()\r\n   at CazamioNewProject.DbHelpers.OwnersDbTable.OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(String email, Int32 marketplaceId) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\DbHelpers\\OwnersDbTable\\OwnersDbRequests.cs:line 29\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.CreateOwnerWithAssignedAgent() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 384"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateOwnerWithAssignedAgent",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.Data.SqlClient.SqlException : Cannot open database \"CazamioStageDb\" requested by the login. The login failed.\r\nLogin failed for user 'CazaQA'.\r\nData:\r\n  HelpLink.ProdName: Microsoft SQL Server\r\n  HelpLink.EvtSrc: MSSQLServer\r\n  HelpLink.EvtID: 4060\r\n  HelpLink.BaseHelpUrl: https://go.microsoft.com/fwlink\r\n  HelpLink.LinkId: 20476",
+        "trace": "   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)\r\n   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)\r\n   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)\r\n   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)\r\n   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)\r\n   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)\r\n   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)\r\n   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)\r\n   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)\r\n   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)\r\n   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)\r\n   at System.Data.SqlClient.SqlConnection.Open()\r\n   at CazamioNewProject.DbHelpers.OwnersDbTable.OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(String email, Int32 marketplaceId) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\DbHelpers\\OwnersDbTable\\OwnersDbRequests.cs:line 29\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.CreateOwnerWithAssignedAgent() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 384"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsMarketplaceAdminMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742917412889,
+              "stop": 1742917414224
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742917414229,
+              "stop": 1742917414279
+            },
+            {
+              "name": "VerifyMarketplaceAdminUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Mark Adm"
+                },
+                {
+                  "name": "String",
+                  "value": "Marketplace Admin"
+                }
+              ],
+              "start": 1742917414288,
+              "stop": 1742917414803
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917407710,
+          "stop": 1742917414803
+        },
+        {
+          "name": "ClickButtonOwners",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917414809,
+          "stop": 1742917420113
+        },
+        {
+          "name": "ClickButtonCreateOwner",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "WaitLoader",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742917420114,
+              "stop": 1742917420126
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917420114,
+          "stop": 1742917420976
+        },
+        {
+          "name": "VerifyTitleCreateANewOwnerg",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917421008,
+          "stop": 1742917421248
+        },
+        {
+          "name": "EnterCompanyNameAgentMaxSymbols",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917421250,
+          "stop": 1742917422421
+        },
+        {
+          "name": "EnterOwnerFirstLastName",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917422422,
+          "stop": 1742917423444
+        },
+        {
+          "name": "EnterOwnerEmaiLYahoo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917423445,
+          "stop": 1742917424169
+        },
+        {
+          "name": "EnterOfficeLocationNewYork",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917424170,
+          "stop": 1742917424837
+        },
+        {
+          "name": "SelectAgent",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917424838,
+          "stop": 1742917426410
+        },
+        {
+          "name": "EnterInternalNotesLong",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917426411,
+          "stop": 1742917435201
+        },
+        {
+          "name": "ClickButtonAddPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917435202,
+          "stop": 1742917435987
+        },
+        {
+          "name": "EnterPhoneExtensionNumbersFull",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917435988,
+          "stop": 1742917437349
+        },
+        {
+          "name": "ClickButtonAddCommissionStructure",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917437349,
+          "stop": 1742917438107
+        },
+        {
+          "name": "SwitchingItemsPays",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917438118,
+          "stop": 1742917442727
+        },
+        {
+          "name": "ClickButtonAddMgmt",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917442728,
+          "stop": 1742917443478
+        },
+        {
+          "name": "ClickButtonPayType",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917443481,
+          "stop": 1742917444215
+        },
+        {
+          "name": "SelectItemOwnerAndTenantPays",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917444215,
+          "stop": 1742917444935
+        },
+        {
+          "name": "EnterDataOwnerAndTenantPaysMin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917444937,
+          "stop": 1742917447832
+        },
+        {
+          "name": "ScrollDown",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ScrollToElement",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "WebElementProxy",
+                  "value": "SeleniumExtras.PageObjects.WebElementProxy"
+                }
+              ],
+              "start": 1742917447937,
+              "stop": 1742917447960
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917447832,
+          "stop": 1742917447960
+        },
+        {
+          "name": "EnterFullDataMgmt",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917447961,
+          "stop": 1742917451339
+        },
+        {
+          "name": "GetEmailFromFieldOwnerEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917451340,
+          "stop": 1742917451490
+        },
+        {
+          "name": "ClickButtonCreate",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917451492,
+          "stop": 1742917452629
+        },
+        {
+          "name": "VerifyMessageSuccessCreatedOwner",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917452630,
+          "stop": 1742917454751
+        },
+        {
+          "name": "GetFirstEmailFromTable",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917454752,
+          "stop": 1742917454818
+        },
+        {
+          "name": "VerifyEmailForNewOwner",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "v@yahoo.com"
+            },
+            {
+              "name": "String",
+              "value": "v@yahoo.com"
+            }
+          ],
+          "start": 1742917454819,
+          "stop": 1742917457823
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "4bb011dafdc04e35b34c7b1fd1f270d6-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1742917404601,
+      "stop": 1742917471767
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1742917404601,
+  "stop": 1742917471767
+}

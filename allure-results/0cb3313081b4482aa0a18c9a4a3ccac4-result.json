@@ -1,0 +1,457 @@
+{
+  "uuid": "d3b428fe-0168-48a1-93e7-7fd3097f98ce-tr-0-1005",
+  "historyId": "MarketplaceAdminGuiTest.TestsBaseGui.CreateOwnerWithAssignedBroker",
+  "fullName": "MarketplaceAdminGuiTest.TestsBaseGui.CreateOwnerWithAssignedBroker",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "MarketplaceAdminGuiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateOwnerWithAssignedBroker"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "MarketplaceAdmin"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateOwnerWithAssignedBroker"
+    }
+  ],
+  "links": [],
+  "name": "CreateOwnerWithAssignedBroker",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.Data.SqlClient.SqlException : Cannot open database \"CazamioStageDb\" requested by the login. The login failed.\r\nLogin failed for user 'CazaQA'.\r\nData:\r\n  HelpLink.ProdName: Microsoft SQL Server\r\n  HelpLink.EvtSrc: MSSQLServer\r\n  HelpLink.EvtID: 4060\r\n  HelpLink.BaseHelpUrl: https://go.microsoft.com/fwlink\r\n  HelpLink.LinkId: 20476",
+    "trace": "   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)\r\n   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)\r\n   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)\r\n   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)\r\n   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)\r\n   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)\r\n   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)\r\n   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)\r\n   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)\r\n   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)\r\n   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)\r\n   at System.Data.SqlClient.SqlConnection.Open()\r\n   at CazamioNewProject.DbHelpers.OwnersDbTable.OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(String email, Int32 marketplaceId) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\DbHelpers\\OwnersDbTable\\OwnersDbRequests.cs:line 29\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.CreateOwnerWithAssignedBroker() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 310"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateOwnerWithAssignedBroker",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.Data.SqlClient.SqlException : Cannot open database \"CazamioStageDb\" requested by the login. The login failed.\r\nLogin failed for user 'CazaQA'.\r\nData:\r\n  HelpLink.ProdName: Microsoft SQL Server\r\n  HelpLink.EvtSrc: MSSQLServer\r\n  HelpLink.EvtID: 4060\r\n  HelpLink.BaseHelpUrl: https://go.microsoft.com/fwlink\r\n  HelpLink.LinkId: 20476",
+        "trace": "   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)\r\n   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)\r\n   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)\r\n   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)\r\n   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)\r\n   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)\r\n   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)\r\n   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)\r\n   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)\r\n   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)\r\n   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)\r\n   at System.Data.SqlClient.SqlConnection.Open()\r\n   at CazamioNewProject.DbHelpers.OwnersDbTable.OwnersDbRequests.DBOwners.DeleteNewlyCreatedOwner(String email, Int32 marketplaceId) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\DbHelpers\\OwnersDbTable\\OwnersDbRequests.cs:line 29\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.CreateOwnerWithAssignedBroker() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 310"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsMarketplaceAdminMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742917480767,
+              "stop": 1742917482086
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742917482092,
+              "stop": 1742917482162
+            },
+            {
+              "name": "VerifyMarketplaceAdminUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Mark Adm"
+                },
+                {
+                  "name": "String",
+                  "value": "Marketplace Admin"
+                }
+              ],
+              "start": 1742917482175,
+              "stop": 1742917482689
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917478050,
+          "stop": 1742917482689
+        },
+        {
+          "name": "ClickButtonOwners",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917482694,
+          "stop": 1742917489064
+        },
+        {
+          "name": "ClickButtonCreateOwner",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "WaitLoader",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1742917489064,
+              "stop": 1742917489167
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917489064,
+          "stop": 1742917490165
+        },
+        {
+          "name": "VerifyTitleCreateANewOwnerg",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917490173,
+          "stop": 1742917490327
+        },
+        {
+          "name": "EnterCompanyNameOneLetter",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917490327,
+          "stop": 1742917490846
+        },
+        {
+          "name": "EnterOwnerFirstName",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917490847,
+          "stop": 1742917491472
+        },
+        {
+          "name": "EnterOwnerEmaiLGmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917491473,
+          "stop": 1742917492209
+        },
+        {
+          "name": "EnterOfficeLocationWashington",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917492210,
+          "stop": 1742917492858
+        },
+        {
+          "name": "SelectBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917492858,
+          "stop": 1742917494394
+        },
+        {
+          "name": "EnterInternalNotesShort",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917494395,
+          "stop": 1742917495161
+        },
+        {
+          "name": "ClickButtonAddPhoneNumber",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917495161,
+          "stop": 1742917495937
+        },
+        {
+          "name": "EnterPhoneExtensionNumbers",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917495938,
+          "stop": 1742917497223
+        },
+        {
+          "name": "ClickButtonAddCommissionStructure",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917497223,
+          "stop": 1742917498010
+        },
+        {
+          "name": "EnterDataOwnerPays",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917498020,
+          "stop": 1742917499145
+        },
+        {
+          "name": "GetEmailFromFieldOwnerEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917499147,
+          "stop": 1742917499308
+        },
+        {
+          "name": "ClickButtonCreate",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917499310,
+          "stop": 1742917500510
+        },
+        {
+          "name": "VerifyMessageSuccessCreatedOwner",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917500511,
+          "stop": 1742917502642
+        },
+        {
+          "name": "GetFirstEmailFromTable",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1742917502642,
+          "stop": 1742917502720
+        },
+        {
+          "name": "VerifyEmailForNewOwner",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "lbphdltwosocwra@gmail.com"
+            },
+            {
+              "name": "String",
+              "value": "lbphdltwosocwra@gmail.com"
+            }
+          ],
+          "start": 1742917502720,
+          "stop": 1742917505728
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "2b23c862be774c83ac434b4a110672c4-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1742917471836,
+      "stop": 1742917519456
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1742917471836,
+  "stop": 1742917519457
+}

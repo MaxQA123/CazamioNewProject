@@ -25,10 +25,10 @@ namespace TenantsJrzeeCriticalFlow
 
         public void LogIn()
         {
-            Pages.Header
+            Pages.HeaderTenants
                 .ClickButtonLogIn();
             Pages.LogInTenant
-                .EnterEmailPasswordAsTenantCreatorWithoutCreditReport()
+                .LogInAsCreatorWithCreditReportMySpace()
                 .ClickIconShow()
                 .SetCheckBoxRememberMe()
                 .ClickButtonLogIn();
