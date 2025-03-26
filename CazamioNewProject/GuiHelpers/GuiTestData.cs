@@ -30,7 +30,7 @@
 
     public class ConnectionDb
     {
-        public const string GET_CONNECTION_STRING_TO_DB = "Server=20.110.40.246,1433;Database=CazamioStageDb;User Id=CazaQA;Password=sadvN742sJGB;TrustServerCertificate=True";
+        public const string GET_CONNECTION_STRING_TO_DB = "Server=20.110.40.246,1433;Database=CazamioStageDb;User Id=sa; password=sadvN742sJfe;MultipleActiveResultSets=true;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True";
     }
 
     public class GeneralTestDataForAllUsers
