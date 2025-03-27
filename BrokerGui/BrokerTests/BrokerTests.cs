@@ -848,7 +848,7 @@ namespace BrokerGuiTests
             string applicationIdFromAppTenant = Pages.MyAccount.GetApplicationId();
 
             Pages.MyAccount
-                .VerifyApplicationIdNumber(applicationIdFromAppLandlord, applicationIdFromAppTenant);
+                .VerifyApplicationIdNumberTenantCreator(applicationIdFromAppLandlord, applicationIdFromAppTenant);
 
             WaitUntil.WaitSomeInterval(5000);
 

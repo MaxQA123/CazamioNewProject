@@ -74,8 +74,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             return this;
         }
 
-        [AllureStep("EnterEmailCreatedTenantCreatorMySpace")]
-        public CreateApplicationMdlWndw EnterEmailCreatedTenantCreatorMySpace()
+        [AllureStep("EnterEmailCreatedTenantCreatorWithCreditReportMySpace")]
+        public CreateApplicationMdlWndw EnterEmailCreatedTenantCreatorWithCreditReportMySpace()
         {
             InputGeneral.InputFunctionWithClear(FieldInputMainApplicantEmailAddress, tenantCreatorMySpace.CreatedWithCreditReport.Email);
 

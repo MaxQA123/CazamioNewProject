@@ -1,11 +1,7 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
 using NUnit.Allure.Attributes;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.TenantPages.LogInPage
 {
@@ -13,7 +9,7 @@ namespace CazamioNewProject.PageObjects.TenantPages.LogInPage
     {
         TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
         //TenantGuarantor tenantGuarantor = new TenantGuarantor().Generate();
-        //TenantOccupant tenantOccupant = new TenantOccupant().Generate();
+        TenantOccupantMySpace tenantOccupantMySpace = TenantOccupantMySpace.Generate();
 
         [AllureStep("ClickIconShow")]
         public LogInTenant ClickIconShow()

@@ -21,7 +21,7 @@ namespace CazamioNewProject.PageObjects.TenantPages.LogInPage
             return this;
         }
 
-        [AllureStep("LogInAsCreatorWithoutCreditReportMySpace")]
+        [AllureStep("LogInAsCreatorWithCreditReportMySpace")]
         public LogInTenant LogInAsCreatorWithCreditReportMySpace()
         {
             Pages.HeaderTenants
@@ -29,6 +29,22 @@ namespace CazamioNewProject.PageObjects.TenantPages.LogInPage
             WaitUntil.CustomElementIsVisible(FieldInputEmailAddress);
             WaitUntil.CustomElementIsClickable(FieldInputEmailAddress);
             InputGeneral.InputFunctionWithClear(FieldInputEmailAddress, tenantCreatorMySpace.CreatedWithCreditReport.Email);
+            InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+            Button.Click(IconShow);
+            Button.Click(CheckBoxRememberMe);
+            Button.Click(ButtonLogIn);
+
+            return this;
+        }
+
+        [AllureStep("LogInAsOccupantWithCreditReportMySpace")]
+        public LogInTenant LogInAsOccupantWithCreditReportMySpace()
+        {
+            Pages.HeaderTenants
+               .ClickButtonLogIn();
+            WaitUntil.CustomElementIsVisible(FieldInputEmailAddress);
+            WaitUntil.CustomElementIsClickable(FieldInputEmailAddress);
+            InputGeneral.InputFunctionWithClear(FieldInputEmailAddress, tenantOccupantMySpace.CreatedWithCreditReport.Email);
             InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
             Button.Click(IconShow);
             Button.Click(CheckBoxRememberMe);

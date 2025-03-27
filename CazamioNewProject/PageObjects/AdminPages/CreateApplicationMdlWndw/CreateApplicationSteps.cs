@@ -16,14 +16,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             return this;
         }
 
-        [AllureStep("PassFirstStepStaticEmail")]
-        public CreateApplicationMdlWndw PassFirstStepStaticEmail()
+        [AllureStep("PassFirstStepCreatorWithCreditReportMySpace")]
+        public CreateApplicationMdlWndw PassFirstStepCreatorWithCreditReportMySpace()
         {
             Pages.ListOfApplications
                 .ClickButtonPlusApplication();
             Pages.CreateApplicationMdlWndw
                 .VerifyTitleCreateApplication()
-                .EnterEmailCreatedTenantCreatorMySpace()
+                .EnterEmailCreatedTenantCreatorWithCreditReportMySpace()
                 .ClickButtonNext();
 
             return this;

@@ -7,11 +7,20 @@ namespace CazamioNewProject.PageObjects.TenantPages.MyAccountPage
 {
     public partial class MyAccount
     {
-        [AllureStep("VerifyApplicationIdNumber")]
-        public MyAccount VerifyApplicationIdNumber(string applicationIdFromAppLandlord, string applicationIdFromAppTenant)
+        [AllureStep("VerifyApplicationIdNumberTenantCreator")]
+        public MyAccount VerifyApplicationIdNumberTenantCreator(string applicationIdFromAppLandlord, string appIdFromAppTenantCreator)
         {
-            Assert.AreEqual(applicationIdFromAppLandlord, applicationIdFromAppTenant);
-            Console.WriteLine($"AR:{applicationIdFromAppLandlord} ER: {applicationIdFromAppTenant} applicationId number");
+            Assert.AreEqual(applicationIdFromAppLandlord, appIdFromAppTenantCreator);
+            Console.WriteLine($"AR:{applicationIdFromAppLandlord} ER: {appIdFromAppTenantCreator} applicationId number");
+
+            return this;
+        }
+
+        [AllureStep("VerifyApplicationIdNumberTenantOccupant")]
+        public MyAccount VerifyApplicationIdNumberTenantOccupant(string applicationIdFromAppLandlord, string appIdFromAppTenantOccupant)
+        {
+            Assert.AreEqual(applicationIdFromAppLandlord, appIdFromAppTenantOccupant);
+            Console.WriteLine($"AR:{applicationIdFromAppLandlord} ER: {appIdFromAppTenantOccupant} applicationId number");
 
             return this;
         }

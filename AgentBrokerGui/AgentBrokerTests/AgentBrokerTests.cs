@@ -14,7 +14,7 @@ namespace AgentBrokerGui
 
     public class TestsBaseGui : AgentBrokerBase
     {
-        //Amount order 5 next must be 6
+        //Amount order 6 next must be 7
         [Test]
         [Order(1)]
         [AllureTag("Regression")]
@@ -154,14 +154,14 @@ namespace AgentBrokerGui
         }
 
         [Test]
-        [Order(5)]
+        [Order(4)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Agent-Broker")]
-        [AllureSubSuite("AddBuildingAssignedAgentBroker")]
+        [AllureSubSuite("AddApartmentAssignedAgentBroker")]
 
         public void AddApartmentAssignedAgentBroker()
         {
@@ -233,7 +233,7 @@ namespace AgentBrokerGui
         }
 
         [Test]
-        [Order(4)]
+        [Order(5)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -315,11 +315,11 @@ namespace AgentBrokerGui
         }
 
         [Test]
-        [Order(9)]
+        [Order(6)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
-        [Retry(1)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Agent-Broker")]
         [AllureSubSuite("CreateApplicationForApartmentOffMarket")]
@@ -334,10 +334,7 @@ namespace AgentBrokerGui
 
             #region Test data
 
-            Building building = Building.Generate();
-            Apartment apartment = Apartment.Generate();
             Application application = Application.Generate();
-            Agent agent = Agent.Generate();
             TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
             TenantOccupantMySpace tenantOccupantMySpace = TenantOccupantMySpace.Generate();
 
@@ -373,7 +370,7 @@ namespace AgentBrokerGui
             #region Test
 
             Pages.CreateApplicationMdlWndw
-                .PassFirstStepStaticEmail()
+                .PassFirstStepCreatorWithCreditReportMySpace()
                 .PassSecondStepOneOneOneAEastStPedestrianCrossingAddress();
 
             string getEmailAr = Pages.CreateApplicationMdlWndw.GetFullEmail();
@@ -407,21 +404,50 @@ namespace AgentBrokerGui
                 application.Statuses.Draft, statusFromApp,
                 application.Buttons.Close, btnNameFromApp);
 
-            //Pages.JScriptExecutor
-            //  .OpenNewTabHomePageTenant();
-            //Pages.LogInTenant
-            //    .LogInAsCreatorWithCreditReportMySpace();
-            //Pages.HeaderTenants
-            //    .ClickButtonMyApplications();
+            Pages.JScriptExecutor
+              .OpenNewTabHomePageTenant();
+            Pages.LogInTenant
+                .LogInAsCreatorWithCreditReportMySpace();
+            Pages.HeaderTenants
+                .ClickButtonMyApplications();
 
-            //string applicationIdFromAppTenant = Pages.MyAccount.GetApplicationId();
+            string appIdFromAppTenantCreator = Pages.MyAccount.GetApplicationId();
 
-            //Pages.MyAccount
-            //    .VerifyApplicationIdNumber(applicationIdFromAppLandlord, applicationIdFromAppTenant);
+            Pages.MyAccount
+                .VerifyApplicationIdNumberTenantCreator(applicationIdFromAppLandlord, appIdFromAppTenantCreator);
+            Pages.HeaderTenants
+                .LogOut();
+            Pages.JScriptExecutor
+              .OpenNewTabHomePageTenant();
+            SelectThirdTabBrowser.Open();
+            Pages.LogInTenant
+                .LogInAsOccupantWithCreditReportMySpace();
+            Pages.HeaderTenants
+                .ClickButtonMyApplications();
+
+            string appIdFromAppTenantOccupant = Pages.MyAccount.GetApplicationId();
+
+            Pages.MyAccount
+                .VerifyApplicationIdNumberTenantOccupant(applicationIdFromAppLandlord, appIdFromAppTenantOccupant);
 
             WaitUntil.WaitSomeInterval(5000);
 
             #endregion
+        }
+
+        [Test]
+        [Order(6)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(1)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Agent-Broker")]
+        [AllureSubSuite("CreateApplicationForApartmentSignedLease")]
+
+        public void CreateApplicationForApartmentSignedLease()
+        {
+
         }
     }
 }
