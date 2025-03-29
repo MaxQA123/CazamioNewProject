@@ -1,0 +1,210 @@
+{
+  "uuid": "1fcf0108-bb8f-4d9b-8f61-9752f6374c28-tr-0-1003",
+  "historyId": "BrokerGuiTests.TestsBaseGui.CreateOwnerWithAssignedBroker",
+  "fullName": "BrokerGuiTests.TestsBaseGui.CreateOwnerWithAssignedBroker",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "BrokerGuiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateOwnerWithAssignedBroker"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateOwnerWithAssignedBroker"
+    }
+  ],
+  "links": [],
+  "name": "CreateOwnerWithAssignedBroker",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+    "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage.ListOfOwners.__a$_around_ClickButtonCreateOwner_100663668_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfOwnersPage\\ListOfOwnersActions.cs:line 18\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage.ListOfOwners.__a$_around_ClickButtonCreateOwner_100663668_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage.ListOfOwners.__a$_around_ClickButtonCreateOwner_100663668_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage.ListOfOwners.ClickButtonCreateOwner() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfOwnersPage\\ListOfOwnersActions.cs:line 15\r\n   at BrokerGuiTests.TestsBaseGui.CreateOwnerWithAssignedBroker() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 199"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateOwnerWithAssignedBroker",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+        "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage.ListOfOwners.__a$_around_ClickButtonCreateOwner_100663668_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfOwnersPage\\ListOfOwnersActions.cs:line 18\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage.ListOfOwners.__a$_around_ClickButtonCreateOwner_100663668_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage.ListOfOwners.__a$_around_ClickButtonCreateOwner_100663668_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage.ListOfOwners.ClickButtonCreateOwner() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfOwnersPage\\ListOfOwnersActions.cs:line 15\r\n   at BrokerGuiTests.TestsBaseGui.CreateOwnerWithAssignedBroker() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 199"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsBrokerMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743234905999,
+              "stop": 1743234910403
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743234910412,
+              "stop": 1743234910474
+            },
+            {
+              "name": "VerifyBrokerUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Leoautotest Feabroker"
+                },
+                {
+                  "name": "String",
+                  "value": "Broker"
+                }
+              ],
+              "start": 1743234910487,
+              "stop": 1743234911002
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743234903182,
+          "stop": 1743234911002
+        },
+        {
+          "name": "ClickButtonOwners",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743234911016,
+          "stop": 1743234914480
+        },
+        {
+          "name": "ClickButtonCreateOwner",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Timed out after 10 seconds",
+            "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage.ListOfOwners.__a$_around_ClickButtonCreateOwner_100663668_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfOwnersPage\\ListOfOwnersActions.cs:line 18\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage.ListOfOwners.__a$_around_ClickButtonCreateOwner_100663668_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "WaitLoader",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743234914481,
+              "stop": 1743234914497
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743234914480,
+          "stop": 1743234924710
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "0649c2cecfd24fb297f2f7d0c3bcf429-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1743234896867,
+      "stop": 1743234927495
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1743234896867,
+  "stop": 1743234927495
+}

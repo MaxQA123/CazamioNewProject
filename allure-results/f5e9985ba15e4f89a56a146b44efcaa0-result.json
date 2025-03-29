@@ -1,0 +1,947 @@
+{
+  "uuid": "d93725c5-492c-46ba-bed8-5f6afe5b569e-tr-0-1006",
+  "historyId": "AgentBrokerGui.TestsBaseGui.CreateApplicationForApartmentOffMarket",
+  "fullName": "AgentBrokerGui.TestsBaseGui.CreateApplicationForApartmentOffMarket",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AgentBrokerGui"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateApplicationForApartmentOffMarket"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Agent-Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateApplicationForApartmentOffMarket"
+    }
+  ],
+  "links": [],
+  "name": "CreateApplicationForApartmentOffMarket",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "CreateApplicationForApartmentOffMarket"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateApplicationForApartmentOffMarket",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "VerifyUserData",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "ResponseLogInApiMarketplaceAdmin",
+              "value": "CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin.ResponseLogInApiMarketplaceAdmin"
+            },
+            {
+              "name": "MarketplaceAdmin",
+              "value": "CazamioNewProject.Objects.MarketplaceAdmin"
+            }
+          ],
+          "start": 1743236563112,
+          "stop": 1743236563112
+        },
+        {
+          "name": "LogInAsAgentBrokerMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743236566928,
+              "stop": 1743236568828
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743236568849,
+              "stop": 1743236568936
+            },
+            {
+              "name": "VerifyAgentBrokerUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Agentus Brokerus"
+                },
+                {
+                  "name": "String",
+                  "value": "Agent"
+                }
+              ],
+              "start": 1743236568944,
+              "stop": 1743236569507
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236564130,
+          "stop": 1743236569507
+        },
+        {
+          "name": "ClickButtonApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236569516,
+          "stop": 1743236572295
+        },
+        {
+          "name": "VerifyTitleListOfApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236572296,
+          "stop": 1743236572501
+        },
+        {
+          "name": "PassFirstStepCreatorWithCreditReportMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickButtonPlusApplication",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743236572506,
+              "stop": 1743236573471
+            },
+            {
+              "name": "VerifyTitleCreateApplication",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743236573474,
+              "stop": 1743236573559
+            },
+            {
+              "name": "EnterEmailCreatedTenantCreatorWithCreditReportMySpace",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743236573559,
+              "stop": 1743236574287
+            },
+            {
+              "name": "ClickButtonNext",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743236574287,
+              "stop": 1743236576966
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236572504,
+          "stop": 1743236576966
+        },
+        {
+          "name": "PassSecondStepOneOneOneAEastStPedestrianCrossingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickUnitAddressFieldInput",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743236576968,
+              "stop": 1743236577674
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236576966,
+          "stop": 1743236579070
+        },
+        {
+          "name": "GetFullEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236579074,
+          "stop": 1743236579216
+        },
+        {
+          "name": "VerifyTenantEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "main-appl-2myspace@putsbox.com"
+            }
+          ],
+          "start": 1743236579217,
+          "stop": 1743236579217
+        },
+        {
+          "name": "PassThirdStepOneOneOneAEastStPedestrianCrossingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickButtonDropDownYearMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743236582312,
+              "stop": 1743236583117
+            },
+            {
+              "name": "SelectCurrentYear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743236583117,
+              "stop": 1743236584338
+            },
+            {
+              "name": "SelectNextMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743236584338,
+              "stop": 1743236585536
+            },
+            {
+              "name": "SelectFisrtDayInNextMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743236585536,
+              "stop": 1743236586670
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236579217,
+          "stop": 1743236596255
+        },
+        {
+          "name": "VerifyTitleApplicationSuccessfullyCreated",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236596255,
+          "stop": 1743236596698
+        },
+        {
+          "name": "VerifyTextLinkAlreadyCopied",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236596698,
+          "stop": 1743236596737
+        },
+        {
+          "name": "ClickButtonAddApplicant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236596737,
+          "stop": 1743236597435
+        },
+        {
+          "name": "AddOneAlreadyExistOccupant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyTitleAddApplicantMdlWndw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743236597437,
+              "stop": 1743236597481
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236597437,
+          "stop": 1743236598099
+        },
+        {
+          "name": "ClickBtnAdd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifMessageAddedApplicantsToApplication",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743236599920,
+              "stop": 1743236607407
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236598099,
+          "stop": 1743236607407
+        },
+        {
+          "name": "GetApplicationIdFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236607408,
+          "stop": 1743236607454
+        },
+        {
+          "name": "GetFullNameTenantMainApplicantFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236607455,
+          "stop": 1743236607497
+        },
+        {
+          "name": "GetFullNameTenantOccupantFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236607498,
+          "stop": 1743236607538
+        },
+        {
+          "name": "GetPriceFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236607539,
+          "stop": 1743236607580
+        },
+        {
+          "name": "GetDateCreatedFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236607580,
+          "stop": 1743236608141
+        },
+        {
+          "name": "GetAgentFromFrstRw",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236608142,
+          "stop": 1743236608196
+        },
+        {
+          "name": "VerifyFullDataByApplicationTenantsMainOccupant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "MainApplMySpace-WithCR SaraMainMyspaceQA"
+            },
+            {
+              "name": "String",
+              "value": "MainApplMySpace-WithCR SaraMainMyspaceQA"
+            },
+            {
+              "name": "String",
+              "value": "OccupMySpace-WithCR DeniOcupMyspaceQA"
+            },
+            {
+              "name": "String",
+              "value": "OccupMySpace-WithCR DeniOcupMyspaceQA"
+            },
+            {
+              "name": "String",
+              "value": "$2500"
+            },
+            {
+              "name": "String",
+              "value": "$2500"
+            },
+            {
+              "name": "String",
+              "value": "03/29/2025"
+            },
+            {
+              "name": "String",
+              "value": "03/29/2025"
+            },
+            {
+              "name": "String",
+              "value": "Not assigned"
+            },
+            {
+              "name": "String",
+              "value": "Not assigned"
+            },
+            {
+              "name": "String",
+              "value": "Draft"
+            },
+            {
+              "name": "String",
+              "value": "Draft"
+            },
+            {
+              "name": "String",
+              "value": "Close"
+            },
+            {
+              "name": "String",
+              "value": "Close"
+            }
+          ],
+          "start": 1743236608249,
+          "stop": 1743236608249
+        },
+        {
+          "name": "OpenNewTabHomePageTenant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236608250,
+          "stop": 1743236610220
+        },
+        {
+          "name": "LogInAsCreatorWithCreditReportMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickButtonLogIn",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743236610228,
+              "stop": 1743236611831
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236610222,
+          "stop": 1743236615779
+        },
+        {
+          "name": "ClickButtonMyApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236615782,
+          "stop": 1743236618547
+        },
+        {
+          "name": "GetApplicationId",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236618549,
+          "stop": 1743236619577
+        },
+        {
+          "name": "VerifyApplicationIdNumberTenantCreator",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "169"
+            },
+            {
+              "name": "String",
+              "value": "169"
+            }
+          ],
+          "start": 1743236619578,
+          "stop": 1743236619578
+        },
+        {
+          "name": "LogOut",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ConmfirmLogOut",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [
+                {
+                  "name": "VerifyTitle",
+                  "status": "passed",
+                  "statusDetails": {
+                    "known": false,
+                    "muted": false,
+                    "flaky": false
+                  },
+                  "stage": "finished",
+                  "steps": [],
+                  "attachments": [],
+                  "parameters": [],
+                  "start": 1743236621160,
+                  "stop": 1743236621222
+                }
+              ],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743236621160,
+              "stop": 1743236622594
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236619578,
+          "stop": 1743236622594
+        },
+        {
+          "name": "OpenNewTabHomePageTenant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236622594,
+          "stop": 1743236623565
+        },
+        {
+          "name": "LogInAsOccupantWithCreditReportMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickButtonLogIn",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743236625591,
+              "stop": 1743236626450
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236625590,
+          "stop": 1743236630049
+        },
+        {
+          "name": "ClickButtonMyApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236630050,
+          "stop": 1743236632578
+        },
+        {
+          "name": "GetApplicationId",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743236632578,
+          "stop": 1743236633101
+        },
+        {
+          "name": "VerifyApplicationIdNumberTenantOccupant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "169"
+            },
+            {
+              "name": "String",
+              "value": "169"
+            }
+          ],
+          "start": 1743236633102,
+          "stop": 1743236633103
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "e7d286ab3c0440679e32aecdce60a50d-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1743236555190,
+      "stop": 1743236638239
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1743236555190,
+  "stop": 1743236638239
+}

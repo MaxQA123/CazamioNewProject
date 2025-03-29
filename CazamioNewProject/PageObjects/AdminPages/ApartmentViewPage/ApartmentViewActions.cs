@@ -169,6 +169,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
             return this;
         }
 
+        [AllureStep("EnterExistEmailWithCreditReporGetApplicationLink")]
+        public ApartmentView EnterExistEmailWithoutCreditReporGetApplicationLink()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputGetApplicationLink);
+            InputGeneral.InputFunctionWithClear(FieldInputGetApplicationLink, tenantCreatorMySpace.CreatedWithoutCreditReport.Email);
+
+            return this;
+        }
+
         [AllureStep("ClickButtonGetLink")]
         public ApartmentView ClickButtonGetLink()
         {

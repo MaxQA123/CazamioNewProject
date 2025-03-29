@@ -42,6 +42,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
             return Browser._Driver.FindElement(By.XPath(xpath));
         }
 
+        public IWebElement GetVlLabelOfClmnDraftStatusWithoutAgentFrstRw()
+        {
+            Application application = Application.Generate();
+
+            var xpath = "//app-applications//table//tbody//tr//td[9]//div//span[text() = '" + application.Statuses.Draft + "']";
+
+            return Browser._Driver.FindElement(By.XPath(xpath));
+        }
+
         public IWebElement GetVlLabelOfClmnCloseBtnFrstRw()
         {
             Application application = Application.Generate();

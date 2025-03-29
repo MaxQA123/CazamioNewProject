@@ -9,7 +9,7 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
 {
     public partial class ApartmentCreation
     {
-        public static RequestCreateApartmentMandatoryData RequestBodyRequestCreateApartmentOffMarketStatus()
+        public static RequestCreateApartmentMandatoryData RequestBodyCreateApartmentOffMarketStatus()
         {
             //111A East 51st Street Pedestrian Crossing
             // Get BuildingId from BD
@@ -23,9 +23,9 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
                     new Apartment
                     {
                         Unit = GenerateRandomData.RandomNumberWithoutZero(4),
-                        LeasePrice = 850,
-                        PaidMonths = 1,
-                        DepositPrice = 850,
+                        LeasePrice = 2500,
+                        PaidMonths = 3,
+                        DepositPrice = 5000,
                         BrokerFeeRequired = false,
                         BedroomQuantity = 3,
                         BathroomQuantity = 2,

@@ -15,7 +15,7 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
             // Get BuildingId from BD
             var buildingIdResult = BuildingsDbRequests.Buildings.GetBuildingIdNineNineNineEightSaintJohnsonPlace();
             long buildingId = buildingIdResult.AddressId;
-            
+
             var payload = new RequestCreateApartmentMandatoryData
             {
                 Apartments = new Apartment[]

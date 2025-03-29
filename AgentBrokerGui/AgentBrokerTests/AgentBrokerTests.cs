@@ -343,7 +343,7 @@ namespace AgentBrokerGui
             #region Test Data API
 
             MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
-            var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyRequestCreateApartmentOffMarketStatus();
+            var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentOffMarketStatus();
 
             #endregion
 
@@ -440,14 +440,113 @@ namespace AgentBrokerGui
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
-        [Retry(1)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Agent-Broker")]
         [AllureSubSuite("CreateApplicationForApartmentSignedLease")]
 
         public void CreateApplicationForApartmentSignedLease()
         {
+            #region SettingsForBuilding
 
+            //111A East 51st Street Pedestrian Crossing
+
+            #endregion
+
+            #region Test data
+
+            Apartment apartment = Apartment.Generate();
+            Application application = Application.Generate();
+            TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
+            AgentBroker agentBroker = AgentBroker.Generate();
+
+            #endregion
+
+            #region Test Data API
+
+            MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
+            var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentSignedLeaseStatus();
+
+            #endregion
+
+            #region Preconditions API
+
+            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
+
+            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+            CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseMarketplaceAdmin.AuthData.Token, requestBodyApartment);
+
+            #endregion
+
+            #region Preconditions Test
+
+            Pages.LogInLandlord
+                .LogInAsAgentBrokerMySpace();
+            Pages.SidebarLandlord
+               .ClickButtonBuildings();
+            Pages.ListOfBuildings
+                .SearchOneOneOneAEastStPerestrian()
+                .SelectOneOneOneAEastStPerestrian();
+            Pages.BuildingView
+                .VerifyTitleBuildingViewPage();
+
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
+
+            Pages.BuildingView
+                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneOneOneAEastFiftyOneStStreetPedestrianCrossing)
+                .ClickTabApartments();
+            KeyBoardActions.ScrollToDown();
+
+            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithoutAgentAlbermaleRd();
+
+            Pages.BuildingApartmentsTbl
+                .ClickRowBySignedLease();
+
+            #endregion
+
+            #region Test
+
+            Pages.ApartmentView
+                .VerifyTitleApartmentViewPage()
+                .EnterExistEmailWithoutCreditReporGetApplicationLink();
+
+            string leasePriceFromUnit = Pages.ApartmentView.GetLeasePriceValueOfString();
+
+            Pages.ApartmentView
+                .ClickButtonGetLink()
+                .VerifyCopiedTheLinkToApplication()
+                .ClickTabApplications();
+            KeyBoardActions.ScrollToDown();
+
+            string applicationIdFromAppLandlord = Pages.ApartmentApplicationsTbl.GetApplicationIdFromFirstRow();
+            string apartmentAddressFromApp = Pages.ApartmentApplicationsTbl.GetApartmentAddressFromFirstRow();
+            string fullNameTenantMainApplicantFromAppAr = Pages.ApartmentApplicationsTbl.GetFullNameTenantMainApplicantFromFirstRow();
+            string leasePriceFromApplication = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
+            string dateCreatedFromApplication = Pages.ApartmentApplicationsTbl.GetDateCreatedFromFirstRow();
+            string statusFromApplication = Pages.ApartmentApplicationsTbl.GetVlLabelOfClmnDraftStatusWithoutAgentFrstRw().Text;
+
+            Pages.ApartmentApplicationsTbl
+                .VerifyDataWitoutAgentByApplicationCreatedTenantMain
+                (getAddressBuildingViewActual, apartmentAddressFromApp,
+                tenantCreatorMySpace.CreatedWithoutCreditReport.ConstantFirstLastName, fullNameTenantMainApplicantFromAppAr,
+                leasePriceFromUnit, leasePriceFromApplication,
+                application.BasicData.DateCurrent, dateCreatedFromApplication,
+                application.Statuses.Draft, statusFromApplication);
+            Pages.JScriptExecutor
+              .OpenNewTabHomePageTenant();
+            Pages.LogInTenant
+                .LogInAsCreatorWithoutCreditReportMySpace();
+            Pages.HeaderTenants
+                .ClickButtonMyApplications();
+
+            string applicationIdFromAppTenant = Pages.MyAccount.GetApplicationId();
+
+            Pages.MyAccount
+                .VerifyApplicationIdNumberTenantCreator(applicationIdFromAppLandlord, applicationIdFromAppTenant);
+
+            WaitUntil.WaitSomeInterval(5000);
+
+            #endregion
         }
     }
 }

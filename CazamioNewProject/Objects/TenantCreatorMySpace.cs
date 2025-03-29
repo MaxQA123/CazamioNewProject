@@ -77,7 +77,7 @@ namespace CazamioNewProject.Objects
             {
                 ConstantFirstName = "MainApplMySpace-WithoutCR",
                 ConstantLastName = "JoeMainMyspaceQA",
-                ConstantFirstLastName = "MainApplMySpace JoeMainMyspaceQA",
+                ConstantFirstLastName = "MainApplMySpace-WithoutCR JoeMainMyspaceQA",
                 Email = "main-appl-1myspace@putsbox.com",
             };
         }

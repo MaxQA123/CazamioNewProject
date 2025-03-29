@@ -37,6 +37,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
             public string Vacant { get; set; }
             public string Occupied { get; set; }
             public string ApplicationSubmitted { get; set; }
+            public string SignedLease { get; set; }
         }
 
         public class PriceColumnInfo
@@ -70,6 +71,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
                 Vacant = "Vacant",
                 Occupied = "Occupied",
                 ApplicationSubmitted = "Application Submitted",
+                SignedLease = "Signed Lease",
             };
         }
 
