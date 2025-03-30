@@ -28,5 +28,25 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsApplication
 
             return this;
         }
+
+        [AllureStep("VerifyDataWitoutAgentByApplicationTenantMain")]
+        public ListOfApplicationsApplicationsTbl VerifyDataWitoutAgentByApplicationTenantMain
+            (string fullNameMainTenantEx, string fullNameTenantMainApplicantFromAppAr,
+             string leasePriceEx, string leasePriceFromApp,
+             string dateCurrentEx, string dateCreatedFromApp,
+             string draftEx, string statusFromApp,
+             string closeBtnEx, string btnNameFromApp)
+        {
+            Assert.Multiple(() =>
+            {
+                Assert.AreEqual(fullNameMainTenantEx, fullNameTenantMainApplicantFromAppAr);
+                Assert.AreEqual(leasePriceEx, leasePriceFromApp);
+                Assert.AreEqual(dateCurrentEx, dateCreatedFromApp);
+                Assert.AreEqual(draftEx, statusFromApp);
+                Assert.AreEqual(closeBtnEx, btnNameFromApp);
+            });
+
+            return this;
+        }
     }
 }

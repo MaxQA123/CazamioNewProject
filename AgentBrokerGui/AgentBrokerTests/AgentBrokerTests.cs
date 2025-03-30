@@ -376,13 +376,13 @@ namespace AgentBrokerGui
             string getEmailAr = Pages.CreateApplicationMdlWndw.GetFullEmail();
 
             Pages.CreateApplicationMdlWndw
-                .VerifyTenantEmail(getEmailAr)
+                .VerifyEmailTenantCreatorWithCreditReport(getEmailAr)
                 .PassThirdStepOneOneOneAEastStPedestrianCrossingAddress()
                 .VerifyTitleApplicationSuccessfullyCreated()
                 .VerifyTextLinkAlreadyCopied()
                 .ClickButtonAddApplicant();
             Pages.AddApplicantMdlWndw
-                .AddOneAlreadyExistOccupant()
+                .AddOneAlreadyExistOccupantWithCreditReport()
                 .ClickBtnAdd();
 
             string applicationIdFromAppLandlord = Pages.ListOfApplicationsApplicationsTbl.GetApplicationIdFromFirstRow();

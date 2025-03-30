@@ -19,5 +19,47 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw
            
             return this;
         }
+
+        [AllureStep("AddOneAlreadyExistOccupantWithCreditReport")]
+        public AddApplicantMdlWndw AddOneAlreadyExistOccupantWithCreditReport()
+        {
+            VerifyTitleAddApplicantMdlWndw();
+            WaitUntil.CustomElementIsVisible(FirstFieldInputEmailAddress);
+            InputGeneral.InputFunctionWithClear(FirstFieldInputEmailAddress, tenantOccupantMySpace.CreatedWithCreditReport.Email);
+
+            return this;
+        }
+
+        [AllureStep("AddOneAlreadyExistOccupantWithoutCreditReport")]
+        public AddApplicantMdlWndw AddOneAlreadyExistOccupantWithoutCreditReport()
+        {
+            VerifyTitleAddApplicantMdlWndw();
+            WaitUntil.CustomElementIsVisible(FirstFieldInputEmailAddress);
+            InputGeneral.InputFunctionWithClear(FirstFieldInputEmailAddress, tenantOccupantMySpace.CreatedWitoutCreditReport.Email);
+
+            return this;
+        }
+
+        [AllureStep("AddOneAlreadyExistGuarantorWithCreditReport")]
+        public AddApplicantMdlWndw AddOneAlreadyExistGuarantorWithCreditReport()
+        {
+            VerifyTitleAddApplicantMdlWndw();
+            WaitUntil.CustomElementIsVisible(FirstFieldInputEmailAddress);
+            InputGeneral.InputFunctionWithClear(FirstFieldInputEmailAddress, tenantGuarantorMySpace.CreatedWithCreditReport.Email);
+
+            return this;
+        }
+
+        [AllureStep("AddOnlyAlreadyExistGuarantorWithoutCreditReport")]
+        public AddApplicantMdlWndw AddOnlyAlreadyExistGuarantorWithoutCreditReport()
+        {
+            VerifyTitleAddApplicantMdlWndw();
+            WaitUntil.CustomElementIsVisible(FirstFieldInputEmailAddress);
+            InputGeneral.InputFunctionWithClear(FirstFieldInputEmailAddress, tenantGuarantorMySpace.CreatedWitoutCreditReport.Email);
+            WaitUntil.CustomElementIsClickable(CheckBoxThisIsAGuarantorFirstEmailAddressField);
+            Button.Click(CheckBoxThisIsAGuarantorFirstEmailAddressField);
+
+            return this;
+        }
     }
 }

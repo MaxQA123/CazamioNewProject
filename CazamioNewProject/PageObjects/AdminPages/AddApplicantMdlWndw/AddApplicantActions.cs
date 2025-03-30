@@ -43,15 +43,5 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw
 
             return partEmail;
         }
-
-        [AllureStep("AddOneAlreadyExistOccupant")]
-        public AddApplicantMdlWndw AddOneAlreadyExistOccupant()
-        {
-            VerifyTitleAddApplicantMdlWndw();
-            WaitUntil.CustomElementIsVisible(FirstFieldInputEmailAddress);
-            InputGeneral.InputFunctionWithClear(FirstFieldInputEmailAddress, tenantOccupantMySpace.CreatedWithCreditReport.Email);
-
-            return this;
-        }
     }
 }

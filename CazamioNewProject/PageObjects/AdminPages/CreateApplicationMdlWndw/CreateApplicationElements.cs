@@ -39,10 +39,16 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         #region Second step with enter an address
 
         [FindsBy(How = How.XPath, Using = ("//app-prepare-application//div[@class = 'address-input']"))]
+        public IWebElement UnitAddressButton;
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//div[@class = 'address-input']//input[@aria-autocomplete = 'list']"))]
         public IWebElement UnitAddressFieldInput;
 
         [FindsBy(How = How.XPath, Using = ("//app-prepare-application//ng-dropdown-panel//span[contains(@title, '111A East 51st Street Pedestrian Crossing')]"))]
         public IWebElement OneOneOneAEastStPedestrianCrossingAddress;
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//ng-dropdown-panel//span[contains(@title, '1 Washington square')]"))]
+        public IWebElement OneWashingtonSquareAddress;
 
         [FindsBy(How = How.XPath, Using = ("//app-prepare-application//div[@class = 'address-input']//input"))]
         public IWebElement VlFromBtnUnitAddress;

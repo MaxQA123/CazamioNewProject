@@ -82,11 +82,37 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             return this;
         }
 
+        [AllureStep("EnterEmailCreatedTenantCreatorWithoutCreditReportMySpace")]
+        public CreateApplicationMdlWndw EnterEmailCreatedTenantCreatorWithoutCreditReportMySpace()
+        {
+            InputGeneral.InputFunctionWithClear(FieldInputMainApplicantEmailAddress, tenantCreatorMySpace.CreatedWithoutCreditReport.Email);
+
+            return this;
+        }
+
         [AllureStep("ClickUnitAddressFieldInput")]
         public CreateApplicationMdlWndw ClickUnitAddressFieldInput()
         {
-            WaitUntil.CustomElementIsVisible(UnitAddressFieldInput);
-            Button.Click(UnitAddressFieldInput);
+            WaitUntil.CustomElementIsVisible(UnitAddressButton);
+            Button.Click(UnitAddressButton);
+
+            return this;
+        }
+
+        [AllureStep("EnterOneWashingtonSquareAddress")]
+        public CreateApplicationMdlWndw EnterOneWashingtonSquareAddress()
+        {
+            WaitUntil.CustomElementIsVisible(UnitAddressButton);
+            InputGeneral.InputFunctionWithClear(UnitAddressFieldInput, apartment.BuildingShortAddress.OneWashingtonSquare);
+
+            return this;
+        }
+
+        [AllureStep("EnterOneOneOneAEastStPedestrianCrossingAddress")]
+        public CreateApplicationMdlWndw EnterOneOneOneAEastStPedestrianCrossingAddress()
+        {
+            WaitUntil.CustomElementIsVisible(UnitAddressButton);
+            InputGeneral.InputFunctionWithClear(UnitAddressFieldInput, apartment.BuildingShortAddress.OneOneOneAEastFiftyOneStStreetPedestrianCrossing);
 
             return this;
         }

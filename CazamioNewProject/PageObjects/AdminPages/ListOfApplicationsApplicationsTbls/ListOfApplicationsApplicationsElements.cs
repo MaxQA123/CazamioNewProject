@@ -42,11 +42,29 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsApplication
             return Browser._Driver.FindElement(By.XPath(xpath));
         }
 
+        public IWebElement GetVlLabelOfClmnDraftStatusWithoutAgentFrstRw()
+        {
+            Application application = Application.Generate();
+
+            var xpath = "//application-list//table//tbody//tr//td[9]//span[text() = '" + application.Statuses.Draft + "']";
+
+            return Browser._Driver.FindElement(By.XPath(xpath));
+        }
+
         public IWebElement GetVlLabelOfClmnCloseBtnFrstRw()
         {
             Application application = Application.Generate();
 
             var xpath = "//application-list//table//tbody//tr//td[10]//cazamio-button//span[text() = '" + application.Buttons.Close + "']";
+
+            return Browser._Driver.FindElement(By.XPath(xpath));
+        }
+
+        public IWebElement GetVlLabelOfClmnCloseBtnWithoutAgentFrstRw()
+        {
+            Application application = Application.Generate();
+
+            var xpath = "//application-list//table//tbody//tr//td[9]//cazamio-button//span[text() = '" + application.Buttons.Close + "']";
 
             return Browser._Driver.FindElement(By.XPath(xpath));
         }
