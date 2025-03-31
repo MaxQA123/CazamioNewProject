@@ -20,6 +20,21 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw
             return this;
         }
 
+        [AllureStep("AddOnCreatedOccupantWithoutCrdtRprtGuarantorWithCrdtRprt")]
+        public AddApplicantMdlWndw AddOnCreatedOccupantWithoutCrdtRprtGuarantorWithCrdtRprt()
+        {
+            VerifyTitleAddApplicantMdlWndw();
+            WaitUntil.CustomElementIsVisible(FirstFieldInputEmailAddress);
+            InputGeneral.InputFunctionWithClear(FirstFieldInputEmailAddress, tenantOccupantMySpace.CreatedWitoutCreditReport.Email);
+            Button.Click(BtnPlusAddAnotherApplicant);
+            WaitUntil.CustomElementIsClickable(SecondFieldInputEmailAddress);
+            InputGeneral.InputFunctionWithClear(SecondFieldInputEmailAddress, tenantGuarantorMySpace.CreatedWithCreditReport.Email);
+            WaitUntil.CustomElementIsClickable(CheckBoxThisIsAGuarantorSecondEmailAddressField);
+            Button.Click(CheckBoxThisIsAGuarantorSecondEmailAddressField);
+
+            return this;
+        }
+
         [AllureStep("AddOneAlreadyExistOccupantWithCreditReport")]
         public AddApplicantMdlWndw AddOneAlreadyExistOccupantWithCreditReport()
         {

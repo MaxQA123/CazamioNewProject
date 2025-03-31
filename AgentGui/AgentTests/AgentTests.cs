@@ -14,7 +14,7 @@ namespace AgentGuiTests
 
     public class TestsBaseGui : AgentBase
     {
-        //Amount order 2 next must be 3
+        //Amount order 3 next must be 4
         [Test]
         [Order(2)]
         [AllureTag("Regression")]
@@ -72,7 +72,7 @@ namespace AgentGuiTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
-        [Retry(1)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Agent")]
         [AllureSubSuite("CreateApplicationForApartmenVacantFst")]
@@ -153,10 +153,143 @@ namespace AgentGuiTests
                 application.Statuses.Draft, statusFromApp,
                 application.Buttons.Close, btnNameFromApp);
 
+            Pages.JScriptExecutor
+              .OpenNewTabHomePageTenant();
+            Pages.LogInTenant
+                .LogInAsCreatorWithoutCreditReportMySpace();
+            Pages.HeaderTenants
+                .ClickButtonMyApplications();
+
+            string appIdFromAppTenantCreator = Pages.MyAccount.GetApplicationId();
+
+            Pages.MyAccount
+                .VerifyApplicationIdNumberTenantCreator(applicationIdFromAppLandlord, appIdFromAppTenantCreator);
+            Pages.HeaderTenants
+                .LogOut();
+            Pages.JScriptExecutor
+              .OpenNewTabHomePageTenant();
+            SelectThirdTabBrowser.Open();
+            Pages.LogInTenant
+                .LogInAsGuarantorWithoutCreditReportMySpace();
+            Pages.HeaderTenants
+                .ClickButtonMyApplications();
+
+            string appIdFromAppTenantOccupant = Pages.MyAccount.GetApplicationId();
+
+            Pages.MyAccount
+                .VerifyApplicationIdNumberTenantGuarantor(applicationIdFromAppLandlord, appIdFromAppTenantOccupant);
+
+            WaitUntil.WaitSomeInterval(5000);
+
+            #endregion
+        }
+
+        [Test]
+        [Order(4)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(1)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Agent")]
+        [AllureSubSuite("CreateApplicationForApartmenVacantFst")]
+
+        public void CreateApplicationForApartmenVacantScnd()
+        {
+            #region SettingsForBuilding
+
+            //1 Washington square
+
+            #endregion
+
+            #region Test data
+
+            Apartment apartment = Apartment.Generate();
+            Application application = Application.Generate();
+            TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
+            TenantOccupantMySpace tenantOccupantMySpace = TenantOccupantMySpace.Generate();
+            TenantGuarantorMySpace tenantGuarantorMySpace = TenantGuarantorMySpace.Generate();
+
+            #endregion
+
+            #region Test Data API
+
+            MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
+            var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentVacantScndStatus();
+
+            #endregion
+
+            #region Preconditions API
+
+            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
+
+            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+            CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseMarketplaceAdmin.AuthData.Token, requestBodyApartment);
+
+            #endregion
+
+            #region Preconditions Test
+
+            Pages.LogInLandlord
+               .LogInAsAgentMySpace();
+            Pages.SidebarLandlord
+                .ClickButtonBuildings();
+            Pages.ListOfBuildings
+                .SearchBuildingOneWashingtonSquare()
+                .SelectOneWashingtonSquare();
+            Pages.BuildingView
+                .VerifyTitleBuildingViewPage();
+
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
+
+            Pages.BuildingView
+                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneWashingtonSquare)
+                .ClickTabApartments();
+            KeyBoardActions.ScrollToDown();
+
+            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithoutAgentAlbermaleRd();
+
+            Pages.BuildingApartmentsTbl
+                .ClickRowByVacant();
+
+            #endregion
+
+            #region Test
+
+            Pages.CreateApplicationMdlWndw
+                .PassFirstStepCreatorWithoutCreditReportMySpace();
+
+            string getEmailAr = Pages.CreateApplicationMdlWndw.GetFullEmail();
+
+            Pages.CreateApplicationMdlWndw
+                .VerifyEmailTenantCreatorWithoutCreditReport(getEmailAr)
+                .PassThirdStepOneWashingtonSquareAddress()
+                .VerifyTitleApplicationSuccessfullyCreated()
+                .VerifyTextLinkAlreadyCopied()
+                .ClickButtonAddApplicant();
+            Pages.AddApplicantMdlWndw
+                .AddOnCreatedOccupantWithoutCrdtRprtGuarantorWithCrdtRprt()
+                .ClickBtnAdd();
+
+            //string applicationIdFromAppLandlord = Pages.ListOfApplicationsApplicationsTbl.GetApplicationIdFromFirstRow();
+            //string fullNameTenantMainApplicantFromAppAr = Pages.ListOfApplicationsApplicationsTbl.GetFullNameTenantMainApplicantFromFirstRow();
+            //string leasePriceFromApp = Pages.ListOfApplicationsApplicationsTbl.GetPriceFromFirstRow();
+            //string dateCreatedFromApp = Pages.ListOfApplicationsApplicationsTbl.GetDateCreatedFromFirstRow();
+            //string statusFromApp = Pages.ListOfApplicationsApplicationsTbl.GetVlLabelOfClmnDraftStatusWithoutAgentFrstRw().Text;
+            //string btnNameFromApp = Pages.ListOfApplicationsApplicationsTbl.GetVlLabelOfClmnCloseBtnWithoutAgentFrstRw().Text;
+
+            //Pages.ListOfApplicationsApplicationsTbl
+            //    .VerifyDataWitoutAgentByApplicationTenantMain
+            //    (tenantCreatorMySpace.CreatedWithoutCreditReport.ConstantFirstLastName, fullNameTenantMainApplicantFromAppAr,
+            //    application.LeasePrice.FirstPriceStatic, leasePriceFromApp,
+            //    application.BasicData.DateCurrent, dateCreatedFromApp,
+            //    application.Statuses.Draft, statusFromApp,
+            //    application.Buttons.Close, btnNameFromApp);
+
             //Pages.JScriptExecutor
             //  .OpenNewTabHomePageTenant();
             //Pages.LogInTenant
-            //    .LogInAsCreatorWithCreditReportMySpace();
+            //    .LogInAsCreatorWithoutCreditReportMySpace();
             //Pages.HeaderTenants
             //    .ClickButtonMyApplications();
 
@@ -170,14 +303,14 @@ namespace AgentGuiTests
             //  .OpenNewTabHomePageTenant();
             //SelectThirdTabBrowser.Open();
             //Pages.LogInTenant
-            //    .LogInAsOccupantWithCreditReportMySpace();
+            //    .LogInAsGuarantorWithoutCreditReportMySpace();
             //Pages.HeaderTenants
             //    .ClickButtonMyApplications();
 
             //string appIdFromAppTenantOccupant = Pages.MyAccount.GetApplicationId();
 
             //Pages.MyAccount
-            //    .VerifyApplicationIdNumberTenantOccupant(applicationIdFromAppLandlord, appIdFromAppTenantOccupant);
+            //    .VerifyApplicationIdNumberTenantGuarantor(applicationIdFromAppLandlord, appIdFromAppTenantOccupant);
 
             WaitUntil.WaitSomeInterval(5000);
 

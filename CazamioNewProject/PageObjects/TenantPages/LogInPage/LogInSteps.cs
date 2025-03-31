@@ -5,6 +5,8 @@ namespace CazamioNewProject.PageObjects.TenantPages.LogInPage
 {
     public partial class LogInTenant
     {
+        #region My Space
+
         [AllureStep("LogInAsCreatorWithoutCreditReportMySpace")]
         public LogInTenant LogInAsCreatorWithoutCreditReportMySpace()
         {
@@ -53,35 +55,22 @@ namespace CazamioNewProject.PageObjects.TenantPages.LogInPage
             return this;
         }
 
-        //[AllureStep("EnterEmailPasswordAsOccupant")]
-        //public LogInTenant EnterEmailPasswordAsOccupant()
-        //{
-        //    WaitUntil.CustomElementIsVisible(FieldInputEmailAddress);
-        //    InputGeneral.InputFunctionWithClear(FieldInputEmailAddress, tenantOccupant.EmailAddressTenant);
-        //    InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+        [AllureStep("LogInAsGuarantorWithoutCreditReportMySpace")]
+        public LogInTenant LogInAsGuarantorWithoutCreditReportMySpace()
+        {
+            Pages.HeaderTenants
+               .ClickButtonLogIn();
+            WaitUntil.CustomElementIsVisible(FieldInputEmailAddress);
+            WaitUntil.CustomElementIsClickable(FieldInputEmailAddress);
+            InputGeneral.InputFunctionWithClear(FieldInputEmailAddress, tenantGuarantorMySpace.CreatedWitoutCreditReport.Email);
+            InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+            Button.Click(IconShow);
+            Button.Click(CheckBoxRememberMe);
+            Button.Click(ButtonLogIn);
 
-        //    return this;
-        //}
+            return this;
+        }
 
-        //[AllureStep("EnterEmailPasswordAsGuarantor")]
-        //public LogInTenant EnterEmailPasswordAsGuarantor()
-        //{
-        //    WaitUntil.CustomElementIsVisible(FieldInputEmailAddress);
-        //    InputGeneral.InputFunctionWithClear(FieldInputEmailAddress, tenantGuarantor.EmailAddressTenant);
-        //    InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
-
-        //    return this;
-        //}
-
-        //[AllureStep("EnterEmailNewPassword")]
-        //public LogInTenant EnterEmailNewPassword()
-        //{
-        //    WaitUntil.CustomElementIsVisible(FieldInputEmailAddress);
-        //    InputGeneral.InputFunctionWithClear(FieldInputEmailAddress, tenantApplicant.EmailAddressTenant);
-        //    WaitUntil.WaitSomeInterval(500);
-        //    InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_NEW_GENEREAL);
-
-        //    return this;
-        //}
+        #endregion
     }
 }

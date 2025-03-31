@@ -14,7 +14,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         [AllureStep("GetFullEmail")]
         public string GetFullEmail()
         {
-            WaitUntil.WaitSomeInterval(100);
+            WaitUntil.CustomElementIsVisible(VlFromStringLeadEmail);
             string fullEmail = VlFromStringLeadEmail.Text;
 
             return fullEmail;

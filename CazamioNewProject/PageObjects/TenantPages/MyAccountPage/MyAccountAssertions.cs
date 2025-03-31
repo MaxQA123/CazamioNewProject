@@ -24,5 +24,14 @@ namespace CazamioNewProject.PageObjects.TenantPages.MyAccountPage
 
             return this;
         }
+
+        [AllureStep("VerifyApplicationIdNumberTenantGuarantor")]
+        public MyAccount VerifyApplicationIdNumberTenantGuarantor(string applicationIdFromAppLandlord, string appIdFromAppTenantOccupant)
+        {
+            Assert.AreEqual(applicationIdFromAppLandlord, appIdFromAppTenantOccupant);
+            Console.WriteLine($"AR:{applicationIdFromAppLandlord} ER: {appIdFromAppTenantOccupant} applicationId number");
+
+            return this;
+        }
     }
 }

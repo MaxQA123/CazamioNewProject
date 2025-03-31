@@ -8,7 +8,7 @@ namespace CazamioNewProject.PageObjects.TenantPages.LogInPage
     public partial class LogInTenant
     {
         TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
-        //TenantGuarantor tenantGuarantor = new TenantGuarantor().Generate();
+        TenantGuarantorMySpace tenantGuarantorMySpace = TenantGuarantorMySpace.Generate();
         TenantOccupantMySpace tenantOccupantMySpace = TenantOccupantMySpace.Generate();
 
         [AllureStep("ClickIconShow")]
