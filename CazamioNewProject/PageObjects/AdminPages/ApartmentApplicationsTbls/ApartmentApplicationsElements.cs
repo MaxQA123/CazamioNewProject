@@ -60,6 +60,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
             return Browser._Driver.FindElement(By.XPath(xpath));
         }
 
+        public IWebElement GetCloseNameBtnWithoutAgentFrstRw()
+        {
+            Application application = Application.Generate();
+
+            var xpath = "//application-list//table//tbody//tr//td[9]//cazamio-button//span[text() = '" + application.Buttons.Close + "']";
+
+            return Browser._Driver.FindElement(By.XPath(xpath));
+        }
+
         [FindsBy(How = How.XPath, Using = ("//app-applications//table//tbody//tr//td[10]//div[@class = 'btn-wrapper']//cazamio-button[@text = 'Close']"))]
         public IWebElement CloseNameBtnOfClmnStatusFrstRw;
 

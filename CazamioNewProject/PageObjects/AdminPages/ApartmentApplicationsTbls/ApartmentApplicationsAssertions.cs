@@ -56,7 +56,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
 
         [AllureStep("VerifyDataWitoutAgentByApplicationCreatedTenantMain")]
         public ApartmentApplicationsTbl VerifyDataWitoutAgentByApplicationCreatedTenantMain
-            (string getAddressBuildingViewActual, string apartmentAddressFromApp,
+            (string getAddressBuildingViewActual, string apartmentAddressFromAppAr,
             string fullNameTenantEx, string fullNameTenantMainApplicantFromAppArAc,
             string leasePriceFromUnit, string leasePriceFromApplication,
             string dateCurrentCreatedFromApplication, string dateCurrentCreatedExpectedResult,
@@ -64,12 +64,36 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
         {
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(getAddressBuildingViewActual, apartmentAddressFromApp);
+                Assert.AreEqual(getAddressBuildingViewActual, apartmentAddressFromAppAr);
                 Assert.AreEqual(fullNameTenantEx, fullNameTenantMainApplicantFromAppArAc);
                 Assert.AreEqual(leasePriceFromUnit, leasePriceFromApplication);
                 Assert.AreEqual(dateCurrentCreatedFromApplication, dateCurrentCreatedExpectedResult);
                 Assert.AreEqual(statusFromApplication, statusDraft);
                 //Assert.IsTrue(ButtonName.IsVisible(CloseNameBtnOfClmnStatusFrstRw));
+            });
+
+            return this;
+        }
+
+        [AllureStep("VerifyDataWitoutAgentByApplicationCreatedTenantMainOccupant")]
+        public ApartmentApplicationsTbl VerifyDataWitoutAgentByApplicationCreatedTenantMainOccupant
+            (string getShortBuildingAddressEr, string getAddressBuildingViewAr,
+            string fullNameTenantMainEx, string fullNameTenantMainApplicantFromAppArAc,
+            string fullNameOccupantEx, string fullNameOccupantFromAppAr,
+            string leasePriceFromUnit, string leasePriceFromApplication,
+            string dateCurrentCreatedFromApplication, string dateCurrentCreatedExpectedResult,
+            string statusFromApplication, string statusDraft,
+            string closeBtnNameEr, string closeBtnNameFromApp)
+        {
+            Assert.Multiple(() =>
+            {
+                Assert.AreEqual(getShortBuildingAddressEr, getAddressBuildingViewAr);
+                Assert.AreEqual(fullNameTenantMainEx, fullNameTenantMainApplicantFromAppArAc);
+                Assert.AreEqual(fullNameOccupantEx, fullNameOccupantFromAppAr);
+                Assert.AreEqual(leasePriceFromUnit, leasePriceFromApplication);
+                Assert.AreEqual(dateCurrentCreatedFromApplication, dateCurrentCreatedExpectedResult);
+                Assert.AreEqual(statusFromApplication, statusDraft);
+                Assert.AreEqual(closeBtnNameEr, closeBtnNameFromApp);
             });
 
             return this;
