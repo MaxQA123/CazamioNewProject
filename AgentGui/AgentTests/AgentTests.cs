@@ -208,7 +208,6 @@ namespace AgentGuiTests
             Application application = Application.Generate();
             TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
             TenantOccupantMySpace tenantOccupantMySpace = TenantOccupantMySpace.Generate();
-            TenantGuarantorMySpace tenantGuarantorMySpace = TenantGuarantorMySpace.Generate();
 
             #endregion
 
@@ -286,37 +285,45 @@ namespace AgentGuiTests
                 .VerifyDataWitoutAgentByApplicationCreatedTenantMainOccupant
                 (apartment.BuildingShortAddress.OneWashingtonSquare, apartmentAddressFromApp,
                 tenantCreatorMySpace.CreatedWithoutCreditReport.ConstantFirstLastName, fullNameTenantMainApplicantFromAppAr,
-                tenantOccupantMySpace.CreatedWitoutCreditReport.ConstantFirstLastName, fullNameTenantOccupantFromAppAr,
+                tenantOccupantMySpace.CreatedWithoutCreditReport.ConstantFirstLastName, fullNameTenantOccupantFromAppAr,
                 application.LeasePrice.FirstPriceStatic, leasePriceFromApp,
                 application.BasicData.DateCurrent, dateCreatedFromApp,
                 application.Statuses.Draft, statusFromApp,
                 application.Buttons.Close, closeBtnNameFromApp);
 
-            //Pages.JScriptExecutor
-            //  .OpenNewTabHomePageTenant();
-            //Pages.LogInTenant
-            //    .LogInAsCreatorWithoutCreditReportMySpace();
-            //Pages.HeaderTenants
-            //    .ClickButtonMyApplications();
+            Pages.JScriptExecutor
+              .OpenNewTabHomePageTenant();
+            Pages.LogInTenant
+                .LogInAsCreatorWithoutCreditReportMySpace();
+            Pages.HeaderTenants
+                .ClickButtonMyApplications();
 
-            //string appIdFromAppTenantCreator = Pages.MyAccount.GetApplicationId();
+            string appIdFromAppTenantCreator = Pages.MyAccount.GetApplicationId();
 
-            //Pages.MyAccount
-            //    .VerifyApplicationIdNumberTenantCreator(applicationIdFromAppLandlord, appIdFromAppTenantCreator);
-            //Pages.HeaderTenants
-            //    .LogOut();
-            //Pages.JScriptExecutor
-            //  .OpenNewTabHomePageTenant();
-            //SelectThirdTabBrowser.Open();
-            //Pages.LogInTenant
-            //    .LogInAsGuarantorWithoutCreditReportMySpace();
-            //Pages.HeaderTenants
-            //    .ClickButtonMyApplications();
+            Pages.MyAccount
+                .VerifyApplicationIdNumberTenantCreator(applicationIdFromAppLandlord, appIdFromAppTenantCreator);
+            Pages.HeaderTenants
+                .LogOut();
+            Pages.LogInTenant
+                .LogInAsOccupantWithoutCreditReportMySpace();
+            Pages.HeaderTenants
+                .ClickButtonMyApplications();
 
-            //string appIdFromAppTenantOccupant = Pages.MyAccount.GetApplicationId();
+            string appIdFromAppTenantOccupant = Pages.MyAccount.GetApplicationId();
 
-            //Pages.MyAccount
-            //    .VerifyApplicationIdNumberTenantGuarantor(applicationIdFromAppLandlord, appIdFromAppTenantOccupant);
+            Pages.MyAccount
+                .VerifyApplicationIdNumberTenantOccupant(applicationIdFromAppLandlord, appIdFromAppTenantOccupant);
+            Pages.HeaderTenants
+                .LogOut();
+            Pages.LogInTenant
+                .LogInAsGuarantorWithCreditReportMySpace();
+            Pages.HeaderTenants
+                .ClickButtonMyApplications();
+
+            string appIdFromAppTenantGuarantor = Pages.MyAccount.GetApplicationId();
+
+            Pages.MyAccount
+                .VerifyApplicationIdNumberTenantGuarantor(applicationIdFromAppLandlord, appIdFromAppTenantGuarantor);
 
             WaitUntil.WaitSomeInterval(5000);
 

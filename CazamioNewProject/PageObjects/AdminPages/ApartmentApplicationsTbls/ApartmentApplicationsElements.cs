@@ -55,7 +55,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
         {
             Application application = Application.Generate();
 
-            var xpath = "//application-list//table//tbody//tr//td[10]//cazamio-button//span[text() = '" + application.Buttons.Close + "']";
+            var xpath = "//app-applications//table//tbody//tr//td[10]//cazamio-button//span[text() = '" + application.Buttons.Close + "']";
 
             return Browser._Driver.FindElement(By.XPath(xpath));
         }
@@ -64,7 +64,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
         {
             Application application = Application.Generate();
 
-            var xpath = "//application-list//table//tbody//tr//td[9]//cazamio-button//span[text() = '" + application.Buttons.Close + "']";
+            var xpath = "//app-applications//table//tbody//tr//td[9]//cazamio-button//span[text() = '" + application.Buttons.Close + "']";
 
             return Browser._Driver.FindElement(By.XPath(xpath));
         }

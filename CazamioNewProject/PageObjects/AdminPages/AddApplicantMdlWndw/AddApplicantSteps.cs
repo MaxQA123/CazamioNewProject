@@ -25,7 +25,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw
         {
             VerifyTitleAddApplicantMdlWndw();
             WaitUntil.CustomElementIsVisible(FirstFieldInputEmailAddress);
-            InputGeneral.InputFunctionWithClear(FirstFieldInputEmailAddress, tenantOccupantMySpace.CreatedWitoutCreditReport.Email);
+            InputGeneral.InputFunctionWithClear(FirstFieldInputEmailAddress, tenantOccupantMySpace.CreatedWithoutCreditReport.Email);
             Button.Click(BtnPlusAddAnotherApplicant);
             WaitUntil.CustomElementIsClickable(SecondFieldInputEmailAddress);
             InputGeneral.InputFunctionWithClear(SecondFieldInputEmailAddress, tenantGuarantorMySpace.CreatedWithCreditReport.Email);
@@ -50,7 +50,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw
         {
             VerifyTitleAddApplicantMdlWndw();
             WaitUntil.CustomElementIsVisible(FirstFieldInputEmailAddress);
-            InputGeneral.InputFunctionWithClear(FirstFieldInputEmailAddress, tenantOccupantMySpace.CreatedWitoutCreditReport.Email);
+            InputGeneral.InputFunctionWithClear(FirstFieldInputEmailAddress, tenantOccupantMySpace.CreatedWithoutCreditReport.Email);
 
             return this;
         }

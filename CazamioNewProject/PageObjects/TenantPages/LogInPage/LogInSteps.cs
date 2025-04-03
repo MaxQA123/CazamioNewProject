@@ -39,6 +39,22 @@ namespace CazamioNewProject.PageObjects.TenantPages.LogInPage
             return this;
         }
 
+        [AllureStep("LogInAsOccupantWithoutCreditReportMySpace")]
+        public LogInTenant LogInAsOccupantWithoutCreditReportMySpace()
+        {
+            Pages.HeaderTenants
+               .ClickButtonLogIn();
+            WaitUntil.CustomElementIsVisible(FieldInputEmailAddress);
+            WaitUntil.CustomElementIsClickable(FieldInputEmailAddress);
+            InputGeneral.InputFunctionWithClear(FieldInputEmailAddress, tenantOccupantMySpace.CreatedWithoutCreditReport.Email);
+            InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+            Button.Click(IconShow);
+            Button.Click(CheckBoxRememberMe);
+            Button.Click(ButtonLogIn);
+
+            return this;
+        }
+
         [AllureStep("LogInAsOccupantWithCreditReportMySpace")]
         public LogInTenant LogInAsOccupantWithCreditReportMySpace()
         {
@@ -63,6 +79,22 @@ namespace CazamioNewProject.PageObjects.TenantPages.LogInPage
             WaitUntil.CustomElementIsVisible(FieldInputEmailAddress);
             WaitUntil.CustomElementIsClickable(FieldInputEmailAddress);
             InputGeneral.InputFunctionWithClear(FieldInputEmailAddress, tenantGuarantorMySpace.CreatedWitoutCreditReport.Email);
+            InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+            Button.Click(IconShow);
+            Button.Click(CheckBoxRememberMe);
+            Button.Click(ButtonLogIn);
+
+            return this;
+        }
+
+        [AllureStep("LogInAsGuarantorWithCreditReportMySpace")]
+        public LogInTenant LogInAsGuarantorWithCreditReportMySpace()
+        {
+            Pages.HeaderTenants
+               .ClickButtonLogIn();
+            WaitUntil.CustomElementIsVisible(FieldInputEmailAddress);
+            WaitUntil.CustomElementIsClickable(FieldInputEmailAddress);
+            InputGeneral.InputFunctionWithClear(FieldInputEmailAddress, tenantGuarantorMySpace.CreatedWithCreditReport.Email);
             InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
             Button.Click(IconShow);
             Button.Click(CheckBoxRememberMe);
