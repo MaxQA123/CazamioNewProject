@@ -9,6 +9,7 @@ namespace CazamioNewProject.Objects
         public CrownStInfo CrownSt { get; set; }
         public AlbermaleRdInfo AlbermaleRd { get; set; }
         public East51stStreetPedestrianCrossingInfo East51stStreetPedestrianCrossing { get; set; }
+        public GatesAvenueInfo GatesAvenue { get; set; }
         public CommonApiDataInfo CommonApiData { get; set; }
         public DescriptionsInternalNotesInfo DescriptionsInternalNotes { get; set; }
         public MySpaceAmountPaymentsInfo MySpaceAmountPayments { get; set; }
@@ -26,6 +27,7 @@ namespace CazamioNewProject.Objects
                 CrownSt = CreateCrownStInfo(),
                 AlbermaleRd = CreateAlbermaleRdInfo(),
                 East51stStreetPedestrianCrossing = CreateEast51stStreetPedestrianCrossingInfo(),
+                GatesAvenue = CreateGatesAvenueInfo(),
                 CommonApiData = CreateCommonApiDataInfo(),
                 DescriptionsInternalNotes = CreateDescriptionsInternalNotesInfo(),
                 MySpaceAmountPayments = CreateMySpaceAmountPaymentsInfo(),
@@ -112,12 +114,28 @@ namespace CazamioNewProject.Objects
             public string LlcName { get; set; }
         }
 
+        public class GatesAvenueInfo
+        {
+            public string NumberRandomNameAddressStatic { get; set; }
+            public string NumberNameAddressStatic { get; set; }
+            public string NumberNameAddress { get; set; }
+            public string NumberAddress { get; set; }
+            public string AddressName { get; set; }
+            public string City { get; set; }
+            public string State { get; set; }
+            public string Zip { get; set; }
+            public string Neighborhood { get; set; }
+            public string BuildingName { get; set; }
+            public string LlcName { get; set; }
+        }
+
         public class CommonApiDataInfo
         {
             public long BuildingId { get; set; }
             public string CountryUnitedStates { get; set; }
             public string StreetRandom { get; set; }
             public string CityNewYork { get; set; }
+            public string CityBrooklyn { get; set; }
             public string StateNy { get; set; }
             public string ZipCode { get; set; }
             public string EmptyString { get; set; }
@@ -285,6 +303,27 @@ namespace CazamioNewProject.Objects
             };
         }
 
+        private static GatesAvenueInfo CreateGatesAvenueInfo()
+        {
+            return new GatesAvenueInfo
+            {
+                NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(1) + " " + "Gates Avenue",
+                NumberNameAddressStatic = "12867 Gates Avenue",
+                //NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(5) + " " + "Gates Avenue",
+                NumberNameAddress = "12867 Gates Avenue",
+                NumberAddress = "12867",
+                //NumberAddress = GenerateRandomData.RandomNumberWithoutZero(5),
+                AddressName = "Gates Avenue",
+                City = "Brooklyn",
+                State = "NY",
+                Zip = "11221",
+                Neighborhood = "Stuyvesant Heights",
+                BuildingName = "QA-Building Name AGENT 12867 Gates Avenue (12345) (*&^%)",
+                //BuildingName = "QA-Building Name AGENT Random Gates Avenue (12345) (*&^%)",
+                LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
+            };
+        }
+
         private static CommonApiDataInfo CreateCommonApiDataInfo()
         {
             return new CommonApiDataInfo
@@ -293,6 +332,7 @@ namespace CazamioNewProject.Objects
                 CountryUnitedStates = "United States",
                 StreetRandom = GenerateRandomData.RandomNumberWithoutZero(4) + " " + GenerateRandomData.GetRandomStreet(),
                 CityNewYork = "New York",
+                CityBrooklyn = "Brooklyn",
                 StateNy = "NY",
                 ZipCode = "10022",
                 EmptyString = "",

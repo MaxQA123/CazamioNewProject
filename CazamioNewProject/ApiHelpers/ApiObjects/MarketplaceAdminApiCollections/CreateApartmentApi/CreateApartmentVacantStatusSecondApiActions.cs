@@ -13,7 +13,7 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
         {
             //1 Washington square
             // Get BuildingId from BD
-            var buildingIdResult = BuildingsDbRequests.Buildings.GetBuildingIdOneWashingtonSquare();
+            var buildingIdResult = BuildingsDbRequests.Buildings.GetBuildingIdGatesAvenue();
             long buildingId = buildingIdResult.AddressId;
 
             var payload = new RequestCreateApartmentMandatoryData

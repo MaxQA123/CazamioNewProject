@@ -99,11 +99,11 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             return this;
         }
 
-        [AllureStep("EnterOneWashingtonSquareAddress")]
-        public CreateApplicationMdlWndw EnterOneWashingtonSquareAddress()
+        [AllureStep("EnterOneTwoEightSixSevenGatesAvenueAddress")]
+        public CreateApplicationMdlWndw EnterOneTwoEightSixSevenGatesAvenueAddress()
         {
             WaitUntil.CustomElementIsVisible(UnitAddressButton);
-            InputGeneral.InputFunctionWithClear(UnitAddressFieldInput, apartment.BuildingShortAddress.OneWashingtonSquare);
+            InputGeneral.InputFunctionWithClear(UnitAddressFieldInput, apartment.BuildingShortAddress.OneTwoEightSixSevenGatesAvenue);
 
             return this;
         }

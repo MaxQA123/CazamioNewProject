@@ -39,6 +39,7 @@ namespace CazamioNewProject.Objects
             public string ThirtyDashTrirtyNineCrownSt { get; set; }
             public string NineAAAlbermaleRd { get; set; }
             public string OneOneOneAEastFiftyOneStStreetPedestrianCrossing { get; set; }
+            public string OneTwoEightSixSevenGatesAvenue { get; set; }
         }
 
         public class UnitBasicDataInfo
@@ -190,6 +191,7 @@ namespace CazamioNewProject.Objects
                 ThirtyDashTrirtyNineCrownSt = "30-39 Crown St",
                 NineAAAlbermaleRd = "9A Albermale Rd",
                 OneOneOneAEastFiftyOneStStreetPedestrianCrossing = "111A East 51st Street Pedestrian Crossing",
+                OneTwoEightSixSevenGatesAvenue = "12867 Gates Avenue",
             };
         }
 

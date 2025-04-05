@@ -123,14 +123,14 @@ namespace CazamioNewProject.DbHelpers.BuildingsTable
                 return row;
             }
 
-            public static BuildingsDbModels GetBuildingIdOneWashingtonSquare()
+            public static BuildingsDbModels GetBuildingIdGatesAvenue()
             {
                 var row = new BuildingsDbModels();
 
                 string query = "SELECT Id" +
                        " FROM Buildings" +
                        " WHERE MarketplaceId = '15' AND AddressId IN" +
-                       " (SELECT TOP 1 Id FROM Addresses WHERE Street = '1 Washington square' ORDER BY Id DESC)";
+                       " (SELECT TOP 1 Id FROM Addresses WHERE Street = '12867 Gates Avenue' ORDER BY Id DESC)";
                 try
                 {
                     using SqlConnection connection = new(ConnectionDb.GET_CONNECTION_STRING_TO_DB);

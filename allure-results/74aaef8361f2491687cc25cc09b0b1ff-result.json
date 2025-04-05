@@ -1,0 +1,819 @@
+{
+  "uuid": "e45c9d0d-00a8-42ff-a137-4dca69d9bf46-tr-0-1005",
+  "historyId": "AgentGuiTests.TestsBaseGui.CreateApplicationForApartmenVacantScnd",
+  "fullName": "AgentGuiTests.TestsBaseGui.CreateApplicationForApartmenVacantScnd",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AgentGuiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateApplicationForApartmenVacantScnd"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Agent"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateApplicationForApartmenVacantFst"
+    }
+  ],
+  "links": [],
+  "name": "CreateApplicationForApartmenVacantScnd",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected string length 19 but was 18. Strings differ at index 1.\r\n  Expected: \"1 Washington Square\"\r\n  But was:  \"12867 Gates Avenue\"\r\n  ------------^\r\n",
+    "trace": "   at CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls.ApartmentApplicationsTbl.__a$_around_VerifyDataWitoutAgentByApplicationCreatedTenantMainOccupant_100663885_o(String getShortBuildingAddressEr, String getAddressBuildingViewAr, String fullNameTenantMainEx, String fullNameTenantMainApplicantFromAppArAc, String fullNameOccupantEx, String fullNameOccupantFromAppAr, String leasePriceFromUnit, String leasePriceFromApplication, String dateCurrentCreatedFromApplication, String dateCurrentCreatedExpectedResult, String statusFromApplication, String statusDraft, String closeBtnNameEr, String closeBtnNameFromApp) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApartmentApplicationsTbls\\ApartmentApplicationsAssertions.cs:line 88\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls.ApartmentApplicationsTbl.__a$_around_VerifyDataWitoutAgentByApplicationCreatedTenantMainOccupant_100663885_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls.ApartmentApplicationsTbl.__a$_around_VerifyDataWitoutAgentByApplicationCreatedTenantMainOccupant_100663885_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls.ApartmentApplicationsTbl.VerifyDataWitoutAgentByApplicationCreatedTenantMainOccupant(String getShortBuildingAddressEr, String getAddressBuildingViewAr, String fullNameTenantMainEx, String fullNameTenantMainApplicantFromAppArAc, String fullNameOccupantEx, String fullNameOccupantFromAppAr, String leasePriceFromUnit, String leasePriceFromApplication, String dateCurrentCreatedFromApplication, String dateCurrentCreatedExpectedResult, String statusFromApplication, String statusDraft, String closeBtnNameEr, String closeBtnNameFromApp)\r\n   at AgentGuiTests.TestsBaseGui.CreateApplicationForApartmenVacantScnd() in C:\\Automation\\CazamioNewProject\\AgentGui\\AgentTests\\AgentTests.cs:line 319\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateApplicationForApartmenVacantScnd",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected string length 19 but was 18. Strings differ at index 1.\r\n  Expected: \"1 Washington Square\"\r\n  But was:  \"12867 Gates Avenue\"\r\n  ------------^\r\n",
+        "trace": "   at CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls.ApartmentApplicationsTbl.__a$_around_VerifyDataWitoutAgentByApplicationCreatedTenantMainOccupant_100663885_o(String getShortBuildingAddressEr, String getAddressBuildingViewAr, String fullNameTenantMainEx, String fullNameTenantMainApplicantFromAppArAc, String fullNameOccupantEx, String fullNameOccupantFromAppAr, String leasePriceFromUnit, String leasePriceFromApplication, String dateCurrentCreatedFromApplication, String dateCurrentCreatedExpectedResult, String statusFromApplication, String statusDraft, String closeBtnNameEr, String closeBtnNameFromApp) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApartmentApplicationsTbls\\ApartmentApplicationsAssertions.cs:line 88\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls.ApartmentApplicationsTbl.__a$_around_VerifyDataWitoutAgentByApplicationCreatedTenantMainOccupant_100663885_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls.ApartmentApplicationsTbl.__a$_around_VerifyDataWitoutAgentByApplicationCreatedTenantMainOccupant_100663885_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls.ApartmentApplicationsTbl.VerifyDataWitoutAgentByApplicationCreatedTenantMainOccupant(String getShortBuildingAddressEr, String getAddressBuildingViewAr, String fullNameTenantMainEx, String fullNameTenantMainApplicantFromAppArAc, String fullNameOccupantEx, String fullNameOccupantFromAppAr, String leasePriceFromUnit, String leasePriceFromApplication, String dateCurrentCreatedFromApplication, String dateCurrentCreatedExpectedResult, String statusFromApplication, String statusDraft, String closeBtnNameEr, String closeBtnNameFromApp)\r\n   at AgentGuiTests.TestsBaseGui.CreateApplicationForApartmenVacantScnd() in C:\\Automation\\CazamioNewProject\\AgentGui\\AgentTests\\AgentTests.cs:line 319\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "VerifyUserData",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "ResponseLogInApiMarketplaceAdmin",
+              "value": "CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin.ResponseLogInApiMarketplaceAdmin"
+            },
+            {
+              "name": "MarketplaceAdmin",
+              "value": "CazamioNewProject.Objects.MarketplaceAdmin"
+            }
+          ],
+          "start": 1743840335928,
+          "stop": 1743840335951
+        },
+        {
+          "name": "LogInAsAgentMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743840339876,
+              "stop": 1743840341690
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743840341706,
+              "stop": 1743840341947
+            },
+            {
+              "name": "VerifyAgentUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Lula AgentQA"
+                },
+                {
+                  "name": "String",
+                  "value": "Agent"
+                }
+              ],
+              "start": 1743840341964,
+              "stop": 1743840343014
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840336993,
+          "stop": 1743840343014
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840343025,
+          "stop": 1743840349161
+        },
+        {
+          "name": "SearchOneTwoEightSixSevenGatesAvenue",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840349191,
+          "stop": 1743840359971
+        },
+        {
+          "name": "SelectOneTwoEightSixSevenGatesAvenue",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840359972,
+          "stop": 1743840363829
+        },
+        {
+          "name": "VerifyTitleBuildingViewPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840363840,
+          "stop": 1743840368515
+        },
+        {
+          "name": "GetValueOfStringAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840368516,
+          "stop": 1743840370577
+        },
+        {
+          "name": "VerifyBuildingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "12867 Gates Avenue"
+            },
+            {
+              "name": "String",
+              "value": "12867 Gates Avenue"
+            }
+          ],
+          "start": 1743840370578,
+          "stop": 1743840373614
+        },
+        {
+          "name": "ClickTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840373616,
+          "stop": 1743840375423
+        },
+        {
+          "name": "GetSubjectWithoutAgentAlbermaleRd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetVlOfClmnUnitFrstRw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743840376461,
+              "stop": 1743840376521
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840375450,
+          "stop": 1743840376525
+        },
+        {
+          "name": "ClickRowByVacant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840376526,
+          "stop": 1743840376855
+        },
+        {
+          "name": "PassFirstStepCreatorWithoutCreditReportMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickButtonPlusApplication",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743840376862,
+              "stop": 1743840379749
+            },
+            {
+              "name": "VerifyTitleCreateApplication",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743840379752,
+              "stop": 1743840379823
+            },
+            {
+              "name": "EnterEmailCreatedTenantCreatorWithoutCreditReportMySpace",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743840379824,
+              "stop": 1743840380605
+            },
+            {
+              "name": "ClickButtonNext",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743840380606,
+              "stop": 1743840383288
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840376860,
+          "stop": 1743840383288
+        },
+        {
+          "name": "GetFullEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840383290,
+          "stop": 1743840384155
+        },
+        {
+          "name": "VerifyEmailTenantCreatorWithoutCreditReport",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "main-appl-1myspace@putsbox.com"
+            }
+          ],
+          "start": 1743840384157,
+          "stop": 1743840384157
+        },
+        {
+          "name": "PassThirdStepGatesAvenueAddressScndFlow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickButtonDropDownYearMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743840387293,
+              "stop": 1743840388068
+            },
+            {
+              "name": "SelectCurrentYear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743840388068,
+              "stop": 1743840389266
+            },
+            {
+              "name": "SelectNextMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743840389267,
+              "stop": 1743840390455
+            },
+            {
+              "name": "SelectFisrtDayInNextMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743840390456,
+              "stop": 1743840391637
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840384158,
+          "stop": 1743840402325
+        },
+        {
+          "name": "VerifyTitleApplicationSuccessfullyCreated",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840402326,
+          "stop": 1743840403252
+        },
+        {
+          "name": "VerifyTextLinkAlreadyCopied",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840403253,
+          "stop": 1743840403296
+        },
+        {
+          "name": "ClickButtonAddApplicant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840403296,
+          "stop": 1743840403972
+        },
+        {
+          "name": "AddOnCreatedOccupantWithoutCrdtRprtGuarantorWithCrdtRprt",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyTitleAddApplicantMdlWndw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743840403982,
+              "stop": 1743840404035
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840403982,
+          "stop": 1743840416913
+        },
+        {
+          "name": "ClickBtnAdd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifMessageAddedApplicantsToApplication",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1743840418636,
+              "stop": 1743840426061
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840416914,
+          "stop": 1743840426061
+        },
+        {
+          "name": "ClickTabApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840426064,
+          "stop": 1743840426777
+        },
+        {
+          "name": "GetApplicationIdFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840426779,
+          "stop": 1743840426850
+        },
+        {
+          "name": "GetApartmentAddressFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840426852,
+          "stop": 1743840426913
+        },
+        {
+          "name": "GetFullNameTenantMainApplicantFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840426914,
+          "stop": 1743840426966
+        },
+        {
+          "name": "GetFirstLastNameTenantOccupantFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840426967,
+          "stop": 1743840427013
+        },
+        {
+          "name": "GetPriceFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840427014,
+          "stop": 1743840427059
+        },
+        {
+          "name": "GetDateCreatedFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1743840427060,
+          "stop": 1743840427607
+        },
+        {
+          "name": "VerifyDataWitoutAgentByApplicationCreatedTenantMainOccupant",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  Expected string length 19 but was 18. Strings differ at index 1.\r\n  Expected: \"1 Washington Square\"\r\n  But was:  \"12867 Gates Avenue\"\r\n  ------------^\r\n",
+            "trace": "   at NUnit.Framework.Assert.Multiple(TestDelegate testDelegate)\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls.ApartmentApplicationsTbl.__a$_around_VerifyDataWitoutAgentByApplicationCreatedTenantMainOccupant_100663885_o(String getShortBuildingAddressEr, String getAddressBuildingViewAr, String fullNameTenantMainEx, String fullNameTenantMainApplicantFromAppArAc, String fullNameOccupantEx, String fullNameOccupantFromAppAr, String leasePriceFromUnit, String leasePriceFromApplication, String dateCurrentCreatedFromApplication, String dateCurrentCreatedExpectedResult, String statusFromApplication, String statusDraft, String closeBtnNameEr, String closeBtnNameFromApp) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApartmentApplicationsTbls\\ApartmentApplicationsAssertions.cs:line 88\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls.ApartmentApplicationsTbl.__a$_around_VerifyDataWitoutAgentByApplicationCreatedTenantMainOccupant_100663885_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "1 Washington Square"
+            },
+            {
+              "name": "String",
+              "value": "12867 Gates Avenue"
+            },
+            {
+              "name": "String",
+              "value": "MainApplMySpace-WithoutCR JoeMainMyspaceQA"
+            },
+            {
+              "name": "String",
+              "value": "MainApplMySpace-WithoutCR JoeMainMyspaceQA"
+            },
+            {
+              "name": "String",
+              "value": "OccupMySpace-WithoutCR KaraOcupMyspaceQA"
+            },
+            {
+              "name": "String",
+              "value": "OccupMySpace-WithoutCR KaraOcupMyspaceQA"
+            },
+            {
+              "name": "String",
+              "value": "$900"
+            },
+            {
+              "name": "String",
+              "value": "$900"
+            },
+            {
+              "name": "String",
+              "value": "04/05/2025"
+            },
+            {
+              "name": "String",
+              "value": "04/05/2025"
+            },
+            {
+              "name": "String",
+              "value": "Draft"
+            },
+            {
+              "name": "String",
+              "value": "Draft"
+            },
+            {
+              "name": "String",
+              "value": "Close"
+            },
+            {
+              "name": "String",
+              "value": "Close"
+            }
+          ],
+          "start": 1743840427668,
+          "stop": 1743840427811
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "a10664214f324b0aa0df45bf7c4eb60b-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1743840325893,
+      "stop": 1743840430832
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1743840325892,
+  "stop": 1743840430842
+}

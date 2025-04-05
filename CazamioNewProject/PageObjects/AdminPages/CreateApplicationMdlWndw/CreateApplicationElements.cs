@@ -105,6 +105,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         [FindsBy(How = How.XPath, Using = ("//app-prepare-application//mat-checkbox[@id='is-referral']//input[@id = 'is-referral-input']"))]
         public IWebElement CheckTheBoxReferralAgent;
 
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//div[@class='add-fields-text' and contains(., 'Concession')]//span[normalize-space(text())='+ Add']"))]
+        public IWebElement ButtonPlusAddConcession;
+
         #endregion
 
         #region Fourth step with adding the applicants to an application

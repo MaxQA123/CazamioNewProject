@@ -8,6 +8,7 @@ namespace CazamioNewProject.Objects
         public BasicDataInfo BasicData { get; set; }
         public RequestedOfferPriceInfo RequestedOfferPrice { get; set; }
         public LeasePriceInfo LeasePrice { get; set; }
+        public SecurityDepositInfo SecurityDeposit { get; set; }
         public MonthsFreeInfo MonthsFree { get; set; }
         public MonthlyRentsPrePaymentInfo MonthlyRentsPrePayment { get; set; }
         public RentalTermsInfo RentalTerms { get; set; }
@@ -23,6 +24,7 @@ namespace CazamioNewProject.Objects
                 BasicData = CreateBasicDataInfo(),
                 RequestedOfferPrice = CreateRequestedOfferPriceInfo(),
                 LeasePrice = CreateLeasePriceInfo(),
+                SecurityDeposit = CreateSecurityDepositInfo(),
                 MonthsFree = CreateMonthsFreeInfo(),
                 MonthlyRentsPrePayment = CreateMonthlyRentsPrePaymentInfo(),
                 RentalTerms = CreateRentalTermsInfo(),
@@ -43,6 +45,8 @@ namespace CazamioNewProject.Objects
         {
             public string FirstPriceStatic { get; set; }
             public string SecondPriceStatic { get; set; }
+            public string ThirdPriceStatic { get; set; }
+            public string FourthPriceStatic { get; set; }
         }
 
         public class LeasePriceInfo
@@ -50,6 +54,15 @@ namespace CazamioNewProject.Objects
             public string FirstPriceStatic { get; set; }
             public string SecondPriceStatic { get; set; }
             public string ThirdPriceStatic { get; set; }
+            public string FourthPriceStatic { get; set; }
+        }
+
+        public class SecurityDepositInfo
+        {
+            public string FirstPriceStatic { get; set; }
+            public string SecondPriceStatic { get; set; }
+            public string ThirdPriceStatic { get; set; }
+            public string FourthPriceStatic { get; set; }
         }
 
         public class MonthsFreeInfo
@@ -66,7 +79,9 @@ namespace CazamioNewProject.Objects
 
         public class RentalTermsInfo
         {
-            public string TwelveMonth { get; set; }
+            public string TwentyFourMonths { get; set; }
+            public string TwelveMonths { get; set; }
+            public string NineMonths { get; set; }
             public string TwoYears { get; set; }
         }
 
@@ -75,6 +90,8 @@ namespace CazamioNewProject.Objects
             public string LongTextWashingtonSquare { get; set; }
             public string ShortTextWashingtonSquare { get; set; }
             public string ShortTextEastStreet { get; set; }
+            public string ShortTextGatesAvenue { get; set; }
+            public string LongTextGatesAvenue { get; set; }
         }
 
         public class ReferralDetailsInfo
@@ -82,6 +99,8 @@ namespace CazamioNewProject.Objects
             public string LongTextWashingtonSquare { get; set; }
             public string ShortTextWashingtonSquare { get; set; }
             public string ShortTextEastStreet { get; set; }
+            public string ShortTextGatesAvenue { get; set; }
+            public string LongTextGatesAvenue { get; set; }
         }
 
         public class StatusesInfo
@@ -113,6 +132,8 @@ namespace CazamioNewProject.Objects
             {
                 FirstPriceStatic = "1200",
                 SecondPriceStatic = "2500",
+                ThirdPriceStatic = "16000",
+                FourthPriceStatic = "900",
             };
         }
 
@@ -122,7 +143,19 @@ namespace CazamioNewProject.Objects
             {
                 FirstPriceStatic = "$2500",
                 SecondPriceStatic = "$1555",
-                ThirdPriceStatic = "$10333",
+                ThirdPriceStatic = "$16333",
+                FourthPriceStatic = "$900",
+            };
+        }
+
+        private static SecurityDepositInfo CreateSecurityDepositInfo()
+        {
+            return new SecurityDepositInfo
+            {
+                FirstPriceStatic = "",
+                SecondPriceStatic = "",
+                ThirdPriceStatic = "32000",
+                FourthPriceStatic = "1800",
             };
         }
 
@@ -148,7 +181,9 @@ namespace CazamioNewProject.Objects
         {
             return new RentalTermsInfo
             {
-                TwelveMonth = "12",
+                TwentyFourMonths = "24",
+                TwelveMonths = "12",
+                NineMonths = "9",
                 TwoYears = "2",
             };
         }
@@ -159,7 +194,9 @@ namespace CazamioNewProject.Objects
             {
                 LongTextWashingtonSquare = "Lorem 1 Washington Square Requested Work. Lorem ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit.",
                 ShortTextWashingtonSquare = "Lorem 1 Washington Square Requested Work.",
-                ShortTextEastStreet = "Lorem 111A East 51st Street Referral Details.",
+                ShortTextEastStreet = "Lorem 111A East 51st Street Reqeusted work.",
+                ShortTextGatesAvenue = "Lorem 12867 Gates Avenue Reqeusted work.",
+                LongTextGatesAvenue = "Lorem 12867 Gates Avenue Reqeusted work. Lorem ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit.",
             };
         }
 
@@ -170,6 +207,8 @@ namespace CazamioNewProject.Objects
                 LongTextWashingtonSquare = "Lorem 1 Washington Square Referral Details. Lorem ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit.",
                 ShortTextWashingtonSquare = "Lorem 1 Washington Square Referral Details.",
                 ShortTextEastStreet = "Lorem 111A East 51st Street Referral Details.",
+                ShortTextGatesAvenue = "Lorem 12867 Gates Avenue Referral Details.",
+                LongTextGatesAvenue = "Lorem 12867 Gates Avenue Referral Details. Lorem ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit.",
             };
         }
 

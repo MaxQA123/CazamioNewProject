@@ -13,7 +13,7 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
         {
             //1 Washington square
             // Get BuildingId from BD
-            var buildingIdResult = BuildingsDbRequests.Buildings.GetBuildingIdOneWashingtonSquare();
+            var buildingIdResult = BuildingsDbRequests.Buildings.GetBuildingIdGatesAvenue();
             long buildingId = buildingIdResult.AddressId;
 
             var payload = new RequestCreateApartmentMandatoryData
@@ -23,9 +23,9 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
                     new Apartment
                     {
                         Unit = GenerateRandomData.RandomNumberWithoutZero(4),
-                        LeasePrice = 2500,
-                        PaidMonths = 3,
-                        DepositPrice = 5000,
+                        LeasePrice = 15333,
+                        PaidMonths = 1,
+                        DepositPrice = 30000,
                         BrokerFeeRequired = false,
                         BedroomQuantity = 3,
                         BathroomQuantity = 2,

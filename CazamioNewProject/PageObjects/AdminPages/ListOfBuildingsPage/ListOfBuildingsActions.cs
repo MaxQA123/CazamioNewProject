@@ -85,6 +85,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
             return this;
         }
 
+        [AllureStep("SearchOneTwoEightSixSevenGatesAvenue")]
+        public ListOfBuildings SearchOneTwoEightSixSevenGatesAvenue()
+        {
+            WaitUntil.CustomElementIsVisible(LoaderHidden, 10);
+            WaitUntil.WaitSomeInterval(10000);
+            WaitUntil.CustomElementIsVisible(FieldInputSearch);
+            WaitUntil.CustomElementIsClickable(FieldInputSearch);
+            InputGeneral.InputFunctionWithClear(FieldInputSearch, apartment.BuildingShortAddress.OneTwoEightSixSevenGatesAvenue);
+
+            return this;
+        }
+
         [AllureStep("SelectItemFirst")]
         public ListOfBuildings SelectItemFirst()
         {
@@ -103,6 +115,17 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
             WaitUntil.CustomElementIsVisible(ItemOneWashingtonSquare);
             WaitUntil.CustomElementIsClickable(ItemOneWashingtonSquare);
             Button.Click(ItemOneWashingtonSquare);
+
+            return this;
+        }
+
+        [AllureStep("SelectOneTwoEightSixSevenGatesAvenue")]
+        public ListOfBuildings SelectOneTwoEightSixSevenGatesAvenue()
+        {
+            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.CustomElementIsVisible(ItemOneTwoEightSixSevenGatesAvenue);
+            WaitUntil.CustomElementIsClickable(ItemOneTwoEightSixSevenGatesAvenue);
+            Button.Click(ItemOneTwoEightSixSevenGatesAvenue);
 
             return this;
         }
