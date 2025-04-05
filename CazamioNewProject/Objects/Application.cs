@@ -14,6 +14,7 @@ namespace CazamioNewProject.Objects
         public RentalTermsInfo RentalTerms { get; set; }
         public RequestedWorkInfo RequestedWork { get; set; }
         public ReferralDetailsInfo ReferralDetails { get; set; }
+        public AdditionalInfoInfo AdditionalInfo { get; set; }
         public StatusesInfo Statuses { get; set; }
         public ButtonsInfo Buttons { get; set; }
 
@@ -30,6 +31,7 @@ namespace CazamioNewProject.Objects
                 RentalTerms = CreateRentalTermsInfo(),
                 RequestedWork = CreateRequestedWorkInfo(),
                 ReferralDetails = CreateReferralDetailsInfo(),
+                AdditionalInfo = CreateAdditionalInfoInfo(),
                 Statuses = CreateStatusesInfo(),
                 Buttons = CreateButtonsInfo(),
             };
@@ -69,6 +71,7 @@ namespace CazamioNewProject.Objects
         {
             public string OneMonth { get; set; }
             public string TwoMonths { get; set; }
+            public string ThreeMonths { get; set; }
         }
 
         public class MonthlyRentsPrePaymentInfo
@@ -99,6 +102,12 @@ namespace CazamioNewProject.Objects
             public string LongTextWashingtonSquare { get; set; }
             public string ShortTextWashingtonSquare { get; set; }
             public string ShortTextEastStreet { get; set; }
+            public string ShortTextGatesAvenue { get; set; }
+            public string LongTextGatesAvenue { get; set; }
+        }
+
+        public class AdditionalInfoInfo
+        {
             public string ShortTextGatesAvenue { get; set; }
             public string LongTextGatesAvenue { get; set; }
         }
@@ -165,6 +174,7 @@ namespace CazamioNewProject.Objects
             {
                 OneMonth = "1",
                 TwoMonths = "2",
+                ThreeMonths = "3",
             };
         }
 
@@ -209,6 +219,15 @@ namespace CazamioNewProject.Objects
                 ShortTextEastStreet = "Lorem 111A East 51st Street Referral Details.",
                 ShortTextGatesAvenue = "Lorem 12867 Gates Avenue Referral Details.",
                 LongTextGatesAvenue = "Lorem 12867 Gates Avenue Referral Details. Lorem ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit.",
+            };
+        }
+
+        private static AdditionalInfoInfo CreateAdditionalInfoInfo()
+        {
+            return new AdditionalInfoInfo
+            {
+                ShortTextGatesAvenue = "Lorem 12867 Gates Avenue ADDITIONAL INFO APPLICATION",
+                LongTextGatesAvenue = "Lorem 12867 Gates Avenue ADDITIONAL INFO APPLICATION. Lorem ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit.",
             };
         }
 

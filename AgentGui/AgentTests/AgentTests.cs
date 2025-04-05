@@ -165,54 +165,54 @@ namespace AgentGuiTests
 
             Pages.CreateApplicationMdlWndw
                 .VerifyEmailTenantCreatorWithoutCreditReport(getEmailAr)
-                .PassThirdStepGatesAvenueAddressFrstFlow();
-                //.VerifyTitleApplicationSuccessfullyCreated()
-                //.VerifyTextLinkAlreadyCopied()
-                //.ClickButtonAddApplicant();
-            //Pages.AddApplicantMdlWndw
-            //    .AddOnlyAlreadyExistGuarantorWithoutCreditReport()
-            //    .ClickBtnAdd();
+                .PassThirdStepGatesAvenueAddressFrstFlow()
+                .VerifyTitleApplicationSuccessfullyCreated()
+                .VerifyTextLinkAlreadyCopied()
+                .ClickButtonAddApplicant();
+            Pages.AddApplicantMdlWndw
+                .AddOnlyAlreadyExistGuarantorWithoutCreditReport()
+                .ClickBtnAdd();
 
-            //string applicationIdFromAppLandlord = Pages.ListOfApplicationsApplicationsTbl.GetApplicationIdFromFirstRow();
-            //string fullNameTenantMainApplicantFromAppAr = Pages.ListOfApplicationsApplicationsTbl.GetFullNameTenantMainApplicantFromFirstRow();
-            //string leasePriceFromApp = Pages.ListOfApplicationsApplicationsTbl.GetPriceFromFirstRow();
-            //string dateCreatedFromApp = Pages.ListOfApplicationsApplicationsTbl.GetDateCreatedFromFirstRow();
-            //string statusFromApp = Pages.ListOfApplicationsApplicationsTbl.GetVlLabelOfClmnDraftStatusWithoutAgentFrstRw().Text;
-            //string btnNameFromApp = Pages.ListOfApplicationsApplicationsTbl.GetVlLabelOfClmnCloseBtnWithoutAgentFrstRw().Text;
+            string applicationIdFromAppLandlord = Pages.ListOfApplicationsApplicationsTbl.GetApplicationIdFromFirstRow();
+            string fullNameTenantMainApplicantFromAppAr = Pages.ListOfApplicationsApplicationsTbl.GetFullNameTenantMainApplicantFromFirstRow();
+            string leasePriceFromApp = Pages.ListOfApplicationsApplicationsTbl.GetPriceFromFirstRow();
+            string dateCreatedFromApp = Pages.ListOfApplicationsApplicationsTbl.GetDateCreatedFromFirstRow();
+            string statusFromApp = Pages.ListOfApplicationsApplicationsTbl.GetVlLabelOfClmnDraftStatusWithoutAgentFrstRw().Text;
+            string btnNameFromApp = Pages.ListOfApplicationsApplicationsTbl.GetVlLabelOfClmnCloseBtnWithoutAgentFrstRw().Text;
 
-            //Pages.ListOfApplicationsApplicationsTbl
-            //    .VerifyDataWitoutAgentByApplicationTenantMain
-            //    (tenantCreatorMySpace.CreatedWithoutCreditReport.ConstantFirstLastName, fullNameTenantMainApplicantFromAppAr,
-            //    application.LeasePrice.ThirdPriceStatic, leasePriceFromApp,
-            //    application.BasicData.DateCurrent, dateCreatedFromApp,
-            //    application.Statuses.Draft, statusFromApp,
-            //    application.Buttons.Close, btnNameFromApp);
+            Pages.ListOfApplicationsApplicationsTbl
+                .VerifyDataWitoutAgentByApplicationTenantMain
+                (tenantCreatorMySpace.CreatedWithoutCreditReport.ConstantFirstLastName, fullNameTenantMainApplicantFromAppAr,
+                application.LeasePrice.ThirdPriceStatic, leasePriceFromApp,
+                application.BasicData.DateCurrent, dateCreatedFromApp,
+                application.Statuses.Draft, statusFromApp,
+                application.Buttons.Close, btnNameFromApp);
 
-            //Pages.JScriptExecutor
-            //  .OpenNewTabHomePageTenant();
-            //Pages.LogInTenant
-            //    .LogInAsCreatorWithoutCreditReportMySpace();
-            //Pages.HeaderTenants
-            //    .ClickButtonMyApplications();
+            Pages.JScriptExecutor
+              .OpenNewTabHomePageTenant();
+            Pages.LogInTenant
+                .LogInAsCreatorWithoutCreditReportMySpace();
+            Pages.HeaderTenants
+                .ClickButtonMyApplications();
 
-            //string appIdFromAppTenantCreator = Pages.MyAccount.GetApplicationId();
+            string appIdFromAppTenantCreator = Pages.MyAccount.GetApplicationId();
 
-            //Pages.MyAccount
-            //    .VerifyApplicationIdNumberTenantCreator(applicationIdFromAppLandlord, appIdFromAppTenantCreator);
-            //Pages.HeaderTenants
-            //    .LogOut();
-            //Pages.JScriptExecutor
-            //  .OpenNewTabHomePageTenant();
-            //SelectThirdTabBrowser.Open();
-            //Pages.LogInTenant
-            //    .LogInAsGuarantorWithoutCreditReportMySpace();
-            //Pages.HeaderTenants
-            //    .ClickButtonMyApplications();
+            Pages.MyAccount
+                .VerifyApplicationIdNumberTenantCreator(applicationIdFromAppLandlord, appIdFromAppTenantCreator);
+            Pages.HeaderTenants
+                .LogOut();
+            Pages.JScriptExecutor
+              .OpenNewTabHomePageTenant();
+            SelectThirdTabBrowser.Open();
+            Pages.LogInTenant
+                .LogInAsGuarantorWithoutCreditReportMySpace();
+            Pages.HeaderTenants
+                .ClickButtonMyApplications();
 
-            //string appIdFromAppTenantOccupant = Pages.MyAccount.GetApplicationId();
+            string appIdFromAppTenantOccupant = Pages.MyAccount.GetApplicationId();
 
-            //Pages.MyAccount
-            //    .VerifyApplicationIdNumberTenantGuarantor(applicationIdFromAppLandlord, appIdFromAppTenantOccupant);
+            Pages.MyAccount
+                .VerifyApplicationIdNumberTenantGuarantor(applicationIdFromAppLandlord, appIdFromAppTenantOccupant);
 
             WaitUntil.WaitSomeInterval(5000);
 

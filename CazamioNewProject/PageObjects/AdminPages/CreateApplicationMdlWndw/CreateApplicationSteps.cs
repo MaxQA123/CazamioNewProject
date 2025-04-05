@@ -185,10 +185,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             InputGeneral.InputFunctionWithClear(FieldInputSecurityDeposit, application.SecurityDeposit.ThirdPriceStatic);
             WaitUntil.WaitSomeInterval(100);
             Button.Click(ButtonPlusAddConcession);
-            //WaitUntil.WaitSomeInterval(100);
-            //InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, application.MonthsFree.OneMonth);
-            //WaitUntil.WaitSomeInterval(100);
-            //InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, apartment.SettingsConcessions.AdditionalInfoLong);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, application.MonthsFree.ThreeMonths);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, application.AdditionalInfo.LongTextGatesAvenue);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputMonthlyRentsPrePayment, application.MonthlyRentsPrePayment.OneMonth);
             Button.Click(FieldButtonMoveInDate);
@@ -208,10 +208,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             Button.Click(CheckTheBoxReferralAgent);
             KeyBoardActions.ClickTab();
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputReferralDetails, application.ReferralDetails.ShortTextGatesAvenue);
+            InputGeneral.InputFunctionWithClear(FieldInputReferralDetails, application.ReferralDetails.LongTextGatesAvenue);
             Button.Click(ButtonPlusAddRequestedWork);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputRequestedWork, application.RequestedWork.ShortTextGatesAvenue);
+            InputGeneral.InputFunctionWithClear(FieldInputRequestedWork, application.RequestedWork.LongTextGatesAvenue);
             Button.Click(ButtonCreate);
 
             return this;
@@ -227,10 +227,11 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, application.LeasePrice.FourthPriceStatic);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputSecurityDeposit, application.SecurityDeposit.FourthPriceStatic);
-            //WaitUntil.WaitSomeInterval(100);
-            //InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, application.MonthsFree.OneMonth);
-            //WaitUntil.WaitSomeInterval(100);
-            //InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, apartment.SettingsConcessions.AdditionalInfoLong);
+            Button.Click(ButtonPlusAddConcession);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, application.MonthsFree.OneMonth);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, application.AdditionalInfo.ShortTextGatesAvenue);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputMonthlyRentsPrePayment, application.MonthlyRentsPrePayment.TwoMonth);
             Button.Click(FieldButtonMoveInDate);
