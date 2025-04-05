@@ -659,10 +659,11 @@ namespace BrokerGuiTests
             string firstNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetFirstNameTenantMainApplicantFromFirstRow();
             string lastNameTenantMainApplicantFromApp = Pages.ApartmentApplicationsTbl.GetLastNameTenantMainApplicantFromFirstRow();
             string firstLastNameOccupantFromApp = Pages.ApartmentApplicationsTbl.GetFirstLastNameTenantOccupantFromFirstRow();
-            string leasePriceFromApplication = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
-            string dateCreatedFromApplication = Pages.ApartmentApplicationsTbl.GetDateCreatedFromFirstRow();
-            string agentFromApplication = Pages.ApartmentApplicationsTbl.GetAgentFromFrstRw();
-            string statusFromApplication = Pages.ApartmentApplicationsTbl.GetVlLabelOfClmnDraftStatusFrstRw().Text;
+            string leasePriceFromApp = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
+            string dateCreatedFromApp = Pages.ApartmentApplicationsTbl.GetDateCreatedFromFirstRow();
+            string agentFromApp = Pages.ApartmentApplicationsTbl.GetAgentFromFrstRw();
+            string statusFromApp = Pages.ApartmentApplicationsTbl.GetVlLabelOfClmnDraftStatusFrstRw().Text;
+            string closeNameBtnFromApp = Pages.ApartmentApplicationsTbl.GetVlLabelOfClmnCloseBtnFrstRw().Text;
 
             Pages.ApartmentApplicationsTbl
                 .VerifyFullDataByApplicationTenantsMainOccupant
@@ -670,10 +671,11 @@ namespace BrokerGuiTests
                 tenantCreatorMySpace.FirstLastNameGeneralData.ConstantFirstNameTenant, firstNameTenantMainApplicantFromApp, 
                 tenantCreatorMySpace.FirstLastNameGeneralData.ConstantLastNameTenant, lastNameTenantMainApplicantFromApp, 
                 tenantOccupantMySpace.FirstLastNameGeneralData.ConstantFirstLastNameTenant, firstLastNameOccupantFromApp,
-                application.LeasePrice.ThirdPriceStatic, leasePriceFromApplication,
-                application.BasicData.NotAssignetLabel, agentFromApplication,
-                application.Statuses.Draft, statusFromApplication,
-                application.BasicData.DateCurrent, dateCreatedFromApplication);
+                application.LeasePrice.FifthPriceStatic, leasePriceFromApp,
+                application.BasicData.NotAssignetLabel, agentFromApp,
+                application.Statuses.Draft, statusFromApp,
+                application.BasicData.DateCurrent, dateCreatedFromApp,
+                application.Buttons.Close, closeNameBtnFromApp);
             //Main applicant
             Pages.JScriptExecutor
                .OpenNewTab();
@@ -825,19 +827,21 @@ namespace BrokerGuiTests
             string applicationIdFromAppLandlord = Pages.ApartmentApplicationsTbl.GetApplicationIdFromFirstRow();
             string apartmentAddressFromApp = Pages.ApartmentApplicationsTbl.GetApartmentAddressFromFirstRow();
             string fullNameTenantMainApplicantFromAppAr = Pages.ApartmentApplicationsTbl.GetFullNameTenantMainApplicantFromFirstRow();
-            string leasePriceFromApplication = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
-            string dateCreatedFromApplication = Pages.ApartmentApplicationsTbl.GetDateCreatedFromFirstRow();
-            string agentFromApplication = Pages.ApartmentApplicationsTbl.GetAgentFromFrstRw();
-            string statusFromApplication = Pages.ApartmentApplicationsTbl.GetVlLabelOfClmnDraftStatusFrstRw().Text;
+            string leasePriceFromApp = Pages.ApartmentApplicationsTbl.GetPriceFromFirstRow();
+            string dateCreatedFromApp = Pages.ApartmentApplicationsTbl.GetDateCreatedFromFirstRow();
+            string agentFromApp = Pages.ApartmentApplicationsTbl.GetAgentFromFrstRw();
+            string statusFromApp = Pages.ApartmentApplicationsTbl.GetVlLabelOfClmnDraftStatusFrstRw().Text;
+            string closeNameBtnFromApp = Pages.ApartmentApplicationsTbl.GetVlLabelOfClmnCloseBtnFrstRw().Text;
 
             Pages.ApartmentApplicationsTbl
                 .VerifyFullDataByApplicationCreatedTenantMain
                 (getAddressBuildingViewActual, apartmentAddressFromApp, 
                 tenantCreatorMySpace.CreatedWithCreditReport.ConstantFirstLastName, fullNameTenantMainApplicantFromAppAr, 
-                leasePriceFromUnit, leasePriceFromApplication,
-                agent.CreatedAgentLulaMySpace.FullName, agentFromApplication,
-                application.Statuses.Draft, statusFromApplication,
-                application.BasicData.DateCurrent, dateCreatedFromApplication);
+                leasePriceFromUnit, leasePriceFromApp,
+                application.BasicData.DateCurrent, dateCreatedFromApp,
+                agent.CreatedAgentLulaMySpace.FullName, agentFromApp,
+                application.Statuses.Draft, statusFromApp,
+                application.Buttons.Close, closeNameBtnFromApp);
             Pages.JScriptExecutor
               .OpenNewTabHomePageTenant();
             Pages.LogInTenant

@@ -57,6 +57,7 @@ namespace CazamioNewProject.Objects
             public string SecondPriceStatic { get; set; }
             public string ThirdPriceStatic { get; set; }
             public string FourthPriceStatic { get; set; }
+            public string FifthPriceStatic { get; set; }
         }
 
         public class SecurityDepositInfo
@@ -154,6 +155,7 @@ namespace CazamioNewProject.Objects
                 SecondPriceStatic = "$1555",
                 ThirdPriceStatic = "$16333",
                 FourthPriceStatic = "$900",
+                FifthPriceStatic = "$10333"
             };
         }
 

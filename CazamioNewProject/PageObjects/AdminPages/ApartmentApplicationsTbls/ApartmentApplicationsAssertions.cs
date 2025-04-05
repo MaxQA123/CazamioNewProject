@@ -12,9 +12,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
              string tenantCreatorMySpaceFirstNameTenantEx, string firstNameTenantMainApplicantFromApp,
              string tenantCreatorMySpaceLastNameTenantEx, string lastNameTenantMainApplicantFromApp,
              string leasePriceFromUnit, string leasePriceFromApplication,
-             string agentEx, string agentFromApplication,
-             string statusDraftEx, string statusFromApplication,
-             string DateCurrentEx, string dateCreatedFromApplication)
+             string dateCreatedEx, string dateCreatedFromApp,
+             string agentEx, string agentFromApp,
+             string statusEx, string statusFromApp,
+             string closeNameBtnEx, string closeNameBtnFromApp)
         {
             Assert.Multiple(() =>
             {
@@ -22,10 +23,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
                 Assert.AreEqual(tenantCreatorMySpaceFirstNameTenantEx, firstNameTenantMainApplicantFromApp);
                 Assert.AreEqual(tenantCreatorMySpaceLastNameTenantEx, lastNameTenantMainApplicantFromApp);
                 Assert.AreEqual(leasePriceFromUnit, leasePriceFromApplication);
-                Assert.AreEqual(agentEx, agentFromApplication);
-                Assert.AreEqual(statusDraftEx, statusFromApplication);
-                Assert.AreEqual(DateCurrentEx, dateCreatedFromApplication);
-                Assert.IsTrue(ButtonName.IsVisible(CloseNameBtnOfClmnStatusFrstRw));
+                Assert.AreEqual(dateCreatedEx, dateCreatedFromApp);
+                Assert.AreEqual(agentEx, agentFromApp);
+                Assert.AreEqual(statusEx, statusFromApp);
+                Assert.AreEqual(closeNameBtnEx, closeNameBtnFromApp);
             });
 
             return this;
@@ -35,20 +36,21 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
         public ApartmentApplicationsTbl VerifyFullDataByApplicationCreatedTenantMain
             (string getAddressBuildingViewActual, string apartmentAddressFromApp, 
             string fullNameTenantEx, string fullNameTenantMainApplicantFromAppArAc, 
-            string leasePriceFromUnit, string leasePriceFromApplication, 
-            string agentFromApplication, string agentLulaAgentQA, 
-            string statusFromApplication, string statusDraft, 
-            string dateCurrentCreatedFromApplication, string dateCurrentCreatedExpectedResult)
+            string leasePriceFromUnit, string leasePriceFromApplication,
+            string dateCreatedEx, string dateCreatedFromApp,
+            string agentEx, string agentFromApp,
+            string statusEx, string statusFromApp,
+            string closeNameBtnEx, string closeNameBtnFromApp)
         {
             Assert.Multiple(() =>
             {
                 Assert.AreEqual(getAddressBuildingViewActual, apartmentAddressFromApp);
                 Assert.AreEqual(fullNameTenantEx, fullNameTenantMainApplicantFromAppArAc);
                 Assert.AreEqual(leasePriceFromUnit, leasePriceFromApplication);
-                Assert.AreEqual(agentFromApplication, agentLulaAgentQA);
-                Assert.AreEqual(statusFromApplication, statusDraft);
-                Assert.AreEqual(dateCurrentCreatedFromApplication, dateCurrentCreatedExpectedResult);
-                Assert.IsTrue(ButtonName.IsVisible(CloseNameBtnOfClmnStatusFrstRw));
+                Assert.AreEqual(dateCreatedEx, dateCreatedFromApp);
+                Assert.AreEqual(agentEx, agentFromApp);
+                Assert.AreEqual(statusEx, statusFromApp);
+                Assert.AreEqual(closeNameBtnEx, closeNameBtnFromApp);
             });
 
             return this;
@@ -108,7 +110,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
              string leasePriceEx, string leasePriceFromApplication,
              string agentLabelEx, string agentFromApplication,
              string statusDraftEx, string statusFromApplication,
-             string dateCurrentEx, string dateCreatedFromApplication)
+             string dateCurrentEx, string dateCreatedFromApplication,
+             string claseNameBtnEx, string closeNameBtnFromApp)
         {
             Assert.Multiple(() =>
             {
@@ -120,7 +123,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
                 Assert.AreEqual(agentLabelEx, agentFromApplication);
                 Assert.AreEqual(statusDraftEx, statusFromApplication);
                 Assert.AreEqual(dateCurrentEx, dateCreatedFromApplication);
-                Assert.IsTrue(ButtonName.IsVisible(CloseNameBtnOfClmnStatusFrstRw));
+                Assert.AreEqual(claseNameBtnEx, closeNameBtnFromApp);
             });
 
             return this;
