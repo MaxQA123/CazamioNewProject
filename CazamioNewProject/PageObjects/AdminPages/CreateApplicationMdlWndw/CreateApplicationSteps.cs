@@ -137,9 +137,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             WaitUntil.CustomElementIsVisible(StringLeadEmail);
             InputGeneral.InputFunctionWithClear(FieldInputRequestedOfferPrice, application.RequestedOfferPrice.SecondPriceStatic);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, apartment.UnitBasicData.LeasePriceSecondStatic);
+            InputGeneral.InputFunctionWithClear(FieldInputLeasePrice, application.LeasePrice.FirstPriceStatic);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputSecurityDeposit, apartment.UnitBasicData.SecurityDepositSecondStatic);
+            InputGeneral.InputFunctionWithClear(FieldInputSecurityDeposit, application.SecurityDeposit.FirstPriceStatic);
             //WaitUntil.WaitSomeInterval(100);
             //InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, application.MonthsFree.OneMonth);
             //WaitUntil.WaitSomeInterval(100);

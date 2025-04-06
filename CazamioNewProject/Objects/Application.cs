@@ -163,7 +163,7 @@ namespace CazamioNewProject.Objects
         {
             return new SecurityDepositInfo
             {
-                FirstPriceStatic = "",
+                FirstPriceStatic = "5000",
                 SecondPriceStatic = "",
                 ThirdPriceStatic = "32000",
                 FourthPriceStatic = "1800",
