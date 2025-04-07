@@ -80,6 +80,7 @@ namespace CazamioNewProject.PageObjects
         public static BuildingApartmentsTable BuildingApartmentsTable => GetPage<BuildingApartmentsTable>();
         public static DemoTemplate Demo => GetPage<DemoTemplate>();
         public static EmailNotifications EmailNotofications => GetPage<EmailNotifications>();
+        public static LeaseSignDocument LeaseSignDocument => GetPage<LeaseSignDocument>();
 
         #endregion 
 

@@ -1,11 +1,6 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using NUnit.Allure.Attributes;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.TemplatesPage
 {
@@ -15,6 +10,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.TemplatesPage
         public Templates VerifyTitleTemplatesPage()
         {
             Assert.IsTrue(TitlesCheck.IsVisible(TitleTemplatesPage));
+
+            return this;
+        }
+
+        [AllureStep("VerifyTitleCreateTemplatePage")]
+        public Templates VerifyTitleCreateTemplatePage()
+        {
+            Assert.IsTrue(TitlesCheck.IsVisible(TitleCreateTemplatePage));
 
             return this;
         }

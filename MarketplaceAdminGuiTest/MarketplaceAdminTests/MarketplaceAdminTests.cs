@@ -2,14 +2,10 @@ using Allure.Commons;
 using CazamioNewProject.DbHelpers.AspNetUsersTable;
 using CazamioNewProject.DbHelpers.BrokersAgentsTable;
 using CazamioNewProject.DbHelpers.LandlordsBrokersTable;
-using CazamioNewProject.DbHelpers.OwnerCommissionsStructureTable;
-using CazamioNewProject.DbHelpers.OwnerManagementsTable;
-using CazamioNewProject.DbHelpers.OwnerPhoneNumbersTable;
 using CazamioNewProject.DbHelpers.OwnersDbTable;
 using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
 using CazamioNewProject.PageObjects;
-using CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using NUnit.Framework;
@@ -22,7 +18,7 @@ namespace MarketplaceAdminGuiTest
 
     public class TestsBaseGui : MarketplaceAdminBase
     {
-        //Amount order 12 next must be 13
+        //Amount order 13 next must be 14
         [Test]
         [Order(1)]
         [AllureTag("Regression")]
@@ -1019,6 +1015,38 @@ namespace MarketplaceAdminGuiTest
                 .VerifyMessageAccountWasSuccessfullyActivated();
 
             WaitUntil.WaitSomeInterval(5000);
+
+            #endregion
+        }
+
+        [Test]
+        [Order(13)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(1)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("MarketplaceAdmin")]
+        [AllureSubSuite("CreateNewDocumentLeaseSignTemplate")]
+
+        public void CreateNewDocumentLeaseSignTemplate()
+        {
+            #region Preconditions
+
+            Pages.LogInLandlord
+                .LogInAsMarketplaceAdminMySpace();
+            Pages.SidebarLandlord
+               .ClickButtonLeaseSignDocuments();
+
+            #endregion
+
+            #region Test
+
+            Pages.Templates
+                .VerifyTitleTemplatesPage()
+                .CreateNewTemplateFullData();
+
+            WaitUntil.WaitSomeInterval(3000);
 
             #endregion
         }

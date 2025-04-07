@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CazamioNewProject.Objects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.TemplatesPage
 {
     public partial class Templates
     {
+        LeaseSignDocument leaseSignDocument = LeaseSignDocument.Generate();
     }
 }
