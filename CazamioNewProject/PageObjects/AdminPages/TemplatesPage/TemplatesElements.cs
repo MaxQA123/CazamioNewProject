@@ -54,5 +54,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.TemplatesPage
 
         [FindsBy(How = How.XPath, Using = "//app-lease-sign-document//label[text()='Template Name']/following-sibling::*[1]")]
         public IWebElement TemplateNameFieldInput;
+
+        [FindsBy(How = How.XPath, Using = "//app-lease-sign-document//input[@type='file' and @id='file-upload']")]
+        public IWebElement UploadDocumentBtn;
     }
 }

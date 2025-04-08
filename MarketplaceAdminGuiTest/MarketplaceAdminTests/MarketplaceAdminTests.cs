@@ -1044,9 +1044,9 @@ namespace MarketplaceAdminGuiTest
 
             Pages.Templates
                 .VerifyTitleTemplatesPage()
-                .CreateNewTemplateFullData();
+                .CreateNewTemplateFullDataUserMarketplaceAdmin();
 
-            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.WaitSomeInterval(5000);
 
             #endregion
         }

@@ -1,12 +1,14 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using NUnit.Allure.Attributes;
+using System;
+using System.IO;
 
 namespace CazamioNewProject.PageObjects.AdminPages.TemplatesPage
 {
     public partial class Templates
     {
-        [AllureStep("CreateNewTemplateFullData")]
-        public Templates CreateNewTemplateFullData()
+        [AllureStep("CreateNewTemplateFullDataUserMarketplaceAdmin")]
+        public Templates CreateNewTemplateFullDataUserMarketplaceAdmin()
         {
             WaitUntil.CustomElementIsVisible(LoaderHidden, 10);
             Button.Click(CreateNewTemplateBtn);
@@ -16,6 +18,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.TemplatesPage
             Button.Click(SelectFullNameBrokerItem());
             WaitUntil.CustomElementIsVisible(TemplateNameOfFieldInput);
             InputGeneral.InputFunctionWithClear(TemplateNameFieldInput, leaseSignDocument.TemplatesNameByMarketplaces.FirstNameForMySpace);
+            UploadDocumentBtn.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadTemplatesLandlord.FIRST_NAME_FOR_MYSPACE));
 
             return this;
         }

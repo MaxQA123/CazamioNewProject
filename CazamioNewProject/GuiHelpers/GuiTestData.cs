@@ -89,6 +89,11 @@
         public const string IMAGE_APARTMENT_FIFTH = $"\\UploadImages\\Bedroom5.jpg";
     }
 
+    public class UploadTemplatesLandlord
+    {
+        public const string FIRST_NAME_FOR_MYSPACE = $"\\UploadImages\\FirstNameForMySpace.pdf";
+    }
+
     public class UploadVideos
     {
         public const string VIDEO_FIRST_APARTMENT = $"\\UploadVideos\\First Video Nature.mp4";
