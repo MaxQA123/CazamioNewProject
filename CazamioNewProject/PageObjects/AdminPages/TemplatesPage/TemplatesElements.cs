@@ -57,5 +57,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.TemplatesPage
 
         [FindsBy(How = How.XPath, Using = "//app-lease-sign-document//input[@type='file' and @id='file-upload']")]
         public IWebElement UploadDocumentBtn;
+
+        [FindsBy(How = How.XPath, Using = "//app-lease-sign-document//button[@title = 'Save Template']")]
+        public IWebElement SaveTemplateBtn;
+
+        [FindsBy(How = How.XPath, Using = "//app-template-constructor//div[@class = 'document-area']")]
+        public IWebElement DocumentArea;
+
+        #region list of tags
+
+        [FindsBy(How = How.XPath, Using = "//app-template-constructor//div[@class = 'sticky-list']//span[text() = ' Broker Sign ']")]
+        public IWebElement BrokerSignItem;
+
+        #endregion
     }
 }

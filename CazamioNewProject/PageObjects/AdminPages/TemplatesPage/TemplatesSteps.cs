@@ -19,6 +19,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.TemplatesPage
             WaitUntil.CustomElementIsVisible(TemplateNameOfFieldInput);
             InputGeneral.InputFunctionWithClear(TemplateNameFieldInput, leaseSignDocument.TemplatesNameByMarketplaces.FirstNameForMySpace);
             UploadDocumentBtn.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadTemplatesLandlord.FIRST_NAME_FOR_MYSPACE));
+            DragAndDropBrokerSignToDocumentArea();
+            Button.Click(SaveTemplateBtn);
 
             return this;
         }

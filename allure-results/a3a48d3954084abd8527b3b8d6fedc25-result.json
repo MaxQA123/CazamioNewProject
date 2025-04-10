@@ -1,0 +1,194 @@
+{
+  "uuid": "39598d1c-b5d1-4fbc-8c2d-cc3c518e72a7-tr-0-1013",
+  "historyId": "MarketplaceAdminGuiTest.TestsBaseGui.CreateNewDocumentLeaseSignTemplate",
+  "fullName": "MarketplaceAdminGuiTest.TestsBaseGui.CreateNewDocumentLeaseSignTemplate",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "MarketplaceAdminGuiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateNewDocumentLeaseSignTemplate"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "MarketplaceAdmin"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateNewDocumentLeaseSignTemplate"
+    }
+  ],
+  "links": [],
+  "name": "CreateNewDocumentLeaseSignTemplate",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected: True\r\n  But was:  False\r\n",
+    "trace": "   at CazamioNewProject.PageObjects.AdminPages.TemplatesPage.Templates.__a$_around_VerifyTitleTemplatesPage_100663503_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\TemplatesPage\\TemplatesAssertions.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.TemplatesPage.Templates.__a$_around_VerifyTitleTemplatesPage_100663503_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.TemplatesPage.Templates.__a$_around_VerifyTitleTemplatesPage_100663503_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.TemplatesPage.Templates.VerifyTitleTemplatesPage()\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.CreateNewDocumentLeaseSignTemplate() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 1045\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateNewDocumentLeaseSignTemplate",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected: True\r\n  But was:  False\r\n",
+        "trace": "   at CazamioNewProject.PageObjects.AdminPages.TemplatesPage.Templates.__a$_around_VerifyTitleTemplatesPage_100663503_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\TemplatesPage\\TemplatesAssertions.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.TemplatesPage.Templates.__a$_around_VerifyTitleTemplatesPage_100663503_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.TemplatesPage.Templates.__a$_around_VerifyTitleTemplatesPage_100663503_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.TemplatesPage.Templates.VerifyTitleTemplatesPage()\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.CreateNewDocumentLeaseSignTemplate() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 1045\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsMarketplaceAdminMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1744296783473,
+              "stop": 1744296785022
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1744296785058,
+              "stop": 1744296785540
+            },
+            {
+              "name": "VerifyMarketplaceAdminUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Mark Adm"
+                },
+                {
+                  "name": "String",
+                  "value": "Marketplace Admin"
+                }
+              ],
+              "start": 1744296785558,
+              "stop": 1744296786152
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744296780246,
+          "stop": 1744296786152
+        },
+        {
+          "name": "ClickButtonLeaseSignDocuments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744296786172,
+          "stop": 1744296790070
+        },
+        {
+          "name": "VerifyTitleTemplatesPage",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  Expected: True\r\n  But was:  False\r\n",
+            "trace": "   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.IsTrue(Boolean condition)\r\n   at CazamioNewProject.PageObjects.AdminPages.TemplatesPage.Templates.__a$_around_VerifyTitleTemplatesPage_100663503_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\TemplatesPage\\TemplatesAssertions.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.TemplatesPage.Templates.__a$_around_VerifyTitleTemplatesPage_100663503_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744296790072,
+          "stop": 1744296800316
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "d0dba31057a24c159447192e40484041-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1744296772199,
+      "stop": 1744296803340
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1744296772196,
+  "stop": 1744296803353
+}
