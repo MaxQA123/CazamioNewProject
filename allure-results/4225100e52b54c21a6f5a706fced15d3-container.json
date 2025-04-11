@@ -1,0 +1,78 @@
+{
+  "uuid": "06e47cf5-da27-4d5f-95b6-b932d7bdb22b-tc-0-1000",
+  "name": "MarketplaceAdminGuiTest.TestsBaseGui.CreateNewDocumentLeaseSignTemplate",
+  "children": [
+    "dd73952c-f5b6-4135-9fac-7d8d1aa7237f-tr-0-1013"
+  ],
+  "befores": [
+    {
+      "name": "DobeforeAllTheTests",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1744381248361,
+      "stop": 1744381248361
+    },
+    {
+      "name": "SetUp",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1744381248362,
+      "stop": 1744381248362
+    }
+  ],
+  "afters": [
+    {
+      "name": "DoAfterEach",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "TearDown : OpenQA.Selenium.WebDriverException : invalid session id: session deleted as the browser has closed the connection\nfrom disconnected: not connected to DevTools\n  (Session info: chrome=135.0.7049.85)",
+        "trace": "--TearDown\r\n   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.Close()\r\n   at CazamioNewProject.GuiHelpers.Browser.Close() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\Browser.cs:line 63\r\n   at CazamioNewProject.GuiHelpers.BasicTests.BaseGui.DoAfterEach() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\BasicTests\\BaseGui.cs:line 32"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1744381248362,
+      "stop": 1744381248362
+    },
+    {
+      "name": "DoAfterAllTheTests",
+      "status": "none",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "It's not possible to get status of OneTimeTearDown",
+        "trace": "See Allure.NUnit wiki"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1744381248363,
+      "stop": 1744381248363
+    }
+  ],
+  "links": [],
+  "start": 1744380662128,
+  "stop": 1744381248620
+}
