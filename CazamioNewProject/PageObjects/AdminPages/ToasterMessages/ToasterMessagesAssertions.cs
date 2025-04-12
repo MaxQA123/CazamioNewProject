@@ -63,7 +63,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
-        [AllureStep("VerifMessageScreeningFeeSaved")]
+        [AllureStep("VerifyMessageScreeningFeeSaved")]
         public ToasterMessagesLandlord VerifMessageScreeningFeeSaved()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
@@ -73,12 +73,32 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
-        [AllureStep("VerifMessageAddedApplicantsToApplication")]
+        [AllureStep("VerifyMessageAddedApplicantsToApplication")]
         public ToasterMessagesLandlord VerifMessageAddedApplicantsToApplication()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageAddedApplicantsToApplication));
             WaitUntil.CustomElementIsInVisible(MessageAddedApplicantsToApplication);
+
+            return this;
+        }
+
+        [AllureStep("VerifyMessageTemplateWasDeleted")]
+        public ToasterMessagesLandlord VerifyMessageTemplateWasDeleted()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageTemplateWasDeleted));
+            WaitUntil.CustomElementIsInVisible(MessageTemplateWasDeleted);
+
+            return this;
+        }
+
+        [AllureStep("VerifyMessageTemplateWasSaved")]
+        public ToasterMessagesLandlord VerifMessageTemplateWasSaved()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageTemplateWasSaved));
+            WaitUntil.CustomElementIsInVisible(MessageTemplateWasSaved);
 
             return this;
         }

@@ -1024,12 +1024,12 @@ namespace MarketplaceAdminGuiTest
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
-        [Retry(1)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("MarketplaceAdmin")]
-        [AllureSubSuite("CreateNewDocumentLeaseSignTemplate")]
+        [AllureSubSuite("CreateNewDocumentLeaseSignTemplateWithBrokerSign")]
 
-        public void CreateNewDocumentLeaseSignTemplate()
+        public void CreateNewDocumentLeaseSignTemplateWithBrokerSign()
         {
             #region Preconditions
 
@@ -1044,9 +1044,16 @@ namespace MarketplaceAdminGuiTest
 
             Pages.Templates
                 .VerifyTitleTemplatesPage()
-                .CreateNewTemplateFullDataUserMarketplaceAdmin();
+                .CreateNewTemplateWithBrokerSignUserMarketplaceAdmin();
 
-            WaitUntil.WaitSomeInterval(5000);
+            #endregion
+
+            #region Postconditions
+
+            Pages.Templates
+                .DeleteItemFirstNameForMySpace();
+
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
         }

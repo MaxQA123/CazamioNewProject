@@ -5,6 +5,7 @@ using CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.AddressManagerPage;
 using CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls;
 using CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage;
+using CazamioNewProject.PageObjects.AdminPages.AreYouSureDeleteTemplteMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls;
 using CazamioNewProject.PageObjects.AdminPages.BuildingViewPage;
@@ -126,6 +127,7 @@ namespace CazamioNewProject.PageObjects
 
         public static CreateANewMarketplaceAdminMdlWindow CreateANewMarketplaceAdminMdlWindow => GetPage<CreateANewMarketplaceAdminMdlWindow>();
         public static AreYouSureLogOutLandlordMdlWndw AreYouSureLogOutLandlordMdlWndw => GetPage<AreYouSureLogOutLandlordMdlWndw>();
+        public static AreYouSureDeleteTemplteMdlWndw AreYouSureDeleteTemplteMdlWndw => GetPage<AreYouSureDeleteTemplteMdlWndw>();
         public static CreateANewBrokerMdlWndw CreateANewBrokerMdlWndw => GetPage<CreateANewBrokerMdlWndw>();
         public static CreateNewAgentMdlWndw CreateNewAgentMdlWndw => GetPage<CreateNewAgentMdlWndw>();
         public static CreateANewOwnerMdlWndw CreateANewOwnerMdlWndw => GetPage<CreateANewOwnerMdlWndw>();

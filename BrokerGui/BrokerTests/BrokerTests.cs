@@ -860,6 +860,36 @@ namespace BrokerGuiTests
         }
 
         [Test]
+        [Order(10)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Broker")]
+        [AllureSubSuite("CreateNewDocumentLeaseSignTemplateWithFullSettings")]
+
+        public void CreateNewDocumentLeaseSignTemplateWithFullSettings()
+        {
+            #region Preconditions
+
+            Pages.LogInLandlord
+                .LogInAsBrokerMySpace();
+            Pages.SidebarLandlord
+               .ClickButtonLeaseSignDocuments();
+
+            #endregion
+
+            #region Test
+
+            Pages.Templates
+                .VerifyTitleTemplatesPage()
+                .CreateNewTemplateWithBrokerSignUserMarketplaceAdmin();
+
+            #endregion
+        }
+
+        [Test]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]

@@ -7,8 +7,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.TemplatesPage
 {
     public partial class Templates
     {
-        [AllureStep("CreateNewTemplateFullDataUserMarketplaceAdmin")]
-        public Templates CreateNewTemplateFullDataUserMarketplaceAdmin()
+        [AllureStep("CreateNewTemplateWithBrokerSignUserMarketplaceAdmin")]
+        public Templates CreateNewTemplateWithBrokerSignUserMarketplaceAdmin()
         {
             WaitUntil.CustomElementIsVisible(LoaderHidden, 10);
             Button.Click(CreateNewTemplateBtn);
@@ -21,6 +21,19 @@ namespace CazamioNewProject.PageObjects.AdminPages.TemplatesPage
             UploadDocumentBtn.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadTemplatesLandlord.FIRST_NAME_FOR_MYSPACE));
             DragAndDropBrokerSignToDocumentArea();
             Button.Click(SaveTemplateBtn);
+            Pages.ToasterMessagesLandlord
+                .VerifMessageTemplateWasSaved();
+
+            return this;
+        }
+
+        [AllureStep("DeleteItemFirstNameForMySpace")]
+        public Templates DeleteItemFirstNameForMySpace()
+        {
+            Button.Click(ItemDeleteBtnForFirstNameForMySpace());
+            Pages.AreYouSureDeleteTemplteMdlWndw
+                .ConfirmDeleteTemplate();
+            VerifyDeletingItemFirstNameForMySpaceTemplate();
 
             return this;
         }

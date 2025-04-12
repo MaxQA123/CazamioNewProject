@@ -14,6 +14,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Payment methods selected, Click save to confirm']")]
         public IWebElement MessagePaymentMethodsSelected;
 
+        //Appeared if created a new template on the "Create tempalte" page
+        [FindsBy(How = How.XPath, Using = "//span[text() = 'Template was saved.']")]
+        public IWebElement MessageTemplateWasSaved;
+
+        //Appeared if deleted already created template on the "Tempaltes" page
+        [FindsBy(How = How.XPath, Using = "//span[text() = 'Template was deleted.']")]
+        public IWebElement MessageTemplateWasDeleted;
+
         #endregion
 
         #region Sidebar Success toasters

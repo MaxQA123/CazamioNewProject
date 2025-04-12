@@ -9,17 +9,39 @@ namespace CazamioNewProject.PageObjects.AdminPages.TemplatesPage
 {
     public partial class Templates
     {
+        #region Templates page
+
         [FindsBy(How = How.XPath, Using = ("//app-loader//div[@class = 'hidden']"))]
         public IWebElement LoaderHidden;
 
         [FindsBy(How = How.XPath, Using = "//div[text()= 'Templates']")]
         public IWebElement TitleTemplatesPage;
 
-        [FindsBy(How = How.XPath, Using = "//div[text()= 'Create template']")]
-        public IWebElement TitleCreateTemplatePage;
-
         [FindsBy(How = How.XPath, Using = "//cazamio-button[@text = 'Create new template']//button")]
         public IWebElement CreateNewTemplateBtn;
+
+        public IWebElement ItemDeleteBtnForFirstNameForMySpace()
+        {
+
+            var xpath = "//app-template-list//table//tbody//tr[td[text() = '" + leaseSignDocument.TemplatesNameByMarketplaces.FirstNameForMySpace + "']]//button[@title='Delete']";
+
+            return Browser._Driver.FindElement(By.XPath(xpath));
+        }
+
+        public IWebElement ItemFirstNameForMySpaceTemplate()
+        {
+
+            var xpath = "//app-template-list//table//tbody//td[text() = '" + leaseSignDocument.TemplatesNameByMarketplaces.FirstNameForMySpace + "']";
+
+            return Browser._Driver.FindElement(By.XPath(xpath));
+        }
+
+        #endregion
+
+        #region Create template page
+
+        [FindsBy(How = How.XPath, Using = "//div[text()= 'Create template']")]
+        public IWebElement TitleCreateTemplatePage;
 
         [FindsBy(How = How.XPath, Using = "//app-lease-sign-document//ng-select[@id = 'broker']")]
         public IWebElement SelectBrokerBtn;
@@ -63,6 +85,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.TemplatesPage
 
         [FindsBy(How = How.XPath, Using = "//app-template-constructor//div[@class = 'document-area']")]
         public IWebElement DocumentArea;
+
+        #endregion
 
         #region list of tags
 
