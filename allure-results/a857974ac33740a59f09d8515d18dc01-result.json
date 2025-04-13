@@ -1,0 +1,370 @@
+{
+  "uuid": "51a5309e-4bf3-4963-b4e9-d313184bfceb-tr-0-1008",
+  "historyId": "BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied",
+  "fullName": "BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "BrokerGuiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateApplicationForApartmentOccupied"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateApplicationForApartmentOccupied"
+    }
+  ],
+  "links": [],
+  "name": "CreateApplicationForApartmentOccupied",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+    "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_VerifyTitleApartmentViewPage_100663888_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApartmentViewPage\\ApartmentViewAssertions.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_VerifyTitleApartmentViewPage_100663888_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_VerifyTitleApartmentViewPage_100663888_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.VerifyTitleApartmentViewPage() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApartmentViewPage\\ApartmentViewActions.cs:line 11\r\n   at BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 632"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateApplicationForApartmentOccupied",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+        "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_VerifyTitleApartmentViewPage_100663888_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApartmentViewPage\\ApartmentViewAssertions.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_VerifyTitleApartmentViewPage_100663888_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_VerifyTitleApartmentViewPage_100663888_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.VerifyTitleApartmentViewPage() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApartmentViewPage\\ApartmentViewActions.cs:line 11\r\n   at BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 632"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsBrokerMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1744527588915,
+              "stop": 1744527590232
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1744527590239,
+              "stop": 1744527590297
+            },
+            {
+              "name": "VerifyBrokerUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Leoautotest Feabroker"
+                },
+                {
+                  "name": "String",
+                  "value": "Broker"
+                }
+              ],
+              "start": 1744527590304,
+              "stop": 1744527590818
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744527586193,
+          "stop": 1744527590818
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744527590826,
+          "stop": 1744527596688
+        },
+        {
+          "name": "SearchNineAAlbermaleRd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744527596690,
+          "stop": 1744527607536
+        },
+        {
+          "name": "SelectItemNineAAlbermaleRd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744527607537,
+          "stop": 1744527611352
+        },
+        {
+          "name": "VerifyTitleBuildingViewPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744527611353,
+          "stop": 1744527615103
+        },
+        {
+          "name": "GetValueOfStringAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744527615103,
+          "stop": 1744527617179
+        },
+        {
+          "name": "VerifyBuildingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "9A Albermale Rd"
+            },
+            {
+              "name": "String",
+              "value": "9A Albermale Rd"
+            }
+          ],
+          "start": 1744527617179,
+          "stop": 1744527620203
+        },
+        {
+          "name": "UpdateValueCreditScreeningFee",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyMessageScreeningFeeSaved",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1744527622190,
+              "stop": 1744527631196
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744527620207,
+          "stop": 1744527631196
+        },
+        {
+          "name": "ClickTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744527631196,
+          "stop": 1744527632992
+        },
+        {
+          "name": "GetSubjectWithoutAgentAlbermaleRd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetVlOfClmnUnitFrstRw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1744527634014,
+              "stop": 1744527634109
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744527633002,
+          "stop": 1744527634113
+        },
+        {
+          "name": "ClickRowByOccupied",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744527634114,
+          "stop": 1744527634424
+        },
+        {
+          "name": "VerifyTitleAddApartmentsPage",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Timed out after 10 seconds",
+            "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_VerifyTitleApartmentViewPage_100663888_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApartmentViewPage\\ApartmentViewAssertions.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_VerifyTitleApartmentViewPage_100663888_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744527634428,
+          "stop": 1744527644724
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "ae4a2db124324ca5a04f363ee7ac55d9-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1744527580027,
+      "stop": 1744527647695
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1744527580027,
+  "stop": 1744527647695
+}

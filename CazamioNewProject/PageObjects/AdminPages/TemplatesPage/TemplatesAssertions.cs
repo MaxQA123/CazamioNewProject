@@ -35,5 +35,16 @@ namespace CazamioNewProject.PageObjects.AdminPages.TemplatesPage
 
             return this;
         }
+
+        [AllureStep("VerifyDeletingItemSecondNameForMySpaceTemplate")]
+        public Templates VerifyDeletingItemSecondNameForMySpaceTemplate()
+        {
+            var wait = new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(5));
+            wait.Until(driver =>
+                driver.FindElements(By.XPath($"//app-template-list//table//tbody//td[text() = '{leaseSignDocument.TemplatesNameByMarketplaces.SecondNameForMySpace}']")).Count == 0
+            );
+
+            return this;
+        }
     }
 }

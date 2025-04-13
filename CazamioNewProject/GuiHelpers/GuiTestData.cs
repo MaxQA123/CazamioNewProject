@@ -92,6 +92,7 @@
     public class UploadTemplatesLandlord
     {
         public const string FIRST_NAME_FOR_MYSPACE = $"\\UploadImages\\FirstNameForMySpace.pdf";
+        public const string SECOND_NAME_FOR_MYSPACE = $"\\UploadImages\\MySpaceBroker12345second.pdf";
     }
 
     public class UploadVideos

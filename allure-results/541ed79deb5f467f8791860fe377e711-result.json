@@ -1,0 +1,505 @@
+{
+  "uuid": "fa08f1fd-0e78-4fc1-8f70-06ac03daf257-tr-0-1002",
+  "historyId": "SuperAdminGui.TestsBaseGui.CreateMarketplaceAdmin",
+  "fullName": "SuperAdminGui.TestsBaseGui.CreateMarketplaceAdmin",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "SuperAdminGui"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateMarketplaceAdmin"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Super Admin"
+    },
+    {
+      "name": "subSuite",
+      "value": "Create Marketplace Admin"
+    }
+  ],
+  "links": [],
+  "name": "CreateMarketplaceAdmin",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "CreateMarketplaceAdmin"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateMarketplaceAdmin",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsSuperAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1744529597080,
+              "stop": 1744529598327
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1744529598332,
+              "stop": 1744529598380
+            },
+            {
+              "name": "VerifySuperAdminUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Super User"
+                },
+                {
+                  "name": "String",
+                  "value": "Super Admin"
+                }
+              ],
+              "start": 1744529598390,
+              "stop": 1744529598906
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744529594372,
+          "stop": 1744529598906
+        },
+        {
+          "name": "ClickButtonMarketplaceAdmins",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744529598916,
+          "stop": 1744529601654
+        },
+        {
+          "name": "VerifyTitleListOfMarketplaceAdmins",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744529601655,
+          "stop": 1744529601707
+        },
+        {
+          "name": "ClickButtonCreateMarketplaceAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744529601708,
+          "stop": 1744529602382
+        },
+        {
+          "name": "VerifyTitleCreateANewMarketplaceadmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744529602387,
+          "stop": 1744529602481
+        },
+        {
+          "name": "FillInMandatoryFields",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744529602482,
+          "stop": 1744529605152
+        },
+        {
+          "name": "GetEmailFromFieldInputEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744529605155,
+          "stop": 1744529605372
+        },
+        {
+          "name": "CopyEmailBeforeDogFromFieldInputEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744529605374,
+          "stop": 1744529605948
+        },
+        {
+          "name": "ClickButtonCreate",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744529605949,
+          "stop": 1744529606739
+        },
+        {
+          "name": "VerifyMessageMarketplaceAdminHasBeenSuccessfullyCreated",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744529606740,
+          "stop": 1744529608111
+        },
+        {
+          "name": "MakeLogOut",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickButtonLogOutSidebar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1744529609134,
+              "stop": 1744529611866
+            },
+            {
+              "name": "ClickButtonYesIAmSure",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1744529612868,
+              "stop": 1744529613573
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744529608111,
+          "stop": 1744529613573
+        },
+        {
+          "name": "OpenNewTab",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744529613577,
+          "stop": 1744529613705
+        },
+        {
+          "name": "VerifyTitleLetterCreateAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744529617631,
+          "stop": 1744529617688
+        },
+        {
+          "name": "ClickButtonHtml",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744529617689,
+          "stop": 1744529619025
+        },
+        {
+          "name": "ClickButtonConfirmEmailForAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744529622153,
+          "stop": 1744529632455
+        },
+        {
+          "name": "PasteForEnterEmailFromEmailCreateAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "eyuaq274jj@putsbox.com"
+            }
+          ],
+          "start": 1744529632468,
+          "stop": 1744529634738
+        },
+        {
+          "name": "PasteForEnterPsswrdFromEmailCreateAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "DU19%!fb"
+            }
+          ],
+          "start": 1744529634738,
+          "stop": 1744529636902
+        },
+        {
+          "name": "ClickIconShow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744529636903,
+          "stop": 1744529637564
+        },
+        {
+          "name": "ClickButtonLetsGo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744529637565,
+          "stop": 1744529638279
+        },
+        {
+          "name": "GetUserNameRoleFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744529638283,
+          "stop": 1744529640010
+        },
+        {
+          "name": "VerifyMarketplaceAdminUserNameAndRoleCreating",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Marketplace Admin"
+            }
+          ],
+          "start": 1744529640022,
+          "stop": 1744529640125
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "6b9875de8e2b4d0482cac8f6ae201984-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1744529587510,
+      "stop": 1744529643351
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1744529587510,
+  "stop": 1744529643351
+}

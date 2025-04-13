@@ -21,6 +21,7 @@ namespace CazamioNewProject.Objects
         public class TemplatesNameByMarketplacesInfo
         {
             public string FirstNameForMySpace { get; set; }
+            public string SecondNameForMySpace { get; set; }
         }
 
         private static TemplatesNameByMarketplacesInfo CreateTemplatesNameByMarketplacesInfo()
@@ -28,6 +29,7 @@ namespace CazamioNewProject.Objects
             return new TemplatesNameByMarketplacesInfo
             {
                 FirstNameForMySpace = "My Space (first 12345)",
+                SecondNameForMySpace = "My Space (Broker 12345 second)",
             };
         }
     }

@@ -22,7 +22,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.TemplatesPage
 
         public IWebElement ItemDeleteBtnForFirstNameForMySpace()
         {
-
             var xpath = "//app-template-list//table//tbody//tr[td[text() = '" + leaseSignDocument.TemplatesNameByMarketplaces.FirstNameForMySpace + "']]//button[@title='Delete']";
 
             return Browser._Driver.FindElement(By.XPath(xpath));
@@ -30,8 +29,21 @@ namespace CazamioNewProject.PageObjects.AdminPages.TemplatesPage
 
         public IWebElement ItemFirstNameForMySpaceTemplate()
         {
-
             var xpath = "//app-template-list//table//tbody//td[text() = '" + leaseSignDocument.TemplatesNameByMarketplaces.FirstNameForMySpace + "']";
+
+            return Browser._Driver.FindElement(By.XPath(xpath));
+        }
+
+        public IWebElement ItemDeleteBtnForSecondNameForMySpace()
+        {
+            var xpath = "//app-template-list//table//tbody//tr[td[text() = '" + leaseSignDocument.TemplatesNameByMarketplaces.SecondNameForMySpace + "']]//button[@title='Delete']";
+
+            return Browser._Driver.FindElement(By.XPath(xpath));
+        }
+
+        public IWebElement ItemSecondNameForMySpace()
+        {
+            var xpath = "//app-template-list//table//tbody//td[text() = '" + leaseSignDocument.TemplatesNameByMarketplaces.SecondNameForMySpace + "']";
 
             return Browser._Driver.FindElement(By.XPath(xpath));
         }
@@ -88,10 +100,52 @@ namespace CazamioNewProject.PageObjects.AdminPages.TemplatesPage
 
         #endregion
 
-        #region list of tags
+        #region list of tags on Create template page
+
+        [FindsBy(How = How.XPath, Using = "//app-template-constructor//div[@class = 'sticky-list']//span[text() = ' Apartment Address ']")]
+        public IWebElement ApartmentAddressItem;
+
+        [FindsBy(How = How.XPath, Using = "//app-template-constructor//div[@class = 'sticky-list']//span[text() = ' Apartment Name ']")]
+        public IWebElement ApartmentNameItem;
+
+        [FindsBy(How = How.XPath, Using = "//app-template-constructor//div[@class = 'sticky-list']//span[text() = ' Utilities included ']")]
+        public IWebElement UtilitiesIncludedItem;
+
+        [FindsBy(How = How.XPath, Using = "//app-template-constructor//div[@class = 'sticky-list']//span[text() = ' Lease Term ']")]
+        public IWebElement LeaseTermItem;
+
+        [FindsBy(How = How.XPath, Using = "//app-template-constructor//div[@class = 'sticky-list']//span[text() = ' Move in Date ']")]
+        public IWebElement MoveInDateItem;
+
+        [FindsBy(How = How.XPath, Using = "//app-template-constructor//div[@class = 'sticky-list']//span[text() = ' Lease End Date ']")]
+        public IWebElement LeaseEndDateItem;
+
+        [FindsBy(How = How.XPath, Using = "//app-template-constructor//div[@class = 'sticky-list']//span[text() = ' Total Rent ']")]
+        public IWebElement TotalRentItem;
+
+        [FindsBy(How = How.XPath, Using = "//app-template-constructor//div[@class = 'sticky-list']//span[text() = ' Monthly Rent ']")]
+        public IWebElement MonthlyRentItem;
+
+        [FindsBy(How = How.XPath, Using = "//app-template-constructor//div[@class = 'sticky-list']//span[text() = ' Deposit ']")]
+        public IWebElement DepositItem;
+
+        [FindsBy(How = How.XPath, Using = "//app-template-constructor//div[@class = 'sticky-list']//span[text() = ' Current Date ']")]
+        public IWebElement CurrentDateItem;
+
+        [FindsBy(How = How.XPath, Using = "//app-template-constructor//div[@class = 'sticky-list']//span[text() = ' Total Move In Cost ']")]
+        public IWebElement TotalMoveInCostItem;
 
         [FindsBy(How = How.XPath, Using = "//app-template-constructor//div[@class = 'sticky-list']//span[text() = ' Broker Sign ']")]
         public IWebElement BrokerSignItem;
+
+        [FindsBy(How = How.XPath, Using = "//app-template-constructor//div[@class = 'sticky-list']//span[text() = ' Broker First Name ']")]
+        public IWebElement BrokerFirstNameItem;
+
+        [FindsBy(How = How.XPath, Using = "//app-template-constructor//div[@class = 'sticky-list']//span[text() = ' Broker Last Name ']")]
+        public IWebElement BrokerLastNameItem;
+
+        [FindsBy(How = How.XPath, Using = "//app-template-constructor//div[@class = 'sticky-list']//span[text() = ' LLC Name ']")]
+        public IWebElement LLCNameItem;
 
         #endregion
     }

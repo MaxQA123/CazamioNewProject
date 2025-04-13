@@ -1,0 +1,127 @@
+{
+  "uuid": "ef4ffbeb-72aa-4913-8032-82bb751e8d16-tr-0-1010",
+  "historyId": "BrokerGuiTests.TestsBaseGui.CreateNewDocumentLeaseSignTemplateWithFullSettings",
+  "fullName": "BrokerGuiTests.TestsBaseGui.CreateNewDocumentLeaseSignTemplateWithFullSettings",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "BrokerGuiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateNewDocumentLeaseSignTemplateWithFullSettings"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateNewDocumentLeaseSignTemplateWithFullSettings"
+    }
+  ],
+  "links": [],
+  "name": "CreateNewDocumentLeaseSignTemplateWithFullSettings",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+    "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_GetUserNameFromSideBar_100663545_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarActions.cs:line 293\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_GetUserNameFromSideBar_100663545_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_GetUserNameFromSideBar_100663545_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.GetUserNameFromSideBar() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarActions.cs:line 13\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.__a$_around_LogInAsBrokerMySpace_100663676_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\LogInPage\\LogInSteps.cs:line 56\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.__a$_around_LogInAsBrokerMySpace_100663676_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.__a$_around_LogInAsBrokerMySpace_100663676_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.LogInAsBrokerMySpace() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\LogInPage\\LogInActions.cs:line 9\r\n   at BrokerGuiTests.TestsBaseGui.CreateNewDocumentLeaseSignTemplateWithFullSettings() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 876"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateNewDocumentLeaseSignTemplateWithFullSettings",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+        "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_GetUserNameFromSideBar_100663545_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarActions.cs:line 293\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_GetUserNameFromSideBar_100663545_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_GetUserNameFromSideBar_100663545_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.GetUserNameFromSideBar() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarActions.cs:line 13\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.__a$_around_LogInAsBrokerMySpace_100663676_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\LogInPage\\LogInSteps.cs:line 56\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.__a$_around_LogInAsBrokerMySpace_100663676_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.__a$_around_LogInAsBrokerMySpace_100663676_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.LogInAsBrokerMySpace() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\LogInPage\\LogInActions.cs:line 9\r\n   at BrokerGuiTests.TestsBaseGui.CreateNewDocumentLeaseSignTemplateWithFullSettings() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 876"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsBrokerMySpace",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Timed out after 10 seconds",
+            "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_GetUserNameFromSideBar_100663545_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarActions.cs:line 293\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_GetUserNameFromSideBar_100663545_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_GetUserNameFromSideBar_100663545_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.GetUserNameFromSideBar() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarActions.cs:line 13\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.__a$_around_LogInAsBrokerMySpace_100663676_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\LogInPage\\LogInSteps.cs:line 56\r\n   at CazamioNewProject.PageObjects.AdminPages.LogInPage.LogInLandlord.__a$_around_LogInAsBrokerMySpace_100663676_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "failed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false,
+                "message": "Timed out after 10 seconds",
+                "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_GetUserNameFromSideBar_100663545_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarActions.cs:line 293\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_GetUserNameFromSideBar_100663545_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1744551611165,
+              "stop": 1744551621491
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1744551608274,
+          "stop": 1744551621565
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "11855ab71fd24d6eafe0a7775b9ea7db-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1744551600004,
+      "stop": 1744551626679
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1744551600003,
+  "stop": 1744551626689
+}

@@ -884,7 +884,16 @@ namespace BrokerGuiTests
 
             Pages.Templates
                 .VerifyTitleTemplatesPage()
-                .CreateNewTemplateWithBrokerSignUserMarketplaceAdmin();
+                .CreateNewTemplateWithFullSettingsUserBroker();
+
+            #endregion
+
+            #region Postconditions
+
+            Pages.Templates
+                .DeleteItemSecondNameForMySpace();
+
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
         }
