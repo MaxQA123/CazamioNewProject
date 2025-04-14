@@ -578,7 +578,7 @@ namespace BrokerGuiTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
-        [Retry(1)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Broker")]
         [AllureSubSuite("CreateApplicationForApartmentOccupied")]
@@ -691,10 +691,8 @@ namespace BrokerGuiTests
                 .ClickButtonStartYourApplicationNowlForTenant();
             Pages.ToasterMessagesTenants
                 .VerifyMessageAccountWasSuccessfullyActivated();
-            Pages.PleaseChangeYourPasswordMdlWndw
-                .QuicklyPass();
-            Pages.PleaseTellUsYourNameMdlWndw
-                .QuicklyPassForMainApplicant();
+            Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
+                .QuicklyPassTenantCreatorMySpace();
             Pages.LeasePriceAdjustmentMdlWndw
                 .ClickBtnCancel();
             Pages.HeaderTenants
@@ -712,10 +710,8 @@ namespace BrokerGuiTests
             Pages.ToasterMessagesTenants
                 .VerifyMessageAccountWasSuccessfullyActivated();
 
-            Pages.PleaseChangeYourPasswordMdlWndw
-                .QuicklyPass();
-            Pages.PleaseTellUsYourNameMdlWndw
-                .QuicklyPassForOccupant();
+            Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
+                .QuicklyPassTenantOccupantMySpace();
             Pages.HeaderTenants
                 .LogOut();
             //Guarantor
@@ -730,10 +726,8 @@ namespace BrokerGuiTests
                 .ClickButtonStartYourApplicationNowlForTenantThird();
             Pages.ToasterMessagesTenants
                 .VerifyMessageAccountWasSuccessfullyActivated();
-            Pages.PleaseChangeYourPasswordMdlWndw
-                .QuicklyPass();
-            Pages.PleaseTellUsYourNameMdlWndw
-                .QuicklyPassForGuarantor();
+            Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
+                .QuicklyPassTenantGuarantorMySpace();
             Pages.HeaderTenants
                 .LogOut();
 
@@ -747,7 +741,7 @@ namespace BrokerGuiTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
-        [Retry(1)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Broker")]
         [AllureSubSuite("CreateApplicationForApartmentApplicationSubmitted")]

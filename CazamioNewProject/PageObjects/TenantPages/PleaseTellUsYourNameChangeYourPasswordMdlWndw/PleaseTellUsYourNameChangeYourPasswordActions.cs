@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CazamioNewProject.Objects;
 
 namespace CazamioNewProject.PageObjects.TenantPages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
 {
     public partial class PleaseTellUsYourNameChangeYourPasswordMdlWndw
     {
+        TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
+        TenantOccupantMySpace tenantOccupantMySpace = TenantOccupantMySpace.Generate();
+        TenantGuarantorMySpace tenantGuarantorMySpace = TenantGuarantorMySpace.Generate();
     }
 }

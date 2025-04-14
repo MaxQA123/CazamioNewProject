@@ -39,6 +39,47 @@ namespace CazamioNewProject.GuiHelpers
             // Если время истекло, возвращаем false
             return false;
         }
+
+        public static bool IsNotVisible(IWebElement element, int timeoutInSeconds = 10, int intervalInMilliseconds = 100)
+        {
+            var waitTime = TimeSpan.FromSeconds(timeoutInSeconds);
+            var interval = TimeSpan.FromMilliseconds(intervalInMilliseconds);
+            var startTime = DateTime.Now;
+
+            while (DateTime.Now - startTime < waitTime)
+            {
+                try
+                {
+                    // Если элемент существует и видим - значит он ещё отображается
+                    if (element != null && element.Displayed)
+                    {
+                        Console.WriteLine($"Toaster message is still visible: {element.Text}");
+                        Thread.Sleep(interval);
+                        continue;
+                    }
+                }
+                catch (NoSuchElementException)
+                {
+                    // Элемент не найден - значит не видим
+                    return true;
+                }
+                catch (StaleElementReferenceException)
+                {
+                    // Элемент устарел - значит не видим
+                    return true;
+                }
+                catch (Exception ex) when (ex is WebDriverException || ex is NullReferenceException)
+                {
+                    // Другие возможные исключения, связанные с отсутствием элемента
+                    return true;
+                }
+
+                Thread.Sleep(interval);
+            }
+
+            // Если за время ожидания элемент ни разу не исчез - возвращаем false
+            return false;
+        }
     }
 
     public class TitlesCheck

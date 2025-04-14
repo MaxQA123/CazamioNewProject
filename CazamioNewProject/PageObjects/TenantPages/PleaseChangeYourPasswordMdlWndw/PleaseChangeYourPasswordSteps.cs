@@ -14,7 +14,7 @@ namespace CazamioNewProject.PageObjects.TenantPages.PleaseChangeYourPasswordMdlW
             WaitUntil.CustomElementIsClickable(BtnSave);
             Button.Click(BtnSave);
             Pages.ToasterMessagesTenants
-                .VerifyMessageFirstSuccessfullUpdatedPassword();
+                .VerifyMessageSuccessfullyUpdatedNameAndPassword();
 
             return this;
         }

@@ -14,18 +14,18 @@ namespace CazamioNewProject.PageObjects.TenantPages.ToasterMessages
             return this;
         }
 
-        [AllureStep("VerifyMessageFirstSuccessfullUpdatedPassword")]
-        public ToasterMessagesTenants VerifyMessageFirstSuccessfullUpdatedPassword()
+        [AllureStep("VerifyMessageSuccessfullyUpdatedNameAndPassword")]
+        public ToasterMessagesTenants VerifyMessageSuccessfullyUpdatedNameAndPassword()
         {
-            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageFirstSuccessfullUpdatedPassword));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccessfullyUpdatedNameAndPassword));
 
             return this;
         }
 
-        [AllureStep("VerifyMessageSecondSuccessfullyUpdatedName")]
-        public ToasterMessagesTenants VerifyMessageSecondSuccessfullyUpdatedName()
+        [AllureStep("DissapearsMessageSuccessfullyUpdatedNameAndPassword")]
+        public ToasterMessagesTenants DissapearsMessageSuccessfullyUpdatedNameAndPassword()
         {
-            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSecondSuccessfullyUpdatedName));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageSuccessfullyUpdatedNameAndPassword));
 
             return this;
         }

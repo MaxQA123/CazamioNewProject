@@ -11,6 +11,7 @@ namespace CazamioNewProject.PageObjects.TenantPages.LeasePriceAdjustmentMdlWndw
             WaitUntil.CustomElementIsClickable(BtnCancel);
             Button.Click(BtnCancel);
 
+
             return this;
         }
     }
