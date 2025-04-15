@@ -18,7 +18,7 @@ namespace MarketplaceAdminGuiTest
 
     public class TestsBaseGui : MarketplaceAdminBase
     {
-        //Amount order 13 next must be 14
+        //Amount order 14 next must be 15
         [Test]
         [Order(1)]
         [AllureTag("Regression")]
@@ -1052,6 +1052,67 @@ namespace MarketplaceAdminGuiTest
 
             Pages.Templates
                 .DeleteItemFirstNameForMySpace();
+
+            WaitUntil.WaitSomeInterval(1000);
+
+            #endregion
+        }
+
+        [Test]
+        [Order(14)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(1)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("MarketplaceAdmin")]
+        [AllureSubSuite("EditApplicationNineNineNineEightSaintJohnsonPlace")]
+
+        public void EditApplicationNineNineNineEightSaintJohnsonPlace()
+        {
+            #region SettingsForBuilding
+
+            //9998 Saint Johnson Place
+
+            #endregion
+
+            #region Test data
+
+            Apartment apartment = Apartment.Generate();
+
+            #endregion
+
+            #region Preconditions
+
+            Pages.LogInLandlord
+                .LogInAsMarketplaceAdminMySpace();
+            Pages.SidebarLandlord
+                .ClickButtonBuildings();
+            Pages.ListOfBuildings
+                .SearchNineNineNineEightSaintJohnsonPlace()
+                .SelectNineNineNineEightSaintJohnsonPlace();
+            Pages.BuildingView
+                .VerifyTitleBuildingViewPage();
+
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
+            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
+
+            Pages.BuildingView
+                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
+                .ClickTabApartments();
+            KeyBoardActions.ScrollToDown();
+            Pages.BuildingView
+                .ClickButtonClone();
+
+            #endregion
+
+            #region Test
+
+ 
+
+            #endregion
+
+            #region Postconditions
 
             WaitUntil.WaitSomeInterval(1000);
 
