@@ -125,16 +125,14 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
             return this;
         }
 
-        public string CopyPasswordFromEmailForCreateAdmin()
+        public string GetPasswordFromEmailForCreaationUser()
         {
             WaitUntil.WaitSomeInterval(3000);
             List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
             Browser._Driver.SwitchTo().Window(tabsList[2]);
-            string getTextPassword = TextPasswordForConfirmAdmin.Text;
-            Regex regexgGetTextPassword = new Regex(@"[^\s]+$");
-            string textPasswordActual = regexgGetTextPassword.Match(getTextPassword).ToString();
+            string getTextPassword = PasswordFromTextForCreationAdminUser.Text;
 
-            return textPasswordActual;
+            return getTextPassword;
         }
 
         #endregion

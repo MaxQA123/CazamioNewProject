@@ -1,0 +1,544 @@
+{
+  "uuid": "edb32752-0645-46aa-abfc-1ea3f33e824d-tr-0-1003",
+  "historyId": "MarketplaceAdminGuiTest.TestsBaseGui.CreateBroker",
+  "fullName": "MarketplaceAdminGuiTest.TestsBaseGui.CreateBroker",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "MarketplaceAdminGuiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateBroker"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "MarketplaceAdmin"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateBroker"
+    }
+  ],
+  "links": [],
+  "name": "CreateBroker",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "CreateBroker"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateBroker",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsMarketplaceAdminMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1745055979983,
+              "stop": 1745055981307
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1745055981324,
+              "stop": 1745055981650
+            },
+            {
+              "name": "VerifyMarketplaceAdminUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Mark Adm"
+                },
+                {
+                  "name": "String",
+                  "value": "Marketplace Admin"
+                }
+              ],
+              "start": 1745055981660,
+              "stop": 1745055982220
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745055977204,
+          "stop": 1745055982220
+        },
+        {
+          "name": "ClickButtonBrokers",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745055982233,
+          "stop": 1745055987319
+        },
+        {
+          "name": "VerifyTitleListOfBrokersPg",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745055987319,
+          "stop": 1745055987466
+        },
+        {
+          "name": "ClickButtonCreateBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745055987466,
+          "stop": 1745055988305
+        },
+        {
+          "name": "VerifyTitleCreateNewBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745055988310,
+          "stop": 1745055988402
+        },
+        {
+          "name": "Enter first, last names, email broker's",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745055988403,
+          "stop": 1745055989832
+        },
+        {
+          "name": "CopyEmailFromFieldEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745055989834,
+          "stop": 1745055989878
+        },
+        {
+          "name": "CopyEmailBeforeDogFromModalWindowCreateNewBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745055989880,
+          "stop": 1745055990417
+        },
+        {
+          "name": "ClickButtonCreate",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745055990418,
+          "stop": 1745055991045
+        },
+        {
+          "name": "VerifyMessageBrokerHasBeenSuccessfullyCreated",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745055991046,
+          "stop": 1745055992139
+        },
+        {
+          "name": "CopyEmailFirstRecordEmailForFirstBrokerInList",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745055992139,
+          "stop": 1745055992711
+        },
+        {
+          "name": "VerifyEmailInListOfBrokers",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "qhmgj679jf@putsbox.com"
+            },
+            {
+              "name": "String",
+              "value": "qhmgj679jf@putsbox.com"
+            }
+          ],
+          "start": 1745055992712,
+          "stop": 1745055993219
+        },
+        {
+          "name": "MakeLogOut",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickButtonLogOutSidebar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1745055994242,
+              "stop": 1745055996922
+            },
+            {
+              "name": "ClickButtonYesIAmSure",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1745055997929,
+              "stop": 1745055998619
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745055993219,
+          "stop": 1745055998619
+        },
+        {
+          "name": "OpenNewTab",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745055998620,
+          "stop": 1745055998766
+        },
+        {
+          "name": "VerifyTitleLetterCreateBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745056003495,
+          "stop": 1745056003534
+        },
+        {
+          "name": "ClickButtonHtml",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745056003534,
+          "stop": 1745056004836
+        },
+        {
+          "name": "ClickButtonConfirmEmailForAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745056007922,
+          "stop": 1745056018173
+        },
+        {
+          "name": "PasteForEnterEmailFromEmailCreateBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "qhmgj679jf@putsbox.com"
+            }
+          ],
+          "start": 1745056018183,
+          "stop": 1745056020443
+        },
+        {
+          "name": "PasteForEnterPsswrdFromEmailCreateBroker",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "YU80^&xf"
+            }
+          ],
+          "start": 1745056020443,
+          "stop": 1745056022623
+        },
+        {
+          "name": "ClickIconShow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745056022623,
+          "stop": 1745056023277
+        },
+        {
+          "name": "ClickButtonLetsGo",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745056023277,
+          "stop": 1745056023991
+        },
+        {
+          "name": "GetUserNameRoleFromSideBar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745056023996,
+          "stop": 1745056026659
+        },
+        {
+          "name": "VerifyBrokerUserNameAndRoleCreating",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Broker"
+            }
+          ],
+          "start": 1745056026673,
+          "stop": 1745056026805
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "f710e0f388714be8ab57995c595f3b28-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1745055971051,
+      "stop": 1745056027841
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1745055971051,
+  "stop": 1745056027841
+}

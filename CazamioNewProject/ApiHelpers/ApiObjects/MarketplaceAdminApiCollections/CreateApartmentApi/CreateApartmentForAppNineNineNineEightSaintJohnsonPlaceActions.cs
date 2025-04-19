@@ -1,18 +1,16 @@
-﻿using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApi;
-using CazamioNewProject.CreateApartmentMandatoryDataApi;
+﻿using CazamioNewProject.ApiHelpers;
+using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApi;
 using CazamioNewProject.DbHelpers.BuildingsTable;
 using CazamioNewProject.GuiHelpers;
 using Newtonsoft.Json;
 using RestSharp;
 using System;
-using Locks = CazamioNewProject.CreateApartmentMandatoryDataApi.Locks;
 
-namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateApartmentApi
-{
-    //CreateApartmentForAppNineNineNineEightSaintJohnsonPlaceActions
+namespace CazamioNewProject.CreateApartmentMandatoryDataApi
+{   //CreateApartmentForAppNineNineNineEightSaintJohnsonPlaceActions
     public partial class ApartmentCreation
     {
-        public static RequestCreateApartmentMandatoryData RequestBodyCreateApartmentMandatoryData()
+        public static RequestCreateApartmentMandatoryData RequestBodyCreateApartmentForAppNineNineNineEightSaintJohnsonPlaceActions()
         {
             //9998 Saint Johnson Place
             // Get BuildingId from BD
@@ -96,7 +94,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             return payload;
         }
 
-        public static RestResponse CreateApartmentMandatoryData(string token, RequestCreateApartmentMandatoryData apartmentRequestBody)
+        public static RestResponse CreateApartmentForAppNineNineNineEightSaintJohnsonPlaceActions(string token, RequestCreateApartmentMandatoryData apartmentRequestBody)
         {
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
             var restRequest = new RestRequest("api/apartments/create", Method.Post);

@@ -91,7 +91,7 @@ namespace SuperAdminGui
                 .VerifyTitleLetterCreateAdmin()
                 .ClickButtonHtml();
 
-            string getTextPasswordActual = Pages.EmailPutsBox.CopyPasswordFromEmailForCreateAdmin();
+            string getTextPasswordActual = Pages.EmailPutsBox.GetPasswordFromEmailForCreaationUser();
 
             Pages.EmailPutsBox
                 .ClickButtonConfirmEmailForAdmin();

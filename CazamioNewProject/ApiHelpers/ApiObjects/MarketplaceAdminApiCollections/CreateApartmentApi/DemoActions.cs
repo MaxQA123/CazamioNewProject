@@ -5,6 +5,7 @@ using CazamioNewProject.GuiHelpers;
 using Newtonsoft.Json;
 using RestSharp;
 using System;
+using Locks = CazamioNewProject.CreateApartmentMandatoryDataApi.Locks;
 
 namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateApartmentApi
 {
@@ -95,7 +96,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             return payload;
         }
 
-        public static RestResponse CreateApartmentMandatoryData(string token, RequestCreateApartmentMandatoryData apartmentRequestBody)
+        public static RestResponse CreateApartmentForAppNineNineNineEightSaintJohnsonPlace(string token, RequestCreateApartmentMandatoryData apartmentRequestBody)
         {
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
             var restRequest = new RestRequest("api/apartments/create", Method.Post);

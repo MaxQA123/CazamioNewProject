@@ -1,0 +1,339 @@
+{
+  "uuid": "dcf21178-0275-4988-8378-1db9e1f67daa-tr-0-1011",
+  "historyId": "MarketplaceAdminGuiTest.TestsBaseGui.CreateApplicationForApartmentDepositReceived",
+  "fullName": "MarketplaceAdminGuiTest.TestsBaseGui.CreateApplicationForApartmentDepositReceived",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "MarketplaceAdminGuiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateApplicationForApartmentDepositReceived"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "MarketplaceAdmin"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateApplicationForApartmentDepositReceived"
+    }
+  ],
+  "links": [],
+  "name": "CreateApplicationForApartmentDepositReceived",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+    "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_VerifyTitleApartmentViewPage_100663923_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApartmentViewPage\\ApartmentViewAssertions.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_VerifyTitleApartmentViewPage_100663923_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_VerifyTitleApartmentViewPage_100663923_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.VerifyTitleApartmentViewPage() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApartmentViewPage\\ApartmentViewActions.cs:line 11\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.CreateApplicationForApartmentDepositReceived() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 856"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateApplicationForApartmentDepositReceived",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+        "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_VerifyTitleApartmentViewPage_100663923_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApartmentViewPage\\ApartmentViewAssertions.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_VerifyTitleApartmentViewPage_100663923_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_VerifyTitleApartmentViewPage_100663923_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.VerifyTitleApartmentViewPage() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApartmentViewPage\\ApartmentViewActions.cs:line 11\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.CreateApplicationForApartmentDepositReceived() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 856"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsMarketplaceAdminMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1745056814422,
+              "stop": 1745056818239
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1745056818249,
+              "stop": 1745056818604
+            },
+            {
+              "name": "VerifyMarketplaceAdminUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Mark Adm"
+                },
+                {
+                  "name": "String",
+                  "value": "Marketplace Admin"
+                }
+              ],
+              "start": 1745056818611,
+              "stop": 1745056819141
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745056811616,
+          "stop": 1745056819141
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745056819151,
+          "stop": 1745056826052
+        },
+        {
+          "name": "SearchNineNineNineEightSaintJohnsonPlace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745056826053,
+          "stop": 1745056840549
+        },
+        {
+          "name": "SelectItemFirst",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745056840550,
+          "stop": 1745056844384
+        },
+        {
+          "name": "VerifyTitleBuildingViewPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745056844384,
+          "stop": 1745056850719
+        },
+        {
+          "name": "GetValueOfStringAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745056850719,
+          "stop": 1745056852791
+        },
+        {
+          "name": "VerifyBuildingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "9998 Saint Johnson Place"
+            },
+            {
+              "name": "String",
+              "value": "9998 Saint Johnson Place"
+            }
+          ],
+          "start": 1745056852791,
+          "stop": 1745056855811
+        },
+        {
+          "name": "ClickTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745056855812,
+          "stop": 1745056857592
+        },
+        {
+          "name": "GetSubjectWithoutAgentSaintJohnsonPlace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetVlOfClmnUnitFrstRw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1745056858622,
+              "stop": 1745056858673
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745056857605,
+          "stop": 1745056858677
+        },
+        {
+          "name": "ClickRowByDepositReceived",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745056858678,
+          "stop": 1745056858968
+        },
+        {
+          "name": "VerifyTitleAddApartmentsPage",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Timed out after 10 seconds",
+            "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_VerifyTitleApartmentViewPage_100663923_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApartmentViewPage\\ApartmentViewAssertions.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_VerifyTitleApartmentViewPage_100663923_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1745056858970,
+          "stop": 1745056869473
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "e246e9212f574fc7a164984ad393b976-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1745056805096,
+      "stop": 1745056872257
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1745056805096,
+  "stop": 1745056872257
+}

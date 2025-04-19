@@ -1,4 +1,5 @@
 using Allure.Commons;
+using CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.LogInApiBroker;
 using CazamioNewProject.DbHelpers.AspNetUsersTable;
 using CazamioNewProject.DbHelpers.BrokersAgentsTable;
 using CazamioNewProject.DbHelpers.LandlordsBrokersTable;
@@ -130,7 +131,7 @@ namespace MarketplaceAdminGuiTest
                 .VerifyTitleLetterCreateBroker()
                 .ClickButtonHtml();
 
-            string getTextPasswordActual = Pages.EmailPutsBox.CopyPasswordFromEmailForCreateAdmin();
+            string getTextPasswordActual = Pages.EmailPutsBox.GetPasswordFromEmailForCreaationUser();
 
             Pages.EmailPutsBox
                 .ClickButtonConfirmEmailForAdmin();
@@ -212,7 +213,7 @@ namespace MarketplaceAdminGuiTest
                 .VerifySubjectLetterCreateAgentMySpace()
                 .ClickButtonHtml();
 
-            string getTextPasswordActual = Pages.EmailPutsBox.CopyPasswordFromEmailForCreateAdmin();
+            string getTextPasswordActual = Pages.EmailPutsBox.GetPasswordFromEmailForCreaationUser();
 
             Pages.EmailPutsBox
                 .ClickButtonConfirmEmailForAdmin();
@@ -1076,6 +1077,21 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
 
+            #region Test Data API
+
+            Broker broker = Broker.Generate();
+            var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentForAppNineNineNineEightSaintJohnsonPlaceActions();
+
+            #endregion
+
+            #region Preconditions API
+
+            var responseBroker = LogInApiBroker.ExecuteLogIn();
+            LogInApiBroker.VerifyUserData(responseBroker, broker);
+            CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseBroker.AuthData.Token, requestBodyApartment);
+
+            #endregion
+
             #region Test data
 
             Apartment apartment = Apartment.Generate();
@@ -1084,25 +1100,25 @@ namespace MarketplaceAdminGuiTest
 
             #region Preconditions
 
-            Pages.LogInLandlord
-                .LogInAsMarketplaceAdminMySpace();
-            Pages.SidebarLandlord
-                .ClickButtonBuildings();
-            Pages.ListOfBuildings
-                .SearchNineNineNineEightSaintJohnsonPlace()
-                .SelectNineNineNineEightSaintJohnsonPlace();
-            Pages.BuildingView
-                .VerifyTitleBuildingViewPage();
+            //Pages.LogInLandlord
+            //    .LogInAsMarketplaceAdminMySpace();
+            //Pages.SidebarLandlord
+            //    .ClickButtonBuildings();
+            //Pages.ListOfBuildings
+            //    .SearchNineNineNineEightSaintJohnsonPlace()
+            //    .SelectNineNineNineEightSaintJohnsonPlace();
+            //Pages.BuildingView
+            //    .VerifyTitleBuildingViewPage();
 
-            string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
-            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
+            //string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
+            //string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
 
-            Pages.BuildingView
-                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
-                .ClickTabApartments();
-            KeyBoardActions.ScrollToDown();
-            Pages.BuildingView
-                .ClickButtonClone();
+            //Pages.BuildingView
+            //    .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
+            //    .ClickTabApartments();
+            //KeyBoardActions.ScrollToDown();
+            //Pages.BuildingView
+            //    .ClickButtonClone();
 
             #endregion
 

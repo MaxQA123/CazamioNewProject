@@ -45,8 +45,8 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         [FindsBy(How = How.XPath, Using = "//td[text() = 'Welcome Aboard as an Agent at Noyo Properties NYC!']")]
         public IWebElement SubjectLetterCreateAgentMySpace;
 
-        [FindsBy(How = How.XPath, Using = "//td[@class = 'esd-block-text']//p[contains(text(), 'Password:')]")]
-        public IWebElement TextPasswordForConfirmAdmin;
+        [FindsBy(How = How.XPath, Using = "//td[@class = 'esd-block-text']//p[contains(text(), 'password:')]//span")]
+        public IWebElement PasswordFromTextForCreationAdminUser;
 
         [FindsBy(How = How.XPath, Using = "//tbody//tr[3]//a[contains(@href, 'https://u28342774.ct.sendgrid.net/ls/click')]")]
         public IWebElement BtnCofirmEmailLandlord;
