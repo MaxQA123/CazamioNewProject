@@ -66,7 +66,7 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
                                 MonthsFree = 1,
                                 LeaseTerms = "12 months lease",
                                 AdditionalInfo = "First month free on annual lease",
-                                IsTimeBased = true,
+                                IsTimeBased = false,
                                 Name = "First Month Free",
                                 IsActive = true
                             }

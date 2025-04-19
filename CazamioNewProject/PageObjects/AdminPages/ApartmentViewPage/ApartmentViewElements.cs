@@ -61,5 +61,11 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         public IWebElement LeasePriceValueOfString;
 
         #endregion
+
+        #region tab Applications
+
+
+
+        #endregion
     }
 }

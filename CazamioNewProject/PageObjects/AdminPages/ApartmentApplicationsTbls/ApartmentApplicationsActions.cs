@@ -1,7 +1,6 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using NUnit.Allure.Attributes;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
 {
@@ -96,6 +95,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls
             string agent = VlOfClmnAgentFrstRw.Text;
 
             return agent;
+        }
+
+        [AllureStep("ClickFirstRow")]
+        public ApartmentApplicationsTbl ClickFirstRow()
+        {
+            WaitUntil.CustomElementIsVisible(FirstRow);
+            Button.Click(FirstRow);
+
+            return this;
         }
 
         //[AllureStep("GetStatusFromFrstRw")]

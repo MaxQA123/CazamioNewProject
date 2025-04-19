@@ -97,23 +97,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         {
             WaitUntil.WaitSomeInterval(1000);
 
-            // Получение текста уведомления из EmailNotifications
             string subjectNotification = EmailNotifications.Generate().SubjectsCreateTenantPlusApp.CreateTenantViaPlusAppWithAgentWashingtonSquare;
             string unitNumberAc = Pages.BuildingApartmentsTbl.GetVlOfClmnUnitFrstRw();
 
-            // Замена только значения квартиры в тексте
             string updatedText = ReplaceLastUnitNumber(subjectNotification, unitNumberAc);
 
-            // Возвращение обновленного текста
             return updatedText;
         }
 
         private static string ReplaceLastUnitNumber(string subjectNotification, string unitNumber)
         {
-            // Замена номера квартиры только в формате #<число>
             string updatedText = Regex.Replace(subjectNotification, @"(?<=#)\w{2}(?=\.)", unitNumber);
 
-            // Возвращение обновленного текста
             return updatedText;
         }
 

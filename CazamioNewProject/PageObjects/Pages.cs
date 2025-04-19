@@ -5,6 +5,7 @@ using CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.AddressManagerPage;
 using CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls;
 using CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage;
+using CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage;
 using CazamioNewProject.PageObjects.AdminPages.AreYouSureDeleteTemplteMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls;
@@ -112,6 +113,7 @@ namespace CazamioNewProject.PageObjects
         public static VisitLogs VisitLogs => GetPage<VisitLogs>();
         public static AddressManager AddressManager => GetPage<AddressManager>();
         public static ListOfUsers ListOfUsers => GetPage<ListOfUsers>();
+        public static ApplicationDetail ApplicationDetail => GetPage<ApplicationDetail>();
 
         #endregion
 
@@ -154,7 +156,7 @@ namespace CazamioNewProject.PageObjects
 
         #endregion
 
-        #region Tanant pages
+        #region Tenant pages
 
         public static ToasterMessagesTenants ToasterMessagesTenants => GetPage<ToasterMessagesTenants>();
         public static HeaderTenants HeaderTenants => GetPage<HeaderTenants>();
@@ -164,7 +166,7 @@ namespace CazamioNewProject.PageObjects
 
         #endregion
 
-        #region Tanant modal windows
+        #region Tenant modal windows
 
         public static PleaseChangeYourPasswordMdlWndw PleaseChangeYourPasswordMdlWndw => GetPage<PleaseChangeYourPasswordMdlWndw>();
         public static PleaseTellUsYourNameMdlWndw PleaseTellUsYourNameMdlWndw => GetPage<PleaseTellUsYourNameMdlWndw>();

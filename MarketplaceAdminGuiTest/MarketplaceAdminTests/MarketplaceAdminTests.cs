@@ -1100,31 +1100,41 @@ namespace MarketplaceAdminGuiTest
 
             #region Preconditions
 
-            //Pages.LogInLandlord
-            //    .LogInAsMarketplaceAdminMySpace();
-            //Pages.SidebarLandlord
-            //    .ClickButtonBuildings();
-            //Pages.ListOfBuildings
-            //    .SearchNineNineNineEightSaintJohnsonPlace()
-            //    .SelectNineNineNineEightSaintJohnsonPlace();
-            //Pages.BuildingView
-            //    .VerifyTitleBuildingViewPage();
+            Pages.LogInLandlord
+                .LogInAsMarketplaceAdminMySpace();
+            Pages.SidebarLandlord
+                .ClickButtonBuildings();
+            Pages.ListOfBuildings
+                .SearchNineNineNineEightSaintJohnsonPlace()
+                .SelectNineNineNineEightSaintJohnsonPlace();
+            Pages.BuildingView
+                .VerifyTitleBuildingViewPage();
 
-            //string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
-            //string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
+            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
 
-            //Pages.BuildingView
-            //    .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
-            //    .ClickTabApartments();
-            //KeyBoardActions.ScrollToDown();
-            //Pages.BuildingView
-            //    .ClickButtonClone();
+            Pages.BuildingView
+                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
+                .ClickTabApartments();
+            KeyBoardActions.ScrollToDown();
+            Pages.BuildingApartmentsTbl
+                .ClickRowByVacant();
+            Pages.ApartmentView
+                .VerifyTitleApartmentViewPage()
+                .EnterRandomEmailGetApplicationLink()
+                .ClickButtonGetLink()
+                .ClickTabApplications();
+            KeyBoardActions.ScrollToDown();
+            Pages.ApartmentApplicationsTbl
+                .ClickFirstRow();
+            Pages.ApplicationDetail
+                .VerifyTitleApplicationDetailPage();
 
             #endregion
 
             #region Test
 
- 
+
 
             #endregion
 

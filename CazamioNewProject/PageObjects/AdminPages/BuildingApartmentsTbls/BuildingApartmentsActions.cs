@@ -38,6 +38,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
         [AllureStep("ClickRowByVacant")]
         public void ClickRowByVacant()
         {
+            WaitUntil.WaitSomeInterval(500);
             BuildingApartmentsTable buildingApartmentsTable = BuildingApartmentsTable.Generate();
 
             var xpath = "//table//tbody//tr//td[text() = '" + buildingApartmentsTable.StatusColumn.Vacant + "']";
