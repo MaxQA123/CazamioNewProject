@@ -1077,20 +1077,20 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
 
-            #region Test Data API
+            //#region Test Data API
 
-            Broker broker = Broker.Generate();
-            var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentForAppNineNineNineEightSaintJohnsonPlaceActions();
+            //Broker broker = Broker.Generate();
+            //var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentForAppNineNineNineEightSaintJohnsonPlaceActions();
 
-            #endregion
+            //#endregion
 
-            #region Preconditions API
+            //#region Preconditions API
 
-            var responseBroker = LogInApiBroker.ExecuteLogIn();
-            LogInApiBroker.VerifyUserData(responseBroker, broker);
-            CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseBroker.AuthData.Token, requestBodyApartment);
+            //var responseBroker = LogInApiBroker.ExecuteLogIn();
+            //LogInApiBroker.VerifyUserData(responseBroker, broker);
+            //CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseBroker.AuthData.Token, requestBodyApartment);
 
-            #endregion
+            //#endregion
 
             #region Test data
 
@@ -1121,7 +1121,11 @@ namespace MarketplaceAdminGuiTest
                 .ClickRowByVacant();
             Pages.ApartmentView
                 .VerifyTitleApartmentViewPage()
-                .EnterRandomEmailGetApplicationLink()
+                .EnterRandomEmailGetApplicationLink();
+
+            string fullEmailPutsBox = Pages.ApartmentView.GetFullEmailFromGetApplicationLinkField();
+
+            Pages.ApartmentView
                 .ClickButtonGetLink()
                 .ClickTabApplications();
             KeyBoardActions.ScrollToDown();
@@ -1129,6 +1133,8 @@ namespace MarketplaceAdminGuiTest
                 .ClickFirstRow();
             Pages.ApplicationDetail
                 .VerifyTitleApplicationDetailPage();
+            Pages.EditApplicationMdlWndw
+                .EditApplicationNineNineNineEightSaintJohnsonPlace();
 
             #endregion
 

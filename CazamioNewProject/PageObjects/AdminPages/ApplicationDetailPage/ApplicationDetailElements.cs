@@ -10,5 +10,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage
 
         [FindsBy(How = How.XPath, Using = ("//div[text() = 'Application detail']"))]
         public IWebElement TitleApplicationDetailPage;
+
+        [FindsBy(How = How.XPath, Using = ("//app-application-detail//div[@class = 'application-buttons']//button[@title = 'Edit application']"))]
+        public IWebElement EditApplicationBtn;
     }
 }

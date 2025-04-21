@@ -28,8 +28,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
 
         #region Apartment view
 
-        [AllureStep("CopyEmailFromFieldGetApplicationLink")]
-        public string CopyEmailFromFieldGetApplicationLink()
+        [AllureStep("GetFullEmailFromGetApplicationLinkField")]
+        public string GetFullEmailFromGetApplicationLinkField()
         {
             WaitUntil.CustomElementIsVisible(FieldInputGetApplicationLink);
             string fullEmail = FieldInputGetApplicationLink.GetAttribute("value");

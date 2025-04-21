@@ -1,11 +1,11 @@
-﻿using CazamioNewProject.GuiHelpers;
-using System;
+﻿using System;
 
 namespace CazamioNewProject.Objects
 {
     public class Application
     {
         public BasicDataInfo BasicData { get; set; }
+        public AddressApartmentInfo AddressApartment { get; set; }
         public RequestedOfferPriceInfo RequestedOfferPrice { get; set; }
         public LeasePriceInfo LeasePrice { get; set; }
         public SecurityDepositInfo SecurityDeposit { get; set; }
@@ -23,6 +23,7 @@ namespace CazamioNewProject.Objects
             return new Application
             {
                 BasicData = CreateBasicDataInfo(),
+                AddressApartment = CreateAddressApartmentInfo(),
                 RequestedOfferPrice = CreateRequestedOfferPriceInfo(),
                 LeasePrice = CreateLeasePriceInfo(),
                 SecurityDeposit = CreateSecurityDepositInfo(),
@@ -41,6 +42,11 @@ namespace CazamioNewProject.Objects
         {
             public string NotAssignetLabel { get; set; }
             public string DateCurrent { get; set; }
+        }
+
+        public class AddressApartmentInfo
+        {
+            public string NineNineNineEightSaintJohnsonPlace { get; set; }
         }
 
         public class RequestedOfferPriceInfo
@@ -133,6 +139,14 @@ namespace CazamioNewProject.Objects
             {
                 NotAssignetLabel = "Not assigned",
                 DateCurrent = DateTime.Now.ToString("MM/dd/yyyy"), // Format the date "12/14/2024"
+            };
+        }
+
+        private static AddressApartmentInfo CreateAddressApartmentInfo()
+        {
+            return new AddressApartmentInfo
+            {
+                NineNineNineEightSaintJohnsonPlace = "",
             };
         }
 

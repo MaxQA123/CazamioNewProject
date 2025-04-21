@@ -17,6 +17,7 @@ using CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.CreateNewAgentMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.DashboardPage;
 using CazamioNewProject.PageObjects.AdminPages.DatePickerMdlWndw;
+using CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw;
 using CazamioNewProject.PageObjects.AdminPages.ListOfAgentsPage;
 using CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage;
 using CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsApplicationsTbls;
@@ -83,6 +84,7 @@ namespace CazamioNewProject.PageObjects
         public static DemoTemplate Demo => GetPage<DemoTemplate>();
         public static EmailNotifications EmailNotofications => GetPage<EmailNotifications>();
         public static LeaseSignDocument LeaseSignDocument => GetPage<LeaseSignDocument>();
+        public static ApplicationDetailObjct ApplicationDetailObjct => GetPage<ApplicationDetailObjct>();
 
         #endregion 
 
@@ -140,6 +142,7 @@ namespace CazamioNewProject.PageObjects
         public static DatePicker DatePicker => GetPage<DatePicker>();
         public static CreateApplicationMdlWndw CreateApplicationMdlWndw => GetPage<CreateApplicationMdlWndw>();
         public static AddApplicantMdlWndw AddApplicantMdlWndw => GetPage<AddApplicantMdlWndw>();
+        public static EditApplicationMdlWndw EditApplicationMdlWndw => GetPage<EditApplicationMdlWndw>();
 
         #endregion
 
