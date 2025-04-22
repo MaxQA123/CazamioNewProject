@@ -11,8 +11,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw
             Pages.ApplicationDetail
                 .ClickEditApplicationBtn();
             VerifyEditApplicationTitle();
-            //WaitUntil.CustomElementIsVisible(FieldInputGetApplicationLink);
-            //InputGeneral.InputFunctionWithClear(FieldInputGetApplicationLink, tenantCreatorMySpace.Emails.RandomMainApplicantEmail);
+            InputGeneral.InputFunctionWithClear(RequestedOfferPriceFieldInput, application.RequestedOfferPrice.SixthPriceStatic);
+            InputGeneral.InputFunctionWithClear(LeasePriceFieldInput, application.LeasePrice.SixthPriceStatic);
+            InputGeneral.InputFunctionWithClear(SecurityDepositFieldInput, application.SecurityDeposit.SixthPriceStatic);
 
             return this;
         }

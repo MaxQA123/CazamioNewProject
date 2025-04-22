@@ -1118,7 +1118,7 @@ namespace MarketplaceAdminGuiTest
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
             Pages.BuildingApartmentsTbl
-                .ClickRowByVacant();
+                .ClickRowByDepositReceived();
             Pages.ApartmentView
                 .VerifyTitleApartmentViewPage()
                 .EnterRandomEmailGetApplicationLink();

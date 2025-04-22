@@ -37,7 +37,7 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
                         InternalNotes = "",
                         AvailableFrom = DateTime.Now.ToString("yyyy-MM-dd"),
                         ApartmentType = "MultiFamily",
-                        Status = "Vacant",
+                        Status = "Deposit",
                         StaffId = null,
                         LeaseDurations = "12 months",
                         Amenities = new object[0],

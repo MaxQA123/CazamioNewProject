@@ -23,6 +23,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
         [AllureStep("ClickRowByDepositReceived")]
         public void ClickRowByDepositReceived()
         {
+            WaitUntil.WaitSomeInterval(500);
             BuildingApartmentsTable buildingApartmentsTable = BuildingApartmentsTable.Generate();
 
             var xpath = "//table//tbody//tr//td[text() = '" + buildingApartmentsTable.StatusColumn.DepositReceived + "']";
@@ -54,6 +55,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
         [AllureStep("ClickRowByOccupied")]
         public void ClickRowByOccupied()
         {
+            WaitUntil.WaitSomeInterval(500);
             BuildingApartmentsTable buildingApartmentsTable = BuildingApartmentsTable.Generate();
 
             var xpath = "//table//tbody//tr//td[text() = '" + buildingApartmentsTable.StatusColumn.Occupied + "']";
@@ -69,6 +71,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
         [AllureStep("ClickRowByApplicationSubmitted")]
         public void ClickRowByApplicationSubmitted()
         {
+            WaitUntil.WaitSomeInterval(500);
             BuildingApartmentsTable buildingApartmentsTable = BuildingApartmentsTable.Generate();
 
             var xpath = "//table//tbody//tr//td[text() = '" + buildingApartmentsTable.StatusColumn.ApplicationSubmitted + "']";
@@ -83,6 +86,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
 
         public void ClickRowBySignedLease()
         {
+            WaitUntil.WaitSomeInterval(500);
             BuildingApartmentsTable buildingApartmentsTable = BuildingApartmentsTable.Generate();
 
             var xpath = "//table//tbody//tr//td[text() = '" + buildingApartmentsTable.StatusColumn.SignedLease + "']";

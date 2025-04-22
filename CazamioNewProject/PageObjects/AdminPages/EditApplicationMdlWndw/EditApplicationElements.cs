@@ -7,5 +7,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw
     {
         [FindsBy(How = How.XPath, Using = ("//app-edit-application//h3[text() = 'Edit application']"))]
         public IWebElement EditApplicationTitle;
+
+        [FindsBy(How = How.XPath, Using = ("//app-edit-application//input[@id = 'requestedOfferPrice']"))]
+        public IWebElement RequestedOfferPriceFieldInput;
+
+        [FindsBy(How = How.XPath, Using = ("//app-edit-application//input[@id = 'leasePrice']"))]
+        public IWebElement LeasePriceFieldInput;
+
+        [FindsBy(How = How.XPath, Using = ("//app-edit-application//input[@id = 'depositPrice']"))]
+        public IWebElement SecurityDepositFieldInput;
     }
 }

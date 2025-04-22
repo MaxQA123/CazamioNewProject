@@ -9,6 +9,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage
         public ApplicationDetail ClickEditApplicationBtn()
         {
             WaitUntil.CustomElementIsVisible(EditApplicationBtn);
+            WaitUntil.WaitSomeInterval(500);
             Button.Click(EditApplicationBtn);
 
             return this;

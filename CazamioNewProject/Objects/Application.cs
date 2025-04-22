@@ -55,6 +55,8 @@ namespace CazamioNewProject.Objects
             public string SecondPriceStatic { get; set; }
             public string ThirdPriceStatic { get; set; }
             public string FourthPriceStatic { get; set; }
+            public string FifthPriceStatic { get; set; }
+            public string SixthPriceStatic { get; set; }
         }
 
         public class LeasePriceInfo
@@ -64,6 +66,7 @@ namespace CazamioNewProject.Objects
             public string ThirdPriceStatic { get; set; }
             public string FourthPriceStatic { get; set; }
             public string FifthPriceStatic { get; set; }
+            public string SixthPriceStatic { get; set; }
         }
 
         public class SecurityDepositInfo
@@ -72,6 +75,8 @@ namespace CazamioNewProject.Objects
             public string SecondPriceStatic { get; set; }
             public string ThirdPriceStatic { get; set; }
             public string FourthPriceStatic { get; set; }
+            public string FifthPriceStatic { get; set; }
+            public string SixthPriceStatic { get; set; }
         }
 
         public class MonthsFreeInfo
@@ -158,6 +163,8 @@ namespace CazamioNewProject.Objects
                 SecondPriceStatic = "2500",
                 ThirdPriceStatic = "16000",
                 FourthPriceStatic = "900",
+                FifthPriceStatic = "",
+                SixthPriceStatic = "3999",
             };
         }
 
@@ -169,7 +176,8 @@ namespace CazamioNewProject.Objects
                 SecondPriceStatic = "$1555",
                 ThirdPriceStatic = "$16333",
                 FourthPriceStatic = "$900",
-                FifthPriceStatic = "$10333"
+                FifthPriceStatic = "$10333",
+                SixthPriceStatic = "3999",
             };
         }
 
@@ -181,6 +189,8 @@ namespace CazamioNewProject.Objects
                 SecondPriceStatic = "",
                 ThirdPriceStatic = "32000",
                 FourthPriceStatic = "1800",
+                FifthPriceStatic = "",
+                SixthPriceStatic = "7998",
             };
         }
 

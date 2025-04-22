@@ -272,7 +272,7 @@ namespace CazamioNewProject.Objects
                 OffMarket = "Off market",
                 Occupied = "Occupied",
                 Vacant = "Vacant",
-                DepositReceived = "Deposit received",
+                DepositReceived = "Deposit",
                 ApplicationSubmitted = "Application submitted",
                 SignedLease = "Signed lease",
             };
