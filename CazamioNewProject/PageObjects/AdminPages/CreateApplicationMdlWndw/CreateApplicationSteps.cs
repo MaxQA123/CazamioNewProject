@@ -5,6 +5,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
 {
     public partial class CreateApplicationMdlWndw
     {
+        #region First step
+
         [AllureStep("PassFirstStepRandomEmail")]
         public CreateApplicationMdlWndw PassFirstStepRandomEmail()
         {
@@ -42,6 +44,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             return this;
         }
 
+        #endregion
+
+        #region Second step
+
         [AllureStep("PassSecondStepOneOneOneAEastStPedestrianCrossingAddress")]
         public CreateApplicationMdlWndw PassSecondStepOneOneOneAEastStPedestrianCrossingAddress()
         {
@@ -65,6 +71,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
 
             return this;
         }
+
+        #endregion
+
+        #region Third step
 
         [AllureStep("PassThirdStepFullData")]
         public CreateApplicationMdlWndw PassThirdStepFullData()
@@ -259,5 +269,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
 
             return this;
         }
+
+        #endregion
     }
 }

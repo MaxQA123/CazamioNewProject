@@ -1133,14 +1133,13 @@ namespace MarketplaceAdminGuiTest
                 .ClickFirstRow();
             Pages.ApplicationDetail
                 .VerifyTitleApplicationDetailPage();
-            Pages.EditApplicationMdlWndw
-                .EditApplicationNineNineNineEightSaintJohnsonPlace();
 
             #endregion
 
             #region Test
 
-
+            Pages.EditApplicationMdlWndw
+                .EditApplicationNineNineNineEightSaintJohnsonPlace();
 
             #endregion
 

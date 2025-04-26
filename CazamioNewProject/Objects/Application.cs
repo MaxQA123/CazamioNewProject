@@ -102,6 +102,8 @@ namespace CazamioNewProject.Objects
 
         public class RequestedWorkInfo
         {
+            public string LongTextNineNineNineEightSaintJohnsonPlace { get; set; }
+            public string ShortTextNineNineNineEightSaintJohnsonPlace { get; set; }
             public string LongTextWashingtonSquare { get; set; }
             public string ShortTextWashingtonSquare { get; set; }
             public string ShortTextEastStreet { get; set; }
@@ -111,6 +113,8 @@ namespace CazamioNewProject.Objects
 
         public class ReferralDetailsInfo
         {
+            public string LongTextNineNineNineEightSaintJohnsonPlace { get; set; }
+            public string ShortTextNineNineNineEightSaintJohnsonPlace { get; set; }
             public string LongTextWashingtonSquare { get; set; }
             public string ShortTextWashingtonSquare { get; set; }
             public string ShortTextEastStreet { get; set; }
@@ -228,6 +232,8 @@ namespace CazamioNewProject.Objects
         {
             return new RequestedWorkInfo
             {
+                LongTextNineNineNineEightSaintJohnsonPlace = "Lorem 9998 Saint Johnson Pl Requested Work. Lorem ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit.",
+                ShortTextNineNineNineEightSaintJohnsonPlace = "Lorem 9998 Saint Johnson Pl Requested Work. ipsum",
                 LongTextWashingtonSquare = "Lorem 1 Washington Square Requested Work. Lorem ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit.",
                 ShortTextWashingtonSquare = "Lorem 1 Washington Square Requested Work.",
                 ShortTextEastStreet = "Lorem 111A East 51st Street Reqeusted work.",
@@ -240,6 +246,8 @@ namespace CazamioNewProject.Objects
         {
             return new ReferralDetailsInfo
             {
+                LongTextNineNineNineEightSaintJohnsonPlace = "Lorem 9998 Saint Johnson Pl Referral Details. Lorem ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit.",
+                ShortTextNineNineNineEightSaintJohnsonPlace = "Lorem 9998 Saint Johnson Pl Referral Details. ipsum",
                 LongTextWashingtonSquare = "Lorem 1 Washington Square Referral Details. Lorem ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit.",
                 ShortTextWashingtonSquare = "Lorem 1 Washington Square Referral Details.",
                 ShortTextEastStreet = "Lorem 111A East 51st Street Referral Details.",
