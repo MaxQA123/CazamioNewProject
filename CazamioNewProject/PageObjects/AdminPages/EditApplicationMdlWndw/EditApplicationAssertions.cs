@@ -13,5 +13,13 @@ namespace CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw
 
             return this;
         }
+
+        [AllureStep("VerifySureYouWantToEditThisApplicationSubTitle")]
+        public EditApplicationMdlWndw VerifySureYouWantToEditThisApplicationSubTitle()
+        {
+            Assert.IsTrue(TitlesCheck.IsVisible(SureYouWantToEditThisApplicationSubTitle));
+
+            return this;
+        }
     }
 }

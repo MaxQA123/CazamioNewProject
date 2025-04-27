@@ -6,17 +6,12 @@ namespace CazamioNewProject.GuiHelpers
     public class GenerateRandomData
     {
         private static readonly Random _random = new Random();
-
-        // Метод для случайного выбора адреса
         public static string GetRandomStreet()
         {
-            // Массив доступных адресов
             string[] streets = { "Avenue A", "Bank Street", "Lincoln Place", "Hart Street", "West 126th Street" };
 
-            // Случайный индекс для выбора адреса
             int index = _random.Next(streets.Length);
 
-            // Возвращаем случайный адрес
             return streets[index];
         }
 
@@ -54,7 +49,7 @@ namespace CazamioNewProject.GuiHelpers
 
         public static string RandomNumberByDateTime()
         {
-            // Получение текущей даты и времени в формате "MMddyyyyHHmm" 211220241234
+            //Get the current date and time with the format "MMddyyyyHHmm" 211220241234
             string dateTimeFormatted = DateTime.Now.ToString("MMddyyyyHHmm");
 
             return dateTimeFormatted;

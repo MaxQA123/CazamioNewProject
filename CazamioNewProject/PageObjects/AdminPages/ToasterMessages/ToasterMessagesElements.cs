@@ -5,7 +5,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
 {
     public partial class ToasterMessagesLandlord
     {
-        #region Common Success toasters 
+        //Common Success toasters 
 
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Success']")]
         public IWebElement MessageSuccess;
@@ -13,6 +13,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
         //Appeared if selected and saved a payment method in Payment Options modal window
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Payment methods selected, Click save to confirm']")]
         public IWebElement MessagePaymentMethodsSelected;
+
+        #region For Temlates page Success toasters
 
         //Appeared if created a new template on the "Create tempalte" page
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Template was saved.']")]
@@ -52,11 +54,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
 
         #endregion
 
-        #region For building Success toasters 
+        #region For apartment Success toasters 
 
         //Appeared if created a new apartment
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Apartments were saved successfully.']")]
         public IWebElement MessageApartmentsWereSavedSuccessfully;
+
+        //Appeared if created a new apartment
+        [FindsBy(How = How.XPath, Using = "//span[text() = 'Copied the link to application.']")]
+        public IWebElement MessageCopiedTheLinkToApplication;
 
         #endregion
 
@@ -65,6 +71,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
         //Appeared if created a new tenant-occupant and guarantor
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Added applicants to application']")]
         public IWebElement MessageAddedApplicantsToApplication;
+
+        #endregion
+
+        #region For Edit application modal window Success toasters 
+
+        //Appeared if updated the data in the Edit application modal window
+        [FindsBy(How = How.XPath, Using = "//span[text() = 'Application edit successful']")]
+        public IWebElement MessageApplicationEditSuccessful;
 
         #endregion
     }

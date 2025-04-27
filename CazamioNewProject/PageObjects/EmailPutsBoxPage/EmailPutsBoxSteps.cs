@@ -1,7 +1,6 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using NUnit.Allure.Attributes;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 
 namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
 {

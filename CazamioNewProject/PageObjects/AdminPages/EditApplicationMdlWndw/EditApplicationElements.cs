@@ -74,13 +74,26 @@ namespace CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw
         [FindsBy(How = How.XPath, Using = "//app-edit-application//div[@class = 'applicants']//input")]
         public IWebElement FirstFieldInputEmailAddress;
 
-        [FindsBy(How = How.XPath, Using = "//app-prepare-application//div[@class = 'step applicants']//div[@class = 'checkbox-input']//input[@id = 'is-guarantor-input']")]
+        [FindsBy(How = How.XPath, Using = "//app-edit-application//mat-checkbox[@id = 'is-guarantor']//input[@id = 'is-guarantor-input']")]
         public IWebElement CheckBoxThisIsAGuarantorFirstEmailAddressField;
 
         [FindsBy(How = How.XPath, Using = "//app-edit-application//div[@class = 'email-input no-margin'][2]//input")]
         public IWebElement SecondFieldInputEmailAddress;
 
-        [FindsBy(How = How.XPath, Using = "//app-prepare-application//div[@class = 'step applicants']//div[@class = 'checkbox-input'][2]//input[@id = 'is-guarantor-input']")]
+        [FindsBy(How = How.XPath, Using = "//app-edit-application//div[@class = 'checkbox-input'][2]//mat-checkbox[@id = 'is-guarantor']//input[@id = 'is-guarantor-input']")]
         public IWebElement CheckBoxThisIsAGuarantorSecondEmailAddressField;
+
+        [FindsBy(How = How.XPath, Using = "//app-edit-application//span[text() = 'Edit']")]
+        public IWebElement EditBtn;
+
+        #region Edit application modal window for confirmation
+
+        [FindsBy(How = How.XPath, Using = ("//app-edit-application//div[text() = ' Sure you want to edit this application? ']"))]
+        public IWebElement SureYouWantToEditThisApplicationSubTitle;
+
+        [FindsBy(How = How.XPath, Using = "//app-edit-application//span[text() = 'Edit']")]
+        public IWebElement EditBtnForConfirmation;
+
+        #endregion
     }
 }

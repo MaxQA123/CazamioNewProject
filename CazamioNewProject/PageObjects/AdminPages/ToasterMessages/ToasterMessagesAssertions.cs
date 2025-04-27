@@ -103,6 +103,26 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
+        [AllureStep("VerifyMessageApplicationEditSuccessful")]
+        public ToasterMessagesLandlord VerifyMessageApplicationEditSuccessful()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageApplicationEditSuccessful));
+            WaitUntil.CustomElementIsInVisible(MessageApplicationEditSuccessful);
+
+            return this;
+        }
+
+        [AllureStep("VerifyMessageCopiedTheLinkToApplication")]
+        public ToasterMessagesLandlord VerifyMessageCopiedTheLinkToApplication()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageCopiedTheLinkToApplication));
+            WaitUntil.CustomElementIsInVisible(MessageCopiedTheLinkToApplication);
+
+            return this;
+        }
+
         #endregion
     }
 }

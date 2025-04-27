@@ -1077,20 +1077,20 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
 
-            //#region Test Data API
+            #region Test Data API
 
-            //Broker broker = Broker.Generate();
-            //var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentForAppNineNineNineEightSaintJohnsonPlaceActions();
+            Broker broker = Broker.Generate();
+            var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentForAppNineNineNineEightSaintJohnsonPlaceActions();
 
-            //#endregion
+            #endregion
 
-            //#region Preconditions API
+            #region Preconditions API
 
-            //var responseBroker = LogInApiBroker.ExecuteLogIn();
-            //LogInApiBroker.VerifyUserData(responseBroker, broker);
-            //CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseBroker.AuthData.Token, requestBodyApartment);
+            var responseBroker = LogInApiBroker.ExecuteLogIn();
+            LogInApiBroker.VerifyUserData(responseBroker, broker);
+            CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseBroker.AuthData.Token, requestBodyApartment);
 
-            //#endregion
+            #endregion
 
             #region Test data
 
@@ -1126,7 +1126,10 @@ namespace MarketplaceAdminGuiTest
             string fullEmailPutsBox = Pages.ApartmentView.GetFullEmailFromGetApplicationLinkField();
 
             Pages.ApartmentView
-                .ClickButtonGetLink()
+                .ClickButtonGetLink();
+            Pages.ToasterMessagesLandlord
+                .VerifyMessageCopiedTheLinkToApplication();
+            Pages.ApartmentView
                 .ClickTabApplications();
             KeyBoardActions.ScrollToDown();
             Pages.ApartmentApplicationsTbl
@@ -1138,8 +1141,65 @@ namespace MarketplaceAdminGuiTest
 
             #region Test
 
-            Pages.EditApplicationMdlWndw
-                .EditApplicationNineNineNineEightSaintJohnsonPlace();
+            var (window, mainApplicantPartEmail, occupantPartEmail, guarantorPartEmail,
+                mainApplicantFullEmailFromEditApp, occupantFullEmailFromEditApp, guarantorFullEmailFromEditApp) = 
+                Pages.EditApplicationMdlWndw.EditApplicationNineNineNineEightSaintJohnsonPlace();
+            //Main applicant
+            Pages.JScriptExecutor
+               .OpenNewTab();
+            Pages.EmailHelper
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, mainApplicantPartEmail);
+
+            string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+
+            //Pages.EmailPutsBox
+            //    .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
+            Pages.EmailPutsBox
+                .ClickButtonHtml()
+                .ClickButtonStartYourApplicationNowlForTenant();
+            Pages.ToasterMessagesTenants
+                .VerifyMessageAccountWasSuccessfullyActivated();
+            Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
+                .QuicklyPassTenantCreatorMySpace();
+            Pages.LeasePriceAdjustmentMdlWndw
+                .ClickBtnCancel();
+            Pages.HeaderTenants
+                .LogOut();
+            //Occupant
+            Pages.JScriptExecutor
+               .OpenNewTab();
+            Pages.EmailHelper
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, occupantPartEmail);
+            //Pages.EmailPutsBox
+            //    .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
+            Pages.EmailPutsBox
+                .ClickButtonHtml()
+                .ClickButtonStartYourApplicationNowlForTenantSecond();
+            Pages.ToasterMessagesTenants
+                .VerifyMessageAccountWasSuccessfullyActivated();
+
+            Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
+                .QuicklyPassTenantOccupantMySpace();
+            Pages.HeaderTenants
+                .LogOut();
+            //Guarantor
+            Pages.JScriptExecutor
+               .OpenNewTab();
+            Pages.EmailHelper
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, guarantorPartEmail);
+            //Pages.EmailPutsBox
+            //    .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
+            Pages.EmailPutsBox
+                .ClickButtonHtml()
+                .ClickButtonStartYourApplicationNowlForTenantThird();
+            Pages.ToasterMessagesTenants
+                .VerifyMessageAccountWasSuccessfullyActivated();
+            Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
+                .QuicklyPassTenantGuarantorMySpace();
+            Pages.HeaderTenants
+                .LogOut();
+
+            WaitUntil.WaitSomeInterval(5000);
 
             #endregion
 
