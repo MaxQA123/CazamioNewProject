@@ -9,6 +9,7 @@ namespace CazamioNewProject.Objects
         public CrownStInfo CrownSt { get; set; }
         public AlbermaleRdInfo AlbermaleRd { get; set; }
         public East51stStreetPedestrianCrossingInfo East51stStreetPedestrianCrossing { get; set; }
+        public DeanStreetInfo DeanStreet { get; set; }
         public GatesAvenueInfo GatesAvenue { get; set; }
         public CommonApiDataInfo CommonApiData { get; set; }
         public DescriptionsInternalNotesInfo DescriptionsInternalNotes { get; set; }
@@ -27,6 +28,7 @@ namespace CazamioNewProject.Objects
                 CrownSt = CreateCrownStInfo(),
                 AlbermaleRd = CreateAlbermaleRdInfo(),
                 East51stStreetPedestrianCrossing = CreateEast51stStreetPedestrianCrossingInfo(),
+                DeanStreet = CreateDeanStreetInfo(),
                 GatesAvenue = CreateGatesAvenueInfo(),
                 CommonApiData = CreateCommonApiDataInfo(),
                 DescriptionsInternalNotes = CreateDescriptionsInternalNotesInfo(),
@@ -100,6 +102,21 @@ namespace CazamioNewProject.Objects
         }
 
         public class East51stStreetPedestrianCrossingInfo
+        {
+            public string NumberRandomNameAddressStatic { get; set; }
+            public string NumberNameAddressStatic { get; set; }
+            public string NumberNameAddress { get; set; }
+            public string NumberAddress { get; set; }
+            public string AddressName { get; set; }
+            public string City { get; set; }
+            public string State { get; set; }
+            public string Zip { get; set; }
+            public string Neighborhood { get; set; }
+            public string BuildingName { get; set; }
+            public string LlcName { get; set; }
+        }
+
+        public class DeanStreetInfo
         {
             public string NumberRandomNameAddressStatic { get; set; }
             public string NumberNameAddressStatic { get; set; }
@@ -299,6 +316,27 @@ namespace CazamioNewProject.Objects
                 Neighborhood = "Manhattan",
                 BuildingName = "QA-Building Name AGENT 111A East 51st Street Pedestrian Crossing (12345) (*&^%)",
                 //BuildingName = "QA-Building Name AGENT Random East 51st Street Pedestrian Crossing (12345) (*&^%)",
+                LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
+            };
+        }
+
+        private static DeanStreetInfo CreateDeanStreetInfo()
+        {
+            return new DeanStreetInfo
+            {
+                NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(1) + " " + "Dean Street",
+                NumberNameAddressStatic = "12567 Dean Street",
+                //NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(2) + GenerateRandomData.RandomAlphabetUpperCase(1) + " " + "Dean Street",
+                NumberNameAddress = "12567 Dean Street",
+                NumberAddress = "12567",
+                //NumberAddress = GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomAlphabetUpperCase(1),
+                AddressName = "Dean Street",
+                City = "Brooklyn",
+                State = "NY",
+                Zip = "11238",
+                Neighborhood = "Prospect Heights",
+                BuildingName = "QA-Building Name AGENT 12567 Dean Street (12345) (*&^%)",
+                //BuildingName = "QA-Building Name AGENT Random Dean Street (12345) (*&^%)",
                 LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
             };
         }
