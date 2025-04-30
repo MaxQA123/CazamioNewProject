@@ -156,6 +156,40 @@ namespace CazamioNewProject.DbHelpers.BuildingsTable
 
                 return row;
             }
+
+            public static BuildingsDbModels GetBuildingIdOneTwoFiveSixSevenDeanStreet()
+            {
+                var row = new BuildingsDbModels();
+
+                string query = "SELECT Id" +
+                       " FROM Buildings" +
+                       " WHERE MarketplaceId = '15' AND AddressId IN" +
+                       " (SELECT TOP 1 Id FROM Addresses WHERE Street = '12567 Dean Street' ORDER BY Id DESC)";
+                try
+                {
+                    using SqlConnection connection = new(ConnectionDb.GET_CONNECTION_STRING_TO_DB);
+                    using SqlCommand command = new(query, connection);
+                    connection.Open();
+
+                    using SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        row.AddressId = GetValueOrDefault<long>(reader, 0);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    throw new ArgumentException($"Error: {ex.Message}\r\n{ex.StackTrace}");
+                }
+                finally
+                {
+
+                    SqlConnection.ClearAllPools();
+                }
+
+                return row;
+            }
         }
     }
 }

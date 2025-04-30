@@ -1,5 +1,4 @@
 ﻿using CazamioNewProject.ApiHelpers;
-using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApi;
 using CazamioNewProject.DbHelpers.BuildingsTable;
 using CazamioNewProject.GuiHelpers;
 using Newtonsoft.Json;
@@ -7,14 +6,14 @@ using RestSharp;
 using System;
 
 namespace CazamioNewProject.CreateApartmentMandatoryDataApi
-{   
+{
     public partial class ApartmentCreation
     {
-        public static RequestCreateApartmentMandatoryData RequestBodyCreateApartmentForAppNineNineNineEightSaintJohnsonPlaceActions()
+        public static RequestCreateApartmentMandatoryData RequestBodyCreateApartmentForAppOneTwoFiveSixSevenDeanStreet()
         {
-            //9998 Saint Johnson Place
+            //12567 Dean Street
             // Get BuildingId from BD
-            var buildingIdResult = BuildingsDbRequests.Buildings.GetBuildingIdNineNineNineEightSaintJohnsonPlace();
+            var buildingIdResult = BuildingsDbRequests.Buildings.GetBuildingIdOneTwoFiveSixSevenDeanStreet();
             long buildingId = buildingIdResult.AddressId;
 
             var payload = new RequestCreateApartmentMandatoryData
@@ -37,7 +36,7 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
                         InternalNotes = "",
                         AvailableFrom = DateTime.Now.ToString("yyyy-MM-dd"),
                         ApartmentType = "MultiFamily",
-                        Status = "Deposit",
+                        Status = "Vacant",
                         StaffId = null,
                         LeaseDurations = "12 months",
                         Amenities = new object[0],
@@ -58,19 +57,7 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
                         RequiredDocumentsIds = new long[] { 1, 3, 6, 10, 21, 22 },
                         Floor = null,
                         FreeStuff = new object[0],
-                        Concessions = new Concession[]
-                        {
-                            new Concession
-                            {
-                                SpecialOfferId = 1,
-                                MonthsFree = 1,
-                                LeaseTerms = "12 months lease",
-                                AdditionalInfo = "First month free on annual lease",
-                                IsTimeBased = false,
-                                Name = "First Month Free",
-                                IsActive = true
-                            }
-                        },
+                        Concessions = new object[0],
                         HoldingDeposit = new HoldingDeposit
                         {
                             Amount = 500,
@@ -94,7 +81,7 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
             return payload;
         }
 
-        public static RestResponse CreateApartmentForAppNineNineNineEightSaintJohnsonPlaceActions(string token, RequestCreateApartmentMandatoryData apartmentRequestBody)
+        public static RestResponse CreateApartmentForAppOneTwoFiveSixSevenDeanStreet(string token, RequestCreateApartmentMandatoryData apartmentRequestBody)
         {
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
             var restRequest = new RestRequest("api/apartments/create", Method.Post);
