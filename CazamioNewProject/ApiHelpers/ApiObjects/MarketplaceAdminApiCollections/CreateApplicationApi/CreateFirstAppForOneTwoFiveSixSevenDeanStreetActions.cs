@@ -17,30 +17,30 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             {
                 ApartmentId = /* You'll need to provide apartment ID here */,
                 LeasePrice = 850,
-                ReferralDetails = "", // Add referral details if needed
-                MoveInDate = DateTimeOffset.Now, // Or specific move-in date
-                OfferPrice = 850, // Same as lease price or different if offering discount
-                RentPrePayment = 850, // Typically same as first month's rent
-                RentalTerms = "12 months", // Matching lease duration
-                RequestedWork = null, // Or object if there's requested work
-                SecurityDeposit = 850, // Typically same as one month's rent
-                TenantEmail = "", // Add tenant email
-                GeneratedLinkId = Guid.NewGuid() // Or specific GUID if needed
+                ReferralDetails = "", 
+                MoveInDate = DateTimeOffset.Now, 
+                OfferPrice = 850, 
+                RentPrePayment = 850, 
+                RentalTerms = "12 months", 
+                RequestedWork = null, 
+                SecurityDeposit = 850, //
+                TenantEmail = "", 
+                GeneratedLinkId = Guid.NewGuid()
             };
 
             return payload;
         }
 
-        public static RestResponse CreateApartmentForAppNineNineNineEightSaintJohnsonPlaceActions(string token, RequestCreateApartmentMandatoryData apartmentRequestBody)
+        public static RestResponse CreateApartmentForAppNineNineNineEightSaintJohnsonPlaceActions(string token, RequestCreateAppWithBasicData applicationRequestBody)
         {
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
             var restRequest = new RestRequest("api/apartments/create", Method.Post);
             restRequest.AddHeaders(Headers.HeadersMarketplaceAdmin(token));
 
             Console.WriteLine("Request Body:");
-            Console.WriteLine(JsonConvert.SerializeObject(apartmentRequestBody, Formatting.Indented));
+            Console.WriteLine(JsonConvert.SerializeObject(applicationRequestBody, Formatting.Indented));
 
-            restRequest.AddJsonBody(apartmentRequestBody);
+            restRequest.AddJsonBody(applicationRequestBody);
             var response = restClient.Execute(restRequest);
 
             Console.WriteLine("Response Status Code: " + response.StatusCode);

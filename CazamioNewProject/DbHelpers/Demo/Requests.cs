@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 
 namespace CazamioNewProject.DbHelpers.LandlordsBrokersTable
 {
-    public class LandlordsBrokersDbRequests
+    public class DemoDbRequests
     {
         private static T GetValueOrDefault<T>(SqlDataReader reader, int index, T defaultValue = default(T))
         {
