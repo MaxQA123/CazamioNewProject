@@ -1,37 +1,39 @@
-﻿using Newtonsoft.Json;
+﻿using CazamioNewProject.ApiHelpers;
+using CazamioNewProject.DbHelpers.ApartmentsTable;
+using Newtonsoft.Json;
 using RestSharp;
 using System;
 
-namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateApplicationApi
+namespace CazamioNewProject.CreateApplicationApi
 {
     public partial class ApplicationCreation
     {
         public static RequestCreateAppWithBasicData RequestBodyCreateFirstAppForOneTwoFiveSixSevenDeanStreet()
         {
-            //9998 Saint Johnson Place
-            // Get BuildingId from BD
-            var buildingIdResult = BuildingsDbRequests.Buildings.GetBuildingIdNineNineNineEightSaintJohnsonPlace();
-            long buildingId = buildingIdResult.AddressId;
+            //12567 Dean Street
+            //Get ApartmentId from BD
+            var apartmentIdResult = ApartmentsDbRequests.ApartmentsDbTable.GetLastApartmentId();
+            long apartmentId = apartmentIdResult.Id;
 
             var payload = new RequestCreateAppWithBasicData
             {
-                ApartmentId = /* You'll need to provide apartment ID here */,
+                ApartmentId = apartmentId,
                 LeasePrice = 850,
-                ReferralDetails = "", 
-                MoveInDate = DateTimeOffset.Now, 
-                OfferPrice = 850, 
-                RentPrePayment = 850, 
-                RentalTerms = "12 months", 
-                RequestedWork = null, 
+                ReferralDetails = "",
+                MoveInDate = DateTime.Now.AddDays(1).ToString("yyyy-MM-dd"),
+                OfferPrice = 850,
+                RentPrePayment = 850,
+                RentalTerms = "12 months",
+                RequestedWork = null,
                 SecurityDeposit = 850, //
-                TenantEmail = "", 
+                TenantEmail = "",
                 GeneratedLinkId = Guid.NewGuid()
             };
 
             return payload;
         }
 
-        public static RestResponse CreateApartmentForAppNineNineNineEightSaintJohnsonPlaceActions(string token, RequestCreateAppWithBasicData applicationRequestBody)
+        public static RestResponse CreateFirstAppForOneTwoFiveSixSevenDeanStreet(string token, RequestCreateAppWithBasicData applicationRequestBody)
         {
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
             var restRequest = new RestRequest("api/apartments/create", Method.Post);

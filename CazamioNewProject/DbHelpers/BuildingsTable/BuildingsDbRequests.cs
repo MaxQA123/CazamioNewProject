@@ -1,6 +1,5 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using System;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace CazamioNewProject.DbHelpers.BuildingsTable

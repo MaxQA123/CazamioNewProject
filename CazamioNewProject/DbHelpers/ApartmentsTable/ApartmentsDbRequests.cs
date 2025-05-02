@@ -20,21 +20,22 @@ namespace CazamioNewProject.DbHelpers.ApartmentsTable
 
         public class ApartmentsDbTable
         {
-            public static ApartmentsDbModels GetBuildingByAddressDetails()
+            public static ApartmentsDbModels GetLastApartmentId()
             {
                 var row = new ApartmentsDbModels();
 
                 string query = @"
-                       SELECT TOP 1 B.Id
-                       FROM Buildings B
-                       JOIN Addresses A ON B.AddressId = A.Id
-                       WHERE B.MarketplaceId = @marketplaceId
-                       AND A.Street = @street
-                       AND A.City = @city
-                       AND A.State = @state
-                       AND (A.Neighborhood = @neighborhood OR @neighborhood IS NULL OR @neighborhood = '')
-                       AND (A.ZipCode = @zipCode OR @zipCode IS NULL OR @zipCode = '')
-                       ORDER BY B.Id DESC";
+                       SELECT TOP 1 *
+                       FROM Apartments Apart
+                       LEFT JOIN Buildings B ON Apart.BuildingId = B.Id
+                       LEFT JOIN Addresses Addrss ON Addrss.Id = B.AddressId
+                       WHERE Addrss.Street = @street 
+                         AND Addrss.City = @city 
+                         AND Addrss.State = @state
+                         AND (Addrss.Neighborhood = @neighborhood OR @neighborhood IS NULL OR @neighborhood = '') 
+                         AND (Addrss.ZipCode = @zipCode OR @zipCode IS NULL OR @zipCode = '') 
+                         AND B.MarketplaceId = @marketplaceId
+                       ORDER BY Apart.CreationDate DESC";
                        
                 try
                 {

@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateApplicationApi
+namespace CazamioNewProject.CreateApplicationApi
 {
     public partial class RequestCreateAppWithBasicData
     {

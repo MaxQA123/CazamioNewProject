@@ -5,6 +5,7 @@ using NUnit.Framework;
 using System;
 using CazamioNewProject.DbHelpers.AspNetUsersTable;
 using CazamioNewProject.DbHelpers.BuildingsTable;
+using CazamioNewProject.DbHelpers.ApartmentsTable;
 
 namespace DbTests
 {
@@ -40,6 +41,19 @@ namespace DbTests
         {
             var agentId = AspNetUsersDbRequests.AspNetUsers.GetAgentIdByEmailAndMarketplaceId();
             Console.WriteLine($"{agentId.Id}");
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("GetApartmentId")]
+
+        public void GetApartmentId()
+        {
+            var apartmentId = ApartmentsDbRequests.ApartmentsDbTable.GetLastApartmentId();
+            Console.WriteLine($"{apartmentId.Id}");
         }
     }
 }

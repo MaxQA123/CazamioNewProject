@@ -1,7 +1,8 @@
 ﻿using CazamioNewProject.GuiHelpers;
+using System;
 using System.Data.SqlClient;
 
-namespace CazamioNewProject.DbHelpers.LandlordsBrokersTable
+namespace CazamioNewProject.DbHelpers.ApartmentsTable
 {
     public class DemoDbRequests
     {
@@ -16,47 +17,56 @@ namespace CazamioNewProject.DbHelpers.LandlordsBrokersTable
                 return defaultValue;
             }
         }
-        public class LandlordsBrokers
+
+        public class ApartmentsDbTable
         {
-            public static string DeleteNewlyCreatedBroker(string email, int marketplaceId)
+            public static DemoDbModels GetBuildingByAddressDetails()
             {
-                string data = null;
-                using (SqlConnection db = new(ConnectionDb.GET_CONNECTION_STRING_TO_DB))
+                var row = new DemoDbModels();
+
+                string query = @"
+                       SELECT TOP 1 B.Id
+                       FROM Buildings B
+                       JOIN Addresses A ON B.AddressId = A.Id
+                       WHERE B.MarketplaceId = @marketplaceId
+                       AND A.Street = @street
+                       AND A.City = @city
+                       AND A.State = @state
+                       AND (A.Neighborhood = @neighborhood OR @neighborhood IS NULL OR @neighborhood = '')
+                       AND (A.ZipCode = @zipCode OR @zipCode IS NULL OR @zipCode = '')
+                       ORDER BY B.Id DESC";
+
+                try
                 {
-                    db.Open();
+                    using SqlConnection connection = new(ConnectionDb.GET_CONNECTION_STRING_TO_DB);
+                    using SqlCommand command = new(query, connection);
 
-                    // Удаление из таблицы Landlords
-                    using (SqlCommand deleteBrokerCommand = new(
-                        "DELETE FROM Landlords " +
-                        "WHERE UserId IN " +
-                        "(SELECT Id FROM AspNetUsers WHERE Email = @Email AND MarketplaceId = @MarketplaceId)", db))
+                    // Add parameters
+                    command.Parameters.AddWithValue("@marketplaceId", 15);
+                    command.Parameters.AddWithValue("@street", "12567 Dean Street");
+                    command.Parameters.AddWithValue("@city", "Brooklyn");
+                    command.Parameters.AddWithValue("@state", "NY");
+                    command.Parameters.AddWithValue("@neighborhood", "Prospect Heights");
+                    command.Parameters.AddWithValue("@zipCode", "11238");
+
+                    connection.Open();
+
+                    using SqlDataReader reader = command.ExecuteReader();
+                    if (reader.Read())
                     {
-                        deleteBrokerCommand.Parameters.AddWithValue("@Email", email);
-                        deleteBrokerCommand.Parameters.AddWithValue("@MarketplaceId", marketplaceId);
-                        deleteBrokerCommand.ExecuteNonQuery(); // Выполняем удаление
-                    }
-
-                    // Удаление из таблицы AspNetUsers
-                    using (SqlCommand deleteUserCommand = new(
-                        "DELETE FROM AspNetUsers " +
-                        "WHERE Email = @Email AND MarketplaceId = @MarketplaceId", db))
-                    {
-                        deleteUserCommand.Parameters.AddWithValue("@Email", email);
-                        deleteUserCommand.Parameters.AddWithValue("@MarketplaceId", marketplaceId);
-                        int rowsAffected = deleteUserCommand.ExecuteNonQuery(); // Выполняем удаление
-
-                        // Если нужно вернуть данные о том, была ли удалена запись
-                        if (rowsAffected > 0)
-                        {
-                            data = "Broker and user records deleted successfully.";
-                        }
-                        else
-                        {
-                            data = "No records found to delete.";
-                        }
+                        row.Id = GetValueOrDefault<long>(reader, 0);
                     }
                 }
-                return data;
+                catch (Exception ex)
+                {
+                    throw new ArgumentException($"Error retrieving building: {ex.Message}\r\n{ex.StackTrace}");
+                }
+                finally
+                {
+                    SqlConnection.ClearAllPools();
+                }
+
+                return row;
             }
         }
     }
