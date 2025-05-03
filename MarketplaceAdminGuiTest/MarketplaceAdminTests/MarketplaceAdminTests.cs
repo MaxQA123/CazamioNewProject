@@ -1237,16 +1237,12 @@ namespace MarketplaceAdminGuiTest
             var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
             LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
 
-            //#region Preconditions API create building
+            #region Preconditions API create building
 
-            //var buildingRequestBody = BuildingCreationMandatoryData.RequestBodyCreateBuildingDeanStreet();
+            var buildingRequestBody = BuildingCreationMandatoryData.RequestBodyCreateBuildingDeanStreet();
+            var responseBuilding = BuildingCreationMandatoryData.CreateBuildingDeanStreet(responseMarketplaceAdmin.AuthData.Token, buildingRequestBody);
 
-            //var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
-            //LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
-
-            //var responseBuilding = BuildingCreationMandatoryData.CreateBuildingDeanStreet(responseMarketplaceAdmin.AuthData.Token, buildingRequestBody);
-
-            //#endregion
+            #endregion
 
             #region Preconditions API create apartment
 

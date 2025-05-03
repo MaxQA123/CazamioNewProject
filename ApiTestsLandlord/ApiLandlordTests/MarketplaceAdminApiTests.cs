@@ -56,6 +56,34 @@ namespace ApiTestsLandlord
         }
 
         [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("MarketplaceAdmin Api test")]
+        [AllureSubSuite("CreateApplication")]
+
+        public void CreateApplication()
+        {
+            #region Test Data
+
+            MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
+
+            #endregion Preconditions
+
+            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
+            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+
+            #region Test create application
+
+            var requestBodyapplication = CazamioNewProject.CreateApplicationApi.ApplicationCreation.RequestBodyCreateFirstAppForOneTwoFiveSixSevenDeanStreet();
+            CazamioNewProject.CreateApplicationApi.ApplicationCreation.CreateFirstAppForOneTwoFiveSixSevenDeanStreet(responseMarketplaceAdmin.AuthData.Token, requestBodyapplication);
+
+            #endregion
+        }
+
+        [Test]
         [Order(1)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]

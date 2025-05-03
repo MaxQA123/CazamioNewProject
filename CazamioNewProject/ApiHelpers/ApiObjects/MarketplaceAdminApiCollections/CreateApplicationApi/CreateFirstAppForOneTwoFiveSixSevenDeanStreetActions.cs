@@ -1,5 +1,6 @@
 ﻿using CazamioNewProject.ApiHelpers;
 using CazamioNewProject.DbHelpers.ApartmentsTable;
+using CazamioNewProject.Objects;
 using Newtonsoft.Json;
 using RestSharp;
 using System;
@@ -10,6 +11,7 @@ namespace CazamioNewProject.CreateApplicationApi
     {
         public static RequestCreateAppWithBasicData RequestBodyCreateFirstAppForOneTwoFiveSixSevenDeanStreet()
         {
+            TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
             //12567 Dean Street
             //Get ApartmentId from BD
             var apartmentIdResult = ApartmentsDbRequests.ApartmentsDbTable.GetLastApartmentId();
@@ -20,13 +22,13 @@ namespace CazamioNewProject.CreateApplicationApi
                 ApartmentId = apartmentId,
                 LeasePrice = 850,
                 ReferralDetails = "",
-                MoveInDate = DateTime.Now.AddDays(1).ToString("yyyy-MM-dd"),
+                MoveInDate = DateTime.Now.ToString("yyyy-MM-dd"),
                 OfferPrice = 850,
                 RentPrePayment = 850,
                 RentalTerms = "12 months",
                 RequestedWork = null,
                 SecurityDeposit = 850, //
-                TenantEmail = "",
+                TenantEmail = tenantCreatorMySpace.Emails.RandomMainApplicantEmail,
                 GeneratedLinkId = Guid.NewGuid()
             };
 
@@ -36,7 +38,7 @@ namespace CazamioNewProject.CreateApplicationApi
         public static RestResponse CreateFirstAppForOneTwoFiveSixSevenDeanStreet(string token, RequestCreateAppWithBasicData applicationRequestBody)
         {
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
-            var restRequest = new RestRequest("api/apartments/create", Method.Post);
+            var restRequest = new RestRequest("api/apartmentApplications/prepareApplication?isBarebones=false", Method.Post);
             restRequest.AddHeaders(Headers.HeadersMarketplaceAdmin(token));
 
             Console.WriteLine("Request Body:");

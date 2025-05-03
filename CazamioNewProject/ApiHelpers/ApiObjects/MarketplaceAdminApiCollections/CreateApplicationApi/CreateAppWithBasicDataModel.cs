@@ -15,7 +15,7 @@ namespace CazamioNewProject.CreateApplicationApi
         public string ReferralDetails { get; set; }
 
         [JsonProperty("moveInDate")]
-        public DateTimeOffset MoveInDate { get; set; }
+        public string MoveInDate { get; set; }
 
         [JsonProperty("offerPrice")]
         public long OfferPrice { get; set; }
