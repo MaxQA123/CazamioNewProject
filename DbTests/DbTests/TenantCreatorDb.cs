@@ -48,12 +48,25 @@ namespace DbTests
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("GetApartmentId")]
+        [AllureSuite("GetLastApartmentId")]
 
-        public void GetApartmentId()
+        public void GetLastApartmentId()
         {
             var apartmentId = ApartmentsDbRequests.ApartmentsDbTable.GetLastApartmentId();
             Console.WriteLine($"{apartmentId.Id}");
+        }
+
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("GetLastApartmentApplicationtId")]
+
+        public void GetLastApartmentApplicationtId()
+        {
+            var apartmentApplicationId = ApartmentApplicationsDbRequests.ApartmentApplicationsDbTable.GetLastApartmentApplicationId();
+            Console.WriteLine($"{apartmentApplicationId.Id}");
         }
     }
 }

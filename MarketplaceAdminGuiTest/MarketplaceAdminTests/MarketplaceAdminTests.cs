@@ -1234,15 +1234,19 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
 
+            #region Preconditions API LogIn as MarketplaceAdmin
+
             var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
             LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
 
-            #region Preconditions API create building
-
-            var buildingRequestBody = BuildingCreationMandatoryData.RequestBodyCreateBuildingDeanStreet();
-            var responseBuilding = BuildingCreationMandatoryData.CreateBuildingDeanStreet(responseMarketplaceAdmin.AuthData.Token, buildingRequestBody);
-
             #endregion
+
+            //#region Preconditions API create building
+
+            //var buildingRequestBody = BuildingCreationMandatoryData.RequestBodyCreateBuildingDeanStreet();
+            //var responseBuilding = BuildingCreationMandatoryData.CreateBuildingDeanStreet(responseMarketplaceAdmin.AuthData.Token, buildingRequestBody);
+
+            //#endregion
 
             #region Preconditions API create apartment
 
@@ -1258,7 +1262,14 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
 
-            //#region Preconditions
+            #region Preconditions API Add applicants to application
+
+            var requestBodyAddApplicants = CazamioNewProject.AddApplicantsApi.AddApplicants.RequestBodyAddOccupantGuarantorAppForOneTwoFiveSixSevenDeanStreet();
+            CazamioNewProject.AddApplicantsApi.AddApplicants.AddOccupantGuarantorAppForOneTwoFiveSixSevenDeanStreet(responseMarketplaceAdmin.AuthData.Token, requestBodyAddApplicants);
+
+            #endregion
+
+            //#region Preconditions GUI
 
             //Pages.LogInLandlord
             //    .LogInAsMarketplaceAdminMySpace();

@@ -120,6 +120,7 @@ namespace CazamioNewProject.Objects
         {
             public string NumberRandomNameAddressStatic { get; set; }
             public string NumberNameAddressStatic { get; set; }
+            public string NumberNameAddressStaticForDb { get; set; }
             public string NumberNameAddress { get; set; }
             public string NumberAddress { get; set; }
             public string AddressName { get; set; }
@@ -325,6 +326,7 @@ namespace CazamioNewProject.Objects
             return new DeanStreetInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(1) + " " + "Dean Street",
+                NumberNameAddressStaticForDb = "12567 Dean Street",
                 NumberNameAddressStatic = "12567 Dean Street",
                 //NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(2) + GenerateRandomData.RandomAlphabetUpperCase(1) + " " + "Dean Street",
                 NumberNameAddress = "12567 Dean Street",

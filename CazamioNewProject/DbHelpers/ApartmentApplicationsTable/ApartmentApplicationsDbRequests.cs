@@ -1,11 +1,12 @@
-﻿using CazamioNewProject.GuiHelpers;
+﻿using CazamioNewProject.DbHelpers.ApartmentApplicationsTable;
+using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
 using System;
 using System.Data.SqlClient;
 
 namespace CazamioNewProject.DbHelpers.ApartmentsTable
 {
-    public class DemoDbRequests
+    public class ApartmentApplicationsDbRequests
     {
         private static T GetValueOrDefault<T>(SqlDataReader reader, int index, T defaultValue = default(T))
         {
@@ -19,25 +20,30 @@ namespace CazamioNewProject.DbHelpers.ApartmentsTable
             }
         }
 
-        public class ApartmentsDbTable
+        public class ApartmentApplicationsDbTable
         {
-            public static DemoDbModels GetBuildingByAddressDetails()
+            public static ApartmentApplicationsDbModels GetLastApartmentApplicationId()
             {
                 Building building = Building.Generate();
-                var row = new DemoDbModels();
+                var row = new ApartmentApplicationsDbModels();
 
                 string query = @"
-                       SELECT TOP 1 B.Id
-                       FROM Buildings B
-                       JOIN Addresses A ON B.AddressId = A.Id
-                       WHERE B.MarketplaceId = @marketplaceId
-                       AND A.Street = @street
-                       AND A.City = @city
-                       AND A.State = @state
-                       AND (A.Neighborhood = @neighborhood OR @neighborhood IS NULL OR @neighborhood = '')
-                       AND (A.ZipCode = @zipCode OR @zipCode IS NULL OR @zipCode = '')
-                       ORDER BY B.Id DESC";
-
+                       SELECT TOP 1 *
+                      FROM ApartmentApplications
+                      WHERE ApartmentId = (
+                          SELECT TOP 1 Apart.Id
+                          FROM Apartments Apart
+                          LEFT JOIN Buildings B ON Apart.BuildingId = B.Id
+                          LEFT JOIN Addresses Addrss ON Addrss.Id = B.AddressId
+                          WHERE Addrss.Street = @street 
+                            AND Addrss.City = @city 
+                            AND Addrss.State = @state
+                            AND (Addrss.Neighborhood = @neighborhood OR @neighborhood IS NULL OR @neighborhood = '') 
+                            AND (Addrss.ZipCode = @zipCode OR @zipCode IS NULL OR @zipCode = '') 
+                            AND B.MarketplaceId = @marketplaceId
+                          ORDER BY Apart.CreationDate DESC
+                      )
+                      ORDER BY CreationDate DESC;";  
                 try
                 {
                     using SqlConnection connection = new(ConnectionDb.GET_CONNECTION_STRING_TO_DB);

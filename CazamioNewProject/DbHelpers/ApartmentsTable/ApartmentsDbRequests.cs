@@ -1,4 +1,5 @@
 ﻿using CazamioNewProject.GuiHelpers;
+using CazamioNewProject.Objects;
 using System;
 using System.Data.SqlClient;
 
@@ -22,6 +23,7 @@ namespace CazamioNewProject.DbHelpers.ApartmentsTable
         {
             public static ApartmentsDbModels GetLastApartmentId()
             {
+                Building building = Building.Generate();
                 var row = new ApartmentsDbModels();
 
                 string query = @"
@@ -44,11 +46,11 @@ namespace CazamioNewProject.DbHelpers.ApartmentsTable
 
                     // Add parameters
                     command.Parameters.AddWithValue("@marketplaceId", 15);
-                    command.Parameters.AddWithValue("@street", "12567 Dean Street");
-                    command.Parameters.AddWithValue("@city", "Brooklyn");
-                    command.Parameters.AddWithValue("@state", "NY");
-                    command.Parameters.AddWithValue("@neighborhood", "Prospect Heights");
-                    command.Parameters.AddWithValue("@zipCode", "11238");
+                    command.Parameters.AddWithValue("@street", building.DeanStreet.NumberNameAddressStaticForDb);
+                    command.Parameters.AddWithValue("@city", building.DeanStreet.City);
+                    command.Parameters.AddWithValue("@state", building.DeanStreet.State);
+                    command.Parameters.AddWithValue("@neighborhood", building.DeanStreet.Neighborhood);
+                    command.Parameters.AddWithValue("@zipCode", building.DeanStreet.Zip);
 
                     connection.Open();
 
