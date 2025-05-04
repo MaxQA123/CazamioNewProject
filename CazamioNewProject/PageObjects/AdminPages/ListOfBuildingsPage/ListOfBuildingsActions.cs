@@ -7,7 +7,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
     public partial class ListOfBuildings
     {
         Building building = Building.Generate();
-        Apartment apartment = Apartment.Generate();
 
         [AllureStep("ClickButtonAddBuilding")]
         public ListOfBuildings ClickButtonAddBuilding()
@@ -99,7 +98,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
             WaitUntil.WaitSomeInterval(10000);
             WaitUntil.CustomElementIsVisible(FieldInputSearch);
             WaitUntil.CustomElementIsClickable(FieldInputSearch);
-            InputGeneral.InputFunctionWithClear(FieldInputSearch, building.DeanStreet.NumberNameAddressStaticForSearch);
+            InputGeneral.InputFunctionWithClear(FieldInputSearch, building.GatesAvenue.NumberNameAddressStaticForSearch);
 
             return this;
         }
