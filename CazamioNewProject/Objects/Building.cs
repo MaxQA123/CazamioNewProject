@@ -44,6 +44,7 @@ namespace CazamioNewProject.Objects
         {
             public string NumberRandomNameAddressStatic { get; set; }
             public string NumberNameAddressStatic { get; set; }
+            public string NumberNameAddressStaticForSearch { get; set; }
             public string NumberNameAddress { get; set; }
             public string NumberAddress { get; set; }
             public string AddressName { get; set; }
@@ -60,6 +61,7 @@ namespace CazamioNewProject.Objects
         {
             public string NumberRandomNameAddressStatic { get; set; }
             public string NumberNameAddressStatic { get; set; }
+            public string NumberNameAddressStaticForSearch { get; set; }
             public string NumberNameAddress { get; set; }
             public string NumberAddress { get; set; }
             public string AddressName { get; set; }
@@ -75,6 +77,7 @@ namespace CazamioNewProject.Objects
         {
             public string NumberRandomNameAddressStatic { get; set; }
             public string NumberNameAddressStatic { get; set; }
+            public string NumberNameAddressStaticForSearch { get; set; }
             public string NumberNameAddress { get; set; }
             public string NumberAddress { get; set; }
             public string AddressName { get; set; }
@@ -90,6 +93,7 @@ namespace CazamioNewProject.Objects
         {
             public string NumberRandomNameAddressStatic { get; set; }
             public string NumberNameAddressStatic { get; set; }
+            public string NumberNameAddressStaticForSearch { get; set; }
             public string NumberNameAddress { get; set; }
             public string NumberAddress { get; set; }
             public string AddressName { get; set; }
@@ -105,6 +109,7 @@ namespace CazamioNewProject.Objects
         {
             public string NumberRandomNameAddressStatic { get; set; }
             public string NumberNameAddressStatic { get; set; }
+            public string NumberNameAddressStaticForSearch { get; set; }
             public string NumberNameAddress { get; set; }
             public string NumberAddress { get; set; }
             public string AddressName { get; set; }
@@ -121,6 +126,7 @@ namespace CazamioNewProject.Objects
             public string NumberRandomNameAddressStatic { get; set; }
             public string NumberNameAddressStatic { get; set; }
             public string NumberNameAddressStaticForDb { get; set; }
+            public string NumberNameAddressStaticForSearch { get; set; }
             public string NumberNameAddress { get; set; }
             public string NumberAddress { get; set; }
             public string AddressName { get; set; }
@@ -136,6 +142,7 @@ namespace CazamioNewProject.Objects
         {
             public string NumberRandomNameAddressStatic { get; set; }
             public string NumberNameAddressStatic { get; set; }
+            public string NumberNameAddressStaticForSearch { get; set; }
             public string NumberNameAddress { get; set; }
             public string NumberAddress { get; set; }
             public string AddressName { get; set; }
@@ -220,6 +227,7 @@ namespace CazamioNewProject.Objects
             return new SaintJohnsonPlInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(5) + " " + "Saint Johnson Place",
+                NumberNameAddressStaticForSearch = "9998 Saint Johnson Place",
                 NumberNameAddressStatic = "9998 Saint Johnson Place",
                 //NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(5) + " " + "Saint Johnson Place",
                 NumberNameAddress = "9998 Saint Johnson Place",
@@ -242,6 +250,7 @@ namespace CazamioNewProject.Objects
             return new WashingtonSquareInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(4) + " " + "Washington Square",
+                NumberNameAddressStaticForSearch = "1 Washington Square",
                 NumberNameAddressStatic = "1 Washington Square",
                 //NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(4) + " " + "Washington Square",
                 NumberNameAddress = "1 Washington Square",
@@ -263,6 +272,7 @@ namespace CazamioNewProject.Objects
             return new CrownStInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(3) + " " + "Crown St",
+                NumberNameAddressStaticForSearch = "30-39 Crown St",
                 NumberNameAddressStatic = "30-39 Crown St",
                 //NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(2) + "-" + GenerateRandomData.RandomNumberWithoutZero(2) + " " + "Crown St",
                 NumberNameAddress = "30-39 Crown St",
@@ -284,6 +294,7 @@ namespace CazamioNewProject.Objects
             return new AlbermaleRdInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(2) + " " + "Albermale Rd",
+                NumberNameAddressStaticForSearch = "9A Albermale Rd",
                 NumberNameAddressStatic = "9A Albermale Rd",
                 //NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(1) + GenerateRandomData.RandomAlphabetUpperCase(1) + " " + "Albermale Rd",
                 NumberNameAddress = "9A Albermale Rd",
@@ -306,6 +317,7 @@ namespace CazamioNewProject.Objects
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(1) + " " + "East 51st Street Pedestrian Crossing",
                 NumberNameAddressStatic = "111A East 51st Street Pedestrian Crossing",
+                NumberNameAddressStaticForSearch = "111A East 51st Street Pedestrian Crossing",
                 //NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(2) + GenerateRandomData.RandomAlphabetUpperCase(1) + " " + "East 51st Street Pedestrian Crossing",
                 NumberNameAddress = "111A East 51st Street Pedestrian Crossing",
                 NumberAddress = "111A",
@@ -327,11 +339,12 @@ namespace CazamioNewProject.Objects
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(1) + " " + "Dean Street",
                 NumberNameAddressStaticForDb = "12567 Dean Street",
+                NumberNameAddressStaticForSearch = "12567 Dean Street",
                 NumberNameAddressStatic = "12567 Dean Street",
                 //NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(2) + GenerateRandomData.RandomAlphabetUpperCase(1) + " " + "Dean Street",
                 NumberNameAddress = "12567 Dean Street",
                 NumberAddress = "12567",
-                //NumberAddress = GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomAlphabetUpperCase(1),
+                //NumberAddress = GenerateRandomData.RandomNumberWithoutZero(5),
                 AddressName = "Dean Street",
                 City = "Brooklyn",
                 State = "NY",
@@ -348,6 +361,7 @@ namespace CazamioNewProject.Objects
             return new GatesAvenueInfo
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(1) + " " + "Gates Avenue",
+                NumberNameAddressStaticForSearch = "12867 Gates Avenue",
                 NumberNameAddressStatic = "12867 Gates Avenue",
                 //NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(5) + " " + "Gates Avenue",
                 NumberNameAddress = "12867 Gates Avenue",

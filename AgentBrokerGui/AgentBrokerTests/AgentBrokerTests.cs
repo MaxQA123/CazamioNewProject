@@ -173,7 +173,7 @@ namespace AgentBrokerGui
 
             #region Test data
 
-            Apartment apartment = Apartment.Generate();
+            Building building = Building.Generate();
 
             #endregion
 
@@ -193,7 +193,7 @@ namespace AgentBrokerGui
             string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
 
             Pages.BuildingView
-                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneOneOneAEastFiftyOneStStreetPedestrianCrossing)
+                .VerifyBuildingAddress(getAddressBuildingViewActual, building.East51stStreetPedestrianCrossing.NumberNameAddressStaticForSearch)
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
             Pages.BuildingView
@@ -252,7 +252,7 @@ namespace AgentBrokerGui
 
             #region Test data
 
-            Apartment apartment = Apartment.Generate();
+            Building building = Building.Generate();
 
             #endregion
 
@@ -272,7 +272,7 @@ namespace AgentBrokerGui
             string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
 
             Pages.BuildingView
-                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneOneOneAEastFiftyOneStStreetPedestrianCrossing)
+                .VerifyBuildingAddress(getAddressBuildingViewActual, building.East51stStreetPedestrianCrossing.NumberNameAddressStaticForSearch)
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
             Pages.BuildingView
@@ -455,10 +455,9 @@ namespace AgentBrokerGui
 
             #region Test data
 
-            Apartment apartment = Apartment.Generate();
+            Building building = Building.Generate();
             Application application = Application.Generate();
             TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
-            AgentBroker agentBroker = AgentBroker.Generate();
 
             #endregion
 
@@ -493,7 +492,7 @@ namespace AgentBrokerGui
             string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
 
             Pages.BuildingView
-                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneOneOneAEastFiftyOneStStreetPedestrianCrossing)
+                .VerifyBuildingAddress(getAddressBuildingViewActual, building.East51stStreetPedestrianCrossing.NumberNameAddressStaticForSearch)
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
 

@@ -4,7 +4,6 @@ namespace CazamioNewProject.Objects
 {
     public class Apartment
     {
-        public BuildingShortAddressInfo BuildingShortAddress { get; set; }
         public UnitBasicDataInfo UnitBasicData { get; set; }
         public ApartmentStatusInfo ApartmentStatus { get; set; }
         public ApartmentTypeInfo ApartmentType { get; set; }
@@ -20,7 +19,6 @@ namespace CazamioNewProject.Objects
             return new Apartment
             {
                 UnitBasicData = CreateUnitBasicDataInfo(),
-                BuildingShortAddress = CreateBuildingShortAddressInfo(),
                 ApartmentStatus = CreateApartmentStatusInfo(),
                 ApartmentType = CreateApartmentTypeInfo(),
                 DescriptionsInternalNotes = CreateDescriptionsInternalNotesInfo(),
@@ -30,16 +28,6 @@ namespace CazamioNewProject.Objects
                 SettingsFreeStuff = CreateSettingsFreeStuffInfo(),
                 LinksForVideo = CreateLinksForVideoInfo(),
             };
-        }
-
-        public class BuildingShortAddressInfo
-        {
-            public string OneWashingtonSquare { get; set; }
-            public string NineNineNineEightSaintJohnsonPlace { get; set; }
-            public string ThirtyDashTrirtyNineCrownSt { get; set; }
-            public string NineAAAlbermaleRd { get; set; }
-            public string OneOneOneAEastFiftyOneStStreetPedestrianCrossing { get; set; }
-            public string OneTwoEightSixSevenGatesAvenue { get; set; }
         }
 
         public class UnitBasicDataInfo
@@ -180,19 +168,6 @@ namespace CazamioNewProject.Objects
             public string LinkYouTube { get; set; }
             public string LinkVimeo { get; set; }
             public string LinkDailymotion { get; set; }
-        }
-
-        private static BuildingShortAddressInfo CreateBuildingShortAddressInfo()
-        {
-            return new BuildingShortAddressInfo
-            {
-                OneWashingtonSquare = "1 Washington Square",
-                NineNineNineEightSaintJohnsonPlace = "9998 Saint Johnson Place",
-                ThirtyDashTrirtyNineCrownSt = "30-39 Crown St",
-                NineAAAlbermaleRd = "9A Albermale Rd",
-                OneOneOneAEastFiftyOneStStreetPedestrianCrossing = "111A East 51st Street Pedestrian Crossing",
-                OneTwoEightSixSevenGatesAvenue = "12867 Gates Avenue",
-            };
         }
 
         private static UnitBasicDataInfo CreateUnitBasicDataInfo()

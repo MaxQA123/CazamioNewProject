@@ -239,7 +239,7 @@ namespace AgentGuiTests
 
             #region Test data
 
-            Apartment apartment = Apartment.Generate();
+            Building building = Building.Generate();
             Application application = Application.Generate();
             TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
             TenantOccupantMySpace tenantOccupantMySpace = TenantOccupantMySpace.Generate();
@@ -277,7 +277,7 @@ namespace AgentGuiTests
             string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
 
             Pages.BuildingView
-                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneTwoEightSixSevenGatesAvenue)
+                .VerifyBuildingAddress(getAddressBuildingViewActual, building.GatesAvenue.NumberNameAddressStaticForSearch)
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
 
@@ -318,7 +318,7 @@ namespace AgentGuiTests
 
             Pages.ApartmentApplicationsTbl
                 .VerifyDataWitoutAgentByApplicationCreatedTenantMainOccupant
-                (apartment.BuildingShortAddress.OneTwoEightSixSevenGatesAvenue, apartmentAddressFromApp,
+                (building.GatesAvenue.NumberNameAddressStaticForSearch, apartmentAddressFromApp,
                 tenantCreatorMySpace.CreatedWithoutCreditReport.ConstantFirstLastName, fullNameTenantMainApplicantFromAppAr,
                 tenantOccupantMySpace.CreatedWithoutCreditReport.ConstantFirstLastName, fullNameTenantOccupantFromAppAr,
                 application.LeasePrice.FourthPriceStatic, leasePriceFromApp,

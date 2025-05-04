@@ -22,7 +22,7 @@ namespace CazamioNewProject.CreateApplicationApi
                 ApartmentId = apartmentId,
                 LeasePrice = 850,
                 ReferralDetails = "",
-                MoveInDate = DateTime.Now.ToString("yyyy-MM-dd"),
+                MoveInDate = DateTime.Now.AddDays(1).ToString("yyyy-MM-dd"),
                 OfferPrice = 850,
                 RentPrePayment = 850,
                 RentalTerms = "12 months",

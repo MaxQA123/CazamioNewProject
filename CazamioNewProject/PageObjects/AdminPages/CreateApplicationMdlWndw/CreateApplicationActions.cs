@@ -10,6 +10,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
         Application application = Application.Generate();
         Apartment apartment = Apartment.Generate();
+        Building building = Building.Generate();
 
         [AllureStep("GetFullEmail")]
         public string GetFullEmail()
@@ -103,7 +104,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         public CreateApplicationMdlWndw EnterOneTwoEightSixSevenGatesAvenueAddress()
         {
             WaitUntil.CustomElementIsVisible(UnitAddressButton);
-            InputGeneral.InputFunctionWithClear(UnitAddressFieldInput, apartment.BuildingShortAddress.OneTwoEightSixSevenGatesAvenue);
+            InputGeneral.InputFunctionWithClear(UnitAddressFieldInput, building.GatesAvenue.NumberNameAddressStaticForSearch);
 
             return this;
         }
@@ -112,7 +113,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         public CreateApplicationMdlWndw EnterOneOneOneAEastStPedestrianCrossingAddress()
         {
             WaitUntil.CustomElementIsVisible(UnitAddressButton);
-            InputGeneral.InputFunctionWithClear(UnitAddressFieldInput, apartment.BuildingShortAddress.OneOneOneAEastFiftyOneStStreetPedestrianCrossing);
+            InputGeneral.InputFunctionWithClear(UnitAddressFieldInput, building.East51stStreetPedestrianCrossing.NumberNameAddressStaticForSearch);
 
             return this;
         }

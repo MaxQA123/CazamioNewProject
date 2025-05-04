@@ -5,11 +5,21 @@ namespace CazamioNewProject.PageObjects.TenantPages.LeasePriceAdjustmentMdlWndw
 {
     public partial class LeasePriceAdjustmentMdlWndw
     {
-        [AllureStep("ClickBtnCancel")]
-        public LeasePriceAdjustmentMdlWndw ClickBtnCancel()
+        [AllureStep("ClickSaveBtn")]
+        public LeasePriceAdjustmentMdlWndw ClickSaveBtn()
         {
-            WaitUntil.CustomElementIsClickable(BtnCancel);
-            Button.Click(BtnCancel);
+            WaitUntil.CustomElementIsClickable(SaveBtn);
+            Button.Click(SaveBtn);
+
+
+            return this;
+        }
+
+        [AllureStep("ClickCancelBtn")]
+        public LeasePriceAdjustmentMdlWndw ClickCancelBtn()
+        {
+            WaitUntil.CustomElementIsClickable(CancelBtn);
+            Button.Click(CancelBtn);
 
 
             return this;

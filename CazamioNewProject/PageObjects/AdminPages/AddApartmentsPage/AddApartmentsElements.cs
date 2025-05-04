@@ -47,7 +47,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         public IWebElement SetItemBuildingThirtyDashTrirtyNineCrownSt()
         {
 
-            var xpath = "//ng-dropdown-panel//span[contains(text(), '" + apartment.BuildingShortAddress.ThirtyDashTrirtyNineCrownSt + "')]";
+            var xpath = "//ng-dropdown-panel//span[contains(text(), '" + building.CrownSt.NumberNameAddressStaticForSearch + "')]";
 
             return Browser._Driver.FindElement(By.XPath(xpath));
         }
@@ -57,7 +57,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         public IWebElement SetItemBuildingNineAAlbermaleRoad()
         {
 
-            var xpath = "//ng-dropdown-panel//span[contains(text(), '" + apartment.BuildingShortAddress.NineAAAlbermaleRd + "')]";
+            var xpath = "//ng-dropdown-panel//span[contains(text(), '" + building.AlbermaleRd.NumberNameAddressStaticForSearch + "')]";
 
             return Browser._Driver.FindElement(By.XPath(xpath));
         }

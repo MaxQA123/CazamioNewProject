@@ -35,6 +35,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
         [FindsBy(How = How.XPath, Using = "//building-list//table//tbody//td[text() = '12867 Gates Avenue Brooklyn NY']")]
         public IWebElement ItemOneTwoEightSixSevenGatesAvenue;
 
+        [FindsBy(How = How.XPath, Using = "//building-list//table//tbody//td[text() = '12567 Dean Street Brooklyn NY']")]
+        public IWebElement ItemOneTwoFiveSixSevenDeanStreet;
+
         [FindsBy(How = How.XPath, Using = "//input[@id = 'field-search']")]
         public IWebElement FieldInputSearch;
     }

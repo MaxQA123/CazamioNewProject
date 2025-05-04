@@ -27,7 +27,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
             WaitUntil.WaitSomeInterval(5000);
             WaitUntil.CustomElementIsVisible(FieldInputSearch);
             WaitUntil.CustomElementIsClickable(FieldInputSearch);
-            InputGeneral.InputFunctionWithClear(FieldInputSearch, apartment.BuildingShortAddress.OneWashingtonSquare);
+            InputGeneral.InputFunctionWithClear(FieldInputSearch, building.WashingtonSquare.NumberNameAddressStaticForSearch);
 
             return this;
         }
@@ -39,7 +39,19 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
             WaitUntil.WaitSomeInterval(10000);
             WaitUntil.CustomElementIsVisible(FieldInputSearch);
             WaitUntil.CustomElementIsClickable(FieldInputSearch);
-            InputGeneral.InputFunctionWithClear(FieldInputSearch, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace);
+            InputGeneral.InputFunctionWithClear(FieldInputSearch, building.SaintJohnsonPl.NumberNameAddressStaticForSearch);
+
+            return this;
+        }
+
+        [AllureStep("SearchOneTwoFiveSixSevenDeanStreet")]
+        public ListOfBuildings SearchOneTwoFiveSixSevenDeanStreet()
+        {
+            WaitUntil.CustomElementIsVisible(LoaderHidden, 10);
+            WaitUntil.WaitSomeInterval(10000);
+            WaitUntil.CustomElementIsVisible(FieldInputSearch);
+            WaitUntil.CustomElementIsClickable(FieldInputSearch);
+            InputGeneral.InputFunctionWithClear(FieldInputSearch, building.DeanStreet.NumberNameAddressStaticForSearch);
 
             return this;
         }
@@ -51,7 +63,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
             WaitUntil.WaitSomeInterval(10000);
             WaitUntil.CustomElementIsVisible(FieldInputSearch);
             WaitUntil.CustomElementIsClickable(FieldInputSearch);
-            InputGeneral.InputFunctionWithClear(FieldInputSearch, apartment.BuildingShortAddress.OneOneOneAEastFiftyOneStStreetPedestrianCrossing);
+            InputGeneral.InputFunctionWithClear(FieldInputSearch, building.East51stStreetPedestrianCrossing.NumberNameAddressStaticForSearch);
 
             return this;
         }
@@ -63,7 +75,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
             WaitUntil.WaitSomeInterval(10000);
             WaitUntil.CustomElementIsVisible(FieldInputSearch);
             WaitUntil.CustomElementIsClickable(FieldInputSearch);
-            InputGeneral.InputFunctionWithClear(FieldInputSearch, apartment.BuildingShortAddress.ThirtyDashTrirtyNineCrownSt);
+            InputGeneral.InputFunctionWithClear(FieldInputSearch, building.CrownSt.NumberNameAddressStaticForSearch);
 
             return this;
         }
@@ -75,7 +87,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
             WaitUntil.WaitSomeInterval(10000);
             WaitUntil.CustomElementIsVisible(FieldInputSearch);
             WaitUntil.CustomElementIsClickable(FieldInputSearch);
-            InputGeneral.InputFunctionWithClear(FieldInputSearch, apartment.BuildingShortAddress.NineAAAlbermaleRd);
+            InputGeneral.InputFunctionWithClear(FieldInputSearch, building.AlbermaleRd.NumberNameAddressStaticForSearch);
 
             return this;
         }
@@ -87,7 +99,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
             WaitUntil.WaitSomeInterval(10000);
             WaitUntil.CustomElementIsVisible(FieldInputSearch);
             WaitUntil.CustomElementIsClickable(FieldInputSearch);
-            InputGeneral.InputFunctionWithClear(FieldInputSearch, apartment.BuildingShortAddress.OneTwoEightSixSevenGatesAvenue);
+            InputGeneral.InputFunctionWithClear(FieldInputSearch, building.DeanStreet.NumberNameAddressStaticForSearch);
 
             return this;
         }
@@ -165,6 +177,17 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
             WaitUntil.CustomElementIsVisible(ItemNineAAlbermaleRd);
             WaitUntil.CustomElementIsClickable(ItemNineAAlbermaleRd);
             Button.Click(ItemNineAAlbermaleRd);
+
+            return this;
+        }
+
+        [AllureStep("SelectOneTwoFiveSixSevenDeanStreet")]
+        public ListOfBuildings SelectOneTwoFiveSixSevenDeanStreet()
+        {
+            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.CustomElementIsVisible(ItemOneTwoFiveSixSevenDeanStreet);
+            WaitUntil.CustomElementIsClickable(ItemOneTwoFiveSixSevenDeanStreet);
+            Button.Click(ItemOneTwoFiveSixSevenDeanStreet);
 
             return this;
         }

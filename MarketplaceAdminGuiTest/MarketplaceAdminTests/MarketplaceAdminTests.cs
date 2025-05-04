@@ -21,7 +21,7 @@ namespace MarketplaceAdminGuiTest
 
     public class TestsBaseGui : MarketplaceAdminBase
     {
-        //Amount order 15 next must be 16
+        //Amount order 14 next must be 15
         [Test]
         [Order(1)]
         [AllureTag("Regression")]
@@ -603,7 +603,7 @@ namespace MarketplaceAdminGuiTest
 
             #region Test data
 
-            Apartment apartment = Apartment.Generate();
+            Building building = Building.Generate();
 
             #endregion
 
@@ -623,7 +623,7 @@ namespace MarketplaceAdminGuiTest
             string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
 
             Pages.BuildingView
-                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneWashingtonSquare)
+                .VerifyBuildingAddress(getAddressBuildingViewActual, building.WashingtonSquare.NumberNameAddressStaticForSearch)
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
             Pages.BuildingView
@@ -705,7 +705,7 @@ namespace MarketplaceAdminGuiTest
             Pages.ListOfApartments
                 .VerifyTitleListOfApartments();
 
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
         }
@@ -729,9 +729,24 @@ namespace MarketplaceAdminGuiTest
 
             #region Test data
 
-            Apartment apartment = Apartment.Generate();
+            Building building = Building.Generate();
+            MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
 
             #endregion
+
+            //#region Preconditions API LogIn as MarketplaceAdmin
+
+            //var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
+            //LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+
+            //#endregion
+
+            //#region Preconditions API create building
+
+            //var buildingRequestBody = BuildingCreationMandatoryData.RequestBodyCreateBuildingDeanStreet();
+            //var responseBuilding = BuildingCreationMandatoryData.CreateBuildingDeanStreet(responseMarketplaceAdmin.AuthData.Token, buildingRequestBody);
+
+            //#endregion
 
             #region Preconditions Test
 
@@ -749,7 +764,7 @@ namespace MarketplaceAdminGuiTest
             string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
 
             Pages.BuildingView
-                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
+                .VerifyBuildingAddress(getAddressBuildingViewActual, building.SaintJohnsonPl.NumberNameAddressStaticForSearch)
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
             Pages.BuildingView
@@ -796,7 +811,7 @@ namespace MarketplaceAdminGuiTest
             Pages.ListOfApartments
                 .VerifyTitleListOfApartments();
 
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
         }
@@ -821,7 +836,7 @@ namespace MarketplaceAdminGuiTest
 
             #region Test data
 
-            Apartment apartment = Apartment.Generate();
+            Building building = Building.Generate();
             Application application = Application.Generate();
             TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
 
@@ -843,7 +858,7 @@ namespace MarketplaceAdminGuiTest
             string getAddressBuildingView = Pages.BuildingView.GetValueOfStringAddress();
 
             Pages.BuildingView
-                .VerifyBuildingAddress(getAddressBuildingView, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
+                .VerifyBuildingAddress(getAddressBuildingView, building.SaintJohnsonPl.NumberNameAddressStaticForSearch)
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
 
@@ -928,7 +943,7 @@ namespace MarketplaceAdminGuiTest
 
             #region Test data
 
-            Apartment apartment = Apartment.Generate();
+            Building building = Building.Generate();
             Application application = Application.Generate();
             TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
             Agent agent = Agent.Generate();
@@ -951,7 +966,7 @@ namespace MarketplaceAdminGuiTest
             string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
 
             Pages.BuildingView
-                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.OneWashingtonSquare)
+                .VerifyBuildingAddress(getAddressBuildingViewActual, building.WashingtonSquare.NumberNameAddressStaticForSearch)
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
 
@@ -1017,7 +1032,7 @@ namespace MarketplaceAdminGuiTest
             Pages.ToasterMessagesTenants
                 .VerifyMessageAccountWasSuccessfullyActivated();
 
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
         }
@@ -1096,7 +1111,7 @@ namespace MarketplaceAdminGuiTest
 
             #region Test data
 
-            Apartment apartment = Apartment.Generate();
+            Building building = Building.Generate();
 
             #endregion
 
@@ -1116,7 +1131,7 @@ namespace MarketplaceAdminGuiTest
             string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
 
             Pages.BuildingView
-                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
+                .VerifyBuildingAddress(getAddressBuildingViewActual, building.SaintJohnsonPl.NumberNameAddressStaticForSearch)
                 .ClickTabApartments();
 
             string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithoutAgentSaintJohnsonPlace();
@@ -1127,15 +1142,15 @@ namespace MarketplaceAdminGuiTest
             Pages.ApartmentView
                 .VerifyTitleApartmentViewPage()
                 .EnterRandomEmailGetApplicationLink();
-
-            string fullEmailPutsBox = Pages.ApartmentView.GetFullEmailFromGetApplicationLinkField();
-
             Pages.ApartmentView
                 .ClickButtonGetLink();
             Pages.ToasterMessagesLandlord
                 .VerifyMessageCopiedTheLinkToApplication();
             Pages.ApartmentView
                 .ClickTabApplications();
+
+            string applicationIdFromApp = Pages.ApartmentApplicationsTbl.GetApplicationIdFromFirstRow();
+
             KeyBoardActions.ScrollToDown();
             Pages.ApartmentApplicationsTbl
                 .ClickFirstRow();
@@ -1147,7 +1162,7 @@ namespace MarketplaceAdminGuiTest
             #region Test
 
             var (window, mainApplicantPartEmail, occupantPartEmail, guarantorPartEmail,
-                mainApplicantFullEmailFromEditApp, occupantFullEmailFromEditApp, guarantorFullEmailFromEditApp) = 
+                mainApplicantFullEmailFromEditApp, occupantFullEmailFromEditApp, guarantorFullEmailFromEditApp) =
                 Pages.EditApplicationMdlWndw.EditApplicationNineNineNineEightSaintJohnsonPlace();
             //Main applicant
             Pages.JScriptExecutor
@@ -1167,178 +1182,9 @@ namespace MarketplaceAdminGuiTest
             Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
                 .QuicklyPassTenantCreatorMySpace();
             Pages.LeasePriceAdjustmentMdlWndw
-                .ClickBtnCancel();
+                .ClickSaveBtn();
             Pages.HeaderTenants
                 .LogOut();
-            //Occupant
-            Pages.JScriptExecutor
-               .OpenNewTab();
-            Pages.EmailHelper
-               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, occupantPartEmail);
-            Pages.EmailPutsBox
-                .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
-            Pages.EmailPutsBox
-                .ClickButtonHtml()
-                .ClickButtonStartYourApplicationNowlForTenantSecond();
-            Pages.ToasterMessagesTenants
-                .VerifyMessageAccountWasSuccessfullyActivated();
-
-            Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
-                .QuicklyPassTenantOccupantMySpace();
-            Pages.HeaderTenants
-                .LogOut();
-            //Guarantor
-            Pages.JScriptExecutor
-               .OpenNewTab();
-            Pages.EmailHelper
-               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, guarantorPartEmail);
-            Pages.EmailPutsBox
-                .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
-            Pages.EmailPutsBox
-                .ClickButtonHtml()
-                .ClickButtonStartYourApplicationNowlForTenantThird();
-            Pages.ToasterMessagesTenants
-                .VerifyMessageAccountWasSuccessfullyActivated();
-            Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
-                .QuicklyPassTenantGuarantorMySpace();
-            Pages.HeaderTenants
-                .LogOut();
-
-            WaitUntil.WaitSomeInterval(1000);
-
-            #endregion
-        }
-
-        [Test]
-        [Order(15)]
-        [AllureTag("Regression")]
-        [AllureOwner("Maksim Perevalov")]
-        [AllureSeverity(SeverityLevel.critical)]
-        [Retry(1)]
-        [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin")]
-        [AllureSubSuite("EditApplicationOneTwoFiveSixSevenDeanStreet")]
-
-        public void EditApplicationOneTwoFiveSixSevenDeanStreet()
-        {
-            #region SettingsForBuilding
-
-            //12567 Dean Street
-
-            #endregion
-
-            #region Test Data
-
-            MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
-            Apartment apartment = Apartment.Generate();
-
-            #endregion
-
-            #region Preconditions API LogIn as MarketplaceAdmin
-
-            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
-            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
-
-            #endregion
-
-            //#region Preconditions API create building
-
-            //var buildingRequestBody = BuildingCreationMandatoryData.RequestBodyCreateBuildingDeanStreet();
-            //var responseBuilding = BuildingCreationMandatoryData.CreateBuildingDeanStreet(responseMarketplaceAdmin.AuthData.Token, buildingRequestBody);
-
-            //#endregion
-
-            #region Preconditions API create apartment
-
-            var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentForAppOneTwoFiveSixSevenDeanStreet();
-            CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseMarketplaceAdmin.AuthData.Token, requestBodyApartment);
-
-            #endregion
-
-            #region Preconditions API create application
-
-            var requestBodyapplication = CazamioNewProject.CreateApplicationApi.ApplicationCreation.RequestBodyCreateFirstAppForOneTwoFiveSixSevenDeanStreet();
-            CazamioNewProject.CreateApplicationApi.ApplicationCreation.CreateFirstAppForOneTwoFiveSixSevenDeanStreet(responseMarketplaceAdmin.AuthData.Token, requestBodyapplication);
-
-            #endregion
-
-            #region Preconditions API Add applicants to application
-
-            var requestBodyAddApplicants = CazamioNewProject.AddApplicantsApi.AddApplicants.RequestBodyAddOccupantGuarantorAppForOneTwoFiveSixSevenDeanStreet();
-            CazamioNewProject.AddApplicantsApi.AddApplicants.AddOccupantGuarantorAppForOneTwoFiveSixSevenDeanStreet(responseMarketplaceAdmin.AuthData.Token, requestBodyAddApplicants);
-
-            #endregion
-
-            //#region Preconditions GUI
-
-            //Pages.LogInLandlord
-            //    .LogInAsMarketplaceAdminMySpace();
-            //Pages.SidebarLandlord
-            //    .ClickButtonBuildings();
-            //Pages.ListOfBuildings
-            //    .SearchNineNineNineEightSaintJohnsonPlace()
-            //    .SelectNineNineNineEightSaintJohnsonPlace();
-            //Pages.BuildingView
-            //    .VerifyTitleBuildingViewPage();
-
-            //string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
-            //string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
-
-            //Pages.BuildingView
-            //    .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
-            //    .ClickTabApartments();
-
-            //string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithoutAgentSaintJohnsonPlace();
-
-            //KeyBoardActions.ScrollToDown();
-            //Pages.BuildingApartmentsTbl
-            //    .ClickRowByDepositReceived();
-            //Pages.ApartmentView
-            //    .VerifyTitleApartmentViewPage()
-            //    .EnterRandomEmailGetApplicationLink();
-
-            //string fullEmailPutsBox = Pages.ApartmentView.GetFullEmailFromGetApplicationLinkField();
-
-            //Pages.ApartmentView
-            //    .ClickButtonGetLink();
-            //Pages.ToasterMessagesLandlord
-            //    .VerifyMessageCopiedTheLinkToApplication();
-            //Pages.ApartmentView
-            //    .ClickTabApplications();
-            //KeyBoardActions.ScrollToDown();
-            //Pages.ApartmentApplicationsTbl
-            //    .ClickFirstRow();
-            //Pages.ApplicationDetail
-            //    .VerifyTitleApplicationDetailPage();
-
-            //#endregion
-
-            //#region Test
-
-            //var (window, mainApplicantPartEmail, occupantPartEmail, guarantorPartEmail,
-            //    mainApplicantFullEmailFromEditApp, occupantFullEmailFromEditApp, guarantorFullEmailFromEditApp) =
-            //    Pages.EditApplicationMdlWndw.EditApplicationNineNineNineEightSaintJohnsonPlace();
-            ////Main applicant
-            //Pages.JScriptExecutor
-            //   .OpenNewTab();
-            //Pages.EmailHelper
-            //   .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, mainApplicantPartEmail);
-
-            //string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
-
-            //Pages.EmailPutsBox
-            //    .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
-            //Pages.EmailPutsBox
-            //    .ClickButtonHtml()
-            //    .ClickButtonStartYourApplicationNowlForTenant();
-            //Pages.ToasterMessagesTenants
-            //    .VerifyMessageAccountWasSuccessfullyActivated();
-            //Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
-            //    .QuicklyPassTenantCreatorMySpace();
-            //Pages.LeasePriceAdjustmentMdlWndw
-            //    .ClickBtnCancel();
-            //Pages.HeaderTenants
-            //    .LogOut();
             ////Occupant
             //Pages.JScriptExecutor
             //   .OpenNewTab();
@@ -1373,9 +1219,9 @@ namespace MarketplaceAdminGuiTest
             //Pages.HeaderTenants
             //    .LogOut();
 
-            //WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.WaitSomeInterval(1000);
 
-            //#endregion
-        }
+            #endregion
+        }  
     }
 }

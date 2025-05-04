@@ -1,10 +1,6 @@
 ﻿using Allure.Commons;
 using CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.LogInApiBroker;
-using CazamioNewProject.DbHelpers.AspNetUsersTable;
-using CazamioNewProject.DbHelpers.BrokersAgentsTable;
-using CazamioNewProject.DbHelpers.OwnerCommissionsStructureTable;
-using CazamioNewProject.DbHelpers.OwnerManagementsTable;
-using CazamioNewProject.DbHelpers.OwnerPhoneNumbersTable;
+using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin;
 using CazamioNewProject.DbHelpers.OwnersDbTable;
 using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
@@ -12,8 +8,6 @@ using CazamioNewProject.PageObjects;
 using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using NUnit.Framework;
-using System;
-using System.Text.RegularExpressions;
 
 namespace BrokerGuiTests
 {
@@ -22,7 +16,7 @@ namespace BrokerGuiTests
 
     public class TestsBaseGui : BrokerBase
     {
-        //Amount order 9 next must be 10
+        //Amount order 10 next must be 11
         [Test]
         [Order(1)]
         [AllureTag("Regression")]
@@ -567,7 +561,7 @@ namespace BrokerGuiTests
             Pages.ListOfApartments
                .VerifyTitleListOfApartments();
 
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
 
@@ -593,7 +587,7 @@ namespace BrokerGuiTests
 
             #region Test data
 
-            Apartment apartment = Apartment.Generate();
+            Building building = Building.Generate();
             Application application = Application.Generate();
             TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
             TenantOccupantMySpace tenantOccupantMySpace = TenantOccupantMySpace.Generate();
@@ -615,7 +609,7 @@ namespace BrokerGuiTests
             string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
 
             Pages.BuildingView
-                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineAAAlbermaleRd)
+                .VerifyBuildingAddress(getAddressBuildingViewActual, building.AlbermaleRd.NumberNameAddressStaticForSearch)
                 .UpdateValueCreditScreeningFee()
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
@@ -694,7 +688,7 @@ namespace BrokerGuiTests
             Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
                 .QuicklyPassTenantCreatorMySpace();
             Pages.LeasePriceAdjustmentMdlWndw
-                .ClickBtnCancel();
+                .ClickCancelBtn();
             Pages.HeaderTenants
                 .LogOut();
             //Occupant
@@ -756,7 +750,7 @@ namespace BrokerGuiTests
 
             #region Test data
 
-            Apartment apartment = Apartment.Generate();
+            Building building = Building.Generate();
             Application application = Application.Generate();
             TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
             Agent agent = Agent.Generate();
@@ -793,7 +787,7 @@ namespace BrokerGuiTests
             string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
 
             Pages.BuildingView
-                .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.ThirtyDashTrirtyNineCrownSt)
+                .VerifyBuildingAddress(getAddressBuildingViewActual, building.CrownSt.NumberNameAddressStaticForSearch)
                 .ClickTabApartments();
             KeyBoardActions.ScrollToDown();
 
@@ -886,6 +880,133 @@ namespace BrokerGuiTests
 
             Pages.Templates
                 .DeleteItemSecondNameForMySpace();
+
+            WaitUntil.WaitSomeInterval(1000);
+
+            #endregion
+        }
+
+        [Test]
+        [Order(11)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(1)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Broker")]
+        [AllureSubSuite("EditFirstApplicationOneTwoFiveSixSevenDeanStreet")]
+
+        public void EditFirstApplicationOneTwoFiveSixSevenDeanStreet()
+        {
+            #region SettingsForBuilding
+
+            //12567 Dean Street
+
+            #endregion
+
+            #region Test Data
+
+            MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
+            Building building = Building.Generate();
+
+            #endregion
+
+            #region Preconditions API LogIn as MarketplaceAdmin
+
+            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
+            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+
+            #endregion
+
+            //#region Preconditions API create building
+
+            //var buildingRequestBody = BuildingCreationMandatoryData.RequestBodyCreateBuildingDeanStreet();
+            //var responseBuilding = BuildingCreationMandatoryData.CreateBuildingDeanStreet(responseMarketplaceAdmin.AuthData.Token, buildingRequestBody);
+
+            //#endregion
+
+            #region Preconditions API create apartment
+
+            var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentForAppOneTwoFiveSixSevenDeanStreet();
+            CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseMarketplaceAdmin.AuthData.Token, requestBodyApartment);
+
+            #endregion
+
+            #region Preconditions API create application
+
+            var requestBodyapplication = CazamioNewProject.CreateApplicationApi.ApplicationCreation.RequestBodyCreateFirstAppForOneTwoFiveSixSevenDeanStreet();
+            CazamioNewProject.CreateApplicationApi.ApplicationCreation.CreateFirstAppForOneTwoFiveSixSevenDeanStreet(responseMarketplaceAdmin.AuthData.Token, requestBodyapplication);
+
+            #endregion
+
+            #region Preconditions API Add applicants to application
+
+            var requestBodyAddApplicants = CazamioNewProject.AddApplicantsApi.AddApplicants.RequestBodyAddOccupantGuarantorAppForOneTwoFiveSixSevenDeanStreet();
+            CazamioNewProject.AddApplicantsApi.AddApplicants.AddOccupantGuarantorAppForOneTwoFiveSixSevenDeanStreet(responseMarketplaceAdmin.AuthData.Token, requestBodyAddApplicants);
+
+            #endregion
+
+            #region Preconditions GUI
+
+            Pages.LogInLandlord
+                .LogInAsBrokerMySpace();
+            Pages.SidebarLandlord
+                .ClickButtonBuildings();
+            Pages.ListOfBuildings
+                .SearchOneTwoFiveSixSevenDeanStreet()
+                .SelectOneTwoFiveSixSevenDeanStreet();
+            Pages.BuildingView
+                .VerifyTitleBuildingViewPage();
+
+            string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
+            string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
+
+            Pages.BuildingView
+                .VerifyBuildingAddress(getAddressBuildingViewActual, building.DeanStreet.NumberNameAddressStaticForSearch)
+                .ClickTabApartments();
+
+            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithoutAgentSaintJohnsonPlace();
+
+            KeyBoardActions.ScrollToDown();
+            Pages.BuildingApartmentsTbl
+                .ClickRowByVacant();
+            Pages.ApartmentView
+                .VerifyTitleApartmentViewPage();
+            Pages.ApartmentView
+                .ClickTabApplications();
+            KeyBoardActions.ScrollToDown();
+            Pages.ApartmentApplicationsTbl
+                .ClickFirstRow();
+            Pages.ApplicationDetail
+                .VerifyTitleApplicationDetailPage();
+
+            #endregion
+
+            #region Test
+
+            var (window, mainApplicantNewlyCreatedPartEmail) =
+            Pages.EditApplicationMdlWndw.EditFirstApplicationOneTwoFiveSixSevenDeanStreet();
+            //Main applicant newly created
+            Pages.JScriptExecutor
+               .OpenNewTab();
+            Pages.EmailHelper
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, mainApplicantNewlyCreatedPartEmail);
+
+            string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+
+            Pages.EmailPutsBox
+                .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
+            Pages.EmailPutsBox
+                .ClickButtonHtml()
+                .ClickButtonStartYourApplicationNowlForTenant();
+            Pages.ToasterMessagesTenants
+                .VerifyMessageAccountWasSuccessfullyActivated();
+            Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
+                .QuicklyPassTenantCreatorMySpace();
+            Pages.LeasePriceAdjustmentMdlWndw
+                .ClickCancelBtn();
+            Pages.HeaderTenants
+                .LogOut();
 
             WaitUntil.WaitSomeInterval(1000);
 
