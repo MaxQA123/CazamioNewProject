@@ -42,7 +42,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingViewPage
         [FindsBy(How = How.XPath, Using = ("//app-building-apartments//span[text() = 'Add']"))]
         public IWebElement ButtonAddInTabApartments;
 
-        [FindsBy(How = How.XPath, Using = ("//span[text() = 'Clone apartment']"))]
+        [FindsBy(How = How.XPath, Using = ("//span[text() = 'Clone']"))]
         public IWebElement ButtonCloneInTabApartments;
 
         [FindsBy(How = How.XPath, Using = (""))]
