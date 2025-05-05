@@ -109,6 +109,8 @@ namespace CazamioNewProject.Objects
             public string ShortTextEastStreet { get; set; }
             public string ShortTextGatesAvenue { get; set; }
             public string LongTextGatesAvenue { get; set; }
+            public string ShortTextDeanStreet { get; set; }
+            public string LongTextDeanStreet { get; set; }
         }
 
         public class ReferralDetailsInfo
@@ -120,6 +122,8 @@ namespace CazamioNewProject.Objects
             public string ShortTextEastStreet { get; set; }
             public string ShortTextGatesAvenue { get; set; }
             public string LongTextGatesAvenue { get; set; }
+            public string ShortTextDeanStreet { get; set; }
+            public string LongTextDeanStreet { get; set; }
         }
 
         public class AdditionalInfoInfo
@@ -239,6 +243,8 @@ namespace CazamioNewProject.Objects
                 ShortTextEastStreet = "Lorem 111A East 51st Street Reqeusted work.",
                 ShortTextGatesAvenue = "Lorem 12867 Gates Avenue Reqeusted work.",
                 LongTextGatesAvenue = "Lorem 12867 Gates Avenue Reqeusted work. Lorem ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit.",
+                ShortTextDeanStreet = "Lorem 12867 Dean Street Reqeusted work.",
+                LongTextDeanStreet = "Lorem 12867 Dean Street Reqeusted work. Lorem ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit.",
             };
         }
 
@@ -253,6 +259,8 @@ namespace CazamioNewProject.Objects
                 ShortTextEastStreet = "Lorem 111A East 51st Street Referral Details.",
                 ShortTextGatesAvenue = "Lorem 12867 Gates Avenue Referral Details.",
                 LongTextGatesAvenue = "Lorem 12867 Gates Avenue Referral Details. Lorem ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit.",
+                ShortTextDeanStreet = "Lorem 12867 Dean Street Referral Details.",
+                LongTextDeanStreet = "Lorem 12867 Dean Street Referral Details. Lorem ipsum dolor sit amet, 12345 67890 !@# $%^ &*() adipiscing elit.",
             };
         }
 

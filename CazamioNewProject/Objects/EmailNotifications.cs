@@ -32,6 +32,7 @@ namespace CazamioNewProject.Objects
             public string CreateTenantViaGetLinkWithoutAgentAlbermaleRd { get; set; }
             public string CreateTenantViaPlusAppWithAgentWashingtonSquare { get; set; }
             public string CreateTenantOccupantViaPlusAppWithoutAgentAlbermaleRd { get; set; }
+            public string CreateTenantOccupantViaPlusAppWithoutAgentDeanStreet { get; set; }
         }
 
         //private static SubjectsTenantGeneralInfo CreateSubjectsTenantGeneralInfo()
@@ -51,6 +52,7 @@ namespace CazamioNewProject.Objects
                 CreateTenantViaGetLinkWithoutAgentAlbermaleRd = "Welcome to Noyo Properties NYC! Let's begin your application process for 9A Albermale Rd #1 now!",
                 CreateTenantViaPlusAppWithAgentWashingtonSquare = "Welcome to Noyo Properties NYC! Lula AgentQA created you an application for 1 Washington Square #8R.",
                 CreateTenantOccupantViaPlusAppWithoutAgentAlbermaleRd = "Welcome to Noyo Properties NYC! Let's begin your application process for 9A Albermale Rd #1 now!",
+                CreateTenantOccupantViaPlusAppWithoutAgentDeanStreet = "Welcome to Noyo Properties NYC!  Let's begin your application process for 12567 Dean Street #8851 now!",
             };
         }
     }

@@ -78,10 +78,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw
             Pages.ApplicationDetail
                 .ClickEditApplicationBtn();
             VerifyEditApplicationTitle();
-            InputGeneral.InputFunctionWithClear(RequestedOfferPriceFieldInput, application.RequestedOfferPrice.SixthPriceStatic);
-            InputGeneral.InputFunctionWithClear(LeasePriceFieldInput, application.LeasePrice.SixthPriceStatic);
-            InputGeneral.InputFunctionWithClear(SecurityDepositFieldInput, application.SecurityDeposit.SixthPriceStatic);
-            Button.Click(RemoveConcessionBtn);
             Button.Click(MoveInDateFieldButton);
             Pages.DatePicker
                 .ClickButtonDropDownYearMonth()
@@ -90,31 +86,29 @@ namespace CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw
                 .SelectNextMonth();
             Pages.DatePicker
                 .SelectFisrtDayInNextMonth();
-            InputGeneral.InputFunctionWithClear(RentalTermsFieldInput, application.RentalTerms.TwelveMonths);
+            InputGeneral.InputFunctionWithClear(RentalTermsFieldInput, application.RentalTerms.TwentyFourMonths);
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();
-            InputGeneral.InputFunctionWithClear(MonthlyRentsPrePaymentFieldInput, application.MonthlyRentsPrePayment.TwoMonth);
+            InputGeneral.InputFunctionWithClear(MonthlyRentsPrePaymentFieldInput, application.MonthlyRentsPrePayment.OneMonth);
             Button.Click(ReferralAgentCheckTheBox);
             KeyBoardActions.ClickTab();
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(ReferralDetailsFieldInput, application.ReferralDetails.LongTextNineNineNineEightSaintJohnsonPlace);
+            InputGeneral.InputFunctionWithClear(ReferralDetailsFieldInput, application.ReferralDetails.ShortTextDeanStreet);
             Button.Click(PlusAddRequestedWorkBtn);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(RequestedWorkFieldInput, application.RequestedWork.LongTextNineNineNineEightSaintJohnsonPlace);
+            InputGeneral.InputFunctionWithClear(RequestedWorkFieldInput, application.RequestedWork.ShortTextDeanStreet);
             Button.Click(AssignedAgentBtn);
             Button.Click(SetAgentAgentusBrokerusItem());
 
-            InputGeneral.InputFunctionWithClear(EmailAddressMainApplicantFieldInput, tenantCreatorMySpace.Emails.RandomMainApplicantEmail);
             string mainApplicantNewlyCreatedPartEmail = Pages.EditApplicationMdlWndw.GetRandomEmailBeforeDogFromEmailAddressMainApplicant();
 
-            Button.Click(PlusAddApplicantBtn);
-
-            InputGeneral.InputFunctionWithClear(FirstFieldInputEmailAddress, tenantOccupantMySpace.Emails.RandomEmail);
-
-            Button.Click(PlusAddApplicantBtn);
-
-            InputGeneral.InputFunctionWithClear(SecondFieldInputEmailAddress, tenantGuarantorMySpace.Emails.RandomEmail);
-            Button.Click(CheckBoxThisIsAGuarantorSecondEmailAddressField);
+            InputGeneral.InputFunctionWithClear(EmailAddressMainApplicantFieldInput, tenantCreatorMySpace.CreatedWithoutCreditReport.Email);
+            
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(CrossBtnFirstForDeleting);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(CrossBtnFirstForDeleting);
+            WaitUntil.WaitSomeInterval(100);
             Button.Click(EditBtn);
             VerifyEditApplicationTitle();
             VerifySureYouWantToEditThisApplicationSubTitle();

@@ -965,7 +965,7 @@ namespace BrokerGuiTests
                 .VerifyBuildingAddress(getAddressBuildingViewActual, building.DeanStreet.NumberNameAddressStaticForSearch)
                 .ClickTabApartments();
 
-            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithoutAgentSaintJohnsonPlace();
+            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithoutAgentDeanStreet();
 
             KeyBoardActions.ScrollToDown();
             Pages.BuildingApartmentsTbl
@@ -984,31 +984,31 @@ namespace BrokerGuiTests
 
             #region Test
 
-            //var (window, mainApplicantNewlyCreatedPartEmail) =
-            //Pages.EditApplicationMdlWndw.EditFirstApplicationOneTwoFiveSixSevenDeanStreet();
-            ////Main applicant newly created
-            //Pages.JScriptExecutor
-            //   .OpenNewTab();
-            //Pages.EmailHelper
-            //   .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, mainApplicantNewlyCreatedPartEmail);
+            var (window, mainApplicantNewlyCreatedPartEmail) =
+            Pages.EditApplicationMdlWndw.EditFirstApplicationOneTwoFiveSixSevenDeanStreet();
+            //Main applicant newly created
+            Pages.JScriptExecutor
+               .OpenNewTab();
+            Pages.EmailHelper
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, mainApplicantNewlyCreatedPartEmail);
 
-            //string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+            string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
 
-            //Pages.EmailPutsBox
-            //    .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
-            //Pages.EmailPutsBox
-            //    .ClickButtonHtml()
-            //    .ClickButtonStartYourApplicationNowlForTenant();
-            //Pages.ToasterMessagesTenants
-            //    .VerifyMessageAccountWasSuccessfullyActivated();
-            //Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
-            //    .QuicklyPassTenantCreatorMySpace();
-            //Pages.LeasePriceAdjustmentMdlWndw
-            //    .ClickCancelBtn();
-            //Pages.HeaderTenants
-            //    .LogOut();
+            Pages.EmailPutsBox
+                .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
+            Pages.EmailPutsBox
+                .ClickButtonHtml()
+                .ClickButtonStartYourApplicationNowlForTenant();
+            Pages.ToasterMessagesTenants
+                .VerifyMessageAccountWasSuccessfullyActivated();
+            Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
+                .QuicklyPassTenantCreatorMySpace();
+            Pages.LeasePriceAdjustmentMdlWndw
+                .ClickCancelBtn();
+            Pages.HeaderTenants
+                .LogOut();
 
-            //WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
         }

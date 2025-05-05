@@ -70,6 +70,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
             return updatedText;
         }
 
+        [AllureStep("GetSubjectWithoutAgentDeanStreet")]
+        public string GetSubjectWithoutAgentDeanStreet()
+        {
+            WaitUntil.WaitSomeInterval(1000);
+            string subjectNotification = EmailNotifications.Generate().SubjectsCreateTenantPlusApp.CreateTenantOccupantViaPlusAppWithoutAgentDeanStreet;
+            string unitNumberAc = Pages.BuildingApartmentsTbl.GetVlOfClmnUnitFrstRw();
+
+            string updatedText = ReplaceUnitNumber(subjectNotification, unitNumberAc);
+
+            return updatedText;
+        }
+
         [AllureStep("GetSubjectWithoutAgentAlbermaleRd")]
         public string GetSubjectWithoutAgentAlbermaleRd()
         {
@@ -77,10 +89,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
             string subjectNotification = EmailNotifications.Generate().SubjectsCreateTenantPlusApp.CreateTenantViaGetLinkWithoutAgentAlbermaleRd;
             string unitNumberAc = Pages.BuildingApartmentsTbl.GetVlOfClmnUnitFrstRw();
 
-            // Замена номера квартиры в subjectNotification
             string updatedText = ReplaceUnitNumber(subjectNotification, unitNumberAc);
 
-            // Возвращение обновленного текста
             return updatedText;
         }
 
