@@ -101,7 +101,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw
             Button.Click(SetAgentAgentusBrokerusItem());
 
             string mainApplicantNewlyCreatedPartEmail = Pages.EditApplicationMdlWndw.GetRandomEmailBeforeDogFromEmailAddressMainApplicant();
-
             InputGeneral.InputFunctionWithClear(EmailAddressMainApplicantFieldInput, tenantCreatorMySpace.CreatedWithoutCreditReport.Email);
             
             WaitUntil.WaitSomeInterval(100);

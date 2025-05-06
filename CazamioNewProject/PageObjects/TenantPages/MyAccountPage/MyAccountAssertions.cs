@@ -33,5 +33,13 @@ namespace CazamioNewProject.PageObjects.TenantPages.MyAccountPage
 
             return this;
         }
+
+        [AllureStep("VerifyYouHaveNoApplicationsYetRecord")]
+        public MyAccount VerifyYouHaveNoApplicationsYetRecord()
+        {
+            Assert.IsTrue(Record.IsVisible(YouHaveNoApplicationsYetRecord));
+
+            return this;
+        }
     }
 }

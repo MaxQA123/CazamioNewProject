@@ -1000,11 +1000,11 @@ namespace BrokerGuiTests
                 .ClickButtonHtml()
                 .ClickButtonStartYourApplicationNowlForTenant();
             Pages.ToasterMessagesTenants
-                .VerifyMessageAccountWasSuccessfullyActivated();
-            Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
-                .QuicklyPassTenantCreatorMySpace();
-            Pages.LeasePriceAdjustmentMdlWndw
-                .ClickCancelBtn();
+                .VerifyMessageAccountWasSuccessfullyActivatedWarningNotFound();
+            Pages.MyAccount
+                .VerifyYouHaveNoApplicationsYetRecord();
+            //Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
+            //    .QuicklyPassTenantCreatorMySpace();
             Pages.HeaderTenants
                 .LogOut();
 

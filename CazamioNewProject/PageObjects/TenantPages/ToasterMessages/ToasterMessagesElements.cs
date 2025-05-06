@@ -5,6 +5,12 @@ namespace CazamioNewProject.PageObjects.TenantPages.ToasterMessages
 {
     public partial class ToasterMessagesTenants
     {
+        //Common Success toaster 
+        [FindsBy(How = How.XPath, Using = "//span[text() = 'Success!']")]
+        public IWebElement MessageSuccess;
+
+        #region Success toasters when creating a new tenant plus application
+
         [FindsBy(How = How.XPath, Using = "//div[text()= ' Account was successfully activated ']")]
         public IWebElement MessageAccountWasSuccessfullyActivated;
 
@@ -12,11 +18,21 @@ namespace CazamioNewProject.PageObjects.TenantPages.ToasterMessages
         [FindsBy(How = How.XPath, Using = "//div[text()= ' Successfully updated name and password. ']")]
         public IWebElement MessageSuccessfullyUpdatedNameAndPassword;
 
-        ////Appeared when clicking the Save buttom for the Please Tell Us Your Name MdlWndw and creating a new tenant
-        //[FindsBy(How = How.XPath, Using = "//div[text()= ' Successfully updated name. ']")]
-        //public IWebElement MessageSecondSuccessfullyUpdatedName;
-
         [FindsBy(How = How.XPath, Using = "//div[text()= ' Lease price was agreed on successfully. ']")]
         public IWebElement MessageThirdLeasePriceWasAgreedOnSuccessfully;
+
+        #endregion
+
+        //Common Warning toaster 
+        [FindsBy(How = How.XPath, Using = "//div[@aria-label = 'Warning']")]
+        public IWebElement MessageWarning;
+
+        #region Warning toasters when creating a new tenant plus application
+
+        //Appeared when creating a new tenant + application without an application
+        [FindsBy(How = How.XPath, Using = "//div[text()= 'Not found']")]
+        public IWebElement MessageNotFound;
+
+        #endregion
     }
 }
