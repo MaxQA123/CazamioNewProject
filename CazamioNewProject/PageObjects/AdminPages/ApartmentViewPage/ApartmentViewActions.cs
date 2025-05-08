@@ -1,16 +1,15 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
 using NUnit.Allure.Attributes;
-using System;
 using System.Text.RegularExpressions;
 
 namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
 {
     public partial class ApartmentView
     {
-        Apartment apartment = Apartment.Generate();
-        Application application = Application.Generate();
-        EmailNotifications emailNotifications = EmailNotifications.Generate();
+        //Apartment apartment = Apartment.Generate();
+        //Application application = Application.Generate();
+        //EmailNotifications emailNotifications = EmailNotifications.Generate();
         TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
 
         #region Tabs
@@ -67,6 +66,19 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
             string updatedText = ReplaceUnitNumber(subjectNotification, unitNumberAc);
 
             // Возвращение обновленного текста
+            return updatedText;
+        }
+
+        [AllureStep("GetSubjectWithAgentBrokerSaintJohnsonPlace")]
+        public string GetSubjectWithAgentBrokerSaintJohnsonPlace()
+        {
+            WaitUntil.WaitSomeInterval(1000);
+
+            string subjectNotification = EmailNotifications.Generate().SubjectsCreateTenantPlusApp.CreateTenantViaGetLinkWithAgentBrokerSaintJohnsonPlace;
+            string unitNumberAc = Pages.BuildingApartmentsTbl.GetVlOfClmnUnitFrstRw();
+
+            string updatedText = ReplaceLastUnitNumber(subjectNotification, unitNumberAc);
+
             return updatedText;
         }
 

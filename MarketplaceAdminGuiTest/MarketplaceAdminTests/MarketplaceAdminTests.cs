@@ -1081,7 +1081,7 @@ namespace MarketplaceAdminGuiTest
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
-        [Retry(2)]
+        [Retry(1)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("MarketplaceAdmin")]
         [AllureSubSuite("EditApplicationNineNineNineEightSaintJohnsonPlace")]
@@ -1134,7 +1134,7 @@ namespace MarketplaceAdminGuiTest
                 .VerifyBuildingAddress(getAddressBuildingViewActual, building.SaintJohnsonPl.NumberNameAddressStaticForSearch)
                 .ClickTabApartments();
 
-            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithoutAgentSaintJohnsonPlace();
+            string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithAgentBrokerSaintJohnsonPlace();
 
             KeyBoardActions.ScrollToDown();
             Pages.BuildingApartmentsTbl
@@ -1149,7 +1149,7 @@ namespace MarketplaceAdminGuiTest
             Pages.ApartmentView
                 .ClickTabApplications();
 
-            string applicationIdFromApp = Pages.ApartmentApplicationsTbl.GetApplicationIdFromFirstRow();
+            string applicationIdFromAppLandlord = Pages.ApartmentApplicationsTbl.GetApplicationIdFromFirstRow();
 
             KeyBoardActions.ScrollToDown();
             Pages.ApartmentApplicationsTbl
@@ -1183,6 +1183,11 @@ namespace MarketplaceAdminGuiTest
                 .QuicklyPassTenantCreatorMySpace();
             Pages.LeasePriceAdjustmentMdlWndw
                 .ClickSaveBtn();
+
+            string applicationIdFromAppTenant = Pages.SubmittingApplication.GetApplicationIdVl();
+
+            Pages.MyAccount
+                .VerifyApplicationIdNumberTenantCreator(applicationIdFromAppLandlord, applicationIdFromAppTenant);
             Pages.HeaderTenants
                 .LogOut();
             ////Occupant

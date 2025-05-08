@@ -28,13 +28,14 @@ namespace CazamioNewProject.PageObjects.TenantPages.ToasterMessages
             return this;
         }
 
-        //[AllureStep("DissapearsMessageSuccessfullyUpdatedNameAndPassword")]
-        //public ToasterMessagesTenants DissapearsMessageSuccessfullyUpdatedNameAndPassword()
-        //{
-        //    Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageSuccessfullyUpdatedNameAndPassword));
+        [AllureStep("VerifyMessageThirdLeasePriceWasAgreedOnSuccessfully")]
+        public ToasterMessagesTenants VerifyMessageThirdLeasePriceWasAgreedOnSuccessfully()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageThirdLeasePriceWasAgreedOnSuccessfully));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageThirdLeasePriceWasAgreedOnSuccessfully));
 
-        //    return this;
-        //}
+            return this;
+        }
 
         #endregion
 

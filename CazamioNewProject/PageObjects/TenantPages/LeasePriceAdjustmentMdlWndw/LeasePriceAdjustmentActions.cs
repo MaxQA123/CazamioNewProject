@@ -10,6 +10,8 @@ namespace CazamioNewProject.PageObjects.TenantPages.LeasePriceAdjustmentMdlWndw
         {
             WaitUntil.CustomElementIsClickable(SaveBtn);
             Button.Click(SaveBtn);
+            Pages.ToasterMessagesTenants
+                .VerifyMessageThirdLeasePriceWasAgreedOnSuccessfully();
 
 
             return this;

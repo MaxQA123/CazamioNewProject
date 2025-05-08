@@ -29,6 +29,7 @@ namespace CazamioNewProject.Objects
         public class SubjectsCreateTenantPlusAppInfo
         {
             public string CreateTenantViaGetLinkWithoutAgentSaintJohnsonPlace { get; set; }
+            public string CreateTenantViaGetLinkWithAgentBrokerSaintJohnsonPlace { get; set; }
             public string CreateTenantViaGetLinkWithoutAgentAlbermaleRd { get; set; }
             public string CreateTenantViaPlusAppWithAgentWashingtonSquare { get; set; }
             public string CreateTenantOccupantViaPlusAppWithoutAgentAlbermaleRd { get; set; }
@@ -49,6 +50,7 @@ namespace CazamioNewProject.Objects
             return new SubjectsCreateTenantPlusAppInfo
             {
                 CreateTenantViaGetLinkWithoutAgentSaintJohnsonPlace = "Welcome to Noyo Properties NYC! Let's begin your application process for 9998 Saint Johnson Place #1 now!",
+                CreateTenantViaGetLinkWithAgentBrokerSaintJohnsonPlace = "Welcome to Noyo Properties NYC! Agentus Brokerus created you an application for 9998 Saint Johnson Place #1.",
                 CreateTenantViaGetLinkWithoutAgentAlbermaleRd = "Welcome to Noyo Properties NYC! Let's begin your application process for 9A Albermale Rd #1 now!",
                 CreateTenantViaPlusAppWithAgentWashingtonSquare = "Welcome to Noyo Properties NYC! Lula AgentQA created you an application for 1 Washington Square #8R.",
                 CreateTenantOccupantViaPlusAppWithoutAgentAlbermaleRd = "Welcome to Noyo Properties NYC! Let's begin your application process for 9A Albermale Rd #1 now!",

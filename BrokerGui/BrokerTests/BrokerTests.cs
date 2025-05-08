@@ -975,6 +975,9 @@ namespace BrokerGuiTests
             Pages.ApartmentView
                 .ClickTabApplications();
             KeyBoardActions.ScrollToDown();
+
+            string applicationIdFromAppLandlord = Pages.ApartmentApplicationsTbl.GetApplicationIdFromFirstRow();
+
             Pages.ApartmentApplicationsTbl
                 .ClickFirstRow();
             Pages.ApplicationDetail
@@ -1007,6 +1010,15 @@ namespace BrokerGuiTests
             //    .QuicklyPassTenantCreatorMySpace();
             Pages.HeaderTenants
                 .LogOut();
+            Pages.LogInTenant
+                .LogInAsCreatorWithoutCreditReportMySpace();
+            Pages.HeaderTenants
+                .ClickButtonMyApplications();
+
+            string applicationIdFromAppTenant = Pages.MyAccount.GetApplicationId();
+
+            Pages.MyAccount
+                .VerifyApplicationIdNumberTenantCreator(applicationIdFromAppLandlord, applicationIdFromAppTenant);
 
             WaitUntil.WaitSomeInterval(1000);
 

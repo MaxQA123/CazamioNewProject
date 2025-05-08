@@ -7,7 +7,7 @@ namespace CazamioNewProject.PageObjects.TenantPages.SubmittingApplicationPage
     {
         #region Block with applicationId
 
-        [FindsBy(How = How.XPath, Using = "//div[text()= ' Account was successfully activated ']")]
+        [FindsBy(How = How.XPath, Using = "substring-after(//app-tenant-application//div[@class='apartment-address']//p[contains(text(), 'Application Id: #')], 'Application Id: #')")]
         public IWebElement ApplicationIdVl;
 
         #endregion
