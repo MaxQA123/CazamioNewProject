@@ -19,6 +19,17 @@ namespace CazamioNewProject.PageObjects.TenantPages.ToasterMessages
             return this;
         }
 
+        [AllureStep("VerifyMessageAccountWasSuccessfullyActivatedWithDiv")]
+        public ToasterMessagesTenants VerifyMessageAccountWasSuccessfullyActivatedWithDiv()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccessWithDiv));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageAccountWasSuccessfullyActivated));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageAccountWasSuccessfullyActivated));
+
+            return this;
+        }
+
         [AllureStep("VerifyMessageSuccessfullyUpdatedNameAndPassword")]
         public ToasterMessagesTenants VerifyMessageSuccessfullyUpdatedNameAndPassword()
         {

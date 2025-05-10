@@ -77,7 +77,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
             string subjectNotification = EmailNotifications.Generate().SubjectsCreateTenantPlusApp.CreateTenantViaGetLinkWithAgentBrokerSaintJohnsonPlace;
             string unitNumberAc = Pages.BuildingApartmentsTbl.GetVlOfClmnUnitFrstRw();
 
-            string updatedText = ReplaceLastUnitNumber(subjectNotification, unitNumberAc);
+            // Используем Regex для замены числа после #
+            string updatedText = Regex.Replace(subjectNotification, @"#\d+", "#" + unitNumberAc);
 
             return updatedText;
         }

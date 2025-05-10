@@ -11,6 +11,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw
             string MainApplicantFullEmailFromEditApp, string OccupantFullEmailFromEditApp, string GuarantorFullEmailFromEditApp)
         EditApplicationNineNineNineEightSaintJohnsonPlace()
         {
+            WaitUntil.CustomElementIsInVisible(LoaderHidden);
             WaitUntil.WaitSomeInterval(1000);
             Pages.ApplicationDetail
                 .ClickEditApplicationBtn();
@@ -40,19 +41,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw
             InputGeneral.InputFunctionWithClear(RequestedWorkFieldInput, application.RequestedWork.LongTextNineNineNineEightSaintJohnsonPlace);
             Button.Click(AssignedAgentBtn);
             Button.Click(SetAgentAgentusBrokerusItem());
-
             InputGeneral.InputFunctionWithClear(EmailAddressMainApplicantFieldInput, tenantCreatorMySpace.Emails.RandomMainApplicantEmail);
             string mainApplicantPartEmail = Pages.EditApplicationMdlWndw.GetRandomEmailBeforeDogFromEmailAddressMainApplicant();
             string mainApplicantFullEmailFromEditApp = Pages.EditApplicationMdlWndw.GetFullEmailAddressMainApplicant();
-
             Button.Click(PlusAddApplicantBtn);
-
             InputGeneral.InputFunctionWithClear(FirstFieldInputEmailAddress, tenantOccupantMySpace.Emails.RandomEmail);
             string occupantPartEmail = Pages.EditApplicationMdlWndw.GetRandomEmailBeforeDogFromEmailAddressOccupant();
             string occupantFullEmailFromEditApp = Pages.EditApplicationMdlWndw.GetFullEmailAddressOccupantFromFirstFieldInput();
-
             Button.Click(PlusAddApplicantBtn);
-
             InputGeneral.InputFunctionWithClear(SecondFieldInputEmailAddress, tenantGuarantorMySpace.Emails.RandomEmail);
             string guarantorPartEmail = Pages.EditApplicationMdlWndw.GetRandomEmailBeforeDogFromEmailAddressGuarantor();
             string guarantorFullEmailFromEditApp = Pages.EditApplicationMdlWndw.GetFullEmailAddressGuarantorFromSecondFieldInput();
@@ -74,7 +70,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw
             string MainApplicantNewlyCreatedPartEmail)
         EditFirstApplicationOneTwoFiveSixSevenDeanStreet()
         {
-            WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.CustomElementIsInVisible(LoaderHidden);
             Pages.ApplicationDetail
                 .ClickEditApplicationBtn();
             VerifyEditApplicationTitle();

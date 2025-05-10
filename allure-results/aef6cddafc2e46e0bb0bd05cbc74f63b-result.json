@@ -1,0 +1,778 @@
+{
+  "uuid": "8b185729-2e7a-4f0d-ba26-f225857dbe75-tr-0-1014",
+  "historyId": "MarketplaceAdminGuiTest.TestsBaseGui.EditApplicationNineNineNineEightSaintJohnsonPlace",
+  "fullName": "MarketplaceAdminGuiTest.TestsBaseGui.EditApplicationNineNineNineEightSaintJohnsonPlace",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "16"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "MarketplaceAdminGuiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "EditApplicationNineNineNineEightSaintJohnsonPlace"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "MarketplaceAdmin"
+    },
+    {
+      "name": "subSuite",
+      "value": "EditApplicationNineNineNineEightSaintJohnsonPlace"
+    }
+  ],
+  "links": [],
+  "name": "EditApplicationNineNineNineEightSaintJohnsonPlace",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected string length 108 but was 111. Strings differ at index 106.\r\n  Expected: \"...reated you an application for 9998 Saint Johnson Place #1.\"\r\n  But was:  \"...reated you an application for 9998 Saint Johnson Place #4389.\"\r\n  ----------------------------------------------------------------------^\r\n",
+    "trace": "   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent_100663489_o(String getSubjectExpected, String getSubjectFromEmail) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\EmailPutsBoxPage\\EmailPutsBoxAssertions.cs:line 37\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent_100663489_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent_100663489_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(String getSubjectExpected, String getSubjectFromEmail)\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.EditApplicationNineNineNineEightSaintJohnsonPlace() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 1175\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "EditApplicationNineNineNineEightSaintJohnsonPlace",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected string length 108 but was 111. Strings differ at index 106.\r\n  Expected: \"...reated you an application for 9998 Saint Johnson Place #1.\"\r\n  But was:  \"...reated you an application for 9998 Saint Johnson Place #4389.\"\r\n  ----------------------------------------------------------------------^\r\n",
+        "trace": "   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent_100663489_o(String getSubjectExpected, String getSubjectFromEmail) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\EmailPutsBoxPage\\EmailPutsBoxAssertions.cs:line 37\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent_100663489_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent_100663489_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(String getSubjectExpected, String getSubjectFromEmail)\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.EditApplicationNineNineNineEightSaintJohnsonPlace() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 1175\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "VerifyUserData",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "ResponseLogInApiBroker",
+              "value": "CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.LogInApiBroker.ResponseLogInApiBroker"
+            },
+            {
+              "name": "Broker",
+              "value": "CazamioNewProject.Objects.Broker"
+            }
+          ],
+          "start": 1746889369838,
+          "stop": 1746889369861
+        },
+        {
+          "name": "LogInAsMarketplaceAdminMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746889374152,
+              "stop": 1746889375591
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746889375663,
+              "stop": 1746889377873
+            },
+            {
+              "name": "VerifyMarketplaceAdminUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Mark Adm"
+                },
+                {
+                  "name": "String",
+                  "value": "Marketplace Admin"
+                }
+              ],
+              "start": 1746889377896,
+              "stop": 1746889378607
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746889370994,
+          "stop": 1746889378607
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746889378636,
+          "stop": 1746889384406
+        },
+        {
+          "name": "SearchNineNineNineEightSaintJohnsonPlace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746889384409,
+          "stop": 1746889395256
+        },
+        {
+          "name": "SelectNineNineNineEightSaintJohnsonPlace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746889395257,
+          "stop": 1746889399133
+        },
+        {
+          "name": "VerifyTitleBuildingViewPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746889399137,
+          "stop": 1746889403361
+        },
+        {
+          "name": "GetValueOfStringAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746889403361,
+          "stop": 1746889405453
+        },
+        {
+          "name": "GetValueOfStringBuildingName",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746889405454,
+          "stop": 1746889405504
+        },
+        {
+          "name": "VerifyBuildingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "9998 Saint Johnson Place"
+            },
+            {
+              "name": "String",
+              "value": "9998 Saint Johnson Place"
+            }
+          ],
+          "start": 1746889405506,
+          "stop": 1746889408540
+        },
+        {
+          "name": "ClickTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746889408540,
+          "stop": 1746889410308
+        },
+        {
+          "name": "GetSubjectWithAgentBrokerSaintJohnsonPlace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetVlOfClmnUnitFrstRw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746889421557,
+              "stop": 1746889421673
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746889420526,
+          "stop": 1746889421679
+        },
+        {
+          "name": "ClickRowByDepositReceived",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746889432192,
+          "stop": 1746889432980
+        },
+        {
+          "name": "VerifyTitleAddApartmentsPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746889432985,
+          "stop": 1746889434998
+        },
+        {
+          "name": "EnterRandomEmailGetApplicationLink",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746889434999,
+          "stop": 1746889435955
+        },
+        {
+          "name": "ClickButtonGetLink",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746889435971,
+          "stop": 1746889438427
+        },
+        {
+          "name": "VerifyMessageCopiedTheLinkToApplication",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746889438429,
+          "stop": 1746889447464
+        },
+        {
+          "name": "ClickTabApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746889447466,
+          "stop": 1746889448130
+        },
+        {
+          "name": "GetApplicationIdFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746889448133,
+          "stop": 1746889448185
+        },
+        {
+          "name": "ClickFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746889448195,
+          "stop": 1746889448873
+        },
+        {
+          "name": "VerifyTitleApplicationDetailPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746889448874,
+          "stop": 1746889449812
+        },
+        {
+          "name": "EditApplicationNineNineNineEightSaintJohnsonPlace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickEditApplicationBtn",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746889449892,
+              "stop": 1746889451115
+            },
+            {
+              "name": "VerifyEditApplicationTitle",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746889451116,
+              "stop": 1746889451174
+            },
+            {
+              "name": "ClickButtonDropDownYearMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746889454042,
+              "stop": 1746889454817
+            },
+            {
+              "name": "SelectCurrentYear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746889454817,
+              "stop": 1746889455997
+            },
+            {
+              "name": "SelectNextMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746889455998,
+              "stop": 1746889457241
+            },
+            {
+              "name": "SelectFisrtDayInNextMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746889457241,
+              "stop": 1746889458393
+            },
+            {
+              "name": "GetRandomEmailBeforeDogFromEmailAddressMainApplicant",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746889465342,
+              "stop": 1746889465912
+            },
+            {
+              "name": "GetFullEmailAddressMainApplicant",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746889465924,
+              "stop": 1746889465981
+            },
+            {
+              "name": "GetRandomEmailBeforeDogFromEmailAddressOccupant",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746889467409,
+              "stop": 1746889467965
+            },
+            {
+              "name": "GetFullEmailAddressOccupantFromFirstFieldInput",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746889467974,
+              "stop": 1746889468018
+            },
+            {
+              "name": "GetRandomEmailBeforeDogFromEmailAddressGuarantor",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746889469389,
+              "stop": 1746889469924
+            },
+            {
+              "name": "GetFullEmailAddressGuarantorFromSecondFieldInput",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746889469932,
+              "stop": 1746889469984
+            },
+            {
+              "name": "VerifyEditApplicationTitle",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746889471411,
+              "stop": 1746889471461
+            },
+            {
+              "name": "VerifySureYouWantToEditThisApplicationSubTitle",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746889471462,
+              "stop": 1746889471513
+            },
+            {
+              "name": "VerifyMessageApplicationEditSuccessful",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746889472160,
+              "stop": 1746889482872
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746889449841,
+          "stop": 1746889482872
+        },
+        {
+          "name": "OpenNewTab",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746889482874,
+          "stop": 1746889483011
+        },
+        {
+          "name": "GetSubjectLetterCreateTenantViaGetLink",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746889494655,
+          "stop": 1746889494706
+        },
+        {
+          "name": "VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  Expected string length 108 but was 111. Strings differ at index 106.\r\n  Expected: \"...reated you an application for 9998 Saint Johnson Place #1.\"\r\n  But was:  \"...reated you an application for 9998 Saint Johnson Place #4389.\"\r\n  ----------------------------------------------------------------------^\r\n",
+            "trace": "   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.AreEqual(Object expected, Object actual)\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent_100663489_o(String getSubjectExpected, String getSubjectFromEmail) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\EmailPutsBoxPage\\EmailPutsBoxAssertions.cs:line 37\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent_100663489_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Welcome to Noyo Properties NYC! Agentus Brokerus created you an application for 9998 Saint Johnson Place #1."
+            },
+            {
+              "name": "String",
+              "value": "Welcome to Noyo Properties NYC! Agentus Brokerus created you an application for 9998 Saint Johnson Place #4389."
+            }
+          ],
+          "start": 1746889506079,
+          "stop": 1746889515696
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "a6bf35e9c6054404840f405a0a92a418-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1746889357391,
+      "stop": 1746889530870
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1746889357385,
+  "stop": 1746889530883
+}

@@ -1,5 +1,6 @@
 ﻿using Allure.Commons;
 using CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.LogInApiBroker;
+using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApiMandatoryData;
 using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin;
 using CazamioNewProject.DbHelpers.OwnersDbTable;
 using CazamioNewProject.GuiHelpers;
@@ -925,12 +926,12 @@ namespace BrokerGuiTests
 
             //#endregion
 
-            #region Preconditions API create apartment
+            //#region Preconditions API create apartment
 
-            var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentForAppOneTwoFiveSixSevenDeanStreet();
-            CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseMarketplaceAdmin.AuthData.Token, requestBodyApartment);
+            //var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentForAppOneTwoFiveSixSevenDeanStreet();
+            //CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseMarketplaceAdmin.AuthData.Token, requestBodyApartment);
 
-            #endregion
+            //#endregion
 
             #region Preconditions API create application
 
@@ -1004,10 +1005,10 @@ namespace BrokerGuiTests
                 .ClickButtonStartYourApplicationNowlForTenant();
             Pages.ToasterMessagesTenants
                 .VerifyMessageAccountWasSuccessfullyActivatedWarningNotFound();
+            Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
+                .QuicklyPassTenantCreatorMySpace();
             Pages.MyAccount
                 .VerifyYouHaveNoApplicationsYetRecord();
-            //Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
-            //    .QuicklyPassTenantCreatorMySpace();
             Pages.HeaderTenants
                 .LogOut();
             Pages.LogInTenant

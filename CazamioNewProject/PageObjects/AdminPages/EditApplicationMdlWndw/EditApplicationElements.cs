@@ -9,6 +9,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw
         [FindsBy(How = How.XPath, Using = ("//app-edit-application//h3[text() = 'Edit application']"))]
         public IWebElement EditApplicationTitle;
 
+        [FindsBy(How = How.XPath, Using = ("//app-loader//div[@class = 'hidden']"))]
+        public IWebElement LoaderHidden;
+
         [FindsBy(How = How.XPath, Using = ("//app-edit-application//input[@id = 'requestedOfferPrice']"))]
         public IWebElement RequestedOfferPriceFieldInput;
 

@@ -1,0 +1,224 @@
+{
+  "uuid": "24e97f97-ae37-4ca9-a8f5-c9e503299f97-tr-0-1007",
+  "historyId": "MarketplaceAdminGuiTest.TestsBaseGui.AddBuildingAssignedBroker",
+  "fullName": "MarketplaceAdminGuiTest.TestsBaseGui.AddBuildingAssignedBroker",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "MarketplaceAdminGuiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddBuildingAssignedBroker"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "MarketplaceAdmin"
+    },
+    {
+      "name": "subSuite",
+      "value": "AddBuildingAssignedBroker"
+    }
+  ],
+  "links": [],
+  "name": "AddBuildingAssignedBroker",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//ng-dropdown-panel[@aria-label = 'Options List']//div[text() = 'LLC Br Owner OwnerAndTenantPaysCommissio']\"}\n  (Session info: chrome=136.0.7103.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.SetItemOwnerOwnerAndTenantPaysCommissionBroker() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\NewBuildingPage\\NewBuildingElements.cs:line 24\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_SelectOwnerOwnerAndTenantPaysCommissionBroker_100663694_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\NewBuildingPage\\NewBuildingSteps.cs:line 177\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_SelectOwnerOwnerAndTenantPaysCommissionBroker_100663694_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_SelectOwnerOwnerAndTenantPaysCommissionBroker_100663694_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.SelectOwnerOwnerAndTenantPaysCommissionBroker() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\NewBuildingPage\\NewBuildingActions.cs:line 15\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.AddBuildingAssignedBroker() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 420"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "AddBuildingAssignedBroker",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//ng-dropdown-panel[@aria-label = 'Options List']//div[text() = 'LLC Br Owner OwnerAndTenantPaysCommissio']\"}\n  (Session info: chrome=136.0.7103.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.SetItemOwnerOwnerAndTenantPaysCommissionBroker() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\NewBuildingPage\\NewBuildingElements.cs:line 24\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_SelectOwnerOwnerAndTenantPaysCommissionBroker_100663694_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\NewBuildingPage\\NewBuildingSteps.cs:line 177\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_SelectOwnerOwnerAndTenantPaysCommissionBroker_100663694_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_SelectOwnerOwnerAndTenantPaysCommissionBroker_100663694_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.SelectOwnerOwnerAndTenantPaysCommissionBroker() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\NewBuildingPage\\NewBuildingActions.cs:line 15\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.AddBuildingAssignedBroker() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 420"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsMarketplaceAdminMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746887386320,
+              "stop": 1746887387681
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746887387690,
+              "stop": 1746887387786
+            },
+            {
+              "name": "VerifyMarketplaceAdminUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Mark Adm"
+                },
+                {
+                  "name": "String",
+                  "value": "Marketplace Admin"
+                }
+              ],
+              "start": 1746887387792,
+              "stop": 1746887388300
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746887383492,
+          "stop": 1746887388300
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746887388313,
+          "stop": 1746887394172
+        },
+        {
+          "name": "ClickButtonAddBuilding",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746887394173,
+          "stop": 1746887405030
+        },
+        {
+          "name": "VerifyTitleListOfBuildingsPg",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746887405037,
+          "stop": 1746887406205
+        },
+        {
+          "name": "SelectOwnerOwnerAndTenantPaysCommissionBroker",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//ng-dropdown-panel[@aria-label = 'Options List']//div[text() = 'LLC Br Owner OwnerAndTenantPaysCommissio']\"}\n  (Session info: chrome=136.0.7103.93); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception",
+            "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.SetItemOwnerOwnerAndTenantPaysCommissionBroker() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\NewBuildingPage\\NewBuildingElements.cs:line 24\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_SelectOwnerOwnerAndTenantPaysCommissionBroker_100663694_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\NewBuildingPage\\NewBuildingSteps.cs:line 177\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_SelectOwnerOwnerAndTenantPaysCommissionBroker_100663694_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746887406205,
+          "stop": 1746887417178
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "190d12a035154378a9a1bee54fe0758a-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1746887377607,
+      "stop": 1746887419918
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1746887377607,
+  "stop": 1746887419919
+}

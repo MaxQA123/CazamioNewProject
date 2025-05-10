@@ -9,6 +9,9 @@ namespace CazamioNewProject.PageObjects.TenantPages.ToasterMessages
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Success!']")]
         public IWebElement MessageSuccess;
 
+        [FindsBy(How = How.XPath, Using = "//div[text() = 'Success!']")]
+        public IWebElement MessageSuccessWithDiv;
+
         #region Success toasters when creating a new tenant plus application
 
         [FindsBy(How = How.XPath, Using = "//div[text()= ' Account was successfully activated ']")]

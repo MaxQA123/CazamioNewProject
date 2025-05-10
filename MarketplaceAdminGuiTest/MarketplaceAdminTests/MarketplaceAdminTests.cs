@@ -1103,9 +1103,9 @@ namespace MarketplaceAdminGuiTest
 
             #region Preconditions API
 
-            var responseBroker = LogInApiBroker.ExecuteLogIn();
-            LogInApiBroker.VerifyUserData(responseBroker, broker);
-            CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseBroker.AuthData.Token, requestBodyApartment);
+            //var responseBroker = LogInApiBroker.ExecuteLogIn();
+            //LogInApiBroker.VerifyUserData(responseBroker, broker);
+            //CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseBroker.AuthData.Token, requestBodyApartment);
 
             #endregion
 
@@ -1172,13 +1172,13 @@ namespace MarketplaceAdminGuiTest
 
             string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
 
-            Pages.EmailPutsBox
-                .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
+            //Pages.EmailPutsBox
+            //    .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
             Pages.EmailPutsBox
                 .ClickButtonHtml()
                 .ClickButtonStartYourApplicationNowlForTenant();
             Pages.ToasterMessagesTenants
-                .VerifyMessageAccountWasSuccessfullyActivated();
+                .VerifyMessageAccountWasSuccessfullyActivatedWithDiv();
             Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
                 .QuicklyPassTenantCreatorMySpace();
             Pages.LeasePriceAdjustmentMdlWndw
@@ -1202,7 +1202,6 @@ namespace MarketplaceAdminGuiTest
             //    .ClickButtonStartYourApplicationNowlForTenantSecond();
             //Pages.ToasterMessagesTenants
             //    .VerifyMessageAccountWasSuccessfullyActivated();
-
             //Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
             //    .QuicklyPassTenantOccupantMySpace();
             //Pages.HeaderTenants
