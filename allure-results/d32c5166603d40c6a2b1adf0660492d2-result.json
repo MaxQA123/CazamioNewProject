@@ -1,0 +1,311 @@
+{
+  "uuid": "ff56bcf9-7c38-45df-9b4a-50429c5d48e9-tr-0-1012",
+  "historyId": "MarketplaceAdminGuiTest.TestsBaseGui.CreateApplicationForApartmentVacant",
+  "fullName": "MarketplaceAdminGuiTest.TestsBaseGui.CreateApplicationForApartmentVacant",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "MarketplaceAdminGuiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateApplicationForApartmentVacant"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "MarketplaceAdmin"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateApplicationForApartmentVacant"
+    }
+  ],
+  "links": [],
+  "name": "CreateApplicationForApartmentVacant",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+    "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls.BuildingApartmentsTbl.__a$_around_GetVlOfClmnUnitFrstRw_100664125_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\BuildingApartmentsTbls\\BuildingApartmentsActions.cs:line 105\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls.BuildingApartmentsTbl.__a$_around_GetVlOfClmnUnitFrstRw_100664125_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls.BuildingApartmentsTbl.__a$_around_GetVlOfClmnUnitFrstRw_100664125_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls.BuildingApartmentsTbl.GetVlOfClmnUnitFrstRw() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\BuildingApartmentsTbls\\BuildingApartmentsActions.cs:line 16\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_GetSubjectWithAgentWashingtonSquare_100663939_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApartmentViewPage\\ApartmentViewActions.cs:line 124\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_GetSubjectWithAgentWashingtonSquare_100663939_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_GetSubjectWithAgentWashingtonSquare_100663939_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.GetSubjectWithAgentWashingtonSquare() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApartmentViewPage\\ApartmentViewActions.cs:line 13\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.CreateApplicationForApartmentVacant() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 974"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateApplicationForApartmentVacant",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+        "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls.BuildingApartmentsTbl.__a$_around_GetVlOfClmnUnitFrstRw_100664125_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\BuildingApartmentsTbls\\BuildingApartmentsActions.cs:line 105\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls.BuildingApartmentsTbl.__a$_around_GetVlOfClmnUnitFrstRw_100664125_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls.BuildingApartmentsTbl.__a$_around_GetVlOfClmnUnitFrstRw_100664125_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls.BuildingApartmentsTbl.GetVlOfClmnUnitFrstRw() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\BuildingApartmentsTbls\\BuildingApartmentsActions.cs:line 16\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_GetSubjectWithAgentWashingtonSquare_100663939_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApartmentViewPage\\ApartmentViewActions.cs:line 124\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_GetSubjectWithAgentWashingtonSquare_100663939_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_GetSubjectWithAgentWashingtonSquare_100663939_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.GetSubjectWithAgentWashingtonSquare() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApartmentViewPage\\ApartmentViewActions.cs:line 13\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.CreateApplicationForApartmentVacant() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 974"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsMarketplaceAdminMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746981284618,
+              "stop": 1746981286187
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746981286199,
+              "stop": 1746981286300
+            },
+            {
+              "name": "VerifyMarketplaceAdminUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Mark Adm"
+                },
+                {
+                  "name": "String",
+                  "value": "Marketplace Admin"
+                }
+              ],
+              "start": 1746981286312,
+              "stop": 1746981286935
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746981281724,
+          "stop": 1746981286935
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746981286944,
+          "stop": 1746981293025
+        },
+        {
+          "name": "SearchBuildingOneWashingtonSquare",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746981293027,
+          "stop": 1746981299541
+        },
+        {
+          "name": "SelectItemFirst",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746981299542,
+          "stop": 1746981303410
+        },
+        {
+          "name": "VerifyTitleBuildingViewPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746981303414,
+          "stop": 1746981308202
+        },
+        {
+          "name": "GetValueOfStringAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746981308202,
+          "stop": 1746981310292
+        },
+        {
+          "name": "VerifyBuildingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "1 Washington Square"
+            },
+            {
+              "name": "String",
+              "value": "1 Washington Square"
+            }
+          ],
+          "start": 1746981310293,
+          "stop": 1746981313324
+        },
+        {
+          "name": "ClickTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746981313325,
+          "stop": 1746981315077
+        },
+        {
+          "name": "GetSubjectWithAgentWashingtonSquare",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Timed out after 10 seconds",
+            "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls.BuildingApartmentsTbl.__a$_around_GetVlOfClmnUnitFrstRw_100664125_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\BuildingApartmentsTbls\\BuildingApartmentsActions.cs:line 105\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls.BuildingApartmentsTbl.__a$_around_GetVlOfClmnUnitFrstRw_100664125_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls.BuildingApartmentsTbl.__a$_around_GetVlOfClmnUnitFrstRw_100664125_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls.BuildingApartmentsTbl.GetVlOfClmnUnitFrstRw() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\BuildingApartmentsTbls\\BuildingApartmentsActions.cs:line 16\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_GetSubjectWithAgentWashingtonSquare_100663939_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApartmentViewPage\\ApartmentViewActions.cs:line 124\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage.ApartmentView.__a$_around_GetSubjectWithAgentWashingtonSquare_100663939_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetVlOfClmnUnitFrstRw",
+              "status": "failed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false,
+                "message": "Timed out after 10 seconds",
+                "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls.BuildingApartmentsTbl.__a$_around_GetVlOfClmnUnitFrstRw_100664125_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\BuildingApartmentsTbls\\BuildingApartmentsActions.cs:line 105\r\n   at CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls.BuildingApartmentsTbl.__a$_around_GetVlOfClmnUnitFrstRw_100664125_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1746981316128,
+              "stop": 1746981326407
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1746981315122,
+          "stop": 1746981326430
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "685024e79dd64ccc837e1e79926a57c5-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1746981275065,
+      "stop": 1746981329409
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1746981275064,
+  "stop": 1746981329419
+}

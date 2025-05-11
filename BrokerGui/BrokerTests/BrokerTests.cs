@@ -693,7 +693,7 @@ namespace BrokerGuiTests
             Pages.HeaderTenants
                 .LogOut();
             Pages.SwitchingBetweenBrowserTabsActions
-                .SecondThirdFourthTabCloseSecondTabSelect();
+                .SecondThirdFourthTabCloseFirstTabSelect();
             //Occupant
             Pages.JScriptExecutor
                .OpenNewTab();
@@ -703,7 +703,7 @@ namespace BrokerGuiTests
                 .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
             Pages.EmailPutsBox
                 .ClickButtonHtml()
-                .ClickButtonStartYourApplicationNowlForTenantSecond();
+                .ClickButtonStartYourApplicationNowlForTenant();
             Pages.ToasterMessagesTenants
                 .VerifyMessageAccountWasSuccessfullyActivated();
 
@@ -712,7 +712,7 @@ namespace BrokerGuiTests
             Pages.HeaderTenants
                 .LogOut();
             Pages.SwitchingBetweenBrowserTabsActions
-                .SecondThirdFourthTabCloseSecondTabSelect();
+                .SecondThirdFourthTabCloseFirstTabSelect();
             //Guarantor
             Pages.JScriptExecutor
                .OpenNewTab();
@@ -722,7 +722,7 @@ namespace BrokerGuiTests
                 .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
             Pages.EmailPutsBox
                 .ClickButtonHtml()
-                .ClickButtonStartYourApplicationNowlForTenantThird();
+                .ClickButtonStartYourApplicationNowlForTenant();
             Pages.ToasterMessagesTenants
                 .VerifyMessageAccountWasSuccessfullyActivated();
             Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw

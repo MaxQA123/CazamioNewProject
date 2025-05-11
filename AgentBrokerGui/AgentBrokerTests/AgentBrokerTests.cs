@@ -417,9 +417,6 @@ namespace AgentBrokerGui
                 .VerifyApplicationIdNumberTenantCreator(applicationIdFromAppLandlord, appIdFromAppTenantCreator);
             Pages.HeaderTenants
                 .LogOut();
-            Pages.JScriptExecutor
-              .OpenNewTabHomePageTenant();
-            SelectThirdTabBrowser.Open();
             Pages.LogInTenant
                 .LogInAsOccupantWithCreditReportMySpace();
             Pages.HeaderTenants
@@ -430,7 +427,7 @@ namespace AgentBrokerGui
             Pages.MyAccount
                 .VerifyApplicationIdNumberTenantOccupant(applicationIdFromAppLandlord, appIdFromAppTenantOccupant);
 
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
         }
@@ -543,7 +540,7 @@ namespace AgentBrokerGui
             Pages.MyAccount
                 .VerifyApplicationIdNumberTenantCreator(applicationIdFromAppLandlord, applicationIdFromAppTenant);
 
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
         }

@@ -201,9 +201,6 @@ namespace AgentGuiTests
                 .VerifyApplicationIdNumberTenantCreator(applicationIdFromAppLandlord, appIdFromAppTenantCreator);
             Pages.HeaderTenants
                 .LogOut();
-            Pages.JScriptExecutor
-              .OpenNewTabHomePageTenant();
-            SelectThirdTabBrowser.Open();
             Pages.LogInTenant
                 .LogInAsGuarantorWithoutCreditReportMySpace();
             Pages.HeaderTenants
@@ -360,7 +357,7 @@ namespace AgentGuiTests
             Pages.MyAccount
                 .VerifyApplicationIdNumberTenantGuarantor(applicationIdFromAppLandlord, appIdFromAppTenantGuarantor);
 
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
         }

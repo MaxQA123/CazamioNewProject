@@ -916,8 +916,10 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonStartYourApplicationNowlForTenant();
             Pages.ToasterMessagesTenants
                 .VerifyMessageAccountWasSuccessfullyActivated();
+            //Pages.LeasePriceAdjustmentMdlWndw
+            //    .ClickSaveBtn();
 
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
         }
@@ -1030,6 +1032,8 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonStartYourApplicationNowlForTenant();
             Pages.ToasterMessagesTenants
                 .VerifyMessageAccountWasSuccessfullyActivated();
+            //Pages.LeasePriceAdjustmentMdlWndw
+            //    .ClickSaveBtn();
 
             WaitUntil.WaitSomeInterval(1000);
 
