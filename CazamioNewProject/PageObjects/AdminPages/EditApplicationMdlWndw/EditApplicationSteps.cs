@@ -67,7 +67,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw
 
         [AllureStep("EditFirstApplicationOneTwoFiveSixSevenDeanStreet")]
         public (EditApplicationMdlWndw Window,
-            string MainApplicantNewlyCreatedPartEmail)
+            string MainApplicantNewlyCreatedPartEmailOld, string OccupantPartEmailOld, string GuarantorPartEmailOld)
         EditFirstApplicationOneTwoFiveSixSevenDeanStreet()
         {
             WaitUntil.CustomElementIsInVisible(LoaderHidden);
@@ -96,9 +96,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw
             Button.Click(AssignedAgentBtn);
             Button.Click(SetAgentAgentusBrokerusItem());
 
-            string mainApplicantNewlyCreatedPartEmail = Pages.EditApplicationMdlWndw.GetRandomEmailBeforeDogFromEmailAddressMainApplicant();
+            string mainApplicantNewlyCreatedPartEmailOld = Pages.EditApplicationMdlWndw.GetRandomEmailBeforeDogFromEmailAddressMainApplicant();
             InputGeneral.InputFunctionWithClear(EmailAddressMainApplicantFieldInput, tenantCreatorMySpace.CreatedWithoutCreditReport.Email);
-            
+            string occupantPartEmailOld = Pages.EditApplicationMdlWndw.GetRandomEmailBeforeDogFromEmailAddressOccupant();
+            string guarantorPartEmailOld = Pages.EditApplicationMdlWndw.GetRandomEmailBeforeDogFromEmailAddressGuarantor();
             WaitUntil.WaitSomeInterval(100);
             Button.Click(CrossBtnFirstForDeleting);
             WaitUntil.WaitSomeInterval(100);
@@ -112,7 +113,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw
                 .VerifyMessageApplicationEditSuccessful();
 
             return (this,
-                mainApplicantNewlyCreatedPartEmail);
+                mainApplicantNewlyCreatedPartEmailOld, occupantPartEmailOld, guarantorPartEmailOld);
 
         }
     }

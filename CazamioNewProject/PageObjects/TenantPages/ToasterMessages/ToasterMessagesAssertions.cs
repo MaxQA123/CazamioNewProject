@@ -11,9 +11,9 @@ namespace CazamioNewProject.PageObjects.TenantPages.ToasterMessages
         [AllureStep("VerifyMessageAccountWasSuccessfullyActivated")]
         public ToasterMessagesTenants VerifyMessageAccountWasSuccessfullyActivated()
         {
-            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccessSecondVersion));
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageAccountWasSuccessfullyActivated));
-            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageSuccessSecondVersion));
             Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageAccountWasSuccessfullyActivated));
 
             return this;
@@ -22,9 +22,9 @@ namespace CazamioNewProject.PageObjects.TenantPages.ToasterMessages
         [AllureStep("VerifyMessageAccountWasSuccessfullyActivatedWithDiv")]
         public ToasterMessagesTenants VerifyMessageAccountWasSuccessfullyActivatedWithDiv()
         {
-            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccessWithDiv));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccessSecondVersion));
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageAccountWasSuccessfullyActivated));
-            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageSuccessSecondVersion));
             Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageAccountWasSuccessfullyActivated));
 
             return this;

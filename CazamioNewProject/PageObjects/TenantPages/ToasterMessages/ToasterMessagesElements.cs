@@ -6,11 +6,11 @@ namespace CazamioNewProject.PageObjects.TenantPages.ToasterMessages
     public partial class ToasterMessagesTenants
     {
         //Common Success toaster 
-        [FindsBy(How = How.XPath, Using = "//span[text() = 'Success!']")]
-        public IWebElement MessageSuccess;
+        //[FindsBy(How = How.XPath, Using = "//span[text() = 'Success!']")]
+        //public IWebElement MessageSuccessFirstVersion;
 
-        [FindsBy(How = How.XPath, Using = "//div[text() = 'Success!']")]
-        public IWebElement MessageSuccessWithDiv;
+        [FindsBy(How = How.XPath, Using = "//div[@aria-label = 'Success!']")]
+        public IWebElement MessageSuccessSecondVersion;
 
         #region Success toasters when creating a new tenant plus application
 

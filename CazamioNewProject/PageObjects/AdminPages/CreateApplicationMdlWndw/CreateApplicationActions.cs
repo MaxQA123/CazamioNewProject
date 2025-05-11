@@ -25,7 +25,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         [AllureStep("CopyEmailBeforeDogFromFieldGetApplicationLink")]
         public string CopyEmailBeforeDogFromFieldGetApplicationLink()
         {
-            WaitUntil.WaitSomeInterval(2000);
+            WaitUntil.CustomElementIsVisible(VlFromStringLeadEmail);
             string copyPartEmail = VlFromStringLeadEmail.Text;
             Regex regexPartEmail = new Regex(@"^.........................");
             string partEmail = regexPartEmail.Match(copyPartEmail).ToString();

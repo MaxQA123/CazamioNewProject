@@ -12,7 +12,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         {
             WaitUntil.CustomElementIsVisible(FieldInputMainApplicantEmailAddress);
             InputGeneral.InputFunctionWithClear(FieldInputMainApplicantEmailAddress, tenantCreatorMySpace.Emails.RandomMainApplicantEmail);
-            WaitUntil.WaitSomeInterval(2000);
+            WaitUntil.WaitSomeInterval(3000);
             Button.Click(ButtonNext);
 
             return this;

@@ -573,7 +573,7 @@ namespace BrokerGuiTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
-        [Retry(2)]
+        [Retry(1)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Broker")]
         [AllureSubSuite("CreateApplicationForApartmentOccupied")]
@@ -688,10 +688,12 @@ namespace BrokerGuiTests
                 .VerifyMessageAccountWasSuccessfullyActivated();
             Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
                 .QuicklyPassTenantCreatorMySpace();
-            Pages.LeasePriceAdjustmentMdlWndw
-                .ClickCancelBtn();
+            //Pages.LeasePriceAdjustmentMdlWndw
+            //    .ClickSaveBtn();
             Pages.HeaderTenants
                 .LogOut();
+            Pages.SwitchingBetweenBrowserTabsActions
+                .SecondThirdFourthTabCloseSecondTabSelect();
             //Occupant
             Pages.JScriptExecutor
                .OpenNewTab();
@@ -709,6 +711,8 @@ namespace BrokerGuiTests
                 .QuicklyPassTenantOccupantMySpace();
             Pages.HeaderTenants
                 .LogOut();
+            Pages.SwitchingBetweenBrowserTabsActions
+                .SecondThirdFourthTabCloseSecondTabSelect();
             //Guarantor
             Pages.JScriptExecutor
                .OpenNewTab();
@@ -726,7 +730,7 @@ namespace BrokerGuiTests
             Pages.HeaderTenants
                 .LogOut();
 
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
         }
@@ -988,13 +992,13 @@ namespace BrokerGuiTests
 
             #region Test
 
-            var (window, mainApplicantNewlyCreatedPartEmail) =
+            var (window, mainApplicantNewlyCreatedPartEmailOld, occupantPartEmailOld, guarantorPartEmailOld) =
             Pages.EditApplicationMdlWndw.EditFirstApplicationOneTwoFiveSixSevenDeanStreet();
-            //Main applicant newly created
+            //Main applicant newly created who has been deleted from the application
             Pages.JScriptExecutor
                .OpenNewTab();
             Pages.EmailHelper
-               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, mainApplicantNewlyCreatedPartEmail);
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, mainApplicantNewlyCreatedPartEmailOld);
 
             string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
 
@@ -1011,6 +1015,7 @@ namespace BrokerGuiTests
                 .VerifyYouHaveNoApplicationsYetRecord();
             Pages.HeaderTenants
                 .LogOut();
+            //Main applicant already created who has been added to the application
             Pages.LogInTenant
                 .LogInAsCreatorWithoutCreditReportMySpace();
             Pages.HeaderTenants
@@ -1020,6 +1025,54 @@ namespace BrokerGuiTests
 
             Pages.MyAccount
                 .VerifyApplicationIdNumberTenantCreator(applicationIdFromAppLandlord, applicationIdFromAppTenant);
+            Pages.HeaderTenants
+                .LogOut();
+            Pages.SwitchingBetweenBrowserTabsActions
+                .SecondThirdTabCloseSecondTabSelect();
+            //Occupant newly created who has been deleted from the application
+            //Pages.JScriptExecutor
+            //   .OpenNewTab();
+            //Pages.EmailHelper
+            //   .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, occupantPartEmailOld);
+
+            //string getSubjectFromEmailOccupant = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+
+            //Pages.EmailPutsBox
+            //    .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmailOccupant);
+            //Pages.EmailPutsBox
+            //    .ClickButtonHtml()
+            //    .ClickButtonStartYourApplicationNowlForTenant();
+            //Pages.ToasterMessagesTenants
+            //    .VerifyMessageAccountWasSuccessfullyActivatedWarningNotFound();
+            //Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
+            //    .QuicklyPassTenantCreatorMySpace();
+            //Pages.MyAccount
+            //    .VerifyYouHaveNoApplicationsYetRecord();
+            //Pages.HeaderTenants
+            //    .LogOut();
+            
+            ////Guarantor newly created who has been deleted from the application
+            //Pages.JScriptExecutor
+            //   .OpenNewTab();
+            //Pages.EmailHelper
+            //   .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, guarantorPartEmailOld);
+
+            //string getSubjectFromEmailGuarantor = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+
+            //Pages.EmailPutsBox
+            //    .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmailGuarantor);
+            //Pages.EmailPutsBox
+            //    .ClickButtonHtml()
+            //    .ClickButtonStartYourApplicationNowlForTenant();
+
+            //Pages.ToasterMessagesTenants
+            //    .VerifyMessageAccountWasSuccessfullyActivatedWarningNotFound();
+            //Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
+            //    .QuicklyPassTenantCreatorMySpace();
+            //Pages.MyAccount
+            //    .VerifyYouHaveNoApplicationsYetRecord();
+            //Pages.HeaderTenants
+            //    .LogOut();
 
             WaitUntil.WaitSomeInterval(1000);
 

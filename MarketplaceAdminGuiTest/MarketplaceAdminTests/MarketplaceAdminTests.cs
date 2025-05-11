@@ -825,8 +825,7 @@ namespace MarketplaceAdminGuiTest
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("MarketplaceAdmin")]
         [AllureSubSuite("CreateApplicationForApartmentDepositReceived")]
-
-        public void CreateApplicationForApartmentDepositReceived()
+       public void CreateApplicationForApartmentDepositReceived()
         {
             #region SettingsForBuilding
 
