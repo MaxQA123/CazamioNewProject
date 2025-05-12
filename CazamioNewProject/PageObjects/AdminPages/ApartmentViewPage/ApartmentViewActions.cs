@@ -201,6 +201,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         {
             WaitUntil.CustomElementIsVisible(ButtonGetLink);
             Button.Click(ButtonGetLink);
+            Pages.ToasterMessagesLandlord
+                .VerifyMessageCopiedTheLinkToApplication();
 
             return this;
         }

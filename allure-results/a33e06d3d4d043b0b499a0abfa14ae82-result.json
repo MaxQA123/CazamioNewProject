@@ -1,0 +1,1174 @@
+{
+  "uuid": "00f85e7c-9ccf-4264-9eb9-9b8b85c86e65-tr-0-1008",
+  "historyId": "BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied",
+  "fullName": "BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "BrokerGuiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateApplicationForApartmentOccupied"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateApplicationForApartmentOccupied"
+    }
+  ],
+  "links": [],
+  "name": "CreateApplicationForApartmentOccupied",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+    "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 29\r\n   at CazamioNewProject.PageObjects.TenantPages.LeasePriceAdjustmentMdlWndw.LeasePriceAdjustmentMdlWndw.__a$_around_ClickSaveBtn_100663474_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\TenantPages\\LeasePriceAdjustmentMdlWndw\\LeasePriceAdjustmentActions.cs:line 12\r\n   at CazamioNewProject.PageObjects.TenantPages.LeasePriceAdjustmentMdlWndw.LeasePriceAdjustmentMdlWndw.__a$_around_ClickSaveBtn_100663474_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.TenantPages.LeasePriceAdjustmentMdlWndw.LeasePriceAdjustmentMdlWndw.__a$_around_ClickSaveBtn_100663474_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.TenantPages.LeasePriceAdjustmentMdlWndw.LeasePriceAdjustmentMdlWndw.ClickSaveBtn() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\TenantPages\\LeasePriceAdjustmentMdlWndw\\LeasePriceAdjustmentActions.cs:line 10\r\n   at BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 711"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateApplicationForApartmentOccupied",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+        "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 29\r\n   at CazamioNewProject.PageObjects.TenantPages.LeasePriceAdjustmentMdlWndw.LeasePriceAdjustmentMdlWndw.__a$_around_ClickSaveBtn_100663474_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\TenantPages\\LeasePriceAdjustmentMdlWndw\\LeasePriceAdjustmentActions.cs:line 12\r\n   at CazamioNewProject.PageObjects.TenantPages.LeasePriceAdjustmentMdlWndw.LeasePriceAdjustmentMdlWndw.__a$_around_ClickSaveBtn_100663474_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.TenantPages.LeasePriceAdjustmentMdlWndw.LeasePriceAdjustmentMdlWndw.__a$_around_ClickSaveBtn_100663474_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.TenantPages.LeasePriceAdjustmentMdlWndw.LeasePriceAdjustmentMdlWndw.ClickSaveBtn() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\TenantPages\\LeasePriceAdjustmentMdlWndw\\LeasePriceAdjustmentActions.cs:line 10\r\n   at BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 711"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsBrokerMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747056928929,
+              "stop": 1747056930771
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747056930783,
+              "stop": 1747056930874
+            },
+            {
+              "name": "VerifyBrokerUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Leoautotest Feabroker"
+                },
+                {
+                  "name": "String",
+                  "value": "Broker"
+                }
+              ],
+              "start": 1747056930884,
+              "stop": 1747056931426
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747056926033,
+          "stop": 1747056931426
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747056931441,
+          "stop": 1747056937392
+        },
+        {
+          "name": "SearchNineAAlbermaleRd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747056937396,
+          "stop": 1747056948463
+        },
+        {
+          "name": "SelectItemNineAAlbermaleRd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747056948463,
+          "stop": 1747056952504
+        },
+        {
+          "name": "VerifyTitleBuildingViewPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747056952505,
+          "stop": 1747056956642
+        },
+        {
+          "name": "GetValueOfStringAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747056956643,
+          "stop": 1747056958736
+        },
+        {
+          "name": "VerifyBuildingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "9A Albermale Rd"
+            },
+            {
+              "name": "String",
+              "value": "9A Albermale Rd"
+            }
+          ],
+          "start": 1747056958737,
+          "stop": 1747056961784
+        },
+        {
+          "name": "UpdateValueCreditScreeningFee",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyMessageScreeningFeeSaved",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747056963900,
+              "stop": 1747056974581
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747056961785,
+          "stop": 1747056974581
+        },
+        {
+          "name": "ClickTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747056974581,
+          "stop": 1747056976422
+        },
+        {
+          "name": "GetSubjectWithoutAgentAlbermaleRd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetVlOfClmnUnitFrstRw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747056977471,
+              "stop": 1747056977540
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747056976452,
+          "stop": 1747056977542
+        },
+        {
+          "name": "ClickRowByOccupied",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747056977543,
+          "stop": 1747056978367
+        },
+        {
+          "name": "VerifyTitleAddApartmentsPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747056978371,
+          "stop": 1747056981549
+        },
+        {
+          "name": "ClickButtonPlusApplication",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747056981566,
+          "stop": 1747056982962
+        },
+        {
+          "name": "VerifyTitleCreateApplication",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747056982980,
+          "stop": 1747056983091
+        },
+        {
+          "name": "PassFirstStepRandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747056983092,
+          "stop": 1747056988042
+        },
+        {
+          "name": "CopyEmailBeforeDogFromFieldGetApplicationLink",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747056988044,
+          "stop": 1747056988526
+        },
+        {
+          "name": "PassThirdStepAddressNineAAlbermaleRd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "SelectFisrtDayInNextMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747056992189,
+              "stop": 1747056993328
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747056988528,
+          "stop": 1747056999023
+        },
+        {
+          "name": "VerifyTitleApplicationSuccessfullyCreated",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747056999025,
+          "stop": 1747056999092
+        },
+        {
+          "name": "VerifyTextLinkAlreadyCopied",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747056999093,
+          "stop": 1747056999146
+        },
+        {
+          "name": "ClickButtonAddApplicant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747056999146,
+          "stop": 1747056999846
+        },
+        {
+          "name": "AddOneNewlyCreatedOccupantGuarantor",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyTitleAddApplicantMdlWndw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747056999856,
+              "stop": 1747056999903
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747056999855,
+          "stop": 1747057013269
+        },
+        {
+          "name": "CopyEmailBeforeDogFromFirstFieldInputEmailAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057013272,
+          "stop": 1747057013427
+        },
+        {
+          "name": "CopyEmailBeforeDogFromSecondFieldInputEmailAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057013428,
+          "stop": 1747057013601
+        },
+        {
+          "name": "ClickBtnAdd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyMessageAddedApplicantsToApplication",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747057015351,
+              "stop": 1747057024470
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057013603,
+          "stop": 1747057024471
+        },
+        {
+          "name": "ClickTabApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057024474,
+          "stop": 1747057025218
+        },
+        {
+          "name": "GetApartmentAddressFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057025220,
+          "stop": 1747057025288
+        },
+        {
+          "name": "GetFirstNameTenantMainApplicantFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057025288,
+          "stop": 1747057025858
+        },
+        {
+          "name": "GetLastNameTenantMainApplicantFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057025858,
+          "stop": 1747057026418
+        },
+        {
+          "name": "GetFirstLastNameTenantOccupantFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057026420,
+          "stop": 1747057026481
+        },
+        {
+          "name": "GetPriceFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057026481,
+          "stop": 1747057026536
+        },
+        {
+          "name": "GetDateCreatedFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057026537,
+          "stop": 1747057027091
+        },
+        {
+          "name": "GetAgentFromFrstRw",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057027092,
+          "stop": 1747057027145
+        },
+        {
+          "name": "VerifyFullDataByApplicationTenantsMainOccupant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "9A Albermale Rd"
+            },
+            {
+              "name": "String",
+              "value": "9A Albermale Rd"
+            },
+            {
+              "name": "String",
+              "value": "Tenant"
+            },
+            {
+              "name": "String",
+              "value": "Tenant"
+            },
+            {
+              "name": "String",
+              "value": "Generated"
+            },
+            {
+              "name": "String",
+              "value": "Generated"
+            },
+            {
+              "name": "String",
+              "value": "Tenant Generated"
+            },
+            {
+              "name": "String",
+              "value": "Tenant Generated"
+            },
+            {
+              "name": "String",
+              "value": "$10333"
+            },
+            {
+              "name": "String",
+              "value": "$10333"
+            },
+            {
+              "name": "String",
+              "value": "Not assigned"
+            },
+            {
+              "name": "String",
+              "value": "Not assigned"
+            },
+            {
+              "name": "String",
+              "value": "Draft"
+            },
+            {
+              "name": "String",
+              "value": "Draft"
+            },
+            {
+              "name": "String",
+              "value": "05/12/2025"
+            },
+            {
+              "name": "String",
+              "value": "05/12/2025"
+            },
+            {
+              "name": "String",
+              "value": "Close"
+            },
+            {
+              "name": "String",
+              "value": "Close"
+            }
+          ],
+          "start": 1747057027213,
+          "stop": 1747057027214
+        },
+        {
+          "name": "OpenNewTab",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057027214,
+          "stop": 1747057027405
+        },
+        {
+          "name": "GetSubjectLetterCreateTenantViaGetLink",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057031917,
+          "stop": 1747057031979
+        },
+        {
+          "name": "VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Welcome to Noyo Properties NYC! Let's begin your application process for 9A Albermale Rd #3N8X now!"
+            },
+            {
+              "name": "String",
+              "value": "Welcome to Noyo Properties NYC! Let's begin your application process for 9A Albermale Rd #3N8X now!"
+            }
+          ],
+          "start": 1747057031980,
+          "stop": 1747057031999
+        },
+        {
+          "name": "ClickButtonHtml",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057032000,
+          "stop": 1747057033316
+        },
+        {
+          "name": "ClickButtonStartYourApplicationNowlForTenant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057033317,
+          "stop": 1747057043990
+        },
+        {
+          "name": "VerifyMessageAccountWasSuccessfullyActivated",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057043992,
+          "stop": 1747057046239
+        },
+        {
+          "name": "QuicklyPassTenantCreatorMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyTitlePleaseTellUsYourNameAndChangeYourPassword",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747057046243,
+              "stop": 1747057046309
+            },
+            {
+              "name": "VerifyMessageSuccessfullyUpdatedNameAndPassword",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747057049188,
+              "stop": 1747057057534
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057046243,
+          "stop": 1747057057534
+        },
+        {
+          "name": "ClickSaveBtn",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyMessageThirdLeasePriceWasAgreedOnSuccessfully",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747057058255,
+              "stop": 1747057063979
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057057535,
+          "stop": 1747057063979
+        },
+        {
+          "name": "LogOut",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ConmfirmLogOut",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [
+                {
+                  "name": "VerifyTitle",
+                  "status": "passed",
+                  "statusDetails": {
+                    "known": false,
+                    "muted": false,
+                    "flaky": false
+                  },
+                  "stage": "finished",
+                  "steps": [],
+                  "attachments": [],
+                  "parameters": [],
+                  "start": 1747057065471,
+                  "stop": 1747057065543
+                }
+              ],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747057065470,
+              "stop": 1747057067566
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057063981,
+          "stop": 1747057067566
+        },
+        {
+          "name": "OpenNewTab",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057074040,
+          "stop": 1747057074144
+        },
+        {
+          "name": "VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Welcome to Noyo Properties NYC! Let's begin your application process for 9A Albermale Rd #3N8X now!"
+            },
+            {
+              "name": "String",
+              "value": "Welcome to Noyo Properties NYC! Let's begin your application process for 9A Albermale Rd #3N8X now!"
+            }
+          ],
+          "start": 1747057077811,
+          "stop": 1747057077834
+        },
+        {
+          "name": "ClickButtonHtml",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057077835,
+          "stop": 1747057079327
+        },
+        {
+          "name": "ClickButtonStartYourApplicationNowlForTenant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057079327,
+          "stop": 1747057089645
+        },
+        {
+          "name": "VerifyMessageAccountWasSuccessfullyActivated",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057089647,
+          "stop": 1747057093705
+        },
+        {
+          "name": "QuicklyPassTenantOccupantMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyTitlePleaseTellUsYourNameAndChangeYourPassword",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747057093709,
+              "stop": 1747057093777
+            },
+            {
+              "name": "VerifyMessageSuccessfullyUpdatedNameAndPassword",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747057096706,
+              "stop": 1747057103130
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057093708,
+          "stop": 1747057103130
+        },
+        {
+          "name": "ClickSaveBtn",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Timed out after 10 seconds",
+            "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 29\r\n   at CazamioNewProject.PageObjects.TenantPages.LeasePriceAdjustmentMdlWndw.LeasePriceAdjustmentMdlWndw.__a$_around_ClickSaveBtn_100663474_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\TenantPages\\LeasePriceAdjustmentMdlWndw\\LeasePriceAdjustmentActions.cs:line 12\r\n   at CazamioNewProject.PageObjects.TenantPages.LeasePriceAdjustmentMdlWndw.LeasePriceAdjustmentMdlWndw.__a$_around_ClickSaveBtn_100663474_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057103131,
+          "stop": 1747057124062
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "08cf23df40e048c6bf3317495bd864de-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1747056919459,
+      "stop": 1747057126575
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1747056919458,
+  "stop": 1747057126595
+}

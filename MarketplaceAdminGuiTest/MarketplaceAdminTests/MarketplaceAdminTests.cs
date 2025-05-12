@@ -1,7 +1,4 @@
 using Allure.Commons;
-using CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.LogInApiBroker;
-using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApiMandatoryData;
-using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin;
 using CazamioNewProject.DbHelpers.AspNetUsersTable;
 using CazamioNewProject.DbHelpers.BrokersAgentsTable;
 using CazamioNewProject.DbHelpers.LandlordsBrokersTable;
@@ -21,7 +18,7 @@ namespace MarketplaceAdminGuiTest
 
     public class TestsBaseGui : MarketplaceAdminBase
     {
-        //Amount order 14 next must be 15
+        //Amount order 15 next must be 16
         [Test]
         [Order(1)]
         [AllureTag("Regression")]
@@ -584,7 +581,45 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(10)]
+        [Order(9)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(1)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("MarketplaceAdmin")]
+        [AllureSubSuite("AddGroupBuildingsViaApi")]
+
+        public void AddGroupBuildingsViaApi()
+        {
+
+            #region SettingsForBuilding
+
+            //Saint Johnson Place
+
+            #endregion
+
+            #region Preconditions
+
+            Pages.LogInLandlord
+                .LogInAsMarketplaceAdminMySpace();
+            Pages.SidebarLandlord
+                .ClickButtonBuildings();
+
+            #endregion
+
+            #region Test
+
+            
+
+            WaitUntil.WaitSomeInterval(1000);
+
+            #endregion
+
+        }
+
+        [Test]
+        [Order(11)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -711,7 +746,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(9)]
+        [Order(10)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -817,7 +852,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(11)]
+        [Order(12)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -879,7 +914,6 @@ namespace MarketplaceAdminGuiTest
 
             Pages.ApartmentView
                 .ClickButtonGetLink()
-                .VerifyCopiedTheLinkToApplication()
                 .ClickTabApplications();
             KeyBoardActions.ScrollToDown();
 
@@ -916,8 +950,10 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonStartYourApplicationNowlForTenant();
             Pages.ToasterMessagesTenants
                 .VerifyMessageAccountWasSuccessfullyActivated();
-            //Pages.LeasePriceAdjustmentMdlWndw
-            //    .ClickSaveBtn();
+            Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
+                .QuicklyPassTenantCreatorMySpace();
+            Pages.LeasePriceAdjustmentMdlWndw
+                .ClickSaveBtn();
 
             WaitUntil.WaitSomeInterval(1000);
 
@@ -925,7 +961,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(12)]
+        [Order(13)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -1030,10 +1066,10 @@ namespace MarketplaceAdminGuiTest
             Pages.EmailPutsBox
                 .ClickButtonHtml()
                 .ClickButtonStartYourApplicationNowlForTenant();
-            Pages.ToasterMessagesTenants
-                .VerifyMessageAccountWasSuccessfullyActivated();
-            //Pages.LeasePriceAdjustmentMdlWndw
-            //    .ClickSaveBtn();
+            Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
+                .QuicklyPassTenantCreatorMySpace();
+            Pages.LeasePriceAdjustmentMdlWndw
+                .ClickCancelBtn();
 
             WaitUntil.WaitSomeInterval(1000);
 
@@ -1041,7 +1077,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(13)]
+        [Order(14)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -1080,7 +1116,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(14)]
+        [Order(15)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]

@@ -118,7 +118,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageCopiedTheLinkToApplication));
-            WaitUntil.CustomElementIsInVisible(MessageCopiedTheLinkToApplication);
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageCopiedTheLinkToApplication));
 
             return this;
         }

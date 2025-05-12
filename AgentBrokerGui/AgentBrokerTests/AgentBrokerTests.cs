@@ -510,7 +510,6 @@ namespace AgentBrokerGui
 
             Pages.ApartmentView
                 .ClickButtonGetLink()
-                .VerifyCopiedTheLinkToApplication()
                 .ClickTabApplications();
             KeyBoardActions.ScrollToDown();
 

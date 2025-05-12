@@ -19,7 +19,6 @@ namespace CazamioNewProject.PageObjects.TenantPages.PleaseTellUsYourNameChangeYo
             Button.Click(BtnSave);
             Pages.ToasterMessagesTenants
                 .VerifyMessageSuccessfullyUpdatedNameAndPassword();
-                //.DissapearsMessageSuccessfullyUpdatedNameAndPassword();
 
             return this;
         }
@@ -38,7 +37,6 @@ namespace CazamioNewProject.PageObjects.TenantPages.PleaseTellUsYourNameChangeYo
             Button.Click(BtnSave);
             Pages.ToasterMessagesTenants
                 .VerifyMessageSuccessfullyUpdatedNameAndPassword();
-                //.DissapearsMessageSuccessfullyUpdatedNameAndPassword();
 
             return this;
         }
@@ -57,7 +55,6 @@ namespace CazamioNewProject.PageObjects.TenantPages.PleaseTellUsYourNameChangeYo
             Button.Click(BtnSave);
             Pages.ToasterMessagesTenants
                 .VerifyMessageSuccessfullyUpdatedNameAndPassword();
-                //.DissapearsMessageSuccessfullyUpdatedNameAndPassword();
 
             return this;
         }

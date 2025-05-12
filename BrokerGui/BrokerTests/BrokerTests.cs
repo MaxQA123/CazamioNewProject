@@ -688,8 +688,8 @@ namespace BrokerGuiTests
                 .VerifyMessageAccountWasSuccessfullyActivated();
             Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
                 .QuicklyPassTenantCreatorMySpace();
-            //Pages.LeasePriceAdjustmentMdlWndw
-            //    .ClickSaveBtn();
+            Pages.LeasePriceAdjustmentMdlWndw
+                .ClickSaveBtn();
             Pages.HeaderTenants
                 .LogOut();
             Pages.SwitchingBetweenBrowserTabsActions
@@ -706,7 +706,6 @@ namespace BrokerGuiTests
                 .ClickButtonStartYourApplicationNowlForTenant();
             Pages.ToasterMessagesTenants
                 .VerifyMessageAccountWasSuccessfullyActivated();
-
             Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
                 .QuicklyPassTenantOccupantMySpace();
             Pages.HeaderTenants
@@ -813,7 +812,6 @@ namespace BrokerGuiTests
 
             Pages.ApartmentView
                 .ClickButtonGetLink()
-                .VerifyCopiedTheLinkToApplication()
                 .ClickTabApplications();
             KeyBoardActions.ScrollToDown();
 

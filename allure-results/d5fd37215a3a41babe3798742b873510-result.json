@@ -1,0 +1,451 @@
+{
+  "uuid": "023c2514-26d6-40c7-a6d9-67ed16f1e412-tr-0-1006",
+  "historyId": "AgentBrokerGui.TestsBaseGui.CreateApplicationForApartmentOffMarket",
+  "fullName": "AgentBrokerGui.TestsBaseGui.CreateApplicationForApartmentOffMarket",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AgentBrokerGui"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateApplicationForApartmentOffMarket"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Agent-Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateApplicationForApartmentOffMarket"
+    }
+  ],
+  "links": [],
+  "name": "CreateApplicationForApartmentOffMarket",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected: True\r\n  But was:  False\r\n",
+    "trace": "   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_VerifyTitleApplicationSuccessfullyCreated_100663844_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\CreateApplicationMdlWndw\\CreateApplicationAssertions.cs:line 20\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_VerifyTitleApplicationSuccessfullyCreated_100663844_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_VerifyTitleApplicationSuccessfullyCreated_100663844_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.VerifyTitleApplicationSuccessfullyCreated()\r\n   at AgentBrokerGui.TestsBaseGui.CreateApplicationForApartmentOffMarket() in C:\\Automation\\CazamioNewProject\\AgentBrokerGui\\AgentBrokerTests\\AgentBrokerTests.cs:line 378\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateApplicationForApartmentOffMarket",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected: True\r\n  But was:  False\r\n",
+        "trace": "   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_VerifyTitleApplicationSuccessfullyCreated_100663844_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\CreateApplicationMdlWndw\\CreateApplicationAssertions.cs:line 20\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_VerifyTitleApplicationSuccessfullyCreated_100663844_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_VerifyTitleApplicationSuccessfullyCreated_100663844_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.VerifyTitleApplicationSuccessfullyCreated()\r\n   at AgentBrokerGui.TestsBaseGui.CreateApplicationForApartmentOffMarket() in C:\\Automation\\CazamioNewProject\\AgentBrokerGui\\AgentBrokerTests\\AgentBrokerTests.cs:line 378\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "VerifyUserData",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "ResponseLogInApiMarketplaceAdmin",
+              "value": "CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin.ResponseLogInApiMarketplaceAdmin"
+            },
+            {
+              "name": "MarketplaceAdmin",
+              "value": "CazamioNewProject.Objects.MarketplaceAdmin"
+            }
+          ],
+          "start": 1747057831441,
+          "stop": 1747057831464
+        },
+        {
+          "name": "LogInAsAgentBrokerMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747057836029,
+              "stop": 1747057837793
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747057837802,
+              "stop": 1747057837856
+            },
+            {
+              "name": "VerifyAgentBrokerUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Agentus Brokerus"
+                },
+                {
+                  "name": "String",
+                  "value": "Agent"
+                }
+              ],
+              "start": 1747057837863,
+              "stop": 1747057838382
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057832978,
+          "stop": 1747057838382
+        },
+        {
+          "name": "ClickButtonApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057838390,
+          "stop": 1747057842046
+        },
+        {
+          "name": "VerifyTitleListOfApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057842048,
+          "stop": 1747057842412
+        },
+        {
+          "name": "PassFirstStepCreatorWithCreditReportMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickButtonPlusApplication",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747057842454,
+              "stop": 1747057843347
+            },
+            {
+              "name": "VerifyTitleCreateApplication",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747057843348,
+              "stop": 1747057843412
+            },
+            {
+              "name": "EnterEmailCreatedTenantCreatorWithCreditReportMySpace",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747057843413,
+              "stop": 1747057844201
+            },
+            {
+              "name": "ClickButtonNext",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747057844202,
+              "stop": 1747057846849
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057842451,
+          "stop": 1747057846849
+        },
+        {
+          "name": "PassSecondStepOneOneOneAEastStPedestrianCrossingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "EnterOneOneOneAEastStPedestrianCrossingAddress",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747057846853,
+              "stop": 1747057847887
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057846850,
+          "stop": 1747057848637
+        },
+        {
+          "name": "GetFullEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057848639,
+          "stop": 1747057849733
+        },
+        {
+          "name": "VerifyEmailTenantCreatorWithCreditReport",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "main-appl-2myspace@putsbox.com"
+            }
+          ],
+          "start": 1747057849735,
+          "stop": 1747057849735
+        },
+        {
+          "name": "PassThirdStepOneOneOneAEastStPedestrianCrossingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickButtonDropDownYearMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747057852939,
+              "stop": 1747057853676
+            },
+            {
+              "name": "SelectCurrentYear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747057853677,
+              "stop": 1747057854834
+            },
+            {
+              "name": "SelectNextMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747057854834,
+              "stop": 1747057856031
+            },
+            {
+              "name": "SelectFisrtDayInNextMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747057856032,
+              "stop": 1747057857184
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057849735,
+          "stop": 1747057866989
+        },
+        {
+          "name": "VerifyTitleApplicationSuccessfullyCreated",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  Expected: True\r\n  But was:  False\r\n",
+            "trace": "   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.IsTrue(Boolean condition)\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_VerifyTitleApplicationSuccessfullyCreated_100663844_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\CreateApplicationMdlWndw\\CreateApplicationAssertions.cs:line 20\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw.CreateApplicationMdlWndw.__a$_around_VerifyTitleApplicationSuccessfullyCreated_100663844_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747057866990,
+          "stop": 1747057877338
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "88bc091da1be4f25aa019c6ae938f4f4-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1747057816345,
+      "stop": 1747057880351
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1747057816343,
+  "stop": 1747057880365
+}

@@ -15,13 +15,5 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
 
             return this;
         }
-
-        [AllureStep("VerifyCopiedTheLinkToApplication")]
-        public ApartmentView VerifyCopiedTheLinkToApplication()
-        {
-            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageCopiedTheLinkToApplication));
-
-            return this;
-        }
     }
 }

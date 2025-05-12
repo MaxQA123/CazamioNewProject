@@ -6,13 +6,20 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
     public partial class ToasterMessagesLandlord
     {
         //Common Success toasters 
-
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Success']")]
         public IWebElement MessageSuccess;
 
         //Appeared if selected and saved a payment method in Payment Options modal window
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Payment methods selected, Click save to confirm']")]
         public IWebElement MessagePaymentMethodsSelected;
+
+        #region For actions of an application
+
+        //Appeared if clicked the "Get Link" button on the "Apartment view page
+        [FindsBy(How = How.XPath, Using = "//span[text() = 'Copied the link to application.']")]
+        public IWebElement MessageCopiedTheLinkToApplication;
+
+        #endregion
 
         #region For Temlates page Success toasters
 
@@ -59,10 +66,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
         //Appeared if created a new apartment
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Apartments were saved successfully.']")]
         public IWebElement MessageApartmentsWereSavedSuccessfully;
-
-        //Appeared if created a new apartment
-        [FindsBy(How = How.XPath, Using = "//span[text() = 'Copied the link to application.']")]
-        public IWebElement MessageCopiedTheLinkToApplication;
 
         #endregion
 

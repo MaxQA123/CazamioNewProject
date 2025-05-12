@@ -50,9 +50,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
         [FindsBy(How = How.XPath, Using = "//div[@id = 'creator_name']//div[@id = 'last_name']//input[@placeholder = 'Last Name']")]
         public IWebElement FieldInputLastName;
 
-        [FindsBy(How = How.XPath, Using = "//span[text() = 'Copied the link to application.']")]
-        public IWebElement MessageCopiedTheLinkToApplication;
-
         #endregion
 
         #region tab Apartment Details
