@@ -1006,7 +1006,7 @@ namespace BrokerGuiTests
                 .ClickButtonHtml()
                 .ClickButtonStartYourApplicationNowlForTenant();
             Pages.ToasterMessagesTenants
-                .VerifyMessageAccountWasSuccessfullyActivatedWarningNotFound();
+                .VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication();
             Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
                 .QuicklyPassTenantCreatorMySpace();
             Pages.MyAccount
@@ -1026,30 +1026,31 @@ namespace BrokerGuiTests
             Pages.HeaderTenants
                 .LogOut();
             Pages.SwitchingBetweenBrowserTabsActions
-                .SecondThirdTabCloseSecondTabSelect();
+                .SecondTabCloseThreeTimes();
             //Occupant newly created who has been deleted from the application
-            //Pages.JScriptExecutor
-            //   .OpenNewTab();
-            //Pages.EmailHelper
-            //   .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, occupantPartEmailOld);
+            Pages.JScriptExecutor
+               .OpenNewTab();
+            Pages.EmailHelper
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, occupantPartEmailOld);
 
-            //string getSubjectFromEmailOccupant = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+            string getSubjectFromEmailOccupant = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
 
-            //Pages.EmailPutsBox
-            //    .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmailOccupant);
-            //Pages.EmailPutsBox
-            //    .ClickButtonHtml()
-            //    .ClickButtonStartYourApplicationNowlForTenant();
-            //Pages.ToasterMessagesTenants
-            //    .VerifyMessageAccountWasSuccessfullyActivatedWarningNotFound();
-            //Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
-            //    .QuicklyPassTenantCreatorMySpace();
-            //Pages.MyAccount
-            //    .VerifyYouHaveNoApplicationsYetRecord();
-            //Pages.HeaderTenants
-            //    .LogOut();
-            
-            ////Guarantor newly created who has been deleted from the application
+            Pages.EmailPutsBox
+                .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmailOccupant);
+            Pages.EmailPutsBox
+                .ClickButtonHtml()
+                .ClickButtonStartYourApplicationNowlForTenant();
+            Pages.ToasterMessagesTenants
+                .VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication();
+            Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
+                .QuicklyPassTenantCreatorMySpace();
+            Pages.MyAccount
+                .VerifyYouHaveNoApplicationsYetRecord();
+            Pages.HeaderTenants
+                .LogOut();
+            //Pages.SwitchingBetweenBrowserTabsActions
+            //    .SecondTabCloseThreeTimes();
+            //Guarantor newly created who has been deleted from the application
             //Pages.JScriptExecutor
             //   .OpenNewTab();
             //Pages.EmailHelper
@@ -1064,7 +1065,7 @@ namespace BrokerGuiTests
             //    .ClickButtonStartYourApplicationNowlForTenant();
 
             //Pages.ToasterMessagesTenants
-            //    .VerifyMessageAccountWasSuccessfullyActivatedWarningNotFound();
+            //    .VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication();
             //Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
             //    .QuicklyPassTenantCreatorMySpace();
             //Pages.MyAccount

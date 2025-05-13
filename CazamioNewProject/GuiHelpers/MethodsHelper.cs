@@ -33,7 +33,7 @@ namespace CazamioNewProject.GuiHelpers
 
     public class SwitchingBetweenBrowserTabs
     {
-        public static void SecondTabClose()
+        public static void SecondTabCloseFirstTabSelect()
         {
             WaitUntil.WaitSomeInterval(1000);
             List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
@@ -45,6 +45,24 @@ namespace CazamioNewProject.GuiHelpers
 
                 // Возвращаем фокус на первую вкладку (индекс 0)
                 Browser._Driver.SwitchTo().Window(tabsList[0]);
+            }
+            else
+            {
+                throw new InvalidOperationException("Недостаточно вкладок для закрытия (требуется минимум 2).");
+            }
+
+            WaitUntil.WaitSomeInterval(1000);
+        }
+
+        public static void SecondTabClose()
+        {
+            WaitUntil.WaitSomeInterval(1000);
+            List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
+
+            if (tabsList.Count >= 2) // Проверяем, что есть хотя бы 2 вкладки
+            {
+                // Закрываем вторую вкладку (индекс 1)
+                Browser._Driver.SwitchTo().Window(tabsList[1]).Close();
             }
             else
             {

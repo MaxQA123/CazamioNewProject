@@ -6,14 +6,23 @@ namespace CazamioNewProject.GuiHelpers
     {
         public SwitchingBetweenBrowserTabsActions SecondThirdTabCloseSecondTabSelect()
         {
-            SwitchingBetweenBrowserTabs.SecondTabClose();
-            SwitchingBetweenBrowserTabs.SecondTabClose();
+            SwitchingBetweenBrowserTabs.SecondTabCloseFirstTabSelect();
+            SwitchingBetweenBrowserTabs.SecondTabCloseFirstTabSelect();
             SwitchingBetweenBrowserTabs.SecondTabSelect();
 
             return this;
         }
 
         public SwitchingBetweenBrowserTabsActions SecondThirdFourthTabCloseFirstTabSelect()
+        {
+            SwitchingBetweenBrowserTabs.SecondTabCloseFirstTabSelect();
+            SwitchingBetweenBrowserTabs.SecondTabCloseFirstTabSelect();
+            SwitchingBetweenBrowserTabs.SecondTabCloseFirstTabSelect();
+
+            return this;
+        }
+
+        public SwitchingBetweenBrowserTabsActions SecondTabCloseThreeTimes()
         {
             SwitchingBetweenBrowserTabs.SecondTabClose();
             SwitchingBetweenBrowserTabs.SecondTabClose();

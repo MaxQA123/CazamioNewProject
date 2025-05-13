@@ -32,9 +32,9 @@ namespace CazamioNewProject.PageObjects.TenantPages.ToasterMessages
 
         #region Warning toasters when creating a new tenant plus application
 
-        //Appeared when creating a new tenant + application without an application
-        [FindsBy(How = How.XPath, Using = "//div[text()= 'Not found']")]
-        public IWebElement MessageNotFound;
+        //Appeared when creating a new tenant + application, but the application has been removed
+        [FindsBy(How = How.XPath, Using = "//div[text()= 'No access to view this application']")]
+        public IWebElement MessageNoAccessToViewThisApplication;
 
         #endregion
     }

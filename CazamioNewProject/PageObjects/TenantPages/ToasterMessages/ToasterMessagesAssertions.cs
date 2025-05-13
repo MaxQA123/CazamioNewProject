@@ -52,15 +52,15 @@ namespace CazamioNewProject.PageObjects.TenantPages.ToasterMessages
 
         #region Warning toasters when creating a new tenant plus application
 
-        [AllureStep("VerifyMessageAccountWasSuccessfullyActivatedWarningNotFound")]
-        public ToasterMessagesTenants VerifyMessageAccountWasSuccessfullyActivatedWarningNotFound()
+        [AllureStep("VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication")]
+        public ToasterMessagesTenants VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageAccountWasSuccessfullyActivated));
             Assert.IsTrue(ToasterWarning.IsVisible(MessageWarning));
-            Assert.IsTrue(ToasterWarning.IsVisible(MessageNotFound));
+            Assert.IsTrue(ToasterWarning.IsVisible(MessageNoAccessToViewThisApplication));
             Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageAccountWasSuccessfullyActivated));
             Assert.IsTrue(ToasterWarning.IsNotVisible(MessageWarning));
-            Assert.IsTrue(ToasterWarning.IsNotVisible(MessageNotFound));
+            Assert.IsTrue(ToasterWarning.IsNotVisible(MessageNoAccessToViewThisApplication));
 
             return this;
         }
