@@ -1,0 +1,471 @@
+{
+  "uuid": "3d01baca-6678-4b23-9226-9727f729f801-tr-0-1011",
+  "historyId": "BrokerGuiTests.TestsBaseGui.EditFirstApplicationOneTwoFiveSixSevenDeanStreet",
+  "fullName": "BrokerGuiTests.TestsBaseGui.EditFirstApplicationOneTwoFiveSixSevenDeanStreet",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "BrokerGuiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "EditFirstApplicationOneTwoFiveSixSevenDeanStreet"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "EditFirstApplicationOneTwoFiveSixSevenDeanStreet"
+    }
+  ],
+  "links": [],
+  "name": "EditFirstApplicationOneTwoFiveSixSevenDeanStreet",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <button _ngcontent-ng-c1658714832=\"\" aria-label=\"button\" class=\"middle primary-action relative-loader\" title=\"Edit application\" type=\"button\">...</button> is not clickable at point (714, 572). Other element would receive the click: <div _ngcontent-ng-c104434201=\"\" class=\"col-md-4\">...</div>\n  (Session info: chrome=136.0.7103.93)",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.__a$_around_ClickEditApplicationBtn_100663927_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApplicationDetailPage\\ApplicationDetailActions.cs:line 13\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.__a$_around_ClickEditApplicationBtn_100663927_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.__a$_around_ClickEditApplicationBtn_100663927_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.ClickEditApplicationBtn() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApplicationDetailPage\\ApplicationDetailActions.cs:line 10\r\n   at CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw.EditApplicationMdlWndw.__a$_around_EditFirstApplicationOneTwoFiveSixSevenDeanStreet_100663806_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\EditApplicationMdlWndw\\EditApplicationSteps.cs:line 75\r\n   at CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw.EditApplicationMdlWndw.__a$_around_EditFirstApplicationOneTwoFiveSixSevenDeanStreet_100663806_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw.EditApplicationMdlWndw.__a$_around_EditFirstApplicationOneTwoFiveSixSevenDeanStreet_100663806_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw.EditApplicationMdlWndw.EditFirstApplicationOneTwoFiveSixSevenDeanStreet() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\EditApplicationMdlWndw\\EditApplicationSteps.cs:line 14\r\n   at BrokerGuiTests.TestsBaseGui.EditFirstApplicationOneTwoFiveSixSevenDeanStreet() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 993"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "EditFirstApplicationOneTwoFiveSixSevenDeanStreet",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <button _ngcontent-ng-c1658714832=\"\" aria-label=\"button\" class=\"middle primary-action relative-loader\" title=\"Edit application\" type=\"button\">...</button> is not clickable at point (714, 572). Other element would receive the click: <div _ngcontent-ng-c104434201=\"\" class=\"col-md-4\">...</div>\n  (Session info: chrome=136.0.7103.93)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.__a$_around_ClickEditApplicationBtn_100663927_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApplicationDetailPage\\ApplicationDetailActions.cs:line 13\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.__a$_around_ClickEditApplicationBtn_100663927_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.__a$_around_ClickEditApplicationBtn_100663927_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.ClickEditApplicationBtn() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApplicationDetailPage\\ApplicationDetailActions.cs:line 10\r\n   at CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw.EditApplicationMdlWndw.__a$_around_EditFirstApplicationOneTwoFiveSixSevenDeanStreet_100663806_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\EditApplicationMdlWndw\\EditApplicationSteps.cs:line 75\r\n   at CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw.EditApplicationMdlWndw.__a$_around_EditFirstApplicationOneTwoFiveSixSevenDeanStreet_100663806_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw.EditApplicationMdlWndw.__a$_around_EditFirstApplicationOneTwoFiveSixSevenDeanStreet_100663806_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw.EditApplicationMdlWndw.EditFirstApplicationOneTwoFiveSixSevenDeanStreet() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\EditApplicationMdlWndw\\EditApplicationSteps.cs:line 14\r\n   at BrokerGuiTests.TestsBaseGui.EditFirstApplicationOneTwoFiveSixSevenDeanStreet() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 993"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "VerifyUserData",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "ResponseLogInApiMarketplaceAdmin",
+              "value": "CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin.ResponseLogInApiMarketplaceAdmin"
+            },
+            {
+              "name": "MarketplaceAdmin",
+              "value": "CazamioNewProject.Objects.MarketplaceAdmin"
+            }
+          ],
+          "start": 1747330156310,
+          "stop": 1747330156330
+        },
+        {
+          "name": "LogInAsBrokerMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747330166918,
+              "stop": 1747330168412
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747330168422,
+              "stop": 1747330168572
+            },
+            {
+              "name": "VerifyBrokerUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Leoautotest Feabroker"
+                },
+                {
+                  "name": "String",
+                  "value": "Broker"
+                }
+              ],
+              "start": 1747330168587,
+              "stop": 1747330169532
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747330162783,
+          "stop": 1747330169532
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747330169562,
+          "stop": 1747330177102
+        },
+        {
+          "name": "SearchOneTwoFiveSixSevenDeanStreet",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747330177105,
+          "stop": 1747330188595
+        },
+        {
+          "name": "SelectOneTwoFiveSixSevenDeanStreet",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747330188596,
+          "stop": 1747330192449
+        },
+        {
+          "name": "VerifyTitleBuildingViewPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747330192464,
+          "stop": 1747330196542
+        },
+        {
+          "name": "GetValueOfStringAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747330196543,
+          "stop": 1747330198622
+        },
+        {
+          "name": "GetValueOfStringBuildingName",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747330198623,
+          "stop": 1747330198676
+        },
+        {
+          "name": "VerifyBuildingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "12567 Dean Street"
+            },
+            {
+              "name": "String",
+              "value": "12567 Dean Street"
+            }
+          ],
+          "start": 1747330198676,
+          "stop": 1747330201710
+        },
+        {
+          "name": "ClickTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747330201710,
+          "stop": 1747330203516
+        },
+        {
+          "name": "GetSubjectWithoutAgentDeanStreet",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetVlOfClmnUnitFrstRw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747330204536,
+              "stop": 1747330204590
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747330203519,
+          "stop": 1747330204595
+        },
+        {
+          "name": "ClickRowByVacant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747330204621,
+          "stop": 1747330205479
+        },
+        {
+          "name": "VerifyTitleAddApartmentsPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747330205482,
+          "stop": 1747330207988
+        },
+        {
+          "name": "ClickTabApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747330207990,
+          "stop": 1747330208791
+        },
+        {
+          "name": "GetApplicationIdFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747330208798,
+          "stop": 1747330208996
+        },
+        {
+          "name": "ClickFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747330208997,
+          "stop": 1747330209841
+        },
+        {
+          "name": "VerifyTitleApplicationDetailPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747330209842,
+          "stop": 1747330211088
+        },
+        {
+          "name": "EditFirstApplicationOneTwoFiveSixSevenDeanStreet",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "element click intercepted: Element <button _ngcontent-ng-c1658714832=\"\" aria-label=\"button\" class=\"middle primary-action relative-loader\" title=\"Edit application\" type=\"button\">...</button> is not clickable at point (714, 572). Other element would receive the click: <div _ngcontent-ng-c104434201=\"\" class=\"col-md-4\">...</div>\n  (Session info: chrome=136.0.7103.93)",
+            "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.__a$_around_ClickEditApplicationBtn_100663927_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApplicationDetailPage\\ApplicationDetailActions.cs:line 13\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.__a$_around_ClickEditApplicationBtn_100663927_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.__a$_around_ClickEditApplicationBtn_100663927_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.ClickEditApplicationBtn() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApplicationDetailPage\\ApplicationDetailActions.cs:line 10\r\n   at CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw.EditApplicationMdlWndw.__a$_around_EditFirstApplicationOneTwoFiveSixSevenDeanStreet_100663806_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\EditApplicationMdlWndw\\EditApplicationSteps.cs:line 75\r\n   at CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw.EditApplicationMdlWndw.__a$_around_EditFirstApplicationOneTwoFiveSixSevenDeanStreet_100663806_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickEditApplicationBtn",
+              "status": "failed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false,
+                "message": "element click intercepted: Element <button _ngcontent-ng-c1658714832=\"\" aria-label=\"button\" class=\"middle primary-action relative-loader\" title=\"Edit application\" type=\"button\">...</button> is not clickable at point (714, 572). Other element would receive the click: <div _ngcontent-ng-c104434201=\"\" class=\"col-md-4\">...</div>\n  (Session info: chrome=136.0.7103.93)",
+                "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.__a$_around_ClickEditApplicationBtn_100663927_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApplicationDetailPage\\ApplicationDetailActions.cs:line 13\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.__a$_around_ClickEditApplicationBtn_100663927_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747330212132,
+              "stop": 1747330214540
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747330211108,
+          "stop": 1747330214582
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "27fcc559e1494bcea8a86b23f5bb4e68-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1747330144994,
+      "stop": 1747330218047
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1747330144993,
+  "stop": 1747330218058
+}

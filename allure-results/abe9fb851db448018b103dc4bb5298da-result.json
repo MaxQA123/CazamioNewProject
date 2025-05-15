@@ -1,0 +1,438 @@
+{
+  "uuid": "0f430c1f-146c-4569-8a70-09661a210206-tr-0-1011",
+  "historyId": "BrokerGuiTests.TestsBaseGui.EditFirstApplicationOneTwoFiveSixSevenDeanStreet",
+  "fullName": "BrokerGuiTests.TestsBaseGui.EditFirstApplicationOneTwoFiveSixSevenDeanStreet",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "BrokerGuiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "EditFirstApplicationOneTwoFiveSixSevenDeanStreet"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "EditFirstApplicationOneTwoFiveSixSevenDeanStreet"
+    }
+  ],
+  "links": [],
+  "name": "EditFirstApplicationOneTwoFiveSixSevenDeanStreet",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected: True\r\n  But was:  False\r\n",
+    "trace": "   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.__a$_around_VerifyTitleApplicationDetailPage_100663928_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApplicationDetailPage\\ApplicationDetailAssertions.cs:line 13\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.__a$_around_VerifyTitleApplicationDetailPage_100663928_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.__a$_around_VerifyTitleApplicationDetailPage_100663928_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.VerifyTitleApplicationDetailPage() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApplicationDetailPage\\ApplicationDetailActions.cs:line 11\r\n   at BrokerGuiTests.TestsBaseGui.EditFirstApplicationOneTwoFiveSixSevenDeanStreet() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 986\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "EditFirstApplicationOneTwoFiveSixSevenDeanStreet",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected: True\r\n  But was:  False\r\n",
+        "trace": "   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.__a$_around_VerifyTitleApplicationDetailPage_100663928_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApplicationDetailPage\\ApplicationDetailAssertions.cs:line 13\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.__a$_around_VerifyTitleApplicationDetailPage_100663928_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.__a$_around_VerifyTitleApplicationDetailPage_100663928_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.VerifyTitleApplicationDetailPage() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApplicationDetailPage\\ApplicationDetailActions.cs:line 11\r\n   at BrokerGuiTests.TestsBaseGui.EditFirstApplicationOneTwoFiveSixSevenDeanStreet() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 986\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "VerifyUserData",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "ResponseLogInApiMarketplaceAdmin",
+              "value": "CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin.ResponseLogInApiMarketplaceAdmin"
+            },
+            {
+              "name": "MarketplaceAdmin",
+              "value": "CazamioNewProject.Objects.MarketplaceAdmin"
+            }
+          ],
+          "start": 1747329853893,
+          "stop": 1747329853908
+        },
+        {
+          "name": "LogInAsBrokerMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747329871683,
+              "stop": 1747329873106
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747329873122,
+              "stop": 1747329873180
+            },
+            {
+              "name": "VerifyBrokerUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Leoautotest Feabroker"
+                },
+                {
+                  "name": "String",
+                  "value": "Broker"
+                }
+              ],
+              "start": 1747329873195,
+              "stop": 1747329873705
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747329868750,
+          "stop": 1747329873705
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747329873715,
+          "stop": 1747329880938
+        },
+        {
+          "name": "SearchOneTwoFiveSixSevenDeanStreet",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747329880940,
+          "stop": 1747329891972
+        },
+        {
+          "name": "SelectOneTwoFiveSixSevenDeanStreet",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747329891973,
+          "stop": 1747329895858
+        },
+        {
+          "name": "VerifyTitleBuildingViewPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747329895880,
+          "stop": 1747329900649
+        },
+        {
+          "name": "GetValueOfStringAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747329900650,
+          "stop": 1747329902701
+        },
+        {
+          "name": "GetValueOfStringBuildingName",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747329902702,
+          "stop": 1747329902743
+        },
+        {
+          "name": "VerifyBuildingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "12567 Dean Street"
+            },
+            {
+              "name": "String",
+              "value": "12567 Dean Street"
+            }
+          ],
+          "start": 1747329902744,
+          "stop": 1747329905765
+        },
+        {
+          "name": "ClickTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747329905766,
+          "stop": 1747329907561
+        },
+        {
+          "name": "GetSubjectWithoutAgentDeanStreet",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetVlOfClmnUnitFrstRw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747329908581,
+              "stop": 1747329908642
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747329907563,
+          "stop": 1747329908647
+        },
+        {
+          "name": "ClickRowByVacant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747329908675,
+          "stop": 1747329909618
+        },
+        {
+          "name": "VerifyTitleAddApartmentsPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747329909622,
+          "stop": 1747329919921
+        },
+        {
+          "name": "ClickTabApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747329919923,
+          "stop": 1747329920636
+        },
+        {
+          "name": "GetApplicationIdFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747329920653,
+          "stop": 1747329920721
+        },
+        {
+          "name": "ClickFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747329920722,
+          "stop": 1747329921448
+        },
+        {
+          "name": "VerifyTitleApplicationDetailPage",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  Expected: True\r\n  But was:  False\r\n",
+            "trace": "   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.IsTrue(Boolean condition)\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.__a$_around_VerifyTitleApplicationDetailPage_100663928_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApplicationDetailPage\\ApplicationDetailAssertions.cs:line 13\r\n   at CazamioNewProject.PageObjects.AdminPages.ApplicationDetailPage.ApplicationDetail.__a$_around_VerifyTitleApplicationDetailPage_100663928_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747329921450,
+          "stop": 1747329932113
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "dd1b164363a4408d937003b376a75fa2-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1747329818118,
+      "stop": 1747329935195
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1747329818117,
+  "stop": 1747329935206
+}

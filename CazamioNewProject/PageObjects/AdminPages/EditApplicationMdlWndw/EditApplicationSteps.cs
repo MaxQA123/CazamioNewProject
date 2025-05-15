@@ -71,6 +71,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw
         EditFirstApplicationOneTwoFiveSixSevenDeanStreet()
         {
             WaitUntil.CustomElementIsInVisible(LoaderHidden);
+            WaitUntil.WaitSomeInterval(2000);
             Pages.ApplicationDetail
                 .ClickEditApplicationBtn();
             VerifyEditApplicationTitle();

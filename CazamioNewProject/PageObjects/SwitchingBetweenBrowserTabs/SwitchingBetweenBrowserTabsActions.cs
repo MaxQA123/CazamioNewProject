@@ -30,5 +30,13 @@ namespace CazamioNewProject.GuiHelpers
 
             return this;
         }
+
+        public SwitchingBetweenBrowserTabsActions SecondTabCloseTwoTimes()
+        {
+            SwitchingBetweenBrowserTabs.SecondTabClose();
+            SwitchingBetweenBrowserTabs.SecondTabClose();
+
+            return this;
+        }
     }
 }
