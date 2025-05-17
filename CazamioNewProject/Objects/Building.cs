@@ -44,6 +44,7 @@ namespace CazamioNewProject.Objects
         {
             public string NumberRandomNameAddressStatic { get; set; }
             public string NumberNameAddressStatic { get; set; }
+            public string NumberNameAddressRandom { get; set; }
             public string NumberNameAddressStaticForSearch { get; set; }
             public string NumberNameAddress { get; set; }
             public string NumberAddress { get; set; }
@@ -53,6 +54,7 @@ namespace CazamioNewProject.Objects
             public string Zip { get; set; }
             public string Neighborhood { get; set; }
             public string BuildingName { get; set; }
+            public string BuildingNameRandom { get; set; }
             public string LlcName { get; set; }
             public string LongBuildingAddress { get; set; }
         }
@@ -61,6 +63,7 @@ namespace CazamioNewProject.Objects
         {
             public string NumberRandomNameAddressStatic { get; set; }
             public string NumberNameAddressStatic { get; set; }
+            public string NumberNameAddressRandom { get; set; }
             public string NumberNameAddressStaticForSearch { get; set; }
             public string NumberNameAddress { get; set; }
             public string NumberAddress { get; set; }
@@ -70,7 +73,9 @@ namespace CazamioNewProject.Objects
             public string Zip { get; set; }
             public string Neighborhood { get; set; }
             public string BuildingName { get; set; }
-            public string LlcName { get; set; }
+            public string BuildingNameRandom { get; set; }
+            public string LlcNameStatic { get; set; }
+            public string LlcNameRandom { get; set; }
         }
 
         public class CrownStInfo
@@ -229,17 +234,16 @@ namespace CazamioNewProject.Objects
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(5) + " " + "Saint Johnson Place",
                 NumberNameAddressStaticForSearch = "9998 Saint Johnson Place",
                 NumberNameAddressStatic = "9998 Saint Johnson Place",
-                //NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(5) + " " + "Saint Johnson Place",
+                NumberNameAddressRandom = GenerateRandomData.RandomNumberWithoutZero(4) + " " + "Saint Johnson Place",
                 NumberNameAddress = "9998 Saint Johnson Place",
                 NumberAddress = "9998",
-                //NumberAddress = GenerateRandomData.RandomNumberWithoutZero(5),
                 AddressName = "Saint Johnson Place",
                 City = "Brooklyn",
                 State = "NY",
                 Zip = "11213",
                 Neighborhood = "Crown Heights",
                 BuildingName = "AGENT QA-Building Name 9998 Saint Johnson Place (12345) (*&^%)",
-                //BuildingName = "AGENT QA-Building Name Random Saint Johnson Place (12345) (*&^%)",
+                BuildingNameRandom = "AGENT QA-Building Name Random Saint Johnson Place (12345) (*&^%)",
                 LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
                 LongBuildingAddress = "9998 Saint Johnson Place, Brooklyn, NY",
             };
@@ -252,18 +256,18 @@ namespace CazamioNewProject.Objects
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(4) + " " + "Washington Square",
                 NumberNameAddressStaticForSearch = "1 Washington Square",
                 NumberNameAddressStatic = "1 Washington Square",
-                //NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(4) + " " + "Washington Square",
+                NumberNameAddressRandom = GenerateRandomData.RandomNumberWithoutZero(1) + GenerateRandomData.RandomAlphabetUpperCase(1) + " " + "Washington Square",
                 NumberNameAddress = "1 Washington Square",
                 NumberAddress = "1",
-                //NumberAddress = GenerateRandomData.RandomNumberWithoutZero(2),
                 AddressName = "Washington Square",
                 City = "New York",
                 State = "NY",
                 Zip = "10012",
                 Neighborhood = "Manhattan",
                 BuildingName = "Broker QA-Building Name 1 Washington Square (12345) (09876) (*&^%)",
-                //BuildingName = "Broker QA-Building Name Random Washington Square (12345) (09876) (*&^%)",
-                LlcName = "LLC Name QA Broker (12345) (09876) (*&^%)",
+                BuildingNameRandom = "Broker QA-Building Name Random Washington Square (12345) (09876) (*&^%)",
+                LlcNameStatic = "LLC Name QA Broker (12345) (09876) (*&^%)",
+                LlcNameRandom = "LLC Random Name QA Broker (12345) (09876) (*&^%)",
             };
         }
 

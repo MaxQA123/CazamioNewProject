@@ -121,23 +121,30 @@ namespace CazamioNewProject.Objects
 
         public class CreatedOwnerNoCommissioMySpaceInfo
         {
+            public string OwnerEmail { get; set; }
             public string OwnerName { get; set; }
             public long OwnerIdApi { get; set; }
         }
 
         public class CreatedOwnerOwnerAndTenantPaysMySpaceInfo
         {
+            public string OwnerEmail { get; set; }
             public string OwnerName { get; set; }
+            public long OwnerIdApi { get; set; }
         }
 
         public class CreatedOwnerOwnerPaysMySpaceInfo
         {
+            public string OwnerEmail { get; set; }
             public string OwnerName { get; set; }
+            public long OwnerIdApi { get; set; }
         }
 
         public class CreatedOwnerTenantPaysMySpaceInfo
         {
+            public string OwnerEmail { get; set; }
             public string OwnerName { get; set; }
+            public long OwnerIdApi { get; set; }
         }
 
         private static CompanyNameInfo CreateCompanyNameInfo()
@@ -250,6 +257,7 @@ namespace CazamioNewProject.Objects
         {
             return new CreatedOwnerNoCommissioMySpaceInfo
             {
+                OwnerEmail = "owner2forag5bro@putsbox.com",
                 OwnerName = "LLC Ag-Br Owner No commisions AutoTest",
                 OwnerIdApi = 1,
             };
@@ -259,7 +267,9 @@ namespace CazamioNewProject.Objects
         {
             return new CreatedOwnerOwnerAndTenantPaysMySpaceInfo
             {
+                OwnerEmail = "owner2for5broker@putsbox.com",
                 OwnerName = "LLC Br Owner OwnerAndTenantPaysCommissio",
+                OwnerIdApi = 14,
             };
         }
 
@@ -267,7 +277,9 @@ namespace CazamioNewProject.Objects
         {
             return new CreatedOwnerOwnerPaysMySpaceInfo
             {
+                OwnerEmail = "owner-mike@putsbox.com",
                 OwnerName = "OOO Owner Assigned Broker OwnerPays Test",
+                OwnerIdApi = 9,
             };
         }
 
@@ -275,7 +287,9 @@ namespace CazamioNewProject.Objects
         {
             return new CreatedOwnerTenantPaysMySpaceInfo
             {
+                OwnerEmail = "owner-ibra@putsbox.com",
                 OwnerName = "Asig AgBr Owner TenantPays 12345 (!@#$%)",
+                OwnerIdApi = 10,
             };
         }
     }

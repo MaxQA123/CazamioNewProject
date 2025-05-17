@@ -13,7 +13,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         public NewBuilding EnterBuildingDataWashingtonSquare()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputAddress, building.WashingtonSquare.NumberNameAddressStatic);
+            InputGeneral.InputFunctionWithClear(FieldInputAddress, building.WashingtonSquare.NumberNameAddressRandom);
             WaitUntil.WaitSomeInterval(500);
             KeyBoardActions.ClickTab();
             KeyBoardActions.ClickEnterButton();
@@ -30,9 +30,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputNeighborhood, building.WashingtonSquare.Neighborhood);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputBuildingName, building.WashingtonSquare.BuildingName);
+            InputGeneral.InputFunctionWithClear(FieldInputBuildingName, building.WashingtonSquare.BuildingNameRandom);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLlcName, building.WashingtonSquare.LlcName);
+            InputGeneral.InputFunctionWithClear(FieldInputLlcName, building.WashingtonSquare.LlcNameRandom);
 
             return this;
         }
@@ -93,7 +93,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         public NewBuilding EnterBuildingDataSaintJohnsonPl()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputAddress, building.SaintJohnsonPl.NumberNameAddressStatic);
+            InputGeneral.InputFunctionWithClear(FieldInputAddress, building.SaintJohnsonPl.NumberNameAddressRandom);
             WaitUntil.WaitSomeInterval(500);
             KeyBoardActions.ClickTab();
             KeyBoardActions.ClickEnterButton();
@@ -500,7 +500,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         [AllureStep("ClickThreeTimesButtonGeneralNext")]
         public NewBuilding ClickThreeTimesButtonGeneralNext()
         {
-            WaitUntil.WaitSomeInterval(5000);
             WaitUntil.CustomElementIsVisible(ButtonGeneralNext);
             WaitUntil.CustomElementIsClickable(ButtonGeneralNext);
             Button.Click(ButtonGeneralNext);

@@ -17,7 +17,7 @@ namespace BrokerGuiTests
 
     public class TestsBaseGui : BrokerBase
     {
-        //Amount order 10 next must be 11
+        //Amount order 11 next must be 12
         [Test]
         [Order(1)]
         [AllureTag("Regression")]
@@ -237,6 +237,57 @@ namespace BrokerGuiTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
+        [Retry(1)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("MarketplaceAdmin")]
+        [AllureSubSuite("AddGroupBuildingsViaApiBasicStatic")]
+
+        public void AddGroupBuildingsViaApiBasicStatic()
+        {
+
+            #region SettingsForBuilding
+
+            //9A Albermale Rd
+            //30-39 Crown St
+
+            #endregion
+
+            #region Test Data
+
+            MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
+
+            #endregion
+
+            #region Preconditions LogIn as Marketplace Admin
+
+            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
+            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+
+            #endregion
+
+            #region Test create the 9A Albermale Rd building
+
+            var buildingRequestBodyAlbermaleRd = BuildingCreationMandatoryData.RequestBodyCreateBuildingNineAAlbermaleRd();
+            var responseBuildingAlbermaleRd = BuildingCreationMandatoryData.CreateBuildingNineAAlbermaleRd(responseMarketplaceAdmin.AuthData.Token, buildingRequestBodyAlbermaleRd);
+
+            #endregion
+
+            #region Test create the 30-39 Crown St building
+
+            var buildingRequestBodyCrownSt = BuildingCreationMandatoryData.RequestBodyCreateBuildingThirtyDashTrirtyNineCrownSt();
+            var responseBuildingCrownSt = BuildingCreationMandatoryData.CreateBuildingThirtyDashTrirtyNineCrownSt(responseMarketplaceAdmin.AuthData.Token, buildingRequestBodyCrownSt);
+
+            WaitUntil.WaitSomeInterval(1000);
+
+            #endregion
+
+        }
+
+        [Test]
+        [Order(5)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Broker")]
@@ -314,7 +365,7 @@ namespace BrokerGuiTests
         }
 
         [Test]
-        [Order(5)]
+        [Order(6)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -434,7 +485,7 @@ namespace BrokerGuiTests
         }
 
         [Test]
-        [Order(6)]
+        [Order(7)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -499,7 +550,7 @@ namespace BrokerGuiTests
         }
 
         [Test]
-        [Order(7)]
+        [Order(8)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -569,11 +620,11 @@ namespace BrokerGuiTests
         }
 
         [Test]
-        [Order(8)]
+        [Order(9)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
-        [Retry(1)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Broker")]
         [AllureSubSuite("CreateApplicationForApartmentOccupied")]
@@ -735,7 +786,7 @@ namespace BrokerGuiTests
         }
 
         [Test]
-        [Order(9)]
+        [Order(10)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -851,7 +902,7 @@ namespace BrokerGuiTests
         }
 
         [Test]
-        [Order(10)]
+        [Order(11)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -890,7 +941,7 @@ namespace BrokerGuiTests
         }
 
         [Test]
-        [Order(11)]
+        [Order(12)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]

@@ -1,0 +1,10 @@
+﻿echo offTASKKILL /F /IM "OpenWith.exe"
+TASKKILL /F /IM "chromedriver.exe"
+TASKKILL /F /IM "java.exe"
+TASKKILL /F /IM "node.exe"
+TASKKILL /F /IM "AppleMobileDeviceService.exe"
+TASKKILL /F /IM "APSDaemon.exe"
+TASKKILL /F /IM "ICloudServices.exe"
+TASKKILL /F /IM "mDNSResponder.exe"
+TASKKILL /F /IM "altserver.exe"
+TASKKILL /F /IM "Screencast-O-Matic.exe"pause

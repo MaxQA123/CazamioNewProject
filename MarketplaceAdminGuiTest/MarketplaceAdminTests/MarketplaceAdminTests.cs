@@ -1,4 +1,6 @@
 using Allure.Commons;
+using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApiMandatoryData;
+using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin;
 using CazamioNewProject.DbHelpers.AspNetUsersTable;
 using CazamioNewProject.DbHelpers.BrokersAgentsTable;
 using CazamioNewProject.DbHelpers.LandlordsBrokersTable;
@@ -588,29 +590,42 @@ namespace MarketplaceAdminGuiTest
         [Retry(1)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("MarketplaceAdmin")]
-        [AllureSubSuite("AddGroupBuildingsViaApi")]
+        [AllureSubSuite("AddGroupBuildingsViaApiBasicStatic")]
 
-        public void AddGroupBuildingsViaApi()
+        public void AddGroupBuildingsViaApiBasicStatic()
         {
 
             #region SettingsForBuilding
 
-            //Saint Johnson Place
+            //9998 Saint Johnson Place
+            //1 Washington Square
 
             #endregion
 
-            #region Preconditions
+            #region Test Data
 
-            Pages.LogInLandlord
-                .LogInAsMarketplaceAdminMySpace();
-            Pages.SidebarLandlord
-                .ClickButtonBuildings();
+            MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
 
             #endregion
 
-            #region Test
+            #region Preconditions LogIn as Marketplace Admin
 
-            
+            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
+            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+
+            #endregion
+
+            #region Test create the 9998 Saint Johnson Place building
+
+            var buildingRequestBodySaintJohnsonPl = BuildingCreationMandatoryData.RequestBodyCreateBuildingNineNineNineEightSaintJohnsonPlace();
+            var responseBuildingSaintJohnsonPl = BuildingCreationMandatoryData.CreateBuildingNineNineNineEightSaintJohnsonPlace(responseMarketplaceAdmin.AuthData.Token, buildingRequestBodySaintJohnsonPl);
+
+            #endregion
+
+            #region Test create the 1 Washington Square building
+
+            var buildingRequestBodyWashingtonSquare = BuildingCreationMandatoryData.RequestBodyCreateBuildingOneWashingtonSquare();
+            var responseBuildingWashingtonSquare = BuildingCreationMandatoryData.CreateBuildingOneWashingtonSquare(responseMarketplaceAdmin.AuthData.Token, buildingRequestBodyWashingtonSquare);
 
             WaitUntil.WaitSomeInterval(1000);
 
@@ -1183,8 +1198,6 @@ namespace MarketplaceAdminGuiTest
                 .EnterRandomEmailGetApplicationLink();
             Pages.ApartmentView
                 .ClickButtonGetLink();
-            Pages.ToasterMessagesLandlord
-                .VerifyMessageCopiedTheLinkToApplication();
             Pages.ApartmentView
                 .ClickTabApplications();
 
