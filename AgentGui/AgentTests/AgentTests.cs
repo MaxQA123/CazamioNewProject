@@ -73,32 +73,36 @@ namespace AgentGuiTests
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
-        [Retry(2)]
+        [Retry(1)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("MarketplaceAdmin Api test")]
-        [AllureSubSuite("CreateBuildingFullDataWithBroker")]
+        [AllureSubSuite("AddGroupBuildingsViaApiBasicStatic")]
 
-        public void CreateBuildingMandatoryDataWithAgent()
+        public void AddGroupBuildingsViaApiBasicStatic()
         {
+            #region SettingsForBuilding
+
+            //12867 Gates Avenue
+
+            #endregion
+
             #region Test Data
 
             MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
 
             #endregion
 
-            #region Preconditions
-
-            var buildingRequestBody = BuildingCreationMandatoryData.RequestBodyCreateGatesAvenueBuildingMandatoryDataAgent();
+            #region Preconditions LogIn as Marketplace Admin
 
             var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
-
             LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
 
             #endregion
 
-            #region Tests
+            #region Test create the 12867 Gates Avenue building
 
-            var responseBuilding = BuildingCreationMandatoryData.CreateBuildingMandatoryDataWithAgent(responseMarketplaceAdmin.AuthData.Token, buildingRequestBody);
+            var buildingRequestBody = BuildingCreationMandatoryData.RequestBodyCreateOneTwoEightSixSevenGatesAvenue();
+            var responseBuilding = BuildingCreationMandatoryData.CreateOneTwoEightSixSevenGatesAvenue(responseMarketplaceAdmin.AuthData.Token, buildingRequestBody);
 
             #endregion
         }
@@ -144,7 +148,7 @@ namespace AgentGuiTests
 
             #endregion
 
-            #region Preconditions Test
+            #region Preconditions GUI
 
             Pages.LogInLandlord
                .LogInAsAgentMySpace();

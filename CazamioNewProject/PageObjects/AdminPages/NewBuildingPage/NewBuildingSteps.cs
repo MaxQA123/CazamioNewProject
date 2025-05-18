@@ -41,7 +41,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         public NewBuilding EnterBuildingDataAlbermaleRd()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputAddress, building.AlbermaleRd.NumberNameAddressStatic);
+            InputGeneral.InputFunctionWithClear(FieldInputAddress, building.AlbermaleRd.NumberNameAddressRandom);
             WaitUntil.WaitSomeInterval(500);
             KeyBoardActions.ClickTab();
             KeyBoardActions.ClickEnterButton();
@@ -58,9 +58,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputNeighborhood, building.AlbermaleRd.Neighborhood);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputBuildingName, building.AlbermaleRd.BuildingName);
+            InputGeneral.InputFunctionWithClear(FieldInputBuildingName, building.AlbermaleRd.BuildingNameRandom);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputLlcName, building.AlbermaleRd.LlcName);
+            InputGeneral.InputFunctionWithClear(FieldInputLlcName, building.AlbermaleRd.LlcNameRandom);
 
             return this;
         }
@@ -69,7 +69,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         public NewBuilding EnterBuildingDataEast51stStreetPedestrianCrossing()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputAddress, building.East51stStreetPedestrianCrossing.NumberNameAddressStatic);
+            InputGeneral.InputFunctionWithClear(FieldInputAddress, building.East51stStreetPedestrianCrossing.NumberNameAddressRandom);
             WaitUntil.WaitSomeInterval(500);
             KeyBoardActions.ClickTab();
             KeyBoardActions.ClickEnterButton();
@@ -110,7 +110,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.NewBuildingPage
         public NewBuilding EnterBuildingDataCrownSt()
         {
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputAddress, building.CrownSt.NumberNameAddressStatic);
+            InputGeneral.InputFunctionWithClear(FieldInputAddress, building.CrownSt.NumberNameAddressRandom);
             WaitUntil.WaitSomeInterval(500);
             KeyBoardActions.ClickTab();
             KeyBoardActions.ClickEnterButton();

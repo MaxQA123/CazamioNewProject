@@ -85,7 +85,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
         public (IWebElement Element, string BuildingName) ItemBuildingNameOneWashingtonSquare()
         {
             Building building = Building.Generate();
-            string buildingName = building.WashingtonSquare.BuildingName;
+            string buildingName = building.WashingtonSquare.BuildingNameStatic;
 
             var xpath = "//ng-select[@bindlabel = 'buildingName']//span[text() = '" + buildingName + "']";
             IWebElement element = Browser._Driver.FindElement(By.XPath(xpath));

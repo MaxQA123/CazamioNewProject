@@ -53,7 +53,7 @@ namespace CazamioNewProject.Objects
             public string State { get; set; }
             public string Zip { get; set; }
             public string Neighborhood { get; set; }
-            public string BuildingName { get; set; }
+            public string BuildingNameStatic { get; set; }
             public string BuildingNameRandom { get; set; }
             public string LlcName { get; set; }
             public string LongBuildingAddress { get; set; }
@@ -72,7 +72,7 @@ namespace CazamioNewProject.Objects
             public string State { get; set; }
             public string Zip { get; set; }
             public string Neighborhood { get; set; }
-            public string BuildingName { get; set; }
+            public string BuildingNameStatic { get; set; }
             public string BuildingNameRandom { get; set; }
             public string LlcNameStatic { get; set; }
             public string LlcNameRandom { get; set; }
@@ -82,6 +82,7 @@ namespace CazamioNewProject.Objects
         {
             public string NumberRandomNameAddressStatic { get; set; }
             public string NumberNameAddressStatic { get; set; }
+            public string NumberNameAddressRandom { get; set; }
             public string NumberNameAddressStaticForSearch { get; set; }
             public string NumberNameAddress { get; set; }
             public string NumberAddress { get; set; }
@@ -90,14 +91,17 @@ namespace CazamioNewProject.Objects
             public string State { get; set; }
             public string Zip { get; set; }
             public string Neighborhood { get; set; }
-            public string BuildingName { get; set; }
-            public string LlcName { get; set; }
+            public string BuildingNameStatic { get; set; }
+            public string BuildingNameRandom { get; set; }
+            public string LlcNameStatic { get; set; }
+            public string LlcNameRandom { get; set; }
         }
 
         public class AlbermaleRdInfo
         {
             public string NumberRandomNameAddressStatic { get; set; }
             public string NumberNameAddressStatic { get; set; }
+            public string NumberNameAddressRandom { get; set; }
             public string NumberNameAddressStaticForSearch { get; set; }
             public string NumberNameAddress { get; set; }
             public string NumberAddress { get; set; }
@@ -106,14 +110,17 @@ namespace CazamioNewProject.Objects
             public string State { get; set; }
             public string Zip { get; set; }
             public string Neighborhood { get; set; }
-            public string BuildingName { get; set; }
-            public string LlcName { get; set; }
+            public string BuildingNameStatic { get; set; }
+            public string BuildingNameRandom { get; set; }
+            public string LlcNameStatic { get; set; }
+            public string LlcNameRandom { get; set; }
         }
 
         public class East51stStreetPedestrianCrossingInfo
         {
             public string NumberRandomNameAddressStatic { get; set; }
             public string NumberNameAddressStatic { get; set; }
+            public string NumberNameAddressRandom { get; set; }
             public string NumberNameAddressStaticForSearch { get; set; }
             public string NumberNameAddress { get; set; }
             public string NumberAddress { get; set; }
@@ -122,8 +129,10 @@ namespace CazamioNewProject.Objects
             public string State { get; set; }
             public string Zip { get; set; }
             public string Neighborhood { get; set; }
-            public string BuildingName { get; set; }
-            public string LlcName { get; set; }
+            public string BuildingNameStatic { get; set; }
+            public string BuildingNameRandom { get; set; }
+            public string LlcNameStatic { get; set; }
+            public string LlcNameRandom { get; set; }
         }
 
         public class DeanStreetInfo
@@ -242,7 +251,7 @@ namespace CazamioNewProject.Objects
                 State = "NY",
                 Zip = "11213",
                 Neighborhood = "Crown Heights",
-                BuildingName = "AGENT QA-Building Name 9998 Saint Johnson Place (12345) (*&^%)",
+                BuildingNameStatic = "AGENT QA-Building Name 9998 Saint Johnson Place (12345) (*&^%)",
                 BuildingNameRandom = "AGENT QA-Building Name Random Saint Johnson Place (12345) (*&^%)",
                 LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
                 LongBuildingAddress = "9998 Saint Johnson Place, Brooklyn, NY",
@@ -264,7 +273,7 @@ namespace CazamioNewProject.Objects
                 State = "NY",
                 Zip = "10012",
                 Neighborhood = "Manhattan",
-                BuildingName = "Broker QA-Building Name 1 Washington Square (12345) (09876) (*&^%)",
+                BuildingNameStatic = "Broker QA-Building Name 1 Washington Square (12345) (09876) (*&^%)",
                 BuildingNameRandom = "Broker QA-Building Name Random Washington Square (12345) (09876) (*&^%)",
                 LlcNameStatic = "LLC Name QA Broker (12345) (09876) (*&^%)",
                 LlcNameRandom = "LLC Random Name QA Broker (12345) (09876) (*&^%)",
@@ -278,18 +287,18 @@ namespace CazamioNewProject.Objects
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(3) + " " + "Crown St",
                 NumberNameAddressStaticForSearch = "30-39 Crown St",
                 NumberNameAddressStatic = "30-39 Crown St",
-                //NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(2) + "-" + GenerateRandomData.RandomNumberWithoutZero(2) + " " + "Crown St",
+                NumberNameAddressRandom = GenerateRandomData.RandomNumberWithoutZero(2) + "-" + GenerateRandomData.RandomNumberWithoutZero(2) + " " + "Crown St",
                 NumberNameAddress = "30-39 Crown St",
                 NumberAddress = "30-39",
-                //NumberAddress = GenerateRandomData.RandomNumberWithoutZero(2) + "-" + GenerateRandomData.RandomNumberWithoutZero(2),
                 AddressName = "Crown St",
                 City = "Brooklyn",
                 State = "NY",
                 Zip = "11225",
                 Neighborhood = "Crown Heights",
-                BuildingName = " Broker QA-Building Name 30-39 Crown St (12345) (09876) (*&^%)",
-                //BuildingName = " Broker QA-Building Name Random Crown St (12345) (09876) (*&^%)",
-                LlcName = "LLC Name QA Broker (12345) (09876) (*&^%)",
+                BuildingNameStatic = " Broker QA-Building Name 30-39 Crown St (12345) (09876) (*&^%)",
+                BuildingNameRandom = " Broker QA-Building Name Random Crown St (12345) (09876) (*&^%)",
+                LlcNameStatic = "LLC Name QA Broker (12345) (09876) (*&^%)",
+                LlcNameRandom = "LLC Random Name QA Broker (12345) (09876) (*&^%)",
             };
         }
 
@@ -300,18 +309,18 @@ namespace CazamioNewProject.Objects
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(2) + " " + "Albermale Rd",
                 NumberNameAddressStaticForSearch = "9A Albermale Rd",
                 NumberNameAddressStatic = "9A Albermale Rd",
-                //NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(1) + GenerateRandomData.RandomAlphabetUpperCase(1) + " " + "Albermale Rd",
+                NumberNameAddressRandom = GenerateRandomData.RandomNumberWithoutZero(2) + GenerateRandomData.RandomAlphabetUpperCase(1) + " " + "Albermale Rd",
                 NumberNameAddress = "9A Albermale Rd",
                 NumberAddress = "9A",
-                //NumberAddress = GenerateRandomData.RandomNumberWithoutZero(1) + GenerateRandomData.RandomAlphabetUpperCase(1),
                 AddressName = "Albermale Rd",
                 City = "Brooklyn",
                 State = "NY",
                 Zip = "11226",
                 Neighborhood = "East Flatbush",
-                BuildingName = "AGENT QA-Building Name 9A Albermale Rd (12345) (*&^%)",
-                //BuildingName = "AGENT QA-Building Name Random Albermale Rd (12345) (*&^%)",
-                LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
+                BuildingNameStatic = "AGENT QA-Building Name 9A Albermale Rd (12345) (*&^%)",
+                BuildingNameRandom = "AGENT QA-Building Name Random Albermale Rd (12345) (*&^%)",
+                LlcNameStatic = "LLC Name QA Agent (12345) (09876) (*&^%)",
+                LlcNameRandom = "LLC Random Name QA Agent (12345) (09876) (*&^%)",
             };
         }
 
@@ -322,18 +331,18 @@ namespace CazamioNewProject.Objects
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(1) + " " + "East 51st Street Pedestrian Crossing",
                 NumberNameAddressStatic = "111A East 51st Street Pedestrian Crossing",
                 NumberNameAddressStaticForSearch = "111A East 51st Street Pedestrian Crossing",
-                //NumberNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(2) + GenerateRandomData.RandomAlphabetUpperCase(1) + " " + "East 51st Street Pedestrian Crossing",
+                NumberNameAddressRandom = GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomAlphabetUpperCase(1) + " " + "East 51st Street Pedestrian Crossing",
                 NumberNameAddress = "111A East 51st Street Pedestrian Crossing",
                 NumberAddress = "111A",
-                //NumberAddress = GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomAlphabetUpperCase(1),
                 AddressName = "East 51st Street Pedestrian Crossing",
                 City = "New York",
                 State = "NY",
                 Zip = "10022",
                 Neighborhood = "Manhattan",
-                BuildingName = "QA-Building Name AGENT 111A East 51st Street Pedestrian Crossing (12345) (*&^%)",
-                //BuildingName = "QA-Building Name AGENT Random East 51st Street Pedestrian Crossing (12345) (*&^%)",
-                LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
+                BuildingNameStatic = "QA-Building Name AGENT 111A East 51st Street Pedestrian Crossing (12345) (*&^%)",
+                BuildingNameRandom = "QA-Building Name AGENT Random East 51st Street Pedestrian Crossing (12345) (*&^%)",
+                LlcNameStatic = "LLC Name QA Agent (12345) (09876) (*&^%)",
+                LlcNameRandom = "LLC Name Random QA Agent (12345) (09876) (*&^%)",
             };
         }
 

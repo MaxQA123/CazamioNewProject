@@ -10,7 +10,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
     {
         //Id = building.CommonApiData.BuildingId, always = 0
         //BuildingId = 0, always = 0
-        public static RequestCreateBuildingMandatoryDataWithAgent RequestBodyCreateBuildingOneTwoFiveSixSevenDeanStreet()
+        public static RequestCreateBuildingMandatoryDataWithAgent RequestBodyCreateBuildingOneOneOneAEastStPedestrianCrossing()
         {
             Building building = Building.Generate();
             Owner owner = Owner.Generate();
@@ -23,17 +23,17 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                 {
                     Id = building.CommonApiData.BuildingId,
                     Country = building.CommonApiData.CountryUnitedStates,
-                    Street = building.DeanStreet.NumberNameAddressStatic,
+                    Street = building.East51stStreetPedestrianCrossing.NumberNameAddressStatic,
                     State = building.CommonApiData.StateNy,
-                    City = building.CommonApiData.CityBrooklyn,
-                    ZipCode = building.DeanStreet.Zip,
-                    Neighborhood = building.DeanStreet.Neighborhood
+                    City = building.CommonApiData.CityNewYork,
+                    ZipCode = building.East51stStreetPedestrianCrossing.Zip,
+                    Neighborhood = building.East51stStreetPedestrianCrossing.Neighborhood
                 },
                 PetPolicies = new object[0],
-                OwnerId = owner.CreatedOwnerNoCommissioMySpace.OwnerIdApi,
+                OwnerId = owner.CreatedOwnerTenantPaysMySpace.OwnerIdApi,
                 BuildingId = building.CommonApiData.BuildingId,
-                BuildingName = building.CommonApiData.EmptyString,
-                LlcName = building.CommonApiData.EmptyString,
+                BuildingName = building.East51stStreetPedestrianCrossing.BuildingNameStatic,
+                LlcName = building.East51stStreetPedestrianCrossing.LlcNameStatic,
                 Description = building.CommonApiData.EmptyString,
                 InternalNotes = building.CommonApiData.EmptyString,
                 ScreeningFee = new HoldDeposit
@@ -74,7 +74,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             return payload;
         }
 
-        public static RestResponse CreateBuildingOneTwoFiveSixSevenDeanStreet(string token, RequestCreateBuildingMandatoryDataWithAgent buildingRequestBody)
+        public static RestResponse CreateBuildingOneOneOneAEastStPedestrianCrossing(string token, RequestCreateBuildingMandatoryDataWithAgent buildingRequestBody)
         {
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
 

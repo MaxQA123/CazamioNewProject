@@ -32,7 +32,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
                 PetPolicies = new object[0],
                 OwnerId = owner.CreatedOwnerOwnerAndTenantPaysMySpace.OwnerIdApi,
                 BuildingId = building.CommonApiData.BuildingId,
-                BuildingName = building.WashingtonSquare.BuildingName,
+                BuildingName = building.WashingtonSquare.BuildingNameStatic,
                 LlcName = building.WashingtonSquare.LlcNameStatic,
                 Description = building.CommonApiData.EmptyString,
                 InternalNotes = building.CommonApiData.EmptyString,

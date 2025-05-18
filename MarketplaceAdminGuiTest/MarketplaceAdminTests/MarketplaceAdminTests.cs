@@ -784,20 +784,6 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
 
-            //#region Preconditions API LogIn as MarketplaceAdmin
-
-            //var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
-            //LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
-
-            //#endregion
-
-            //#region Preconditions API create building
-
-            //var buildingRequestBody = BuildingCreationMandatoryData.RequestBodyCreateBuildingDeanStreet();
-            //var responseBuilding = BuildingCreationMandatoryData.CreateBuildingDeanStreet(responseMarketplaceAdmin.AuthData.Token, buildingRequestBody);
-
-            //#endregion
-
             #region Preconditions Test
 
             Pages.LogInLandlord

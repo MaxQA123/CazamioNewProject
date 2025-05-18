@@ -10,7 +10,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
     {
         //Id = building.CommonApiData.BuildingId, always = 0
         //BuildingId = 0, always = 0
-        public static RequestCreateBuildingMandatoryDataWithAgent RequestBodyCreateGatesAvenueBuildingMandatoryDataAgent()
+        public static RequestCreateBuildingMandatoryDataWithAgent RequestBodyCreateOneTwoEightSixSevenGatesAvenue()
         {
             Building building = Building.Generate();
             Owner owner = Owner.Generate();
@@ -74,7 +74,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections
             return payload;
         }
 
-        public static RestResponse RequestBodyCreateGatesAvenueBuildingMandatoryDataAgent(string token, RequestCreateBuildingMandatoryDataWithAgent buildingRequestBody)
+        public static RestResponse CreateOneTwoEightSixSevenGatesAvenue(string token, RequestCreateBuildingMandatoryDataWithAgent buildingRequestBody)
         {
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
 

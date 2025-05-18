@@ -1,4 +1,5 @@
 using Allure.Commons;
+using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApiMandatoryData;
 using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin;
 using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
@@ -14,7 +15,7 @@ namespace AgentBrokerGui
 
     public class TestsBaseGui : AgentBrokerBase
     {
-        //Amount order 6 next must be 7
+        //Amount order 7 next must be 8
         [Test]
         [Order(1)]
         [AllureTag("Regression")]
@@ -76,6 +77,49 @@ namespace AgentBrokerGui
 
         [Test]
         [Order(3)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(1)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Agent-Broker")]
+        [AllureSubSuite("AddGroupBuildingsViaApiBasicStatic")]
+
+        public void AddGroupBuildingsViaApiBasicStatic()
+        {
+
+            #region SettingsForBuilding
+
+            //111A East 51st Street Pedestrian Crossing
+
+            #endregion
+
+            #region Test Data
+
+            MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
+
+            #endregion
+
+            #region Preconditions LogIn as Marketplace Admin
+
+            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
+            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+
+            #endregion
+
+            #region Test create the 111A East 51st Street Pedestrian Crossing building
+
+            var buildingRequestBodyEastStPedestrianCrossing = BuildingCreationMandatoryData.RequestBodyCreateBuildingOneOneOneAEastStPedestrianCrossing();
+            var responseBuildingEastStPedestrianCrossing = BuildingCreationMandatoryData.CreateBuildingOneOneOneAEastStPedestrianCrossing(responseMarketplaceAdmin.AuthData.Token, buildingRequestBodyEastStPedestrianCrossing);
+
+            WaitUntil.WaitSomeInterval(1000);
+
+            #endregion
+
+        }
+
+        [Test]
+        [Order(4)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -154,7 +198,7 @@ namespace AgentBrokerGui
         }
 
         [Test]
-        [Order(4)]
+        [Order(5)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -233,7 +277,7 @@ namespace AgentBrokerGui
         }
 
         [Test]
-        [Order(5)]
+        [Order(6)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -315,7 +359,7 @@ namespace AgentBrokerGui
         }
 
         [Test]
-        [Order(6)]
+        [Order(7)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -337,13 +381,8 @@ namespace AgentBrokerGui
             Application application = Application.Generate();
             TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
             TenantOccupantMySpace tenantOccupantMySpace = TenantOccupantMySpace.Generate();
-
-            #endregion
-
-            #region Test Data API
-
             MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
-            var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentOffMarketStatus();
+            
 
             #endregion
 
@@ -352,11 +391,12 @@ namespace AgentBrokerGui
             var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
 
             LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+            var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentOffMarketStatus();
             CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseMarketplaceAdmin.AuthData.Token, requestBodyApartment);
 
             #endregion
 
-            #region Preconditions Test
+            #region Preconditions GUI
 
             Pages.LogInLandlord
                 .LogInAsAgentBrokerMySpace();
@@ -433,7 +473,7 @@ namespace AgentBrokerGui
         }
 
         [Test]
-        [Order(6)]
+        [Order(8)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -455,26 +495,20 @@ namespace AgentBrokerGui
             Building building = Building.Generate();
             Application application = Application.Generate();
             TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
-
-            #endregion
-
-            #region Test Data API
-
             MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
-            var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentSignedLeaseStatus();
 
             #endregion
 
             #region Preconditions API
 
             var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
-
             LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+            var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentSignedLeaseStatus();
             CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseMarketplaceAdmin.AuthData.Token, requestBodyApartment);
 
             #endregion
 
-            #region Preconditions Test
+            #region Preconditions GUI
 
             Pages.LogInLandlord
                 .LogInAsAgentBrokerMySpace();

@@ -239,7 +239,7 @@ namespace BrokerGuiTests
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(1)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin")]
+        [AllureSuite("Broker")]
         [AllureSubSuite("AddGroupBuildingsViaApiBasicStatic")]
 
         public void AddGroupBuildingsViaApiBasicStatic()
@@ -249,6 +249,7 @@ namespace BrokerGuiTests
 
             //9A Albermale Rd
             //30-39 Crown St
+            //12567 Dean Street
 
             #endregion
 
@@ -276,6 +277,13 @@ namespace BrokerGuiTests
 
             var buildingRequestBodyCrownSt = BuildingCreationMandatoryData.RequestBodyCreateBuildingThirtyDashTrirtyNineCrownSt();
             var responseBuildingCrownSt = BuildingCreationMandatoryData.CreateBuildingThirtyDashTrirtyNineCrownSt(responseMarketplaceAdmin.AuthData.Token, buildingRequestBodyCrownSt);
+
+            #region Test create the 12567 Dean Street building
+
+            var buildingRequestBody = BuildingCreationMandatoryData.RequestBodyCreateBuildingOneTwoFiveSixSevenDeanStreet();
+            var responseBuilding = BuildingCreationMandatoryData.CreateBuildingOneTwoFiveSixSevenDeanStreet(responseMarketplaceAdmin.AuthData.Token, buildingRequestBody);
+
+            #endregion
 
             WaitUntil.WaitSomeInterval(1000);
 
@@ -971,13 +979,6 @@ namespace BrokerGuiTests
             LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
 
             #endregion
-
-            //#region Preconditions API create building
-
-            //var buildingRequestBody = BuildingCreationMandatoryData.RequestBodyCreateBuildingDeanStreet();
-            //var responseBuilding = BuildingCreationMandatoryData.CreateBuildingDeanStreet(responseMarketplaceAdmin.AuthData.Token, buildingRequestBody);
-
-            //#endregion
 
             //#region Preconditions API create apartment
 
