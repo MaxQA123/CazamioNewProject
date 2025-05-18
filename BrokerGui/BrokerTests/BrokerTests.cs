@@ -278,17 +278,16 @@ namespace BrokerGuiTests
             var buildingRequestBodyCrownSt = BuildingCreationMandatoryData.RequestBodyCreateBuildingThirtyDashTrirtyNineCrownSt();
             var responseBuildingCrownSt = BuildingCreationMandatoryData.CreateBuildingThirtyDashTrirtyNineCrownSt(responseMarketplaceAdmin.AuthData.Token, buildingRequestBodyCrownSt);
 
+            #endregion
+
             #region Test create the 12567 Dean Street building
 
             var buildingRequestBody = BuildingCreationMandatoryData.RequestBodyCreateBuildingOneTwoFiveSixSevenDeanStreet();
             var responseBuilding = BuildingCreationMandatoryData.CreateBuildingOneTwoFiveSixSevenDeanStreet(responseMarketplaceAdmin.AuthData.Token, buildingRequestBody);
 
-            #endregion
-
             WaitUntil.WaitSomeInterval(1000);
 
             #endregion
-
         }
 
         [Test]
@@ -980,12 +979,12 @@ namespace BrokerGuiTests
 
             #endregion
 
-            //#region Preconditions API create apartment
+            #region Preconditions API create apartment
 
-            //var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentForAppOneTwoFiveSixSevenDeanStreet();
-            //CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseMarketplaceAdmin.AuthData.Token, requestBodyApartment);
+            var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentForAppOneTwoFiveSixSevenDeanStreet();
+            CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseMarketplaceAdmin.AuthData.Token, requestBodyApartment);
 
-            //#endregion
+            #endregion
 
             #region Preconditions API create application
 
@@ -1077,7 +1076,6 @@ namespace BrokerGuiTests
                 .VerifyApplicationIdNumberTenantCreator(applicationIdFromAppLandlord, applicationIdFromAppTenant);
             Pages.HeaderTenants
                 .LogOut();
-            
             //Occupant newly created who has been deleted from the application
             Pages.JScriptExecutor
                .OpenNewTab();
@@ -1088,10 +1086,11 @@ namespace BrokerGuiTests
 
             Pages.EmailPutsBox
                 .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmailOccupant);
-            Pages.SwitchingBetweenBrowserTabsActions
-               .SecondTabCloseThreeTimes();
             Pages.EmailPutsBox
-                .ClickButtonHtml()
+                .ClickButtonHtml();
+            Pages.SwitchingBetweenBrowserTabsActions
+                .SecondTabCloseThreeTimes();
+            Pages.EmailPutsBox
                 .ClickButtonStartYourApplicationNowlForTenant();
             Pages.ToasterMessagesTenants
                 .VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication();
@@ -1101,7 +1100,6 @@ namespace BrokerGuiTests
                 .VerifyYouHaveNoApplicationsYetRecord();
             Pages.HeaderTenants
                 .LogOut();
-           
             //Guarantor newly created who has been deleted from the application
             Pages.JScriptExecutor
                .OpenNewTab();

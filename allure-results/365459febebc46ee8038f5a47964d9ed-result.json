@@ -1,0 +1,1279 @@
+{
+  "uuid": "14a0fbdf-e2f5-4af2-bbf4-6483c3c0eace-tr-0-1012",
+  "historyId": "BrokerGuiTests.TestsBaseGui.EditFirstApplicationOneTwoFiveSixSevenDeanStreet",
+  "fullName": "BrokerGuiTests.TestsBaseGui.EditFirstApplicationOneTwoFiveSixSevenDeanStreet",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "BrokerGuiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "EditFirstApplicationOneTwoFiveSixSevenDeanStreet"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "EditFirstApplicationOneTwoFiveSixSevenDeanStreet"
+    }
+  ],
+  "links": [],
+  "name": "EditFirstApplicationOneTwoFiveSixSevenDeanStreet",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected: True\r\n  But was:  False\r\n",
+    "trace": "   at CazamioNewProject.PageObjects.TenantPages.ToasterMessages.ToasterMessagesTenants.__a$_around_VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication_100663441_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\TenantPages\\ToasterMessages\\ToasterMessagesAssertions.cs:line 58\r\n   at CazamioNewProject.PageObjects.TenantPages.ToasterMessages.ToasterMessagesTenants.__a$_around_VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication_100663441_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.TenantPages.ToasterMessages.ToasterMessagesTenants.__a$_around_VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication_100663441_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.TenantPages.ToasterMessages.ToasterMessagesTenants.VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\TenantPages\\ToasterMessages\\ToasterMessagesAssertions.cs:line 25\r\n   at BrokerGuiTests.TestsBaseGui.EditFirstApplicationOneTwoFiveSixSevenDeanStreet() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 1117\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "EditFirstApplicationOneTwoFiveSixSevenDeanStreet",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected: True\r\n  But was:  False\r\n",
+        "trace": "   at CazamioNewProject.PageObjects.TenantPages.ToasterMessages.ToasterMessagesTenants.__a$_around_VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication_100663441_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\TenantPages\\ToasterMessages\\ToasterMessagesAssertions.cs:line 58\r\n   at CazamioNewProject.PageObjects.TenantPages.ToasterMessages.ToasterMessagesTenants.__a$_around_VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication_100663441_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.TenantPages.ToasterMessages.ToasterMessagesTenants.__a$_around_VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication_100663441_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.TenantPages.ToasterMessages.ToasterMessagesTenants.VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\TenantPages\\ToasterMessages\\ToasterMessagesAssertions.cs:line 25\r\n   at BrokerGuiTests.TestsBaseGui.EditFirstApplicationOneTwoFiveSixSevenDeanStreet() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 1117\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "VerifyUserData",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "ResponseLogInApiMarketplaceAdmin",
+              "value": "CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin.ResponseLogInApiMarketplaceAdmin"
+            },
+            {
+              "name": "MarketplaceAdmin",
+              "value": "CazamioNewProject.Objects.MarketplaceAdmin"
+            }
+          ],
+          "start": 1747562992268,
+          "stop": 1747562992283
+        },
+        {
+          "name": "LogInAsBrokerMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563021230,
+              "stop": 1747563028600
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563028614,
+              "stop": 1747563028693
+            },
+            {
+              "name": "VerifyBrokerUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Leoautotest Feabroker"
+                },
+                {
+                  "name": "String",
+                  "value": "Broker"
+                }
+              ],
+              "start": 1747563028698,
+              "stop": 1747563029203
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563018394,
+          "stop": 1747563029203
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563029218,
+          "stop": 1747563035949
+        },
+        {
+          "name": "SearchOneTwoFiveSixSevenDeanStreet",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563035950,
+          "stop": 1747563047130
+        },
+        {
+          "name": "SelectOneTwoFiveSixSevenDeanStreet",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563047131,
+          "stop": 1747563050975
+        },
+        {
+          "name": "VerifyTitleBuildingViewPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563050978,
+          "stop": 1747563055430
+        },
+        {
+          "name": "GetValueOfStringAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563055430,
+          "stop": 1747563057490
+        },
+        {
+          "name": "GetValueOfStringBuildingName",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563057490,
+          "stop": 1747563057537
+        },
+        {
+          "name": "VerifyBuildingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "12567 Dean Street"
+            },
+            {
+              "name": "String",
+              "value": "12567 Dean Street"
+            }
+          ],
+          "start": 1747563057538,
+          "stop": 1747563060569
+        },
+        {
+          "name": "ClickTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563060570,
+          "stop": 1747563062417
+        },
+        {
+          "name": "GetSubjectWithoutAgentDeanStreet",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetVlOfClmnUnitFrstRw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563063429,
+              "stop": 1747563063482
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563062420,
+          "stop": 1747563063486
+        },
+        {
+          "name": "ClickRowByVacant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563063510,
+          "stop": 1747563064395
+        },
+        {
+          "name": "VerifyTitleAddApartmentsPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563064400,
+          "stop": 1747563066909
+        },
+        {
+          "name": "ClickTabApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563066911,
+          "stop": 1747563067668
+        },
+        {
+          "name": "GetApplicationIdFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563067674,
+          "stop": 1747563067951
+        },
+        {
+          "name": "ClickFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563067951,
+          "stop": 1747563068678
+        },
+        {
+          "name": "VerifyTitleApplicationDetailPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563068680,
+          "stop": 1747563069541
+        },
+        {
+          "name": "EditFirstApplicationOneTwoFiveSixSevenDeanStreet",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickEditApplicationBtn",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563071591,
+              "stop": 1747563072905
+            },
+            {
+              "name": "VerifyEditApplicationTitle",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563072906,
+              "stop": 1747563073001
+            },
+            {
+              "name": "ClickButtonDropDownYearMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563073788,
+              "stop": 1747563074588
+            },
+            {
+              "name": "SelectCurrentYear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563074589,
+              "stop": 1747563075756
+            },
+            {
+              "name": "SelectNextMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563075756,
+              "stop": 1747563077004
+            },
+            {
+              "name": "SelectFisrtDayInNextMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563077005,
+              "stop": 1747563078196
+            },
+            {
+              "name": "GetRandomEmailBeforeDogFromEmailAddressMainApplicant",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563084012,
+              "stop": 1747563084567
+            },
+            {
+              "name": "GetRandomEmailBeforeDogFromEmailAddressOccupant",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563085312,
+              "stop": 1747563085890
+            },
+            {
+              "name": "GetRandomEmailBeforeDogFromEmailAddressGuarantor",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563085897,
+              "stop": 1747563086550
+            },
+            {
+              "name": "VerifyEditApplicationTitle",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563088863,
+              "stop": 1747563088902
+            },
+            {
+              "name": "VerifySureYouWantToEditThisApplicationSubTitle",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563088902,
+              "stop": 1747563088970
+            },
+            {
+              "name": "VerifyMessageApplicationEditSuccessful",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563089628,
+              "stop": 1747563098056
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563069553,
+          "stop": 1747563098057
+        },
+        {
+          "name": "OpenNewTab",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563098058,
+          "stop": 1747563098235
+        },
+        {
+          "name": "GetSubjectLetterCreateTenantViaGetLink",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563102939,
+          "stop": 1747563102985
+        },
+        {
+          "name": "VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Welcome to Noyo Properties NYC! Let's begin your application process for 12567 Dean Street #7516 now!"
+            },
+            {
+              "name": "String",
+              "value": "Welcome to Noyo Properties NYC! Let's begin your application process for 12567 Dean Street #7516 now!"
+            }
+          ],
+          "start": 1747563102986,
+          "stop": 1747563103003
+        },
+        {
+          "name": "ClickButtonHtml",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563103004,
+          "stop": 1747563104403
+        },
+        {
+          "name": "ClickButtonStartYourApplicationNowlForTenant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563104404,
+          "stop": 1747563114868
+        },
+        {
+          "name": "VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563114870,
+          "stop": 1747563122968
+        },
+        {
+          "name": "QuicklyPassTenantCreatorMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyTitlePleaseTellUsYourNameAndChangeYourPassword",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563122973,
+              "stop": 1747563123045
+            },
+            {
+              "name": "VerifyMessageSuccessfullyUpdatedNameAndPassword",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563125999,
+              "stop": 1747563140562
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563122973,
+          "stop": 1747563140562
+        },
+        {
+          "name": "VerifyYouHaveNoApplicationsYetRecord",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563140563,
+          "stop": 1747563140626
+        },
+        {
+          "name": "LogOut",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ConmfirmLogOut",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [
+                {
+                  "name": "VerifyTitle",
+                  "status": "passed",
+                  "statusDetails": {
+                    "known": false,
+                    "muted": false,
+                    "flaky": false
+                  },
+                  "stage": "finished",
+                  "steps": [],
+                  "attachments": [],
+                  "parameters": [],
+                  "start": 1747563142146,
+                  "stop": 1747563142360
+                }
+              ],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563142145,
+              "stop": 1747563145067
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563140627,
+          "stop": 1747563145067
+        },
+        {
+          "name": "LogInAsCreatorWithoutCreditReportMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickButtonLogIn",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563145072,
+              "stop": 1747563146141
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563145071,
+          "stop": 1747563149944
+        },
+        {
+          "name": "ClickButtonMyApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563149945,
+          "stop": 1747563152841
+        },
+        {
+          "name": "GetApplicationId",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563152842,
+          "stop": 1747563153557
+        },
+        {
+          "name": "VerifyApplicationIdNumberTenantCreator",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "2631"
+            },
+            {
+              "name": "String",
+              "value": "2631"
+            }
+          ],
+          "start": 1747563153558,
+          "stop": 1747563153559
+        },
+        {
+          "name": "LogOut",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ConmfirmLogOut",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [
+                {
+                  "name": "VerifyTitle",
+                  "status": "passed",
+                  "statusDetails": {
+                    "known": false,
+                    "muted": false,
+                    "flaky": false
+                  },
+                  "stage": "finished",
+                  "steps": [],
+                  "attachments": [],
+                  "parameters": [],
+                  "start": 1747563155104,
+                  "stop": 1747563155277
+                }
+              ],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563155104,
+              "stop": 1747563157074
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563153559,
+          "stop": 1747563157074
+        },
+        {
+          "name": "OpenNewTab",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563157074,
+          "stop": 1747563157402
+        },
+        {
+          "name": "GetSubjectLetterCreateTenantViaGetLink",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563160727,
+          "stop": 1747563160791
+        },
+        {
+          "name": "VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Welcome to Noyo Properties NYC! Let's begin your application process for 12567 Dean Street #7516 now!"
+            },
+            {
+              "name": "String",
+              "value": "Welcome to Noyo Properties NYC! Let's begin your application process for 12567 Dean Street #7516 now!"
+            }
+          ],
+          "start": 1747563160791,
+          "stop": 1747563160812
+        },
+        {
+          "name": "ClickButtonHtml",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563160813,
+          "stop": 1747563162469
+        },
+        {
+          "name": "ClickButtonStartYourApplicationNowlForTenant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563168839,
+          "stop": 1747563179275
+        },
+        {
+          "name": "VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563179276,
+          "stop": 1747563184495
+        },
+        {
+          "name": "QuicklyPassTenantCreatorMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyTitlePleaseTellUsYourNameAndChangeYourPassword",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563184499,
+              "stop": 1747563184560
+            },
+            {
+              "name": "VerifyMessageSuccessfullyUpdatedNameAndPassword",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563187431,
+              "stop": 1747563194081
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563184499,
+          "stop": 1747563194081
+        },
+        {
+          "name": "VerifyYouHaveNoApplicationsYetRecord",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563194081,
+          "stop": 1747563194148
+        },
+        {
+          "name": "LogOut",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ConmfirmLogOut",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [
+                {
+                  "name": "VerifyTitle",
+                  "status": "passed",
+                  "statusDetails": {
+                    "known": false,
+                    "muted": false,
+                    "flaky": false
+                  },
+                  "stage": "finished",
+                  "steps": [],
+                  "attachments": [],
+                  "parameters": [],
+                  "start": 1747563195661,
+                  "stop": 1747563195833
+                }
+              ],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747563195661,
+              "stop": 1747563197680
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563194148,
+          "stop": 1747563197680
+        },
+        {
+          "name": "OpenNewTab",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563197680,
+          "stop": 1747563198035
+        },
+        {
+          "name": "GetSubjectLetterCreateTenantViaGetLink",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563201895,
+          "stop": 1747563201953
+        },
+        {
+          "name": "VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "Welcome to Noyo Properties NYC! Let's begin your application process for 12567 Dean Street #7516 now!"
+            },
+            {
+              "name": "String",
+              "value": "Welcome to Noyo Properties NYC! Let's begin your application process for 12567 Dean Street #7516 now!"
+            }
+          ],
+          "start": 1747563201953,
+          "stop": 1747563201984
+        },
+        {
+          "name": "ClickButtonHtml",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563201985,
+          "stop": 1747563203645
+        },
+        {
+          "name": "ClickButtonStartYourApplicationNowlForTenant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563203645,
+          "stop": 1747563214794
+        },
+        {
+          "name": "VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  Expected: True\r\n  But was:  False\r\n",
+            "trace": "   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.IsTrue(Boolean condition)\r\n   at CazamioNewProject.PageObjects.TenantPages.ToasterMessages.ToasterMessagesTenants.__a$_around_VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication_100663441_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\TenantPages\\ToasterMessages\\ToasterMessagesAssertions.cs:line 58\r\n   at CazamioNewProject.PageObjects.TenantPages.ToasterMessages.ToasterMessagesTenants.__a$_around_VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication_100663441_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747563214794,
+          "stop": 1747563225043
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "f616b9005ea14ae6b8c22f6bc1b36719-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1747562975535,
+      "stop": 1747563228002
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1747562975527,
+  "stop": 1747563228036
+}

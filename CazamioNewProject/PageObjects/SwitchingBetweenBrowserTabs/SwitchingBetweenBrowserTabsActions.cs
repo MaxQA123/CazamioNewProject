@@ -31,10 +31,11 @@ namespace CazamioNewProject.GuiHelpers
             return this;
         }
 
-        public SwitchingBetweenBrowserTabsActions SecondTabCloseTwoTimes()
+        public SwitchingBetweenBrowserTabsActions SecondTabCloseTwoTimesFouthTabSelect()
         {
             SwitchingBetweenBrowserTabs.SecondTabClose();
             SwitchingBetweenBrowserTabs.SecondTabClose();
+            SwitchingBetweenBrowserTabs.FouthTabSelect();
 
             return this;
         }
