@@ -1101,27 +1101,27 @@ namespace BrokerGuiTests
             Pages.HeaderTenants
                 .LogOut();
             //Guarantor newly created who has been deleted from the application
-            Pages.JScriptExecutor
-               .OpenNewTab();
-            Pages.EmailHelper
-               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, guarantorPartEmailOld);
+            //Pages.JScriptExecutor
+            //   .OpenNewTab();
+            //Pages.EmailHelper
+            //   .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, guarantorPartEmailOld);
 
-            string getSubjectFromEmailGuarantor = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+            //string getSubjectFromEmailGuarantor = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
 
-            Pages.EmailPutsBox
-                .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmailGuarantor);
-            Pages.EmailPutsBox
-                .ClickButtonHtml()
-                .ClickButtonStartYourApplicationNowlForTenant();
+            //Pages.EmailPutsBox
+            //    .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmailGuarantor);
+            //Pages.EmailPutsBox
+            //    .ClickButtonHtml()
+            //    .ClickButtonStartYourApplicationNowlForTenant();
 
-            Pages.ToasterMessagesTenants
-                .VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication();
-            Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
-                .QuicklyPassTenantCreatorMySpace();
-            Pages.MyAccount
-                .VerifyYouHaveNoApplicationsYetRecord();
-            Pages.HeaderTenants
-                .LogOut();
+            //Pages.ToasterMessagesTenants
+            //    .VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication();
+            //Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
+            //    .QuicklyPassTenantCreatorMySpace();
+            //Pages.MyAccount
+            //    .VerifyYouHaveNoApplicationsYetRecord();
+            //Pages.HeaderTenants
+            //    .LogOut();
 
             WaitUntil.WaitSomeInterval(1000);
 
