@@ -215,7 +215,7 @@ namespace ApiTestsLandlord
 
             #region Tests
 
-            ApartmentCreation.CreateApartmentMandatoryData(responseBroker.AuthData.Token, requestBodyApartment);
+            ApartmentCreation.CreateApartmentApplicationSubmitted(responseBroker.AuthData.Token, requestBodyApartment);
 
             #endregion
         }

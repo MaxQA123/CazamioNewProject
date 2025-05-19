@@ -2,6 +2,7 @@
 using CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.LogInApiBroker;
 using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApiMandatoryData;
 using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin;
+using CazamioNewProject.CreateApartmentMandatoryDataApi;
 using CazamioNewProject.DbHelpers.OwnersDbTable;
 using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
@@ -509,7 +510,27 @@ namespace BrokerGuiTests
 
             #endregion
 
-            #region Preconditions Test
+            #region Test data
+
+            Broker broker = Broker.Generate();
+
+            #endregion
+
+            #region Preconditions API Login as broker
+
+            var responseBroker = LogInApiBroker.ExecuteLogIn();
+            LogInApiBroker.VerifyUserData(responseBroker, broker);
+
+            #endregion
+
+            #region Preconditions API create an apartment
+
+            var requestBodyApartment = ApartmentCreation.RequestBodyCreateApartmentWithImagesVideos();
+            ApartmentCreation.CreateApartmentApplicationSubmitted(responseBroker.AuthData.Token, requestBodyApartment);
+
+            #endregion
+
+            #region Preconditions GUI
 
             Pages.LogInLandlord
                 .LogInAsBrokerMySpace();
@@ -550,7 +571,7 @@ namespace BrokerGuiTests
             Pages.ListOfApartments
                .VerifyTitleListOfApartments();
 
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
 
@@ -812,25 +833,24 @@ namespace BrokerGuiTests
 
             #region Test data
 
+            Broker broker = Broker.Generate();
             Building building = Building.Generate();
             Application application = Application.Generate();
             TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
-            Agent agent = Agent.Generate();
 
             #endregion
 
-            #region Test Data API
-
-            Broker broker = Broker.Generate();
-            var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentApplicationSubmitted();
-
-            #endregion
-
-            #region Preconditions API
+            #region Preconditions API Login as broker
 
             var responseBroker = LogInApiBroker.ExecuteLogIn();
             LogInApiBroker.VerifyUserData(responseBroker, broker);
-            CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseBroker.AuthData.Token, requestBodyApartment);
+
+            #endregion
+
+            #region Preconditions API create an apartment
+
+            var requestBodyApartment = ApartmentCreation.RequestBodyCreateApartmentApplicationSubmitted();
+            ApartmentCreation.CreateApartmentApplicationSubmitted(responseBroker.AuthData.Token, requestBodyApartment);
 
             #endregion
 
@@ -888,7 +908,7 @@ namespace BrokerGuiTests
                 tenantCreatorMySpace.CreatedWithCreditReport.ConstantFirstLastName, fullNameTenantMainApplicantFromAppAr, 
                 leasePriceFromUnit, leasePriceFromApp,
                 application.BasicData.DateCurrent, dateCreatedFromApp,
-                agent.CreatedAgentLulaMySpace.FullName, agentFromApp,
+                broker.CreatedBrokerMySpace.FullName, agentFromApp,
                 application.Statuses.Draft, statusFromApp,
                 application.Buttons.Close, closeNameBtnFromApp);
             Pages.JScriptExecutor
@@ -1147,7 +1167,7 @@ namespace BrokerGuiTests
 
             #region Test data
 
-            Apartment apartment = Apartment.Generate();
+            //Apartment apartment = Apartment.Generate();
             Building building = Building.Generate();
             ApartmentApplicationsTable apartmentApplicationsTable = ApartmentApplicationsTable.Generate();
 

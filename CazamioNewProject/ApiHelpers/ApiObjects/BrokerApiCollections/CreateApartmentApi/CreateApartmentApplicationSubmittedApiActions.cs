@@ -84,7 +84,7 @@ namespace CazamioNewProject.CreateApartmentMandatoryDataApi
             return payload;
         }
 
-        public static RestResponse RequestCreateApartmentMandatoryData(string token, RequestCreateApartmentMandatoryData apartmentRequestBody)
+        public static RestResponse CreateApartmentApplicationSubmitted(string token, RequestCreateApartmentMandatoryData apartmentRequestBody)
         {
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
             var restRequest = new RestRequest("api/apartments/create", Method.Post);

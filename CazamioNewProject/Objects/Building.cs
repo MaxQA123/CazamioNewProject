@@ -295,8 +295,8 @@ namespace CazamioNewProject.Objects
                 State = "NY",
                 Zip = "11225",
                 Neighborhood = "Crown Heights",
-                BuildingNameStatic = " Broker QA-Building Name 30-39 Crown St (12345) (09876) (*&^%)",
-                BuildingNameRandom = " Broker QA-Building Name Random Crown St (12345) (09876) (*&^%)",
+                BuildingNameStatic = "Broker QA-Building Name 30-39 Crown St (12345) (09876) (*&^%)",
+                BuildingNameRandom = "Broker QA-Building Name Random Crown St (12345) (09876) (*&^%)",
                 LlcNameStatic = "LLC Name QA Broker (12345) (09876) (*&^%)",
                 LlcNameRandom = "LLC Random Name QA Broker (12345) (09876) (*&^%)",
             };
