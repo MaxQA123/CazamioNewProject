@@ -51,7 +51,7 @@ namespace CazamioNewProject.Objects
             {
                 CreateTenantViaGetLinkWithoutAgentSaintJohnsonPlace = "Welcome to Noyo Properties NYC! Let's begin your application process for 9998 Saint Johnson Place #1 now!",
                 CreateTenantViaGetLinkWithAgentBrokerSaintJohnsonPlace = "Welcome to Noyo Properties NYC! Agentus Brokerus created you an application for 9998 Saint Johnson Place #1.",
-                CreateTenantViaGetLinkWithoutAgentAlbermaleRd = "Welcome to Noyo Properties NYC! Let's begin your application process for 9A Albermale Rd #1 now!",
+                CreateTenantViaGetLinkWithoutAgentAlbermaleRd = "Welcome to Noyo Properties NYC! Leoautotest Feabroker created you an application for 9A Albermale Rd #1.",
                 CreateTenantViaPlusAppWithAgentWashingtonSquare = "Welcome to Noyo Properties NYC! Lula AgentQA created you an application for 1 Washington Square #8R.",
                 CreateTenantOccupantViaPlusAppWithoutAgentAlbermaleRd = "Welcome to Noyo Properties NYC! Let's begin your application process for 9A Albermale Rd #1 now!",
                 CreateTenantOccupantViaPlusAppWithoutAgentDeanStreet = "Welcome to Noyo Properties NYC! Let's begin your application process for 12567 Dean Street #1 now!",

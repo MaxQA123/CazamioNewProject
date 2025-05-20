@@ -121,6 +121,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         public CreateApplicationMdlWndw PassThirdStepAddressNineAAlbermaleRd()
         {
             WaitUntil.CustomElementIsVisible(StringLeadEmail);
+            Button.Click(ButtonPlusAddConcession);
+            WaitUntil.CustomElementIsVisible(FieldInputMonthsFree);
             InputGeneral.InputFunctionWithClear(FieldInputMonthsFree, application.MonthsFree.TwoMonths);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, apartment.SettingsConcessions.AdditionalInfoShort);

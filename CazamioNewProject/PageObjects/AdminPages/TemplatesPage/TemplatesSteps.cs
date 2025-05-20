@@ -37,7 +37,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.TemplatesPage
             WaitUntil.CustomElementIsVisible(TemplateNameOfFieldInput);
             InputGeneral.InputFunctionWithClear(TemplateNameFieldInput, leaseSignDocument.TemplatesNameByMarketplaces.SecondNameForMySpace);
             UploadDocumentBtn.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadTemplatesLandlord.SECOND_NAME_FOR_MYSPACE));
-            WaitUntil.WaitSomeInterval(15000);
+            WaitUntil.WaitSomeInterval(20000);
             DragAndDropApartmentAddressToDocumentArea();
             DragAndDropApartmentNameToDocumentArea();
             DragAndDropUtilitiesIncludedToDocumentArea();
@@ -53,6 +53,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.TemplatesPage
             DragAndDropBrokerFirstNameToDocumentArea();
             DragAndDropBrokerLastNameToDocumentArea();
             DragAndDropLLCNameToDocumentArea();
+            WaitUntil.WaitSomeInterval(1000);
             Button.Click(SaveTemplateBtn);
             Pages.ToasterMessagesLandlord
                 .VerifMessageTemplateWasSaved();

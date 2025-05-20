@@ -8,8 +8,8 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
     {
         #region BodyLetterOfTenant
 
-        [AllureStep("ClickButtonStartYourApplicationNowlForTenant")]
-        public EmailPutsBox ClickButtonStartYourApplicationNowlForTenant()
+        [AllureStep("ClickButtonStartYourApplicationNowForTenant")]
+        public EmailPutsBox ClickButtonStartYourApplicationNowForTenant()
         {
             WaitUntil.WaitSomeInterval(3000);
             List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);

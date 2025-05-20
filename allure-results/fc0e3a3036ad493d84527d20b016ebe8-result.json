@@ -1,0 +1,775 @@
+{
+  "uuid": "6019a7b2-280d-475a-a57d-c658d25bae36-tr-0-1009",
+  "historyId": "BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied",
+  "fullName": "BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "BrokerGuiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateApplicationForApartmentOccupied"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateApplicationForApartmentOccupied"
+    }
+  ],
+  "links": [],
+  "name": "CreateApplicationForApartmentOccupied",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected string length 12 but was 21. Strings differ at index 0.\r\n  Expected: \"Not assigned\"\r\n  But was:  \"Leoautotest Feabroker\"\r\n  -----------^\r\n",
+    "trace": "   at CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls.ApartmentApplicationsTbl.__a$_around_VerifyFullDataByApplicationTenantsMainOccupant_100663974_o(String getAddressBuildingView, String apartmentAddressFromApp, String tenantCreatorMySpaceFirstNameEx, String firstNameTenantMainApplicantFromApp, String tenantCreatorMySpaceLastNameTenantEx, String firstLastNameFromApp, String tenantOccupantMySpaceFirstLastNameEx, String firstLastNameOccupantFromApp, String leasePriceEx, String leasePriceFromApplication, String agentLabelEx, String agentFromApplication, String statusDraftEx, String statusFromApplication, String dateCurrentEx, String dateCreatedFromApplication, String claseNameBtnEx, String closeNameBtnFromApp) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApartmentApplicationsTbls\\ApartmentApplicationsAssertions.cs:line 116\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls.ApartmentApplicationsTbl.__a$_around_VerifyFullDataByApplicationTenantsMainOccupant_100663974_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls.ApartmentApplicationsTbl.__a$_around_VerifyFullDataByApplicationTenantsMainOccupant_100663974_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls.ApartmentApplicationsTbl.VerifyFullDataByApplicationTenantsMainOccupant(String getAddressBuildingView, String apartmentAddressFromApp, String tenantCreatorMySpaceFirstNameEx, String firstNameTenantMainApplicantFromApp, String tenantCreatorMySpaceLastNameTenantEx, String firstLastNameFromApp, String tenantOccupantMySpaceFirstLastNameEx, String firstLastNameOccupantFromApp, String leasePriceEx, String leasePriceFromApplication, String agentLabelEx, String agentFromApplication, String statusDraftEx, String statusFromApplication, String dateCurrentEx, String dateCreatedFromApplication, String claseNameBtnEx, String closeNameBtnFromApp)\r\n   at BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 741\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateApplicationForApartmentOccupied",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected string length 12 but was 21. Strings differ at index 0.\r\n  Expected: \"Not assigned\"\r\n  But was:  \"Leoautotest Feabroker\"\r\n  -----------^\r\n",
+        "trace": "   at CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls.ApartmentApplicationsTbl.__a$_around_VerifyFullDataByApplicationTenantsMainOccupant_100663974_o(String getAddressBuildingView, String apartmentAddressFromApp, String tenantCreatorMySpaceFirstNameEx, String firstNameTenantMainApplicantFromApp, String tenantCreatorMySpaceLastNameTenantEx, String firstLastNameFromApp, String tenantOccupantMySpaceFirstLastNameEx, String firstLastNameOccupantFromApp, String leasePriceEx, String leasePriceFromApplication, String agentLabelEx, String agentFromApplication, String statusDraftEx, String statusFromApplication, String dateCurrentEx, String dateCreatedFromApplication, String claseNameBtnEx, String closeNameBtnFromApp) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApartmentApplicationsTbls\\ApartmentApplicationsAssertions.cs:line 116\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls.ApartmentApplicationsTbl.__a$_around_VerifyFullDataByApplicationTenantsMainOccupant_100663974_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls.ApartmentApplicationsTbl.__a$_around_VerifyFullDataByApplicationTenantsMainOccupant_100663974_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls.ApartmentApplicationsTbl.VerifyFullDataByApplicationTenantsMainOccupant(String getAddressBuildingView, String apartmentAddressFromApp, String tenantCreatorMySpaceFirstNameEx, String firstNameTenantMainApplicantFromApp, String tenantCreatorMySpaceLastNameTenantEx, String firstLastNameFromApp, String tenantOccupantMySpaceFirstLastNameEx, String firstLastNameOccupantFromApp, String leasePriceEx, String leasePriceFromApplication, String agentLabelEx, String agentFromApplication, String statusDraftEx, String statusFromApplication, String dateCurrentEx, String dateCreatedFromApplication, String claseNameBtnEx, String closeNameBtnFromApp)\r\n   at BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 741\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsBrokerMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747748210137,
+              "stop": 1747748212420
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747748212432,
+              "stop": 1747748215600
+            },
+            {
+              "name": "VerifyBrokerUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Leoautotest Feabroker"
+                },
+                {
+                  "name": "String",
+                  "value": "Broker"
+                }
+              ],
+              "start": 1747748215612,
+              "stop": 1747748217085
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748206205,
+          "stop": 1747748217085
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748217095,
+          "stop": 1747748224697
+        },
+        {
+          "name": "SearchNineAAlbermaleRd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748224703,
+          "stop": 1747748236852
+        },
+        {
+          "name": "SelectItemNineAAlbermaleRd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748236856,
+          "stop": 1747748240916
+        },
+        {
+          "name": "VerifyTitleBuildingViewPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748240922,
+          "stop": 1747748246206
+        },
+        {
+          "name": "GetValueOfStringAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748246207,
+          "stop": 1747748248286
+        },
+        {
+          "name": "VerifyBuildingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "9A Albermale Rd"
+            },
+            {
+              "name": "String",
+              "value": "9A Albermale Rd"
+            }
+          ],
+          "start": 1747748248287,
+          "stop": 1747748251358
+        },
+        {
+          "name": "ClickTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748251359,
+          "stop": 1747748253197
+        },
+        {
+          "name": "GetSubjectWithoutAgentAlbermaleRd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetVlOfClmnUnitFrstRw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747748254273,
+              "stop": 1747748254338
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748253243,
+          "stop": 1747748254343
+        },
+        {
+          "name": "ClickRowByOccupied",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748254344,
+          "stop": 1747748255193
+        },
+        {
+          "name": "VerifyTitleAddApartmentsPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748255195,
+          "stop": 1747748263462
+        },
+        {
+          "name": "ClickButtonPlusApplication",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748263474,
+          "stop": 1747748267777
+        },
+        {
+          "name": "VerifyTitleCreateApplication",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748267804,
+          "stop": 1747748271857
+        },
+        {
+          "name": "PassFirstStepRandomEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748271858,
+          "stop": 1747748277544
+        },
+        {
+          "name": "CopyEmailBeforeDogFromFieldGetApplicationLink",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748277547,
+          "stop": 1747748278287
+        },
+        {
+          "name": "PassThirdStepAddressNineAAlbermaleRd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "SelectFisrtDayInNextMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747748283574,
+              "stop": 1747748284756
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748278307,
+          "stop": 1747748290568
+        },
+        {
+          "name": "VerifyTitleApplicationSuccessfullyCreated",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748290571,
+          "stop": 1747748291824
+        },
+        {
+          "name": "VerifyTextLinkAlreadyCopied",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748291825,
+          "stop": 1747748291957
+        },
+        {
+          "name": "ClickButtonAddApplicant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748291958,
+          "stop": 1747748292739
+        },
+        {
+          "name": "AddOneNewlyCreatedOccupantGuarantor",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyTitleAddApplicantMdlWndw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747748292756,
+              "stop": 1747748292833
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748292754,
+          "stop": 1747748307635
+        },
+        {
+          "name": "CopyEmailBeforeDogFromFirstFieldInputEmailAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748307646,
+          "stop": 1747748307797
+        },
+        {
+          "name": "CopyEmailBeforeDogFromSecondFieldInputEmailAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748307798,
+          "stop": 1747748307946
+        },
+        {
+          "name": "ClickBtnAdd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyMessageAddedApplicantsToApplication",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747748309864,
+              "stop": 1747748319099
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748307950,
+          "stop": 1747748319099
+        },
+        {
+          "name": "ClickTabApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748319101,
+          "stop": 1747748320760
+        },
+        {
+          "name": "GetApartmentAddressFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748320762,
+          "stop": 1747748321045
+        },
+        {
+          "name": "GetFirstNameTenantMainApplicantFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748321046,
+          "stop": 1747748321751
+        },
+        {
+          "name": "GetLastNameTenantMainApplicantFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748321752,
+          "stop": 1747748323377
+        },
+        {
+          "name": "GetFirstLastNameTenantOccupantFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748323378,
+          "stop": 1747748323544
+        },
+        {
+          "name": "GetPriceFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748323545,
+          "stop": 1747748323645
+        },
+        {
+          "name": "GetDateCreatedFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748323646,
+          "stop": 1747748324209
+        },
+        {
+          "name": "GetAgentFromFrstRw",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747748324210,
+          "stop": 1747748324294
+        },
+        {
+          "name": "VerifyFullDataByApplicationTenantsMainOccupant",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  Expected string length 12 but was 21. Strings differ at index 0.\r\n  Expected: \"Not assigned\"\r\n  But was:  \"Leoautotest Feabroker\"\r\n  -----------^\r\n",
+            "trace": "   at NUnit.Framework.Assert.Multiple(TestDelegate testDelegate)\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls.ApartmentApplicationsTbl.__a$_around_VerifyFullDataByApplicationTenantsMainOccupant_100663974_o(String getAddressBuildingView, String apartmentAddressFromApp, String tenantCreatorMySpaceFirstNameEx, String firstNameTenantMainApplicantFromApp, String tenantCreatorMySpaceLastNameTenantEx, String firstLastNameFromApp, String tenantOccupantMySpaceFirstLastNameEx, String firstLastNameOccupantFromApp, String leasePriceEx, String leasePriceFromApplication, String agentLabelEx, String agentFromApplication, String statusDraftEx, String statusFromApplication, String dateCurrentEx, String dateCreatedFromApplication, String claseNameBtnEx, String closeNameBtnFromApp) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ApartmentApplicationsTbls\\ApartmentApplicationsAssertions.cs:line 116\r\n   at CazamioNewProject.PageObjects.AdminPages.ApartmentApplicationsTbls.ApartmentApplicationsTbl.__a$_around_VerifyFullDataByApplicationTenantsMainOccupant_100663974_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "9A Albermale Rd"
+            },
+            {
+              "name": "String",
+              "value": "9A Albermale Rd"
+            },
+            {
+              "name": "String",
+              "value": "Tenant"
+            },
+            {
+              "name": "String",
+              "value": "Tenant"
+            },
+            {
+              "name": "String",
+              "value": "Generated"
+            },
+            {
+              "name": "String",
+              "value": "Generated"
+            },
+            {
+              "name": "String",
+              "value": "Tenant Generated"
+            },
+            {
+              "name": "String",
+              "value": "Tenant Generated"
+            },
+            {
+              "name": "String",
+              "value": "$10333"
+            },
+            {
+              "name": "String",
+              "value": "$10333"
+            },
+            {
+              "name": "String",
+              "value": "Not assigned"
+            },
+            {
+              "name": "String",
+              "value": "Leoautotest Feabroker"
+            },
+            {
+              "name": "String",
+              "value": "Draft"
+            },
+            {
+              "name": "String",
+              "value": "Draft"
+            },
+            {
+              "name": "String",
+              "value": "05/20/2025"
+            },
+            {
+              "name": "String",
+              "value": "05/20/2025"
+            },
+            {
+              "name": "String",
+              "value": "Close"
+            },
+            {
+              "name": "String",
+              "value": "Close"
+            }
+          ],
+          "start": 1747748324388,
+          "stop": 1747748324747
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "c460263379574353b7e67088428ae7b1-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1747748192941,
+      "stop": 1747748329925
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1747748192938,
+  "stop": 1747748329941
+}

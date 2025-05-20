@@ -1,0 +1,78 @@
+{
+  "uuid": "aa5273a4-7704-4936-9a24-e0defa65e95e-tc-0-1000",
+  "name": "BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied",
+  "children": [
+    "b6036434-8ecc-4273-bc47-c1d3b51d1b27-tr-0-1009"
+  ],
+  "befores": [
+    {
+      "name": "DobeforeAllTheTests",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1747749959858,
+      "stop": 1747749959858
+    },
+    {
+      "name": "SetUp",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1747749959858,
+      "stop": 1747749959858
+    }
+  ],
+  "afters": [
+    {
+      "name": "DoAfterEach",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.InvalidOperationException : Недостаточно вкладок для закрытия (требуется минимум 2).\r\nTearDown : OpenQA.Selenium.NoSuchWindowException : no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=136.0.7103.114)",
+        "trace": "   at CazamioNewProject.GuiHelpers.SwitchingBetweenBrowserTabs.SecondTabClose() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 69\r\n   at CazamioNewProject.GuiHelpers.SwitchingBetweenBrowserTabsActions.SecondTabCloseThreeTimes() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\SwitchingBetweenBrowserTabs\\SwitchingBetweenBrowserTabsActions.cs:line 29\r\n   at BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentOccupied() in C:\\Automation\\CazamioNewProject\\BrokerGui\\BrokerTests\\BrokerTests.cs:line 806\r\n--TearDown\r\n   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.GetScreenshot()\r\n   at CazamioNewProject.GuiHelpers.ScreenShot.MakeScreenShot() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\ScreenShot.cs:line 12\r\n   at CazamioNewProject.GuiHelpers.BasicTests.BaseGui.DoAfterEach() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\BasicTests\\BaseGui.cs:line 27"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1747749959858,
+      "stop": 1747749959858
+    },
+    {
+      "name": "DoAfterAllTheTests",
+      "status": "none",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "It's not possible to get status of OneTimeTearDown",
+        "trace": "See Allure.NUnit wiki"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1747749959859,
+      "stop": 1747749959859
+    }
+  ],
+  "links": [],
+  "start": 1747749707860,
+  "stop": 1747749960005
+}
