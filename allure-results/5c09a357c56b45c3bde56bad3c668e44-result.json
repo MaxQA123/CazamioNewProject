@@ -1,0 +1,705 @@
+{
+  "uuid": "1472ea8a-1bda-420a-aec6-9e8c41a6a4d7-tr-0-1007",
+  "historyId": "AgentBrokerGui.TestsBaseGui.CreateApplicationForApartmentOffMarket",
+  "fullName": "AgentBrokerGui.TestsBaseGui.CreateApplicationForApartmentOffMarket",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AgentBrokerGui"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateApplicationForApartmentOffMarket"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Agent-Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateApplicationForApartmentOffMarket"
+    }
+  ],
+  "links": [],
+  "name": "CreateApplicationForApartmentOffMarket",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected string length 12 but was 16. Strings differ at index 0.\r\n  Expected: \"Not assigned\"\r\n  But was:  \"Agentus Brokerus\"\r\n  -----------^\r\n",
+    "trace": "   at CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsApplicationsTbls.ListOfApplicationsApplicationsTbl.__a$_around_VerifyFullDataByApplicationTenantsMainOccupant_100663790_o(String fullNameMainTenantEx, String fullNameTenantMainApplicantFromAppAr, String fullNameOccupantEx, String fullNameTenantOccupantFromAppAr, String leasePriceEx, String leasePriceFromApp, String dateCurrentEx, String dateCreatedFromApp, String notAssignetLabelEx, String agentFromApp, String draftEx, String statusFromApp, String closeBtnEx, String btnNameFromApp) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfApplicationsApplicationsTbls\\ListOfApplicationsApplicationsAssertions.cs:line 18\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsApplicationsTbls.ListOfApplicationsApplicationsTbl.__a$_around_VerifyFullDataByApplicationTenantsMainOccupant_100663790_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsApplicationsTbls.ListOfApplicationsApplicationsTbl.__a$_around_VerifyFullDataByApplicationTenantsMainOccupant_100663790_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsApplicationsTbls.ListOfApplicationsApplicationsTbl.VerifyFullDataByApplicationTenantsMainOccupant(String fullNameMainTenantEx, String fullNameTenantMainApplicantFromAppAr, String fullNameOccupantEx, String fullNameTenantOccupantFromAppAr, String leasePriceEx, String leasePriceFromApp, String dateCurrentEx, String dateCreatedFromApp, String notAssignetLabelEx, String agentFromApp, String draftEx, String statusFromApp, String closeBtnEx, String btnNameFromApp)\r\n   at AgentBrokerGui.TestsBaseGui.CreateApplicationForApartmentOffMarket() in C:\\Automation\\CazamioNewProject\\AgentBrokerGui\\AgentBrokerTests\\AgentBrokerTests.cs:line 437\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateApplicationForApartmentOffMarket",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected string length 12 but was 16. Strings differ at index 0.\r\n  Expected: \"Not assigned\"\r\n  But was:  \"Agentus Brokerus\"\r\n  -----------^\r\n",
+        "trace": "   at CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsApplicationsTbls.ListOfApplicationsApplicationsTbl.__a$_around_VerifyFullDataByApplicationTenantsMainOccupant_100663790_o(String fullNameMainTenantEx, String fullNameTenantMainApplicantFromAppAr, String fullNameOccupantEx, String fullNameTenantOccupantFromAppAr, String leasePriceEx, String leasePriceFromApp, String dateCurrentEx, String dateCreatedFromApp, String notAssignetLabelEx, String agentFromApp, String draftEx, String statusFromApp, String closeBtnEx, String btnNameFromApp) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfApplicationsApplicationsTbls\\ListOfApplicationsApplicationsAssertions.cs:line 18\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsApplicationsTbls.ListOfApplicationsApplicationsTbl.__a$_around_VerifyFullDataByApplicationTenantsMainOccupant_100663790_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsApplicationsTbls.ListOfApplicationsApplicationsTbl.__a$_around_VerifyFullDataByApplicationTenantsMainOccupant_100663790_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsApplicationsTbls.ListOfApplicationsApplicationsTbl.VerifyFullDataByApplicationTenantsMainOccupant(String fullNameMainTenantEx, String fullNameTenantMainApplicantFromAppAr, String fullNameOccupantEx, String fullNameTenantOccupantFromAppAr, String leasePriceEx, String leasePriceFromApp, String dateCurrentEx, String dateCreatedFromApp, String notAssignetLabelEx, String agentFromApp, String draftEx, String statusFromApp, String closeBtnEx, String btnNameFromApp)\r\n   at AgentBrokerGui.TestsBaseGui.CreateApplicationForApartmentOffMarket() in C:\\Automation\\CazamioNewProject\\AgentBrokerGui\\AgentBrokerTests\\AgentBrokerTests.cs:line 437\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "VerifyUserData",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "ResponseLogInApiMarketplaceAdmin",
+              "value": "CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin.ResponseLogInApiMarketplaceAdmin"
+            },
+            {
+              "name": "MarketplaceAdmin",
+              "value": "CazamioNewProject.Objects.MarketplaceAdmin"
+            }
+          ],
+          "start": 1747834585841,
+          "stop": 1747834585841
+        },
+        {
+          "name": "LogInAsAgentBrokerMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747834591909,
+              "stop": 1747834594281
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747834594292,
+              "stop": 1747834594717
+            },
+            {
+              "name": "VerifyAgentBrokerUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Agentus Brokerus"
+                },
+                {
+                  "name": "String",
+                  "value": "Agent"
+                }
+              ],
+              "start": 1747834594724,
+              "stop": 1747834595319
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747834588141,
+          "stop": 1747834595319
+        },
+        {
+          "name": "ClickButtonApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747834595330,
+          "stop": 1747834600848
+        },
+        {
+          "name": "VerifyTitleListOfApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747834600848,
+          "stop": 1747834600920
+        },
+        {
+          "name": "PassFirstStepCreatorWithCreditReportMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickButtonPlusApplication",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747834600929,
+              "stop": 1747834602405
+            },
+            {
+              "name": "VerifyTitleCreateApplication",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747834602418,
+              "stop": 1747834602750
+            },
+            {
+              "name": "EnterEmailCreatedTenantCreatorWithCreditReportMySpace",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747834602750,
+              "stop": 1747834603763
+            },
+            {
+              "name": "ClickButtonNext",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747834603763,
+              "stop": 1747834606483
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747834600924,
+          "stop": 1747834606483
+        },
+        {
+          "name": "PassSecondStepOneOneOneAEastStPedestrianCrossingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "EnterOneOneOneAEastStPedestrianCrossingAddress",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747834606492,
+              "stop": 1747834607833
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747834606484,
+          "stop": 1747834608685
+        },
+        {
+          "name": "GetFullEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747834608689,
+          "stop": 1747834609779
+        },
+        {
+          "name": "VerifyEmailTenantCreatorWithCreditReport",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "main-appl-2myspace@putsbox.com"
+            }
+          ],
+          "start": 1747834609781,
+          "stop": 1747834609782
+        },
+        {
+          "name": "PassThirdStepOneOneOneAEastStPedestrianCrossingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickButtonDropDownYearMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747834613164,
+              "stop": 1747834613933
+            },
+            {
+              "name": "SelectCurrentYear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747834613933,
+              "stop": 1747834615211
+            },
+            {
+              "name": "SelectNextMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747834615211,
+              "stop": 1747834616498
+            },
+            {
+              "name": "SelectFisrtDayInNextMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747834616498,
+              "stop": 1747834617764
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747834609782,
+          "stop": 1747834627808
+        },
+        {
+          "name": "VerifyTitleApplicationSuccessfullyCreated",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747834627809,
+          "stop": 1747834628426
+        },
+        {
+          "name": "VerifyTextLinkAlreadyCopied",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747834628427,
+          "stop": 1747834628493
+        },
+        {
+          "name": "ClickButtonAddApplicant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747834628494,
+          "stop": 1747834629167
+        },
+        {
+          "name": "AddOneAlreadyExistOccupantWithCreditReport",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyTitleAddApplicantMdlWndw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747834629177,
+              "stop": 1747834629230
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747834629177,
+          "stop": 1747834630129
+        },
+        {
+          "name": "ClickBtnAdd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyMessageAddedApplicantsToApplication",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1747834631861,
+              "stop": 1747834640255
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747834630130,
+          "stop": 1747834640255
+        },
+        {
+          "name": "GetApplicationIdFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747834640256,
+          "stop": 1747834640323
+        },
+        {
+          "name": "GetFullNameTenantMainApplicantFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747834640324,
+          "stop": 1747834640391
+        },
+        {
+          "name": "GetFullNameTenantOccupantFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747834640392,
+          "stop": 1747834640457
+        },
+        {
+          "name": "GetPriceFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747834640458,
+          "stop": 1747834640518
+        },
+        {
+          "name": "GetDateCreatedFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747834640519,
+          "stop": 1747834641066
+        },
+        {
+          "name": "GetAgentFromFrstRw",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1747834641067,
+          "stop": 1747834641138
+        },
+        {
+          "name": "VerifyFullDataByApplicationTenantsMainOccupant",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  Expected string length 12 but was 16. Strings differ at index 0.\r\n  Expected: \"Not assigned\"\r\n  But was:  \"Agentus Brokerus\"\r\n  -----------^\r\n",
+            "trace": "   at NUnit.Framework.Assert.Multiple(TestDelegate testDelegate)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsApplicationsTbls.ListOfApplicationsApplicationsTbl.__a$_around_VerifyFullDataByApplicationTenantsMainOccupant_100663790_o(String fullNameMainTenantEx, String fullNameTenantMainApplicantFromAppAr, String fullNameOccupantEx, String fullNameTenantOccupantFromAppAr, String leasePriceEx, String leasePriceFromApp, String dateCurrentEx, String dateCreatedFromApp, String notAssignetLabelEx, String agentFromApp, String draftEx, String statusFromApp, String closeBtnEx, String btnNameFromApp) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfApplicationsApplicationsTbls\\ListOfApplicationsApplicationsAssertions.cs:line 18\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApplicationsApplicationsTbls.ListOfApplicationsApplicationsTbl.__a$_around_VerifyFullDataByApplicationTenantsMainOccupant_100663790_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "MainApplMySpace-WithCR SaraMainMyspaceQA"
+            },
+            {
+              "name": "String",
+              "value": "MainApplMySpace-WithCR SaraMainMyspaceQA"
+            },
+            {
+              "name": "String",
+              "value": "OccupMySpace-WithCR DeniOcupMyspaceQA"
+            },
+            {
+              "name": "String",
+              "value": "OccupMySpace-WithCR DeniOcupMyspaceQA"
+            },
+            {
+              "name": "String",
+              "value": "$2500"
+            },
+            {
+              "name": "String",
+              "value": "$2500"
+            },
+            {
+              "name": "String",
+              "value": "05/21/2025"
+            },
+            {
+              "name": "String",
+              "value": "05/21/2025"
+            },
+            {
+              "name": "String",
+              "value": "Not assigned"
+            },
+            {
+              "name": "String",
+              "value": "Agentus Brokerus"
+            },
+            {
+              "name": "String",
+              "value": "Draft"
+            },
+            {
+              "name": "String",
+              "value": "Draft"
+            },
+            {
+              "name": "String",
+              "value": "Close"
+            },
+            {
+              "name": "String",
+              "value": "Close"
+            }
+          ],
+          "start": 1747834641220,
+          "stop": 1747834641639
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "9bb0fe07f3dd40338d4bd788717ac905-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1747834575121,
+      "stop": 1747834647742
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1747834575121,
+  "stop": 1747834647742
+}

@@ -100,14 +100,14 @@ namespace AgentBrokerGui
 
             #endregion
 
-            #region Preconditions LogIn as Marketplace Admin
+            #region Preconditions API LogIn as Marketplace Admin
 
             var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
             LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
 
             #endregion
 
-            #region Test create the 111A East 51st Street Pedestrian Crossing building
+            #region Preconditions API create the 111A East 51st Street Pedestrian Crossing building
 
             var buildingRequestBodyEastStPedestrianCrossing = BuildingCreationMandatoryData.RequestBodyCreateBuildingOneOneOneAEastStPedestrianCrossing();
             var responseBuildingEastStPedestrianCrossing = BuildingCreationMandatoryData.CreateBuildingOneOneOneAEastStPedestrianCrossing(responseMarketplaceAdmin.AuthData.Token, buildingRequestBodyEastStPedestrianCrossing);
@@ -378,6 +378,7 @@ namespace AgentBrokerGui
 
             #region Test data
 
+            AgentBroker agentBroker = AgentBroker.Generate();
             Application application = Application.Generate();
             TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
             TenantOccupantMySpace tenantOccupantMySpace = TenantOccupantMySpace.Generate();
@@ -440,7 +441,7 @@ namespace AgentBrokerGui
                 tenantOccupantMySpace.CreatedWithCreditReport.ConstantFirstLastName, fullNameTenantOccupantFromAppAr,
                 application.LeasePrice.FirstPriceStatic, leasePriceFromApp,
                 application.BasicData.DateCurrent, dateCreatedFromApp,
-                application.BasicData.NotAssignetLabel, agentFromApp,
+                agentBroker.CreatedAgentMySpace.FullName, agentFromApp,
                 application.Statuses.Draft, statusFromApp,
                 application.Buttons.Close, btnNameFromApp);
 

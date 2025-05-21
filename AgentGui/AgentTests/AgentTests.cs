@@ -92,14 +92,14 @@ namespace AgentGuiTests
 
             #endregion
 
-            #region Preconditions LogIn as Marketplace Admin
+            #region Preconditions API LogIn as Marketplace Admin
 
             var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
             LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
 
             #endregion
 
-            #region Test create the 12867 Gates Avenue building
+            #region Preconditions API create the 12867 Gates Avenue building
 
             var buildingRequestBody = BuildingCreationMandatoryData.RequestBodyCreateOneTwoEightSixSevenGatesAvenue();
             var responseBuilding = BuildingCreationMandatoryData.CreateOneTwoEightSixSevenGatesAvenue(responseMarketplaceAdmin.AuthData.Token, buildingRequestBody);

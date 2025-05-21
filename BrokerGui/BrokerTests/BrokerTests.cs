@@ -260,28 +260,28 @@ namespace BrokerGuiTests
 
             #endregion
 
-            #region Preconditions LogIn as Marketplace Admin
+            #region Preconditions API LogIn as Marketplace Admin
 
             var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
             LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
 
             #endregion
 
-            #region Test create the 9A Albermale Rd building
+            #region Preconditions API create the 9A Albermale Rd building
 
             var buildingRequestBodyAlbermaleRd = BuildingCreationMandatoryData.RequestBodyCreateBuildingNineAAlbermaleRd();
             var responseBuildingAlbermaleRd = BuildingCreationMandatoryData.CreateBuildingNineAAlbermaleRd(responseMarketplaceAdmin.AuthData.Token, buildingRequestBodyAlbermaleRd);
 
             #endregion
 
-            #region Test create the 30-39 Crown St building
+            #region Preconditions API create the 30-39 Crown St building
 
             var buildingRequestBodyCrownSt = BuildingCreationMandatoryData.RequestBodyCreateBuildingThirtyDashTrirtyNineCrownSt();
             var responseBuildingCrownSt = BuildingCreationMandatoryData.CreateBuildingThirtyDashTrirtyNineCrownSt(responseMarketplaceAdmin.AuthData.Token, buildingRequestBodyCrownSt);
 
             #endregion
 
-            #region Test create the 12567 Dean Street building
+            #region Preconditions API create the 12567 Dean Street building
 
             var buildingRequestBody = BuildingCreationMandatoryData.RequestBodyCreateBuildingOneTwoFiveSixSevenDeanStreet();
             var responseBuilding = BuildingCreationMandatoryData.CreateBuildingOneTwoFiveSixSevenDeanStreet(responseMarketplaceAdmin.AuthData.Token, buildingRequestBody);
