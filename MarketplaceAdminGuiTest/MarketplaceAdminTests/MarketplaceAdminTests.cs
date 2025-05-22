@@ -1,4 +1,5 @@
 using Allure.Commons;
+using CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.LogInApiBroker;
 using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApiMandatoryData;
 using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin;
 using CazamioNewProject.DbHelpers.AspNetUsersTable;
@@ -948,7 +949,7 @@ namespace MarketplaceAdminGuiTest
                 .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
             Pages.EmailPutsBox
                 .ClickButtonHtml()
-                .ClickButtonStartYourApplicationNowlForTenant();
+                .ClickButtonStartYourApplicationNowForTenant();
             Pages.ToasterMessagesTenants
                 .VerifyMessageAccountWasSuccessfullyActivated();
             Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
@@ -1066,7 +1067,7 @@ namespace MarketplaceAdminGuiTest
                 .VerifySubjectLetterCreateTenantViaPlusAppWithAgent(getSubjectEmailExpected, getSubjectFromEmail);
             Pages.EmailPutsBox
                 .ClickButtonHtml()
-                .ClickButtonStartYourApplicationNowlForTenant();
+                .ClickButtonStartYourApplicationNowForTenant();
             Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
                 .QuicklyPassTenantCreatorMySpace();
             Pages.LeasePriceAdjustmentMdlWndw
@@ -1134,28 +1135,23 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
 
-            #region Test Data API
+            #region Test Data
 
             Broker broker = Broker.Generate();
-            var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentForAppNineNineNineEightSaintJohnsonPlaceActions();
-
-            #endregion
-
-            #region Preconditions API
-
-            //var responseBroker = LogInApiBroker.ExecuteLogIn();
-            //LogInApiBroker.VerifyUserData(responseBroker, broker);
-            //CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseBroker.AuthData.Token, requestBodyApartment);
-
-            #endregion
-
-            #region Test data
-
             Building building = Building.Generate();
 
             #endregion
 
-            #region Preconditions
+            #region Preconditions API create apartment
+
+            var responseBroker = LogInApiBroker.ExecuteLogIn();
+            LogInApiBroker.VerifyUserData(responseBroker, broker);
+            var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentForAppNineNineNineEightSaintJohnsonPlaceActions();
+            CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseBroker.AuthData.Token, requestBodyApartment);
+
+            #endregion
+
+            #region Preconditions GUI
 
             Pages.LogInLandlord
                 .LogInAsMarketplaceAdminMySpace();
@@ -1210,11 +1206,11 @@ namespace MarketplaceAdminGuiTest
 
             string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
 
-            //Pages.EmailPutsBox
-            //    .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
+            Pages.EmailPutsBox
+                .VerifySubjectLetterCreateTenantViaGetLinkWithBrokerAsAgent(getSubjectEmailExpected, getSubjectFromEmail);
             Pages.EmailPutsBox
                 .ClickButtonHtml()
-                .ClickButtonStartYourApplicationNowlForTenant();
+                .ClickButtonStartYourApplicationNowForTenant();
             Pages.ToasterMessagesTenants
                 .VerifyMessageAccountWasSuccessfullyActivatedWithDiv();
             Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
@@ -1228,38 +1224,43 @@ namespace MarketplaceAdminGuiTest
                 .VerifyApplicationIdNumberTenantCreator(applicationIdFromAppLandlord, applicationIdFromAppTenant);
             Pages.HeaderTenants
                 .LogOut();
-            ////Occupant
-            //Pages.JScriptExecutor
-            //   .OpenNewTab();
-            //Pages.EmailHelper
-            //   .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, occupantPartEmail);
-            //Pages.EmailPutsBox
-            //    .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
-            //Pages.EmailPutsBox
-            //    .ClickButtonHtml()
-            //    .ClickButtonStartYourApplicationNowlForTenantSecond();
-            //Pages.ToasterMessagesTenants
-            //    .VerifyMessageAccountWasSuccessfullyActivated();
-            //Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
-            //    .QuicklyPassTenantOccupantMySpace();
-            //Pages.HeaderTenants
-            //    .LogOut();
-            ////Guarantor
-            //Pages.JScriptExecutor
-            //   .OpenNewTab();
-            //Pages.EmailHelper
-            //   .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, guarantorPartEmail);
-            //Pages.EmailPutsBox
-            //    .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
-            //Pages.EmailPutsBox
-            //    .ClickButtonHtml()
-            //    .ClickButtonStartYourApplicationNowlForTenantThird();
-            //Pages.ToasterMessagesTenants
-            //    .VerifyMessageAccountWasSuccessfullyActivated();
-            //Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
-            //    .QuicklyPassTenantGuarantorMySpace();
-            //Pages.HeaderTenants
-            //    .LogOut();
+            //Occupant
+            Pages.JScriptExecutor
+               .OpenNewTab();
+            Pages.EmailHelper
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, occupantPartEmail);
+            Pages.EmailPutsBox
+                .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail)
+                .ClickButtonHtml();
+            Pages.SwitchingBetweenBrowserTabsActions
+                .SecondTabCloseThreeTimes();
+            Pages.EmailPutsBox
+                .ClickButtonStartYourApplicationNowForTenant();
+            Pages.ToasterMessagesTenants
+                .VerifyMessageAccountWasSuccessfullyActivated();
+            Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
+                .QuicklyPassTenantOccupantMySpace();
+            Pages.HeaderTenants
+                .LogOut();
+            //Guarantor
+            Pages.JScriptExecutor
+               .OpenNewTab();
+            Pages.EmailHelper
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, guarantorPartEmail);
+            Pages.EmailPutsBox
+                .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
+            Pages.EmailPutsBox
+                .ClickButtonHtml();
+            Pages.SwitchingBetweenBrowserTabsActions
+                .SecondTabCloseThreeTimes();
+            Pages.EmailPutsBox
+                .ClickButtonStartYourApplicationNowForTenant();
+            Pages.ToasterMessagesTenants
+                .VerifyMessageAccountWasSuccessfullyActivated();
+            Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
+                .QuicklyPassTenantGuarantorMySpace();
+            Pages.HeaderTenants
+                .LogOut();
 
             WaitUntil.WaitSomeInterval(1000);
 

@@ -39,6 +39,15 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
             return this;
         }
 
+        [AllureStep("VerifySubjectLetterCreateTenantViaGetLinkWithBrokerAsAgent")]
+        public EmailPutsBox VerifySubjectLetterCreateTenantViaGetLinkWithBrokerAsAgent(string getSubjectExpected, string getSubjectFromEmail)
+        {
+            WaitUntil.CustomElementIsVisible(SubjectLetterCreateTenantViaGetLink);
+            Assert.AreEqual(getSubjectExpected, getSubjectFromEmail);
+
+            return this;
+        }
+
         [AllureStep("VerifySubjectLetterCreateTenantViaGetLink")]
         public EmailPutsBox VerifySubjectLetterCreateTenantViaPlusAppWithAgent(string getSubjectExpected, string getSubjectFromEmail)
         {
