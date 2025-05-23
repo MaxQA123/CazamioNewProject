@@ -1,5 +1,6 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using NUnit.Allure.Attributes;
+using System.Text.RegularExpressions;
 
 namespace CazamioNewProject.PageObjects.TenantPages.SubmittingApplicationPage
 {
@@ -10,9 +11,15 @@ namespace CazamioNewProject.PageObjects.TenantPages.SubmittingApplicationPage
         {
             WaitUntil.CustomElementIsVisible(ApplicationIdVl);
             string getValue = ApplicationIdVl.Text;
-            string getValueActual = getValue.ToString();
 
-            return getValueActual;
+            Match match = Regex.Match(getValue, @"#(\d+)");
+
+            if (match.Success)
+            {
+                return match.Groups[1].Value; 
+            }
+
+            return string.Empty;
         }
     }
 }

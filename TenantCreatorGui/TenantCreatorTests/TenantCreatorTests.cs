@@ -12,7 +12,31 @@ namespace TenantCreatorGui
 
     public class TestsBaseGui : TenantCreatorBase
     {
-        //Amount order 2 next must be 3
+        //Amount order 3 next must be 4
+        [Test]
+        [Order(1)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("TenantCreator")]
+        [AllureSubSuite("Demo")]
+
+        public void Demo()
+        {
+            Pages.LogInTenant
+                .LogInAsCreatorWithCreditReportMySpace();
+            Pages.HeaderTenants
+                .ClickButtonMyApplications();
+            Pages.MyAccount
+                .ClickCompleteOrEditThisApplicationBtn();
+
+            string applicationIdFromAppTenant = Pages.SubmittingApplication.GetApplicationIdVl();
+
+            WaitUntil.WaitSomeInterval(1000);
+        }
+
         [Test]
         [Order(2)]
         [AllureTag("Regression")]
@@ -32,7 +56,7 @@ namespace TenantCreatorGui
         }
 
         [Test]
-        [Order(2)]
+        [Order(3)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]

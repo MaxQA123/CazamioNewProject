@@ -1,0 +1,170 @@
+Request Body:
+{
+  "Email": "broker3autotest@putsbox.com",
+  "Password": "Qwerty123!",
+  "DeviceFingerprint": "d86d2f3b2f8e0030f57cfb1ce82f3f25",
+  "RememberMe": true
+}
+Response Status Code: OK
+Response Headers: HeaderParameter { Name = Date, Value = Fri, 23 May 2025 13:42:46 GMT, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Server, Value = Microsoft-IIS/10.0, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Cache-Control, Value = no-store, no-cache, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Pragma, Value = no-cache, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Set-Cookie, Value = .AspNetCore.Identity.Application=CfDJ8MCFu5agVtlEgUvKbsnWzYhi2k0AuM6qHK9iFm9BpFr_uhqSWuwnOD2dFmZCJW4vCDWewQqI4Q5CaXtru-A994YwWWiUuighdDv5aYB-aSKWoJSjB8Ar54Ii9GDsfgNGR_0jQCUqLhGjI8iwllD4R1g6mdYERLqwsdhZvzUBGlO-YBwvBnpivlYlTsoC8XTo2q1asnBenCNGFvmhiAbToDoLJVd-YlK9ZsF6d8MvsaN0Xh4YtL0hfK2VNFumpyBhk61TsZmEIgCxO44ZAs4f01r51CvLVIuYbbXSFkzIdA2y2E9yd2yViq7dUufJkw9j4BjfJkS4hTMWBm8VvHk3gN9PGm_gxd0Vdr454AkE9TPunXNwMERekQiLdmDucxQ1yiQi5JtLt2vrxVTFH95eiNDp2Q4KkWA5Xpj0Hk32af8Ipur_v9PzWi_njsV0YGF6fwk2tKIeEpKgjLu5d2umXZQXXaI_9dBG0gIxIjEq2Yfc_LSFSJRG_TZDcUn3sCyhOLWelShi_dRiTEGQRGp1ZE9robuERvTqi01f7hL4zXe6zAz8-so5dVPkhtULtU1p1Zfg_ZcUwcn3APcnU4Ll-qsoGzWHV_ez9eJXT_1_Qyf9gaEUcA2J3-mnj83WfEEtGcBizo45NRVqzWhgeikGJW6fVJSPLoIaiBZIncRGXiNxVDZq7_oWCIPlm007PyXC03v2Tb7G5727ddZvhsJNMzDxgCmCUv9Zo3wSboVYA61EIO2afZohbdEwf5lqcGzmwsYSoGOtIsukvT7zgGmE0y08k7sJBFuSf5Aq6rxc9am4ID9DpOsIAWEzWx60yeXiae_N4lw7jifNK9F-asbyIGXoF_hele4FoJwVSkmjAwgt; path=/; secure; samesite=lax; httponly, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Set-Cookie, Value = ARRAffinity=a6bca26d75cb3f6eb8480aef2c4becff3739380f22f50a9a616e3f019c59f22a;Path=/;HttpOnly;Secure;Domain=api-cazamio-staging.azurewebsites.net, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Set-Cookie, Value = ARRAffinitySameSite=a6bca26d75cb3f6eb8480aef2c4becff3739380f22f50a9a616e3f019c59f22a;Path=/;HttpOnly;SameSite=None;Secure;Domain=api-cazamio-staging.azurewebsites.net, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Transfer-Encoding, Value = chunked, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Vary, Value = Accept-Encoding, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Strict-Transport-Security, Value = max-age=2592000, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = X-Powered-By, Value = ASP.NET, Type = HttpHeader, Encode = False, ContentType =  }
+Response Content: {"authData":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiI4MDdkNjFlYy04ZDM2LTQ3NDgtOWExZC1mZDVmYTc1NWFjY2QiLCJMYXN0UmVzZXRQYXNzd29yZERhdGUiOiIxMi8yMy8yMDIzIDEwOjMzOjAwIEFNIiwiZW1haWwiOiJicm9rZXIzYXV0b3Rlc3RAcHV0c2JveC5jb20iLCJ1bmlxdWVfbmFtZSI6ImJyb2tlcjNhdXRvdGVzdEBwdXRzYm94LmNvbSIsImp0aSI6IjY5NGNmM2Y1LTI0ZmEtNDM4Ny05M2M2LTBhNmEyOGViMWEzYSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJMZW9hdXRvdGVzdCBGZWFicm9rZXIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9naXZlbm5hbWUiOiJMZW9hdXRvdGVzdCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3N1cm5hbWUiOiJGZWFicm9rZXIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiQ2F6YW1pby5Dcm9zc0N1dHRpbmcuRW50aXRpZXMuQXBwbGljYXRpb25Vc2VyUm9sZSIsIkJyb2tlciJdLCJleHAiOjE3NDgwMTEzNjYsImlzcyI6Imh0dHBzOi8vYXBpLWNhemFtaW8tc3RhZ2luZy5henVyZXdlYnNpdGVzLm5ldCIsImF1ZCI6Imh0dHBzOi8vYXBpLWNhemFtaW8tc3RhZ2luZy5henVyZXdlYnNpdGVzLm5ldCJ9.1hM4vQiIOjrzbZGq2cP8soTVvzb8PCTjFtrBvrXo05w","refreshToken":"rgcnqo5obkOGLXuzwZNLGw==","expireDate":"2025-05-26T13:42:46.965Z","user":{"userId":"807d61ec-8d36-4748-9a1d-fd5fa755accd","userName":"Leoautotest Feabroker","userEmail":"broker3autotest@putsbox.com","userRoleId":0,"userPhoto":"https://cazamiostorage.blob.core.windows.net/staging-user-profile-images/807d61ec-8d36-4748-9a1d-fd5fa755accd_2025-05-18-17-45-52.jpeg?sv=2025-05-05&se=2027-05-18T17%3A45%3A52Z&sr=b&sp=r&sig=cGmSyIdpQaQX5IpQ%2BenMI0Cd6PRn%2BuBLbry6anG6Fjk%3D","firstName":"Leoautotest","lastName":"Feabroker","isGenerated":false,"loginLinkPasswordUpdated":true},"wasUserRegistered":false},"marketplaceId":15,"isBanned":false,"logo":"https://cazamiostorage.blob.core.windows.net/staging-marketplace-logo/marketplace_admin_a4a1fc94-b40e-4af7-8fc1-4ea23349a337.jpeg?sv=2025-05-05&se=2027-05-23T13%3A22%3A06Z&sr=b&sp=r&sig=eVzsVproYImS6%2BkVPCTdD3nOD1HQA3FfeytJYRSzpxM%3D","brand":"Noyo Properties NYC"}
+Request Body:
+{
+  "apartments": [
+    {
+      "unit": "5975",
+      "leasePrice": 850,
+      "paidMonths": 1,
+      "depositPrice": 850,
+      "brokerFeeRequired": false,
+      "bedroomQuantity": 3,
+      "bathroomQuantity": 2,
+      "squareFeet": 0,
+      "priceDateFrom": "2025-05-23",
+      "priceDateTo": "2025-06-06",
+      "description": "",
+      "internalNotes": "",
+      "availableFrom": "2025-05-23",
+      "apartmentType": "MultiFamily",
+      "status": "Deposit",
+      "staffId": null,
+      "leaseDurations": "12 months",
+      "amenities": [],
+      "includedInMonthlyRentAmenities": [],
+      "images": [],
+      "threeDPhotos": [],
+      "videos": [],
+      "visitingHours": [
+        {
+          "dayOfWeek": "Sunday",
+          "openTime": null,
+          "closeTime": null
+        },
+        {
+          "dayOfWeek": "Monday",
+          "openTime": null,
+          "closeTime": null
+        },
+        {
+          "dayOfWeek": "Tuesday",
+          "openTime": null,
+          "closeTime": null
+        },
+        {
+          "dayOfWeek": "Wednesday",
+          "openTime": null,
+          "closeTime": null
+        },
+        {
+          "dayOfWeek": "Thursday",
+          "openTime": null,
+          "closeTime": null
+        },
+        {
+          "dayOfWeek": "Friday",
+          "openTime": null,
+          "closeTime": null
+        },
+        {
+          "dayOfWeek": "Saturday",
+          "openTime": null,
+          "closeTime": null
+        }
+      ],
+      "requiredDocumentsIds": [
+        1,
+        3,
+        6,
+        10,
+        21,
+        22
+      ],
+      "floor": null,
+      "freeStuff": [],
+      "concessions": [
+        {
+          "specialOfferId": 1,
+          "monthsFree": 1,
+          "leaseTerms": "12 months lease",
+          "additionalInfo": "First month free on annual lease",
+          "isTimeBased": false,
+          "name": "First Month Free",
+          "isActive": true,
+          "dateFrom": "0001-01-01T00:00:00+00:00",
+          "dateTo": "0001-01-01T00:00:00+00:00",
+          "triggerEvent": 0,
+          "generatedId": "00000000-0000-0000-0000-000000000000"
+        }
+      ],
+      "holdingDeposit": {
+        "amount": 500,
+        "allowedPaymentMethods": [
+          "CreditCard"
+        ]
+      },
+      "selfTourStatus": false,
+      "locks": {
+        "bluetoothLocks": [],
+        "wifiLocks": [],
+        "pinCodeLocks": [],
+        "noteLocks": [],
+        "CABLocks": [],
+        "existingOccupantLocks": []
+      }
+    }
+  ],
+  "buildingId": 2121
+}
+Response Status Code: OK
+Response Headers: HeaderParameter { Name = Date, Value = Fri, 23 May 2025 13:42:48 GMT, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Server, Value = Microsoft-IIS/10.0, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Set-Cookie, Value = ARRAffinity=a6bca26d75cb3f6eb8480aef2c4becff3739380f22f50a9a616e3f019c59f22a;Path=/;HttpOnly;Secure;Domain=api-cazamio-staging.azurewebsites.net, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Set-Cookie, Value = ARRAffinitySameSite=a6bca26d75cb3f6eb8480aef2c4becff3739380f22f50a9a616e3f019c59f22a;Path=/;HttpOnly;SameSite=None;Secure;Domain=api-cazamio-staging.azurewebsites.net, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Strict-Transport-Security, Value = max-age=2592000, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = X-Powered-By, Value = ASP.NET, Type = HttpHeader, Encode = False, ContentType =  }
+Response Content: 
+Full name EX: Mark Adm AC: Mark Adm
+Name role EX: Marketplace Admin AC: Marketplace Admin
+Title name: Building view
+Title name: Apartment view
+Toaster message: Success
+Toaster message: Copied the link to application.
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Toaster message is still visible: Success
+Title name: Application detail
+Title name: Edit application
+Title name: Edit application
+Title name: Sure you want to edit this application?
+Toaster message: Success
+Toaster message: Application edit successful

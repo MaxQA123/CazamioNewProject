@@ -16,5 +16,14 @@ namespace CazamioNewProject.PageObjects.TenantPages.MyAccountPage
 
             return onlyApplicationIdNumber;
         }
+
+        [AllureStep("ClickCompleteOrEditThisApplicationBtn")]
+        public MyAccount ClickCompleteOrEditThisApplicationBtn()
+        {
+            WaitUntil.CustomElementIsVisible(CompleteOrEditThisApplicationBtn);
+            Button.Click(CompleteOrEditThisApplicationBtn);
+
+            return this;
+        }
     }
 }

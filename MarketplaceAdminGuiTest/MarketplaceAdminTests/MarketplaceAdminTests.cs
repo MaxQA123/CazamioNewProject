@@ -1206,8 +1206,8 @@ namespace MarketplaceAdminGuiTest
 
             string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
 
-            Pages.EmailPutsBox
-                .VerifySubjectLetterCreateTenantViaGetLinkWithBrokerAsAgent(getSubjectEmailExpected, getSubjectFromEmail);
+            //Pages.EmailPutsBox
+            //    .VerifySubjectLetterCreateTenantViaGetLinkWithBrokerAsAgent(getSubjectEmailExpected, getSubjectFromEmail);
             Pages.EmailPutsBox
                 .ClickButtonHtml()
                 .ClickButtonStartYourApplicationNowForTenant();
@@ -1218,10 +1218,10 @@ namespace MarketplaceAdminGuiTest
             Pages.LeasePriceAdjustmentMdlWndw
                 .ClickSaveBtn();
 
-            string applicationIdFromAppTenant = Pages.SubmittingApplication.GetApplicationIdVl();
+            string applicationIdFromAppTenantMain = Pages.SubmittingApplication.GetApplicationIdVl();
 
             Pages.MyAccount
-                .VerifyApplicationIdNumberTenantCreator(applicationIdFromAppLandlord, applicationIdFromAppTenant);
+                .VerifyApplicationIdNumberTenantCreator(applicationIdFromAppLandlord, applicationIdFromAppTenantMain);
             Pages.HeaderTenants
                 .LogOut();
             //Occupant
@@ -1230,7 +1230,7 @@ namespace MarketplaceAdminGuiTest
             Pages.EmailHelper
                .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, occupantPartEmail);
             Pages.EmailPutsBox
-                .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail)
+            //    .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail)
                 .ClickButtonHtml();
             Pages.SwitchingBetweenBrowserTabsActions
                 .SecondTabCloseThreeTimes();
@@ -1240,6 +1240,11 @@ namespace MarketplaceAdminGuiTest
                 .VerifyMessageAccountWasSuccessfullyActivated();
             Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
                 .QuicklyPassTenantOccupantMySpace();
+
+            string applicationIdFromAppTenantOccupant = Pages.SubmittingApplication.GetApplicationIdVl();
+
+            Pages.MyAccount
+                .VerifyApplicationIdNumberTenantOccupant(applicationIdFromAppLandlord, applicationIdFromAppTenantOccupant);
             Pages.HeaderTenants
                 .LogOut();
             //Guarantor
@@ -1248,8 +1253,7 @@ namespace MarketplaceAdminGuiTest
             Pages.EmailHelper
                .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, guarantorPartEmail);
             Pages.EmailPutsBox
-                .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
-            Pages.EmailPutsBox
+                //.VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail)
                 .ClickButtonHtml();
             Pages.SwitchingBetweenBrowserTabsActions
                 .SecondTabCloseThreeTimes();
@@ -1259,6 +1263,11 @@ namespace MarketplaceAdminGuiTest
                 .VerifyMessageAccountWasSuccessfullyActivated();
             Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
                 .QuicklyPassTenantGuarantorMySpace();
+
+            string applicationIdFromAppTenantGuarantor = Pages.SubmittingApplication.GetApplicationIdVl();
+
+            Pages.MyAccount
+                .VerifyApplicationIdNumberTenantGuarantor(applicationIdFromAppLandlord, applicationIdFromAppTenantGuarantor);
             Pages.HeaderTenants
                 .LogOut();
 

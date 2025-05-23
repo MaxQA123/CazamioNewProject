@@ -13,6 +13,9 @@ namespace CazamioNewProject.PageObjects.TenantPages.MyAccountPage
         [FindsBy(How = How.XPath, Using = "//my-info//applications//div[@class = 'application-apartments-collection']//div[@class = 'apartment-info']//div[@class = 'application-id']")]
         public IWebElement ApplicationIdStringAndValueFromFrstRw;
 
+        [FindsBy(How = How.XPath, Using = "//applications//span[text() = 'Complete or Edit This Application']")]
+        public IWebElement CompleteOrEditThisApplicationBtn;
+
         #endregion
     }
 }
