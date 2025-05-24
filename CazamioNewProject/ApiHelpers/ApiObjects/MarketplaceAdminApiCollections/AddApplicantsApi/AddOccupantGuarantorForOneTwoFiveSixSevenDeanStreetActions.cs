@@ -15,7 +15,7 @@ namespace CazamioNewProject.AddApplicantsApi
             TenantGuarantorMySpace tenantGuarantorMySpace = TenantGuarantorMySpace.Generate();
             //12567 Dean Street
             //Get ApartmentApplicationId from BD
-            var apartmentApplicationIdResult = ApartmentApplicationsDbRequests.ApartmentApplicationsDbTable.GetLastApartmentApplicationId();
+            var apartmentApplicationIdResult = ApartmentApplicationsDbRequests.ApartmentApplicationsDbTable.GetLastApartmentApplicationIdForOneTwoFiveSixSevenDeanStreet();
             long apartmentApplicationId = apartmentApplicationIdResult.Id;
 
             var payload = new RequestAddApplicants

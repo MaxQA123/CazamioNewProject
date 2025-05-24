@@ -36,6 +36,20 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
             element.Click();
         }
 
+        [AllureStep("ClickRowByOffMarket")]
+        public void ClickRowByOffMarket()
+        {
+            WaitUntil.WaitSomeInterval(500);
+            BuildingApartmentsTable buildingApartmentsTable = BuildingApartmentsTable.Generate();
+
+            var xpath = "//table//tbody//tr//td[text() = '" + buildingApartmentsTable.StatusColumn.OffMarket + "']";
+
+            WebDriverWait wait = new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(10));
+
+            var element = wait.Until(driver => driver.FindElement(By.XPath(xpath)));
+            element.Click();
+        }
+
         [AllureStep("ClickRowByVacant")]
         public void ClickRowByVacant()
         {
@@ -44,10 +58,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
 
             var xpath = "//table//tbody//tr//td[text() = '" + buildingApartmentsTable.StatusColumn.Vacant + "']";
 
-            // Создаём объект WebDriverWait с таймаутом
             WebDriverWait wait = new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(10));
 
-            // Ждём, пока элемент станет доступным, и выполняем клик
             var element = wait.Until(driver => driver.FindElement(By.XPath(xpath)));
             element.Click();
         }
@@ -60,10 +72,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
 
             var xpath = "//table//tbody//tr//td[text() = '" + buildingApartmentsTable.StatusColumn.Occupied + "']";
 
-            // Создаём объект WebDriverWait с таймаутом
             WebDriverWait wait = new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(10));
 
-            // Ждём, пока элемент станет доступным, и выполняем клик
             var element = wait.Until(driver => driver.FindElement(By.XPath(xpath)));
             element.Click();
         }
@@ -76,10 +86,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
 
             var xpath = "//table//tbody//tr//td[text() = '" + buildingApartmentsTable.StatusColumn.ApplicationSubmitted + "']";
 
-            // Создаём объект WebDriverWait с таймаутом
             WebDriverWait wait = new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(10));
 
-            // Ждём, пока элемент станет доступным, и выполняем клик
             var element = wait.Until(driver => driver.FindElement(By.XPath(xpath)));
             element.Click();
         }
@@ -91,10 +99,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.BuildingApartmentsTbls
 
             var xpath = "//table//tbody//tr//td[text() = '" + buildingApartmentsTable.StatusColumn.SignedLease + "']";
 
-            // Создаём объект WebDriverWait с таймаутом
             WebDriverWait wait = new WebDriverWait(Browser._Driver, TimeSpan.FromSeconds(10));
 
-            // Ждём, пока элемент станет доступным, и выполняем клик
             var element = wait.Until(driver => driver.FindElement(By.XPath(xpath)));
             element.Click();
         }

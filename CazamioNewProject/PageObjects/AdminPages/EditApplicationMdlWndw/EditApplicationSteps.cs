@@ -31,7 +31,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw
             InputGeneral.InputFunctionWithClear(RentalTermsFieldInput, application.RentalTerms.TwelveMonths);
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();
-            InputGeneral.InputFunctionWithClear(MonthlyRentsPrePaymentFieldInput, application.MonthlyRentsPrePayment.TwoMonth);
+            InputGeneral.InputFunctionWithClear(MonthlyRentsPrePaymentFieldInput, application.MonthlyRentsPrePayment.TwoMonths);
             Button.Click(ReferralAgentCheckTheBox);
             KeyBoardActions.ClickTab();
             WaitUntil.WaitSomeInterval(100);
@@ -115,7 +115,58 @@ namespace CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw
 
             return (this,
                 mainApplicantNewlyCreatedPartEmailOld, occupantPartEmailOld, guarantorPartEmailOld);
+        }
 
+        [AllureStep("EditFirstApplicationOneOneOneAEastStPerestrian")]
+        public (EditApplicationMdlWndw Window,
+            string MainApplicantNewlyCreatedPartEmailOld, string OccupantPartEmailOld, string GuarantorPartEmailOld)
+        EditFirstApplicationOneOneOneAEastStPerestrian()
+        {
+            WaitUntil.CustomElementIsInVisible(LoaderHidden);
+            WaitUntil.WaitSomeInterval(2000);
+            Pages.ApplicationDetail
+                .ClickEditApplicationBtn();
+            VerifyEditApplicationTitle();
+            Button.Click(MoveInDateFieldButton);
+            Pages.DatePicker
+                .ClickButtonDropDownYearMonth()
+                .SelectCurrentYear();
+            Pages.DatePicker
+                .SelectNextMonth();
+            Pages.DatePicker
+                .SelectFisrtDayInNextMonth();
+            InputGeneral.InputFunctionWithClear(RentalTermsFieldInput, application.RentalTerms.OneYear);
+            KeyBoardActions.ClickArrowDown();
+            KeyBoardActions.ClickEnterButton();
+            InputGeneral.InputFunctionWithClear(MonthlyRentsPrePaymentFieldInput, application.MonthlyRentsPrePayment.ThreeMonths);
+            Button.Click(ReferralAgentCheckTheBox);
+            KeyBoardActions.ClickTab();
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(ReferralDetailsFieldInput, application.ReferralDetails.ShortTextDeanStreet);
+            Button.Click(PlusAddRequestedWorkBtn);
+            WaitUntil.WaitSomeInterval(100);
+            InputGeneral.InputFunctionWithClear(RequestedWorkFieldInput, application.RequestedWork.ShortTextDeanStreet);
+            Button.Click(AssignedAgentBtn);
+            Button.Click(SetAgentAgentusBrokerusItem());
+
+            string mainApplicantNewlyCreatedPartEmailOld = Pages.EditApplicationMdlWndw.GetRandomEmailBeforeDogFromEmailAddressMainApplicant();
+            InputGeneral.InputFunctionWithClear(EmailAddressMainApplicantFieldInput, tenantCreatorMySpace.CreatedWithoutCreditReport.Email);
+            string occupantPartEmailOld = Pages.EditApplicationMdlWndw.GetRandomEmailBeforeDogFromEmailAddressOccupant();
+            string guarantorPartEmailOld = Pages.EditApplicationMdlWndw.GetRandomEmailBeforeDogFromEmailAddressGuarantor();
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(CrossBtnFirstForDeleting);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(CrossBtnFirstForDeleting);
+            WaitUntil.WaitSomeInterval(100);
+            Button.Click(EditBtn);
+            VerifyEditApplicationTitle();
+            VerifySureYouWantToEditThisApplicationSubTitle();
+            Button.Click(EditBtnForConfirmation);
+            Pages.ToasterMessagesLandlord
+                .VerifyMessageApplicationEditSuccessful();
+
+            return (this,
+                mainApplicantNewlyCreatedPartEmailOld, occupantPartEmailOld, guarantorPartEmailOld);
         }
     }
 }

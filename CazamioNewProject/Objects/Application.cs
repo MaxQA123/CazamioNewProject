@@ -89,7 +89,8 @@ namespace CazamioNewProject.Objects
         public class MonthlyRentsPrePaymentInfo
         {
             public string OneMonth { get; set; }
-            public string TwoMonth { get; set; }
+            public string TwoMonths { get; set; }
+            public string ThreeMonths { get; set; }
         }
 
         public class RentalTermsInfo
@@ -97,6 +98,7 @@ namespace CazamioNewProject.Objects
             public string TwentyFourMonths { get; set; }
             public string TwelveMonths { get; set; }
             public string NineMonths { get; set; }
+            public string OneYear { get; set; }
             public string TwoYears { get; set; }
         }
 
@@ -217,7 +219,8 @@ namespace CazamioNewProject.Objects
             return new MonthlyRentsPrePaymentInfo
             {
                 OneMonth = "1",
-                TwoMonth = "2",
+                TwoMonths = "2",
+                ThreeMonths = "3",
             };
         }
 
@@ -228,6 +231,7 @@ namespace CazamioNewProject.Objects
                 TwentyFourMonths = "24",
                 TwelveMonths = "12",
                 NineMonths = "9",
+                OneYear = "1",
                 TwoYears = "2",
             };
         }

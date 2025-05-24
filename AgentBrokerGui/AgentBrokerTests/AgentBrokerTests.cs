@@ -15,7 +15,7 @@ namespace AgentBrokerGui
 
     public class TestsBaseGui : AgentBrokerBase
     {
-        //Amount order 7 next must be 8
+        //Amount order 8 next must be 9
         [Test]
         [Order(1)]
         [AllureTag("Regression")]
@@ -387,10 +387,9 @@ namespace AgentBrokerGui
 
             #endregion
 
-            #region Preconditions API
+            #region Preconditions API create apartment
 
             var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
-
             LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
             var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentOffMarketStatus();
             CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseMarketplaceAdmin.AuthData.Token, requestBodyApartment);
@@ -577,6 +576,188 @@ namespace AgentBrokerGui
             WaitUntil.WaitSomeInterval(1000);
 
             #endregion
+        }
+
+        [Test]
+        [Order(9)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(1)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Agent-Broker")]
+        [AllureSubSuite("EditFirstApplicationOneTwoFiveSixSevenDeanStreet")]
+
+        public void EditFirstApplicationOneTwoFiveSixSevenDeanStreet()
+        {
+            #region SettingsForBuilding
+
+            //111A East 51st Street Pedestrian Crossing
+
+            #endregion
+
+            #region Test Data
+
+            MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
+            Building building = Building.Generate();
+
+            #endregion
+
+            #region Preconditions API LogIn as MarketplaceAdmin
+
+            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
+            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+
+            #endregion
+
+            #region Preconditions API create apartment
+
+            var requestBodyApartment = CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.RequestBodyCreateApartmentOffMarketStatus();
+            CazamioNewProject.CreateApartmentMandatoryDataApi.ApartmentCreation.CreateApartmentMandatoryData(responseMarketplaceAdmin.AuthData.Token, requestBodyApartment);
+
+            #endregion
+
+            #region Preconditions API create application
+
+            var requestBodyapplication = CazamioNewProject.CreateApplicationApi.ApplicationCreation.RequestBodyCreateFirstAppForOneOneOneAEastStPerestrian();
+            CazamioNewProject.CreateApplicationApi.ApplicationCreation.CreateFirstAppForOneOneOneAEastStPerestrian(responseMarketplaceAdmin.AuthData.Token, requestBodyapplication);
+
+            #endregion
+
+            #region Preconditions API Add applicants to application
+
+            var requestBodyAddApplicants = CazamioNewProject.AddApplicantsApi.AddApplicants.RequestBodyAddOccupantAppForOneOneOneAEastStPerestrian();
+            CazamioNewProject.AddApplicantsApi.AddApplicants.AddOccupantAppForOneOneOneAEastStPerestrian(responseMarketplaceAdmin.AuthData.Token, requestBodyAddApplicants);
+
+            #endregion
+
+            //#region Preconditions GUI
+
+            //Pages.LogInLandlord
+            //    .LogInAsAgentBrokerMySpace();
+            //Pages.SidebarLandlord
+            //    .ClickButtonBuildings();
+            //Pages.ListOfBuildings
+            //    .SearchOneOneOneAEastStPerestrian()
+            //    .SelectOneOneOneAEastStPerestrian();
+            //Pages.BuildingView
+            //    .VerifyTitleBuildingViewPage();
+
+            //string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
+
+            //Pages.BuildingView
+            //    .VerifyBuildingAddress(getAddressBuildingViewActual, building.East51stStreetPedestrianCrossing.NumberNameAddressStaticForSearch)
+            //    .ClickTabApartments();
+
+            //string getSubjectEmailExpected = Pages.ApartmentView.GetSubjectWithoutAgentDeanStreet();
+
+            //KeyBoardActions.ScrollToDown();
+            //Pages.BuildingApartmentsTbl
+            //    .ClickRowByOffMarket();
+            //Pages.ApartmentView
+            //    .VerifyTitleApartmentViewPage();
+            //Pages.ApartmentView
+            //    .ClickTabApplications();
+            //KeyBoardActions.ScrollToDown();
+
+            //string applicationIdFromAppLandlord = Pages.ApartmentApplicationsTbl.GetApplicationIdFromFirstRow();
+
+            //Pages.ApartmentApplicationsTbl
+            //    .ClickFirstRow();
+            //Pages.ApplicationDetail
+            //    .VerifyTitleApplicationDetailPage();
+
+            //#endregion
+
+            //#region Test
+
+            //var (window, mainApplicantNewlyCreatedPartEmailOld, occupantPartEmailOld, guarantorPartEmailOld) =
+            //Pages.EditApplicationMdlWndw.EditFirstApplicationOneTwoFiveSixSevenDeanStreet();
+            ////Main applicant newly created who has been deleted from the application
+            //Pages.JScriptExecutor
+            //   .OpenNewTab();
+            //Pages.EmailHelper
+            //   .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, mainApplicantNewlyCreatedPartEmailOld);
+
+            //string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+
+            //Pages.EmailPutsBox
+            //    .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
+            //Pages.EmailPutsBox
+            //    .ClickButtonHtml()
+            //    .ClickButtonStartYourApplicationNowForTenant();
+            //Pages.ToasterMessagesTenants
+            //    .VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication();
+            //Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
+            //    .QuicklyPassTenantCreatorMySpace();
+            //Pages.MyAccount
+            //    .VerifyYouHaveNoApplicationsYetRecord();
+            //Pages.HeaderTenants
+            //    .LogOut();
+            ////Main applicant already created who has been added to the application
+            //Pages.LogInTenant
+            //    .LogInAsCreatorWithoutCreditReportMySpace();
+            //Pages.HeaderTenants
+            //    .ClickButtonMyApplications();
+
+            //string applicationIdFromAppTenant = Pages.MyAccount.GetApplicationId();
+
+            //Pages.MyAccount
+            //    .VerifyApplicationIdNumberTenantCreator(applicationIdFromAppLandlord, applicationIdFromAppTenant);
+            //Pages.HeaderTenants
+            //    .LogOut();
+            ////Occupant newly created who has been deleted from the application
+            //Pages.JScriptExecutor
+            //   .OpenNewTab();
+            //Pages.EmailHelper
+            //   .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, occupantPartEmailOld);
+
+            //string getSubjectFromEmailOccupant = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+
+            //Pages.EmailPutsBox
+            //    .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmailOccupant);
+            //Pages.EmailPutsBox
+            //    .ClickButtonHtml();
+            //Pages.SwitchingBetweenBrowserTabsActions
+            //    .SecondTabCloseThreeTimes();
+            //Pages.EmailPutsBox
+            //    .ClickButtonStartYourApplicationNowForTenant();
+            //Pages.ToasterMessagesTenants
+            //    .VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication();
+            //Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
+            //    .QuicklyPassTenantCreatorMySpace();
+            //Pages.MyAccount
+            //    .VerifyYouHaveNoApplicationsYetRecord();
+            //Pages.HeaderTenants
+            //    .LogOut();
+            ////Guarantor newly created who has been deleted from the application
+            //Pages.JScriptExecutor
+            //   .OpenNewTab();
+            //Pages.EmailHelper
+            //   .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, guarantorPartEmailOld);
+
+            //string getSubjectFromEmailGuarantor = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+
+            //Pages.EmailPutsBox
+            //    .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmailGuarantor);
+            //Pages.EmailPutsBox
+            //    .ClickButtonHtml();
+            //Pages.SwitchingBetweenBrowserTabsActions
+            //    .SecondTabCloseThreeTimes();
+            //Pages.EmailPutsBox
+            //    .ClickButtonStartYourApplicationNowForTenant();
+            //Pages.ToasterMessagesTenants
+            //    .VerifyMessageAccountWasSuccessfullyActivatedWarningNoAccessToViewThisApplication();
+            //Pages.PleaseTellUsYourNameChangeYourPasswordMdlWndw
+            //    .QuicklyPassTenantCreatorMySpace();
+            //Pages.MyAccount
+            //    .VerifyYouHaveNoApplicationsYetRecord();
+            //Pages.HeaderTenants
+            //    .LogOut();
+
+            //WaitUntil.WaitSomeInterval(1000);
+
+            //#endregion
         }
     }
 }

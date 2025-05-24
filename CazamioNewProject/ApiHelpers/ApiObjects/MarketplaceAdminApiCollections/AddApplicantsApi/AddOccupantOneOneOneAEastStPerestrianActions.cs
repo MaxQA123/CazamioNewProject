@@ -5,40 +5,39 @@ using Newtonsoft.Json;
 using RestSharp;
 using System;
 
-namespace CazamioNewProject.CreateApplicationApi
+namespace CazamioNewProject.AddApplicantsApi
 {
-    public partial class ApplicationCreation
+    public partial class AddApplicants
     {
-        public static RequestCreateAppWithBasicData RequestBodyCreateFirstAppForOneTwoFiveSixSevenDeanStreet()
+        public static RequestAddApplicants RequestBodyAddOccupantAppForOneOneOneAEastStPerestrian()
         {
-            TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
-            //12567 Dean Street
-            //Get ApartmentId from BD
-            var apartmentIdResult = ApartmentsDbRequests.ApartmentsDbTable.GetLastApartmentIdForDeanStreet();
-            long apartmentId = apartmentIdResult.Id;
+            TenantOccupantMySpace tenantOccupantMySpace = TenantOccupantMySpace.Generate();
+            //111A East 51st Street Pedestrian Crossing
+            //Get ApartmentApplicationId from BD
+            var apartmentApplicationIdResult = ApartmentApplicationsDbRequests.ApartmentApplicationsDbTable.GetLastApartmentApplicationIdForOneOneOneAEastStPerestrian();
+            long apartmentApplicationId = apartmentApplicationIdResult.Id;
 
-            var payload = new RequestCreateAppWithBasicData
+            var payload = new RequestAddApplicants
             {
-                ApartmentId = apartmentId,
-                LeasePrice = 850,
-                ReferralDetails = "",
-                MoveInDate = DateTime.Now.AddDays(1).ToString("yyyy-MM-dd"),
-                OfferPrice = 850,
-                RentPrePayment = 850,
-                RentalTerms = "12 months",
-                RequestedWork = null,
-                SecurityDeposit = 850, //
-                TenantEmail = tenantCreatorMySpace.Emails.RandomMainApplicantEmail,
-                GeneratedLinkId = Guid.NewGuid()
+                ApplicationId = apartmentApplicationId, 
+                Applicants = new Applicant[]
+                {
+            new Applicant
+            {
+                Suggestions = Array.Empty<object>(), 
+                Email = tenantOccupantMySpace.CreatedWithCreditReport.Email, 
+                IsGuarantor = false 
+            },
+                }
             };
 
             return payload;
         }
 
-        public static RestResponse CreateFirstAppForOneTwoFiveSixSevenDeanStreet(string token, RequestCreateAppWithBasicData applicationRequestBody)
+        public static RestResponse AddOccupantAppForOneOneOneAEastStPerestrian(string token, RequestAddApplicants applicationRequestBody)
         {
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
-            var restRequest = new RestRequest("api/apartmentApplications/prepareApplication?isBarebones=false", Method.Post);
+            var restRequest = new RestRequest("api/apartmentApplications/addApplicants", Method.Post);
             restRequest.AddHeaders(Headers.HeadersMarketplaceAdmin(token));
 
             Console.WriteLine("Request Body:");

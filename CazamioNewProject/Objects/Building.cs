@@ -120,6 +120,7 @@ namespace CazamioNewProject.Objects
         {
             public string NumberRandomNameAddressStatic { get; set; }
             public string NumberNameAddressStatic { get; set; }
+            public string NumberNameAddressStaticForDb { get; set; }
             public string NumberNameAddressRandom { get; set; }
             public string NumberNameAddressStaticForSearch { get; set; }
             public string NumberNameAddress { get; set; }
@@ -330,6 +331,7 @@ namespace CazamioNewProject.Objects
             {
                 NumberRandomNameAddressStatic = GenerateRandomData.RandomNumberWithoutZero(1) + " " + "East 51st Street Pedestrian Crossing",
                 NumberNameAddressStatic = "111A East 51st Street Pedestrian Crossing",
+                NumberNameAddressStaticForDb = "111A East 51st Street Pedestrian Crossing",
                 NumberNameAddressStaticForSearch = "111A East 51st Street Pedestrian Crossing",
                 NumberNameAddressRandom = GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomAlphabetUpperCase(1) + " " + "East 51st Street Pedestrian Crossing",
                 NumberNameAddress = "111A East 51st Street Pedestrian Crossing",

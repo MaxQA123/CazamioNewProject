@@ -68,7 +68,7 @@ namespace BrokerGuiTests
             Pages.LogInLandlord
                 .VerifyTitle();
 
-            WaitUntil.WaitSomeInterval(2000);
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
         }
@@ -224,6 +224,8 @@ namespace BrokerGuiTests
             Pages.ListOfOwners
                 .VerifyEmailForNewOwner(getOwnerEmailFromModalWndw, getLastEmailFromPage);
 
+            WaitUntil.WaitSomeInterval(1000);
+
             #endregion
 
             #region Postconditions
@@ -369,6 +371,8 @@ namespace BrokerGuiTests
             Pages.ToasterMessagesLandlord
                 .VerifyMessageApartmentsWereSavedSuccessfully();
 
+            WaitUntil.WaitSomeInterval(1000);
+
             #endregion
         }
 
@@ -487,6 +491,8 @@ namespace BrokerGuiTests
 
             Pages.BuildingView
                 .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
+
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
 
@@ -925,7 +931,7 @@ namespace BrokerGuiTests
             Pages.MyAccount
                 .VerifyApplicationIdNumberTenantCreator(applicationIdFromAppLandlord, applicationIdFromAppTenant);
 
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
         }
@@ -956,6 +962,8 @@ namespace BrokerGuiTests
             Pages.Templates
                 .VerifyTitleTemplatesPage()
                 .CreateNewTemplateWithFullSettingsUserBroker();
+
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
 

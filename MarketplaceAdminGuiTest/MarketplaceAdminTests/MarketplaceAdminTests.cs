@@ -577,7 +577,7 @@ namespace MarketplaceAdminGuiTest
             Pages.BuildingView
                 .VerifyBuildingAddress(getAddressNewBuildingActual, getAddressBuildingView);
 
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
 
@@ -609,7 +609,7 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
 
-            #region Preconditions LogIn as Marketplace Admin
+            #region Preconditions API LogIn as Marketplace Admin
 
             var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
             LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);

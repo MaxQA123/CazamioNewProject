@@ -157,7 +157,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             //WaitUntil.WaitSomeInterval(100);
             //InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, apartment.SettingsConcessions.AdditionalInfoLong);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputMonthlyRentsPrePayment, application.MonthlyRentsPrePayment.TwoMonth);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthlyRentsPrePayment, application.MonthlyRentsPrePayment.TwoMonths);
             Button.Click(FieldButtonMoveInDate);
             Pages.DatePicker
                 .ClickButtonDropDownYearMonth()
@@ -245,7 +245,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputAdditionalInfo, application.AdditionalInfo.ShortTextGatesAvenue);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputMonthlyRentsPrePayment, application.MonthlyRentsPrePayment.TwoMonth);
+            InputGeneral.InputFunctionWithClear(FieldInputMonthlyRentsPrePayment, application.MonthlyRentsPrePayment.TwoMonths);
             Button.Click(FieldButtonMoveInDate);
             Pages.DatePicker
                 .ClickButtonDropDownYearMonth()

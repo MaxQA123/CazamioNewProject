@@ -9,33 +9,34 @@ namespace CazamioNewProject.CreateApplicationApi
 {
     public partial class ApplicationCreation
     {
-        public static RequestCreateAppWithBasicData RequestBodyCreateFirstAppForOneTwoFiveSixSevenDeanStreet()
+        public static RequestCreateAppWithBasicData RequestBodyCreateFirstAppForOneOneOneAEastStPerestrian()
         {
             TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
-            //12567 Dean Street
+            Application application = Application.Generate();
+            //111A East 51st Street Pedestrian Crossing
             //Get ApartmentId from BD
-            var apartmentIdResult = ApartmentsDbRequests.ApartmentsDbTable.GetLastApartmentIdForDeanStreet();
+            var apartmentIdResult = ApartmentsDbRequests.ApartmentsDbTable.GetLastApartmentIdForOneOneOneAEastStPerestrian();
             long apartmentId = apartmentIdResult.Id;
 
             var payload = new RequestCreateAppWithBasicData
             {
                 ApartmentId = apartmentId,
                 LeasePrice = 850,
-                ReferralDetails = "",
+                ReferralDetails = application.ReferralDetails.ShortTextEastStreet,
                 MoveInDate = DateTime.Now.AddDays(1).ToString("yyyy-MM-dd"),
                 OfferPrice = 850,
                 RentPrePayment = 850,
                 RentalTerms = "12 months",
-                RequestedWork = null,
+                RequestedWork = application.RequestedWork.ShortTextEastStreet,
                 SecurityDeposit = 850, //
-                TenantEmail = tenantCreatorMySpace.Emails.RandomMainApplicantEmail,
+                TenantEmail = tenantCreatorMySpace.CreatedWithCreditReport.Email,
                 GeneratedLinkId = Guid.NewGuid()
             };
 
             return payload;
         }
 
-        public static RestResponse CreateFirstAppForOneTwoFiveSixSevenDeanStreet(string token, RequestCreateAppWithBasicData applicationRequestBody)
+        public static RestResponse CreateFirstAppForOneOneOneAEastStPerestrian(string token, RequestCreateAppWithBasicData applicationRequestBody)
         {
             var restClient = new RestClient(BaseStartPointsApi.API_HOST_WEBSITE_LANDLORD);
             var restRequest = new RestRequest("api/apartmentApplications/prepareApplication?isBarebones=false", Method.Post);
