@@ -13,7 +13,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdl
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputLastName, marketplaceAdmin.MarkAdmName.LastNameRandom);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputEmail, marketplaceAdmin.MarkAdmEmail.FullEmail);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, marketplaceAdmin.MarkAdmEmail.FullEmailRandom);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputMarketplaceSubdomain, marketplaceAdmin.SubdomainMarketplace.MySpace);
 

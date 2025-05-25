@@ -32,7 +32,7 @@ namespace CazamioNewProject.Objects
 
         public class MarkAdmEmailInfo
         {
-            public string FullEmail { get; set; }
+            public string FullEmailRandom { get; set; }
         }
 
         public class SubdomainMarketplaceInfo
@@ -67,7 +67,7 @@ namespace CazamioNewProject.Objects
         {
             return new MarkAdmEmailInfo
             {
-                FullEmail = GenerateRandomData.RandomEmail(5) + GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomEmail(2) + EmailNameDomen.PUTS_BOX,
+                FullEmailRandom = GenerateRandomData.RandomEmail(5) + GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomEmail(2) + EmailNameDomen.PUTS_BOX,
             };
         }
 

@@ -6,7 +6,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
 {
     public partial class LogInLandlord
     {
-        SuperAdmin superAdmin = new SuperAdmin().Generate();
+        SuperAdmin superAdmin = SuperAdmin.Generate();
         MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
         Broker broker = Broker.Generate();
         Agent agent = Agent.Generate();

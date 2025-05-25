@@ -146,6 +146,7 @@ namespace CazamioNewProject.PageObjects
 
         #endregion
 
+        public static BasicDataForProject BasicDataForProject => GetPage<BasicDataForProject>();
         public static EmailPutsBox EmailPutsBox => GetPage<EmailPutsBox>();
         public static EmailHelper EmailHelper => GetPage<EmailHelper>();
         public static JScriptExecutor JScriptExecutor => GetPage<JScriptExecutor>();

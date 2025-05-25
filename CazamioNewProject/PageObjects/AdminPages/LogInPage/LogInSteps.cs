@@ -11,7 +11,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         [AllureStep("LogInAsSuperAdmin")]
         public LogInLandlord LogInAsSuperAdmin()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputEmail, superAdmin.EmailAddressSuperAdmin);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, superAdmin.EmailAddressStatic.General);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
             Button.Click(IconShow);
