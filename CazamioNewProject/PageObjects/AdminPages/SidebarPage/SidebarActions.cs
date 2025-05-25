@@ -10,6 +10,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 {
     public partial class SidebarLandlord
     {
+        BasicDataForProject basicDataForProject = BasicDataForProject.Generate();
         SuperAdmin superAdmin = SuperAdmin.Generate();
         MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
         Broker broker = Broker.Generate();

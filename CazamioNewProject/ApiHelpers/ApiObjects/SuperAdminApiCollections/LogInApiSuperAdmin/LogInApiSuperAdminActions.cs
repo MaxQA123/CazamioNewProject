@@ -16,7 +16,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.LogIn
             BasicDataForProject basicDataForProject = BasicDataForProject.Generate();
 
             var payload = new RequestLogInSuperAdmin();
-            payload.Email = superAdmin.EmailAddressStatic.General;
+            payload.Email = superAdmin.CreatedSuperAdmin.Email;
             payload.Password = basicDataForProject.Passwords.BasicStaticFirst;
             payload.DeviceFingerprint = superAdmin.ApiData.DeviceFingerprint;
             payload.RememberMe = superAdmin.ApiData.True;

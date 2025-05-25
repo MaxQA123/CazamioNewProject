@@ -15,7 +15,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdl
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputEmail, marketplaceAdmin.MarkAdmEmail.FullEmailRandom);
             WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputMarketplaceSubdomain, marketplaceAdmin.SubdomainMarketplace.MySpace);
+            InputGeneral.InputFunctionWithClear(FieldInputMarketplaceSubdomain, basicDataForProject.SubdomainMarketplace.MySpace);
 
             return this;
         }

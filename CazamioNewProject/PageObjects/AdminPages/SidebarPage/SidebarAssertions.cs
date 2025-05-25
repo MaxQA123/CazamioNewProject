@@ -11,8 +11,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         public SidebarLandlord VerifySuperAdminUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
         {
             WaitUntil.WaitSomeInterval(500);
-            string getUserNameExpected = superAdmin.FullNameSuperAdmin;
-            string getUserNameRoleExpected = TestDataLandlord.USER_NAME_ROLE_SUPER_ADMIN;
+            string getUserNameExpected = superAdmin.CreatedSuperAdmin.FullName;
+            string getUserNameRoleExpected = basicDataForProject.UserRoles.SuperAdmin;
 
             Assert.Multiple(() =>
             {

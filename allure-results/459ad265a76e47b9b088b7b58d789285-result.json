@@ -1,0 +1,284 @@
+{
+  "uuid": "73dc406c-3524-4206-95a4-1345f2368108-tr-0-1002",
+  "historyId": "SuperAdminGui.TestsBaseGui.CreateMarketplaceAdmin",
+  "fullName": "SuperAdminGui.TestsBaseGui.CreateMarketplaceAdmin",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "SuperAdminGui"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateMarketplaceAdmin"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Super Admin"
+    },
+    {
+      "name": "subSuite",
+      "value": "Create Marketplace Admin"
+    }
+  ],
+  "links": [],
+  "name": "CreateMarketplaceAdmin",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <span _ngcontent-ng-c1658714832=\"\" class=\"cazamio-button-txt\">...</span> is not clickable at point (959, 651). Other element would receive the click: <cazamio-button _ngcontent-ng-c295092833=\"\" text=\"Create\" class=\"middle primary-action absolute-loader\" _nghost-ng-c1658714832=\"\">...</cazamio-button>\n  (Session info: chrome=136.0.7103.114)",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdlWndw.CreateANewMarketplaceAdminMdlWindow.__a$_around_ClickButtonCreate_100663908_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\CreateANewMarketplaceAdminMdlWndw\\CreateANewMarketplaceAdminActions.cs:line 17\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdlWndw.CreateANewMarketplaceAdminMdlWindow.__a$_around_ClickButtonCreate_100663908_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdlWndw.CreateANewMarketplaceAdminMdlWindow.__a$_around_ClickButtonCreate_100663908_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdlWndw.CreateANewMarketplaceAdminMdlWindow.ClickButtonCreate()\r\n   at SuperAdminGui.TestsBaseGui.CreateMarketplaceAdmin() in C:\\Automation\\CazamioNewProject\\SuperAdminGui\\SuperAdminTests\\SuperAdminTests.cs:line 80"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateMarketplaceAdmin",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <span _ngcontent-ng-c1658714832=\"\" class=\"cazamio-button-txt\">...</span> is not clickable at point (959, 651). Other element would receive the click: <cazamio-button _ngcontent-ng-c295092833=\"\" text=\"Create\" class=\"middle primary-action absolute-loader\" _nghost-ng-c1658714832=\"\">...</cazamio-button>\n  (Session info: chrome=136.0.7103.114)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdlWndw.CreateANewMarketplaceAdminMdlWindow.__a$_around_ClickButtonCreate_100663908_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\CreateANewMarketplaceAdminMdlWndw\\CreateANewMarketplaceAdminActions.cs:line 17\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdlWndw.CreateANewMarketplaceAdminMdlWindow.__a$_around_ClickButtonCreate_100663908_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdlWndw.CreateANewMarketplaceAdminMdlWindow.__a$_around_ClickButtonCreate_100663908_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdlWndw.CreateANewMarketplaceAdminMdlWindow.ClickButtonCreate()\r\n   at SuperAdminGui.TestsBaseGui.CreateMarketplaceAdmin() in C:\\Automation\\CazamioNewProject\\SuperAdminGui\\SuperAdminTests\\SuperAdminTests.cs:line 80"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsSuperAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748180961511,
+              "stop": 1748180962930
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748180962940,
+              "stop": 1748180963025
+            },
+            {
+              "name": "VerifySuperAdminUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Super User"
+                },
+                {
+                  "name": "String",
+                  "value": "Super Admin"
+                }
+              ],
+              "start": 1748180963033,
+              "stop": 1748180963559
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748180958679,
+          "stop": 1748180963559
+        },
+        {
+          "name": "ClickButtonMarketplaceAdmins",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748180963570,
+          "stop": 1748180966322
+        },
+        {
+          "name": "VerifyTitleListOfMarketplaceAdmins",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748180966325,
+          "stop": 1748180966398
+        },
+        {
+          "name": "ClickButtonCreateMarketplaceAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748180966399,
+          "stop": 1748180967072
+        },
+        {
+          "name": "VerifyTitleCreateANewMarketplaceadmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748180967075,
+          "stop": 1748180967137
+        },
+        {
+          "name": "FillInMandatoryFields",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748180967138,
+          "stop": 1748180969824
+        },
+        {
+          "name": "GetEmailFromFieldInputEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748180969830,
+          "stop": 1748180970214
+        },
+        {
+          "name": "CopyEmailBeforeDogFromFieldInputEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748180970218,
+          "stop": 1748180971002
+        },
+        {
+          "name": "ClickButtonCreate",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "element click intercepted: Element <span _ngcontent-ng-c1658714832=\"\" class=\"cazamio-button-txt\">...</span> is not clickable at point (959, 651). Other element would receive the click: <cazamio-button _ngcontent-ng-c295092833=\"\" text=\"Create\" class=\"middle primary-action absolute-loader\" _nghost-ng-c1658714832=\"\">...</cazamio-button>\n  (Session info: chrome=136.0.7103.114)",
+            "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdlWndw.CreateANewMarketplaceAdminMdlWindow.__a$_around_ClickButtonCreate_100663908_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\CreateANewMarketplaceAdminMdlWndw\\CreateANewMarketplaceAdminActions.cs:line 17\r\n   at CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdlWndw.CreateANewMarketplaceAdminMdlWindow.__a$_around_ClickButtonCreate_100663908_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748180971006,
+          "stop": 1748180972860
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "a60982fe6a9445698a1023f7ce8083b4-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1748180950931,
+      "stop": 1748180975826
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1748180950921,
+  "stop": 1748180975836
+}

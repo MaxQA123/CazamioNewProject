@@ -7,7 +7,6 @@ namespace CazamioNewProject.Objects
     {
         public MarkAdmNameInfo MarkAdmName { get; set; }
         public MarkAdmEmailInfo MarkAdmEmail { get; set; }
-        public SubdomainMarketplaceInfo SubdomainMarketplace { get; set; }
         public CreatedMarkAdmMySpaceInfo CreatedMarkAdmMySpace { get; set; }
         public BasicDataApiInfo BasicDataApi { get; set; }
 
@@ -17,7 +16,6 @@ namespace CazamioNewProject.Objects
             {
                 MarkAdmName = CreateMarkAdmNameInfo(),
                 MarkAdmEmail = CreateMarkAdmEmailInfo(),
-                SubdomainMarketplace = CreateSubdomainMarketplaceInfo(),
                 CreatedMarkAdmMySpace = CreateCreatedMarkAdmMySpaceInfo(),
                 BasicDataApi = CreateBasicDataApiInfo(),
             };
@@ -33,11 +31,6 @@ namespace CazamioNewProject.Objects
         public class MarkAdmEmailInfo
         {
             public string FullEmailRandom { get; set; }
-        }
-
-        public class SubdomainMarketplaceInfo
-        {
-            public string MySpace { get; set; }
         }
 
         public class CreatedMarkAdmMySpaceInfo
@@ -68,14 +61,6 @@ namespace CazamioNewProject.Objects
             return new MarkAdmEmailInfo
             {
                 FullEmailRandom = GenerateRandomData.RandomEmail(5) + GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomEmail(2) + EmailNameDomen.PUTS_BOX,
-            };
-        }
-
-        private static SubdomainMarketplaceInfo CreateSubdomainMarketplaceInfo()
-        {
-            return new SubdomainMarketplaceInfo
-            {
-                MySpace = "testlandlord15-demo",
             };
         }
 

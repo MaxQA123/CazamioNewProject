@@ -17,7 +17,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.Creat
             payload.LastName = marketplaceAdmin.MarkAdmName.LastNameRandom;
             payload.Email = marketplaceAdmin.MarkAdmEmail.FullEmailRandom;
             payload.Password = basicDataForProject.Passwords.BasicStaticFirst;
-            payload.SubDomain = marketplaceAdmin.SubdomainMarketplace.MySpace;
+            payload.SubDomain = basicDataForProject.SubdomainMarketplace.MySpace;
 
             return payload;
         }
