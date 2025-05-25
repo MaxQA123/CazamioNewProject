@@ -16,8 +16,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage
             return this;
         }
 
-        [AllureStep("VerifyBuildingNameAddApartmentsPage")]
-        public AddApartments VerifyBuildingNameAddApartmentsPage(string getBuildingNameFromBuildingView, string getBuildingNameFromAddApartments)
+        [AllureStep("VerifyBuildingName")]
+        public AddApartments VerifyBuildingName(string getBuildingNameFromBuildingView, string getBuildingNameFromAddApartments)
         {
             WaitUntil.WaitSomeInterval(3000);
             Assert.AreEqual(getBuildingNameFromBuildingView, getBuildingNameFromAddApartments);

@@ -5,14 +5,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateNewAgentMdlWndw
 {
     public partial class CreateNewAgentMdlWndw
     {
-        [AllureStep("EnterFirstLastNameEmailPhnNmbrCell")]
-        public CreateNewAgentMdlWndw EnterFirstLastNameEmailPhnNmbrCell()
+        [AllureStep("EnterFullData")]
+        public CreateNewAgentMdlWndw EnterFullData()
         {
             InputGeneral.InputFunctionWithClear(FieldInputFirstName, agent.AgentName.FirstNameRandom);
             InputGeneral.InputFunctionWithClear(FieldInputLastName, agent.AgentName.LastNameRandom);
             InputGeneral.InputFunctionWithClear(FieldInputEmail, agent.AgentEmail.FullEmailRandom);
             InputGeneral.InputFunctionWithClear(FieldInputPhoneNumber, agent.PhoneNumber.BasicFirst);
-            InputGeneral.InputFunctionWithClear(FieldInputCell, agent.PhoneNumber.CellFirst);
+            InputGeneral.InputFunctionWithClear(FieldInputBrokerCommission, agent.CommissionPercentage.ForBrokerRandom);
+            InputGeneral.InputFunctionWithClear(FieldInputAgentCommission, agent.CommissionPercentage.ForAgentRandom);
 
             return this;
         }

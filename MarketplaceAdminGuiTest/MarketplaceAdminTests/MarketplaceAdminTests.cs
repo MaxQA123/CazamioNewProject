@@ -194,8 +194,7 @@ namespace MarketplaceAdminGuiTest
             Pages.ListOfAgents
                 .ClickButtonCreateAgent();
             Pages.CreateNewAgentMdlWndw
-                .EnterFirstLastNameEmailPhnNmbrCell()
-                .EnterBrokerAgentCommission();
+                .EnterFullData();
 
             string fullEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailFromFieldEmail();
             string partEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailBeforeDogFromModalWindowCreateNewAgent();
@@ -690,7 +689,7 @@ namespace MarketplaceAdminGuiTest
             string getBuildingNameFromAddApartments = Pages.AddApartments.GetBuildingNameOneWashingtonSquare();
 
             Pages.AddApartments
-                .VerifyBuildingNameAddApartmentsPage(getBuildingNameFromBuildingView, getBuildingNameFromAddApartments)
+                .VerifyBuildingName(getBuildingNameFromBuildingView, getBuildingNameFromAddApartments)
                 .EnterToAllFieldsOneWashingtonSquare();
 
             string getLeasePriceFromAddApartments = Pages.AddApartments.GetLeasePrice();
@@ -817,7 +816,7 @@ namespace MarketplaceAdminGuiTest
             string getBuildingNameFromAddApartments = Pages.AddApartments.GetBuildingNameNineNineNineEightSaintJohnsonPlace();
 
             Pages.AddApartments
-                .VerifyBuildingNameAddApartmentsPage(getBuildingNameFromBuildingView, getBuildingNameFromAddApartments)
+                .VerifyBuildingName(getBuildingNameFromBuildingView, getBuildingNameFromAddApartments)
                 .EnterMandatoryFieldsNineNineNineEightSaintJohnsonPlace()
                 .SelectCurrentDateAvailableFrom()
                 .SelectStatusDepositReceived()

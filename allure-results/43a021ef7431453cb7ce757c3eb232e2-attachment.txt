@@ -1,0 +1,318 @@
+Request Body:
+{
+  "Email": "marketplaceadmin15@putsbox.com",
+  "Password": "Qwerty123!",
+  "DeviceFingerprint": "4f09dee986d77232105bed94285eafe7",
+  "RememberMe": true
+}
+Response Status Code: OK
+Response Headers: HeaderParameter { Name = Date, Value = Sat, 24 May 2025 09:59:09 GMT, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Server, Value = Microsoft-IIS/10.0, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Cache-Control, Value = no-store, no-cache, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Pragma, Value = no-cache, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Set-Cookie, Value = .AspNetCore.Identity.Application=CfDJ8MCFu5agVtlEgUvKbsnWzYjza5yDOrvCQ5lcnjpLYPwjRhZII_6Og9w0f5ic2w7Gm64T7KFSLZNXYpM0OpDPuJslKmYpNH8c4IACH7ncDh7fVrjOsfkyE-oys2e4Wy4YtgpX2MKKUgdhZMbCj8EfwzrN2coZo0zMXruUBRaHrxdsSxT79XHXlgIaOaHZLN3BpahVAGJG5f02U99mynZ0j5_0eX0ZmI3rVZrLRs5HQkWqBnIhCDoYYBoXwTyxIjBtv7BEnHS1kTb3Sbfu6gIwQzuf5Pv6MbaGyy3yjbFd8iWvBYQw4FdV8nI82a1wvEooFDyZgZ-gzpjjpZg9wsrGthJAiR1eC2-tkPnReJZVvIfEFa39gIW1oO0Z5aPgTLh2NZ0zBu9tWVAoOLpw1iHshPsJu-7tI-fVGp6a6GxIS6a16eXZ1P1rtz2clNRzIaI48sYVS4ynmtOxDRs6jJ0UxqHWaqfbFJtbpruu_r2qObX3pfo4BE_ClFSjBgywzH7VXOHLqt0NaCXhlvvH8JcF62sJz1KteyWJdf8SxNBL9VOvf5RC3rm5UACzOfkkxpt9H5dzGcN_62bee9ChEaKV0sk8PTP0vrqdvA1hPEPli3icvPdUdndtDeZ-A5OwxyeE02EP05_XfbSUHMgn9Phxbx1ykb4jo2CsT5bIC1ZFVcoqk6GXLBd6v4HJpxgjEaoytHGmmZDEpTZPnpnrTrgdxUQGvoiB0XOdIuroVS6L1Mm_lYKRmgbhOYbLzg4IT53nbwQYqkbt9Sg8F_NbntzFBiW12GA9kcENKBO6v4hDnnVfN8HkJC_hacNNByCtxQLwFjT4GY7k92YB7fxayBBVkWljMZkv1ypMrwcFZm1fzYzDXTtnYhEpyRkX226ElynVFw; path=/; secure; samesite=lax; httponly, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Set-Cookie, Value = ARRAffinity=a6bca26d75cb3f6eb8480aef2c4becff3739380f22f50a9a616e3f019c59f22a;Path=/;HttpOnly;Secure;Domain=api-cazamio-staging.azurewebsites.net, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Set-Cookie, Value = ARRAffinitySameSite=a6bca26d75cb3f6eb8480aef2c4becff3739380f22f50a9a616e3f019c59f22a;Path=/;HttpOnly;SameSite=None;Secure;Domain=api-cazamio-staging.azurewebsites.net, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Transfer-Encoding, Value = chunked, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Vary, Value = Accept-Encoding, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Strict-Transport-Security, Value = max-age=2592000, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = X-Powered-By, Value = ASP.NET, Type = HttpHeader, Encode = False, ContentType =  }
+Response Content: {"authData":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiJhNGExZmM5NC1iNDBlLTRhZjctOGZjMS00ZWEyMzM0OWEzMzciLCJMYXN0UmVzZXRQYXNzd29yZERhdGUiOiIxMS8xNC8yMDIzIDE6MzQ6MDggUE0iLCJlbWFpbCI6Im1hcmtldHBsYWNlYWRtaW4xNUBwdXRzYm94LmNvbSIsInVuaXF1ZV9uYW1lIjoibWFya2V0cGxhY2VhZG1pbjE1QHB1dHNib3guY29tIiwianRpIjoiOTIwOTc5ZWYtYjZhNy00ODIyLWJmODEtZTA0NTM0NmEyNzY0IiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Ik1hcmsgQWRtIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZ2l2ZW5uYW1lIjoiTWFyayIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3N1cm5hbWUiOiJBZG0iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiQ2F6YW1pby5Dcm9zc0N1dHRpbmcuRW50aXRpZXMuQXBwbGljYXRpb25Vc2VyUm9sZSIsIk1hcmtldHBsYWNlQWRtaW4iXSwiZXhwIjoxNzQ4MDg0MzQ5LCJpc3MiOiJodHRwczovL2FwaS1jYXphbWlvLXN0YWdpbmcuYXp1cmV3ZWJzaXRlcy5uZXQiLCJhdWQiOiJodHRwczovL2FwaS1jYXphbWlvLXN0YWdpbmcuYXp1cmV3ZWJzaXRlcy5uZXQifQ.0qvc6HBO5FGeWlsv9iMxoUuCnhTNIKim8BV0Vd0gdwo","refreshToken":"8TknZQy1v0SG1SGfZWiazQ==","expireDate":"2025-05-27T09:59:09.579Z","user":{"userId":"a4a1fc94-b40e-4af7-8fc1-4ea23349a337","userName":"Mark Adm","userEmail":"marketplaceadmin15@putsbox.com","userRoleId":4,"userPhoto":"","firstName":"Mark","lastName":"Adm","isGenerated":false,"loginLinkPasswordUpdated":true},"wasUserRegistered":false},"marketplaceId":15,"isBanned":false,"logo":"https://cazamiostorage.blob.core.windows.net/staging-marketplace-logo/marketplace_admin_a4a1fc94-b40e-4af7-8fc1-4ea23349a337.jpeg?sv=2025-05-05&se=2027-05-24T09%3A07%3A23Z&sr=b&sp=r&sig=5CD3ub42cc%2FVKoe%2FDxKnECxn9PXMMsL2Znakjd6t%2F0c%3D","brand":"Noyo Properties NYC"}
+Request Body:
+{
+  "apartments": [
+    {
+      "unit": "6756",
+      "leasePrice": 850,
+      "paidMonths": 1,
+      "depositPrice": 850,
+      "brokerFeeRequired": false,
+      "bedroomQuantity": 3,
+      "bathroomQuantity": 2,
+      "squareFeet": 0,
+      "priceDateFrom": "2025-05-24",
+      "priceDateTo": "2025-06-07",
+      "description": "",
+      "internalNotes": "",
+      "availableFrom": "2025-05-24",
+      "apartmentType": "MultiFamily",
+      "status": "Vacant",
+      "staffId": null,
+      "leaseDurations": "12 months",
+      "amenities": [],
+      "includedInMonthlyRentAmenities": [],
+      "images": [],
+      "threeDPhotos": [],
+      "videos": [],
+      "visitingHours": [
+        {
+          "dayOfWeek": "Sunday",
+          "openTime": null,
+          "closeTime": null
+        },
+        {
+          "dayOfWeek": "Monday",
+          "openTime": null,
+          "closeTime": null
+        },
+        {
+          "dayOfWeek": "Tuesday",
+          "openTime": null,
+          "closeTime": null
+        },
+        {
+          "dayOfWeek": "Wednesday",
+          "openTime": null,
+          "closeTime": null
+        },
+        {
+          "dayOfWeek": "Thursday",
+          "openTime": null,
+          "closeTime": null
+        },
+        {
+          "dayOfWeek": "Friday",
+          "openTime": null,
+          "closeTime": null
+        },
+        {
+          "dayOfWeek": "Saturday",
+          "openTime": null,
+          "closeTime": null
+        }
+      ],
+      "requiredDocumentsIds": [
+        1,
+        3,
+        6,
+        10,
+        21,
+        22
+      ],
+      "floor": null,
+      "freeStuff": [],
+      "concessions": [],
+      "holdingDeposit": {
+        "amount": 500,
+        "allowedPaymentMethods": [
+          "CreditCard"
+        ]
+      },
+      "selfTourStatus": false,
+      "locks": {
+        "bluetoothLocks": [],
+        "wifiLocks": [],
+        "pinCodeLocks": [],
+        "noteLocks": [],
+        "CABLocks": [],
+        "existingOccupantLocks": []
+      }
+    }
+  ],
+  "buildingId": 2513
+}
+Response Status Code: OK
+Response Headers: HeaderParameter { Name = Date, Value = Sat, 24 May 2025 09:59:11 GMT, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Server, Value = Microsoft-IIS/10.0, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Set-Cookie, Value = ARRAffinity=a6bca26d75cb3f6eb8480aef2c4becff3739380f22f50a9a616e3f019c59f22a;Path=/;HttpOnly;Secure;Domain=api-cazamio-staging.azurewebsites.net, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Set-Cookie, Value = ARRAffinitySameSite=a6bca26d75cb3f6eb8480aef2c4becff3739380f22f50a9a616e3f019c59f22a;Path=/;HttpOnly;SameSite=None;Secure;Domain=api-cazamio-staging.azurewebsites.net, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Strict-Transport-Security, Value = max-age=2592000, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = X-Powered-By, Value = ASP.NET, Type = HttpHeader, Encode = False, ContentType =  }
+Response Content: 
+Request Body:
+{
+  "apartmentId": 3257,
+  "leasePrice": 850,
+  "referralDetails": "",
+  "moveInDate": "2025-05-25",
+  "offerPrice": 850,
+  "rentPrePayment": 850,
+  "rentalTerms": "12 months",
+  "requestedWork": null,
+  "securityDeposit": 850,
+  "tenantEmail": "appl-myspace-052420250559@putsbox.com",
+  "generatedLinkId": "f23e97d6-143e-471d-9606-7105f184c2bd"
+}
+Response Status Code: OK
+Response Headers: HeaderParameter { Name = Date, Value = Sat, 24 May 2025 09:59:12 GMT, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Server, Value = Microsoft-IIS/10.0, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Set-Cookie, Value = ARRAffinity=a6bca26d75cb3f6eb8480aef2c4becff3739380f22f50a9a616e3f019c59f22a;Path=/;HttpOnly;Secure;Domain=api-cazamio-staging.azurewebsites.net, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Set-Cookie, Value = ARRAffinitySameSite=a6bca26d75cb3f6eb8480aef2c4becff3739380f22f50a9a616e3f019c59f22a;Path=/;HttpOnly;SameSite=None;Secure;Domain=api-cazamio-staging.azurewebsites.net, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Transfer-Encoding, Value = chunked, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Vary, Value = Accept-Encoding, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Strict-Transport-Security, Value = max-age=2592000, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = X-Powered-By, Value = ASP.NET, Type = HttpHeader, Encode = False, ContentType =  }
+Response Content: 2987
+Request Body:
+{
+  "applicationId": 2987,
+  "applicants": [
+    {
+      "suggestions": [],
+      "email": "ocup-myspace-052420250559@putsbox.com",
+      "isGuarantor": false
+    },
+    {
+      "suggestions": [],
+      "email": "guar-myspace-052420250559@putsbox.com",
+      "isGuarantor": true
+    }
+  ]
+}
+Response Status Code: OK
+Response Headers: HeaderParameter { Name = Date, Value = Sat, 24 May 2025 09:59:16 GMT, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Server, Value = Microsoft-IIS/10.0, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Set-Cookie, Value = ARRAffinity=a6bca26d75cb3f6eb8480aef2c4becff3739380f22f50a9a616e3f019c59f22a;Path=/;HttpOnly;Secure;Domain=api-cazamio-staging.azurewebsites.net, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Set-Cookie, Value = ARRAffinitySameSite=a6bca26d75cb3f6eb8480aef2c4becff3739380f22f50a9a616e3f019c59f22a;Path=/;HttpOnly;SameSite=None;Secure;Domain=api-cazamio-staging.azurewebsites.net, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Strict-Transport-Security, Value = max-age=2592000, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = X-Powered-By, Value = ASP.NET, Type = HttpHeader, Encode = False, ContentType =  }
+Response Content: 
+Full name EX: Leoautotest Feabroker AC: Leoautotest Feabroker
+Name Role EX: Broker AC: Broker
+Title name: Building view
+Title name: Apartment view
+Title name: Application detail
+Title name: Edit application
+Title name: Edit application
+Title name: Sure you want to edit this application?
+Toaster message: Success
+Toaster message: Application edit successful
+Toaster message: Account was successfully activated
+Toaster message: Warning
+Toaster message: No access to view this application
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Title name: Please tell us your name and change your password
+Toaster message: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Record: You have no applications yet.
+Title name: Are you sure that you want to log out?
+AR:2987 ER: 2987 applicationId number
+Title name: Are you sure that you want to log out?
+Toaster message: Account was successfully activated
+Toaster message: Warning
+Toaster message: No access to view this application
+Toaster message is still visible: Account was successfully activated
+Toaster message is still visible: Account was successfully activated
+Toaster message is still visible: Account was successfully activated
+Toaster message is still visible: Account was successfully activated
+Toaster message is still visible: Account was successfully activated
+Toaster message is still visible: Account was successfully activated
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Title name: Please tell us your name and change your password
+Toaster message: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Record: You have no applications yet.
+Title name: Are you sure that you want to log out?
+Toaster message: Account was successfully activated
+Toaster message: Warning
+Toaster message: No access to view this application
+Toaster message is still visible: Account was successfully activated
+Toaster message is still visible: Account was successfully activated
+Toaster message is still visible: Account was successfully activated
+Toaster message is still visible: Account was successfully activated
+Toaster message is still visible: Account was successfully activated
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Toaster message is still visible: Warning
+Title name: Please tell us your name and change your password
+Toaster message: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Toaster message is still visible: Successfully updated name and password.
+Record: You have no applications yet.
+Title name: Are you sure that you want to log out?

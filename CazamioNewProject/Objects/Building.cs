@@ -56,7 +56,7 @@ namespace CazamioNewProject.Objects
             public string BuildingNameStatic { get; set; }
             public string BuildingNameRandom { get; set; }
             public string LlcName { get; set; }
-            public string LongBuildingAddress { get; set; }
+            public string BuildingAddressFull { get; set; }
         }
 
         public class WashingtonSquareInfo
@@ -255,7 +255,7 @@ namespace CazamioNewProject.Objects
                 BuildingNameStatic = "AGENT QA-Building Name 9998 Saint Johnson Place (12345) (*&^%)",
                 BuildingNameRandom = "AGENT QA-Building Name Random Saint Johnson Place (12345) (*&^%)",
                 LlcName = "LLC Name QA Agent (12345) (09876) (*&^%)",
-                LongBuildingAddress = "9998 Saint Johnson Place, Brooklyn, NY",
+                BuildingAddressFull = "9998 Saint Johnson Place, Crown Heights, Brooklyn, NY, 11213",
             };
         }
 

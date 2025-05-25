@@ -1,0 +1,120 @@
+Request Body:
+{
+  "Email": "marketplaceadmin15@putsbox.com",
+  "Password": "Qwerty123!",
+  "DeviceFingerprint": "4f09dee986d77232105bed94285eafe7",
+  "RememberMe": true
+}
+Response Status Code: OK
+Response Headers: HeaderParameter { Name = Date, Value = Sat, 24 May 2025 09:16:27 GMT, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Server, Value = Microsoft-IIS/10.0, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Cache-Control, Value = no-store, no-cache, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Pragma, Value = no-cache, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Set-Cookie, Value = .AspNetCore.Identity.Application=CfDJ8MCFu5agVtlEgUvKbsnWzYilcfLdEGGjmSZs7cPSKydueuLlf1aBe1viRrMpJZLK71MSDMthCzYYPq2DjPCd85bpp7lQJI8mo5_92Rp1od9lhYwtVdxE3mo72B4HzCqp8GSqMOkHbra0dyvnPKPlmNRlTVHvZ1gqLOQTCTl2EWWZXaLY5I0ntGp5TPtsLTiIM7E93FFCHRQYZI1jVNg_SReF1sjfw_s59gLD3SehT12wOam0uVv7y2glC_dpCDfi77eZktbGswDS8zATjsfxheT5Zb2aL4lV9sSAneIwaru7A1fZY4_B3KHexP4GRF44kMwuUt3BJREMooOXeanKxpF6REU-YNg6SpXd7uE99K_rKicpdXTJ4xNBFFEDoJAPrsZ84KV-geKq5ZVaRjH0v3_VceiNLQdu6jfOqSBcYW8CHvcm8XTXIol-LngqT0AFF0LomQSniyjLwh0NWlhyvKfpKHwm0kAGOw1lJI6W-dm34MXxwy_7FeJQ9uJfphBcVf0Jb_Eu3JUCwsbqskFMsQoONq6aRvGut_40uMG4U5qIyBdAb8hadrsOY1Y7G1SJ6yqFPL0-OPIFwZ-H4mrzTwM1zKjMv9WlmIg2ro_BLV5JT4OOaH13kXHEAq_KxVHM5DS40tqQ48jZAS0a3h2__cTo89hoPBoL6xupJ5l0IBrXwdTbePh2zmZOI8LCrEmdCai502dHXrYxm_ZkK638miV1yy6Pvj2tl1vV57Z6pRQGSOalBOjA6OLF5sKywgKOVuBHV1_c1dtceeVmIc90C5mEBk2ErZA6QbAJjdNnPSuuZsNgkHpvGfvZDsMZFz58BN59VqALB_YBhowibRRneFP8kf0lEAvlsCZwt3WEzlsM5MH1kKkjXSSrHVcf2Ivbwg; path=/; secure; samesite=lax; httponly, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Set-Cookie, Value = ARRAffinity=a6bca26d75cb3f6eb8480aef2c4becff3739380f22f50a9a616e3f019c59f22a;Path=/;HttpOnly;Secure;Domain=api-cazamio-staging.azurewebsites.net, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Set-Cookie, Value = ARRAffinitySameSite=a6bca26d75cb3f6eb8480aef2c4becff3739380f22f50a9a616e3f019c59f22a;Path=/;HttpOnly;SameSite=None;Secure;Domain=api-cazamio-staging.azurewebsites.net, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Transfer-Encoding, Value = chunked, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Vary, Value = Accept-Encoding, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Strict-Transport-Security, Value = max-age=2592000, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = X-Powered-By, Value = ASP.NET, Type = HttpHeader, Encode = False, ContentType =  }
+Response Content: {"authData":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiJhNGExZmM5NC1iNDBlLTRhZjctOGZjMS00ZWEyMzM0OWEzMzciLCJMYXN0UmVzZXRQYXNzd29yZERhdGUiOiIxMS8xNC8yMDIzIDE6MzQ6MDggUE0iLCJlbWFpbCI6Im1hcmtldHBsYWNlYWRtaW4xNUBwdXRzYm94LmNvbSIsInVuaXF1ZV9uYW1lIjoibWFya2V0cGxhY2VhZG1pbjE1QHB1dHNib3guY29tIiwianRpIjoiYzYxYWU1OTYtNzA3ZC00MjQ3LTk3ODItZTYxMTQ5ZTVlMWM0IiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Ik1hcmsgQWRtIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZ2l2ZW5uYW1lIjoiTWFyayIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3N1cm5hbWUiOiJBZG0iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiQ2F6YW1pby5Dcm9zc0N1dHRpbmcuRW50aXRpZXMuQXBwbGljYXRpb25Vc2VyUm9sZSIsIk1hcmtldHBsYWNlQWRtaW4iXSwiZXhwIjoxNzQ4MDgxNzg3LCJpc3MiOiJodHRwczovL2FwaS1jYXphbWlvLXN0YWdpbmcuYXp1cmV3ZWJzaXRlcy5uZXQiLCJhdWQiOiJodHRwczovL2FwaS1jYXphbWlvLXN0YWdpbmcuYXp1cmV3ZWJzaXRlcy5uZXQifQ.IL-GwuzKkoqMRzFrn7G7sXpFxkalYj3y7BTl_dUr8mU","refreshToken":"dlMT/0P1bUqFs4ngi/hGsg==","expireDate":"2025-05-27T09:16:27.513Z","user":{"userId":"a4a1fc94-b40e-4af7-8fc1-4ea23349a337","userName":"Mark Adm","userEmail":"marketplaceadmin15@putsbox.com","userRoleId":4,"userPhoto":"","firstName":"Mark","lastName":"Adm","isGenerated":false,"loginLinkPasswordUpdated":true},"wasUserRegistered":false},"marketplaceId":15,"isBanned":false,"logo":"https://cazamiostorage.blob.core.windows.net/staging-marketplace-logo/marketplace_admin_a4a1fc94-b40e-4af7-8fc1-4ea23349a337.jpeg?sv=2025-05-05&se=2027-05-24T09%3A07%3A23Z&sr=b&sp=r&sig=5CD3ub42cc%2FVKoe%2FDxKnECxn9PXMMsL2Znakjd6t%2F0c%3D","brand":"Noyo Properties NYC"}
+Request Body:
+{
+  "locks": {
+    "bluetoothLocks": [],
+    "wifiLocks": [],
+    "pinCodeLocks": [],
+    "noteLocks": [],
+    "CABLocks": []
+  },
+  "screeningFee": {
+    "amount": 20,
+    "allowedPaymentMethods": [
+      "CreditCard"
+    ]
+  },
+  "amenities": [],
+  "images": [],
+  "apiKey": {
+    "id": 2,
+    "isACHInclude": true,
+    "isDefault": true,
+    "key": "czmodev359376936c0543b58126c97f9ff55c68",
+    "authorizeNetApiLoginId": null,
+    "paymentSystem": 1
+  },
+  "freeStuff": [],
+  "concessions": [],
+  "petPolicies": [],
+  "ownerId": 1,
+  "buildingId": 0,
+  "llcName": "",
+  "description": "",
+  "internalNotes": "",
+  "buildingName": "",
+  "address": {
+    "id": 0,
+    "country": "United States",
+    "street": "9998 Saint Johnson Place",
+    "state": "NY",
+    "city": "Brooklyn",
+    "zipCode": "11213",
+    "neighborhood": "Crown Heights"
+  },
+  "holdDeposit": {
+    "amount": 500,
+    "allowedPaymentMethods": [
+      "CreditCard"
+    ]
+  },
+  "latitude": 40.726596,
+  "longitude": -73.9834084
+}
+Response Status Code: OK
+Response Headers: HeaderParameter { Name = Date, Value = Sat, 24 May 2025 09:16:27 GMT, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Server, Value = Microsoft-IIS/10.0, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Set-Cookie, Value = ARRAffinity=a6bca26d75cb3f6eb8480aef2c4becff3739380f22f50a9a616e3f019c59f22a;Path=/;HttpOnly;Secure;Domain=api-cazamio-staging.azurewebsites.net, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Set-Cookie, Value = ARRAffinitySameSite=a6bca26d75cb3f6eb8480aef2c4becff3739380f22f50a9a616e3f019c59f22a;Path=/;HttpOnly;SameSite=None;Secure;Domain=api-cazamio-staging.azurewebsites.net, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Transfer-Encoding, Value = chunked, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Vary, Value = Accept-Encoding, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Strict-Transport-Security, Value = max-age=2592000, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = X-Powered-By, Value = ASP.NET, Type = HttpHeader, Encode = False, ContentType =  }
+Response Content: 2509
+Request Body:
+{
+  "locks": {
+    "bluetoothLocks": [],
+    "wifiLocks": [],
+    "pinCodeLocks": [],
+    "noteLocks": [],
+    "CABLocks": []
+  },
+  "screeningFee": {
+    "amount": 20,
+    "allowedPaymentMethods": [
+      "CreditCard"
+    ]
+  },
+  "amenities": [],
+  "images": [],
+  "apiKey": {
+    "id": 2,
+    "isACHInclude": true,
+    "isDefault": true,
+    "key": "czmodev359376936c0543b58126c97f9ff55c68",
+    "authorizeNetApiLoginId": null,
+    "paymentSystem": 1
+  },
+  "freeStuff": [],
+  "concessions": [],
+  "petPolicies": [],
+  "ownerId": 14,
+  "buildingId": 0,
+  "llcName": "LLC Name QA Broker (12345) (09876) (*&^%)",
+  "description": "",
+  "internalNotes": "",
+  "buildingName": "Broker QA-Building Name 1 Washington Square (12345) (09876) (*&^%)",
+  "address": {
+    "id": 0,
+    "country": "United States",
+    "street": "1 Washington Square",
+    "state": "NY",
+    "city": "New York",
+    "zipCode": "10012",
+    "neighborhood": "Manhattan"
+  },
+  "holdDeposit": {
+    "amount": 500,
+    "allowedPaymentMethods": [
+      "CreditCard"
+    ]
+  },
+  "latitude": 40.726596,
+  "longitude": -73.9834084
+}
+Response Status Code: OK
+Response Headers: HeaderParameter { Name = Date, Value = Sat, 24 May 2025 09:16:28 GMT, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Server, Value = Microsoft-IIS/10.0, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Set-Cookie, Value = ARRAffinity=a6bca26d75cb3f6eb8480aef2c4becff3739380f22f50a9a616e3f019c59f22a;Path=/;HttpOnly;Secure;Domain=api-cazamio-staging.azurewebsites.net, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Set-Cookie, Value = ARRAffinitySameSite=a6bca26d75cb3f6eb8480aef2c4becff3739380f22f50a9a616e3f019c59f22a;Path=/;HttpOnly;SameSite=None;Secure;Domain=api-cazamio-staging.azurewebsites.net, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Transfer-Encoding, Value = chunked, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Vary, Value = Accept-Encoding, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = Strict-Transport-Security, Value = max-age=2592000, Type = HttpHeader, Encode = False, ContentType =  }, HeaderParameter { Name = X-Powered-By, Value = ASP.NET, Type = HttpHeader, Encode = False, ContentType =  }
+Response Content: 2510
