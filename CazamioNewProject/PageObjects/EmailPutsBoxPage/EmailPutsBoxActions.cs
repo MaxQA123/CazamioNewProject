@@ -5,7 +5,7 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
 {
     public partial class EmailPutsBox
     {
-        #region PageListOfLetters
+        #region List of notifications page
 
         [AllureStep("ClickButtonHtml")]
         public EmailPutsBox ClickButtonHtml()
@@ -20,8 +20,6 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
 
         #endregion
 
-        #region SubjectLetterOfTenant
-
         [AllureStep("GetSubjectNotification")]
         public string GetSubjectNotificationCommon()
         {
@@ -30,31 +28,5 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
 
             return fullSubject;
         }
-
-        #endregion
-
-        //#region SubjectLetterOfTenant
-
-        //[AllureStep("GetSubjectLetterCreateTenantViaGetLink")]
-        //public string GetSubjectLetterCreateTenantViaGetLink()
-        //{
-        //    WaitUntil.CustomElementIsVisible(SubjectNotificationCommon);
-        //    string fullSubject = SubjectNotificationCommon.Text;
-
-        //    return fullSubject;
-        //}
-
-        //#endregion
-
-        //public class VerifyPutsBox
-        //{
-        //    public static void VerifyVisibilityOfToaster(string email)
-        //    {
-        //        string s = EmailPutsBox.GetLinkFromEmailWithValue(email, "Confirm Email");
-        //        Browser._Driver.Navigate().GoToUrl(s);
-        //        //WaitUntil.CustomElementIsVisible(toasterSuccessMessage);
-
-        //    }
-        //}
     }
 }

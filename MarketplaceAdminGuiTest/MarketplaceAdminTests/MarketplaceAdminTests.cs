@@ -128,7 +128,7 @@ namespace MarketplaceAdminGuiTest
             Pages.JScriptExecutor
                .OpenNewTab();
             Pages.EmailHelper
-               .OpenPutsBox(Pages.EmailPutsBox.TitleLetterCreateBrokerMySpace, getEmailBeforeDog);
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectNotificationCommon, getEmailBeforeDog);
             Pages.EmailPutsBox
                 .VerifyTitleLetterCreateBroker()
                 .ClickButtonHtml();
@@ -209,7 +209,7 @@ namespace MarketplaceAdminGuiTest
             Pages.JScriptExecutor
                 .OpenNewTab();
             Pages.EmailHelper
-                .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateAgentMySpace, partEmailPutsBox);
+                .OpenPutsBox(Pages.EmailPutsBox.SubjectNotificationCommon, partEmailPutsBox);
             Pages.EmailPutsBox
                 .VerifySubjectLetterCreateAgentMySpace()
                 .ClickButtonHtml();
@@ -942,7 +942,7 @@ namespace MarketplaceAdminGuiTest
             Pages.EmailHelper
                .OpenPutsBox(Pages.EmailPutsBox.SubjectNotificationCommon, partEmailPutsBox);
 
-            string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+            string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectNotificationCommon();
 
             Pages.EmailPutsBox
                 .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
@@ -1058,9 +1058,9 @@ namespace MarketplaceAdminGuiTest
             Pages.JScriptExecutor
                .OpenNewTab();
             Pages.EmailHelper
-               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, partEmailPutsBox);
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectNotificationCommon, partEmailPutsBox);
 
-            string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+            string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectNotificationCommon();
 
             Pages.EmailPutsBox
                 .VerifySubjectLetterCreateTenantViaPlusAppWithAgent(getSubjectEmailExpected, getSubjectFromEmail);
@@ -1201,9 +1201,9 @@ namespace MarketplaceAdminGuiTest
             Pages.JScriptExecutor
                .OpenNewTab();
             Pages.EmailHelper
-               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, mainApplicantPartEmail);
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectNotificationCommon, mainApplicantPartEmail);
 
-            string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+            string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectNotificationCommon();
 
             //Pages.EmailPutsBox
             //    .VerifySubjectLetterCreateTenantViaGetLinkWithBrokerAsAgent(getSubjectEmailExpected, getSubjectFromEmail);
@@ -1227,7 +1227,7 @@ namespace MarketplaceAdminGuiTest
             Pages.JScriptExecutor
                .OpenNewTab();
             Pages.EmailHelper
-               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, occupantPartEmail);
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectNotificationCommon, occupantPartEmail);
             Pages.EmailPutsBox
             //    .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail)
                 .ClickButtonHtml();
@@ -1250,7 +1250,7 @@ namespace MarketplaceAdminGuiTest
             Pages.JScriptExecutor
                .OpenNewTab();
             Pages.EmailHelper
-               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, guarantorPartEmail);
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectNotificationCommon, guarantorPartEmail);
             Pages.EmailPutsBox
                 //.VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail)
                 .ClickButtonHtml();

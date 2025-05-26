@@ -9,7 +9,7 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         [AllureStep("VerifySubjectNotificationCreateAdmin")]
         public EmailPutsBox VerifySubjectNotificationCreateAdmin()
         {
-            Assert.IsTrue(SubjectEmail.IsVisible(TitleLetterCreateAdminMySpace));
+            Assert.IsTrue(SubjectEmail.IsVisible(SubjectNotificationCreateAdminMySpace));
 
             return this;
         }
@@ -17,7 +17,7 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         [AllureStep("VerifyTitleLetterCreateBroker")]
         public EmailPutsBox VerifyTitleLetterCreateBroker()
         {
-            Assert.IsTrue(SubjectEmail.IsVisible(TitleLetterCreateBrokerMySpace));
+            Assert.IsTrue(SubjectEmail.IsVisible(SubjectNotificationCreateBrokerMySpace));
 
             return this;
         }
@@ -25,7 +25,7 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         [AllureStep("VerifySubjectLetterCreateAgentMySpace")]
         public EmailPutsBox VerifySubjectLetterCreateAgentMySpace()
         {
-            Assert.IsTrue(SubjectEmail.IsVisible(SubjectLetterCreateAgentMySpace));
+            Assert.IsTrue(SubjectEmail.IsVisible(SubjectNotificationCreateAgentMySpace));
 
             return this;
         }
@@ -33,7 +33,6 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         [AllureStep("VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent")]
         public EmailPutsBox VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(string getSubjectExpected, string getSubjectFromEmail)
         {
-            WaitUntil.CustomElementIsVisible(SubjectNotificationCommon);
             Assert.AreEqual(getSubjectExpected, getSubjectFromEmail);
 
             return this;
@@ -42,7 +41,6 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         [AllureStep("VerifySubjectLetterCreateTenantViaGetLinkWithBrokerAsAgent")]
         public EmailPutsBox VerifySubjectLetterCreateTenantViaGetLinkWithBrokerAsAgent(string getSubjectExpected, string getSubjectFromEmail)
         {
-            WaitUntil.CustomElementIsVisible(SubjectNotificationCommon);
             Assert.AreEqual(getSubjectExpected, getSubjectFromEmail);
 
             return this;
@@ -51,7 +49,6 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         [AllureStep("VerifySubjectLetterCreateTenantViaGetLink")]
         public EmailPutsBox VerifySubjectLetterCreateTenantViaPlusAppWithAgent(string getSubjectExpected, string getSubjectFromEmail)
         {
-            WaitUntil.CustomElementIsVisible(SubjectNotificationCommon);
             Assert.AreEqual(getSubjectExpected, getSubjectFromEmail);
 
             return this;

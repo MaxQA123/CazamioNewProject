@@ -7,9 +7,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.ApartmentViewPage
 {
     public partial class ApartmentView
     {
-        //Apartment apartment = Apartment.Generate();
-        //Application application = Application.Generate();
-        //EmailNotifications emailNotifications = EmailNotifications.Generate();
         TenantCreatorMySpace tenantCreatorMySpace = TenantCreatorMySpace.Generate();
 
         #region Tabs
