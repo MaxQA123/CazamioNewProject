@@ -18,7 +18,7 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         public IWebElement SubjectLetterCreateTenant;
 
         [FindsBy(How = How.XPath, Using = "//table//tr//td[2]")]
-        public IWebElement SubjectLetterCreateTenantViaGetLink;
+        public IWebElement SubjectNotificationCommon;
 
         [FindsBy(How = How.XPath, Using = "//a[text() = 'Start Your Application Now!']")]
         public IWebElement ButtonStartYourApplicationNow;

@@ -1,0 +1,159 @@
+{
+  "uuid": "2924a140-534b-4ab8-a64f-bf04ee6fab64-tr-0-1001",
+  "historyId": "SuperAdminGui.TestsBaseGui.LogIn",
+  "fullName": "SuperAdminGui.TestsBaseGui.LogIn",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "SuperAdminGui"
+    },
+    {
+      "name": "testMethod",
+      "value": "LogIn"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Super Admin"
+    },
+    {
+      "name": "subSuite",
+      "value": "LogIn"
+    }
+  ],
+  "links": [],
+  "name": "LogIn",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "LogIn"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "LogIn",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsSuperAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748269537551,
+              "stop": 1748269539035
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748269539050,
+              "stop": 1748269539146
+            },
+            {
+              "name": "VerifySuperAdminUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Super User"
+                },
+                {
+                  "name": "String",
+                  "value": "Super Admin"
+                }
+              ],
+              "start": 1748269539159,
+              "stop": 1748269539702
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748269533390,
+          "stop": 1748269539702
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "a611f050e7b84f49b736bbcbc04d0fb4-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1748269519613,
+      "stop": 1748269543150
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1748269519612,
+  "stop": 1748269543170
+}

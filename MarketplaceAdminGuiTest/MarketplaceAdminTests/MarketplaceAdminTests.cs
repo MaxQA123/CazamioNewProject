@@ -940,7 +940,7 @@ namespace MarketplaceAdminGuiTest
             Pages.JScriptExecutor
                .OpenNewTab();
             Pages.EmailHelper
-               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, partEmailPutsBox);
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectNotificationCommon, partEmailPutsBox);
 
             string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
 

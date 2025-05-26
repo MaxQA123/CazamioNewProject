@@ -7,6 +7,7 @@ namespace CazamioNewProject.Objects
         public PasswordsInfo Passwords { get; set; }
         public UserRolesInfo UserRoles { get; set; }
         public SubdomainMarketplaceInfo SubdomainMarketplace { get; set; }
+        public IdOfMarketplacesInfo IdOfMarketplaces { get; set; }
 
         public static BasicDataForProject Generate()
         {
@@ -15,6 +16,7 @@ namespace CazamioNewProject.Objects
                 Passwords = CreatePasswordsInfo(),
                 UserRoles = CreateUserRolesInfo(),
                 SubdomainMarketplace = CreateSubdomainMarketplaceInfo(),
+                IdOfMarketplaces = CreateIdOfMarketplacesInfo(),
             };
         }
 
@@ -26,9 +28,20 @@ namespace CazamioNewProject.Objects
         public class UserRolesInfo
         {
             public string SuperAdmin { get; set; }
+            public string MarketplaceAdmin { get; set; }
+            public string Broker { get; set; }
+            public string Agent { get; set; }
         }
 
         public class SubdomainMarketplaceInfo
+        {
+            public string MySpace { get; set; }
+            public string Evergreen { get; set; }
+            public string Doorway { get; set; }
+            public string Jrzee { get; set; }
+        }
+
+        public class IdOfMarketplacesInfo
         {
             public string MySpace { get; set; }
             public string Evergreen { get; set; }
@@ -49,6 +62,9 @@ namespace CazamioNewProject.Objects
             return new UserRolesInfo
             {
                 SuperAdmin = "Super Admin",
+                MarketplaceAdmin = "Marketplace Admin",
+                Broker = "Broker",
+                Agent = "Agent",
             };
         }
 
@@ -60,6 +76,17 @@ namespace CazamioNewProject.Objects
                 Evergreen = "testlandlord17-demo",
                 Doorway = "testlandlord18-demo",
                 Jrzee = "",
+            };
+        }
+
+        private static IdOfMarketplacesInfo CreateIdOfMarketplacesInfo()
+        {
+            return new IdOfMarketplacesInfo
+            {
+                MySpace = "15",
+                Evergreen = "17",
+                Doorway = "18",
+                Jrzee = "19",
             };
         }
     }

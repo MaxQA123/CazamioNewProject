@@ -6,8 +6,8 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
 {
     public partial class EmailPutsBox
     {
-        [AllureStep("VerifyTitleLetterCreateAdmin")]
-        public EmailPutsBox VerifyTitleLetterCreateAdmin()
+        [AllureStep("VerifySubjectNotificationCreateAdmin")]
+        public EmailPutsBox VerifySubjectNotificationCreateAdmin()
         {
             Assert.IsTrue(SubjectEmail.IsVisible(TitleLetterCreateAdminMySpace));
 
@@ -33,7 +33,7 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         [AllureStep("VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent")]
         public EmailPutsBox VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(string getSubjectExpected, string getSubjectFromEmail)
         {
-            WaitUntil.CustomElementIsVisible(SubjectLetterCreateTenantViaGetLink);
+            WaitUntil.CustomElementIsVisible(SubjectNotificationCommon);
             Assert.AreEqual(getSubjectExpected, getSubjectFromEmail);
 
             return this;
@@ -42,7 +42,7 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         [AllureStep("VerifySubjectLetterCreateTenantViaGetLinkWithBrokerAsAgent")]
         public EmailPutsBox VerifySubjectLetterCreateTenantViaGetLinkWithBrokerAsAgent(string getSubjectExpected, string getSubjectFromEmail)
         {
-            WaitUntil.CustomElementIsVisible(SubjectLetterCreateTenantViaGetLink);
+            WaitUntil.CustomElementIsVisible(SubjectNotificationCommon);
             Assert.AreEqual(getSubjectExpected, getSubjectFromEmail);
 
             return this;
@@ -51,7 +51,7 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         [AllureStep("VerifySubjectLetterCreateTenantViaGetLink")]
         public EmailPutsBox VerifySubjectLetterCreateTenantViaPlusAppWithAgent(string getSubjectExpected, string getSubjectFromEmail)
         {
-            WaitUntil.CustomElementIsVisible(SubjectLetterCreateTenantViaGetLink);
+            WaitUntil.CustomElementIsVisible(SubjectNotificationCommon);
             Assert.AreEqual(getSubjectExpected, getSubjectFromEmail);
 
             return this;

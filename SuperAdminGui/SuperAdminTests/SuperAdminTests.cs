@@ -86,9 +86,9 @@ namespace SuperAdminGui
             Pages.JScriptExecutor
                 .OpenNewTab();
             Pages.EmailHelper
-                .OpenPutsBox(Pages.EmailPutsBox.TitleLetterCreateAdminMySpace, partEmailPutsBox);
+                .OpenPutsBox(Pages.EmailPutsBox.SubjectNotificationCommon, partEmailPutsBox);
             Pages.EmailPutsBox
-                .VerifyTitleLetterCreateAdmin()
+                .VerifySubjectNotificationCreateAdmin()
                 .ClickButtonHtml();
 
             string getTextPasswordActual = Pages.EmailPutsBox.GetPasswordFromEmailForCreaationUser();
@@ -107,6 +107,8 @@ namespace SuperAdminGui
             Pages.SidebarLandlord
                 .VerifyMarketplaceAdminUserNameAndRoleCreating(getUserNameRoleMarketplaceAdmin);
 
+            WaitUntil.WaitSomeInterval(1000);
+
             #endregion
 
             #region Postconditions
@@ -117,8 +119,6 @@ namespace SuperAdminGui
             MarketplaceAdminsDbRequests.MarketplaceAdmins.DeleteNewlyCreatedMarketplaceAdmin(fullEmailPutsBox, marketplaceId);
 
             #endregion
-
-            WaitUntil.WaitSomeInterval(1000);
         }
 
         [Test]

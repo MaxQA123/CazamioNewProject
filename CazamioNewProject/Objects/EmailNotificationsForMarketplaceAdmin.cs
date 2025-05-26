@@ -24,7 +24,7 @@ namespace CazamioNewProject.Objects
         {
             return new SubjectsAndBodiesBasicInfo
             {
-                SubjectCreatingNewMarketplaceAdmin = "Welcome Aboard as a Marketplace Admin at Doorway LLC!",
+                SubjectCreatingNewMarketplaceAdmin = "Welcome Aboard as a Marketplace Admin at Noyo Properties NYC!",
                 BodyCreatingNewMarketplaceAdmin = "",
             };
         }

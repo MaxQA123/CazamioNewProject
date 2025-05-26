@@ -760,9 +760,9 @@ namespace BrokerGuiTests
             Pages.JScriptExecutor
                .OpenNewTab();
             Pages.EmailHelper
-               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, partEmailPutsBoxMainApplicant);
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectNotificationCommon, partEmailPutsBoxMainApplicant);
 
-            string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+            string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectNotificationCommon();
 
             Pages.EmailPutsBox
                 .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
@@ -781,7 +781,7 @@ namespace BrokerGuiTests
             Pages.JScriptExecutor
                .OpenNewTab();
             Pages.EmailHelper
-               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, partEmailPutsBoxOccupant);
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectNotificationCommon, partEmailPutsBoxOccupant);
             Pages.EmailPutsBox
                 .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
             Pages.EmailPutsBox
@@ -800,7 +800,7 @@ namespace BrokerGuiTests
             Pages.JScriptExecutor
                .OpenNewTab();
             Pages.EmailHelper
-               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, partEmailPutsBoxGuarantor);
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectNotificationCommon, partEmailPutsBoxGuarantor);
             Pages.EmailPutsBox
                 .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
             Pages.EmailPutsBox
@@ -1077,9 +1077,9 @@ namespace BrokerGuiTests
             Pages.JScriptExecutor
                .OpenNewTab();
             Pages.EmailHelper
-               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, mainApplicantNewlyCreatedPartEmailOld);
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectNotificationCommon, mainApplicantNewlyCreatedPartEmailOld);
 
-            string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+            string getSubjectFromEmail = Pages.EmailPutsBox.GetSubjectNotificationCommon();
 
             Pages.EmailPutsBox
                 .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmail);
@@ -1110,9 +1110,9 @@ namespace BrokerGuiTests
             Pages.JScriptExecutor
                .OpenNewTab();
             Pages.EmailHelper
-               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, occupantPartEmailOld);
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectNotificationCommon, occupantPartEmailOld);
 
-            string getSubjectFromEmailOccupant = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+            string getSubjectFromEmailOccupant = Pages.EmailPutsBox.GetSubjectNotificationCommon();
 
             Pages.EmailPutsBox
                 .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmailOccupant);
@@ -1134,9 +1134,9 @@ namespace BrokerGuiTests
             Pages.JScriptExecutor
                .OpenNewTab();
             Pages.EmailHelper
-               .OpenPutsBox(Pages.EmailPutsBox.SubjectLetterCreateTenantViaGetLink, guarantorPartEmailOld);
+               .OpenPutsBox(Pages.EmailPutsBox.SubjectNotificationCommon, guarantorPartEmailOld);
 
-            string getSubjectFromEmailGuarantor = Pages.EmailPutsBox.GetSubjectLetterCreateTenantViaGetLink();
+            string getSubjectFromEmailGuarantor = Pages.EmailPutsBox.GetSubjectNotificationCommon();
 
             Pages.EmailPutsBox
                 .VerifySubjectLetterCreateTenantViaGetLinkWithoutAgent(getSubjectEmailExpected, getSubjectFromEmailGuarantor);

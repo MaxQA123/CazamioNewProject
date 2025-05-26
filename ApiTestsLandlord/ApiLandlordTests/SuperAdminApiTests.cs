@@ -60,42 +60,36 @@ namespace ApiTestsLandlord
 
         public void CreateMarketplaceAdmin()
         {
-            //#region Test Data
+            #region Test Data
 
-            //int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+            SuperAdmin superAdmin = SuperAdmin.Generate();
 
-            //SuperAdmin superAdmin = new SuperAdmin().Generate();
+            #endregion
 
-            //var email = superAdmin.EmailAddressSuperAdmin;
-            //var password = GeneralTestDataForAllUsers.PASSWORD_GENERAL;
-            //var rememberMe = ApiRequestData.TRUE;
-            //var deviceFingerprint = superAdmin.DeviceFingerprint;
+            #region Preconditions
 
-            //#endregion
+            var superAdminRequest = LogInApiSuperAdmin.RequestBodyLogInSuperAdmin();
+            var responseSuperAdmin = LogInApiSuperAdmin.LogInSuperAdmin(superAdminRequest);
+            var responseData = responseSuperAdmin.Data.AuthData.Token;
 
-            //#region Preconditions
+            #endregion
 
-            //var responseSuperAdmin = LogInApiSuperAdmin.ExecuteLogIn(email, password, deviceFingerprint, rememberMe);
+            #region Test
 
-            //LogInApiSuperAdmin.VerifyUserData(responseSuperAdmin, superAdmin);
+            var createMarketplaceAdminRequestBody = MarketplaceAdminCreation.RequestBodyCreateMarketplaceAdmin();
+            MarketplaceAdminCreation.CreateMarketplaceAdmin(responseSuperAdmin.Data.AuthData.Token, createMarketplaceAdminRequestBody);
 
-            //#endregion
+            #endregion
 
-            //#region Test
+            #region Postconditions
 
-            //var createMarketplaceAdminRequestBody = MarketplaceAdminCreation.RequestBodyCreateMarketplaceAdmin();
-            //MarketplaceAdminCreation.CreateMarketplaceAdmin(responseSuperAdmin.AuthData.Token, createMarketplaceAdminRequestBody);
+            AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(createMarketplaceAdminRequestBody.Email, marketplaceId);
+            Console.WriteLine($"{createMarketplaceAdminRequestBody.Email}");
+            WaitUntil.WaitSomeInterval(100);
+            MarketplaceAdminsDbRequests.MarketplaceAdmins.DeleteNewlyCreatedMarketplaceAdmin(createMarketplaceAdminRequestBody.Email, marketplaceId);
 
-            //#endregion
-
-            //#region Postconditions
-
-            //AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(createMarketplaceAdminRequestBody.Email, marketplaceId);
-            //Console.WriteLine($"{createMarketplaceAdminRequestBody.Email}");
-            //WaitUntil.WaitSomeInterval(100);
-            //MarketplaceAdminsDbRequests.MarketplaceAdmins.DeleteNewlyCreatedMarketplaceAdmin(createMarketplaceAdminRequestBody.Email, marketplaceId);
-
-            //#endregion
+            #endregion
         }
     }
 }

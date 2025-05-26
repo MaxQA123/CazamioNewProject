@@ -85,6 +85,7 @@ namespace CazamioNewProject.PageObjects
         public static EmailNotifications EmailNotofications => GetPage<EmailNotifications>();
         public static LeaseSignDocument LeaseSignDocument => GetPage<LeaseSignDocument>();
         public static ApplicationDetailObjct ApplicationDetailObjct => GetPage<ApplicationDetailObjct>();
+        public static EmailNotificationsForMarketplaceAdmin EmailNotificationsForMarketplaceAdmin => GetPage<EmailNotificationsForMarketplaceAdmin>();
 
         #endregion 
 

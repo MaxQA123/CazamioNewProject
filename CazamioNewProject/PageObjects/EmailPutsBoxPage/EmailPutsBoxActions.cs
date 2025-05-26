@@ -22,16 +22,29 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
 
         #region SubjectLetterOfTenant
 
-        [AllureStep("GetSubjectLetterCreateTenantViaGetLink")]
-        public string GetSubjectLetterCreateTenantViaGetLink()
+        [AllureStep("GetSubjectNotification")]
+        public string GetSubjectNotificationCommon()
         {
-            WaitUntil.CustomElementIsVisible(SubjectLetterCreateTenantViaGetLink);
-            string fullSubject = SubjectLetterCreateTenantViaGetLink.Text;
+            WaitUntil.CustomElementIsVisible(SubjectNotificationCommon);
+            string fullSubject = SubjectNotificationCommon.Text;
 
             return fullSubject;
         }
 
         #endregion
+
+        //#region SubjectLetterOfTenant
+
+        //[AllureStep("GetSubjectLetterCreateTenantViaGetLink")]
+        //public string GetSubjectLetterCreateTenantViaGetLink()
+        //{
+        //    WaitUntil.CustomElementIsVisible(SubjectNotificationCommon);
+        //    string fullSubject = SubjectNotificationCommon.Text;
+
+        //    return fullSubject;
+        //}
+
+        //#endregion
 
         //public class VerifyPutsBox
         //{
