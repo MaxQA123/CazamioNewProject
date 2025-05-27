@@ -14,6 +14,24 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
             return this;
         }
 
+        [AllureStep("VerifyComparisonSubjectNotificationCreateAdmin")]
+        public EmailPutsBox VerifyComparisonSubjectNotificationCreateAdmin()
+        {
+            string subjectNotificationFromEmail = Pages.EmailPutsBox.GetSubjectNotificationCommon();
+            Assert.AreEqual(subjectNotificationFromEmail, emailNotificationsForMarketplaceAdmin.SubjectsAndBodiesBasic.SubjectCreatingNewMarketplaceAdminMySpace);
+
+            return this;
+        }
+
+        [AllureStep("VerifyComparisonBodyNotificationCreateAdmin")]
+        public EmailPutsBox VerifyComparisonBodyNotificationCreateAdmin()
+        {
+            string subjectNotificationFromEmail = Pages.EmailPutsBox.GetSubjectNotificationCommon();
+            Assert.AreEqual(subjectNotificationFromEmail, emailNotificationsForMarketplaceAdmin.SubjectsAndBodiesBasic.SubjectCreatingNewMarketplaceAdminMySpace);
+
+            return this;
+        }
+
         [AllureStep("VerifyTitleLetterCreateBroker")]
         public EmailPutsBox VerifyTitleLetterCreateBroker()
         {

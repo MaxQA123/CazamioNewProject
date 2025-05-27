@@ -6,7 +6,7 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
 {
     public partial class EmailPutsBox
     {
-        #region BodyLetterOfTenant
+        #region Body of notification of tenant's website
 
         [AllureStep("ClickButtonStartYourApplicationNowForTenant")]
         public EmailPutsBox ClickButtonStartYourApplicationNowForTenant()
@@ -58,7 +58,7 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
 
         #endregion
 
-        #region BodyLetterOfAdmin
+        #region Body of notification of landlord's website
 
         [AllureStep("ClickButtonResetPasswordForAdmin")]
         public EmailPutsBox ClickButtonResetPasswordForAdmin()
@@ -100,6 +100,24 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
             string getTextPassword = PasswordFromTextForCreationAdminUser.Text;
 
             return getTextPassword;
+        }
+
+        //[AllureStep("GetFullBodyNotificationCreateMarketplaceAdmin")]
+        //public string GetFullBodyNotificationCreateMarketplaceAdmin()
+        //{
+        //    string dearRow = FrstRwBodyCreateMarketplaceaAdmin.Text;
+        //    string welcomeRow = ScndRwBodyCreateMarketplaceaAdmin.Text;
+
+        //    return dearRow;
+        //}
+
+        [AllureStep("GetFullBodyNotificationCreateMarketplaceAdmin")]
+        public (string DearRow, string WelcomeRow) GetFullBodyNotificationCreateMarketplaceAdmin()
+        {
+            string dearRow = FrstRwBodyCreateMarketplaceaAdmin.Text;
+            string welcomeRow = ScndRwBodyCreateMarketplaceaAdmin.Text;
+
+            return (dearRow, welcomeRow);
         }
 
         #endregion

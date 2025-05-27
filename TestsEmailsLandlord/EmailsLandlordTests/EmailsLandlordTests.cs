@@ -53,8 +53,8 @@ namespace TestsEmailsLandlord
 
             var createMarketplaceAdminRequestBody = MarketplaceAdminCreation.RequestBodyCreateMarketplaceAdmin();
             MarketplaceAdminCreation.CreateMarketplaceAdmin(responseSuperAdmin.Data.AuthData.Token, createMarketplaceAdminRequestBody);
-            var dataMarketplaceAdmin = createMarketplaceAdminRequestBody.Email;
-            var partEmailPutsBox = dataMarketplaceAdmin.Split('@')[0];
+            var emailMarketplaceAdmin = createMarketplaceAdminRequestBody.Email;
+            var partEmailPutsBox = emailMarketplaceAdmin.Split('@')[0];
 
             #endregion
 
@@ -65,18 +65,14 @@ namespace TestsEmailsLandlord
             Pages.EmailHelper
                 .OpenPutsBox(Pages.EmailPutsBox.SubjectNotificationCommon, partEmailPutsBox);
 
-            //string subjectNotificationFromEmail = 
-
-            Pages.EmailPutsBox
-                .VerifySubjectNotificationCreateAdmin()
-                .ClickButtonHtml();
-
             #endregion
 
 
             #region Test
 
-
+            Pages.EmailPutsBox
+                .VerifyComparisonSubjectNotificationCreateAdmin()
+                .ClickButtonHtml();
 
             #endregion
 

@@ -16,16 +16,16 @@ namespace CazamioNewProject.Objects
 
         public class SubjectsAndBodiesBasicInfo
         {
-            public string SubjectCreatingNewMarketplaceAdmin { get; set; }
-            public string BodyCreatingNewMarketplaceAdmin { get; set; }
+            public string SubjectCreatingNewMarketplaceAdminMySpace { get; set; }
+            public string FrstRwBodyCreatingNewMarketplaceAdminMySpace { get; set; }
         }
 
         private static SubjectsAndBodiesBasicInfo CreateSubjectsAndBodiesBasicInfo()
         {
             return new SubjectsAndBodiesBasicInfo
             {
-                SubjectCreatingNewMarketplaceAdmin = "Welcome Aboard as a Marketplace Admin at Noyo Properties NYC!",
-                BodyCreatingNewMarketplaceAdmin = "",
+                SubjectCreatingNewMarketplaceAdminMySpace = "Welcome Aboard as a Marketplace Admin at Noyo Properties NYC!",
+                FrstRwBodyCreatingNewMarketplaceAdminMySpace = "",
             };
         }
     }

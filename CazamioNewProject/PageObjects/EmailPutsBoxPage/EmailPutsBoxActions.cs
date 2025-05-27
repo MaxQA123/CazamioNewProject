@@ -1,10 +1,13 @@
 ﻿using CazamioNewProject.GuiHelpers;
+using CazamioNewProject.Objects;
 using NUnit.Allure.Attributes;
 
 namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
 {
     public partial class EmailPutsBox
     {
+        EmailNotificationsForMarketplaceAdmin emailNotificationsForMarketplaceAdmin = EmailNotificationsForMarketplaceAdmin.Generate();
+        
         #region List of notifications page
 
         [AllureStep("ClickButtonHtml")]
