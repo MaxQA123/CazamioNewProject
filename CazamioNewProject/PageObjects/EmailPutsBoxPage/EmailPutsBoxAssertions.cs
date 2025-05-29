@@ -1,6 +1,7 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using NUnit.Allure.Attributes;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
 {
@@ -26,8 +27,12 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         [AllureStep("VerifyComparisonBodyNotificationCreateAdmin")]
         public EmailPutsBox VerifyComparisonBodyNotificationCreateAdmin()
         {
-            string subjectNotificationFromEmail = Pages.EmailPutsBox.GetSubjectNotificationCommon();
-            Assert.AreEqual(subjectNotificationFromEmail, emailNotificationsForMarketplaceAdmin.SubjectsAndBodiesBasic.SubjectCreatingNewMarketplaceAdminMySpace);
+            WaitUntil.WaitSomeInterval(100);
+            SwitchingBetweenBrowserTabs.ThirdTabSelect();
+            WaitUntil.CustomElementIsVisible(DearFrstRwBodyCreateMarketplaceaAdmin);
+            string dearRow = Pages.EmailPutsBox.GetDearVl();
+            //string welcomeRow = ScndRwBodyCreateMarketplaceaAdmin.Text;
+            Assert.AreEqual(dearRow, emailNotificationsForMarketplaceAdmin.SubjectsAndBodiesBasic.FrstRwBodyCreatingNewMarketplaceAdminMySpace);
 
             return this;
         }

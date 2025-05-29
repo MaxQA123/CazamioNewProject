@@ -31,5 +31,13 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
 
             return fullSubject;
         }
+
+        [AllureStep("GetDearVl")]
+        public string GetDearVl()
+        {
+            string fullText = DearFrstRwBodyCreateMarketplaceaAdmin.Text;
+
+            return fullText.Trim();
+        }
     }
 }

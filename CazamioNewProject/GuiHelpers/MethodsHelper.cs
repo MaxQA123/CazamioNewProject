@@ -81,6 +81,15 @@ namespace CazamioNewProject.GuiHelpers
 
         }
 
+        public static void ThirdTabSelect()
+        {
+            WaitUntil.WaitSomeInterval(1000);
+            List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
+            Browser._Driver.SwitchTo().Window(tabsList[2]);
+            WaitUntil.WaitSomeInterval(1000);
+
+        }
+
         public static void FouthTabSelect()
         {
             WaitUntil.WaitSomeInterval(1000);

@@ -72,7 +72,8 @@ namespace TestsEmailsLandlord
 
             Pages.EmailPutsBox
                 .VerifyComparisonSubjectNotificationCreateAdmin()
-                .ClickButtonHtml();
+                .ClickButtonHtml()
+                .VerifyComparisonBodyNotificationCreateAdmin();
 
             #endregion
 

@@ -25,7 +25,7 @@ namespace CazamioNewProject.Objects
             return new SubjectsAndBodiesBasicInfo
             {
                 SubjectCreatingNewMarketplaceAdminMySpace = "Welcome Aboard as a Marketplace Admin at Noyo Properties NYC!",
-                FrstRwBodyCreatingNewMarketplaceAdminMySpace = "",
+                FrstRwBodyCreatingNewMarketplaceAdminMySpace = "Dear BaryQa,",
             };
         }
     }

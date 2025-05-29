@@ -13,7 +13,7 @@ namespace CazamioNewProject.ApiHelpers.ApiObjects.SuperAdminApiCollections.Creat
             BasicDataForProject basicDataForProject = BasicDataForProject.Generate();
 
             var payload = new RequestCreateMarketplaceAdmin();
-            payload.FirstName = marketplaceAdmin.MarkAdmName.FirstNameRandom;
+            payload.FirstName = "BaryQa";
             payload.LastName = marketplaceAdmin.MarkAdmName.LastNameRandom;
             payload.Email = marketplaceAdmin.MarkAdmEmail.FullEmailRandom;
             payload.Password = basicDataForProject.Passwords.BasicStaticFirst;

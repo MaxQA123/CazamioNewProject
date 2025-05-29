@@ -102,24 +102,6 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
             return getTextPassword;
         }
 
-        //[AllureStep("GetFullBodyNotificationCreateMarketplaceAdmin")]
-        //public string GetFullBodyNotificationCreateMarketplaceAdmin()
-        //{
-        //    string dearRow = FrstRwBodyCreateMarketplaceaAdmin.Text;
-        //    string welcomeRow = ScndRwBodyCreateMarketplaceaAdmin.Text;
-
-        //    return dearRow;
-        //}
-
-        [AllureStep("GetFullBodyNotificationCreateMarketplaceAdmin")]
-        public (string DearRow, string WelcomeRow) GetFullBodyNotificationCreateMarketplaceAdmin()
-        {
-            string dearRow = FrstRwBodyCreateMarketplaceaAdmin.Text;
-            string welcomeRow = ScndRwBodyCreateMarketplaceaAdmin.Text;
-
-            return (dearRow, welcomeRow);
-        }
-
         #endregion
     }
 }

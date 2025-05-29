@@ -33,9 +33,9 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
 
         #region Subjects and bodies notifications when creating the users on the landlord's website
 
-        [FindsBy(How = How.XPath, Using = "//p[contains(@class, 'es-m-txt-l') and contains(normalize-space(), 'Dear')]")]
-        public IWebElement FrstRwBodyCreateMarketplaceaAdmin;
-
+        [FindsBy(How = How.XPath, Using = "//p[contains(., 'Dear ')]")]
+        public IWebElement DearFrstRwBodyCreateMarketplaceaAdmin;
+        
         [FindsBy(How = How.XPath, Using = "//p[normalize-space()='Welcome to Noyo Properties NYC Real Estate!']")]
         public IWebElement ScndRwBodyCreateMarketplaceaAdmin;
 
