@@ -5,7 +5,7 @@ using System;
 namespace CazamioNewProject.GuiHelpers
 {
     public class EmailHelper
-    {
+    {     
         public void OpenPutsBox(IWebElement element, string partEmailPutsBox)
         {
             WaitUntil.WaitSomeInterval(1000);

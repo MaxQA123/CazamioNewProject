@@ -73,7 +73,7 @@ namespace TestsEmailsLandlord
             Pages.EmailPutsBox
                 .VerifyComparisonSubjectNotificationCreateAdmin()
                 .ClickButtonHtml()
-                .VerifyComparisonBodyNotificationCreateAdmin();
+                .VerifyComparisonBodyNotificationCreateMarketplaceAdmin();
 
             #endregion
 

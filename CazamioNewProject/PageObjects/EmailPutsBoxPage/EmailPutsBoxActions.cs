@@ -32,12 +32,52 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
             return fullSubject;
         }
 
-        [AllureStep("GetDearVl")]
-        public string GetDearVl()
+        [AllureStep("GetTextWithDearVlCommon")]
+        public string GetTextWithDearVlCommon()
         {
-            string fullText = DearFrstRwBodyCreateMarketplaceaAdmin.Text;
+            string fullText = DearRowCommon.Text;
 
-            return fullText.Trim();
+            return fullText;
+        }
+
+        [AllureStep("GetTextWithWelcomeVlCommon")]
+        public string GetTextWithWelcomeVlCommon()
+        {
+            string fullText = WelcomeRowCommon.Text;
+
+            return fullText;
+        }
+
+        [AllureStep("GetTexWeAreDelightedCreateMarketplaceaAdmin")]
+        public string GetTexWeAreDelightedCreateMarketplaceaAdmin()
+        {
+            string fullText = ThrdRwBodyWeAreDelightedCreateMarketplaceaAdmin.Text;
+
+            return fullText;
+        }
+
+        [AllureStep("GetTexToGetStartedCommon")]
+        public string GetTexToGetStartedCommon()
+        {
+            string fullText = ToGetStartedCommon.Text;
+
+            return fullText;
+        }
+
+        [AllureStep("GetOnlyTexCopyThePassword")]
+        public string GetOnlyTexCopyThePassword()
+        {
+            string fullText = FfthRwBodyCopyThePasswordCreateMarketplaceaAdmin.Text;
+
+            return fullText;
+        }
+
+        [AllureStep("GetTexClickTheButtonGetStarted")]
+        public string GetTexClickTheButtonGetStarted()
+        {
+            string fullText = SxthRwBodyClickTheButtonGetStartedCreateMarketplaceaAdmin.Text;
+
+            return fullText;
         }
     }
 }

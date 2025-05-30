@@ -4,28 +4,40 @@ namespace CazamioNewProject.Objects
 {
     public class EmailNotificationsForMarketplaceAdmin
     {
-        public SubjectsAndBodiesBasicInfo SubjectsAndBodiesBasic { get; set; }
+        public SubjectAndBodyCreatingMarketplaceAdminInfo SubjectAndBodyCreatingMarketplaceAdmin { get; set; }
 
         public static EmailNotificationsForMarketplaceAdmin Generate()
         {
             return new EmailNotificationsForMarketplaceAdmin
             {
-                SubjectsAndBodiesBasic = CreateSubjectsAndBodiesBasicInfo(),
+                SubjectAndBodyCreatingMarketplaceAdmin = CreateSubjectAndBodyCreatingMarketplaceAdminInfo(),
             };
         }
 
-        public class SubjectsAndBodiesBasicInfo
+        public class SubjectAndBodyCreatingMarketplaceAdminInfo
         {
-            public string SubjectCreatingNewMarketplaceAdminMySpace { get; set; }
-            public string FrstRwBodyCreatingNewMarketplaceAdminMySpace { get; set; }
+            public string Subject { get; set; }
+            public string FrstRwBodyDear { get; set; }
+            public string ScndRwBodyWelcome { get; set; }
+            public string ThrdRwBodyWeAreDelighted { get; set; }
+            public string FrthRwBodyToGetStarted { get; set; }
+            public string FfthRwBodyCopyThePassword { get; set; }
+            public string SxthRwBodyClickTheButtonGetStarted { get; set; }
+            //public string FrthRwBodyWeAreDelighted { get; set; }
+            //public string FrthRwBodyWeAreDelighted { get; set; }
         }
 
-        private static SubjectsAndBodiesBasicInfo CreateSubjectsAndBodiesBasicInfo()
+        private static SubjectAndBodyCreatingMarketplaceAdminInfo CreateSubjectAndBodyCreatingMarketplaceAdminInfo()
         {
-            return new SubjectsAndBodiesBasicInfo
+            return new SubjectAndBodyCreatingMarketplaceAdminInfo
             {
-                SubjectCreatingNewMarketplaceAdminMySpace = "Welcome Aboard as a Marketplace Admin at Noyo Properties NYC!",
-                FrstRwBodyCreatingNewMarketplaceAdminMySpace = "Dear BaryQa,",
+                Subject = "Welcome Aboard as a Marketplace Admin at Noyo Properties NYC!",
+                FrstRwBodyDear = "Dear BaryQa,",
+                ScndRwBodyWelcome = "Welcome to Noyo Properties NYC Real Estate!",
+                ThrdRwBodyWeAreDelighted = "We are delighted to have you join us as a Marketplace Admin.",
+                FrthRwBodyToGetStarted = "To get started:",
+                FfthRwBodyCopyThePassword = "1. Copy the password:",
+                SxthRwBodyClickTheButtonGetStarted = "2. Click the button \"Get started\".",
             };
         }
     }

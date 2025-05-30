@@ -10,6 +10,15 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         [FindsBy(How = How.XPath, Using = "//table//tr//td[2]")]
         public IWebElement SubjectNotificationCommon;
 
+        [FindsBy(How = How.XPath, Using = "//p[contains(., 'Dear ')]")]
+        public IWebElement DearRowCommon;
+
+        [FindsBy(How = How.XPath, Using = "//p[contains(., 'Welcome ')]")]
+        public IWebElement WelcomeRowCommon;
+
+        [FindsBy(How = How.XPath, Using = "//p[contains(., 'To get started:')]")]
+        public IWebElement ToGetStartedCommon;
+
         [FindsBy(How = How.XPath, Using = "//a[contains(text(), 'HTML')]")]
         public IWebElement ButtonBodyHtml;
 
@@ -33,11 +42,23 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
 
         #region Subjects and bodies notifications when creating the users on the landlord's website
 
-        [FindsBy(How = How.XPath, Using = "//p[contains(., 'Dear ')]")]
-        public IWebElement DearFrstRwBodyCreateMarketplaceaAdmin;
+        //[FindsBy(How = How.XPath, Using = "//p[contains(., 'Dear ')]")]
+        //public IWebElement DearFrstRwBodyCreateMarketplaceaAdmin;
         
-        [FindsBy(How = How.XPath, Using = "//p[normalize-space()='Welcome to Noyo Properties NYC Real Estate!']")]
-        public IWebElement ScndRwBodyCreateMarketplaceaAdmin;
+        //[FindsBy(How = How.XPath, Using = "//p[contains(., 'Welcome ')]")]
+        //public IWebElement ScndRwBodyCreateMarketplaceaAdmin;
+
+        [FindsBy(How = How.XPath, Using = "//p[contains(., 'We are delighted')]")]
+        public IWebElement ThrdRwBodyWeAreDelightedCreateMarketplaceaAdmin;
+
+        [FindsBy(How = How.XPath, Using = "//p[contains(., '1. Copy the password:')]")]
+        public IWebElement FfthRwBodyCopyThePasswordCreateMarketplaceaAdmin;
+
+        [FindsBy(How = How.XPath, Using = "//p[contains(., '2. Click the button')]")]
+        public IWebElement SxthRwBodyClickTheButtonGetStartedCreateMarketplaceaAdmin;
+
+        //[FindsBy(How = How.XPath, Using = "//p[contains(., 'To get started:')]")]
+        //public IWebElement FrthRwBodyToGetStartedCreateMarketplaceaAdmin;
 
         #endregion
 

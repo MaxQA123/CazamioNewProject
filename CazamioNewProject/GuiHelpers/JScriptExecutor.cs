@@ -11,6 +11,7 @@ namespace CazamioNewProject.GuiHelpers
         [AllureStep("OpenNewTab")]
         public JScriptExecutor OpenNewTab()
         {
+            WaitUntil.WaitSomeInterval(5000);
             ((IJavaScriptExecutor)Browser._Driver).ExecuteScript("window.open();");
             Browser._Driver.SwitchTo().Window(Browser._Driver.WindowHandles.Last());
 

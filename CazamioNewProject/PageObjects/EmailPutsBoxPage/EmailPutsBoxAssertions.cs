@@ -19,20 +19,30 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         public EmailPutsBox VerifyComparisonSubjectNotificationCreateAdmin()
         {
             string subjectNotificationFromEmail = Pages.EmailPutsBox.GetSubjectNotificationCommon();
-            Assert.AreEqual(subjectNotificationFromEmail, emailNotificationsForMarketplaceAdmin.SubjectsAndBodiesBasic.SubjectCreatingNewMarketplaceAdminMySpace);
+            Assert.AreEqual(subjectNotificationFromEmail, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.Subject);
 
             return this;
         }
 
-        [AllureStep("VerifyComparisonBodyNotificationCreateAdmin")]
-        public EmailPutsBox VerifyComparisonBodyNotificationCreateAdmin()
+        [AllureStep("VerifyComparisonBodyNotificationCreateMarketplaceAdmin")]
+        public EmailPutsBox VerifyComparisonBodyNotificationCreateMarketplaceAdmin()
         {
             WaitUntil.WaitSomeInterval(100);
             SwitchingBetweenBrowserTabs.ThirdTabSelect();
-            WaitUntil.CustomElementIsVisible(DearFrstRwBodyCreateMarketplaceaAdmin);
-            string dearRow = Pages.EmailPutsBox.GetDearVl();
-            //string welcomeRow = ScndRwBodyCreateMarketplaceaAdmin.Text;
-            Assert.AreEqual(dearRow, emailNotificationsForMarketplaceAdmin.SubjectsAndBodiesBasic.FrstRwBodyCreatingNewMarketplaceAdminMySpace);
+            WaitUntil.CustomElementIsVisible(DearRowCommon);
+            string dearRow = Pages.EmailPutsBox.GetTextWithDearVlCommon();
+            string welcomeRow = Pages.EmailPutsBox.GetTextWithWelcomeVlCommon();
+            string weAreDelightedRow = Pages.EmailPutsBox.GetTexWeAreDelightedCreateMarketplaceaAdmin();
+            string toGetStartedRow = Pages.EmailPutsBox.GetTexToGetStartedCommon();
+            string onlyTexCopyThePasswordRow = Pages.EmailPutsBox.GetOnlyTexCopyThePassword(); //apply REGEX
+            string clickTheButtonGetStartedRow = Pages.EmailPutsBox.GetTexClickTheButtonGetStarted();
+            Assert.AreEqual(dearRow, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.FrstRwBodyDear);
+            Assert.AreEqual(welcomeRow, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.ScndRwBodyWelcome);
+            Assert.AreEqual(weAreDelightedRow, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.ThrdRwBodyWeAreDelighted);
+            Assert.AreEqual(toGetStartedRow, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.FrthRwBodyToGetStarted);
+            //Assert.AreEqual(welcomeRow, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.ScndRwBodyWelcome);
+            //Assert.AreEqual(welcomeRow, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.ScndRwBodyWelcome);
+            //Assert.AreEqual(welcomeRow, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.ScndRwBodyWelcome);
 
             return this;
         }
