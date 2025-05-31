@@ -62,7 +62,7 @@ namespace CazamioNewProject.Objects
         {
             return new BrokerEmailInfo
             {
-                FullEmailRandom = GenerateRandomData.RandomEmail(5) + GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomEmail(2) + EmailNameDomen.PUTS_BOX,
+                FullEmailRandom = "broker15" + GenerateRandomData.RandomNumberByDateTime() + EmailNameDomen.PUTS_BOX,
             };
         }
 

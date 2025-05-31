@@ -25,24 +25,44 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         }
 
         [AllureStep("VerifyComparisonBodyNotificationCreateMarketplaceAdmin")]
-        public EmailPutsBox VerifyComparisonBodyNotificationCreateMarketplaceAdmin()
+        public EmailPutsBox VerifyComparisonBodyNotificationCreateMarketplaceAdmin(string fullEmailPutsBox)
         {
             WaitUntil.WaitSomeInterval(100);
             SwitchingBetweenBrowserTabs.ThirdTabSelect();
             WaitUntil.CustomElementIsVisible(DearRowCommon);
-            string dearRow = Pages.EmailPutsBox.GetTextWithDearVlCommon();
-            string welcomeRow = Pages.EmailPutsBox.GetTextWithWelcomeVlCommon();
-            string weAreDelightedRow = Pages.EmailPutsBox.GetTexWeAreDelightedCreateMarketplaceaAdmin();
-            string toGetStartedRow = Pages.EmailPutsBox.GetTexToGetStartedCommon();
-            string onlyTexCopyThePasswordRow = Pages.EmailPutsBox.GetOnlyTexCopyThePassword(); //apply REGEX
-            string clickTheButtonGetStartedRow = Pages.EmailPutsBox.GetTexClickTheButtonGetStarted();
-            Assert.AreEqual(dearRow, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.FrstRwBodyDear);
-            Assert.AreEqual(welcomeRow, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.ScndRwBodyWelcome);
-            Assert.AreEqual(weAreDelightedRow, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.ThrdRwBodyWeAreDelighted);
-            Assert.AreEqual(toGetStartedRow, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.FrthRwBodyToGetStarted);
-            //Assert.AreEqual(welcomeRow, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.ScndRwBodyWelcome);
-            //Assert.AreEqual(welcomeRow, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.ScndRwBodyWelcome);
-            //Assert.AreEqual(welcomeRow, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.ScndRwBodyWelcome);
+            string dearRowAc = Pages.EmailPutsBox.GetTextWithDearVlCommon();
+            string welcomeRowAc = Pages.EmailPutsBox.GetTextWithWelcomeVlCommon();
+            string weAreDelightedRowAc = Pages.EmailPutsBox.GetTexWeAreDelightedCreateMarketplaceaAdmin();
+            string toGetStartedRowAc = Pages.EmailPutsBox.GetTexToGetStartedCommon();
+            string onlyTexCopyThePasswordRowAc = Pages.EmailPutsBox.GetOnlyTexCopyThePassword();
+            string passwordValueFromFfthRowTexCopyThePasswordAc = Pages.EmailPutsBox.GetPasswordValueFromFfthRowTexCopyThePassword();
+            string clickTheButtonGetStartedRowAc = Pages.EmailPutsBox.GetTexClickTheButtonGetStarted();
+            string onlyTextPasteThePasswordRowAc = Pages.EmailPutsBox.GetOnlyTexPasteThePassword();
+            string onlyPasswordFromSvnRowAc = Pages.EmailPutsBox.GetOnlyPasswordFromSvnRow();
+            string onlyTexInThePasswordFieldForLoginAc = Pages.EmailPutsBox.GetOnlyTexInThePasswordFieldForLogin();
+            string onlyTexPasteTheEmailAc = Pages.EmailPutsBox.GetOnlyTexPasteTheEmail();
+            string onlyEmailAddressFromPasteTheEmailAc = Pages.EmailPutsBox.GetOnlyEmailAddressFromPasteTheEmail();
+            string onlyTextInTheEmailFieldForLoginAc = Pages.EmailPutsBox.GetOnlyTextInTheEmailFieldForLogin();
+            string textClickTheLetsGoAc = Pages.EmailPutsBox.GetTextClickTheLetsGo();
+            string btnNameGetStartedAc = Pages.EmailPutsBox.GetBtnNameGetStarted();
+            string textPleaseContactOurSupportTeamAc = Pages.EmailPutsBox.GetTextPleaseContactOurSupportTeam();
+            string textYourAccountWasCreatedAc = Pages.EmailPutsBox.GetTextYourAccountWasCreated();
+            Assert.AreEqual(dearRowAc, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.FrstRwBodyDear);
+            Assert.AreEqual(welcomeRowAc, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.ScndRwBodyWelcome);
+            Assert.AreEqual(weAreDelightedRowAc, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.ThrdRwBodyWeAreDelighted);
+            Assert.AreEqual(toGetStartedRowAc, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.FrthRwBodyToGetStarted);
+            Assert.AreEqual(onlyTexCopyThePasswordRowAc, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.FfthRwBodyOnlyTextCopyThePassword);
+            Assert.AreEqual(clickTheButtonGetStartedRowAc, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.SxthRwBodyClickTheButtonGetStarted);
+            Assert.AreEqual(onlyTextPasteThePasswordRowAc, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.SvnthRwBodyOnlyTextPasteThePassword);
+            Assert.AreEqual(passwordValueFromFfthRowTexCopyThePasswordAc, onlyPasswordFromSvnRowAc);
+            Assert.AreEqual(onlyTexInThePasswordFieldForLoginAc, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.SvnthhRwBodyOnlyTextInThePasswordFieldForLogin);
+            Assert.AreEqual(onlyTexPasteTheEmailAc, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.EighthRwBodyOnlyTextPasteTheEmail);
+            Assert.AreEqual(onlyEmailAddressFromPasteTheEmailAc, fullEmailPutsBox);
+            Assert.AreEqual(onlyTextInTheEmailFieldForLoginAc, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.EighthRwBodyOnlyTextInTheEmailFieldForLogin);
+            Assert.AreEqual(textClickTheLetsGoAc, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.NineRwBodyClickTheLetsGoButtonToLogIn);
+            Assert.AreEqual(btnNameGetStartedAc, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.GetStartedBtnName);
+            Assert.AreEqual(textPleaseContactOurSupportTeamAc, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.TenthRwBodyPleaseContactOurSupportTeam);
+            Assert.AreEqual(textYourAccountWasCreatedAc, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.EleventhRwBodyYourAccountWasCreated);
 
             return this;
         }

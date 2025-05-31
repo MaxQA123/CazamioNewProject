@@ -10,10 +10,6 @@ using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using NUnit.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TestsEmailsLandlord
 {
@@ -22,18 +18,18 @@ namespace TestsEmailsLandlord
 
     public class EmailsLandlordTests : EmailsLandlordBase
     {
-        //Amount order 8 next must be 9
+        //Amount order 1 next must be 2
         [Test]
         [Order(1)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
-        [Retry(2)]
+        [Retry(1)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("EmailsNotificationsLandlordsMySpace")]
-        [AllureSubSuite("EmailWhenCreatingMarketplaceadmin")]
+        [AllureSubSuite("VerifyEmailWhenCreatingMarketplaceAdmin")]
 
-        public void EmailWhenCreatingMarketplaceadmin()
+        public void VerifyEmailWhenCreatingMarketplaceAdmin()
         {
             #region Test Data
 
@@ -65,15 +61,16 @@ namespace TestsEmailsLandlord
             Pages.EmailHelper
                 .OpenPutsBox(Pages.EmailPutsBox.SubjectNotificationCommon, partEmailPutsBox);
 
-            #endregion
+            string fullEmailPutsBox = Pages.EmailPutsBox.GetFullEmailFromYourPutsBoxEmailFieldInput();
 
+            #endregion
 
             #region Test
 
             Pages.EmailPutsBox
                 .VerifyComparisonSubjectNotificationCreateAdmin()
                 .ClickButtonHtml()
-                .VerifyComparisonBodyNotificationCreateMarketplaceAdmin();
+                .VerifyComparisonBodyNotificationCreateMarketplaceAdmin(fullEmailPutsBox);
 
             #endregion
 

@@ -86,7 +86,7 @@ namespace CazamioNewProject.Objects
         {
             return new AgentEmailInfo
             {
-                FullEmailRandom = GenerateRandomData.RandomEmail(5) + GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomEmail(2) + EmailNameDomen.PUTS_BOX,
+                FullEmailRandom = "agent15" + GenerateRandomData.RandomNumberByDateTime() + EmailNameDomen.PUTS_BOX,
             };
         }
 

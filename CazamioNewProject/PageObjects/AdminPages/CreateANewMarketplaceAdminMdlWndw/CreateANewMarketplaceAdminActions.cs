@@ -1,6 +1,7 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
 using NUnit.Allure.Attributes;
+using System;
 using System.Text.RegularExpressions;
 
 namespace CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdlWndw
@@ -19,15 +20,32 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateANewMarketplaceAdminMdl
             return this;
         }
 
-        [AllureStep("CopyEmailBeforeDogFromFieldInputEmail")]
-        public string CopyEmailBeforeDogFromFieldInputEmail()
+        [AllureStep("GetSymbolsBeforeDogFromFieldInputEmail")]
+        public string GetSymbolsBeforeDogFromFieldInputEmail()
         {
-            WaitUntil.WaitSomeInterval(500);
-            string copyPartEmail = FieldInputEmail.GetAttribute("value");
-            Regex regexPartEmail = new Regex(@"^..........");
-            string partEmail = regexPartEmail.Match(copyPartEmail).ToString();
+            try
+            {
+                WaitUntil.WaitSomeInterval(500);
+                string fullEmail = FieldInputEmail.GetAttribute("value");
 
-            return partEmail;
+                if (string.IsNullOrEmpty(fullEmail))
+                {
+                    throw new Exception("Email поле пустое");
+                }
+
+                Match match = Regex.Match(fullEmail, @"^([^@]+)");
+
+                if (match.Success)
+                {
+                    return match.Groups[1].Value;
+                }
+
+                throw new Exception("Не удалось извлечь часть email до символа @");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Ошибка при получении части email: {ex.Message}");
+            }
         }
 
         [AllureStep("CopyFullEmailFromFieldInputEmail")]

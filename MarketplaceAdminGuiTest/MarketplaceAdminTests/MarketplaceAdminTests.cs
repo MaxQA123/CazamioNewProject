@@ -112,7 +112,7 @@ namespace MarketplaceAdminGuiTest
                 .EnterFirstLastNamesEmail();
 
             string getFullEmail = Pages.CreateANewBrokerMdlWndw.CopyEmailFromFieldEmail();
-            string getEmailBeforeDog = Pages.CreateANewBrokerMdlWndw.CopyEmailBeforeDogFromModalWindowCreateNewBroker();
+            string getEmailBeforeDog = Pages.CreateANewBrokerMdlWndw.GetSymbolsBeforeDogFromFieldInputEmail();
 
             Pages.CreateANewBrokerMdlWndw
                 .ClickButtonCreate();
@@ -197,7 +197,7 @@ namespace MarketplaceAdminGuiTest
                 .EnterFullData();
 
             string fullEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailFromFieldEmail();
-            string partEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailBeforeDogFromModalWindowCreateNewAgent();
+            string partEmailPutsBox = Pages.CreateNewAgentMdlWndw.GetSymbolsBeforeDogFromFieldInputEmail();
 
 
             Pages.CreateNewAgentMdlWndw

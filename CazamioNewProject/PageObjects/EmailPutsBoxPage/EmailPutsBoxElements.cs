@@ -7,6 +7,12 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
     {
         #region Basic elements
 
+        [FindsBy(How = How.XPath, Using = "//a[contains(text(), 'HTML')]")]
+        public IWebElement ButtonBodyHtml;
+
+        [FindsBy(How = How.XPath, Using = "//section[@class = 'putsbox-url-box']//input[@id = 'putsbox-token-input']")]
+        public IWebElement YourPutsBoxEmailFieldInput;
+
         [FindsBy(How = How.XPath, Using = "//table//tr//td[2]")]
         public IWebElement SubjectNotificationCommon;
 
@@ -19,8 +25,8 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         [FindsBy(How = How.XPath, Using = "//p[contains(., 'To get started:')]")]
         public IWebElement ToGetStartedCommon;
 
-        [FindsBy(How = How.XPath, Using = "//a[contains(text(), 'HTML')]")]
-        public IWebElement ButtonBodyHtml;
+        [FindsBy(How = How.XPath, Using = "//td//a[text() = 'Get started']")]
+        public IWebElement GetStartedBtn;
 
         #endregion
 
@@ -42,12 +48,6 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
 
         #region Subjects and bodies notifications when creating the users on the landlord's website
 
-        //[FindsBy(How = How.XPath, Using = "//p[contains(., 'Dear ')]")]
-        //public IWebElement DearFrstRwBodyCreateMarketplaceaAdmin;
-        
-        //[FindsBy(How = How.XPath, Using = "//p[contains(., 'Welcome ')]")]
-        //public IWebElement ScndRwBodyCreateMarketplaceaAdmin;
-
         [FindsBy(How = How.XPath, Using = "//p[contains(., 'We are delighted')]")]
         public IWebElement ThrdRwBodyWeAreDelightedCreateMarketplaceaAdmin;
 
@@ -57,8 +57,20 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         [FindsBy(How = How.XPath, Using = "//p[contains(., '2. Click the button')]")]
         public IWebElement SxthRwBodyClickTheButtonGetStartedCreateMarketplaceaAdmin;
 
-        //[FindsBy(How = How.XPath, Using = "//p[contains(., 'To get started:')]")]
-        //public IWebElement FrthRwBodyToGetStartedCreateMarketplaceaAdmin;
+        [FindsBy(How = How.XPath, Using = "//p[contains(., 'Paste the password:')]")]
+        public IWebElement SvnthRwBodyPasteThePasswordCreateMarketplaceaAdmin;
+
+        [FindsBy(How = How.XPath, Using = "//p[contains(., 'Paste the email')]")]
+        public IWebElement EightthRwBodyOnlyTextPasteTheEmailCreateMarketplaceaAdmin;
+
+        [FindsBy(How = How.XPath, Using = "//p[contains(., '5. Click the ')]")]
+        public IWebElement NinethRwBodyClickTheLetsGoCreateMarketplaceaAdmin;
+
+        [FindsBy(How = How.XPath, Using = "//p[contains(., 'If you have any questions, please contact our support team')]")]
+        public IWebElement TenthRwBodyPleaseContactOurSupportTeamCreateMarketplaceaAdmin;
+
+        [FindsBy(How = How.XPath, Using = "//p[contains(., 'Your account was created')]")]
+        public IWebElement ElevnthRwBodyYourAccountWasCreatedCreateMarketplaceaAdmin;
 
         #endregion
 

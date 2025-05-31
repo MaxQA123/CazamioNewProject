@@ -75,7 +75,7 @@ namespace SuperAdminGui
                 .FillInMandatoryFields();
 
             string fullEmailPutsBox = Pages.CreateANewMarketplaceAdminMdlWindow.GetEmailFromFieldInputEmail();
-            string partEmailPutsBox = Pages.CreateANewMarketplaceAdminMdlWindow.CopyEmailBeforeDogFromFieldInputEmail();
+            string partEmailPutsBox = Pages.CreateANewMarketplaceAdminMdlWindow.GetSymbolsBeforeDogFromFieldInputEmail();
 
             Pages.CreateANewMarketplaceAdminMdlWindow
                 .ClickButtonCreate();

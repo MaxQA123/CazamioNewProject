@@ -21,6 +21,15 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
             return this;
         }
 
+        [AllureStep("GetFullEmailFromYourPutsBoxEmailFieldInput")]
+        public string GetFullEmailFromYourPutsBoxEmailFieldInput()
+        {
+            WaitUntil.CustomElementIsVisible(YourPutsBoxEmailFieldInput);
+            string fullText = YourPutsBoxEmailFieldInput.GetAttribute("value");
+
+            return fullText;
+        }
+
         #endregion
 
         [AllureStep("GetSubjectNotification")]
@@ -48,34 +57,10 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
             return fullText;
         }
 
-        [AllureStep("GetTexWeAreDelightedCreateMarketplaceaAdmin")]
-        public string GetTexWeAreDelightedCreateMarketplaceaAdmin()
+        [AllureStep("GetBtnNameGetStarted")]
+        public string GetBtnNameGetStarted()
         {
-            string fullText = ThrdRwBodyWeAreDelightedCreateMarketplaceaAdmin.Text;
-
-            return fullText;
-        }
-
-        [AllureStep("GetTexToGetStartedCommon")]
-        public string GetTexToGetStartedCommon()
-        {
-            string fullText = ToGetStartedCommon.Text;
-
-            return fullText;
-        }
-
-        [AllureStep("GetOnlyTexCopyThePassword")]
-        public string GetOnlyTexCopyThePassword()
-        {
-            string fullText = FfthRwBodyCopyThePasswordCreateMarketplaceaAdmin.Text;
-
-            return fullText;
-        }
-
-        [AllureStep("GetTexClickTheButtonGetStarted")]
-        public string GetTexClickTheButtonGetStarted()
-        {
-            string fullText = SxthRwBodyClickTheButtonGetStartedCreateMarketplaceaAdmin.Text;
+            string fullText = GetStartedBtn.Text;
 
             return fullText;
         }

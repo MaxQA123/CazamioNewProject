@@ -1,0 +1,446 @@
+{
+  "uuid": "4f190ba6-03d1-44f6-b3cf-e887a3e90a88-tr-0-1001",
+  "historyId": "TestsEmailsLandlord.EmailsLandlordTests.EmailWhenCreatingMarketplaceadmin",
+  "fullName": "TestsEmailsLandlord.EmailsLandlordTests.EmailWhenCreatingMarketplaceadmin",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "TestsEmailsLandlord"
+    },
+    {
+      "name": "testMethod",
+      "value": "EmailWhenCreatingMarketplaceadmin"
+    },
+    {
+      "name": "testClass",
+      "value": "EmailsLandlordTests"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "EmailsNotificationsLandlordsMySpace"
+    },
+    {
+      "name": "subSuite",
+      "value": "EmailWhenCreatingMarketplaceadmin"
+    }
+  ],
+  "links": [],
+  "name": "EmailWhenCreatingMarketplaceadmin",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected string length 34 but was 104. Strings differ at index 0.\r\n  Expected: \"2. Click the button \"Get started\".\"\r\n  But was:  \"If you have any questions, please contact our support team or...\"\r\n  -----------^\r\n",
+    "trace": "   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_VerifyComparisonBodyNotificationCreateMarketplaceAdmin_100663506_o(String fullEmailPutsBox) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\EmailPutsBoxPage\\EmailPutsBoxAssertions.cs:line 64\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_VerifyComparisonBodyNotificationCreateMarketplaceAdmin_100663506_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_VerifyComparisonBodyNotificationCreateMarketplaceAdmin_100663506_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.VerifyComparisonBodyNotificationCreateMarketplaceAdmin(String fullEmailPutsBox) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\EmailPutsBoxPage\\EmailPutsBoxActions.cs:line 9\r\n   at TestsEmailsLandlord.EmailsLandlordTests.EmailWhenCreatingMarketplaceadmin() in C:\\Automation\\CazamioNewProject\\TestsEmailsLandlord\\EmailsLandlordTests\\EmailsLandlordTests.cs:line 75\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "EmailWhenCreatingMarketplaceadmin",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected string length 34 but was 104. Strings differ at index 0.\r\n  Expected: \"2. Click the button \"Get started\".\"\r\n  But was:  \"If you have any questions, please contact our support team or...\"\r\n  -----------^\r\n",
+        "trace": "   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_VerifyComparisonBodyNotificationCreateMarketplaceAdmin_100663506_o(String fullEmailPutsBox) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\EmailPutsBoxPage\\EmailPutsBoxAssertions.cs:line 64\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_VerifyComparisonBodyNotificationCreateMarketplaceAdmin_100663506_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_VerifyComparisonBodyNotificationCreateMarketplaceAdmin_100663506_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.VerifyComparisonBodyNotificationCreateMarketplaceAdmin(String fullEmailPutsBox) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\EmailPutsBoxPage\\EmailPutsBoxActions.cs:line 9\r\n   at TestsEmailsLandlord.EmailsLandlordTests.EmailWhenCreatingMarketplaceadmin() in C:\\Automation\\CazamioNewProject\\TestsEmailsLandlord\\EmailsLandlordTests\\EmailsLandlordTests.cs:line 75\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "OpenNewTab",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748686039536,
+          "stop": 1748686044683
+        },
+        {
+          "name": "GetFullEmailFromYourPutsBoxEmailFieldInput",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748686054204,
+          "stop": 1748686054268
+        },
+        {
+          "name": "VerifyComparisonSubjectNotificationCreateAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetSubjectNotification",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748686054271,
+              "stop": 1748686054320
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748686054270,
+          "stop": 1748686054328
+        },
+        {
+          "name": "ClickButtonHtml",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748686054329,
+          "stop": 1748686055747
+        },
+        {
+          "name": "VerifyComparisonBodyNotificationCreateMarketplaceAdmin",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "  Expected string length 34 but was 104. Strings differ at index 0.\r\n  Expected: \"2. Click the button \"Get started\".\"\r\n  But was:  \"If you have any questions, please contact our support team or...\"\r\n  -----------^\r\n",
+            "trace": "   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)\r\n   at NUnit.Framework.Assert.AreEqual(Object expected, Object actual)\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_VerifyComparisonBodyNotificationCreateMarketplaceAdmin_100663506_o(String fullEmailPutsBox) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\EmailPutsBoxPage\\EmailPutsBoxAssertions.cs:line 64\r\n   at CazamioNewProject.PageObjects.EmailPutsBoxPage.EmailPutsBox.__a$_around_VerifyComparisonBodyNotificationCreateMarketplaceAdmin_100663506_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetTextWithDearVlCommon",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748686057945,
+              "stop": 1748686057984
+            },
+            {
+              "name": "GetTextWithWelcomeVlCommon",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748686057985,
+              "stop": 1748686058015
+            },
+            {
+              "name": "GetTexWeAreDelightedCreateMarketplaceaAdmin",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748686058018,
+              "stop": 1748686058050
+            },
+            {
+              "name": "GetTexToGetStartedCommon",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748686058051,
+              "stop": 1748686058094
+            },
+            {
+              "name": "GetOnlyTexCopyThePassword",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748686058095,
+              "stop": 1748686058135
+            },
+            {
+              "name": "GetPasswordValueFromFfthRowTexCopyThePassword",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748686058136,
+              "stop": 1748686058157
+            },
+            {
+              "name": "GetTexClickTheButtonGetStarted",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748686058158,
+              "stop": 1748686058181
+            },
+            {
+              "name": "GetOnlyTexPasteThePassword",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748686058182,
+              "stop": 1748686058217
+            },
+            {
+              "name": "GetOnlyPasswordFromSvnRow",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748686058218,
+              "stop": 1748686058246
+            },
+            {
+              "name": "GetOnlyTexInThePasswordFieldForLogin",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748686058247,
+              "stop": 1748686058276
+            },
+            {
+              "name": "GetOnlyTexPasteTheEmail",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748686058277,
+              "stop": 1748686058311
+            },
+            {
+              "name": "GetOnlyEmailAddressFromPasteTheEmail",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748686058312,
+              "stop": 1748686058339
+            },
+            {
+              "name": "GetOnlyTextInTheEmailFieldForLogin",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748686058341,
+              "stop": 1748686058366
+            },
+            {
+              "name": "GetTextClickTheLetsGo",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748686058367,
+              "stop": 1748686058396
+            },
+            {
+              "name": "GetBtnNameGetStarted",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748686058397,
+              "stop": 1748686058425
+            },
+            {
+              "name": "GetTextPleaseContactOurSupportTeam",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748686058426,
+              "stop": 1748686058445
+            },
+            {
+              "name": "GetTextYourAccountWasCreated",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748686058445,
+              "stop": 1748686058470
+            }
+          ],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "ma15053120250607@putsbox.com"
+            }
+          ],
+          "start": 1748686055748,
+          "stop": 1748686058608
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "84185a0ef70d466f82055494f0b6a70a-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1748686030295,
+      "stop": 1748686061032
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1748686030294,
+  "stop": 1748686061042
+}

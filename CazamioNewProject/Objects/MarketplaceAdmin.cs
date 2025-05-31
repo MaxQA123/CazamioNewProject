@@ -60,7 +60,7 @@ namespace CazamioNewProject.Objects
         {
             return new MarkAdmEmailInfo
             {
-                FullEmailRandom = GenerateRandomData.RandomEmail(5) + GenerateRandomData.RandomNumberWithoutZero(3) + GenerateRandomData.RandomEmail(2) + EmailNameDomen.PUTS_BOX,
+                FullEmailRandom = "ma15" + GenerateRandomData.RandomNumberByDateTime() + EmailNameDomen.PUTS_BOX,
             };
         }
 

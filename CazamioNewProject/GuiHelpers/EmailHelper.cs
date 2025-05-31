@@ -8,7 +8,7 @@ namespace CazamioNewProject.GuiHelpers
     {     
         public void OpenPutsBox(IWebElement element, string partEmailPutsBox)
         {
-            WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.WaitSomeInterval(5000);
             WebDriverWait wait = new(Browser._Driver, TimeSpan.FromSeconds(10));
             wait.PollingInterval = TimeSpan.FromSeconds(2);
             try
