@@ -1,0 +1,474 @@
+{
+  "uuid": "cb62e7d3-778f-4bac-a6ab-0a392806c6ec-tr-0-1006",
+  "historyId": "AgentBrokerGui.TestsBaseGui.AddApartmentAssignedAgBr",
+  "fullName": "AgentBrokerGui.TestsBaseGui.AddApartmentAssignedAgBr",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AgentBrokerGui"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddApartmentAssignedAgBr"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Agent-Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "AddApartmentAssignedAgBr"
+    }
+  ],
+  "links": [],
+  "name": "AddApartmentAssignedAgBr",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <cazamio-button _ngcontent-ng-c1804544571=\"\" text=\"Next\" class=\"middle primary-action relative-loader\" _nghost-ng-c1658714832=\"\">...</cazamio-button> is not clickable at point (1509, 872). Other element would receive the click: <div data-notify=\"container\" class=\"notification-template col-xs-11 col-sm-3 alert alert-warning alert-with-icon animated fadeInDown\" role=\"alert\" data-notify-position=\"bottom-right\" style=\"display: inline-block; margin: 0px auto; position: fixed; transition: 0.5s ease-in-out; z-index: 1031; bottom: 20px; right: 20px; animation-iteration-count: 1;\">...</div>\n  (Session info: chrome=137.0.7151.55)",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_ClickTwiceButtonGeneralNext_100664079_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApartmentsPage\\AddApartmentsSteps.cs:line 17\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_ClickTwiceButtonGeneralNext_100664079_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_ClickTwiceButtonGeneralNext_100664079_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.ClickTwiceButtonGeneralNext() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApartmentsPage\\AddApartmentsActions.cs:line 15\r\n   at AgentBrokerGui.TestsBaseGui.AddApartmentAssignedAgBr() in C:\\Automation\\CazamioNewProject\\AgentBrokerGui\\AgentBrokerTests\\AgentBrokerTests.cs:line 336"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "AddApartmentAssignedAgBr",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <cazamio-button _ngcontent-ng-c1804544571=\"\" text=\"Next\" class=\"middle primary-action relative-loader\" _nghost-ng-c1658714832=\"\">...</cazamio-button> is not clickable at point (1509, 872). Other element would receive the click: <div data-notify=\"container\" class=\"notification-template col-xs-11 col-sm-3 alert alert-warning alert-with-icon animated fadeInDown\" role=\"alert\" data-notify-position=\"bottom-right\" style=\"display: inline-block; margin: 0px auto; position: fixed; transition: 0.5s ease-in-out; z-index: 1031; bottom: 20px; right: 20px; animation-iteration-count: 1;\">...</div>\n  (Session info: chrome=137.0.7151.55)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_ClickTwiceButtonGeneralNext_100664079_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApartmentsPage\\AddApartmentsSteps.cs:line 17\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_ClickTwiceButtonGeneralNext_100664079_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_ClickTwiceButtonGeneralNext_100664079_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.ClickTwiceButtonGeneralNext() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApartmentsPage\\AddApartmentsActions.cs:line 15\r\n   at AgentBrokerGui.TestsBaseGui.AddApartmentAssignedAgBr() in C:\\Automation\\CazamioNewProject\\AgentBrokerGui\\AgentBrokerTests\\AgentBrokerTests.cs:line 336"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsAgentBrokerMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748707100235,
+              "stop": 1748707101752
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748707101762,
+              "stop": 1748707101826
+            },
+            {
+              "name": "VerifyAgentBrokerUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Agentus Brokerus"
+                },
+                {
+                  "name": "String",
+                  "value": "Agent"
+                }
+              ],
+              "start": 1748707101836,
+              "stop": 1748707102354
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748707097418,
+          "stop": 1748707102354
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748707102359,
+          "stop": 1748707108189
+        },
+        {
+          "name": "SearchOneOneOneAEastStPerestrian",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748707108190,
+          "stop": 1748707119249
+        },
+        {
+          "name": "SelectOneOneOneAEastStPerestrian",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748707119249,
+          "stop": 1748707123034
+        },
+        {
+          "name": "VerifyTitleBuildingViewPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748707123037,
+          "stop": 1748707126684
+        },
+        {
+          "name": "GetValueOfStringAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748707126684,
+          "stop": 1748707128764
+        },
+        {
+          "name": "GetValueOfStringBuildingName",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748707128765,
+          "stop": 1748707128816
+        },
+        {
+          "name": "VerifyBuildingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "111A East 51st Street Pedestrian Crossing"
+            },
+            {
+              "name": "String",
+              "value": "111A East 51st Street Pedestrian Crossing"
+            }
+          ],
+          "start": 1748707128817,
+          "stop": 1748707131865
+        },
+        {
+          "name": "ClickTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748707131866,
+          "stop": 1748707133667
+        },
+        {
+          "name": "ClickButtonAddInTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748707133699,
+          "stop": 1748707134561
+        },
+        {
+          "name": "EnterFullDataForOneOneOneAEastStPedestrianCrossing",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748707134596,
+          "stop": 1748707140685
+        },
+        {
+          "name": "SelectStatusSignedLease",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748707140686,
+          "stop": 1748707142175
+        },
+        {
+          "name": "SelectCurrentDatePlusOneDayAvailableFrom",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "SelectCurrentDayPlusOneDay",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748707143058,
+              "stop": 1748707144229
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748707142177,
+          "stop": 1748707144229
+        },
+        {
+          "name": "SelectAgent",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748707144229,
+          "stop": 1748707146711
+        },
+        {
+          "name": "SelectApartmentTypeLoft",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748707146712,
+          "stop": 1748707148167
+        },
+        {
+          "name": "ScrollToDownWebPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748707148168,
+          "stop": 1748707148181
+        },
+        {
+          "name": "ClickButtonSetFromBuilding",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748707148187,
+          "stop": 1748707148910
+        },
+        {
+          "name": "SetOneYearRentalTerms",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748707148911,
+          "stop": 1748707152897
+        },
+        {
+          "name": "EnterShortDescriptionInternalNotes",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748707152898,
+          "stop": 1748707154412
+        },
+        {
+          "name": "ClickTwiceButtonGeneralNext",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "element click intercepted: Element <cazamio-button _ngcontent-ng-c1804544571=\"\" text=\"Next\" class=\"middle primary-action relative-loader\" _nghost-ng-c1658714832=\"\">...</cazamio-button> is not clickable at point (1509, 872). Other element would receive the click: <div data-notify=\"container\" class=\"notification-template col-xs-11 col-sm-3 alert alert-warning alert-with-icon animated fadeInDown\" role=\"alert\" data-notify-position=\"bottom-right\" style=\"display: inline-block; margin: 0px auto; position: fixed; transition: 0.5s ease-in-out; z-index: 1031; bottom: 20px; right: 20px; animation-iteration-count: 1;\">...</div>\n  (Session info: chrome=137.0.7151.55)",
+            "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_ClickTwiceButtonGeneralNext_100664079_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApartmentsPage\\AddApartmentsSteps.cs:line 17\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApartmentsPage.AddApartments.__a$_around_ClickTwiceButtonGeneralNext_100664079_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748707154412,
+          "stop": 1748707156990
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "d61aca9574664ee6b7390f8b9c8b6157-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1748707090383,
+      "stop": 1748707159933
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1748707090382,
+  "stop": 1748707159954
+}

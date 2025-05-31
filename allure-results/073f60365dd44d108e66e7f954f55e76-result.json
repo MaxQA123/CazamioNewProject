@@ -1,0 +1,502 @@
+{
+  "uuid": "72378a34-d116-435a-abc2-4dc16b99b044-tr-0-1004",
+  "historyId": "AgentBrokerGui.TestsBaseGui.AddBuildingAssignedAgentBroker",
+  "fullName": "AgentBrokerGui.TestsBaseGui.AddBuildingAssignedAgentBroker",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AgentBrokerGui"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddBuildingAssignedAgentBroker"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Agent-Broker"
+    },
+    {
+      "name": "subSuite",
+      "value": "AddBuildingAssignedAgentBroker"
+    }
+  ],
+  "links": [],
+  "name": "AddBuildingAssignedAgentBroker",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <label class=\"mdc-label\" for=\"mat-radio-8-input\">...</label> is not clickable at point (916, 891). Other element would receive the click: <div class=\"cdk-overlay-backdrop cdk-overlay-backdrop-noop-animation mat-overlay-transparent-backdrop mat-datepicker-3-backdrop cdk-overlay-backdrop-showing\"></div>\n  (Session info: chrome=137.0.7151.55)",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_AddFreeStuffIsActiveWithoutName_100663737_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\NewBuildingPage\\NewBuildingSteps.cs:line 445\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_AddFreeStuffIsActiveWithoutName_100663737_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_AddFreeStuffIsActiveWithoutName_100663737_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.AddFreeStuffIsActiveWithoutName() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\NewBuildingPage\\NewBuildingActions.cs:line 31\r\n   at AgentBrokerGui.TestsBaseGui.AddBuildingAssignedAgentBroker() in C:\\Automation\\CazamioNewProject\\AgentBrokerGui\\AgentBrokerTests\\AgentBrokerTests.cs:line 169"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "AddBuildingAssignedAgentBroker",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <label class=\"mdc-label\" for=\"mat-radio-8-input\">...</label> is not clickable at point (916, 891). Other element would receive the click: <div class=\"cdk-overlay-backdrop cdk-overlay-backdrop-noop-animation mat-overlay-transparent-backdrop mat-datepicker-3-backdrop cdk-overlay-backdrop-showing\"></div>\n  (Session info: chrome=137.0.7151.55)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_AddFreeStuffIsActiveWithoutName_100663737_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\NewBuildingPage\\NewBuildingSteps.cs:line 445\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_AddFreeStuffIsActiveWithoutName_100663737_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_AddFreeStuffIsActiveWithoutName_100663737_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.AddFreeStuffIsActiveWithoutName() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\NewBuildingPage\\NewBuildingActions.cs:line 31\r\n   at AgentBrokerGui.TestsBaseGui.AddBuildingAssignedAgentBroker() in C:\\Automation\\CazamioNewProject\\AgentBrokerGui\\AgentBrokerTests\\AgentBrokerTests.cs:line 169"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsAgentBrokerMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748705901784,
+              "stop": 1748705903069
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748705903078,
+              "stop": 1748705903194
+            },
+            {
+              "name": "VerifyAgentBrokerUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Agentus Brokerus"
+                },
+                {
+                  "name": "String",
+                  "value": "Agent"
+                }
+              ],
+              "start": 1748705903202,
+              "stop": 1748705903710
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748705896801,
+          "stop": 1748705903710
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748705903717,
+          "stop": 1748705909538
+        },
+        {
+          "name": "ClickButtonAddBuilding",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748705909539,
+          "stop": 1748705920432
+        },
+        {
+          "name": "VerifyTitleListOfBuildingsPg",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748705920439,
+          "stop": 1748705921536
+        },
+        {
+          "name": "SelectOwnerTenantPaysCommissionAgent",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748705921537,
+          "stop": 1748705932951
+        },
+        {
+          "name": "EnterBuildingDataEast51stStreetPedestrianCrossing",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748705932952,
+          "stop": 1748705937365
+        },
+        {
+          "name": "ClickFieldInputInternalNotes",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748705937365,
+          "stop": 1748705938113
+        },
+        {
+          "name": "GetValueFromFieldAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748705938116,
+          "stop": 1748705938166
+        },
+        {
+          "name": "GetValueFromFieldCreditScreeningFee",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748705938180,
+          "stop": 1748705938234
+        },
+        {
+          "name": "VerifyValueByDefaulScreeningFee",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "20"
+            }
+          ],
+          "start": 1748705938238,
+          "stop": 1748705938238
+        },
+        {
+          "name": "ClickBtnSelectPaymentMethodsForCreditScreeningFee",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748705938239,
+          "stop": 1748705939005
+        },
+        {
+          "name": "SelectPaymentMethodAch",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyMessagePaymentMethodsSelected",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748705940577,
+              "stop": 1748705947655
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748705939009,
+          "stop": 1748705947655
+        },
+        {
+          "name": "ClickThreeTimesButtonGeneralNext",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748705947661,
+          "stop": 1748705949901
+        },
+        {
+          "name": "ClickTabFreeStuff",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748705949902,
+          "stop": 1748705950647
+        },
+        {
+          "name": "ClickButtonAddSpecials",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748705950647,
+          "stop": 1748705951396
+        },
+        {
+          "name": "AddFreeStuffInActive",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "SelectCurrentDay",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748705956115,
+              "stop": 1748705957257
+            },
+            {
+              "name": "SelectCurrentDay",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748705958268,
+              "stop": 1748705959416
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748705951396,
+          "stop": 1748705961031
+        },
+        {
+          "name": "ClickButtonAddSpecials",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748705961031,
+          "stop": 1748705961778
+        },
+        {
+          "name": "AddFreeStuffIsActiveWithoutName",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "element click intercepted: Element <label class=\"mdc-label\" for=\"mat-radio-8-input\">...</label> is not clickable at point (916, 891). Other element would receive the click: <div class=\"cdk-overlay-backdrop cdk-overlay-backdrop-noop-animation mat-overlay-transparent-backdrop mat-datepicker-3-backdrop cdk-overlay-backdrop-showing\"></div>\n  (Session info: chrome=137.0.7151.55)",
+            "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 30\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_AddFreeStuffIsActiveWithoutName_100663737_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\NewBuildingPage\\NewBuildingSteps.cs:line 445\r\n   at CazamioNewProject.PageObjects.AdminPages.NewBuildingPage.NewBuilding.__a$_around_AddFreeStuffIsActiveWithoutName_100663737_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "SelectCurrentDay",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748705965734,
+              "stop": 1748705966881
+            },
+            {
+              "name": "SelectCurrentDayPlusOneDay",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1748705967770,
+              "stop": 1748705968904
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1748705961778,
+          "stop": 1748705970869
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "d6a281911ba04c9e85c755c0b51fc681-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1748705893719,
+      "stop": 1748705973755
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1748705893719,
+  "stop": 1748705973755
+}

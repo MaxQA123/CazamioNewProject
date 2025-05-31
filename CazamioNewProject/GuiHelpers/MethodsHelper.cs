@@ -59,9 +59,8 @@ namespace CazamioNewProject.GuiHelpers
             WaitUntil.WaitSomeInterval(1000);
             List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
 
-            if (tabsList.Count >= 2) // Проверяем, что есть хотя бы 2 вкладки
+            if (tabsList.Count >= 2) 
             {
-                // Закрываем вторую вкладку (индекс 1)
                 Browser._Driver.SwitchTo().Window(tabsList[1]).Close();
             }
             else
