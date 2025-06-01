@@ -6,6 +6,7 @@ using System;
 using CazamioNewProject.DbHelpers.AspNetUsersTable;
 using CazamioNewProject.DbHelpers.BuildingsTable;
 using CazamioNewProject.DbHelpers.ApartmentsTable;
+using CazamioNewProject.DbHelpers.Marketplaces;
 
 namespace DbTests
 {
@@ -14,6 +15,19 @@ namespace DbTests
 
     public class TenantCreatorDb : DbBase
     {
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Demo")]
+
+        public void Demo()
+        {
+            var fullData = MarketplacesDbRequests.MarketplacesDbTable.GetFullDataByMarketplaceMySpace();
+            Console.WriteLine($"{fullData.Brand}");
+        }
+
         [Test]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
@@ -52,8 +66,8 @@ namespace DbTests
 
         public void GetLastApartmentId()
         {
-            var apartmentId = ApartmentsDbRequests.ApartmentsDbTable.GetLastApartmentId();
-            Console.WriteLine($"{apartmentId.Id}");
+            //var apartmentId = ApartmentsDbRequests.ApartmentsDbTable.GetLastApartmentId();
+            //Console.WriteLine($"{apartmentId.Id}");
         }
 
         [Test]
@@ -65,8 +79,8 @@ namespace DbTests
 
         public void GetLastApartmentApplicationtId()
         {
-            var apartmentApplicationId = ApartmentApplicationsDbRequests.ApartmentApplicationsDbTable.GetLastApartmentApplicationId();
-            Console.WriteLine($"{apartmentApplicationId.Id}");
+            //var apartmentApplicationId = ApartmentApplicationsDbRequests.ApartmentApplicationsDbTable.GetLastApartmentApplicationId();
+            //Console.WriteLine($"{apartmentApplicationId.Id}");
         }
     }
 }

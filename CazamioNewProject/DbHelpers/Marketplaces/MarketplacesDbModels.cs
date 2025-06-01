@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CazamioNewProject.DbHelpers.ApartmentsTable
+namespace CazamioNewProject.DbHelpers.Marketplaces
 {
-    public class DemoDbModels
+    public class MarketplacesDbModels
     {
         public object? Id { get; set; } // this might be another data type
         public object? Subdomain { get; set; }

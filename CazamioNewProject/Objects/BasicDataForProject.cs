@@ -8,6 +8,7 @@ namespace CazamioNewProject.Objects
         public UserRolesInfo UserRoles { get; set; }
         public SubdomainMarketplaceInfo SubdomainMarketplace { get; set; }
         public IdOfMarketplacesInfo IdOfMarketplaces { get; set; }
+        public SettingsMarketplaceMySpaceInfo SettingsMarketplaceMySpace { get; set; }
 
         public static BasicDataForProject Generate()
         {
@@ -17,6 +18,7 @@ namespace CazamioNewProject.Objects
                 UserRoles = CreateUserRolesInfo(),
                 SubdomainMarketplace = CreateSubdomainMarketplaceInfo(),
                 IdOfMarketplaces = CreateIdOfMarketplacesInfo(),
+                SettingsMarketplaceMySpace = CreateSettingsMarketplaceMySpaceInfo(),
             };
         }
 
@@ -47,6 +49,21 @@ namespace CazamioNewProject.Objects
             public string Evergreen { get; set; }
             public string Doorway { get; set; }
             public string Jrzee { get; set; }
+        }
+
+        public class SettingsMarketplaceMySpaceInfo
+        {
+            public string BrandLogo { get; set; }
+            public string BrandName { get; set; }
+            public string Ownername { get; set; }
+            public string CompanyFullLegalName { get; set; }
+            public string Address { get; set; }
+            public string PhoneNumber { get; set; }
+            public string FacebookLink { get; set; }
+            public string TwitterLink { get; set; }
+            public string YouTubeLink { get; set; }
+            public string LinkedInLink { get; set; }
+            public string InstagramLink { get; set; }
         }
 
         private static PasswordsInfo CreatePasswordsInfo()
@@ -87,6 +104,24 @@ namespace CazamioNewProject.Objects
                 Evergreen = "17",
                 Doorway = "18",
                 Jrzee = "19",
+            };
+        }
+
+        private static SettingsMarketplaceMySpaceInfo CreateSettingsMarketplaceMySpaceInfo()
+        {
+            return new SettingsMarketplaceMySpaceInfo
+            {
+                BrandLogo = "",
+                BrandName = "Noyo Properties NYC",
+                Ownername = "Sarah Santranedo",
+                CompanyFullLegalName = "LLC MySpace NYC",
+                Address = "260 5th Avenue New York NY 10001",
+                PhoneNumber = "6363680286",
+                FacebookLink = "",
+                TwitterLink = "",
+                YouTubeLink = "",
+                LinkedInLink = "",
+                InstagramLink = "",
             };
         }
     }

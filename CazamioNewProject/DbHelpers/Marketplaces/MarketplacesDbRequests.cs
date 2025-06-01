@@ -1,65 +1,46 @@
-﻿using CazamioNewProject.GuiHelpers; // Вспомогательные утилиты проекта
-using CazamioNewProject.Objects;   // Модели данных
+﻿using CazamioNewProject.GuiHelpers;
+using CazamioNewProject.Objects;
 using System;
-using System.Data.SqlClient;      // Работа с SQL Server
+using System.Data.SqlClient;
 
-namespace CazamioNewProject.DbHelpers.ApartmentsTable
+namespace CazamioNewProject.DbHelpers.Marketplaces
 {
-    public class DemoDbRequests
+    public class MarketplacesDbRequests
     {
-        //DemoDbModels
-        // Универсальный метод: безопасно получает значение из SqlDataReader
-        // Если ячейка NULL — возвращает defaultValue (по умолчанию null или 0)
         private static T GetValueOrDefault<T>(SqlDataReader reader, int index, T defaultValue = default(T))
         {
             if (!reader.IsDBNull(index))
             {
-                return (T)reader.GetValue(index); // Если есть значение — возвращаем приведённое
+                return (T)reader.GetValue(index);
             }
             else
             {
-                return defaultValue; // Иначе возвращаем значение по умолчанию
+                return defaultValue;
             }
         }
 
-        public class TableNameDbTable
+        public class MarketplacesDbTable
         {
-            // Метод: возвращает полную строку из таблицы Marketplaces по поддомену "MySpace"
-            public static DemoDbModels GetFullDataByMarketplaceMySpace()
+            public static MarketplacesDbModels GetFullDataByMarketplaceMySpace()
             {
-                // Получение тестовых/предустановленных данных, включая поддомен "MySpace"
                 BasicDataForProject basicDataForProject = BasicDataForProject.Generate();
+                var row = new MarketplacesDbModels();
 
-                // Объект модели, в который будут записаны значения из БД
-                var row = new DemoDbModels();
-
-                // SQL-запрос на выборку всех колонок, где Subdomain = нужный
                 string query = @"
-                               SELECT *
+                               SELECT Brand
                                FROM Marketplaces
                                WHERE Subdomain = @subdomain";
-
                 try
                 {
-                    // Открытие соединения с БД по строке подключения
                     using SqlConnection connection = new(ConnectionDb.GET_CONNECTION_STRING_TO_DB);
-
-                    // Подготовка команды SQL
                     using SqlCommand command = new(query, connection);
 
-                    // Передаём значение параметра @subdomain
                     command.Parameters.AddWithValue("@subdomain", basicDataForProject.SubdomainMarketplace.MySpace);
-
-                    // Открываем подключение
                     connection.Open();
 
-                    // Выполняем запрос и читаем результат
                     using SqlDataReader reader = command.ExecuteReader();
-
-                    // Если строка найдена
                     if (reader.Read())
                     {
-                        // Последовательно заполняем поля модели
                         row.Id = GetValueOrDefault<long>(reader, 0);
                         row.Subdomain = GetValueOrDefault<string>(reader, 1);
                         row.CreationDate = GetValueOrDefault<DateTime?>(reader, 2);
@@ -90,16 +71,13 @@ namespace CazamioNewProject.DbHelpers.ApartmentsTable
                 }
                 catch (Exception ex)
                 {
-                    // Если произошла ошибка при работе с БД — кидаем исключение с подробностями
                     throw new ArgumentException($"Error retrieving marketplace data: {ex.Message}\r\n{ex.StackTrace}");
                 }
                 finally
                 {
-                    // Очищаем все SQL-пулы соединений — на случай зависших подключений
                     SqlConnection.ClearAllPools();
                 }
 
-                // Возвращаем объект с полученными из БД значениями
                 return row;
             }
         }

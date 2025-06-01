@@ -16,6 +16,7 @@ namespace CazamioNewProject.Objects
 
         public class SubjectAndBodyCreatingMarketplaceAdminInfo
         {
+            public string SubjectExample { get; set; }
             public string Subject { get; set; }
             public string FrstRwBodyDear { get; set; }
             public string ScndRwBodyWelcome { get; set; }
@@ -37,6 +38,7 @@ namespace CazamioNewProject.Objects
         {
             return new SubjectAndBodyCreatingMarketplaceAdminInfo
             {
+                SubjectExample = "Welcome Aboard as a <User role who created> at <Brand name marketplace>!",
                 Subject = "Welcome Aboard as a Marketplace Admin at Noyo Properties NYC!",
                 FrstRwBodyDear = "Dear BaryQa,",
                 ScndRwBodyWelcome = "Welcome to Noyo Properties NYC Real Estate!",

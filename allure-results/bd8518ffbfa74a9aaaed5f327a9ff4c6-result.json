@@ -1,0 +1,87 @@
+{
+  "uuid": "46b3599f-4fb5-465e-8c6b-f37b4224d87b-tr-0-1001",
+  "historyId": "DbTests.TenantCreatorDb.Demo",
+  "fullName": "DbTests.TenantCreatorDb.Demo",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "DbTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "Demo"
+    },
+    {
+      "name": "testClass",
+      "value": "TenantCreatorDb"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Demo"
+    }
+  ],
+  "links": [],
+  "name": "Demo",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.ArgumentException : Error retrieving marketplace data: Index was outside the bounds of the array.\r\n   at System.Data.SqlClient.SqlDataReader.CheckHeaderIsReady(Int32 columnIndex, Boolean permitAsync, String methodName)\r\n   at System.Data.SqlClient.SqlDataReader.IsDBNull(Int32 i)\r\n   at CazamioNewProject.DbHelpers.Marketplaces.MarketplacesDbRequests.GetValueOrDefault[T](SqlDataReader reader, Int32 index, T defaultValue) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\DbHelpers\\Marketplaces\\MarketplacesDbRequests.cs:line 12\r\n   at CazamioNewProject.DbHelpers.Marketplaces.MarketplacesDbRequests.MarketplacesDbTable.GetFullDataByMarketplaceMySpace() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\DbHelpers\\Marketplaces\\MarketplacesDbRequests.cs:line 57",
+    "trace": "   at CazamioNewProject.DbHelpers.Marketplaces.MarketplacesDbRequests.MarketplacesDbTable.GetFullDataByMarketplaceMySpace() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\DbHelpers\\Marketplaces\\MarketplacesDbRequests.cs:line 74\r\n   at DbTests.TenantCreatorDb.Demo() in C:\\Automation\\CazamioNewProject\\DbTests\\DbTests\\TenantCreatorDb.cs:line 27"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Demo",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.ArgumentException : Error retrieving marketplace data: Index was outside the bounds of the array.\r\n   at System.Data.SqlClient.SqlDataReader.CheckHeaderIsReady(Int32 columnIndex, Boolean permitAsync, String methodName)\r\n   at System.Data.SqlClient.SqlDataReader.IsDBNull(Int32 i)\r\n   at CazamioNewProject.DbHelpers.Marketplaces.MarketplacesDbRequests.GetValueOrDefault[T](SqlDataReader reader, Int32 index, T defaultValue) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\DbHelpers\\Marketplaces\\MarketplacesDbRequests.cs:line 12\r\n   at CazamioNewProject.DbHelpers.Marketplaces.MarketplacesDbRequests.MarketplacesDbTable.GetFullDataByMarketplaceMySpace() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\DbHelpers\\Marketplaces\\MarketplacesDbRequests.cs:line 57",
+        "trace": "   at CazamioNewProject.DbHelpers.Marketplaces.MarketplacesDbRequests.MarketplacesDbTable.GetFullDataByMarketplaceMySpace() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\DbHelpers\\Marketplaces\\MarketplacesDbRequests.cs:line 74\r\n   at DbTests.TenantCreatorDb.Demo() in C:\\Automation\\CazamioNewProject\\DbTests\\DbTests\\TenantCreatorDb.cs:line 27"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "ce111da2754a4e82b0c019aad9cb6274-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1748767468775,
+      "stop": 1748767470331
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1748767468774,
+  "stop": 1748767470346
+}

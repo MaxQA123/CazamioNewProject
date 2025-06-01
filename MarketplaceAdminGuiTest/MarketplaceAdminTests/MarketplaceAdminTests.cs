@@ -21,7 +21,7 @@ namespace MarketplaceAdminGuiTest
 
     public class TestsBaseGui : MarketplaceAdminBase
     {
-        //Amount order 15 next must be 16
+        //Amount order 16 next must be 17
         [Test]
         [Order(1)]
         [AllureTag("Regression")]
@@ -44,6 +44,34 @@ namespace MarketplaceAdminGuiTest
 
         [Test]
         [Order(2)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("MarketplaceAdmin")]
+        [AllureSubSuite("SettingsMarketplacePage")]
+
+        public void SettingsMarketplacePage()
+        {
+            #region Precinditions GUI
+
+            Pages.LogInLandlord
+                .LogInAsMarketplaceAdminMySpace();
+            Pages.SidebarLandlord
+                .ClickButtonMarketplace();
+
+            #endregion
+
+            #region Test
+
+            
+
+            #endregion
+        }
+
+        [Test]
+        [Order(3)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -76,7 +104,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(4)]
+        [Order(5)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -163,7 +191,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(3)]
+        [Order(4)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -244,7 +272,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(6)]
+        [Order(8)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -312,7 +340,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(5)]
+        [Order(7)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -386,7 +414,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(7)]
+        [Order(11)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -508,7 +536,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(8)]
+        [Order(10)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -634,7 +662,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(11)]
+        [Order(13)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -761,7 +789,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(10)]
+        [Order(12)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -853,7 +881,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(12)]
+        [Order(14)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -962,7 +990,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(13)]
+        [Order(15)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -1078,7 +1106,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(14)]
+        [Order(6)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -1117,7 +1145,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(15)]
+        [Order(16)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
