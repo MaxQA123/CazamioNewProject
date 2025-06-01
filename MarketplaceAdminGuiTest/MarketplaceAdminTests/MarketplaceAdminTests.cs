@@ -60,6 +60,8 @@ namespace MarketplaceAdminGuiTest
                 .LogInAsMarketplaceAdminMySpace();
             Pages.SidebarLandlord
                 .ClickButtonMarketplace();
+            Pages.Marketplace
+                .FillInBrandNameAndDisclosureInformation();
 
             #endregion
 

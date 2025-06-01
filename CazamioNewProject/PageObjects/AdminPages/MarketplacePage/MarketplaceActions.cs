@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CazamioNewProject.Objects;
 
 namespace CazamioNewProject.PageObjects.AdminPages.MarketplacePage
 {
     public partial class Marketplace
     {
+        BasicDataForProject basicDataForProject = BasicDataForProject.Generate();
     }
 }
