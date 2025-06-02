@@ -60,14 +60,15 @@ namespace MarketplaceAdminGuiTest
                 .LogInAsMarketplaceAdminMySpace();
             Pages.SidebarLandlord
                 .ClickButtonMarketplace();
-            Pages.Marketplace
-                .FillInBrandNameAndDisclosureInformation();
 
             #endregion
 
             #region Test
 
-            
+            Pages.Marketplace
+                .FillInBrandNameAndDisclosureInformation();
+
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
         }
@@ -101,6 +102,8 @@ namespace MarketplaceAdminGuiTest
                 .MakeLogOut();
             Pages.LogInLandlord
                 .VerifyTitle();
+
+            WaitUntil.WaitSomeInterval(1000);
 
             #endregion
         }

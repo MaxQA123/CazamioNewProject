@@ -38,7 +38,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.MarketplacePage
         [FindsBy(How = How.XPath, Using = ("//app-disclosure//input[@formcontrolname = 'phoneNumber']"))]
         public IWebElement PhoneNumberInputField;
 
-        [FindsBy(How = How.XPath, Using = (""))]
+        [FindsBy(How = How.XPath, Using = ("//app-disclosure//button[@title= 'Save']"))]
         public IWebElement SaveBtnForDisclosureInformationSection;
 
         [FindsBy(How = How.XPath, Using = ("//h3[text() = 'Social links']"))]

@@ -53,8 +53,8 @@ namespace CazamioNewProject.Objects
 
         public class SettingsMarketplaceMySpaceInfo
         {
-            public string BrandLogo { get; set; }
-            public string BrandName { get; set; }
+            public string BrandNameFirst { get; set; }
+            public string BrandNameSecond { get; set; }
             public string Ownername { get; set; }
             public string CompanyFullLegalName { get; set; }
             public string Address { get; set; }
@@ -111,12 +111,12 @@ namespace CazamioNewProject.Objects
         {
             return new SettingsMarketplaceMySpaceInfo
             {
-                BrandLogo = "",
-                BrandName = "Noyo Properties NYC",
-                Ownername = "Sarah Santranedo",
+                BrandNameFirst = "Noyo Properties NYC",
+                BrandNameSecond = "MySpace NYC",
+                Ownername = "Owner-MySpace Erik",
                 CompanyFullLegalName = "LLC MySpace NYC",
-                Address = "260 5th Avenue New York NY 10001",
-                PhoneNumber = "6363680286",
+                Address = "340-350 Patchen Avenue, Brooklyn, Bedford-Stuyvesant, NY, 15002",
+                PhoneNumber = "2120981234",
                 FacebookLink = "",
                 TwitterLink = "",
                 YouTubeLink = "",
