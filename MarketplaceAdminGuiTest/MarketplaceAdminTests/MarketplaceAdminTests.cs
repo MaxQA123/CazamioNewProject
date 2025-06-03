@@ -5,6 +5,7 @@ using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.Log
 using CazamioNewProject.DbHelpers.AspNetUsersTable;
 using CazamioNewProject.DbHelpers.BrokersAgentsTable;
 using CazamioNewProject.DbHelpers.LandlordsBrokersTable;
+using CazamioNewProject.DbHelpers.Marketplaces;
 using CazamioNewProject.DbHelpers.OwnersDbTable;
 using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
@@ -75,6 +76,27 @@ namespace MarketplaceAdminGuiTest
 
         [Test]
         [Order(3)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("MarketplaceAdmin")]
+        [AllureSubSuite("SettingsMarketplaceViaApiDb")]
+
+        public void SettingsMarketplaceViaApiDb()
+        {
+            #region Update the brand name MySpace via DB
+
+            MarketplacesDbRequests.MarketplacesDbTable.UpdateBrandForMarketplaceMySpace();
+
+            WaitUntil.WaitSomeInterval(1000);
+
+            #endregion
+        }
+
+        [Test]
+        [Order(4)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -196,7 +218,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(4)]
+        [Order(6)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -277,7 +299,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(8)]
+        [Order(7)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -345,7 +367,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(7)]
+        [Order(8)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -419,7 +441,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(11)]
+        [Order(9)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -616,7 +638,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(9)]
+        [Order(11)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -667,7 +689,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(13)]
+        [Order(12)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -794,7 +816,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(12)]
+        [Order(13)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -1111,7 +1133,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(6)]
+        [Order(16)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -1150,7 +1172,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(16)]
+        [Order(17)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]

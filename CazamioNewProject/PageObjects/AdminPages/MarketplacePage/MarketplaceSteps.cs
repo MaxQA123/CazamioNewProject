@@ -15,16 +15,21 @@ namespace CazamioNewProject.PageObjects.AdminPages.MarketplacePage
             WaitUntil.CustomElementIsVisible(SaveBtnForChangeBrandNameInputField);
             WaitUntil.CustomElementIsClickable(SaveBtnForChangeBrandNameInputField);
             Button.Click(SaveBtnForChangeBrandNameInputField);
+            Pages.ToasterMessagesLandlord
+                .VerifyMessageBrandNameHasBeenSaveddSuccessfully();
             InputGeneral.InputFunctionWithClear(ChangeBrandNameInputField, basicDataForProject.SettingsMarketplaceMySpace.BrandNameFirst);
             WaitUntil.CustomElementIsVisible(SaveBtnForChangeBrandNameInputField);
             WaitUntil.CustomElementIsClickable(SaveBtnForChangeBrandNameInputField);
             Button.Click(SaveBtnForChangeBrandNameInputField);
+            Pages.ToasterMessagesLandlord
+                .VerifyMessageBrandNameHasBeenSaveddSuccessfully();
             InputGeneral.InputFunctionWithClear(OwnerNameInputField, basicDataForProject.SettingsMarketplaceMySpace.Ownername);
             InputGeneral.InputFunctionWithClear(CompanyFullLegalNameInputField, basicDataForProject.SettingsMarketplaceMySpace.CompanyFullLegalName);
             InputGeneral.InputFunctionWithClear(AddressInputField, basicDataForProject.SettingsMarketplaceMySpace.Address);
             InputGeneral.InputFunctionWithClear(PhoneNumberInputField, basicDataForProject.SettingsMarketplaceMySpace.PhoneNumber);
-            //KeyBoardActions.ClickTab();
             Button.Click(SaveBtnForDisclosureInformationSection);
+            Pages.ToasterMessagesLandlord
+                .VerifyMessageDisclosureЫavedЫuccessfully();
 
             return this;
         }

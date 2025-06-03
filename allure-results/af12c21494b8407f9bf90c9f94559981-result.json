@@ -1,0 +1,87 @@
+{
+  "uuid": "494d9388-a895-48e2-bde3-33256f275759-tr-0-1001",
+  "historyId": "DbTests.TenantCreatorDb.Demo",
+  "fullName": "DbTests.TenantCreatorDb.Demo",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "DbTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "Demo"
+    },
+    {
+      "name": "testClass",
+      "value": "TenantCreatorDb"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Demo"
+    }
+  ],
+  "links": [],
+  "name": "Demo",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.ArgumentException : Error retrieving marketplace data: Unable to cast object of type 'System.Int64' to type 'System.String'.\r\n   at CazamioNewProject.DbHelpers.Marketplaces.MarketplacesDbRequests.GetValueOrDefault[T](SqlDataReader reader, Int32 index, T defaultValue) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\DbHelpers\\MarketplacesTable\\MarketplacesDbRequests.cs:line 14\r\n   at CazamioNewProject.DbHelpers.Marketplaces.MarketplacesDbRequests.MarketplacesDbTable.GetFullDataByMarketplaceMySpace() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\DbHelpers\\MarketplacesTable\\MarketplacesDbRequests.cs:line 67",
+    "trace": "   at CazamioNewProject.DbHelpers.Marketplaces.MarketplacesDbRequests.MarketplacesDbTable.GetFullDataByMarketplaceMySpace() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\DbHelpers\\MarketplacesTable\\MarketplacesDbRequests.cs:line 80\r\n   at DbTests.TenantCreatorDb.Demo() in C:\\Automation\\CazamioNewProject\\DbTests\\DbTests\\TenantCreatorDb.cs:line 27"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Demo",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.ArgumentException : Error retrieving marketplace data: Unable to cast object of type 'System.Int64' to type 'System.String'.\r\n   at CazamioNewProject.DbHelpers.Marketplaces.MarketplacesDbRequests.GetValueOrDefault[T](SqlDataReader reader, Int32 index, T defaultValue) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\DbHelpers\\MarketplacesTable\\MarketplacesDbRequests.cs:line 14\r\n   at CazamioNewProject.DbHelpers.Marketplaces.MarketplacesDbRequests.MarketplacesDbTable.GetFullDataByMarketplaceMySpace() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\DbHelpers\\MarketplacesTable\\MarketplacesDbRequests.cs:line 67",
+        "trace": "   at CazamioNewProject.DbHelpers.Marketplaces.MarketplacesDbRequests.MarketplacesDbTable.GetFullDataByMarketplaceMySpace() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\DbHelpers\\MarketplacesTable\\MarketplacesDbRequests.cs:line 80\r\n   at DbTests.TenantCreatorDb.Demo() in C:\\Automation\\CazamioNewProject\\DbTests\\DbTests\\TenantCreatorDb.cs:line 27"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "8df0b50cb88d483d921bddd9eba6c4a7-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1748959132933,
+      "stop": 1748959135617
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1748959132929,
+  "stop": 1748959135628
+}

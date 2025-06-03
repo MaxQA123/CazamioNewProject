@@ -24,8 +24,8 @@ namespace DbTests
 
         public void Demo()
         {
-            var fullData = MarketplacesDbRequests.MarketplacesDbTable.GetFullDataByMarketplaceMySpace();
-            Console.WriteLine($"{fullData.Brand}");
+            var fullData = MarketplacesDbRequests.MarketplacesDbTable.UpdateBrandForMarketplaceMySpace();
+            Console.WriteLine($"{fullData}");
         }
 
         [Test]

@@ -84,5 +84,17 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
         public IWebElement MessageApplicationEditSuccessful;
 
         #endregion
+
+        #region For marketplace page Success toasters 
+
+        //Appeared when updating a brand name
+        [FindsBy(How = How.XPath, Using = "//span[text() = 'Brand name has been saved successfully']")]
+        public IWebElement MessageBrandNameHasBeenSaveddSuccessfully;
+
+        //Appeared when updating a brand name
+        [FindsBy(How = How.XPath, Using = "//span[text() = 'Disclosure saved successfully']")]
+        public IWebElement MessageDisclosureЫavedЫuccessfully;
+
+        #endregion
     }
 }

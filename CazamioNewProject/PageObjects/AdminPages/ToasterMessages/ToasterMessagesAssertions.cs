@@ -124,6 +124,28 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
+        [AllureStep("VerifyMessageBrandNameHasBeenSaveddSuccessfully")]
+        public ToasterMessagesLandlord VerifyMessageBrandNameHasBeenSaveddSuccessfully()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageBrandNameHasBeenSaveddSuccessfully));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageBrandNameHasBeenSaveddSuccessfully));
+
+            return this;
+        }
+
+        [AllureStep("VerifyMessageDisclosureЫavedЫuccessfully")]
+        public ToasterMessagesLandlord VerifyMessageDisclosureЫavedЫuccessfully()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageDisclosureЫavedЫuccessfully));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageDisclosureЫavedЫuccessfully));
+
+            return this;
+        }
+
         #endregion
     }
 }
