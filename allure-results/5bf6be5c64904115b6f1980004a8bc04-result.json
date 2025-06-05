@@ -1,0 +1,680 @@
+{
+  "uuid": "e3cc72ed-9e40-4e19-9965-1c56b7840ec7-tr-0-1017",
+  "historyId": "MarketplaceAdminGuiTest.TestsBaseGui.EditApplicationNineNineNineEightSaintJohnsonPlace",
+  "fullName": "MarketplaceAdminGuiTest.TestsBaseGui.EditApplicationNineNineNineEightSaintJohnsonPlace",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "MarketplaceAdminGuiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "EditApplicationNineNineNineEightSaintJohnsonPlace"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "MarketplaceAdmin"
+    },
+    {
+      "name": "subSuite",
+      "value": "EditApplicationNineNineNineEightSaintJohnsonPlace"
+    }
+  ],
+  "links": [],
+  "name": "EditApplicationNineNineNineEightSaintJohnsonPlace",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+    "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 29\r\n   at CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw.EditApplicationMdlWndw.__a$_around_EditApplicationNineNineNineEightSaintJohnsonPlace_100663844_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\EditApplicationMdlWndw\\EditApplicationSteps.cs:line 55\r\n   at CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw.EditApplicationMdlWndw.__a$_around_EditApplicationNineNineNineEightSaintJohnsonPlace_100663844_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw.EditApplicationMdlWndw.__a$_around_EditApplicationNineNineNineEightSaintJohnsonPlace_100663844_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw.EditApplicationMdlWndw.EditApplicationNineNineNineEightSaintJohnsonPlace() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\EditApplicationMdlWndw\\EditApplicationSteps.cs:line 23\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.EditApplicationNineNineNineEightSaintJohnsonPlace() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 1252"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "EditApplicationNineNineNineEightSaintJohnsonPlace",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+        "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 29\r\n   at CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw.EditApplicationMdlWndw.__a$_around_EditApplicationNineNineNineEightSaintJohnsonPlace_100663844_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\EditApplicationMdlWndw\\EditApplicationSteps.cs:line 55\r\n   at CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw.EditApplicationMdlWndw.__a$_around_EditApplicationNineNineNineEightSaintJohnsonPlace_100663844_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw.EditApplicationMdlWndw.__a$_around_EditApplicationNineNineNineEightSaintJohnsonPlace_100663844_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw.EditApplicationMdlWndw.EditApplicationNineNineNineEightSaintJohnsonPlace() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\EditApplicationMdlWndw\\EditApplicationSteps.cs:line 23\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.EditApplicationNineNineNineEightSaintJohnsonPlace() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 1252"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "VerifyUserData",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "ResponseLogInApiBroker",
+              "value": "CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.LogInApiBroker.ResponseLogInApiBroker"
+            },
+            {
+              "name": "Broker",
+              "value": "CazamioNewProject.Objects.Broker"
+            }
+          ],
+          "start": 1749133483906,
+          "stop": 1749133483929
+        },
+        {
+          "name": "LogInAsMarketplaceAdminMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1749133489967,
+              "stop": 1749133491438
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1749133491450,
+              "stop": 1749133491623
+            },
+            {
+              "name": "VerifyMarketplaceAdminUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Mark Adm"
+                },
+                {
+                  "name": "String",
+                  "value": "Marketplace Admin"
+                }
+              ],
+              "start": 1749133491637,
+              "stop": 1749133492155
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1749133486380,
+          "stop": 1749133492155
+        },
+        {
+          "name": "ClickButtonBuildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1749133492177,
+          "stop": 1749133498757
+        },
+        {
+          "name": "SearchNineNineNineEightSaintJohnsonPlace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1749133498768,
+          "stop": 1749133510133
+        },
+        {
+          "name": "SelectNineNineNineEightSaintJohnsonPlace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1749133510133,
+          "stop": 1749133514082
+        },
+        {
+          "name": "VerifyTitleBuildingViewPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1749133514084,
+          "stop": 1749133518971
+        },
+        {
+          "name": "GetValueOfStringAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1749133518972,
+          "stop": 1749133521051
+        },
+        {
+          "name": "GetValueOfStringBuildingName",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1749133521052,
+          "stop": 1749133521116
+        },
+        {
+          "name": "VerifyBuildingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "9998 Saint Johnson Place"
+            },
+            {
+              "name": "String",
+              "value": "9998 Saint Johnson Place"
+            }
+          ],
+          "start": 1749133521117,
+          "stop": 1749133524142
+        },
+        {
+          "name": "ClickTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1749133524144,
+          "stop": 1749133525925
+        },
+        {
+          "name": "GetSubjectWithAgentBrokerSaintJohnsonPlace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetVlOfClmnUnitFrstRw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1749133526947,
+              "stop": 1749133527005
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1749133525931,
+          "stop": 1749133527010
+        },
+        {
+          "name": "ClickRowByDepositReceived",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1749133527050,
+          "stop": 1749133527865
+        },
+        {
+          "name": "VerifyTitleAddApartmentsPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1749133527867,
+          "stop": 1749133530110
+        },
+        {
+          "name": "EnterRandomEmailGetApplicationLink",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1749133530111,
+          "stop": 1749133531513
+        },
+        {
+          "name": "ClickButtonGetLink",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyMessageCopiedTheLinkToApplication",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1749133533334,
+              "stop": 1749133541958
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1749133531515,
+          "stop": 1749133541958
+        },
+        {
+          "name": "ClickTabApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1749133541960,
+          "stop": 1749133542678
+        },
+        {
+          "name": "GetApplicationIdFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1749133542681,
+          "stop": 1749133542779
+        },
+        {
+          "name": "ClickFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1749133542829,
+          "stop": 1749133543623
+        },
+        {
+          "name": "VerifyTitleApplicationDetailPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1749133543624,
+          "stop": 1749133544532
+        },
+        {
+          "name": "EditApplicationNineNineNineEightSaintJohnsonPlace",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Timed out after 10 seconds",
+            "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 29\r\n   at CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw.EditApplicationMdlWndw.__a$_around_EditApplicationNineNineNineEightSaintJohnsonPlace_100663844_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\EditApplicationMdlWndw\\EditApplicationSteps.cs:line 55\r\n   at CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw.EditApplicationMdlWndw.__a$_around_EditApplicationNineNineNineEightSaintJohnsonPlace_100663844_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickEditApplicationBtn",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1749133545634,
+              "stop": 1749133547019
+            },
+            {
+              "name": "VerifyEditApplicationTitle",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1749133547020,
+              "stop": 1749133547119
+            },
+            {
+              "name": "ClickButtonDropDownYearMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1749133550263,
+              "stop": 1749133551023
+            },
+            {
+              "name": "SelectCurrentYear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1749133551024,
+              "stop": 1749133552180
+            },
+            {
+              "name": "SelectNextMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1749133552183,
+              "stop": 1749133553356
+            },
+            {
+              "name": "SelectFisrtDayInNextMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1749133553357,
+              "stop": 1749133554546
+            },
+            {
+              "name": "GetRandomEmailBeforeDogFromEmailAddressMainApplicant",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1749133562145,
+              "stop": 1749133562717
+            },
+            {
+              "name": "GetFullEmailAddressMainApplicant",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1749133562723,
+              "stop": 1749133562782
+            },
+            {
+              "name": "GetRandomEmailBeforeDogFromEmailAddressOccupant",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1749133564261,
+              "stop": 1749133564799
+            },
+            {
+              "name": "GetFullEmailAddressOccupantFromFirstFieldInput",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1749133564806,
+              "stop": 1749133564868
+            },
+            {
+              "name": "GetRandomEmailBeforeDogFromEmailAddressGuarantor",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1749133566489,
+              "stop": 1749133567035
+            },
+            {
+              "name": "GetFullEmailAddressGuarantorFromSecondFieldInput",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1749133567041,
+              "stop": 1749133567082
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1749133544568,
+          "stop": 1749133577973
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "32d2e41d962b4daba9e3c3554fefa1db-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1749133468227,
+      "stop": 1749133581902
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1749133468226,
+  "stop": 1749133581929
+}

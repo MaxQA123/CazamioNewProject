@@ -86,7 +86,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.EditApplicationMdlWndw
         [FindsBy(How = How.XPath, Using = "//app-edit-application//div[@class = 'email-input no-margin'][2]//input")]
         public IWebElement SecondFieldInputEmailAddress;
 
-        [FindsBy(How = How.XPath, Using = "//app-edit-application//div[@class = 'checkbox-input'][2]//mat-checkbox[@id = 'is-guarantor']//input[@id = 'is-guarantor-input']")]
+        [FindsBy(How = How.XPath, Using = "//app-edit-application//mat-checkbox[@id = 'is-guarantor-1']")]
         public IWebElement CheckBoxThisIsAGuarantorSecondEmailAddressField;
 
         [FindsBy(How = How.XPath, Using = "//app-edit-application//div[@class = 'email-input no-margin'][2]//div[@class = 'remove-applicant']")]
