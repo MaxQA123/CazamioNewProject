@@ -19,42 +19,27 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 
         #region UploadImage
 
-        [AllureStep("UploadImageLogoLandlordFirst")]
-        public SidebarLandlord UploadImageLogoLandlordFirst()
+        [AllureStep("UploadLogoMarketplace")]
+        public SidebarLandlord UploadLogoMarketplace()
         {
-            WaitUntil.CustomElementIsVisible(ButtonUploadLogoOfLandlord);
-            WaitUntil.CustomElementIsClickable(ButtonUploadLogoOfLandlord);
-            ButtonUploadLogoOfLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.LOGO_IMG_ADMIN_FIRST));
+            WaitUntil.CustomElementIsVisible(UploadLogoMarketplaceBtn);
+            WaitUntil.CustomElementIsClickable(UploadLogoMarketplaceBtn);
+            UploadLogoMarketplaceBtn.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.LOGO_IMG_ADMIN_FIRST));
             return this;
         }
 
-        [AllureStep("UploadImageLogoLandlordSecond")]
-        public SidebarLandlord UploadImageLogoLandlordSecond()
-        {
-            ButtonUploadLogoOfLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.LOGO_IMG_ADMIN_SECOND));
-            return this;
-        }
-
-        [AllureStep("UploadImageAvatarUserLandlordFirst")]
-        public SidebarLandlord UploadImageAvatarUserLandlordFirst()
+        [AllureStep("UploadImageAvatar")]
+        public SidebarLandlord UploadImageAvatar()
         {
             WaitUntil.WaitSomeInterval(1000);
-            ButtonUploadPhotoOfAvatarLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
+            IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
             return this;
         }
 
-        [AllureStep("UploadImageAvatarUserLandlordSecond")]
-        public SidebarLandlord UploadImageAvatarUserLandlordSecond()
+        [AllureStep("DeleteImageAvatar")]
+        public SidebarLandlord DeleteImageAvatar()
         {
-            WaitUntil.WaitSomeInterval(1000);
-            ButtonUploadPhotoOfAvatarLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
-            return this;
-        }
-
-        [AllureStep("ClicklinkRemovePhotoOfLandlord")]
-        public SidebarLandlord ClicklinkRemovePhotoOfLandlord()
-        {
-            Button.Click(linkRemovePhotoOfLandlord);
+            Button.Click(IconBtnForDeleteImageAvatar);
 
             return this;
         }

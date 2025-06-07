@@ -6,13 +6,13 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
     public partial class SidebarLandlord
     {
         [FindsBy(How = How.XPath, Using = "//div[@class= 'edit-btns']//input[@id = 'logo']")]
-        public IWebElement ButtonUploadLogoOfLandlord;
+        public IWebElement UploadLogoMarketplaceBtn;
 
-        [FindsBy(How = How.XPath, Using = "//div[@class= 'upload-account-photo']//input[@id = 'avatar']")]
-        public IWebElement ButtonUploadPhotoOfAvatarLandlord;
+        [FindsBy(How = How.XPath, Using = "//app-sidebar//input[@id = 'avatar']")]
+        public IWebElement IconBtnForUploadImageAvatar;
 
-        [FindsBy(How = How.XPath, Using = "//div[@class= 'remove-account-photo']")]
-        public IWebElement linkRemovePhotoOfLandlord;
+        [FindsBy(How = How.XPath, Using = "//app-sidebar//span[text() = ' delete ']")]
+        public IWebElement IconBtnForDeleteImageAvatar;
 
         [FindsBy(How = How.XPath, Using = "//app-sidebar//div[@class = 'user-name']")]
         public IWebElement UserNameOfSidebar;

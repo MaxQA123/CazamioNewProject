@@ -10,19 +10,19 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("ChangingImagesUserAndLogoMarketplaceOfMA")]
         public SidebarLandlord ChangingImagesUserAndLogoMarketplaceOfMA()
         {
-            WaitUntil.CustomElementIsVisible(ButtonUploadLogoOfLandlord);
-            WaitUntil.CustomElementIsClickable(ButtonUploadLogoOfLandlord);
-            ButtonUploadLogoOfLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.LOGO_IMG_ADMIN_FIRST));
+            WaitUntil.CustomElementIsVisible(UploadLogoMarketplaceBtn);
+            WaitUntil.CustomElementIsClickable(UploadLogoMarketplaceBtn);
+            UploadLogoMarketplaceBtn.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.LOGO_IMG_ADMIN_FIRST));
             Pages.ToasterMessagesLandlord
                 .VerifyChangingLogoImageLandlord();
-            ButtonUploadLogoOfLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.LOGO_IMG_ADMIN_SECOND));
-            ButtonUploadPhotoOfAvatarLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
+            UploadLogoMarketplaceBtn.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.LOGO_IMG_ADMIN_SECOND));
+            IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
             Pages.ToasterMessagesLandlord
                .VerifyChangingAvatarImageLandlord();
-            ButtonUploadPhotoOfAvatarLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
+            IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
             Pages.ToasterMessagesLandlord
                 .VerifyChangingAvatarImageLandlord();
-            Button.Click(linkRemovePhotoOfLandlord);
+            Button.Click(IconBtnForDeleteImageAvatar);
             Pages.ToasterMessagesLandlord
                 .VerifyRewmoveAvatarImageLandlord();
 
@@ -32,15 +32,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("ChangingImageUserOfBroker")]
         public SidebarLandlord ChangingImageUserOfBroker()
         {
-            WaitUntil.CustomElementIsVisible(ButtonUploadPhotoOfAvatarLandlord);
-            WaitUntil.CustomElementIsClickable(ButtonUploadPhotoOfAvatarLandlord);
-            ButtonUploadPhotoOfAvatarLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
+            WaitUntil.CustomElementIsVisible(IconBtnForUploadImageAvatar);
+            WaitUntil.CustomElementIsClickable(IconBtnForUploadImageAvatar);
+            IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
             Pages.ToasterMessagesLandlord
                .VerifyChangingAvatarImageLandlord();
-            ButtonUploadPhotoOfAvatarLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
+            IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
             Pages.ToasterMessagesLandlord
                 .VerifyChangingAvatarImageLandlord();
-            Button.Click(linkRemovePhotoOfLandlord);
+            Button.Click(IconBtnForDeleteImageAvatar);
             Pages.ToasterMessagesLandlord
                 .VerifyRewmoveAvatarImageLandlord();
 
@@ -50,15 +50,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("ChangingImageUserOfAgentBroker")]
         public SidebarLandlord ChangingImageUserOfAgentBroker()
         {
-            WaitUntil.CustomElementIsVisible(ButtonUploadPhotoOfAvatarLandlord);
-            WaitUntil.CustomElementIsClickable(ButtonUploadPhotoOfAvatarLandlord);
-            ButtonUploadPhotoOfAvatarLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
+            WaitUntil.CustomElementIsVisible(IconBtnForUploadImageAvatar);
+            WaitUntil.CustomElementIsClickable(IconBtnForUploadImageAvatar);
+            IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
             Pages.ToasterMessagesLandlord
                .VerifyChangingAvatarImageLandlord();
-            ButtonUploadPhotoOfAvatarLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
+            IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
             Pages.ToasterMessagesLandlord
                 .VerifyChangingAvatarImageLandlord();
-            Button.Click(linkRemovePhotoOfLandlord);
+            Button.Click(IconBtnForDeleteImageAvatar);
             Pages.ToasterMessagesLandlord
                 .VerifyRewmoveAvatarImageLandlord();
 
@@ -68,15 +68,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("ChangingImageUserOfAgent")]
         public SidebarLandlord ChangingImageUserOfAgent()
         {
-            WaitUntil.CustomElementIsVisible(ButtonUploadPhotoOfAvatarLandlord);
-            WaitUntil.CustomElementIsClickable(ButtonUploadPhotoOfAvatarLandlord);
-            ButtonUploadPhotoOfAvatarLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
+            WaitUntil.CustomElementIsVisible(IconBtnForUploadImageAvatar);
+            WaitUntil.CustomElementIsClickable(IconBtnForUploadImageAvatar);
+            IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
             Pages.ToasterMessagesLandlord
                .VerifyChangingAvatarImageLandlord();
-            ButtonUploadPhotoOfAvatarLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
+            IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
             Pages.ToasterMessagesLandlord
                 .VerifyChangingAvatarImageLandlord();
-            Button.Click(linkRemovePhotoOfLandlord);
+            Button.Click(IconBtnForDeleteImageAvatar);
             Pages.ToasterMessagesLandlord
                 .VerifyRewmoveAvatarImageLandlord();
 
@@ -86,15 +86,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("ChangingImageUserOfSuperAdmin")]
         public SidebarLandlord ChangingImageUserOfSuperAdmin()
         {
-            WaitUntil.CustomElementIsVisible(ButtonUploadPhotoOfAvatarLandlord);
-            WaitUntil.CustomElementIsClickable(ButtonUploadPhotoOfAvatarLandlord);
-            ButtonUploadPhotoOfAvatarLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
+            WaitUntil.CustomElementIsVisible(IconBtnForUploadImageAvatar);
+            WaitUntil.CustomElementIsClickable(IconBtnForUploadImageAvatar);
+            IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
             Pages.ToasterMessagesLandlord
                .VerifyChangingAvatarImageLandlord();
-            ButtonUploadPhotoOfAvatarLandlord.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
+            IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
             Pages.ToasterMessagesLandlord
                 .VerifyChangingAvatarImageLandlord();
-            Button.Click(linkRemovePhotoOfLandlord);
+            Button.Click(IconBtnForDeleteImageAvatar);
             Pages.ToasterMessagesLandlord
                 .VerifyRewmoveAvatarImageLandlord();
 
