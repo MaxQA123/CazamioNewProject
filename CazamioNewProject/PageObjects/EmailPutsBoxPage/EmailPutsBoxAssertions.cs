@@ -15,8 +15,8 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
             return this;
         }
 
-        [AllureStep("VerifyComparisonSubjectNotificationCreateAdmin")]
-        public EmailPutsBox VerifyComparisonSubjectNotificationCreateAdmin()
+        [AllureStep("VerifyComparisonSubjectNotificationCreateMarketplaceAdmin")]
+        public EmailPutsBox VerifyComparisonSubjectNotificationCreateMarketplaceAdmin()
         {
             string subjectNotificationFromEmail = Pages.EmailPutsBox.GetSubjectNotificationCommon();
             Assert.AreEqual(subjectNotificationFromEmail, emailNotificationsForMarketplaceAdmin.SubjectAndBodyCreatingMarketplaceAdmin.Subject);

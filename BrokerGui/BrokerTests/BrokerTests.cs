@@ -1169,60 +1169,57 @@ namespace BrokerGuiTests
         [AllureSuite("Broker")]
         [AllureSubSuite("DemoAddApartment")]
 
-        public void DemoLogIn()
+        // Data Generation and Advanced Filtering Validation
+        public void DemoVerifySearchAndFilteringByListOfApartmentsQuickEditMode()
         {
             #region SettingsForBuilding
 
-            //Saint Johnson Place
+
 
             #endregion
 
             #region Test data
 
-            //Apartment apartment = Apartment.Generate();
-            Building building = Building.Generate();
-            ApartmentApplicationsTable apartmentApplicationsTable = ApartmentApplicationsTable.Generate();
+
 
             #endregion
 
             #region Preconditions Test
 
-            Pages.LogInLandlord
-                .LogInAsBrokerMySpace();
-            //Pages.SidebarLandlord
-            //    .ClickButtonBuildings();
-            //Pages.ListOfBuildings
-            //    .SearchNineNineNineEightSaintJohnsonPlace();
-            //Pages.ListOfBuildings
-            //    .SelectItemFirst();
-            //Pages.BuildingView
-            //    .VerifyTitleBuildingViewPage();
+            // Create a new Building via API 1 -2 seconds
+            // Create apartment with agent via API 1 -2 seconds
 
-            //string getAddressBuildingViewActual = Pages.BuildingView.GetValueOfStringAddress();
-            //string getBuildingNameFromBuildingView = Pages.BuildingView.GetValueOfStringBuildingName();
-
-            //Pages.BuildingView
-            //    .VerifyBuildingAddress(getAddressBuildingViewActual, apartment.BuildingShortAddress.NineNineNineEightSaintJohnsonPlace)
-            //    .ClickTabApartments();
-            //KeyBoardActions.ScrollToDown();
-            //Pages.BuildingApartmentsTbl
-            //    .ClickRowByDepositReceived();
+            // Login via GUI
+            // Open "List of apartemnts" page in the "Quick edit" mode via GUI
 
             #endregion
 
-            //#region Test
+            #region Test
 
-            //Pages.ApartmentView
-            //    .VerifyTitleApartmentViewPage();
+            // By default checked the box "Most recently updated"
 
-            //string getUnitNumber = Pages.ApartmentView.GetSubjectExpected();
+            // Filter by Price
+            // Filter by Fee
+            // Filter by Availability
+            // Filter by Status
+            // Filter by Beds
+            // Filter by Baths
+            // Filter by Owners
+            // Filter by Assigned Agent
+            // Filter by Neighborhoods
+            // Filter by Building Amenities
+            // Filter by Apartment Amenities
+            // Filter by Pet Policies
+            // Verify AR with ER
 
-            //Pages.ApartmentView
-            //    .EnterNewEmailFirstLastNames();
+            #endregion
 
-            //#endregion
+            #region Postconditions
 
-            //WaitUntil.WaitSomeInterval(1000);
+            // Delete building
+            // Postconditions → очистка данных должна быть вынесена в finally, чтобы выполнялась всегда.
+
+            #endregion
         }
     }
 }

@@ -68,7 +68,7 @@ namespace TestsEmailsLandlord
             #region Test
 
             Pages.EmailPutsBox
-                .VerifyComparisonSubjectNotificationCreateAdmin()
+                .VerifyComparisonSubjectNotificationCreateMarketplaceAdmin()
                 .ClickButtonHtml()
                 .VerifyComparisonBodyNotificationCreateMarketplaceAdmin(fullEmailPutsBox);
 
