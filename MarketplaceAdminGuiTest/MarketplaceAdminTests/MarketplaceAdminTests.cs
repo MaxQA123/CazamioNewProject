@@ -20,6 +20,11 @@ namespace MarketplaceAdminGuiTest
     [TestFixture]
     [AllureNUnit]
 
+    // Basic settings for autotests:
+    // 1. Need to comment out the “AddGroupBuildingsViaApiBasicStatic” case after the first run of the automated tests if all buildings were soft deleted.
+    // 2. SettingsMarketplaceViaApiDb case.
+    // 3. SettingsMarketplacePage case.
+
     public class TestsBaseGui : MarketplaceAdminBase
     {
         //Amount order 16 next must be 17
@@ -55,7 +60,7 @@ namespace MarketplaceAdminGuiTest
 
         public void SettingsMarketplacePage()
         {
-            #region Precinditions GUI
+            #region Preconditions GUI
 
             Pages.LogInLandlord
                 .LogInAsMarketplaceAdminMySpace();
