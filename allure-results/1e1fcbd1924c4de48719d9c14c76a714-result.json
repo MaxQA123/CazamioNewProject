@@ -1,0 +1,402 @@
+{
+  "uuid": "1eee733b-fe96-4bbb-9514-0afa0d074eef-tr-0-1003",
+  "historyId": "SuperAdminGui.TestsBaseGui.VerifySidebar",
+  "fullName": "SuperAdminGui.TestsBaseGui.VerifySidebar",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "SuperAdminGui"
+    },
+    {
+      "name": "testMethod",
+      "value": "VerifySidebar"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Super Admin"
+    },
+    {
+      "name": "subSuite",
+      "value": "Verify Sidebar"
+    }
+  ],
+  "links": [],
+  "name": "VerifySidebar",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "VerifySidebar"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "VerifySidebar",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogInAsSuperAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756129916140,
+              "stop": 1756129917436
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756129917447,
+              "stop": 1756129917593
+            },
+            {
+              "name": "VerifySuperAdminUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Super User"
+                },
+                {
+                  "name": "String",
+                  "value": "Super Admin"
+                }
+              ],
+              "start": 1756129917601,
+              "stop": 1756129918132
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1756129913088,
+          "stop": 1756129918132
+        },
+        {
+          "name": "ChangingImageUserOfSuperAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyChangingAvatarImageLandlord",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756129928526,
+              "stop": 1756129935460
+            },
+            {
+              "name": "VerifyRewmoveAvatarImageLandlord",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756129936143,
+              "stop": 1756129936582
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1756129918140,
+          "stop": 1756129936582
+        },
+        {
+          "name": "ClickingAllTabsOfSuperAdmin",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyTitleListOfApartments",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756129937793,
+              "stop": 1756129937889
+            },
+            {
+              "name": "VerifyTitleListOfBuildings",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756129939113,
+              "stop": 1756129939183
+            },
+            {
+              "name": "VerifyTitleListOfApplications",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756129940996,
+              "stop": 1756129941052
+            },
+            {
+              "name": "VerifyTitleListOfMarketplaceAdmins",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756129942771,
+              "stop": 1756129942827
+            },
+            {
+              "name": "VerifyTitleListOfOwnersPg",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756129944508,
+              "stop": 1756129944597
+            },
+            {
+              "name": "VerifyTitleVisitLogsPg",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756129945775,
+              "stop": 1756129945846
+            },
+            {
+              "name": "VerifyTitleAddressManagerPg",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756129947043,
+              "stop": 1756129947128
+            },
+            {
+              "name": "VerifyTitleListOfUsersPg",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756129948327,
+              "stop": 1756129948390
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1756129936583,
+          "stop": 1756129948390
+        },
+        {
+          "name": "MakeLogOut",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickButtonLogOutSidebar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756129949422,
+              "stop": 1756129952112
+            },
+            {
+              "name": "ClickButtonYesIAmSure",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756129953120,
+              "stop": 1756129953812
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1756129948392,
+          "stop": 1756129953812
+        },
+        {
+          "name": "VerifyTitle",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1756129953828,
+          "stop": 1756129956849
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "ea48319aa3a149d1ab54f5e19bbd2355-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1756129905665,
+      "stop": 1756129958190
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1756129905664,
+  "stop": 1756129958201
+}

@@ -19,6 +19,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
             Pages.ToasterMessagesLandlord
                .VerifyChangingAvatarImageLandlord();
+            Button.Click(IconBtnForDeleteImageAvatar);
+            Pages.ToasterMessagesLandlord
+                .VerifyRewmoveAvatarImageLandlord();
             IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
             Pages.ToasterMessagesLandlord
                 .VerifyChangingAvatarImageLandlord();
@@ -37,6 +40,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
             Pages.ToasterMessagesLandlord
                .VerifyChangingAvatarImageLandlord();
+            Button.Click(IconBtnForDeleteImageAvatar);
+            Pages.ToasterMessagesLandlord
+                .VerifyRewmoveAvatarImageLandlord();
             IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
             Pages.ToasterMessagesLandlord
                 .VerifyChangingAvatarImageLandlord();
@@ -55,6 +61,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
             Pages.ToasterMessagesLandlord
                .VerifyChangingAvatarImageLandlord();
+            Button.Click(IconBtnForDeleteImageAvatar);
+            Pages.ToasterMessagesLandlord
+                .VerifyRewmoveAvatarImageLandlord();
             IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
             Pages.ToasterMessagesLandlord
                 .VerifyChangingAvatarImageLandlord();
@@ -73,6 +82,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
             Pages.ToasterMessagesLandlord
                .VerifyChangingAvatarImageLandlord();
+            Button.Click(IconBtnForDeleteImageAvatar);
+            Pages.ToasterMessagesLandlord
+                .VerifyRewmoveAvatarImageLandlord();
             IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
             Pages.ToasterMessagesLandlord
                 .VerifyChangingAvatarImageLandlord();
@@ -91,9 +103,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
             Pages.ToasterMessagesLandlord
                .VerifyChangingAvatarImageLandlord();
-            IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
-            Pages.ToasterMessagesLandlord
-                .VerifyChangingAvatarImageLandlord();
             Button.Click(IconBtnForDeleteImageAvatar);
             Pages.ToasterMessagesLandlord
                 .VerifyRewmoveAvatarImageLandlord();

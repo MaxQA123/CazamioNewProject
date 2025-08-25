@@ -31,8 +31,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
         [AllureStep("VerifyChangingLogoImageLandlord")]
         public ToasterMessagesLandlord VerifyChangingLogoImageLandlord()
         {
-            WaitUntil.CustomElementIsVisible(MessageChangeImageLogoLandlordSuccess);
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageChangeImageLogoLandlordSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageChangeImageLogoLandlordSuccess));
 
             return this;
         }
@@ -41,6 +41,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
         public ToasterMessagesLandlord VerifyChangingAvatarImageLandlord()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageChangeImageAvatarUserSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageChangeImageAvatarUserSuccess));
 
             return this;
         }
@@ -49,6 +50,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
         public ToasterMessagesLandlord VerifyRewmoveAvatarImageLandlord()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageRemoveImageAvatarUserSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageRemoveImageAvatarUserSuccess));
 
             return this;
         }
