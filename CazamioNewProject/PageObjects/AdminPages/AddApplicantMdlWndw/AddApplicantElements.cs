@@ -11,13 +11,13 @@ namespace CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw
         [FindsBy(How = How.XPath, Using = "//app-prepare-application//div[@class = 'step applicants']//div[@class = 'email-input no-margin']//input")]
         public IWebElement FirstFieldInputEmailAddress;
 
-        [FindsBy(How = How.XPath, Using = "//app-prepare-application//div[@class = 'step applicants']//div[@class = 'checkbox-input']//input[@id = 'is-guarantor-input']")]
+        [FindsBy(How = How.XPath, Using = "//app-prepare-application//div[@class = 'step applicants']//div[@class = 'checkbox-input']//input[@id = 'is-guarantor-0-input']")]
         public IWebElement CheckBoxThisIsAGuarantorFirstEmailAddressField;
 
         [FindsBy(How = How.XPath, Using = "//app-prepare-application//div[@class = 'step applicants']//div[@class = 'email-input no-margin'][2]//input")]
         public IWebElement SecondFieldInputEmailAddress;
 
-        [FindsBy(How = How.XPath, Using = "//app-prepare-application//div[@class = 'step applicants']//div[@class = 'checkbox-input'][2]//input[@id = 'is-guarantor-input']")]
+        [FindsBy(How = How.XPath, Using = "//app-prepare-application//div[@class = 'step applicants']//div[@class = 'checkbox-input'][2]//input[@id = 'is-guarantor-1-input']")]
         public IWebElement CheckBoxThisIsAGuarantorSecondEmailAddressField;
 
         [FindsBy(How = How.XPath, Using = "//app-prepare-application//div[text() = ' + Add another applicant ']")]

@@ -1,0 +1,512 @@
+{
+  "uuid": "7b74d8c1-0069-45ee-9cb1-9ee65cd75887-tr-0-1004",
+  "historyId": "AgentGuiTests.TestsBaseGui.CreateApplicationForApartmenVacantFst",
+  "fullName": "AgentGuiTests.TestsBaseGui.CreateApplicationForApartmenVacantFst",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "AgentGuiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateApplicationForApartmenVacantFst"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Agent"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateApplicationForApartmenVacantFst"
+    }
+  ],
+  "links": [],
+  "name": "CreateApplicationForApartmenVacantFst",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+    "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 29\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw.AddApplicantMdlWndw.__a$_around_AddOnlyAlreadyExistGuarantorWithoutCreditReport_100664022_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApplicantMdlWndw\\AddApplicantSteps.cs:line 75\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw.AddApplicantMdlWndw.__a$_around_AddOnlyAlreadyExistGuarantorWithoutCreditReport_100664022_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw.AddApplicantMdlWndw.__a$_around_AddOnlyAlreadyExistGuarantorWithoutCreditReport_100664022_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw.AddApplicantMdlWndw.AddOnlyAlreadyExistGuarantorWithoutCreditReport() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApplicantMdlWndw\\AddApplicantActions.cs:line 17\r\n   at AgentGuiTests.TestsBaseGui.CreateApplicationForApartmenVacantFst() in C:\\Automation\\CazamioNewProject\\AgentGui\\AgentTests\\AgentTests.cs:line 176"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "CreateApplicationForApartmenVacantFst",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+        "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 29\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw.AddApplicantMdlWndw.__a$_around_AddOnlyAlreadyExistGuarantorWithoutCreditReport_100664022_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApplicantMdlWndw\\AddApplicantSteps.cs:line 75\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw.AddApplicantMdlWndw.__a$_around_AddOnlyAlreadyExistGuarantorWithoutCreditReport_100664022_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw.AddApplicantMdlWndw.__a$_around_AddOnlyAlreadyExistGuarantorWithoutCreditReport_100664022_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw.AddApplicantMdlWndw.AddOnlyAlreadyExistGuarantorWithoutCreditReport() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApplicantMdlWndw\\AddApplicantActions.cs:line 17\r\n   at AgentGuiTests.TestsBaseGui.CreateApplicationForApartmenVacantFst() in C:\\Automation\\CazamioNewProject\\AgentGui\\AgentTests\\AgentTests.cs:line 176"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "VerifyUserData",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "ResponseLogInApiMarketplaceAdmin",
+              "value": "CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin.ResponseLogInApiMarketplaceAdmin"
+            },
+            {
+              "name": "MarketplaceAdmin",
+              "value": "CazamioNewProject.Objects.MarketplaceAdmin"
+            }
+          ],
+          "start": 1756217860983,
+          "stop": 1756217861001
+        },
+        {
+          "name": "LogInAsAgentMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756217864884,
+              "stop": 1756217867523
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756217867533,
+              "stop": 1756217867605
+            },
+            {
+              "name": "VerifyAgentUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Lula AgentQA"
+                },
+                {
+                  "name": "String",
+                  "value": "Agent"
+                }
+              ],
+              "start": 1756217867630,
+              "stop": 1756217868243
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1756217861998,
+          "stop": 1756217868243
+        },
+        {
+          "name": "ClickButtonApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1756217868252,
+          "stop": 1756217873311
+        },
+        {
+          "name": "VerifyTitleListOfApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1756217873313,
+          "stop": 1756217873904
+        },
+        {
+          "name": "PassFirstStepCreatorWithoutCreditReportMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickButtonPlusApplication",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756217873947,
+              "stop": 1756217875743
+            },
+            {
+              "name": "VerifyTitleCreateApplication",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756217875746,
+              "stop": 1756217876091
+            },
+            {
+              "name": "EnterEmailCreatedTenantCreatorWithoutCreditReportMySpace",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756217876092,
+              "stop": 1756217876907
+            },
+            {
+              "name": "ClickButtonNext",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756217876907,
+              "stop": 1756217879589
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1756217873946,
+          "stop": 1756217879589
+        },
+        {
+          "name": "PassSecondStepGatesAvenueAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "EnterOneTwoEightSixSevenGatesAvenueAddress",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756217879593,
+              "stop": 1756217880308
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1756217879590,
+          "stop": 1756217881044
+        },
+        {
+          "name": "GetFullEmail",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1756217881046,
+          "stop": 1756217882122
+        },
+        {
+          "name": "VerifyEmailTenantCreatorWithoutCreditReport",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "main-appl-1myspace@putsbox.com"
+            }
+          ],
+          "start": 1756217882124,
+          "stop": 1756217882124
+        },
+        {
+          "name": "PassThirdStepGatesAvenueAddressFrstFlow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickButtonDropDownYearMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756217888602,
+              "stop": 1756217889375
+            },
+            {
+              "name": "SelectCurrentYear",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756217889376,
+              "stop": 1756217890528
+            },
+            {
+              "name": "SelectNextMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756217890528,
+              "stop": 1756217891710
+            },
+            {
+              "name": "SelectFisrtDayInNextMonth",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756217891710,
+              "stop": 1756217892853
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1756217882124,
+          "stop": 1756217903336
+        },
+        {
+          "name": "VerifyTitleApplicationSuccessfullyCreated",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1756217903337,
+          "stop": 1756217904630
+        },
+        {
+          "name": "VerifyTextLinkAlreadyCopied",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1756217904631,
+          "stop": 1756217904682
+        },
+        {
+          "name": "ClickButtonAddApplicant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1756217904683,
+          "stop": 1756217905419
+        },
+        {
+          "name": "AddOnlyAlreadyExistGuarantorWithoutCreditReport",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Timed out after 10 seconds",
+            "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.GuiHelpers.Button.Click(IWebElement element) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\MethodsHelper.cs:line 29\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw.AddApplicantMdlWndw.__a$_around_AddOnlyAlreadyExistGuarantorWithoutCreditReport_100664022_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\AddApplicantMdlWndw\\AddApplicantSteps.cs:line 75\r\n   at CazamioNewProject.PageObjects.AdminPages.AddApplicantMdlWndw.AddApplicantMdlWndw.__a$_around_AddOnlyAlreadyExistGuarantorWithoutCreditReport_100664022_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyTitleAddApplicantMdlWndw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756217905432,
+              "stop": 1756217905476
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1756217905431,
+          "stop": 1756217926911
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "49d866f8373a4bb6a3340cc1e317ee80-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1756217846181,
+      "stop": 1756217930719
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1756217846179,
+  "stop": 1756217930729
+}

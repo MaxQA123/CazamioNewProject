@@ -32,7 +32,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
         public ToasterMessagesLandlord VerifyChangingLogoImageLandlord()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageChangeImageLogoLandlordSuccess));
-            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageChangeImageLogoLandlordSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageChangeImageLogoLandlordSuccess));//
 
             return this;
         }
