@@ -55,6 +55,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
                 .EnterOneOneOneAEastStPedestrianCrossingAddress();
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();
+            WaitUntil.CustomElementIsVisible(ButtonNext);
             Button.Click(ButtonNext);
 
             return this;
@@ -67,6 +68,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
                 .EnterOneTwoEightSixSevenGatesAvenueAddress();
             KeyBoardActions.ClickArrowDown();
             KeyBoardActions.ClickEnterButton();
+            WaitUntil.CustomElementIsVisible(ButtonNext);
             Button.Click(ButtonNext);
 
             return this;
