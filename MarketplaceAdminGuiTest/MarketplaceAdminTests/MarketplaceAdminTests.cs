@@ -20,14 +20,14 @@ namespace MarketplaceAdminGuiTest
     [TestFixture]
     [AllureNUnit]
 
+    //Amount order 16 next must be 17
     // Basic settings for autotests:
     // 1. Need to comment out the “AddGroupBuildingsViaApiBasicStatic” case after the first run of the automated tests if all buildings were soft deleted.
     // 2. SettingsMarketplaceViaApiDb case.
     // 3. SettingsMarketplacePage case.
 
     public class TestsBaseGui : MarketplaceAdminBase
-    {
-        //Amount order 16 next must be 17
+    { 
         [Test]
         [Order(1)]
         [AllureTag("Regression")]
@@ -35,10 +35,10 @@ namespace MarketplaceAdminGuiTest
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin")]
-        [AllureSubSuite("LogIn")]
+        [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
+        [AllureSubSuite("Login to My Space marketplace")]
 
-        public void LogIn()
+        public void User_LogIn_Success()
         {
             #region Test
 
@@ -55,7 +55,7 @@ namespace MarketplaceAdminGuiTest
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin")]
+        [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
         [AllureSubSuite("SettingsMarketplacePage")]
 
         public void SettingsMarketplacePage()
@@ -86,7 +86,7 @@ namespace MarketplaceAdminGuiTest
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin")]
+        [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
         [AllureSubSuite("SettingsMarketplaceViaApiDb")]
 
         public void SettingsMarketplaceViaApiDb()
@@ -107,7 +107,7 @@ namespace MarketplaceAdminGuiTest
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin")]
+        [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
         [AllureSubSuite("VerifySidebar")]
 
         public void VerifySidebar()
@@ -142,7 +142,7 @@ namespace MarketplaceAdminGuiTest
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin")]
+        [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
         [AllureSubSuite("CreateBroker")]
 
         public void CreateBroker()
@@ -229,7 +229,7 @@ namespace MarketplaceAdminGuiTest
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin")]
+        [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
         [AllureSubSuite("CreateAgent")]
 
         public void CreateAgent()
@@ -310,7 +310,7 @@ namespace MarketplaceAdminGuiTest
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin")]
+        [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
         [AllureSubSuite("CreateOwnerWithAssignedBroker")]
 
         public void CreateOwnerWithAssignedBroker()
@@ -378,7 +378,7 @@ namespace MarketplaceAdminGuiTest
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin")]
+        [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
         [AllureSubSuite("CreateOwnerWithAssignedAgent")]
 
         public void CreateOwnerWithAssignedAgent()
@@ -452,7 +452,7 @@ namespace MarketplaceAdminGuiTest
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin")]
+        [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
         [AllureSubSuite("AddBuildingAssignedBroker")]
 
         public void AddBuildingAssignedBroker()
@@ -574,7 +574,7 @@ namespace MarketplaceAdminGuiTest
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin")]
+        [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
         [AllureSubSuite("AddBuildingAssignedBroker")]
 
         public void AddBuildingAssignedAgent()
@@ -649,7 +649,7 @@ namespace MarketplaceAdminGuiTest
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(1)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin")]
+        [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
         [AllureSubSuite("AddGroupBuildingsViaApiBasicStatic")]
 
         public void AddGroupBuildingsViaApiBasicStatic()
@@ -700,7 +700,7 @@ namespace MarketplaceAdminGuiTest
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin")]
+        [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
         [AllureSubSuite("AddApartmentAssignedBroker")]
 
         public void AddApartmentAssignedBroker()
@@ -827,7 +827,7 @@ namespace MarketplaceAdminGuiTest
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin")]
+        [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
         [AllureSubSuite("AddApartmentAssignedAgent")]
         public void AddApartmentAssignedAgent()
         {
@@ -919,7 +919,7 @@ namespace MarketplaceAdminGuiTest
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin")]
+        [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
         [AllureSubSuite("CreateApplicationForApartmentDepositReceived")]
        public void CreateApplicationForApartmentDepositReceived()
         {
@@ -1028,7 +1028,7 @@ namespace MarketplaceAdminGuiTest
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin")]
+        [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
         [AllureSubSuite("CreateApplicationForApartmentVacant")]
 
         public void CreateApplicationForApartmentVacant()
@@ -1144,7 +1144,7 @@ namespace MarketplaceAdminGuiTest
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin")]
+        [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
         [AllureSubSuite("CreateNewDocumentLeaseSignTemplateWithBrokerSign")]
 
         public void CreateNewDocumentLeaseSignTemplateWithBrokerSign()
@@ -1183,7 +1183,7 @@ namespace MarketplaceAdminGuiTest
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(1)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin")]
+        [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
         [AllureSubSuite("EditApplicationNineNineNineEightSaintJohnsonPlace")]
 
         public void EditApplicationNineNineNineEightSaintJohnsonPlace()
