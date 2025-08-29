@@ -31,7 +31,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw
             Pages.AreYouSureLogOutLandlordMdlWndw
                 .VerifyTitleAreYouSureMdlwndw()
                 .ClickButtonYesIAmSure();
-            Pages.LogInLandlord.VerifyTitle();
+            Pages.LogInLandlord.VerifyTitleLogInPg();
 
             return this;
         }
