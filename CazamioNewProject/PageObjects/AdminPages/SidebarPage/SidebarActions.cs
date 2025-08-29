@@ -258,9 +258,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("ClickButtonLogOutSidebar")]
         public SidebarLandlord ClickButtonLogOutSidebar()
         {
-            WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.CustomElementIsVisible(ButtonLogOutSidebar);
             Button.Click(ButtonLogOutSidebar);
-            WaitUntil.WaitSomeInterval(1000);
 
             return this;
         }

@@ -5,6 +5,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw
 {
     public partial class AreYouSureLogOutLandlordMdlWndw
     {
+        [FindsBy(How = How.XPath, Using = "//h2[text() = 'Are you sure?']")]
+        public IWebElement TitleAreYouSureMdlwndw;
+
         [FindsBy(How = How.XPath, Using = "//button[@class = 'swal2-confirm btn btn-success']")]
         public IWebElement ButtonYesIAmSureOnMdlwndw;
 

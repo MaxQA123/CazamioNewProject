@@ -1,10 +1,5 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using NUnit.Allure.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw
 {
@@ -31,12 +26,12 @@ namespace CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw
         [AllureStep("MakeLogOut")]
         public AreYouSureLogOutLandlordMdlWndw MakeLogOut()
         {
-            WaitUntil.WaitSomeInterval(1000);
             Pages.SidebarLandlord
                 .ClickButtonLogOutSidebar();
-            WaitUntil.WaitSomeInterval(1000);
             Pages.AreYouSureLogOutLandlordMdlWndw
+                .VerifyTitleAreYouSureMdlwndw()
                 .ClickButtonYesIAmSure();
+            Pages.LogInLandlord.VerifyTitle();
 
             return this;
         }

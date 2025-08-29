@@ -20,7 +20,7 @@ namespace MarketplaceAdminGuiTest
     [TestFixture]
     [AllureNUnit]
 
-    //Amount order 16 next must be 17
+    // Amount order 16 next must be 17
     // Basic settings for autotests:
     // 1. Need to comment out the “AddGroupBuildingsViaApiBasicStatic” case after the first run of the automated tests if all buildings were soft deleted.
     // 2. SettingsMarketplaceViaApiDb case.
@@ -38,12 +38,14 @@ namespace MarketplaceAdminGuiTest
         [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
         [AllureSubSuite("Login to My Space marketplace")]
 
-        public void User_LogIn_Success()
+        public void LogIn_Success()
         {
             #region Test
 
             Pages.LogInLandlord
                 .LogInAsMarketplaceAdminMySpace();
+
+            WaitUntil.WaitSomeInterval(100);
 
             #endregion
         }
@@ -56,9 +58,9 @@ namespace MarketplaceAdminGuiTest
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
-        [AllureSubSuite("SettingsMarketplacePage")]
+        [AllureSubSuite("Update Settings for Marketplace Page")]
 
-        public void SettingsMarketplacePage()
+        public void Update_Settings_MarketplacePage()
         {
             #region Preconditions GUI
 
@@ -74,7 +76,7 @@ namespace MarketplaceAdminGuiTest
             Pages.Marketplace
                 .FillInBrandNameAndDisclosureInformation();
 
-            WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.WaitSomeInterval(100);
 
             #endregion
         }
@@ -87,15 +89,15 @@ namespace MarketplaceAdminGuiTest
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
-        [AllureSubSuite("SettingsMarketplaceViaApiDb")]
+        [AllureSubSuite("Basic Update Brand Name MySpace Via DB")]
 
-        public void SettingsMarketplaceViaApiDb()
+        public void Basic_Update_Brand_Name_MySpace_Via_DB()
         {
-            #region Update the brand name MySpace via DB
+            #region Test
 
             MarketplacesDbRequests.MarketplacesDbTable.UpdateBrandForMarketplaceMySpace();
 
-            WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.WaitSomeInterval(100);
 
             #endregion
         }
@@ -108,15 +110,17 @@ namespace MarketplaceAdminGuiTest
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
-        [AllureSubSuite("VerifySidebar")]
+        [AllureSubSuite("Verify Sidebar")]
 
-        public void VerifySidebar()
+        public void Verify_Sidebar()
         {
+            // Upload images logo marketplace and user avatar.
+            // Select the tabs.
+
             #region Preconditions
 
             Pages.LogInLandlord
                 .LogInAsMarketplaceAdminMySpace();
-
 
             #endregion
 
@@ -127,10 +131,8 @@ namespace MarketplaceAdminGuiTest
                 .ClickingAllTabsOfMA();
             Pages.AreYouSureLogOutLandlordMdlWndw
                 .MakeLogOut();
-            Pages.LogInLandlord
-                .VerifyTitle();
 
-            WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.WaitSomeInterval(100);
 
             #endregion
         }

@@ -11,6 +11,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         [AllureStep("LogInAsSuperAdmin")]
         public LogInLandlord LogInAsSuperAdmin()
         {
+            Pages.LogInLandlord.VerifyTitle();
             InputGeneral.InputFunctionWithClear(FieldInputEmail, superAdmin.CreatedSuperAdmin.Email);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
@@ -29,11 +30,11 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         [AllureStep("LogInAsMarketplaceAdminMySpace")]
         public LogInLandlord LogInAsMarketplaceAdminMySpace()
         {
-            InputGeneral.InputFunctionWithClear(FieldInputEmail, marketplaceAdmin.CreatedMarkAdmMySpace.Email);
-            WaitUntil.WaitSomeInterval(100);
-            InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
-            Button.Click(IconShow);
-            Button.Click(ButtonLetsGo);
+            Pages.LogInLandlord.VerifyTitle();
+            EnterEmailMarketplaceAdmin();
+            EnterPasswordMarketplaceAdmin();
+            ClickIconShow();
+            ClickButtonLetsGo();
 
             string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
             string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
@@ -47,6 +48,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         [AllureStep("LogInAsBrokerMySpace")]
         public LogInLandlord LogInAsBrokerMySpace()
         {
+            Pages.LogInLandlord.VerifyTitle();
             InputGeneral.InputFunctionWithClear(FieldInputEmail, broker.CreatedBrokerMySpace.Email);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
@@ -65,6 +67,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         [AllureStep("LogInAsAgentMySpace")]
         public LogInLandlord LogInAsAgentMySpace()
         {
+            Pages.LogInLandlord.VerifyTitle();
             InputGeneral.InputFunctionWithClear(FieldInputEmail, agent.CreatedAgentLulaMySpace.Email);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
@@ -83,6 +86,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         [AllureStep("LogInAsAgentBrokerMySpace")]
         public LogInLandlord LogInAsAgentBrokerMySpace()
         {
+            Pages.LogInLandlord.VerifyTitle();
             InputGeneral.InputFunctionWithClear(FieldInputEmail, agentBroker.CreatedAgentMySpace.Email);
             WaitUntil.WaitSomeInterval(100);
             InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);

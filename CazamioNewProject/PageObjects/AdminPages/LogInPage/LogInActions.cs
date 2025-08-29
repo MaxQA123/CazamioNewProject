@@ -12,9 +12,28 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         Agent agent = Agent.Generate();
         AgentBroker agentBroker = AgentBroker.Generate();
 
+        [AllureStep("EnterEmailMarketplaceAdmin")]
+        public LogInLandlord EnterEmailMarketplaceAdmin()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputEmail);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, marketplaceAdmin.CreatedMarkAdmMySpace.Email);
+
+            return this;
+        }
+
+        [AllureStep("EnterPasswordMarketplaceAdmin")]
+        public LogInLandlord EnterPasswordMarketplaceAdmin()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputPassword);
+            InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+
+            return this;
+        }
+
         [AllureStep("ClickIconShow")]
         public LogInLandlord ClickIconShow()
         {
+            WaitUntil.CustomElementIsVisible(FieldInputPassword);
             Button.Click(IconShow);
 
             return this;
@@ -23,6 +42,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         [AllureStep("ClickButtonLetsGo")]
         public LogInLandlord ClickButtonLetsGo()
         {
+            WaitUntil.CustomElementIsVisible(ButtonLetsGo);
             Button.Click(ButtonLetsGo);
 
             return this;
@@ -31,6 +51,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         [AllureStep("ClickLinkForgotPassword")]
         public LogInLandlord ClickLinkForgotPassword()
         {
+            WaitUntil.CustomElementIsVisible(LinkForgotPassword);
             Button.Click(LinkForgotPassword);
 
             return this;
