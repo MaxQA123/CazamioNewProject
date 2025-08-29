@@ -50,6 +50,12 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         [FindsBy(How = How.XPath, Using = ("//app-prepare-application//ng-dropdown-panel//span[contains(@title, '1 Washington square')]"))]
         public IWebElement OneWashingtonSquareAddress;
 
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//ng-dropdown-panel//span[contains(@title, '12867 Gates Avenue')]"))]
+        public IWebElement OneTwoEightSixSevenGatesAvenueAddress;
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//ng-dropdown-panel//span[contains(@title, '111A East 51st Street Pedestrian Crossing')]"))]
+        public IWebElement OneOneOneAEastStPedestrianCrossingAddressAddress;
+
         [FindsBy(How = How.XPath, Using = ("//app-prepare-application//div[@class = 'address-input']//input"))]
         public IWebElement VlFromBtnUnitAddress;
 
