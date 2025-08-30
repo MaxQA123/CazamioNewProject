@@ -42,6 +42,7 @@ namespace MarketplaceAdminGuiTest
         {
             #region Test
 
+            // flow: Login > Verify user role and user name > Success code 200.
             Pages.LogInLandlord
                 .LogInAsMarketplaceAdminMySpace();
 
