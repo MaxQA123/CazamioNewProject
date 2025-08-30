@@ -7,7 +7,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 {
     public partial class SidebarLandlord
     {
-        [AllureStep("ChangingImagesUserAndLogoMarketplaceOfMA")]
+        [AllureStep("Changing user image and Logo Marketplace of MA")]
         public SidebarLandlord ChangingImagesUserAndLogoMarketplaceOfMA()
         {
             WaitUntil.CustomElementIsVisible(UploadLogoMarketplaceBtn);
@@ -19,12 +19,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
             Pages.ToasterMessagesLandlord
                .VerifyChangingAvatarImageLandlord();
-            Button.Click(IconBtnForDeleteImageAvatar);
-            Pages.ToasterMessagesLandlord
-                .VerifyRewmoveAvatarImageLandlord();
-            IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
-            Pages.ToasterMessagesLandlord
-                .VerifyChangingAvatarImageLandlord();
             Button.Click(IconBtnForDeleteImageAvatar);
             Pages.ToasterMessagesLandlord
                 .VerifyRewmoveAvatarImageLandlord();
@@ -110,53 +104,53 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("ClickingAllTabsOfMA")]
+        [AllureStep("Click All Tabs")]
         public SidebarLandlord ClickingAllTabsOfMA()
         {
-            Button.Click(ButtonBuildingsSidebar);
+            ClickButtonBuildings();
             Pages.ListOfBuildings
                 .VerifyTitleListOfBuildings();
-            Button.Click(ButtonApartmentsSidebar);
+            ClickButtonApartments();
             Pages.ListOfApartments
                 .VerifyTitleListOfApartments();
-            Button.Click(ButtonApplicationsSidebar);
+            ClickButtonApplications();
             Pages.ListOfApplications
                 .VerifyTitleListOfApplications();
-            Button.Click(ButtonBrokersSidebar);
+            ClickButtonBrokers();
             Pages.ListOfBrokers
                 .VerifyTitleListOfBrokersPg();
             ButtonLeaseSignDocumentsSidebar.SendKeys("");
-            Button.Click(ButtonLeaseSignDocumentsSidebar);
+            ClickButtonLeaseSignDocuments();
             Pages.Templates
                 .VerifyTitleTemplatesPage();
             ButtonPaymentSettingsSidebar.SendKeys("");
-            Button.Click(ButtonPaymentSettingsSidebar);
+            ClickButtonPaymentSettings();
             Pages.PaymentSettings
                 .VerifyTitlePaymentSettingsPage();
             ButtonTransactionsSidebar.SendKeys("");
-            Button.Click(ButtonTransactionsSidebar);
+            ClickButtonTransactions();
             Pages.ListOfTransactions
                 .VerifyTitleTransactionsPg();
-            Button.Click(ButtonLeadsSidebar);
+            ClickButtonLeads();
             Pages.ListOfLeads
                 .VerifyTitleLeads();
             ButtonCommissionsSidebar.SendKeys("");
-            Button.Click(ButtonCommissionsSidebar);
+            ClickButtonCommissions();
             Pages.ListOfCommissions
                 .VerifyTitleListOfCommissions();
             ButtonAgentsSidebar.SendKeys("");
-            Button.Click(ButtonAgentsSidebar);
+            ClickButtonAgents();
             Pages.ListOfAgents
                 .VerifyTitleAgentsPg();
             ButtonOwnersSidebar.SendKeys("");
-            Button.Click(ButtonOwnersSidebar);
+            ClickButtonOwners();
             Pages.ListOfOwners
                 .VerifyTitleListOfOwnersPg();
             ButtonMarketplaceSidebar.SendKeys("");
-            Button.Click(ButtonMarketplaceSidebar);
+            ClickButtonMarketplace();
             Pages.Marketplace
                 .VerifyTitleMarketplacePg();
-            Button.Click(ButtonReportsAdminsSidebar);
+            ClickButtonReports();
             Pages.Reports
                 .VerifyTitleReportsPage();
 

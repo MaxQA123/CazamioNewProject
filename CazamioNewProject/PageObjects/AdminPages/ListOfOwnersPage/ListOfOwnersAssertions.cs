@@ -2,18 +2,15 @@
 using NUnit.Allure.Attributes;
 using NUnit.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.ListOfOwnersPage
 {
     public partial class ListOfOwners
     {
-        [AllureStep("VerifyTitleListOfOwnersPg")]
+        [AllureStep("Verify Title List of owners page")]
         public ListOfOwners VerifyTitleListOfOwnersPg()
         {
+            WaitUntil.CustomElementIsVisible(TitleListOfOwnersPg);
             Assert.IsTrue(TitlesCheck.IsVisible(TitleListOfOwnersPg));
 
             return this;

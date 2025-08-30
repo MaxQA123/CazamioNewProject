@@ -11,9 +11,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.PaymentSettingsPage
 {
     public partial class PaymentSettings
     {
-        [AllureStep("VerifyTitlePaymentSettingsPage")]
+        [AllureStep("Verify Title Payment Settings Page")]
         public PaymentSettings VerifyTitlePaymentSettingsPage()
         {
+            WaitUntil.CustomElementIsVisible(TitlePaymentSettingsPage);
             Assert.IsTrue(TitlesCheck.IsVisible(TitlePaymentSettingsPage));
 
             return this;

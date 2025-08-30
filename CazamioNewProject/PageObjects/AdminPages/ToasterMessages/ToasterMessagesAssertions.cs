@@ -8,7 +8,38 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
     {
         #region Success toasters
 
-        [AllureStep("VerifyMessageApartmentsWereSavedSuccessfully")]
+        #region Sidebar
+
+        [AllureStep("Verify Changing Logo Image Marketplace")]
+        public ToasterMessagesLandlord VerifyChangingLogoImageLandlord()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageChangeImageLogoLandlordSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageChangeImageLogoLandlordSuccess));
+
+            return this;
+        }
+
+        [AllureStep("Verify Changing User Avatar Image")]
+        public ToasterMessagesLandlord VerifyChangingAvatarImageLandlord()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageChangeImageAvatarUserSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageChangeImageAvatarUserSuccess));
+
+            return this;
+        }
+
+        [AllureStep("Verify Rewmove User Avatar Image")]
+        public ToasterMessagesLandlord VerifyRewmoveAvatarImageLandlord()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageRemoveImageAvatarUserSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageRemoveImageAvatarUserSuccess));
+
+            return this;
+        }
+
+        #endregion
+
+        [AllureStep("Verify Message Apartments were saved Successfully")]
         public ToasterMessagesLandlord VerifyMessageApartmentsWereSavedSuccessfully()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
@@ -18,7 +49,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
-        [AllureStep("VerifyMessagePaymentMethodsSelected")]
+        [AllureStep("Verify Message Payment methods selected")]
         public ToasterMessagesLandlord VerifyMessagePaymentMethodsSelected()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
@@ -28,34 +59,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
-        [AllureStep("VerifyChangingLogoImageLandlord")]
-        public ToasterMessagesLandlord VerifyChangingLogoImageLandlord()
-        {
-            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageChangeImageLogoLandlordSuccess));
-            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageChangeImageLogoLandlordSuccess));//
 
-            return this;
-        }
-
-        [AllureStep("VerifyChangingAvatarImageLandlord")]
-        public ToasterMessagesLandlord VerifyChangingAvatarImageLandlord()
-        {
-            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageChangeImageAvatarUserSuccess));
-            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageChangeImageAvatarUserSuccess));
-
-            return this;
-        }
-
-        [AllureStep("VerifyRewmoveAvatarImageLandlord")]
-        public ToasterMessagesLandlord VerifyRewmoveAvatarImageLandlord()
-        {
-            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageRemoveImageAvatarUserSuccess));
-            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageRemoveImageAvatarUserSuccess));
-
-            return this;
-        }
-
-        [AllureStep("VerifyMessageSavedSuccessfullyIfCreatedBuilding")]
+        [AllureStep("Verify if created building Message Saved successfully")]
         public ToasterMessagesLandlord VerifyMessageSavedSuccessfullyIfCreatedBuilding()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
@@ -65,7 +70,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
-        [AllureStep("VerifyMessageScreeningFeeSaved")]
+        [AllureStep("Verify Message Screening fee saved")]
         public ToasterMessagesLandlord VerifMessageScreeningFeeSaved()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));

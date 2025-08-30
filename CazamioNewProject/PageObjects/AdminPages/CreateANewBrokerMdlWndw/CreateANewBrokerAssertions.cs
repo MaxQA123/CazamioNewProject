@@ -6,7 +6,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateANewBrokerMdlWndw
 {
     public partial class CreateANewBrokerMdlWndw
     {
-        [AllureStep("VerifyTitleCreateNewBroker")]
+        [AllureStep("Verify Title Create New Broker modal window")]
         public CreateANewBrokerMdlWndw VerifyTitleCreateNewBroker()
         {
             Assert.IsTrue(TitlesCheck.IsVisible(TitleCreateNewBroker));

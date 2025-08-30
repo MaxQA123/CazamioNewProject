@@ -6,9 +6,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.MarketplacePage
 {
     public partial class Marketplace
     {
-        [AllureStep("VerifyTitleMarketplacePg")]
+        [AllureStep("Verify Title Marketplace page")]
         public Marketplace VerifyTitleMarketplacePg()
         {
+            WaitUntil.CustomElementIsVisible(TitleMarketplacePage);
             Assert.IsTrue(TitlesCheck.IsVisible(TitleMarketplacePage));
 
             return this;

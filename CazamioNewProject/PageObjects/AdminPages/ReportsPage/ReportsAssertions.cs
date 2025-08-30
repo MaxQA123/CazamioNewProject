@@ -6,9 +6,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.ReportsPage
 {
     public partial class Reports
     {
-        [AllureStep("VerifyTitleReportsPage")]
+        [AllureStep("Verify Title Reports page")]
         public Reports VerifyTitleReportsPage()
         {
+            WaitUntil.CustomElementIsVisible(TitleReportsPage);
             Assert.IsTrue(TitlesCheck.IsVisible(TitleReportsPage));
 
             return this;

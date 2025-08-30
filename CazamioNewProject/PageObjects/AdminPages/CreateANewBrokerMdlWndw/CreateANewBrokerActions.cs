@@ -2,11 +2,7 @@
 using CazamioNewProject.Objects;
 using NUnit.Allure.Attributes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.CreateANewBrokerMdlWndw
 {
@@ -14,7 +10,34 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateANewBrokerMdlWndw
     {
         Broker broker = Broker.Generate();
 
-        [AllureStep("ClickButtonCreate")]
+        [AllureStep("Enter First Name")]
+        public CreateANewBrokerMdlWndw EnterFirstName()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputEmail);
+            InputGeneral.InputFunctionWithClear(FieldInputFirstName, broker.BrokerName.FirstNameRandom);
+
+            return this;
+        }
+
+        [AllureStep("Enter Last Name")]
+        public CreateANewBrokerMdlWndw EnterLastName()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputEmail);
+            InputGeneral.InputFunctionWithClear(FieldInputLastName, broker.BrokerName.LastNameRandom);
+
+            return this;
+        }
+
+        [AllureStep("Enter Email")]
+        public CreateANewBrokerMdlWndw EnterEmail()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputEmail);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, broker.BrokerEmail.FullEmailRandom);
+
+            return this;
+        }
+
+        [AllureStep("Click Button Create")]
         public CreateANewBrokerMdlWndw ClickButtonCreate()
         {
             Button.Click(ButtonCreate);

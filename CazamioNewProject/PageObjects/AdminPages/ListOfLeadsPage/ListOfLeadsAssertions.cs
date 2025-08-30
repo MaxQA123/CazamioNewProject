@@ -6,9 +6,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfLeadsPage
 {
     public partial class ListOfLeads
     {
-        [AllureStep("VerifyTitleLeads")]
+        [AllureStep("Verify Title Leads page")]
         public ListOfLeads VerifyTitleLeads()
         {
+            WaitUntil.CustomElementIsVisible(TitleLeads);
             Assert.IsTrue(TitlesCheck.IsVisible(TitleLeads));
 
             return this;

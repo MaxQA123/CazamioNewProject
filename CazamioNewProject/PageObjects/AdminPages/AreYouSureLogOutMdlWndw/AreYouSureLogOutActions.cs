@@ -5,7 +5,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw
 {
     public partial class AreYouSureLogOutLandlordMdlWndw
     {
-        [AllureStep("ClickButtonYesIAmSure")]
+        [AllureStep("Click Button Yes I Am Sure")]
         public AreYouSureLogOutLandlordMdlWndw ClickButtonYesIAmSure()
         {
             WaitUntil.CustomElementIsVisible(ButtonYesIAmSureOnMdlwndw);
@@ -14,7 +14,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw
             return this;
         }
 
-        [AllureStep("ClickButtonCancel")]
+        [AllureStep("Click Button Cancel")]
         public AreYouSureLogOutLandlordMdlWndw ClickButtonCancel()
         {
             WaitUntil.CustomElementIsVisible(ButtonCancelOnMdlwndw);
@@ -23,7 +23,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw
             return this;
         }
 
-        [AllureStep("MakeLogOut")]
+        [AllureStep("Make Log Out")]
         public AreYouSureLogOutLandlordMdlWndw MakeLogOut()
         {
             Pages.SidebarLandlord

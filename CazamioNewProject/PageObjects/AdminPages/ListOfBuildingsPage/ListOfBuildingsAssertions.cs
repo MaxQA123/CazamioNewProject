@@ -6,9 +6,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
 {
     public partial class ListOfBuildings
     {
-        [AllureStep("VerifyTitleListOfBuildings")]
+        [AllureStep("Verify Title List of buildings page")]
         public ListOfBuildings VerifyTitleListOfBuildings()
         {
+            WaitUntil.CustomElementIsVisible(TitleListOfBuildingsPage);
             Assert.IsTrue(TitlesCheck.IsVisible(TitleListOfBuildingsPage));
 
             return this;

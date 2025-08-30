@@ -6,7 +6,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
 {
     public partial class LogInLandlord
     {
-        [AllureStep("VerifyTitleLogInPg")]
+        [AllureStep("Verify Title Login page")]
         public LogInLandlord VerifyTitleLogInPg()
         {
             Assert.IsTrue(TitlesCheck.IsVisible(TitleLogInPg));

@@ -68,194 +68,142 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 
         #endregion
 
-        [AllureStep("ClickButtonDashboard")]
+        [AllureStep("Click Button Dashboard")]
         public SidebarLandlord ClickButtonDashboard()
         {
-            WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.CustomElementIsVisible(ButtonDashboardSidebar);
             Button.Click(ButtonDashboardSidebar);
 
             return this;
         }
 
-        [AllureStep("ClickButtonBuildings")]
+        [AllureStep("Click Button Buildings")]
         public SidebarLandlord ClickButtonBuildings()
         {
-            WaitUntil.WaitSomeInterval(5000);
+            WaitUntil.CustomElementIsVisible(ButtonBuildingsSidebar);
             Button.Click(ButtonBuildingsSidebar);
 
             return this;
         }
 
-        [AllureStep("ClickButtonApartments")]
+        [AllureStep("Click Button Apartments")]
         public SidebarLandlord ClickButtonApartments()
         {
-            WaitUntil.WaitSomeInterval(2000);
+            WaitUntil.CustomElementIsVisible(ButtonApartmentsSidebar);
             Button.Click(ButtonApartmentsSidebar);
 
             return this;
         }
 
-        [AllureStep("ClickButtonApplications")]
+        [AllureStep("Click Button Applications")]
         public SidebarLandlord ClickButtonApplications()
         {
-            WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.CustomElementIsVisible(ButtonApplicationsSidebar);
             Button.Click(ButtonApplicationsSidebar);
-            WaitUntil.WaitSomeInterval(1000);
 
             return this;
         }
 
-        [AllureStep("ClickButtonBrokers")]
+        [AllureStep("Click Button Brokers")]
         public SidebarLandlord ClickButtonBrokers()
         {
-            WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.CustomElementIsVisible(ButtonBrokersSidebar);
             Button.Click(ButtonBrokersSidebar);
-            WaitUntil.WaitSomeInterval(1000);
 
             return this;
         }
 
-        //Hiddedn this element
-        //[AllureStep("ClickButtonPreApprovalsSidebar")]
-        //public SideBarLandlord ClickButtonPreApprovalsSidebar()
-        //{
-        //    WaitUntil.WaitSomeInterval(1000);
-        //    Button.Click(ButtonPreApprovalsSidebar);
-        //    WaitUntil.WaitSomeInterval(1000);
-
-        //    return this;
-        //}
-
-        [AllureStep("ClickButtonMarketplaceAdmins")]
+        [AllureStep("Click Button Marketplace Admins")]
         public SidebarLandlord ClickButtonMarketplaceAdmins()
         {
-            WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.CustomElementIsVisible(ButtonMarketplaceAdminsSidebar);
             Button.Click(ButtonMarketplaceAdminsSidebar);
-            WaitUntil.WaitSomeInterval(1000);
 
             return this;
         }
 
-        [AllureStep("ClickButtonLeaseSignDocuments")]
+        [AllureStep("Click Button Lease Sign Documents")]
         public SidebarLandlord ClickButtonLeaseSignDocuments()
         {
-            WaitUntil.WaitSomeInterval(1000);
-            ButtonLeaseSignDocumentsSidebar.SendKeys("");
-            WaitUntil.WaitSomeInterval(500);
+            WaitUntil.CustomElementIsVisible(ButtonLeaseSignDocumentsSidebar);
             Button.Click(ButtonLeaseSignDocumentsSidebar);
-            WaitUntil.WaitSomeInterval(1000);
 
             return this;
         }
 
-        [AllureStep("ClickButtonPaymentSettings")]
+        [AllureStep("Click Button Payment Settings")]
         public SidebarLandlord ClickButtonPaymentSettings()
         {
-            WaitUntil.WaitSomeInterval(1000);
-            ButtonPaymentSettingsSidebar.SendKeys("");
-            WaitUntil.WaitSomeInterval(500);
+            WaitUntil.CustomElementIsVisible(ButtonPaymentSettingsSidebar);
             Button.Click(ButtonPaymentSettingsSidebar);
-            WaitUntil.WaitSomeInterval(1000);
 
             return this;
         }
 
-        [AllureStep("ClickButtonTransactions")]
+        [AllureStep("Click Button Transactions")]
         public SidebarLandlord ClickButtonTransactions()
         {
-            WaitUntil.WaitSomeInterval(1000);
-            ButtonTransactionsSidebar.SendKeys("");
-            WaitUntil.WaitSomeInterval(500);
+            WaitUntil.CustomElementIsVisible(ButtonTransactionsSidebar);
             Button.Click(ButtonTransactionsSidebar);
-            WaitUntil.WaitSomeInterval(1000);
 
             return this;
         }
 
-        [AllureStep("ClickButtonCommissions")]
+        [AllureStep("Click Button Commissions")]
         public SidebarLandlord ClickButtonCommissions()
         {
-            WaitUntil.WaitSomeInterval(1000);
-            ButtonCommissionsSidebar.SendKeys("");
-            WaitUntil.WaitSomeInterval(500);
+            WaitUntil.CustomElementIsVisible(ButtonCommissionsSidebar);
             Button.Click(ButtonCommissionsSidebar);
-            WaitUntil.WaitSomeInterval(1000);
 
             return this;
         }
 
-        [AllureStep("ClickButtonAgents")]
+        [AllureStep("Click Button Agents")]
         public SidebarLandlord ClickButtonAgents()
         {
-            WaitUntil.WaitSomeInterval(1000);
-            ButtonAgentsSidebar.SendKeys("");
-            WaitUntil.WaitSomeInterval(500);
+            WaitUntil.CustomElementIsVisible(ButtonAgentsSidebar);
             Button.Click(ButtonAgentsSidebar);
-            WaitUntil.WaitSomeInterval(1000);
 
             return this;
         }
 
-        [AllureStep("SwitchTabClickButtonBrokers")]
-        public SidebarLandlord SwitchTabClickButtonBrokers()
-        {
-            WaitUntil.WaitSomeInterval(1000);
-            List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
-            Browser._Driver.SwitchTo().Window(tabsList[2]);
-            WaitUntil.WaitSomeInterval(1000);
-            ButtonAgentsSidebar.SendKeys("");
-            WaitUntil.WaitSomeInterval(500);
-            Button.Click(ButtonAgentsSidebar);
-            WaitUntil.WaitSomeInterval(1000);
-
-            return this;
-        }
-
-        [AllureStep("ClickButtonOwners")]
+        [AllureStep("Click Button Owners")]
         public SidebarLandlord ClickButtonOwners()
         {
-            WaitUntil.WaitSomeInterval(1000);
-            ButtonOwnersSidebar.SendKeys("");
-            WaitUntil.WaitSomeInterval(500);
+            WaitUntil.CustomElementIsVisible(ButtonOwnersSidebar);
             Button.Click(ButtonOwnersSidebar);
-            WaitUntil.WaitSomeInterval(1000);
 
             return this;
         }
 
-        [AllureStep("ClickButtonMarketplace")]
+        [AllureStep("Click Button Marketplace")]
         public SidebarLandlord ClickButtonMarketplace()
         {
-            WaitUntil.WaitSomeInterval(1000);
-            ButtonMarketplaceSidebar.SendKeys("");
-            WaitUntil.WaitSomeInterval(500);
+            WaitUntil.CustomElementIsVisible(ButtonMarketplaceSidebar);
             Button.Click(ButtonMarketplaceSidebar);
-            WaitUntil.WaitSomeInterval(1000);
 
             return this;
         }
 
-        [AllureStep("ClickButtonReports")]
+        [AllureStep("Click Button Reports")]
         public SidebarLandlord ClickButtonReports()
         {
-            WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.CustomElementIsVisible(ButtonReportsAdminsSidebar);
             Button.Click(ButtonReportsAdminsSidebar);
-            WaitUntil.WaitSomeInterval(1000);
 
             return this;
         }
 
-        [AllureStep("ClickButtonLeads")]
+        [AllureStep("Click Button Leads")]
         public SidebarLandlord ClickButtonLeads()
         {
-            WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.CustomElementIsVisible(ButtonReportsAdminsSidebar);
             Button.Click(ButtonLeadsSidebar);
-            WaitUntil.WaitSomeInterval(1000);
 
             return this;
         }
 
-        [AllureStep("ClickButtonLogOutSidebar")]
+        [AllureStep("Click Button Log Out")]
         public SidebarLandlord ClickButtonLogOutSidebar()
         {
             WaitUntil.CustomElementIsVisible(ButtonLogOutSidebar);
@@ -264,7 +212,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("ClickButtonBuildingsForSuperAdmin")]
+        [AllureStep("Click Button Buildings for SuperAdmin")]
         public SidebarLandlord ClickButtonBuildingsForSuperAdmin()
         {
             Button.Click(ButtonBuildingsSidebarForSuperAdmin);
@@ -272,7 +220,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("GetUserNameFromSideBar")]
+        [AllureStep("Get User Name from SideBar")]
         public string GetUserNameFromSideBar()
         {
             WaitUntil.CustomElementIsVisible(UserNameOfSidebar);
@@ -282,7 +230,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return getUserNameActual;
         }
 
-        [AllureStep("GetUserNameRoleFromSideBar")]
+        [AllureStep("Get User Name Role from SideBar")]
         public string GetUserNameRoleFromSideBar()
         {
             WaitUntil.CustomElementIsVisible(UserNameRoleOfSidebar);
@@ -291,18 +239,5 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
 
             return getUserNameRoleActual;
         }
-
-        //[AllureStep("MakeLogOut")]
-        //public SidebarLandlord MakeLogOut()
-        //{
-        //    WaitUntil.WaitSomeInterval(1000);
-        //    Button.Click(ButtonLogOutSidebar);
-        //    WaitUntil.WaitSomeInterval(1000);
-
-        //    Pages.AreYouSureLogOutLandlord
-        //        .ClickButtonYesIAmSure();
-
-        //    return this;
-        //}
     }
 }

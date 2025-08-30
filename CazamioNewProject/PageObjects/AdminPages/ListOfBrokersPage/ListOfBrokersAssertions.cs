@@ -1,15 +1,15 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using NUnit.Allure.Attributes;
 using NUnit.Framework;
-using System;
 
 namespace CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage
 {
     public partial class ListOfBrokers
     {
-        [AllureStep("VerifyTitleListOfBrokersPg")]
+        [AllureStep("Verify Title List of brokers page")]
         public ListOfBrokers VerifyTitleListOfBrokersPg()
         {
+            WaitUntil.CustomElementIsVisible(TitleListOfBrokers);
             Assert.IsTrue(TitlesCheck.IsVisible(TitleListOfBrokers));
 
             return this;

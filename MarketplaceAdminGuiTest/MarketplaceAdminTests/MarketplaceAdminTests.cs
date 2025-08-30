@@ -115,9 +115,7 @@ namespace MarketplaceAdminGuiTest
 
         public void Verify_Sidebar()
         {
-            // Upload images logo marketplace and user avatar.
-            // Select the tabs.
-
+            // flow: Upload images logo marketplace and user avatar > Select all the tabs > Make Logout.
             #region Preconditions
 
             Pages.LogInLandlord
@@ -146,9 +144,8 @@ namespace MarketplaceAdminGuiTest
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
-        [AllureSubSuite("CreateBroker")]
-
-        public void CreateBroker()
+        [AllureSubSuite("Create Broker")]
+        public void Create_Broker()
         {
             #region Test Data
 
@@ -160,15 +157,16 @@ namespace MarketplaceAdminGuiTest
 
             Pages.LogInLandlord
                 .LogInAsMarketplaceAdminMySpace();
+            Pages.SidebarLandlord
+                .ClickButtonBrokers();
+            Pages.ListOfBrokers
+                .VerifyTitleListOfBrokersPg();
 
             #endregion
 
             #region Test
 
-            Pages.SidebarLandlord
-                .ClickButtonBrokers();
             Pages.ListOfBrokers
-                .VerifyTitleListOfBrokersPg()
                 .ClickButtonCreateBroker();
             Pages.CreateANewBrokerMdlWndw
                 .VerifyTitleCreateNewBroker()

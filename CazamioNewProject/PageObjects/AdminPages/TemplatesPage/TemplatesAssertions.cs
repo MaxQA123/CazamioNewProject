@@ -9,9 +9,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.TemplatesPage
 {
     public partial class Templates
     {
-        [AllureStep("VerifyTitleTemplatesPage")]
+        [AllureStep("Verify Title Templates page")]
         public Templates VerifyTitleTemplatesPage()
         {
+            WaitUntil.CustomElementIsVisible(TitleTemplatesPage);
             Assert.IsTrue(TitlesCheck.IsVisible(TitleTemplatesPage));
 
             return this;

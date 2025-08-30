@@ -1,0 +1,378 @@
+{
+  "uuid": "18207122-a723-40ea-b443-afd785806a06-tr-0-1004",
+  "historyId": "MarketplaceAdminGuiTest.TestsBaseGui.Verify_Sidebar",
+  "fullName": "MarketplaceAdminGuiTest.TestsBaseGui.Verify_Sidebar",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "MarketplaceAdminGuiTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "Verify_Sidebar"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Positive critical scenarios for Marketplace Admin role"
+    },
+    {
+      "name": "subSuite",
+      "value": "Verify Sidebar"
+    }
+  ],
+  "links": [],
+  "name": "Verify_Sidebar",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+    "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.__a$_around_VerifyTitleListOfApartments_100663830_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfApartmentsPage\\ListOfApartmentsAssertions.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.__a$_around_VerifyTitleListOfApartments_100663830_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.__a$_around_VerifyTitleListOfApartments_100663830_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.VerifyTitleListOfApartments() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfApartmentsPage\\ListOfApartmentsActions.cs:line 11\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfMA_100663634_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarSteps.cs:line 120\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfMA_100663634_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfMA_100663634_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.ClickingAllTabsOfMA() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarActions.cs:line 55\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.Verify_Sidebar() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 128"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Verify_Sidebar",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds",
+        "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.__a$_around_VerifyTitleListOfApartments_100663830_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfApartmentsPage\\ListOfApartmentsAssertions.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.__a$_around_VerifyTitleListOfApartments_100663830_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.__a$_around_VerifyTitleListOfApartments_100663830_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.VerifyTitleListOfApartments() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfApartmentsPage\\ListOfApartmentsActions.cs:line 11\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfMA_100663634_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarSteps.cs:line 120\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfMA_100663634_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfMA_100663634_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.ClickingAllTabsOfMA() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarActions.cs:line 55\r\n   at MarketplaceAdminGuiTest.TestsBaseGui.Verify_Sidebar() in C:\\Automation\\CazamioNewProject\\MarketplaceAdminGuiTest\\MarketplaceAdminTests\\MarketplaceAdminTests.cs:line 128"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "LogIn as Marketplace Admin MySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyTitleLogInPg",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756557537176,
+              "stop": 1756557537275
+            },
+            {
+              "name": "EnterEmailMarketplaceAdmin",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756557537276,
+              "stop": 1756557538107
+            },
+            {
+              "name": "EnterPasswordMarketplaceAdmin",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756557538107,
+              "stop": 1756557538638
+            },
+            {
+              "name": "ClickIconShow",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756557538639,
+              "stop": 1756557539320
+            },
+            {
+              "name": "ClickButtonLetsGo",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756557539321,
+              "stop": 1756557540251
+            },
+            {
+              "name": "GetUserNameFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756557540275,
+              "stop": 1756557546099
+            },
+            {
+              "name": "GetUserNameRoleFromSideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756557546114,
+              "stop": 1756557546744
+            },
+            {
+              "name": "VerifyMarketplaceAdminUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Mark Adm"
+                },
+                {
+                  "name": "String",
+                  "value": "Marketplace Admin"
+                }
+              ],
+              "start": 1756557546753,
+              "stop": 1756557547275
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1756557537167,
+          "stop": 1756557547275
+        },
+        {
+          "name": "ChangingImagesUserAndLogoMarketplaceOfMA",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyChangingLogoImageLandlord",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756557557541,
+              "stop": 1756557564669
+            },
+            {
+              "name": "VerifyChangingAvatarImageLandlord",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756557564937,
+              "stop": 1756557572505
+            },
+            {
+              "name": "VerifyRewmoveAvatarImageLandlord",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756557577694,
+              "stop": 1756557584824
+            },
+            {
+              "name": "VerifyChangingAvatarImageLandlord",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756557584930,
+              "stop": 1756557592015
+            },
+            {
+              "name": "VerifyRewmoveAvatarImageLandlord",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756557593222,
+              "stop": 1756557600962
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1756557547284,
+          "stop": 1756557600962
+        },
+        {
+          "name": "ClickingAllTabsOfMA",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Timed out after 10 seconds",
+            "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.__a$_around_VerifyTitleListOfApartments_100663830_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfApartmentsPage\\ListOfApartmentsAssertions.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.__a$_around_VerifyTitleListOfApartments_100663830_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.__a$_around_VerifyTitleListOfApartments_100663830_w_0(Object[] )\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.VerifyTitleListOfApartments() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfApartmentsPage\\ListOfApartmentsActions.cs:line 11\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfMA_100663634_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\SidebarPage\\SidebarSteps.cs:line 120\r\n   at CazamioNewProject.PageObjects.AdminPages.SidebarPage.SidebarLandlord.__a$_around_ClickingAllTabsOfMA_100663634_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyTitleListOfBuildings",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756557604186,
+              "stop": 1756557604708
+            },
+            {
+              "name": "VerifyTitleListOfApartments",
+              "status": "failed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false,
+                "message": "Timed out after 10 seconds",
+                "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at CazamioNewProject.GuiHelpers.WaitUntil.CustomElementIsVisible(IWebElement element, Int32 seconds) in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\WaitUntil.cs:line 70\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.__a$_around_VerifyTitleListOfApartments_100663830_o() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\PageObjects\\AdminPages\\ListOfApartmentsPage\\ListOfApartmentsAssertions.cs:line 12\r\n   at CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage.ListOfApartments.__a$_around_VerifyTitleListOfApartments_100663830_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1756557606329,
+              "stop": 1756557616628
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1756557600963,
+          "stop": 1756557616680
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "f63ddfe5a0234520a18befeb1afea3d5-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1756557523108,
+      "stop": 1756557620112
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1756557523106,
+  "stop": 1756557620122
+}

@@ -26,7 +26,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("VerifyMarketplaceAdminUserNameAndRole")]
+        [AllureStep("Verify Marketplace Admin User Name and Role")]
         public SidebarLandlord VerifyMarketplaceAdminUserNameAndRole(string getUserNameActual, string getUserNameRoleActual)
         {
             WaitUntil.WaitSomeInterval(500);

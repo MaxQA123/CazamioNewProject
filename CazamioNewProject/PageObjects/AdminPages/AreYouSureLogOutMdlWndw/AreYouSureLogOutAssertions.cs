@@ -6,7 +6,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.AreYouSureLogOutMdlWndw
 {
     public partial class AreYouSureLogOutLandlordMdlWndw
     {
-        [AllureStep("VerifyTitleAreYouSureMdlwndw")]
+        [AllureStep("Verify Title Are You Sure modal window")]
         public AreYouSureLogOutLandlordMdlWndw VerifyTitleAreYouSureMdlwndw()
         {
             Assert.IsTrue(TitlesCheck.IsVisible(TitleAreYouSureMdlwndw));
