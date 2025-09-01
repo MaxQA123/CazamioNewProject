@@ -70,7 +70,7 @@ namespace AgentBrokerGui
             Pages.AreYouSureLogOutLandlordMdlWndw
                 .MakeLogOut();
             Pages.LogInLandlord
-                .VerifyTitle();
+                .VerifyTitleLogInPg();
 
             #endregion
         }

@@ -63,7 +63,7 @@ namespace AgentGuiTests
             Pages.AreYouSureLogOutLandlordMdlWndw
                 .MakeLogOut();
             Pages.LogInLandlord
-                .VerifyTitle();
+                .VerifyTitleLogInPg();
 
             #endregion
         }

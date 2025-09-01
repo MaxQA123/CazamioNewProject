@@ -66,7 +66,7 @@ namespace BrokerGuiTests
             Pages.AreYouSureLogOutLandlordMdlWndw
                 .MakeLogOut();
             Pages.LogInLandlord
-                .VerifyTitle();
+                .VerifyTitleLogInPg();
 
             WaitUntil.WaitSomeInterval(1000);
 
