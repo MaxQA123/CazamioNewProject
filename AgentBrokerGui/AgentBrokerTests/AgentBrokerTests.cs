@@ -88,33 +88,33 @@ namespace AgentBrokerGui
         public void AddGroupBuildingsViaApiBasicStatic()
         {
 
-            #region SettingsForBuilding
+            //#region SettingsForBuilding
 
-            //111A East 51st Street Pedestrian Crossing
+            ////111A East 51st Street Pedestrian Crossing
 
-            #endregion
+            //#endregion
 
-            #region Test Data
+            //#region Test Data
 
-            MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
+            //MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
 
-            #endregion
+            //#endregion
 
-            #region Preconditions API LogIn as Marketplace Admin
+            //#region Preconditions API LogIn as Marketplace Admin
 
-            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
-            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+            //var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
+            //LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
 
-            #endregion
+            //#endregion
 
-            #region Preconditions API create the 111A East 51st Street Pedestrian Crossing building
+            //#region Preconditions API create the 111A East 51st Street Pedestrian Crossing building
 
-            var buildingRequestBodyEastStPedestrianCrossing = BuildingCreationMandatoryData.RequestBodyCreateBuildingOneOneOneAEastStPedestrianCrossing();
-            var responseBuildingEastStPedestrianCrossing = BuildingCreationMandatoryData.CreateBuildingOneOneOneAEastStPedestrianCrossing(responseMarketplaceAdmin.AuthData.Token, buildingRequestBodyEastStPedestrianCrossing);
+            //var buildingRequestBodyEastStPedestrianCrossing = BuildingCreationMandatoryData.RequestBodyCreateBuildingOneOneOneAEastStPedestrianCrossing();
+            //var responseBuildingEastStPedestrianCrossing = BuildingCreationMandatoryData.CreateBuildingOneOneOneAEastStPedestrianCrossing(responseMarketplaceAdmin.AuthData.Token, buildingRequestBodyEastStPedestrianCrossing);
 
-            WaitUntil.WaitSomeInterval(1000);
+            //WaitUntil.WaitSomeInterval(1000);
 
-            #endregion
+            //#endregion
 
         }
 

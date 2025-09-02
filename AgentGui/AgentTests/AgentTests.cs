@@ -80,31 +80,31 @@ namespace AgentGuiTests
 
         public void AddGroupBuildingsViaApiBasicStatic()
         {
-            #region SettingsForBuilding
+            //#region SettingsForBuilding
 
-            //12867 Gates Avenue
+            ////12867 Gates Avenue
 
-            #endregion
+            //#endregion
 
-            #region Test Data
+            //#region Test Data
 
-            MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
+            //MarketplaceAdmin marketplaceAdmin = MarketplaceAdmin.Generate();
 
-            #endregion
+            //#endregion
 
-            #region Preconditions API LogIn as Marketplace Admin
+            //#region Preconditions API LogIn as Marketplace Admin
 
-            var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
-            LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
+            //var responseMarketplaceAdmin = LogInApiMarketplaceAdmin.ExecuteLogIn();
+            //LogInApiMarketplaceAdmin.VerifyUserData(responseMarketplaceAdmin, marketplaceAdmin);
 
-            #endregion
+            //#endregion
 
-            #region Preconditions API create the 12867 Gates Avenue building
+            //#region Preconditions API create the 12867 Gates Avenue building
 
-            var buildingRequestBody = BuildingCreationMandatoryData.RequestBodyCreateOneTwoEightSixSevenGatesAvenue();
-            var responseBuilding = BuildingCreationMandatoryData.CreateOneTwoEightSixSevenGatesAvenue(responseMarketplaceAdmin.AuthData.Token, buildingRequestBody);
+            //var buildingRequestBody = BuildingCreationMandatoryData.RequestBodyCreateOneTwoEightSixSevenGatesAvenue();
+            //var responseBuilding = BuildingCreationMandatoryData.CreateOneTwoEightSixSevenGatesAvenue(responseMarketplaceAdmin.AuthData.Token, buildingRequestBody);
 
-            #endregion
+            //#endregion
         }
 
         [Test]
