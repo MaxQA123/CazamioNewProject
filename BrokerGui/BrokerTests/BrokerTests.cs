@@ -310,12 +310,16 @@ namespace BrokerGuiTests
 
             #endregion
 
-            #region Preconditions Test
+            #region Preconditions GUI
 
             Pages.LogInLandlord
                 .LogInAsBrokerMySpace();
+            Pages.ListOfApartments
+                .WaitFirstRowInListOfApartments();
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
+            Pages.ListOfBuildings
+                .WaitItemFirstBuildingOnPage();
 
             #endregion
 
@@ -394,12 +398,16 @@ namespace BrokerGuiTests
 
             #endregion
 
-            #region Preconditions Test
+            #region Preconditions GUI
 
             Pages.LogInLandlord
                 .LogInAsBrokerMySpace();
+            Pages.ListOfApartments
+                .WaitFirstRowInListOfApartments();
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
+            Pages.ListOfBuildings
+                .WaitItemFirstBuildingOnPage();
 
             #endregion
 
@@ -540,9 +548,12 @@ namespace BrokerGuiTests
 
             Pages.LogInLandlord
                 .LogInAsBrokerMySpace();
+            Pages.ListOfApartments
+                .WaitFirstRowInListOfApartments();
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
+                .WaitItemFirstBuildingOnPage()
                 .SearchThirtyDashThirtyNineCrownSt()
                 .SelectThirtyDashThirtyNineCrownSt();
             KeyBoardActions.ScrollToDown();
@@ -601,10 +612,12 @@ namespace BrokerGuiTests
 
             #endregion
 
-            #region Preconditions Test
+            #region Preconditions GUI
 
             Pages.LogInLandlord
                 .LogInAsBrokerMySpace();
+            Pages.ListOfApartments
+                .WaitFirstRowInListOfApartments();
 
             #endregion
 
@@ -685,9 +698,12 @@ namespace BrokerGuiTests
 
             Pages.LogInLandlord
                 .LogInAsBrokerMySpace();
+            Pages.ListOfApartments
+                .WaitFirstRowInListOfApartments();
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
+                .WaitItemFirstBuildingOnPage()
                 .SearchNineAAlbermaleRd()
                 .SelectItemNineAAlbermaleRd();
             Pages.BuildingView
@@ -862,13 +878,16 @@ namespace BrokerGuiTests
 
             #endregion
 
-            #region Preconditions Test
+            #region Preconditions GUI
 
             Pages.LogInLandlord
                 .LogInAsBrokerMySpace();
+            Pages.ListOfApartments
+                .WaitFirstRowInListOfApartments();
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
+                .WaitItemFirstBuildingOnPage()
                 .SearchThirtyDashThirtyNineCrownSt()
                 .SelectThirtyDashThirtyNineCrownSt();
             Pages.BuildingView
@@ -1034,9 +1053,12 @@ namespace BrokerGuiTests
 
             Pages.LogInLandlord
                 .LogInAsBrokerMySpace();
+            Pages.ListOfApartments
+                .WaitFirstRowInListOfApartments();
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
+                .WaitItemFirstBuildingOnPage()
                 .SearchOneTwoFiveSixSevenDeanStreet()
                 .SelectOneTwoFiveSixSevenDeanStreet();
             Pages.BuildingView

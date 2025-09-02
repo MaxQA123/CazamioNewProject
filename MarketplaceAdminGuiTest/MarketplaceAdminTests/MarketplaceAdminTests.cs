@@ -464,10 +464,12 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
 
-            #region Preconditions
+            #region Preconditions GUI
 
             Pages.LogInLandlord
                 .LogInAsMarketplaceAdminMySpace();
+            Pages.ListOfApartments
+                .WaitFirstRowInListOfApartments();
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
 
@@ -476,6 +478,7 @@ namespace MarketplaceAdminGuiTest
             #region Test
 
             Pages.ListOfBuildings
+                .WaitItemFirstBuildingOnPage()
                 .ClickButtonAddBuilding();
             Pages.NewBuilding
                 .VerifyTitleNewBuildingPg()
@@ -587,10 +590,12 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
 
-            #region Preconditions
+            #region Preconditions GUI
 
             Pages.LogInLandlord
                 .LogInAsMarketplaceAdminMySpace();
+            Pages.ListOfApartments
+                .WaitFirstRowInListOfApartments();
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
 
@@ -599,6 +604,7 @@ namespace MarketplaceAdminGuiTest
             #region Test
 
             Pages.ListOfBuildings
+                .WaitItemFirstBuildingOnPage()
                 .ClickButtonAddBuilding();
             Pages.NewBuilding
                 .VerifyTitleNewBuildingPg()
@@ -718,13 +724,16 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
 
-            #region Preconditions Test
+            #region Preconditions GUI
 
             Pages.LogInLandlord
                 .LogInAsMarketplaceAdminMySpace();
+            Pages.ListOfApartments
+                .WaitFirstRowInListOfApartments();
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
+                .WaitItemFirstBuildingOnPage()
                 .SearchBuildingOneWashingtonSquare()
                 .SelectOneWashingtonSquare();
             Pages.BuildingView
@@ -845,13 +854,16 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
 
-            #region Preconditions Test
+            #region Preconditions GUI
 
             Pages.LogInLandlord
                 .LogInAsMarketplaceAdminMySpace();
+            Pages.ListOfApartments
+                .WaitFirstRowInListOfApartments();
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
+                .WaitItemFirstBuildingOnPage()
                 .SearchNineNineNineEightSaintJohnsonPlace()
                 .SelectNineNineNineEightSaintJohnsonPlace();
             Pages.BuildingView
@@ -938,13 +950,16 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
 
-            #region Preconditions Test
+            #region Preconditions GUI
 
             Pages.LogInLandlord
                 .LogInAsMarketplaceAdminMySpace();
+            Pages.ListOfApartments
+                .WaitFirstRowInListOfApartments();
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
+                .WaitItemFirstBuildingOnPage()
                 .SearchNineNineNineEightSaintJohnsonPlace();
             Pages.ListOfBuildings
                 .SelectItemFirst();
@@ -1049,13 +1064,16 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
 
-            #region Preconditions Test
+            #region Preconditions GUI
 
             Pages.LogInLandlord
                  .LogInAsMarketplaceAdminMySpace();
+            Pages.ListOfApartments
+                .WaitFirstRowInListOfApartments();
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
+                .WaitItemFirstBuildingOnPage()
                 .SearchBuildingOneWashingtonSquare();
             Pages.ListOfBuildings
                 .SelectItemFirst();
@@ -1215,9 +1233,12 @@ namespace MarketplaceAdminGuiTest
 
             Pages.LogInLandlord
                 .LogInAsMarketplaceAdminMySpace();
+            Pages.ListOfApartments
+                .WaitFirstRowInListOfApartments();
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
+                .WaitItemFirstBuildingOnPage()
                 .SearchNineNineNineEightSaintJohnsonPlace()
                 .SelectNineNineNineEightSaintJohnsonPlace();
             Pages.BuildingView

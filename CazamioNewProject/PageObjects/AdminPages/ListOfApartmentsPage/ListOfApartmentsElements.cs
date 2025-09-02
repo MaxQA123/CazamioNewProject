@@ -11,6 +11,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage
         [FindsBy(How = How.XPath, Using = "//div[text()= 'List of apartments']")]
         public IWebElement TitleListOfApartmentsPage;
 
+        [FindsBy(How = How.XPath, Using = "//app-apartment-card//div")]
+        public IWebElement FirstRowInListOfApartments;
+
         [FindsBy(How = How.XPath, Using = "//button//span[text() = 'Add']")]
         public IWebElement ButtonAdd;
     }

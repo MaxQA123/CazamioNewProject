@@ -8,6 +8,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
     {
         Building building = Building.Generate();
 
+        [AllureStep("Wait appearing First row in List of Buildings")]
+        public ListOfBuildings WaitItemFirstBuildingOnPage()
+        {
+            WaitUntil.CustomElementIsVisible(ItemFirstBuildingOnPage);
+
+            return this;
+        }
+
         [AllureStep("ClickButtonAddBuilding")]
         public ListOfBuildings ClickButtonAddBuilding()
         {
@@ -59,7 +67,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBuildingsPage
         public ListOfBuildings SearchOneOneOneAEastStPerestrian()
         {
             WaitUntil.CustomElementIsVisible(LoaderHidden, 10);
-            WaitUntil.WaitSomeInterval(10000);
+            //WaitUntil.WaitSomeInterval(10000);
             WaitUntil.CustomElementIsVisible(FieldInputSearch);
             WaitUntil.CustomElementIsClickable(FieldInputSearch);
             InputGeneral.InputFunctionWithClear(FieldInputSearch, building.East51stStreetPedestrianCrossing.NumberNameAddressStaticForSearch);

@@ -152,6 +152,8 @@ namespace AgentGuiTests
 
             Pages.LogInLandlord
                .LogInAsAgentMySpace();
+            Pages.ListOfApartments
+                .WaitFirstRowInListOfApartments();
             Pages.SidebarLandlord
                 .ClickButtonApplications();
             Pages.ListOfApplications
@@ -263,13 +265,16 @@ namespace AgentGuiTests
 
             #endregion
 
-            #region Preconditions Test
+            #region Preconditions GUI
 
             Pages.LogInLandlord
                .LogInAsAgentMySpace();
+            Pages.ListOfApartments
+                .WaitFirstRowInListOfApartments();
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
+                .WaitItemFirstBuildingOnPage()
                 .SearchOneTwoEightSixSevenGatesAvenue()
                 .SelectOneTwoEightSixSevenGatesAvenue();
             Pages.BuildingView

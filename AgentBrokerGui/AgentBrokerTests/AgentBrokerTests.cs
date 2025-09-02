@@ -225,9 +225,12 @@ namespace AgentBrokerGui
 
             Pages.LogInLandlord
                 .LogInAsAgentBrokerMySpace();
+            Pages.ListOfApartments
+                .WaitFirstRowInListOfApartments();
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
+                .WaitItemFirstBuildingOnPage()
                 .SearchOneOneOneAEastStPerestrian()
                 .SelectOneOneOneAEastStPerestrian();
             Pages.BuildingView
@@ -304,9 +307,12 @@ namespace AgentBrokerGui
 
             Pages.LogInLandlord
                 .LogInAsAgentBrokerMySpace();
+            Pages.ListOfApartments
+                .WaitFirstRowInListOfApartments();
             Pages.SidebarLandlord
                 .ClickButtonBuildings();
             Pages.ListOfBuildings
+                .WaitItemFirstBuildingOnPage()
                 .SearchOneOneOneAEastStPerestrian()
                 .SelectOneOneOneAEastStPerestrian();
             Pages.BuildingView
@@ -400,6 +406,8 @@ namespace AgentBrokerGui
 
             Pages.LogInLandlord
                 .LogInAsAgentBrokerMySpace();
+            Pages.ListOfApartments
+                .WaitFirstRowInListOfApartments();
             Pages.SidebarLandlord
                 .ClickButtonApplications();
             Pages.ListOfApplications
@@ -512,9 +520,12 @@ namespace AgentBrokerGui
 
             Pages.LogInLandlord
                 .LogInAsAgentBrokerMySpace();
+            Pages.ListOfApartments
+                .WaitFirstRowInListOfApartments();
             Pages.SidebarLandlord
                .ClickButtonBuildings();
             Pages.ListOfBuildings
+                .WaitItemFirstBuildingOnPage()
                 .SearchOneOneOneAEastStPerestrian()
                 .SelectOneOneOneAEastStPerestrian();
             Pages.BuildingView

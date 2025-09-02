@@ -5,6 +5,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfApartmentsPage
 {
     public partial class ListOfApartments
     {
+        [AllureStep("Wait appearing First row in List of Apartments")]
+        public ListOfApartments WaitFirstRowInListOfApartments()
+        {
+            WaitUntil.CustomElementIsVisible(FirstRowInListOfApartments);
+
+            return this;
+        }
+
         [AllureStep("ClickButtonAdd")]
         public ListOfApartments ClickButtonAdd()
         {
