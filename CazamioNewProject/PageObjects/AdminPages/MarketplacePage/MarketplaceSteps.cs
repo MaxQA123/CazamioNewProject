@@ -11,13 +11,13 @@ namespace CazamioNewProject.PageObjects.AdminPages.MarketplacePage
             WaitUntil.CustomElementIsVisible(BrandLogoSectionName);
             VerifyBrandLogoSectionName();
             VerifyBrandNameSectionName();
-            InputGeneral.InputFunctionWithClear(ChangeBrandNameInputField, basicDataForProject.SettingsMarketplaceMySpace.BrandNameSecond);
+            EnterBrandNameMySpaceNYC();
             WaitUntil.CustomElementIsVisible(SaveBtnForChangeBrandNameInputField);
             WaitUntil.CustomElementIsClickable(SaveBtnForChangeBrandNameInputField);
             Button.Click(SaveBtnForChangeBrandNameInputField);
             Pages.ToasterMessagesLandlord
                 .VerifyMessageBrandNameHasBeenSaveddSuccessfully();
-            InputGeneral.InputFunctionWithClear(ChangeBrandNameInputField, basicDataForProject.SettingsMarketplaceMySpace.BrandNameFirst);
+            EnterBrandNameNoyoPropertiesNYC();
             WaitUntil.CustomElementIsVisible(SaveBtnForChangeBrandNameInputField);
             WaitUntil.CustomElementIsClickable(SaveBtnForChangeBrandNameInputField);
             Button.Click(SaveBtnForChangeBrandNameInputField);
