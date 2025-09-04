@@ -31,6 +31,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.MarketplacePage
             Pages.ToasterMessagesLandlord
                 .VerifyMessageDisclosureЫavedЫuccessfully();
 
+            
+
             return this;
         }
     }
