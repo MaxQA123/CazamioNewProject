@@ -24,6 +24,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
             Pages.SidebarLandlord
                 .VerifySuperAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
 
+            WaitUntil.WaitSomeInterval(5000);
+
             return this;
         }
 
@@ -41,6 +43,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
 
             Pages.SidebarLandlord
                 .VerifyMarketplaceAdminUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+
+            WaitUntil.WaitSomeInterval(5000);
 
             return this;
         }
@@ -61,6 +65,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
             Pages.SidebarLandlord
                 .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
 
+            WaitUntil.WaitSomeInterval(5000);
+
             return this;
         }
 
@@ -80,6 +86,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
             Pages.SidebarLandlord
                 .VerifyAgentUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
 
+            WaitUntil.WaitSomeInterval(5000);
+
             return this;
         }
 
@@ -98,6 +106,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
 
             Pages.SidebarLandlord
                 .VerifyAgentBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+
+            WaitUntil.WaitSomeInterval(5000);
 
             return this;
         }
