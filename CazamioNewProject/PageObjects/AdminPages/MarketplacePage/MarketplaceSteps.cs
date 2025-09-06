@@ -11,6 +11,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.MarketplacePage
             WaitUntil.CustomElementIsVisible(BrandLogoSectionName);
             VerifyBrandLogoSectionName();
             VerifyBrandNameSectionName();
+            WaitUntil.WaitSomeInterval(500);
             EnterBrandNameMySpaceNYC();
             WaitUntil.CustomElementIsVisible(SaveBtnForChangeBrandNameInputField);
             WaitUntil.CustomElementIsClickable(SaveBtnForChangeBrandNameInputField);
