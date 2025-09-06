@@ -31,44 +31,47 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
         [AllureStep("UploadImageAvatar")]
         public SidebarLandlord UploadImageAvatar()
         {
-            WaitUntil.WaitSomeInterval(1000);
-            IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_SECOND));
+            WaitUntil.CustomElementIsVisible(IconBtnForUploadImageAvatar);
+            WaitUntil.CustomElementIsClickable(IconBtnForUploadImageAvatar);
+            IconBtnForUploadImageAvatar.SendKeys(Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\") + UploadImages.AVATAR_IMG_ADMIN_FIRST));
             return this;
         }
 
         [AllureStep("DeleteImageAvatar")]
         public SidebarLandlord DeleteImageAvatar()
         {
+            WaitUntil.CustomElementIsVisible(IconBtnForDeleteImageAvatar);
+            WaitUntil.CustomElementIsClickable(IconBtnForDeleteImageAvatar);
             Button.Click(IconBtnForDeleteImageAvatar);
 
             return this;
         }
 
-        private static IWebElement _element;
+        //private static IWebElement _element;
 
-        [AllureStep("SelectorItemsOnSidebar")]
-        public static IList<IWebElement> SelectorItemsOnSidebar(string _locationItemSidebar)
-        {
-            WaitUntil.WaitSomeInterval(1000);
-            var str = "//aside[@class= 'aside-container']";
-            _element = Browser._Driver.FindElement(By.XPath(str));
-            return _element.FindElements(By.XPath($".//ul[@class= 'sidebar-nav']//li//a[contains(@href, '{_locationItemSidebar}')]"));
-        }
+        //[AllureStep("SelectorItemsOnSidebar")]
+        //public static IList<IWebElement> SelectorItemsOnSidebar(string _locationItemSidebar)
+        //{
+        //    WaitUntil.WaitSomeInterval(1000);
+        //    var str = "//aside[@class= 'aside-container']";
+        //    _element = Browser._Driver.FindElement(By.XPath(str));
+        //    return _element.FindElements(By.XPath($".//ul[@class= 'sidebar-nav']//li//a[contains(@href, '{_locationItemSidebar}')]"));
+        //}
 
-        [AllureStep("SelectItemsOnSidebar")]
-        public SidebarLandlord SelectItemsOnSidebar(int item, string locationItemSidebar)
-        {
-            WaitUntil.WaitSomeInterval(1000);
-            IList<IWebElement> _item = SelectorItemsOnSidebar(locationItemSidebar);
+        //[AllureStep("SelectItemsOnSidebar")]
+        //public SidebarLandlord SelectItemsOnSidebar(int item, string locationItemSidebar)
+        //{
+        //    WaitUntil.WaitSomeInterval(1000);
+        //    IList<IWebElement> _item = SelectorItemsOnSidebar(locationItemSidebar);
 
-            _item[item].Click();
+        //    _item[item].Click();
 
-            return this;
-        }
+        //    return this;
+        //}
 
         #endregion
 
-        [AllureStep("Click Button Dashboard")]
+        [AllureStep("Click Button Dashboard on sidebar")]
         public SidebarLandlord ClickButtonDashboard()
         {
             WaitUntil.CustomElementIsVisible(ButtonDashboardSidebar);
@@ -77,7 +80,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("Click Button Buildings")]
+        [AllureStep("Click Button Buildings on sidebar")]
         public SidebarLandlord ClickButtonBuildings()
         {
             WaitUntil.CustomElementIsVisible(ButtonBuildingsSidebar);
@@ -86,7 +89,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("Click Button Apartments")]
+        [AllureStep("Click Button Apartments on sidebar")]
         public SidebarLandlord ClickButtonApartments()
         {
             WaitUntil.CustomElementIsVisible(ButtonApartmentsSidebar);
@@ -95,7 +98,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("Click Button Applications")]
+        [AllureStep("Click Button Applications on sidebar")]
         public SidebarLandlord ClickButtonApplications()
         {
             WaitUntil.CustomElementIsVisible(ButtonApplicationsSidebar);
@@ -104,7 +107,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("Click Button Brokers")]
+        [AllureStep("Click Button Brokers on sidebar")]
         public SidebarLandlord ClickButtonBrokers()
         {
             WaitUntil.CustomElementIsVisible(ButtonBrokersSidebar);
@@ -113,7 +116,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("Click Button Marketplace Admins")]
+        [AllureStep("Click Button Marketplace Admins on sidebar")]
         public SidebarLandlord ClickButtonMarketplaceAdmins()
         {
             WaitUntil.CustomElementIsVisible(ButtonMarketplaceAdminsSidebar);
@@ -122,7 +125,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("Click Button Lease Sign Documents")]
+        [AllureStep("Click Button Lease Sign Documents on sidebar")]
         public SidebarLandlord ClickButtonLeaseSignDocuments()
         {
             WaitUntil.CustomElementIsVisible(ButtonLeaseSignDocumentsSidebar);
@@ -131,7 +134,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("Click Button Payment Settings")]
+        [AllureStep("Click Button Payment Settings on sidebar")]
         public SidebarLandlord ClickButtonPaymentSettings()
         {
             WaitUntil.CustomElementIsVisible(ButtonPaymentSettingsSidebar);
@@ -140,7 +143,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("Click Button Transactions")]
+        [AllureStep("Click Button Transactions on sidebar")]
         public SidebarLandlord ClickButtonTransactions()
         {
             WaitUntil.CustomElementIsVisible(ButtonTransactionsSidebar);
@@ -149,7 +152,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("Click Button Commissions")]
+        [AllureStep("Click Button Commissions on sidebar")]
         public SidebarLandlord ClickButtonCommissions()
         {
             WaitUntil.CustomElementIsVisible(ButtonCommissionsSidebar);
@@ -158,7 +161,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("Click Button Agents")]
+        [AllureStep("Click Button Agents on sidebar")]
         public SidebarLandlord ClickButtonAgents()
         {
             WaitUntil.CustomElementIsVisible(ButtonAgentsSidebar);
@@ -167,7 +170,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("Click Button Owners")]
+        [AllureStep("Click Button Owners on sidebar")]
         public SidebarLandlord ClickButtonOwners()
         {
             WaitUntil.CustomElementIsVisible(ButtonOwnersSidebar);
@@ -176,7 +179,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("Click Button Marketplace")]
+        [AllureStep("Click Button Marketplace on sidebar")]
         public SidebarLandlord ClickButtonMarketplace()
         {
             WaitUntil.CustomElementIsVisible(ButtonMarketplaceSidebar);
@@ -185,7 +188,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("Click Button Reports")]
+        [AllureStep("Click Button Reports on sidebar")]
         public SidebarLandlord ClickButtonReports()
         {
             WaitUntil.CustomElementIsVisible(ButtonReportsAdminsSidebar);
@@ -194,7 +197,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("Click Button Leads")]
+        [AllureStep("Click Button Leads on sidebar")]
         public SidebarLandlord ClickButtonLeads()
         {
             WaitUntil.CustomElementIsVisible(ButtonReportsAdminsSidebar);
@@ -203,7 +206,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("Click Button Log Out")]
+        [AllureStep("Click Button Log Out on sidebar")]
         public SidebarLandlord ClickButtonLogOutSidebar()
         {
             WaitUntil.CustomElementIsVisible(ButtonLogOutSidebar);
@@ -212,7 +215,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("Click Button Buildings for SuperAdmin")]
+        [AllureStep("Click Button Buildings for SuperAdmin on sidebar")]
         public SidebarLandlord ClickButtonBuildingsForSuperAdmin()
         {
             Button.Click(ButtonBuildingsSidebarForSuperAdmin);

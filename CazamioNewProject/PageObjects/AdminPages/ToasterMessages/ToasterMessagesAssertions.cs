@@ -131,7 +131,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
-        [AllureStep("VerifyMessageBrandNameHasBeenSaveddSuccessfully")]
+        [AllureStep("Verify Message brand name has been saved successfully")]
         public ToasterMessagesLandlord VerifyMessageBrandNameHasBeenSaveddSuccessfully()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
@@ -142,13 +142,24 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
-        [AllureStep("VerifyMessageDisclosureЫavedЫuccessfully")]
+        [AllureStep("Verify Message disclosure saved successfully")]
         public ToasterMessagesLandlord VerifyMessageDisclosureЫavedЫuccessfully()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageDisclosureЫavedЫuccessfully));
             Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageSuccess));
             Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageDisclosureЫavedЫuccessfully));
+
+            return this;
+        }
+
+        [AllureStep("Verify Message broker has been successfully created")]
+        public ToasterMessagesLandlord VerifyMessageBrokerHasBeenSuccessfullyCreated()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageBrokerHasBeenSuccessfullyCreated));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageSuccess));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageBrokerHasBeenSuccessfullyCreated));
 
             return this;
         }

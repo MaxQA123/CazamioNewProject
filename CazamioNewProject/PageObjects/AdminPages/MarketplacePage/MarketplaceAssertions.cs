@@ -15,23 +15,25 @@ namespace CazamioNewProject.PageObjects.AdminPages.MarketplacePage
             return this;
         }
 
-        [AllureStep("VerifyBrandLogoSectionName")]
+        [AllureStep("Verify Brand Logo section name")]
         public Marketplace VerifyBrandLogoSectionName()
         {
+            WaitUntil.CustomElementIsVisible(BrandLogoSectionName);
             Assert.IsTrue(TextSubtitle.IsVisible(BrandLogoSectionName));
 
             return this;
         }
 
-        [AllureStep("VerifyBrandNameSectionName")]
+        [AllureStep("Verify Brand Name section name")]
         public Marketplace VerifyBrandNameSectionName()
         {
+            WaitUntil.CustomElementIsVisible(BrandNameSectionName);
             Assert.IsTrue(TextSubtitle.IsVisible(BrandNameSectionName));
 
             return this;
         }
 
-        [AllureStep("VerifyDisclosureInformationSectionName")]
+        [AllureStep("Verify Disclosure Information section name")]
         public Marketplace VerifyDisclosureInformationSectionName()
         {
             Assert.IsTrue(TextSubtitle.IsVisible(DisclosureInformationSectionName));

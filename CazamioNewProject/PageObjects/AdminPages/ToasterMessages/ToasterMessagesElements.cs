@@ -9,6 +9,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Success']")]
         public IWebElement MessageSuccess;
 
+        //Appeared if created a new broker in Create a new Broker modal window
+        [FindsBy(How = How.XPath, Using = "//span[text() = 'Broker has been successfully created']")]
+        public IWebElement MessageBrokerHasBeenSuccessfullyCreated;
+
         //Appeared if selected and saved a payment method in Payment Options modal window
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Payment methods selected, Click save to confirm']")]
         public IWebElement MessagePaymentMethodsSelected;

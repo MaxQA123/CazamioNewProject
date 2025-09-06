@@ -15,14 +15,6 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage
             return this;
         }
 
-        [AllureStep("VerifyMessageBrokerHasBeenSuccessfullyCreated")]
-        public ListOfBrokers VerifyMessageBrokerHasBeenSuccessfullyCreated()
-        {
-            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageBrokerHasBeenSuccessfullyCreated));
-
-            return this;
-        }
-
         [AllureStep("VerifyEmailInListOfBrokers")]
         public ListOfBrokers VerifyEmailInListOfBrokers(string getFullEmail, string getEmailFromListOfBrokers)
         {

@@ -14,7 +14,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage
             return this;
         }
 
-        [AllureStep("CopyEmailFirstRecordEmailForFirstBrokerInList")]
+        [AllureStep("Copy first email record of broker in list")]
         public string CopyEmailFirstRecordEmailForFirstBrokerInList()
         {
             WaitUntil.WaitSomeInterval(500);

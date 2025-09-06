@@ -46,6 +46,12 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         [FindsBy(How = How.XPath, Using = ("//app-prepare-application//div[@class = 'address-input']//input[@aria-autocomplete = 'list']"))]
         public IWebElement UnitAddressFieldInput;
 
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//ng-dropdown-panel//span[contains(@title, '12867 Gates Avenue')]"))]
+        public IWebElement OneTwoEightSixSevenGatesAvenueAddress;
+
+        [FindsBy(How = How.XPath, Using = ("//app-prepare-application//ng-dropdown-panel//span[contains(@title, '111A East 51st Street Pedestrian Crossing')]"))]
+        public IWebElement OneOneOneAEastStPedestrianCrossingAddressAddress;
+
         public IWebElement SetOneTwoEightSixSevenGatesAvenueAddress()
         {
             Building building = Building.Generate();

@@ -5,34 +5,28 @@ namespace CazamioNewProject.PageObjects.AdminPages.MarketplacePage
 {
     public partial class Marketplace
     {
-        [AllureStep("FillInBrandNameAndDisclosureInformation")]
-        public Marketplace FillInBrandNameAndDisclosureInformation()
+        [AllureStep("Update settings on the Marketplace page")]
+        public Marketplace UpdateSettingsOnMarketplacePage()
         {
-            WaitUntil.CustomElementIsVisible(BrandLogoSectionName);
+            VerifyTitleMarketplacePg();
             VerifyBrandLogoSectionName();
             VerifyBrandNameSectionName();
             WaitUntil.WaitSomeInterval(500);
             EnterBrandNameMySpaceNYC();
-            WaitUntil.CustomElementIsVisible(SaveBtnForChangeBrandNameInputField);
-            WaitUntil.CustomElementIsClickable(SaveBtnForChangeBrandNameInputField);
-            Button.Click(SaveBtnForChangeBrandNameInputField);
+            ClickSaveBtnForChangeBrandNameInputField();
             Pages.ToasterMessagesLandlord
                 .VerifyMessageBrandNameHasBeenSaveddSuccessfully();
             EnterBrandNameNoyoPropertiesNYC();
-            WaitUntil.CustomElementIsVisible(SaveBtnForChangeBrandNameInputField);
-            WaitUntil.CustomElementIsClickable(SaveBtnForChangeBrandNameInputField);
-            Button.Click(SaveBtnForChangeBrandNameInputField);
+            ClickSaveBtnForChangeBrandNameInputField();
             Pages.ToasterMessagesLandlord
                 .VerifyMessageBrandNameHasBeenSaveddSuccessfully();
-            InputGeneral.InputFunctionWithClear(OwnerNameInputField, basicDataForProject.SettingsMarketplaceMySpace.Ownername);
-            InputGeneral.InputFunctionWithClear(CompanyFullLegalNameInputField, basicDataForProject.SettingsMarketplaceMySpace.CompanyFullLegalName);
-            InputGeneral.InputFunctionWithClear(AddressInputField, basicDataForProject.SettingsMarketplaceMySpace.Address);
-            InputGeneral.InputFunctionWithClear(PhoneNumberInputField, basicDataForProject.SettingsMarketplaceMySpace.PhoneNumber);
-            Button.Click(SaveBtnForDisclosureInformationSection);
+            EnterOwnerName();
+            EnterCompanyFullLegalName();
+            EnterAddress();
+            EnterPhoneNumber();
+            ClickSaveBtnForDisclosureInformationSection();
             Pages.ToasterMessagesLandlord
                 .VerifyMessageDisclosureЫavedЫuccessfully();
-
-            
 
             return this;
         }

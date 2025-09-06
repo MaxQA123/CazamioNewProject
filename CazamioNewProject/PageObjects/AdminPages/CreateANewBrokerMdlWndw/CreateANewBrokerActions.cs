@@ -40,6 +40,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateANewBrokerMdlWndw
         [AllureStep("Click Button Create")]
         public CreateANewBrokerMdlWndw ClickButtonCreate()
         {
+            WaitUntil.CustomElementIsVisible(ButtonCreate);
             Button.Click(ButtonCreate);
 
             return this;

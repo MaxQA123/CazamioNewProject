@@ -40,9 +40,9 @@ namespace MarketplaceAdminGuiTest
 
         public void LogIn_Success()
         {
+            // flow: Login > Verify user role and user name > Success code 200.
             #region Test
 
-            // flow: Login > Verify user role and user name > Success code 200.
             Pages.LogInLandlord
                 .LogInAsMarketplaceAdminMySpace();
 
@@ -61,7 +61,7 @@ namespace MarketplaceAdminGuiTest
         [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
         [AllureSubSuite("Update Settings for Marketplace Page")]
 
-        public void Update_Settings_MarketplacePage()
+        public void Update_Settings_Marketplace_Page()
         {
             #region Preconditions GUI
 
@@ -72,29 +72,18 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
 
+            // flow: Update > Brand Name > Disclosure Information > Success code 200.
             #region Test
 
             Pages.Marketplace
-                .FillInBrandNameAndDisclosureInformation();
+                .UpdateSettingsOnMarketplacePage();
 
-            WaitUntil.WaitSomeInterval(100);
+            WaitUntil.WaitSomeInterval(500);
 
             #endregion
-        }
 
-        [Test]
-        [Order(3)]
-        [AllureTag("Regression")]
-        [AllureOwner("Maksim Perevalov")]
-        [AllureSeverity(SeverityLevel.critical)]
-        [Retry(2)]
-        [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
-        [AllureSubSuite("Basic Update Brand Name MySpace Via DB")]
-
-        public void Basic_Update_Brand_Name_MySpace_Via_DB()
-        {
-            #region Test
+            // flow: Update Brand Name to "Noyo Properties NYC" via DB. It is general setting.
+            #region Postconditions
 
             MarketplacesDbRequests.MarketplacesDbTable.UpdateBrandForMarketplaceMySpace();
 
@@ -104,7 +93,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(4)]
+        [Order(3)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -134,10 +123,11 @@ namespace MarketplaceAdminGuiTest
             WaitUntil.WaitSomeInterval(100);
 
             #endregion
+
         }
 
         [Test]
-        [Order(5)]
+        [Order(4)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -164,6 +154,7 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
 
+            // flow: Create new broker > Make Logout.
             #region Test
 
             Pages.ListOfBrokers
@@ -177,9 +168,9 @@ namespace MarketplaceAdminGuiTest
 
             Pages.CreateANewBrokerMdlWndw
                 .ClickButtonCreate();
-            Pages.ListOfBrokers
+            Pages.ToasterMessagesLandlord
                 .VerifyMessageBrokerHasBeenSuccessfullyCreated();
-
+            //Continue from this point
             string getEmailFromListOfBrokers = Pages.ListOfBrokers.CopyEmailFirstRecordEmailForFirstBrokerInList();
 
             Pages.ListOfBrokers
@@ -224,7 +215,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(6)]
+        [Order(5)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -305,7 +296,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(7)]
+        [Order(6)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -373,7 +364,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(8)]
+        [Order(7)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -447,7 +438,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(9)]
+        [Order(8)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -572,7 +563,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(10)]
+        [Order(9)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -650,11 +641,11 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(11)]
+        [Order(10)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
-        [Retry(1)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
         [AllureSubSuite("AddGroupBuildingsViaApiBasicStatic")]
@@ -701,7 +692,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(12)]
+        [Order(11)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -831,7 +822,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(13)]
+        [Order(12)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -926,7 +917,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(14)]
+        [Order(13)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -1038,7 +1029,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(15)]
+        [Order(14)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -1157,7 +1148,7 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(16)]
+        [Order(15)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
@@ -1196,11 +1187,11 @@ namespace MarketplaceAdminGuiTest
         }
 
         [Test]
-        [Order(17)]
+        [Order(16)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
-        [Retry(1)]
+        [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
         [AllureSubSuite("EditApplicationNineNineNineEightSaintJohnsonPlace")]

@@ -53,6 +53,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         {
             Pages.CreateApplicationMdlWndw
                 .EnterOneOneOneAEastStPedestrianCrossingAddress();
+            WaitUntil.CustomElementIsVisible(OneOneOneAEastStPedestrianCrossingAddressAddress);
             Button.Click(SetOneOneOneAEastStPedestrianCrossingAddressAddress());
             WaitUntil.CustomElementIsVisible(ButtonNext);
             Button.Click(ButtonNext);
@@ -65,6 +66,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateApplicationMdlWndw
         {
             Pages.CreateApplicationMdlWndw
                 .EnterOneTwoEightSixSevenGatesAvenueAddress();
+            WaitUntil.CustomElementIsVisible(OneTwoEightSixSevenGatesAvenueAddress);
             Button.Click(SetOneTwoEightSixSevenGatesAvenueAddress());
             WaitUntil.CustomElementIsVisible(ButtonNext);
             Button.Click(ButtonNext);
