@@ -18,7 +18,7 @@ namespace BrokerGuiTests
 
     public class TestsBaseGui : BrokerBase
     {
-        //Amount order 11 next must be 12
+        //Amount order 13 next must be 14
         [Test]
         [Order(1)]
         [AllureTag("Regression")]
@@ -26,7 +26,7 @@ namespace BrokerGuiTests
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Broker")]
+        [AllureSuite("Positive critical scenarios for Broker role")]
         [AllureSubSuite("LogIn")]
 
         public void LogIn()
@@ -46,7 +46,7 @@ namespace BrokerGuiTests
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Broker")]
+        [AllureSuite("Positive critical scenarios for Broker role")]
         [AllureSubSuite("VerifySidebar")]
 
         public void VerifySidebar()
@@ -73,96 +73,6 @@ namespace BrokerGuiTests
             #endregion
         }
 
-        //[Test]
-        //[AllureTag("Regression")]
-        //[AllureOwner("Maksim Perevalov")]
-        //[AllureSeverity(SeverityLevel.critical)]
-        //[Retry(2)]
-        //[Author("Maksim", "maxqatesting390@gmail.com")]
-        //[AllureSuite("Broker")]
-        //[AllureSubSuite("CreateAgent")]
-
-        //public void CreateAgent()
-        //{
-        //    #region Test Data
-
-        //    int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
-
-        //    #endregion
-
-        //    #region Preconditions
-
-        //    Pages.LogInLandlord
-        //        .EnterEmailPasswordAsBroker()
-        //        .ClickIconShow()
-        //        .ClickButtonLetsGo();
-
-        //    string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-        //    string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
-        //    Pages.SidebarLandlord
-        //        .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
-
-        //    #endregion
-
-        //    #region Test
-
-        //    Pages.SidebarLandlord
-        //         .ClickButtonAgents();
-        //    Pages.ListOfAgents
-        //        .ClickButtonCreateAgent();
-        //    Pages.CreateNewAgentMdlWndw
-        //        .EnterFirstLastNameEmailPhnNmbrCell()
-        //        .EnterBrokerAgentCommission();
-
-        //    string fullEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailFromMdlWndwCreateAgent();
-        //    string partEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailBeforeDogFromModalWindowCreateNewAgent();
-
-        //    Pages.CreateNewAgentMdlWndw
-        //        .ClickButtonSave()
-        //        .VerifyMessageNewAgentCreatedSuccessfully();
-        //    KeyBoardActions.ClickEscapeButton();
-        //    Pages.AreYouSureLogOutLandlordMdlWndw
-        //        .MakeLogOut();
-        //    Pages.JScriptExecutor
-        //        .OpenNewTab();
-        //    Pages.EmailHelper
-        //        .OpenPutsBox(Pages.EmailPutsBox.TitleLetterCreateAgentMySpace, partEmailPutsBox);
-        //    Pages.EmailPutsBox
-        //        .VerifyTitleLetterCreateAgent()
-        //        .ClickButtonHtml();
-
-        //    string getTextPasswordActual = Pages.EmailPutsBox.CopyPasswordFromEmailForCreateAdmin();
-
-        //    Pages.EmailPutsBox
-        //        .ClickButtonConfirmEmailForAdmin();
-
-        //    Pages.LogInLandlord
-        //        .PasteForEnterEmailFromEmailCreateAgent(fullEmailPutsBox)
-        //        .PasteForEnterPsswrdFromEmailCreateAgent(getTextPasswordActual)
-        //        .ClickIconShow()
-        //        .ClickButtonLetsGo();
-
-        //    string getUserNameRoleCompareAgent = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
-
-        //    Pages.SidebarLandlord
-        //       .VerifyAgentUserNameAndRoleCreating(getUserNameRoleCompareAgent);
-
-        //    #endregion
-
-        //    #region Postconditions
-
-        //    WaitUntil.WaitSomeInterval(100);
-        //    AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(fullEmailPutsBox, marketplaceId);
-        //    Console.WriteLine($"{fullEmailPutsBox}");
-        //    WaitUntil.WaitSomeInterval(100);
-        //    BrokersAgentsDbRequests.BrokersAgents.DeleteNewlyCreatedAgent(fullEmailPutsBox, marketplaceId);
-        //    WaitUntil.WaitSomeInterval(100);
-        //    AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(fullEmailPutsBox, marketplaceId);
-
-        //    #endregion
-        //}
-
         [Test]
         [Order(3)]
         [AllureTag("Regression")]
@@ -170,7 +80,98 @@ namespace BrokerGuiTests
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Broker")]
+        [AllureSuite("Positive critical scenarios for Broker role")]
+        [AllureSubSuite("CreateAgent")]
+
+        public void CreateAgent()
+        {
+            #region Test Data
+
+            int marketplaceId = GeneralTestDataForAllUsers.MARKETPLACE_ID_MY_SPACE;
+
+            #endregion
+
+            //#region Preconditions
+
+            //Pages.LogInLandlord
+            //    .EnterEmailPasswordAsBroker()
+            //    .ClickIconShow()
+            //    .ClickButtonLetsGo();
+
+            //string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
+            //string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            //Pages.SidebarLandlord
+            //    .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+
+            //#endregion
+
+            //#region Test
+
+            //Pages.SidebarLandlord
+            //     .ClickButtonAgents();
+            //Pages.ListOfAgents
+            //    .ClickButtonCreateAgent();
+            //Pages.CreateNewAgentMdlWndw
+            //    .EnterFirstLastNameEmailPhnNmbrCell()
+            //    .EnterBrokerAgentCommission();
+
+            //string fullEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailFromMdlWndwCreateAgent();
+            //string partEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailBeforeDogFromModalWindowCreateNewAgent();
+
+            //Pages.CreateNewAgentMdlWndw
+            //    .ClickButtonSave()
+            //    .VerifyMessageNewAgentCreatedSuccessfully();
+            //KeyBoardActions.ClickEscapeButton();
+            //Pages.AreYouSureLogOutLandlordMdlWndw
+            //    .MakeLogOut();
+            //Pages.JScriptExecutor
+            //    .OpenNewTab();
+            //Pages.EmailHelper
+            //    .OpenPutsBox(Pages.EmailPutsBox.TitleLetterCreateAgentMySpace, partEmailPutsBox);
+            //Pages.EmailPutsBox
+            //    .VerifyTitleLetterCreateAgent()
+            //    .ClickButtonHtml();
+
+            //string getTextPasswordActual = Pages.EmailPutsBox.CopyPasswordFromEmailForCreateAdmin();
+
+            //Pages.EmailPutsBox
+            //    .ClickButtonConfirmEmailForAdmin();
+
+            //Pages.LogInLandlord
+            //    .PasteForEnterEmailFromEmailCreateAgent(fullEmailPutsBox)
+            //    .PasteForEnterPsswrdFromEmailCreateAgent(getTextPasswordActual)
+            //    .ClickIconShow()
+            //    .ClickButtonLetsGo();
+
+            //string getUserNameRoleCompareAgent = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+
+            //Pages.SidebarLandlord
+            //   .VerifyAgentUserNameAndRoleCreating(getUserNameRoleCompareAgent);
+
+            //#endregion
+
+            //#region Postconditions
+
+            //WaitUntil.WaitSomeInterval(100);
+            //AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(fullEmailPutsBox, marketplaceId);
+            //Console.WriteLine($"{fullEmailPutsBox}");
+            //WaitUntil.WaitSomeInterval(100);
+            //BrokersAgentsDbRequests.BrokersAgents.DeleteNewlyCreatedAgent(fullEmailPutsBox, marketplaceId);
+            //WaitUntil.WaitSomeInterval(100);
+            //AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(fullEmailPutsBox, marketplaceId);
+
+            //#endregion
+        }
+
+        [Test]
+        [Order(4)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Positive critical scenarios for Broker role")]
         [AllureSubSuite("CreateOwnerWithAssignedBroker")]
 
         public void CreateOwnerWithAssignedBroker()
@@ -236,13 +237,13 @@ namespace BrokerGuiTests
         }
 
         [Test]
-        [Order(4)]
+        [Order(5)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(1)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Broker")]
+        [AllureSuite("Positive critical scenarios for Broker role")]
         [AllureSubSuite("AddGroupBuildingsViaApiBasicStatic")]
 
         public void AddGroupBuildingsViaApiBasicStatic()
@@ -294,13 +295,13 @@ namespace BrokerGuiTests
         }
 
         [Test]
-        [Order(5)]
+        [Order(6)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Broker")]
+        [AllureSuite("Positive critical scenarios for Broker role")]
         [AllureSubSuite("AddBuildingAssignedBroker")]
         public void AddBuildingAssignedBroker()
         {
@@ -381,13 +382,13 @@ namespace BrokerGuiTests
         }
 
         [Test]
-        [Order(6)]
+        [Order(7)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Broker")]
+        [AllureSuite("Positive critical scenarios for Broker role")]
         [AllureSubSuite("AddBuildingAssignedAgent")]
 
         public void AddBuildingAssignedAgent()
@@ -507,13 +508,13 @@ namespace BrokerGuiTests
         }
 
         [Test]
-        [Order(7)]
+        [Order(8)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Broker")]
+        [AllureSuite("Positive critical scenarios for Broker role")]
         [AllureSubSuite("AddApartmentAssignedBroker")]
 
         public void AddApartmentAssignedBroker()
@@ -595,13 +596,13 @@ namespace BrokerGuiTests
         }
 
         [Test]
-        [Order(8)]
+        [Order(9)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Broker")]
+        [AllureSuite("Positive critical scenarios for Broker role")]
         [AllureSubSuite("AddApartmentAssignedAgent")]
 
         public void AddApartmentAssignedAgent()
@@ -667,13 +668,13 @@ namespace BrokerGuiTests
         }
 
         [Test]
-        [Order(9)]
+        [Order(10)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Broker")]
+        [AllureSuite("Positive critical scenarios for Broker role")]
         [AllureSubSuite("CreateApplicationForApartmentOccupied")]
 
         public void CreateApplicationForApartmentOccupied()
@@ -838,13 +839,13 @@ namespace BrokerGuiTests
         }
 
         [Test]
-        [Order(10)]
+        [Order(11)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Broker")]
+        [AllureSuite("Positive critical scenarios for Broker role")]
         [AllureSubSuite("CreateApplicationForApartmentApplicationSubmitted")]
 
         public void CreateApplicationForApartmentApplicationSubmitted()
@@ -956,13 +957,13 @@ namespace BrokerGuiTests
         }
 
         [Test]
-        [Order(11)]
+        [Order(12)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Broker")]
+        [AllureSuite("Positive critical scenarios for Broker role")]
         [AllureSubSuite("CreateNewDocumentLeaseSignTemplateWithFullSettings")]
 
         public void CreateNewDocumentLeaseSignTemplateWithFullSettings()
@@ -997,13 +998,13 @@ namespace BrokerGuiTests
         }
 
         [Test]
-        [Order(12)]
+        [Order(13)]
         [AllureTag("Regression")]
         [AllureOwner("Maksim Perevalov")]
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(1)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Broker")]
+        [AllureSuite("Positive critical scenarios for Broker role")]
         [AllureSubSuite("EditFirstApplicationOneTwoFiveSixSevenDeanStreet")]
 
         public void EditFirstApplicationOneTwoFiveSixSevenDeanStreet()
@@ -1188,7 +1189,7 @@ namespace BrokerGuiTests
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Broker")]
+        [AllureSuite("Positive critical scenarios for Broker role")]
         [AllureSubSuite("DemoAddApartment")]
 
         // Data Generation and Advanced Filtering Validation

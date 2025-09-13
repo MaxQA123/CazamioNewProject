@@ -23,7 +23,7 @@ namespace AgentGuiTests
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Agent")]
+        [AllureSuite("Positive critical scenarios for Agent role")]
         [AllureSubSuite("LogIn")]
 
         public void LogIn()
@@ -43,7 +43,7 @@ namespace AgentGuiTests
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Agent")]
+        [AllureSuite("Positive critical scenarios for Agent role")]
         [AllureSubSuite("VerifySidebar")]
 
         public void VerifySidebar()
@@ -75,7 +75,7 @@ namespace AgentGuiTests
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(1)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("MarketplaceAdmin Api test")]
+        [AllureSuite("Positive critical scenarios for Agent role")]
         [AllureSubSuite("AddGroupBuildingsViaApiBasicStatic")]
 
         public void AddGroupBuildingsViaApiBasicStatic()
@@ -114,7 +114,7 @@ namespace AgentGuiTests
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Agent")]
+        [AllureSuite("Positive critical scenarios for Agent role")]
         [AllureSubSuite("CreateApplicationForApartmenVacantFst")]
 
         public void CreateApplicationForApartmenVacantFst()
@@ -229,7 +229,7 @@ namespace AgentGuiTests
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(1)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Agent")]
+        [AllureSuite("Positive critical scenarios for Agent role")]
         [AllureSubSuite("CreateApplicationForApartmenVacantFst")]
 
         public void CreateApplicationForApartmenVacantScnd()

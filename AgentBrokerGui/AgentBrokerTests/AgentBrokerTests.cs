@@ -23,7 +23,7 @@ namespace AgentBrokerGui
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Agent-Broker")]
+        [AllureSuite("Positive critical scenarios for Agent-Broker role")]
         [AllureSubSuite("LogIn")]
 
         public void LogIn()
@@ -44,7 +44,7 @@ namespace AgentBrokerGui
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Agent-Broker")]
+        [AllureSuite("Positive critical scenarios for Agent-Broker role")]
         [AllureSubSuite("VerifySidebar")]
 
         public void VerifySidebar()
@@ -82,7 +82,7 @@ namespace AgentBrokerGui
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(1)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Agent-Broker")]
+        [AllureSuite("Positive critical scenarios for Agent-Broker role")]
         [AllureSubSuite("AddGroupBuildingsViaApiBasicStatic")]
 
         public void AddGroupBuildingsViaApiBasicStatic()
@@ -125,7 +125,7 @@ namespace AgentBrokerGui
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Agent-Broker")]
+        [AllureSuite("Positive critical scenarios for Agent-Broker role")]
         [AllureSubSuite("AddBuildingAssignedAgentBroker")]
 
         public void AddBuildingAssignedAgentBroker()
@@ -204,7 +204,7 @@ namespace AgentBrokerGui
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Agent-Broker")]
+        [AllureSuite("Positive critical scenarios for Agent-Broker role")]
         [AllureSubSuite("AddApartmentAssignedAgentBroker")]
 
         public void AddApartmentAssignedAgentBroker()
@@ -286,7 +286,7 @@ namespace AgentBrokerGui
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Agent-Broker")]
+        [AllureSuite("Positive critical scenarios for Agent-Broker role")]
         [AllureSubSuite("AddApartmentAssignedAgBr")]
 
         public void AddApartmentAssignedAgBr()
@@ -371,7 +371,7 @@ namespace AgentBrokerGui
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Agent-Broker")]
+        [AllureSuite("Positive critical scenarios for Agent-Broker role")]
         [AllureSubSuite("CreateApplicationForApartmentOffMarket")]
 
         public void CreateApplicationForApartmentOffMarket()
@@ -487,7 +487,7 @@ namespace AgentBrokerGui
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Agent-Broker")]
+        [AllureSuite("Positive critical scenarios for Agent-Broker role")]
         [AllureSubSuite("CreateApplicationForApartmentSignedLease")]
 
         public void CreateApplicationForApartmentSignedLease()
@@ -596,7 +596,7 @@ namespace AgentBrokerGui
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(1)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Agent-Broker")]
+        [AllureSuite("Positive critical scenarios for Agent-Broker role")]
         [AllureSubSuite("EditFirstApplicationOneTwoFiveSixSevenDeanStreet")]
 
         public void EditFirstApplicationOneTwoFiveSixSevenDeanStreet()
