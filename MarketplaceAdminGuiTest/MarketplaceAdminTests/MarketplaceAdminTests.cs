@@ -23,8 +23,7 @@ namespace MarketplaceAdminGuiTest
     // Amount order 16 next must be 17
     // Basic settings for autotests:
     // 1. Need to comment out the “AddGroupBuildingsViaApiBasicStatic” case after the first run of the automated tests if all buildings were soft deleted.
-    // 2. SettingsMarketplaceViaApiDb case.
-    // 3. SettingsMarketplacePage case.
+    // 2. Update_Settings_Marketplace_Page.
 
     public class TestsBaseGui : MarketplaceAdminBase
     { 
@@ -210,6 +209,11 @@ namespace MarketplaceAdminGuiTest
             WaitUntil.WaitSomeInterval(100);
             LandlordsBrokersDbRequests.LandlordsBrokers.DeleteNewlyCreatedBroker(getFullEmail, marketplaceId);
 
+            Pages.SwitchingBetweenBrowserTabsActions
+                .CloseSecondThirdFourthTabs();
+
+            WaitUntil.WaitSomeInterval(100);
+
             #endregion
 
         }
@@ -290,6 +294,11 @@ namespace MarketplaceAdminGuiTest
             Console.WriteLine($"{fullEmailPutsBox}");
             WaitUntil.WaitSomeInterval(100);
             BrokersAgentsDbRequests.BrokersAgents.DeleteNewlyCreatedAgent(fullEmailPutsBox, marketplaceId);
+
+            Pages.SwitchingBetweenBrowserTabsActions
+                .CloseSecondThirdFourthTabs();
+
+            WaitUntil.WaitSomeInterval(100);
 
             #endregion
 

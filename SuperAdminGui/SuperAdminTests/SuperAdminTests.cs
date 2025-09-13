@@ -15,7 +15,7 @@ namespace SuperAdminGui
 
     public class TestsBaseGui : SuperAdminBase
     {
-        //Amount order 2 next must be 3
+        //Amount order 3 next must be 4
         [Test]
         [Order(1)]
         [AllureTag("Regression")]
@@ -23,7 +23,7 @@ namespace SuperAdminGui
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Super Admin")]
+        [AllureSuite("Positive critical scenarios for Super admin role")]
         [AllureSubSuite("LogIn")]
 
         public void LogIn()
@@ -45,7 +45,7 @@ namespace SuperAdminGui
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Super Admin")]
+        [AllureSuite("Positive critical scenarios for Super admin role")]
         [AllureSubSuite("Create Marketplace Admin")]
 
         public void CreateMarketplaceAdmin()
@@ -128,7 +128,7 @@ namespace SuperAdminGui
         [AllureSeverity(SeverityLevel.critical)]
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
-        [AllureSuite("Super Admin")]
+        [AllureSuite("Positive critical scenarios for Super admin role")]
         [AllureSubSuite("Verify Sidebar")]
 
         public void VerifySidebar()

@@ -1,5 +1,4 @@
-﻿using NUnit.Allure.Attributes;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 
@@ -49,7 +48,7 @@ namespace CazamioNewProject.GuiHelpers
             }
             else
             {
-                throw new InvalidOperationException("Недостаточно вкладок для закрытия (требуется минимум 2).");
+                throw new InvalidOperationException("Not enough tabs to close (requires at least 2).");
             }
 
             WaitUntil.WaitSomeInterval(1000);
@@ -66,10 +65,33 @@ namespace CazamioNewProject.GuiHelpers
             }
             else
             {
-                throw new InvalidOperationException("Недостаточно вкладок для закрытия (требуется минимум 2).");
+                throw new InvalidOperationException("Not enough tabs to close (requires at least 2).");
             }
 
             WaitUntil.WaitSomeInterval(1000);
+        }
+
+        public static void CloseThreeTabs()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
+
+            if (tabsList.Count >= 4)
+            {
+                // Закрываем три последние вкладки (начиная с последней)
+                for (int i = 3; i >= 1; i--)
+                {
+                    Browser._Driver.SwitchTo().Window(tabsList[i]).Close();
+                    WaitUntil.WaitSomeInterval(100); // небольшая пауза между закрытием
+                }
+
+                // Переключаемся на оставшуюся первую вкладку
+                Browser._Driver.SwitchTo().Window(tabsList[0]);
+            }
+            else
+            {
+                throw new InvalidOperationException("Not enough tabs to close (requires at least 4).");
+            }
         }
 
         public static void SecondTabSelect()
