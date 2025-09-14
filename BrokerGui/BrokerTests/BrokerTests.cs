@@ -833,7 +833,14 @@ namespace BrokerGuiTests
             Pages.HeaderTenants
                 .LogOut();
 
-            WaitUntil.WaitSomeInterval(1000);
+            #endregion
+
+            #region Postconditions
+
+            Pages.SwitchingBetweenBrowserTabsActions
+                .CloseSecondThirdFourthTabs();
+
+            WaitUntil.WaitSomeInterval(100);
 
             #endregion
         }
@@ -951,7 +958,14 @@ namespace BrokerGuiTests
             Pages.MyAccount
                 .VerifyApplicationIdNumberTenantCreator(applicationIdFromAppLandlord, applicationIdFromAppTenant);
 
-            WaitUntil.WaitSomeInterval(1000);
+            #endregion
+
+            #region Postconditions
+
+            Pages.SwitchingBetweenBrowserTabsActions
+                .CloseSecondTabAndSelectFirstTab();
+
+            WaitUntil.WaitSomeInterval(100);
 
             #endregion
         }
@@ -1179,6 +1193,15 @@ namespace BrokerGuiTests
                 .LogOut();
 
             WaitUntil.WaitSomeInterval(1000);
+
+            #endregion
+
+            #region Postconditions
+
+            Pages.SwitchingBetweenBrowserTabsActions
+                .CloseSecondThirdFourthTabs();
+
+            WaitUntil.WaitSomeInterval(100);
 
             #endregion
         }

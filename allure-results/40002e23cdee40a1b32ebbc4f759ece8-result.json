@@ -1,0 +1,745 @@
+{
+  "uuid": "32920e99-690f-47bb-8611-958e5dfe1d31-tr-0-1011",
+  "historyId": "BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentApplicationSubmitted",
+  "fullName": "BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentApplicationSubmitted",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "16"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-JHNIII0"
+    },
+    {
+      "name": "package",
+      "value": "BrokerGuiTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateApplicationForApartmentApplicationSubmitted"
+    },
+    {
+      "name": "testClass",
+      "value": "TestsBaseGui"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim <maxqatesting390@gmail.com>"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "owner",
+      "value": "Maksim Perevalov"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "suite",
+      "value": "Positive critical scenarios for Broker role"
+    },
+    {
+      "name": "subSuite",
+      "value": "CreateApplicationForApartmentApplicationSubmitted"
+    }
+  ],
+  "links": [],
+  "name": "CreateApplicationForApartmentApplicationSubmitted",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "TearDown : OpenQA.Selenium.NoSuchWindowException : no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=140.0.7339.128)",
+    "trace": "--TearDown\r\n   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.Close()\r\n   at CazamioNewProject.GuiHelpers.Browser.Close() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\Browser.cs:line 63\r\n   at CazamioNewProject.GuiHelpers.BasicTests.BaseGui.DoAfterEach() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\BasicTests\\BaseGui.cs:line 32"
+  },
+  "stage": "finished",
+  "description": "\nDoAfterEach TearDown method failed\n",
+  "steps": [
+    {
+      "name": "CreateApplicationForApartmentApplicationSubmitted",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "TearDown : OpenQA.Selenium.NoSuchWindowException : no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=140.0.7339.128)",
+        "trace": "--TearDown\r\n   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.Close()\r\n   at CazamioNewProject.GuiHelpers.Browser.Close() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\Browser.cs:line 63\r\n   at CazamioNewProject.GuiHelpers.BasicTests.BaseGui.DoAfterEach() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\BasicTests\\BaseGui.cs:line 32"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "VerifyUserData",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "ResponseLogInApiBroker",
+              "value": "CazamioNewProject.ApiHelpers.ApiObjects.BrokerApiCollections.LogInApiBroker.ResponseLogInApiBroker"
+            },
+            {
+              "name": "Broker",
+              "value": "CazamioNewProject.Objects.Broker"
+            }
+          ],
+          "start": 1757864275248,
+          "stop": 1757864275263
+        },
+        {
+          "name": "LogInAsBrokerMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "Verify Title Login page",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1757864277997,
+              "stop": 1757864278070
+            },
+            {
+              "name": "Get User Name from SideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1757864281588,
+              "stop": 1757864282599
+            },
+            {
+              "name": "Get User Name Role from SideBar",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1757864282613,
+              "stop": 1757864282665
+            },
+            {
+              "name": "VerifyBrokerUserNameAndRole",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [
+                {
+                  "name": "String",
+                  "value": "Leoautotest Feabroker"
+                },
+                {
+                  "name": "String",
+                  "value": "Broker"
+                }
+              ],
+              "start": 1757864282694,
+              "stop": 1757864283199
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864277986,
+          "stop": 1757864288217
+        },
+        {
+          "name": "Wait appearing First row in List of Apartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864288219,
+          "stop": 1757864288261
+        },
+        {
+          "name": "Click Button Buildings on sidebar",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864288283,
+          "stop": 1757864289613
+        },
+        {
+          "name": "Wait appearing First row in List of Buildings",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864289616,
+          "stop": 1757864290183
+        },
+        {
+          "name": "SearchThirtyDashThirtyNineCrownSt",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864290183,
+          "stop": 1757864301072
+        },
+        {
+          "name": "SelectThirtyDashThirtyNineCrownSt",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864301073,
+          "stop": 1757864304921
+        },
+        {
+          "name": "VerifyTitleBuildingViewPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864304924,
+          "stop": 1757864308918
+        },
+        {
+          "name": "GetValueOfStringAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864308919,
+          "stop": 1757864311012
+        },
+        {
+          "name": "VerifyBuildingAddress",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "30-39 Crown St"
+            },
+            {
+              "name": "String",
+              "value": "30-39 Crown St"
+            }
+          ],
+          "start": 1757864311014,
+          "stop": 1757864314053
+        },
+        {
+          "name": "ClickTabApartments",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864314054,
+          "stop": 1757864315880
+        },
+        {
+          "name": "GetSubjectWithoutAgentAlbermaleRd",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "GetVlOfClmnUnitFrstRw",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1757864316941,
+              "stop": 1757864317024
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864315931,
+          "stop": 1757864317027
+        },
+        {
+          "name": "ClickRowByApplicationSubmitted",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864317028,
+          "stop": 1757864317849
+        },
+        {
+          "name": "VerifyTitleAddApartmentsPage",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864317852,
+          "stop": 1757864319356
+        },
+        {
+          "name": "EnterExistEmailWithCreditReporGetApplicationLink",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864319357,
+          "stop": 1757864320179
+        },
+        {
+          "name": "GetLeasePriceValueOfString",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864320181,
+          "stop": 1757864322261
+        },
+        {
+          "name": "ClickButtonGetLink",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "VerifyMessageCopiedTheLinkToApplication",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1757864322974,
+              "stop": 1757864331370
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864322264,
+          "stop": 1757864331370
+        },
+        {
+          "name": "ClickTabApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864331371,
+          "stop": 1757864332080
+        },
+        {
+          "name": "GetApplicationIdFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864332086,
+          "stop": 1757864332139
+        },
+        {
+          "name": "GetApartmentAddressFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864332140,
+          "stop": 1757864332200
+        },
+        {
+          "name": "GetFullNameTenantMainApplicantFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864332201,
+          "stop": 1757864332250
+        },
+        {
+          "name": "GetPriceFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864332251,
+          "stop": 1757864332295
+        },
+        {
+          "name": "GetDateCreatedFromFirstRow",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864332296,
+          "stop": 1757864332854
+        },
+        {
+          "name": "GetAgentFromFrstRw",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864332855,
+          "stop": 1757864332907
+        },
+        {
+          "name": "VerifyFullDataByApplicationCreatedTenantMain",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "30-39 Crown St"
+            },
+            {
+              "name": "String",
+              "value": "30-39 Crown St"
+            },
+            {
+              "name": "String",
+              "value": "MainApplMySpace-WithCR SaraMainMyspaceQA"
+            },
+            {
+              "name": "String",
+              "value": "MainApplMySpace-WithCR SaraMainMyspaceQA"
+            },
+            {
+              "name": "String",
+              "value": "$3333"
+            },
+            {
+              "name": "String",
+              "value": "$3333"
+            },
+            {
+              "name": "String",
+              "value": "09/14/2025"
+            },
+            {
+              "name": "String",
+              "value": "09/14/2025"
+            },
+            {
+              "name": "String",
+              "value": "Leoautotest Feabroker"
+            },
+            {
+              "name": "String",
+              "value": "Leoautotest Feabroker"
+            },
+            {
+              "name": "String",
+              "value": "Draft"
+            },
+            {
+              "name": "String",
+              "value": "Draft"
+            },
+            {
+              "name": "String",
+              "value": "Close"
+            },
+            {
+              "name": "String",
+              "value": "Close"
+            }
+          ],
+          "start": 1757864332970,
+          "stop": 1757864332971
+        },
+        {
+          "name": "OpenNewTabHomePageTenant",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864332971,
+          "stop": 1757864334688
+        },
+        {
+          "name": "LogInAsCreatorWithCreditReportMySpace",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "ClickButtonLogIn",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1757864334719,
+              "stop": 1757864335916
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864334717,
+          "stop": 1757864339801
+        },
+        {
+          "name": "ClickButtonMyApplications",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864339802,
+          "stop": 1757864342126
+        },
+        {
+          "name": "GetApplicationId",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1757864342127,
+          "stop": 1757864343238
+        },
+        {
+          "name": "VerifyApplicationIdNumberTenantCreator",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "4445"
+            },
+            {
+              "name": "String",
+              "value": "4445"
+            }
+          ],
+          "start": 1757864343239,
+          "stop": 1757864343239
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "f047089a50164126914370ea4be5dcca-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1757864265502,
+      "stop": 1757864361131
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1757864265498,
+  "stop": 1757864361157
+}

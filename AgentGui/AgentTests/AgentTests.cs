@@ -220,6 +220,15 @@ namespace AgentGuiTests
             WaitUntil.WaitSomeInterval(1000);
 
             #endregion
+
+            #region Postconditions
+
+            Pages.SwitchingBetweenBrowserTabsActions
+                .CloseSecondTabAndSelectFirstTab();
+
+            WaitUntil.WaitSomeInterval(100);
+
+            #endregion
         }
 
         [Test]

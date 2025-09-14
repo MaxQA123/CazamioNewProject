@@ -118,6 +118,11 @@ namespace SuperAdminGui
             WaitUntil.WaitSomeInterval(100);
             MarketplaceAdminsDbRequests.MarketplaceAdmins.DeleteNewlyCreatedMarketplaceAdmin(fullEmailPutsBox, marketplaceId);
 
+            Pages.SwitchingBetweenBrowserTabsActions
+                .CloseSecondThirdFourthTabs();
+
+            WaitUntil.WaitSomeInterval(100);
+
             #endregion
         }
 

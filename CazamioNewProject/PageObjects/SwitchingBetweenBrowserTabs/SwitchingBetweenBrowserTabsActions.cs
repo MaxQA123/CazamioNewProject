@@ -42,7 +42,21 @@ namespace CazamioNewProject.GuiHelpers
 
         public SwitchingBetweenBrowserTabsActions CloseSecondThirdFourthTabs()
         {
-            SwitchingBetweenBrowserTabs.CloseThreeTabs();
+            SwitchingBetweenBrowserTabs.CloseSecondThirdFourthTabs();
+
+            return this;
+        }
+
+        public SwitchingBetweenBrowserTabsActions CloseSecondTab()
+        {
+            SwitchingBetweenBrowserTabs.SecondTabClose();
+
+            return this;
+        }
+
+        public SwitchingBetweenBrowserTabsActions CloseSecondTabAndSelectFirstTab()
+        {
+            SwitchingBetweenBrowserTabs.CloseSecondTabAndSelectFirstTab();
 
             return this;
         }

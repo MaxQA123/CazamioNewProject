@@ -35,7 +35,7 @@ namespace CazamioNewProject.GuiHelpers
     {
         public static void SecondTabCloseFirstTabSelect()
         {
-            WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.WaitSomeInterval(100);
             List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
 
             if (tabsList.Count >= 2) // Проверяем, что есть хотя бы 2 вкладки
@@ -50,13 +50,11 @@ namespace CazamioNewProject.GuiHelpers
             {
                 throw new InvalidOperationException("Not enough tabs to close (requires at least 2).");
             }
-
-            WaitUntil.WaitSomeInterval(1000);
         }
 
         public static void SecondTabClose()
         {
-            WaitUntil.WaitSomeInterval(1000);
+            WaitUntil.WaitSomeInterval(100);
             List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
 
             if (tabsList.Count >= 2) 
@@ -67,11 +65,28 @@ namespace CazamioNewProject.GuiHelpers
             {
                 throw new InvalidOperationException("Not enough tabs to close (requires at least 2).");
             }
-
-            WaitUntil.WaitSomeInterval(1000);
         }
 
-        public static void CloseThreeTabs()
+        public static void CloseSecondTabAndSelectFirstTab()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
+
+            if (tabsList.Count >= 2)
+            {
+                // Закрываем вторую вкладку
+                Browser._Driver.SwitchTo().Window(tabsList[1]).Close();
+
+                // Переключаемся на первую вкладку
+                Browser._Driver.SwitchTo().Window(tabsList[0]);
+            }
+            else
+            {
+                throw new InvalidOperationException("Not enough tabs to close (requires at least 2).");
+            }
+        }
+
+        public static void CloseSecondThirdFourthTabs()
         {
             WaitUntil.WaitSomeInterval(100);
             List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);

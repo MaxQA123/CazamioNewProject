@@ -1,0 +1,78 @@
+{
+  "uuid": "3053bbd5-30da-4e43-aa01-758f015769f0-tc-0-1000",
+  "name": "BrokerGuiTests.TestsBaseGui.CreateApplicationForApartmentApplicationSubmitted",
+  "children": [
+    "8b12d5a1-3081-46b3-a522-a814b83538f2-tr-0-1011"
+  ],
+  "befores": [
+    {
+      "name": "DobeforeAllTheTests",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1757864526139,
+      "stop": 1757864526139
+    },
+    {
+      "name": "SetUp",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1757864526140,
+      "stop": 1757864526140
+    }
+  ],
+  "afters": [
+    {
+      "name": "DoAfterEach",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "TearDown : OpenQA.Selenium.NoSuchWindowException : no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=140.0.7339.128)",
+        "trace": "--TearDown\r\n   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.Close()\r\n   at CazamioNewProject.GuiHelpers.Browser.Close() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\Browser.cs:line 63\r\n   at CazamioNewProject.GuiHelpers.BasicTests.BaseGui.DoAfterEach() in C:\\Automation\\CazamioNewProject\\CazamioNewProject\\GuiHelpers\\BasicTests\\BaseGui.cs:line 32"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1757864526140,
+      "stop": 1757864526140
+    },
+    {
+      "name": "DoAfterAllTheTests",
+      "status": "none",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "It's not possible to get status of OneTimeTearDown",
+        "trace": "See Allure.NUnit wiki"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1757864526141,
+      "stop": 1757864526141
+    }
+  ],
+  "links": [],
+  "start": 1757864405084,
+  "stop": 1757864526208
+}
