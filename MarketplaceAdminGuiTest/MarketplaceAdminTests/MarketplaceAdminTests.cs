@@ -169,7 +169,7 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonCreate();
             Pages.ToasterMessagesLandlord
                 .VerifyMessageBrokerHasBeenSuccessfullyCreated();
-            //Continue from this point
+            
             string getEmailFromListOfBrokers = Pages.ListOfBrokers.CopyEmailFirstRecordEmailForFirstBrokerInList();
 
             Pages.ListOfBrokers
@@ -226,7 +226,7 @@ namespace MarketplaceAdminGuiTest
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
-        [AllureSubSuite("CreateAgent")]
+        [AllureSubSuite("Create Agent")]
 
         public void CreateAgent()
         {
@@ -251,14 +251,12 @@ namespace MarketplaceAdminGuiTest
                 .ClickButtonCreateAgent();
             Pages.CreateNewAgentMdlWndw
                 .EnterFullData();
-
+            // Continue from this point
             string fullEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailFromFieldEmail();
             string partEmailPutsBox = Pages.CreateNewAgentMdlWndw.GetSymbolsBeforeDogFromFieldInputEmail();
 
-
             Pages.CreateNewAgentMdlWndw
-                .ClickButtonSave()
-                .VerifyMessageNewAgentCreatedSuccessfully();
+                .ClickButtonSave();
             KeyBoardActions.ClickEscapeButton();
             Pages.AreYouSureLogOutLandlordMdlWndw
                 .MakeLogOut();

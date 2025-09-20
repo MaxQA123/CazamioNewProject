@@ -161,7 +161,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("Click Button Agents on sidebar")]
+        [AllureStep("Click button Agents on sidebar")]
         public SidebarLandlord ClickButtonAgents()
         {
             WaitUntil.CustomElementIsVisible(ButtonAgentsSidebar);

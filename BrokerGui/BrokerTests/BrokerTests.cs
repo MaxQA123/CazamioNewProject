@@ -91,30 +91,21 @@ namespace BrokerGuiTests
 
             #endregion
 
-            //#region Preconditions
+            #region Preconditions
 
-            //Pages.LogInLandlord
-            //    .EnterEmailPasswordAsBroker()
-            //    .ClickIconShow()
-            //    .ClickButtonLetsGo();
+            Pages.LogInLandlord
+                .LogInAsBrokerMySpace();
 
-            //string getUserNameCompare = Pages.SidebarLandlord.GetUserNameFromSideBar();
-            //string getUserNameRoleCompare = Pages.SidebarLandlord.GetUserNameRoleFromSideBar();
+            #endregion
 
-            //Pages.SidebarLandlord
-            //    .VerifyBrokerUserNameAndRole(getUserNameCompare, getUserNameRoleCompare);
+            #region Test
 
-            //#endregion
-
-            //#region Test
-
-            //Pages.SidebarLandlord
-            //     .ClickButtonAgents();
-            //Pages.ListOfAgents
-            //    .ClickButtonCreateAgent();
-            //Pages.CreateNewAgentMdlWndw
-            //    .EnterFirstLastNameEmailPhnNmbrCell()
-            //    .EnterBrokerAgentCommission();
+            Pages.SidebarLandlord
+                 .ClickButtonAgents();
+            Pages.ListOfAgents
+                .ClickButtonCreateAgent();
+            Pages.CreateNewAgentMdlWndw
+                .EnterFullDataWithoutPhone();
 
             //string fullEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailFromMdlWndwCreateAgent();
             //string partEmailPutsBox = Pages.CreateNewAgentMdlWndw.CopyEmailBeforeDogFromModalWindowCreateNewAgent();
@@ -149,7 +140,7 @@ namespace BrokerGuiTests
             //Pages.SidebarLandlord
             //   .VerifyAgentUserNameAndRoleCreating(getUserNameRoleCompareAgent);
 
-            //#endregion
+            #endregion
 
             //#region Postconditions
 

@@ -14,5 +14,13 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfAgentsPage
 
             return this;
         }
+
+        [AllureStep("VerifyMessageNewAgentCreatedSuccessfully")]
+        public ListOfAgents VerifyMessageNewAgentCreatedSuccessfully()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageNewAgentCreatedSuccessfully));
+
+            return this;
+        }
     }
 }

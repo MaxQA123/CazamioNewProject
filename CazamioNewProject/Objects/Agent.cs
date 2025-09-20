@@ -30,6 +30,8 @@ namespace CazamioNewProject.Objects
             public string FirstNameRandom { get; set; }
             public string LastNameRandom { get; set; }
             public string FirstLastNameRandom { get; set; }
+            public string FirstNameStatic { get; set; }
+            public string LastNameStatic { get; set; }
         }
 
         public class AgentEmailInfo
@@ -48,6 +50,8 @@ namespace CazamioNewProject.Objects
         {
             public string ForBrokerRandom { get; set; }
             public string ForAgentRandom { get; set; }
+            public string ForBrokeStaticDecimalNumber { get; set; }
+            public string ForAgentStaticDecimalNumber { get; set; }
             public long BrokerCommissionApi { get; set; }
             public long AgentCommissionApi { get; set; }
         }
@@ -79,6 +83,8 @@ namespace CazamioNewProject.Objects
                 FirstNameRandom = Name.FirstName(),
                 LastNameRandom = Name.LastName(),
                 FirstLastNameRandom = Name.FirstName() + " " + Name.LastName(),
+                FirstNameStatic = "Agent Test",
+                LastNameStatic = "MySpace Test",
             };
         }
 
@@ -105,6 +111,8 @@ namespace CazamioNewProject.Objects
             {
                 ForBrokerRandom = GenerateRandomData.RandomNumberWithoutZero(2),
                 ForAgentRandom = GenerateRandomData.RandomNumberWithoutZero(2),
+                ForBrokeStaticDecimalNumber = "50.55",
+                ForAgentStaticDecimalNumber = "49.45",
                 BrokerCommissionApi = 33,
                 AgentCommissionApi = 67,
             };

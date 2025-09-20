@@ -1,13 +1,8 @@
 ﻿using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
 using NUnit.Allure.Attributes;
-using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace CazamioNewProject.PageObjects.AdminPages.CreateNewAgentMdlWndw
 {
@@ -52,21 +47,66 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateNewAgentMdlWndw
             }
         }
 
-        //[AllureStep("CopyEmailBeforeDogFromModalWindowCreateNewAgent")]
-        //public string CopyEmailBeforeDogFromModalWindowCreateNewAgent()
-        //{
-        //    WaitUntil.WaitSomeInterval(500);
-        //    string copyPartEmail = FieldInputEmail.GetAttribute("value");
-        //    Regex regexPartEmail = new Regex(@"^..........");
-        //    string partEmail = regexPartEmail.Match(copyPartEmail).ToString();
+        [AllureStep("Enter first name agent")]
+        public CreateNewAgentMdlWndw EnterFirstNameAgentRandom()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputFirstName);
+            InputGeneral.InputFunctionWithClear(FieldInputFirstName, agent.AgentName.FirstNameRandom);
 
-        //    return partEmail;
-        //}
+            return this;
+        }
 
-        [AllureStep("ClickButtonSave")]
+        [AllureStep("Enter last name agent")]
+        public CreateNewAgentMdlWndw EnterLastNameAgentRandom()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputLastName);
+            InputGeneral.InputFunctionWithClear(FieldInputLastName, agent.AgentName.LastNameRandom);
+
+            return this;
+        }
+
+        [AllureStep("Enter full email random agent")]
+        public CreateNewAgentMdlWndw EnterFullEmailRandom()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputEmail);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, agent.AgentEmail.FullEmailRandom);
+
+            return this;
+        }
+
+        [AllureStep("Enter phone number agent")]
+        public CreateNewAgentMdlWndw EnterPhoneNumberBasicFirst()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputPhoneNumber);
+            InputGeneral.InputFunctionWithClear(FieldInputPhoneNumber, agent.PhoneNumber.BasicFirst);
+
+            return this;
+        }
+
+        [AllureStep("Enter broker commission for agent")]
+        public CreateNewAgentMdlWndw EnterBrokerCommissionRandom()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputBrokerCommission);
+            InputGeneral.InputFunctionWithClear(FieldInputBrokerCommission, agent.CommissionPercentage.ForBrokerRandom);
+
+            return this;
+        }
+
+        [AllureStep("Enter agent commission for agent")]
+        public CreateNewAgentMdlWndw EnterAgentCommissionRandom()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputAgentCommission);
+            InputGeneral.InputFunctionWithClear(FieldInputAgentCommission, agent.CommissionPercentage.ForAgentRandom);
+
+            return this;
+        }
+
+        [AllureStep("Click button Save for creating an agent")]
         public CreateNewAgentMdlWndw ClickButtonSave()
         {
             Button.Click(ButtonSave);
+            Pages.ListOfAgents
+                .VerifyMessageNewAgentCreatedSuccessfully();
 
             return this;
         }

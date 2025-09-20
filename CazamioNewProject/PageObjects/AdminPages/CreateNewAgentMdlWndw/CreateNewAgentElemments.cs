@@ -5,6 +5,9 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateNewAgentMdlWndw
 {
     public partial class CreateNewAgentMdlWndw
     {
+        [FindsBy(How = How.XPath, Using = "//app-add-edit-agent//h3")]
+        public IWebElement TitleCreateNewAgent;
+
         [FindsBy(How = How.XPath, Using = "//input[@id = 'first-name']")]
         public IWebElement FieldInputFirstName;
 
@@ -29,8 +32,8 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateNewAgentMdlWndw
         [FindsBy(How = How.XPath, Using = "//cazamio-button//span[text() = 'Save']")]
         public IWebElement ButtonSave;
 
-        [FindsBy(How = How.XPath, Using = "//p[text() = 'New agent created successfully!']")]
-        public IWebElement MessageNewAgentCreatedSuccessfully;
+        //[FindsBy(How = How.XPath, Using = "//p[text() = 'New agent created successfully!']")]
+        //public IWebElement MessageNewAgentCreatedSuccessfully;
 
         [FindsBy(How = How.XPath, Using = "//div[@class= 'input-msgs-error']")]
         public IWebElement ErrorFirstName;

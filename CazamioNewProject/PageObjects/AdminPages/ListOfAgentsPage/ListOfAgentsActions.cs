@@ -5,7 +5,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfAgentsPage
 {
     public partial class ListOfAgents
     {
-        [AllureStep("ClickButtonCreateAgent")]
+        [AllureStep("Click button Create Agent on Agents page")]
         public ListOfAgents ClickButtonCreateAgent()
         {
             Pages.JScriptExecutor
