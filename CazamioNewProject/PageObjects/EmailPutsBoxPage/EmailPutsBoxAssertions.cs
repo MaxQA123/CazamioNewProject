@@ -67,8 +67,8 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
             return this;
         }
 
-        [AllureStep("VerifyTitleLetterCreateBroker")]
-        public EmailPutsBox VerifyTitleLetterCreateBroker()
+        [AllureStep("Verify Subject email notification for Create Broker")]
+        public EmailPutsBox VerifySubjectEmailNotificationCreateBroker()
         {
             Assert.IsTrue(SubjectEmail.IsVisible(SubjectNotificationCreateBrokerMySpace));
 

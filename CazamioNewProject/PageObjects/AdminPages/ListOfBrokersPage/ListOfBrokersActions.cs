@@ -5,7 +5,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage
 {
     public partial class ListOfBrokers
     {
-        [AllureStep("Click Button Create Broker")]
+        [AllureStep("Click button Create Broker on List of brokers page")]
         public ListOfBrokers ClickButtonCreateBroker()
         {
             WaitUntil.CustomElementIsVisible(ButtonCreateBroker);

@@ -79,15 +79,29 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         [AllureStep("ClickButtonConfirmEmailForAdmin")]
         public EmailPutsBox ClickButtonConfirmEmailForAdmin()
         {
-            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.WaitSomeInterval(100);
             List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
             Browser._Driver.SwitchTo().Window(tabsList[2]);
-            WaitUntil.WaitSomeInterval(1000);
-            BtnCofirmEmailLandlord.Click();
-            WaitUntil.WaitSomeInterval(3000);
+            Pages.EmailPutsBox.ClickBtnGetStartedForConfirmingUserLandlord();
+            WaitUntil.WaitSomeInterval(100);
             List<string> tabsListSecond = new List<string>(Browser._Driver.WindowHandles);
             Browser._Driver.SwitchTo().Window(tabsListSecond[3]);
-            WaitUntil.WaitSomeInterval(3000);
+            WaitUntil.WaitSomeInterval(100);
+
+            return this;
+        }
+
+        [AllureStep("Click button Confirm Email for Broker")]
+        public EmailPutsBox ClickButtonConfirmEmailForBroker()
+        {
+            WaitUntil.WaitSomeInterval(100);
+            List<string> tabsList = new List<string>(Browser._Driver.WindowHandles);
+            Browser._Driver.SwitchTo().Window(tabsList[2]);
+            Pages.EmailPutsBox.ClickBtnGetStartedForConfirmingUserLandlord();
+            WaitUntil.WaitSomeInterval(100);
+            List<string> tabsListSecond = new List<string>(Browser._Driver.WindowHandles);
+            Browser._Driver.SwitchTo().Window(tabsListSecond[3]);
+            WaitUntil.WaitSomeInterval(100);
 
             return this;
         }

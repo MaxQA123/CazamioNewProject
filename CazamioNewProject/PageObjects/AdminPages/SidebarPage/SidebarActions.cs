@@ -233,7 +233,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return getUserNameActual;
         }
 
-        [AllureStep("Get User Name Role from SideBar")]
+        [AllureStep("Get user name role from sidebar")]
         public string GetUserNameRoleFromSideBar()
         {
             WaitUntil.CustomElementIsVisible(UserNameRoleOfSidebar);

@@ -75,7 +75,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.SidebarPage
             return this;
         }
 
-        [AllureStep("VerifyBrokerUserNameAndRoleCreating")]
+        [AllureStep("Verify Broker user name and role when creating")]
         public SidebarLandlord VerifyBrokerUserNameAndRoleCreating(string getUserNameRoleCompareBroker)
         {
             WaitUntil.WaitSomeInterval(100);

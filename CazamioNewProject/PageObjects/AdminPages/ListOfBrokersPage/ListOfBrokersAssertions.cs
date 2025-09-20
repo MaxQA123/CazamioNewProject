@@ -15,7 +15,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ListOfBrokersPage
             return this;
         }
 
-        [AllureStep("VerifyEmailInListOfBrokers")]
+        [AllureStep("Verify email in List Of brokers")]
         public ListOfBrokers VerifyEmailInListOfBrokers(string getFullEmail, string getEmailFromListOfBrokers)
         {
             WaitUntil.WaitSomeInterval(500);

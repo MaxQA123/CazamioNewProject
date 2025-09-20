@@ -8,7 +8,7 @@ namespace CazamioNewProject.GuiHelpers
 {
     public class JScriptExecutor
     {
-        [AllureStep("OpenNewTab")]
+        [AllureStep("Open new tab")]
         public JScriptExecutor OpenNewTab()
         {
             WaitUntil.WaitSomeInterval(5000);
@@ -18,7 +18,7 @@ namespace CazamioNewProject.GuiHelpers
             return this;
         }
 
-        [AllureStep("OpenNewTabHomePageTenant")]
+        [AllureStep("Open new tab on Home page Tenant platform")]
         public JScriptExecutor OpenNewTabHomePageTenant()
         {
             ((IJavaScriptExecutor)Browser._Driver).ExecuteScript("window.open();");

@@ -153,7 +153,7 @@ namespace MarketplaceAdminGuiTest
 
             #endregion
 
-            // flow: Create new broker > Make Logout.
+            // flow: Create new broker > Verify Subject email notification for Create Broker.
             #region Test
 
             Pages.ListOfBrokers
@@ -181,17 +181,17 @@ namespace MarketplaceAdminGuiTest
             Pages.EmailHelper
                .OpenPutsBox(Pages.EmailPutsBox.SubjectNotificationCommon, getEmailBeforeDog);
             Pages.EmailPutsBox
-                .VerifyTitleLetterCreateBroker()
+                .VerifySubjectEmailNotificationCreateBroker()
                 .ClickButtonHtml();
 
             string getTextPasswordActual = Pages.EmailPutsBox.GetPasswordFromEmailForCreaationUser();
 
             Pages.EmailPutsBox
-                .ClickButtonConfirmEmailForAdmin();
+                .ClickButtonConfirmEmailForBroker();
 
             Pages.LogInLandlord
-                .PasteForEnterEmailFromEmailCreateBroker(getFullEmail)
-                .PasteForEnterPsswrdFromEmailCreateBroker(getTextPasswordActual)
+                .PasteemailAddressFromEmailNotificationCreateBroker(getFullEmail)
+                .PastePsswrdFromEmailNotificationCreateBroker(getTextPasswordActual)
                 .ClickIconShow()
                 .ClickButtonLetsGo();
 
@@ -1035,6 +1035,15 @@ namespace MarketplaceAdminGuiTest
             WaitUntil.WaitSomeInterval(1000);
 
             #endregion
+
+            #region Postconditions
+
+            Pages.SwitchingBetweenBrowserTabsActions
+                .CloseSecondThirdFourthTabs();
+
+            WaitUntil.WaitSomeInterval(100);
+
+            #endregion
         }
 
         [Test]
@@ -1152,6 +1161,15 @@ namespace MarketplaceAdminGuiTest
                 .ClickCancelBtn();
 
             WaitUntil.WaitSomeInterval(1000);
+
+            #endregion
+
+            #region Postconditions
+
+            Pages.SwitchingBetweenBrowserTabsActions
+                .CloseSecondThirdFourthTabs();
+
+            WaitUntil.WaitSomeInterval(100);
 
             #endregion
         }

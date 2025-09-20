@@ -37,7 +37,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateANewBrokerMdlWndw
             return this;
         }
 
-        [AllureStep("Click Button Create")]
+        [AllureStep("Click Button Create in Create a new Broker mdl wndw")]
         public CreateANewBrokerMdlWndw ClickButtonCreate()
         {
             WaitUntil.CustomElementIsVisible(ButtonCreate);
@@ -46,7 +46,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateANewBrokerMdlWndw
             return this;
         }
 
-        [AllureStep("CopyEmailFromFieldEmail")]
+        [AllureStep("Copy Email from field email")]
         public string CopyEmailFromFieldEmail()
         {
             WaitUntil.CustomElementIsVisible(FieldInputEmail);
@@ -55,7 +55,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.CreateANewBrokerMdlWndw
             return fullEmail;
         }
 
-        [AllureStep("GetSymbolsBeforeDogFromFieldInputEmail")]
+        [AllureStep("Get symbols before dog from field Email")]
         public string GetSymbolsBeforeDogFromFieldInputEmail()
         {
             try

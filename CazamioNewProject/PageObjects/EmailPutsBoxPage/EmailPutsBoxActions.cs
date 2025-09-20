@@ -10,10 +10,9 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
         
         #region List of notifications page
 
-        [AllureStep("ClickButtonHtml")]
+        [AllureStep("Click button html")]
         public EmailPutsBox ClickButtonHtml()
         {
-            WaitUntil.WaitSomeInterval(500);
             WaitUntil.CustomElementIsVisible(ButtonBodyHtml);
             WaitUntil.CustomElementIsClickable(ButtonBodyHtml);
             Button.Click(ButtonBodyHtml);
@@ -63,6 +62,16 @@ namespace CazamioNewProject.PageObjects.EmailPutsBoxPage
             string fullText = GetStartedBtn.Text;
 
             return fullText;
+        }
+
+        [AllureStep("Click button Get Started for confirming Broker user's")]
+        public EmailPutsBox ClickBtnGetStartedForConfirmingUserLandlord()
+        {
+            WaitUntil.CustomElementIsVisible(BtnGetStartedForConfirmingUserLandlord);
+            WaitUntil.CustomElementIsClickable(BtnGetStartedForConfirmingUserLandlord);
+            Button.Click(BtnGetStartedForConfirmingUserLandlord);
+
+            return this;
         }
     }
 }
