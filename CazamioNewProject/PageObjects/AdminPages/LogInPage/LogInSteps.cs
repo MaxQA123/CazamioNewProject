@@ -91,6 +91,21 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
             return this;
         }
 
+        [AllureStep("Login without email password as agent for MySpace")]
+        public LogInLandlord LogInWithoutEmailPasswordAsAgentMySpace()
+        {
+            Pages.LogInLandlord.VerifyTitleLogInPg();
+            ClickButtonLetsGo();
+            VerifyMessageEmailIsRequired();
+            VerifyMessagePasswordIsRequired();
+            Pages.ToasterMessagesLandlord
+                .VerifyMessageEnterValidEmailAndPassword();
+
+            WaitUntil.WaitSomeInterval(100);
+
+            return this;
+        }
+
         [AllureStep("LogInAsAgentBrokerMySpace")]
         public LogInLandlord LogInAsAgentBrokerMySpace()
         {

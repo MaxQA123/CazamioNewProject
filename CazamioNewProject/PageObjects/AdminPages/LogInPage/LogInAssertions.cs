@@ -13,5 +13,21 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
 
             return this;
         }
+
+        [AllureStep("Verify message Email is required under field email")]
+        public LogInLandlord VerifyMessageEmailIsRequired()
+        {
+            Assert.IsTrue(MessagesUnderFieldsCheck.IsVisible(MessageEmailIsRequired));
+
+            return this;
+        }
+
+        [AllureStep("Verify message Password is required under field passowrd")]
+        public LogInLandlord VerifyMessagePasswordIsRequired()
+        {
+            Assert.IsTrue(MessagesUnderFieldsCheck.IsVisible(MessagePasswordIsRequired));
+
+            return this;
+        }
     }
 }

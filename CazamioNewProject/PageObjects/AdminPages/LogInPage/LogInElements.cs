@@ -22,5 +22,11 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
 
         [FindsBy(How = How.XPath, Using = "//a[@href = '/account/forgot-password']")]
         public IWebElement LinkForgotPassword;
+
+        [FindsBy(How = How.XPath, Using = "//signin//form//div[@class = 'email-wrapper']//input/following-sibling::div[text() = ' Email is required ']")]
+        public IWebElement MessageEmailIsRequired;
+
+        [FindsBy(How = How.XPath, Using = "//signin//form//div[text() = ' Password is required ']")]
+        public IWebElement MessagePasswordIsRequired;
     }
 }

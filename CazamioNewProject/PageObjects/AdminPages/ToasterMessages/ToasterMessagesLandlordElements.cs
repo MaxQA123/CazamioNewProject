@@ -9,6 +9,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Success']")]
         public IWebElement MessageSuccess;
 
+        //Common Warning toasters 
+        [FindsBy(How = How.XPath, Using = "//span[text() = 'Warning!']")]
+        public IWebElement MessageWarningWithExclamationMark;
+
         //Appeared if created a new broker in Create a new Broker modal window
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Broker has been successfully created']")]
         public IWebElement MessageBrokerHasBeenSuccessfullyCreated;
@@ -98,6 +102,14 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
         //Appeared when updating a brand name
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Disclosure saved successfully']")]
         public IWebElement MessageDisclosureЫavedЫuccessfully;
+
+        #endregion
+
+        #region For Login page Warning messages
+
+        //Appeared if empty the Email and Password fields and click the LETS GO button
+        [FindsBy(How = How.XPath, Using = "//span[text() = 'Enter valid email and password']")]
+        public IWebElement MessageEnterValidEmailAndPassword;
 
         #endregion
     }

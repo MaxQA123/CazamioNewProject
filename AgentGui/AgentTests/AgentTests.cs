@@ -1,5 +1,5 @@
 ﻿using Allure.Commons;
-using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApiMandatoryData;
+//using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApiMandatoryData;
 using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin;
 using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
@@ -15,7 +15,7 @@ namespace AgentGuiTests
 
     public class TestsBaseGui : AgentBase
     {
-        //Amount order 5 next must be 6
+        //Amount order 6 next must be 7
         [Test]
         [Order(1)]
         [AllureTag("Regression")]
@@ -376,6 +376,29 @@ namespace AgentGuiTests
                 .VerifyApplicationIdNumberTenantGuarantor(applicationIdFromAppLandlord, appIdFromAppTenantGuarantor);
 
             WaitUntil.WaitSomeInterval(1000);
+
+            #endregion
+        }
+
+        [Test]
+        [Order(6)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Negative critical scenarios for Agent role")]
+        [AllureSubSuite("Login without email and password to My Space marketplace")]
+
+        public void LogIn_Without_Email_Password()
+        {
+            // flow: Login without email and password > Verify the messages for email and password fields > Verify toaster.
+            #region Test
+
+            Pages.LogInLandlord
+               .LogInWithoutEmailPasswordAsAgentMySpace();
+
+            WaitUntil.WaitSomeInterval(100);
 
             #endregion
         }

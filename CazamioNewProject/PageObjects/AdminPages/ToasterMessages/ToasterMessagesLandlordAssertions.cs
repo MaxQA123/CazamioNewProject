@@ -39,7 +39,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
 
         #endregion
 
-        [AllureStep("Verify Message Apartments were saved Successfully")]
+        [AllureStep("Verify Toaster Message Apartments were saved Successfully")]
         public ToasterMessagesLandlord VerifyMessageApartmentsWereSavedSuccessfully()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
@@ -49,7 +49,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
-        [AllureStep("Verify Message Payment methods selected")]
+        [AllureStep("Verify Toaster Message Payment methods selected")]
         public ToasterMessagesLandlord VerifyMessagePaymentMethodsSelected()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
@@ -60,7 +60,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
         }
 
 
-        [AllureStep("Verify if created building Message Saved successfully")]
+        [AllureStep("Verify Toaster if created building Message Saved successfully")]
         public ToasterMessagesLandlord VerifyMessageSavedSuccessfullyIfCreatedBuilding()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
@@ -70,7 +70,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
-        [AllureStep("Verify Message Screening fee saved")]
+        [AllureStep("Verify Toaster Message Screening fee saved")]
         public ToasterMessagesLandlord VerifMessageScreeningFeeSaved()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
@@ -80,7 +80,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
-        [AllureStep("VerifyMessageAddedApplicantsToApplication")]
+        [AllureStep("Verify Toaster MessageAddedApplicantsToApplication")]
         public ToasterMessagesLandlord VerifMessageAddedApplicantsToApplication()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
@@ -90,7 +90,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
-        [AllureStep("VerifyMessageTemplateWasDeleted")]
+        [AllureStep("Verify Toaster MessageTemplateWasDeleted")]
         public ToasterMessagesLandlord VerifyMessageTemplateWasDeleted()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
@@ -100,7 +100,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
-        [AllureStep("VerifyMessageTemplateWasSaved")]
+        [AllureStep("Verify Toaster MessageTemplateWasSaved")]
         public ToasterMessagesLandlord VerifMessageTemplateWasSaved()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
@@ -110,7 +110,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
-        [AllureStep("VerifyMessageApplicationEditSuccessful")]
+        [AllureStep("Verify Toaster MessageApplicationEditSuccessful")]
         public ToasterMessagesLandlord VerifyMessageApplicationEditSuccessful()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
@@ -120,7 +120,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
-        [AllureStep("VerifyMessageCopiedTheLinkToApplication")]
+        [AllureStep("Verify Toaster MessageCopiedTheLinkToApplication")]
         public ToasterMessagesLandlord VerifyMessageCopiedTheLinkToApplication()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
@@ -131,7 +131,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
-        [AllureStep("Verify Message brand name has been saved successfully")]
+        [AllureStep("Verify Toaster Toaster Message brand name has been saved successfully")]
         public ToasterMessagesLandlord VerifyMessageBrandNameHasBeenSaveddSuccessfully()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
@@ -142,7 +142,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
-        [AllureStep("Verify Message disclosure saved successfully")]
+        [AllureStep("Verify Toaster Message disclosure saved successfully")]
         public ToasterMessagesLandlord VerifyMessageDisclosureЫavedЫuccessfully()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
@@ -153,13 +153,28 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
-        [AllureStep("Verify Message broker has been successfully created")]
+        [AllureStep("Verify Toaster Message broker has been successfully created")]
         public ToasterMessagesLandlord VerifyMessageBrokerHasBeenSuccessfullyCreated()
         {
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageSuccess));
             Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageBrokerHasBeenSuccessfullyCreated));
             Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageSuccess));
             Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageBrokerHasBeenSuccessfullyCreated));
+
+            return this;
+        }
+
+        #endregion
+
+        #region
+
+        [AllureStep("Verify Toaster Message Enter valid email and password")]
+        public ToasterMessagesLandlord VerifyMessageEnterValidEmailAndPassword()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageWarningWithExclamationMark));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageEnterValidEmailAndPassword));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageWarningWithExclamationMark));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageEnterValidEmailAndPassword));
 
             return this;
         }

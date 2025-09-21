@@ -35,7 +35,7 @@ namespace MarketplaceAdminGuiTest
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Positive critical scenarios for Marketplace Admin role")]
-        [AllureSubSuite("Login to My Space marketplace")]
+        [AllureSubSuite("Login successfully to My Space marketplace")]
 
         public void LogIn_Success()
         {
@@ -1368,9 +1368,18 @@ namespace MarketplaceAdminGuiTest
             Pages.HeaderTenants
                 .LogOut();
 
-            WaitUntil.WaitSomeInterval(1000);
+            #endregion
+
+            #region Postconditions
+
+            Pages.SwitchingBetweenBrowserTabsActions
+                .CloseSecondThirdFourthTabs();
+
+            WaitUntil.WaitSomeInterval(100);
 
             #endregion
-        }  
+        }
+
+        
     }
 }
