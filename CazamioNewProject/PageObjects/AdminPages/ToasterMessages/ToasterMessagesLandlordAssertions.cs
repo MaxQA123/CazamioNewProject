@@ -179,6 +179,17 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
+        [AllureStep("Verify Toaster Message User not found")]
+        public ToasterMessagesLandlord VerifyMessageUserNotFound()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageWarningWithExclamationMark));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageUserNotFound));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageWarningWithExclamationMark));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageUserNotFound));
+
+            return this;
+        }
+
         #endregion
     }
 }

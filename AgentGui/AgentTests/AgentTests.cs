@@ -1,5 +1,4 @@
 ﻿using Allure.Commons;
-//using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.CreateBuildingApiMandatoryData;
 using CazamioNewProject.ApiHelpers.ApiObjects.MarketplaceAdminApiCollections.LogInApiMarketplaceAdmin;
 using CazamioNewProject.GuiHelpers;
 using CazamioNewProject.Objects;
@@ -15,7 +14,7 @@ namespace AgentGuiTests
 
     public class TestsBaseGui : AgentBase
     {
-        //Amount order 6 next must be 7
+        //Amount order 7 next must be 8
         [Test]
         [Order(1)]
         [AllureTag("Regression")]
@@ -397,6 +396,29 @@ namespace AgentGuiTests
 
             Pages.LogInLandlord
                .LogInWithoutEmailPasswordAsAgentMySpace();
+
+            WaitUntil.WaitSomeInterval(100);
+
+            #endregion
+        }
+
+        [Test]
+        [Order(7)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Negative critical scenarios for Agent role")]
+        [AllureSubSuite("Login user not found to My Space marketplace")]
+
+        public void LogIn_User_Not_Found()
+        {
+            // flow: Login user not found > Verify toaster.
+            #region Test
+
+            Pages.LogInLandlord
+               .LogInUserNotFoundAsAgentMySpace();
 
             WaitUntil.WaitSomeInterval(100);
 

@@ -4,6 +4,7 @@ namespace CazamioNewProject.Objects
 {
     public class BasicDataForProject
     {
+        public EmailsInfo Emails { get; set; }
         public PasswordsInfo Passwords { get; set; }
         public UserRolesInfo UserRoles { get; set; }
         public SubdomainMarketplaceInfo SubdomainMarketplace { get; set; }
@@ -14,6 +15,7 @@ namespace CazamioNewProject.Objects
         {
             return new BasicDataForProject
             {
+                Emails = CreateEmailsInfo(),
                 Passwords = CreatePasswordsInfo(),
                 UserRoles = CreateUserRolesInfo(),
                 SubdomainMarketplace = CreateSubdomainMarketplaceInfo(),
@@ -22,9 +24,15 @@ namespace CazamioNewProject.Objects
             };
         }
 
+        public class EmailsInfo
+        {
+            public string EmailNotAddedToSystem { get; set; }
+        }
+
         public class PasswordsInfo
         {
             public string BasicStaticFirst { get; set; }
+            public string PasswordInvalid { get; set; }
         }
 
         public class UserRolesInfo
@@ -66,11 +74,20 @@ namespace CazamioNewProject.Objects
             public string InstagramLink { get; set; }
         }
 
+        private static EmailsInfo CreateEmailsInfo()
+        {
+            return new EmailsInfo
+            {
+                EmailNotAddedToSystem = "invalid-email-1agent@xitroo.com",
+            };
+        }
+
         private static PasswordsInfo CreatePasswordsInfo()
         {
             return new PasswordsInfo
             {
                 BasicStaticFirst = "Qwerty123!",
+                PasswordInvalid = "jkhGhg56$",
             };
         }
 

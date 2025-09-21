@@ -111,6 +111,10 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
         [FindsBy(How = How.XPath, Using = "//span[text() = 'Enter valid email and password']")]
         public IWebElement MessageEnterValidEmailAndPassword;
 
+        //Appeared if entered the email is wrong and Password to the fields and click the LETS GO button
+        [FindsBy(How = How.XPath, Using = "//span[text() = 'User not found.']")]
+        public IWebElement MessageUserNotFound;
+
         #endregion
     }
 }

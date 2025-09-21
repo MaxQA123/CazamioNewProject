@@ -101,7 +101,18 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
             Pages.ToasterMessagesLandlord
                 .VerifyMessageEnterValidEmailAndPassword();
 
-            WaitUntil.WaitSomeInterval(100);
+            return this;
+        }
+
+        [AllureStep("Login user not found as agent for MySpace")]
+        public LogInLandlord LogInUserNotFoundAsAgentMySpace()
+        {
+            Pages.LogInLandlord.VerifyTitleLogInPg();
+            EnterEmailNotAddedToSystem();
+            EnterPasswordNotAddedToSystem();
+            ClickButtonLetsGo();
+            Pages.ToasterMessagesLandlord
+                .VerifyMessageUserNotFound();
 
             return this;
         }

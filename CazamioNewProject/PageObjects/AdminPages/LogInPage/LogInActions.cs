@@ -11,6 +11,7 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         Broker broker = Broker.Generate();
         Agent agent = Agent.Generate();
         AgentBroker agentBroker = AgentBroker.Generate();
+        BasicDataForProject basicDataForProject = BasicDataForProject.Generate();
 
         [AllureStep("Enter Email Marketplace Admin")]
         public LogInLandlord EnterEmailMarketplaceAdmin()
@@ -26,6 +27,24 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
         {
             WaitUntil.CustomElementIsVisible(FieldInputPassword);
             InputGeneral.InputFunctionWithClear(FieldInputPassword, GeneralTestDataForAllUsers.PASSWORD_GENERAL);
+
+            return this;
+        }
+
+        [AllureStep("Enter email not added to system")]
+        public LogInLandlord EnterEmailNotAddedToSystem()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputEmail);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, basicDataForProject.Emails.EmailNotAddedToSystem);
+
+            return this;
+        }
+
+        [AllureStep("Enter password not added to system")]
+        public LogInLandlord EnterPasswordNotAddedToSystem()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputEmail);
+            InputGeneral.InputFunctionWithClear(FieldInputPassword, basicDataForProject.Passwords.PasswordInvalid);
 
             return this;
         }
