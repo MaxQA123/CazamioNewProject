@@ -190,6 +190,17 @@ namespace CazamioNewProject.PageObjects.AdminPages.ToasterMessages
             return this;
         }
 
+        [AllureStep("Verify Toaster Message Incorrect email or password")]
+        public ToasterMessagesLandlord VerifyMessageIncorrectEmailOrPassword()
+        {
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageWarningWithExclamationMark));
+            Assert.IsTrue(ToasterSuccessfully.IsVisible(MessageIncorrectEmailOrPassword));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageWarningWithExclamationMark));
+            Assert.IsTrue(ToasterSuccessfully.IsNotVisible(MessageIncorrectEmailOrPassword));
+
+            return this;
+        }
+
         #endregion
     }
 }

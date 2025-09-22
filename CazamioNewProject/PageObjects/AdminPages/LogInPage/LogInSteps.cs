@@ -117,6 +117,19 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
             return this;
         }
 
+        [AllureStep("Login Incorrect email or password as agent for MySpace")]
+        public LogInLandlord LogInIncorrectEmailOrPassword()
+        {
+            Pages.LogInLandlord.VerifyTitleLogInPg();
+            EnterEmailAgent();
+            EnterPasswordNotAddedToSystem();
+            ClickButtonLetsGo();
+            Pages.ToasterMessagesLandlord
+                .VerifyMessageIncorrectEmailOrPassword();
+
+            return this;
+        }
+
         [AllureStep("LogInAsAgentBrokerMySpace")]
         public LogInLandlord LogInAsAgentBrokerMySpace()
         {

@@ -22,6 +22,15 @@ namespace CazamioNewProject.PageObjects.AdminPages.LogInPage
             return this;
         }
 
+        [AllureStep("Enter Email Agent")]
+        public LogInLandlord EnterEmailAgent()
+        {
+            WaitUntil.CustomElementIsVisible(FieldInputEmail);
+            InputGeneral.InputFunctionWithClear(FieldInputEmail, agent.CreatedAgentLulaMySpace.Email);
+
+            return this;
+        }
+
         [AllureStep("Enter Password Marketplace Admin")]
         public LogInLandlord EnterPasswordMarketplaceAdmin()
         {

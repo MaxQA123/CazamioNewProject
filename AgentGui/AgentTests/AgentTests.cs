@@ -14,7 +14,7 @@ namespace AgentGuiTests
 
     public class TestsBaseGui : AgentBase
     {
-        //Amount order 7 next must be 8
+        //Amount order 8 next must be 9
         [Test]
         [Order(1)]
         [AllureTag("Regression")]
@@ -419,6 +419,29 @@ namespace AgentGuiTests
 
             Pages.LogInLandlord
                .LogInUserNotFoundAsAgentMySpace();
+
+            WaitUntil.WaitSomeInterval(100);
+
+            #endregion
+        }
+
+        [Test]
+        [Order(8)]
+        [AllureTag("Regression")]
+        [AllureOwner("Maksim Perevalov")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [Retry(2)]
+        [Author("Maksim", "maxqatesting390@gmail.com")]
+        [AllureSuite("Negative critical scenarios for Agent role")]
+        [AllureSubSuite("Login user not found to My Space marketplace")]
+
+        public void LogIn_Incorrect_Email_Or_Password()
+        {
+            // flow: Login user not found > Verify toaster.
+            #region Test
+
+            Pages.LogInLandlord
+               .LogInIncorrectEmailOrPassword();
 
             WaitUntil.WaitSomeInterval(100);
 
