@@ -433,11 +433,11 @@ namespace AgentGuiTests
         [Retry(2)]
         [Author("Maksim", "maxqatesting390@gmail.com")]
         [AllureSuite("Negative critical scenarios for Agent role")]
-        [AllureSubSuite("Login user not found to My Space marketplace")]
+        [AllureSubSuite("Login user entered email is correct and password is wrong to My Space marketplace")]
 
         public void LogIn_Incorrect_Email_Or_Password()
         {
-            // flow: Login user not found > Verify toaster.
+            // flow: Login user entered email is correct and password is wrong > Verify toaster.
             #region Test
 
             Pages.LogInLandlord
