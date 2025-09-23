@@ -116,6 +116,8 @@ namespace SuperAdminGui
             AspNetUsersDbRequests.AspNetUsers.GetEmailByEmailAndMarketplaceId(fullEmailPutsBox, marketplaceId);
             Console.WriteLine($"{fullEmailPutsBox}");
             WaitUntil.WaitSomeInterval(100);
+            AspNetUsersDbRequests.AspNetUsers.DeleteCreatedUser(fullEmailPutsBox, marketplaceId);
+            WaitUntil.WaitSomeInterval(100);
             MarketplaceAdminsDbRequests.MarketplaceAdmins.DeleteNewlyCreatedMarketplaceAdmin(fullEmailPutsBox, marketplaceId);
 
             Pages.SwitchingBetweenBrowserTabsActions
